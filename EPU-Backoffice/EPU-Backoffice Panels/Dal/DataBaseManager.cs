@@ -705,5 +705,66 @@ namespace EPU_Backoffice_Panels.Dal
             // success logging
             this.logger.Log(Logger.Level.Info, "New zeitaufzeichnung " + z.Bezeichnung + " has been stored in the SQLite database.");
         }
+
+        /// <summary>
+        /// Loads all Zeitaufzeichnungen
+        /// </summary>
+        /// <returns>The saved Zeitaufzeichnungen</returns>
+        public List<ZeitaufzeichnungTable> LoadZeitaufzeichnung(int projektID)
+        {
+            string sql = "SELECT * FROM Zeitaufzeichnung WHERE";
+            sql += "ProjektID = ?;";
+
+            List<ZeitaufzeichnungTable> results = new List<ZeitaufzeichnungTable>();
+
+            // open connection and get requested Projekt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // bind to
+                SQLiteParameter p_projektID = new SQLiteParameter();
+                p_projektID.Value = projektID;
+                cmd.Parameters.Add(p_projektID);  
+
+                // execute and get results
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ZeitaufzeichnungTable result = new ZeitaufzeichnungTable();
+                    result.ID = reader.GetInt32(0);
+                    result.ProjektID = reader.GetInt32(1);
+                    result.Stunden = reader.GetInt32(2);
+                    result.Bezeichnung = reader.GetString(3);
+                    result.Stundensatz = reader.GetInt32(4);
+                    results.Add(result);
+                }
+
+                return results;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
+        }
     }
 }

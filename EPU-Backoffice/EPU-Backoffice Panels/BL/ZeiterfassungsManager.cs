@@ -27,12 +27,23 @@ namespace EPU_Backoffice_Panels.BL
     {
         private Logger logger = Logger.Instance;
 
-      /*  
-        public List <ZeitaufzeichnungTable> LoadZeiterfassung()
+       
+        public List <ZeitaufzeichnungTable> LoadZeiterfassung(int pID, Label msglabel)
         {
-            return ;
+            List<ZeitaufzeichnungTable> results;
+
+            try
+            {
+                results = DALFactory.GetDAL().LoadZeiterfassung();
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            return results;
         }
-        */
+        
        
         public void SaveZeiterfassung(ZeitaufzeichnungTable z, Label label)
         {

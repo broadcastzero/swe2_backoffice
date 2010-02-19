@@ -90,7 +90,7 @@ namespace EPU_Backoffice_Panels
                     this.zeiterfassungMsgLabel.Show();
                 }
                 GlobalActions.ShowSuccessLabel(this.zeiterfassungMsgLabel);
-                Resetzeiterfassung();
+                ResetZeiterfassung();
 
             }
         }
@@ -100,12 +100,67 @@ namespace EPU_Backoffice_Panels
             GlobalActions.BindFromExistingProjekteToComboBox(sender, e);
         }
 
-        private void Resetzeiterfassung()
+        /// <summary>
+        /// Loads all Zeiterfassungen into datagrid
+        /// </summary>
+        private void SearchZeiterfassung()
+        {
+            // get kundenID out of ComboBox
+            string projektID = this.zeiterfassungCombobox.SelectedItem.ToString();
+            int id = -1;
+
+            try
+            {
+                id = GlobalActions.getIdFromCombobox(projektID, zeiterfassungMsgLabel);
+            }
+            catch
+            (
+                InvalidInputException
+            )
+            {
+                logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from ZeiterfassungTab!");
+            }
+            
+            ZeiterfassungsManager manager = new ZeiterfassungsManager();
+            List<zeitTab> results = new List<zeitTab>();
+
+            try
+            {
+                //results = manager.LoadZeiterfassung(id, this.zeiterfassungMsgLabel);
+            }
+            catch (DataBaseException ex)
+            {
+                this.logger.Log(Logger.Level.Error, "A serious problem with the database has occured. Program will be exited. " + ex.Message + ex.StackTrace);
+                Application.Exit();
+            }
+
+        
+        }
+
+        /// <summary>
+        /// Resets Zeiterfassungs Fields after entry
+        /// </summary>
+        private void ResetZeiterfassung()
         {
             this.zeiterfassungHoursTextbox.Text = string.Empty;
             this.zeiterfassungStundensatzTextBox.Text = string.Empty;
             this.zeiterfassungDescriptionTextBox.Text = string.Empty;
         }
+
+        private void DisableFields() 
+        {
+            this.zeiterfassungStundensatzTextBox.ReadOnly = true;
+            this.zeiterfassungDescriptionTextBox.ReadOnly = true;
+            this.zeiterfassungHoursTextbox.ReadOnly = true;
+        }
+
+        private void EnableFields()
+        {
+            this.zeiterfassungStundensatzTextBox.ReadOnly = false;
+            this.zeiterfassungDescriptionTextBox.ReadOnly = false;
+            this.zeiterfassungHoursTextbox.ReadOnly = false;
+        }
+
 
     }
 }

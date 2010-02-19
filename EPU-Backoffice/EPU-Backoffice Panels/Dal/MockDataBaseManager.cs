@@ -451,5 +451,10 @@ namespace EPU_Backoffice_Panels.Dal
             z.ID = MockDataBaseManager.ZeitaufzeichnungID;
             MockDataBaseManager.savedZeitaufzeichnungen.Add(z);
         }
+
+        public List<ZeitaufzeichnungTable> LoadZeiterfassung()
+        {
+            return MockDataBaseManager.SavedZeitaufzeichnungen;
+        }
     }
 }
