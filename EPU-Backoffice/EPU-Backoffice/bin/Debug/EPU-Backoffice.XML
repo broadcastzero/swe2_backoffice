@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPU-Backoffice</name>
+    </assembly>
+    <members>
+        <member name="M:EPU_Backoffice.Program.Main">
+            <summary>
+            Main entry point of the application.
+            </summary>
+        </member>
+        <member name="T:EPU_Backoffice.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:EPU_Backoffice.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:EPU_Backoffice.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenlookups, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="F:EPU_Backoffice.Form1.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:EPU_Backoffice.Form1.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:EPU_Backoffice.Form1.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="T:EPU_Backoffice.DAL.DataBaseConnector">
+            <summary>
+            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
+            </summary>
+        </member>
+        <member name="M:EPU_Backoffice.DAL.DataBaseConnector.#ctor">
+            <summary>
+            Constructor: creates needed tables if they do not exist yet
+            </summary>
+        </member>
+    </members>
+</doc>

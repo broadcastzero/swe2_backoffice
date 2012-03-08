@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using EPU_Backoffice.DAL;
 
 namespace EPU_Backoffice
 {
     static class Program
     {
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// Main entry point of the application.
         /// </summary>
         [STAThread]
         static void Main()
