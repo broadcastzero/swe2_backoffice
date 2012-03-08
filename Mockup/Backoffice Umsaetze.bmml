@@ -1,0 +1,48 @@
+<mockup version="1.0" skin="sketch" measuredW="411" measuredH="411" mockupW="391" mockupH="400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="20" y="11" w="391" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>23</bottomheight>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Backoffice%201.0</text>
+        <topheight>26</topheight>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="346" measuredW="200" measuredH="178" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderStyle>none</borderStyle>
+        <color>16777215</color>
+        <hrefs>Backoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Mitarbeiter%26bm%3BBackoffice%20Mitarbeiter.bmml%26bm%3BBackoffice%20Mitarbeiter.bmml%26bm%3BBackoffice%20Mitarbeiter.bmml%2CBackoffice%20Umsaetze%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C45%2C82%2C74%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%222_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C74%2C82%2C103%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%222_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C103%2C82%2C132%22%20href%3D%22Backoffice%2520Mitarbeiter.bmml%22%20alt%3D%22Backoffice%20Mitarbeiter%22%20id%3D%222_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C132%2C82%2C161%22%20href%3D%22Backoffice%2520Umsaetze.bmml%22%20alt%3D%22Backoffice%20Umsaetze%22%20id%3D%222_3%22/%3E%0A</map>
+        <selectedIndex>3</selectedIndex>
+        <text>Rechnungen%0AProjekte%0AMitarbeiter%0AUms%E4tze</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="106" y="42" w="-1" h="-1" measuredW="135" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Eingangen%20%26%20Ausgaben</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="106" y="85" w="-1" h="-1" measuredW="106" measuredH="273" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5B%20%5D%20Jannuar%0A%5B%20%5D%20Februar%0A%5B%20%5D%20M%E4rz%0A%5B%20%5D%20April%0A%5B%20%5D%20Mai%0A%5B%20%5D%20Juni%0A%5B%20%5D%20Juli%0A%5B%20%5D%20August%0A%5B%20%5D%20September%0A%5B%20%5D%20Oktober%0A%5B%20%5D%20November%0A%5B%20%5D%20Dezember%0A%5Bx%5D%20Ganzes%20Jahr</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::ComboBox" x="272" y="85" w="-1" h="-1" measuredW="64" measuredH="110" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>2000%0A2001%0A2002%0A2003%0A2004%0A2005</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="227" y="220" w="169" h="32" measuredW="65" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Suchen</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
