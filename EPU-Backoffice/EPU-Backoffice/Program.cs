@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using EPU_Backoffice.DAL;
+using EPU_Backoffice.Dal;
 
 namespace EPU_Backoffice
 {
@@ -17,6 +17,9 @@ namespace EPU_Backoffice
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            DataBaseConnector db_c = new DataBaseConnector();
+            Console.ReadLine();
         }
     }
 }

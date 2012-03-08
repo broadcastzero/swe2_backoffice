@@ -42,12 +42,12 @@
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
             </summary>
         </member>
-        <member name="T:EPU_Backoffice.DAL.DataBaseConnector">
+        <member name="T:EPU_Backoffice.Dal.DataBaseConnector">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
             </summary>
         </member>
-        <member name="M:EPU_Backoffice.DAL.DataBaseConnector.#ctor">
+        <member name="M:EPU_Backoffice.Dal.DataBaseConnector.#ctor">
             <summary>
             Constructor: creates needed tables if they do not exist yet
             </summary>

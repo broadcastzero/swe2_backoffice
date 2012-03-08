@@ -4,10 +4,11 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPU_Backoffice.DAL
+namespace EPU_Backoffice.Dal
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data.SQLite;
 
     /// <summary>
@@ -15,15 +16,37 @@ namespace EPU_Backoffice.DAL
     /// </summary>
     public class DataBaseConnector
     {
+        /* Private Vars */
+        private ConnectionStringSettings settings = null;
+
         /// <summary>
         /// Constructor: creates needed tables if they do not exist yet
         /// </summary>
         public DataBaseConnector()
         {
             /***
-             * Define the database-file and declare variables
+             * Define the database-file (or get path from configuration-file) and declare variables
              */
-            string dataSource = "backoffice_data.db";
+            this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
+
+            // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config - if not, create
+            if (this.settings == null)
+            {
+                this.settings = new ConnectionStringSettings();
+                this.settings.Name = "SQLite";
+                this.settings.ConnectionString = @"Data Source=.\backoffice_data.db";
+                try
+                {
+                    Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    config.ConnectionStrings.ConnectionStrings.Add(this.settings);
+                    config.Save();
+                }
+                catch (System.Configuration.ConfigurationErrorsException)
+                {
+                    throw;
+                }
+            }
+
             SQLiteConnection connection = null;
             SQLiteCommand command = null;
 
@@ -33,7 +56,7 @@ namespace EPU_Backoffice.DAL
             try
             {
                 connection = new SQLiteConnection();
-                connection.ConnectionString = "Data Source=" + dataSource;
+                connection.ConnectionString = this.settings.ConnectionString;
                 connection.Open();
 
                 /***
