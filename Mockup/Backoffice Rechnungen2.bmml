@@ -12,41 +12,40 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="346" measuredW="200" measuredH="199" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="343" measuredW="200" measuredH="199" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
         <borderStyle>none</borderStyle>
         <color>16777215</color>
         <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Mitarbeiter%26bm%3BBackoffice%20Mitarbeiter.bmml%26bm%3BBackoffice%20Mitarbeiter.bmml%26bm%3BBackoffice%20Mitarbeiter.bmml%2CBackoffice%20Umsaetze%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C45%2C82%2C74%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%222_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C74%2C82%2C103%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%222_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C103%2C82%2C132%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%222_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C132%2C82%2C161%22%20href%3D%22Backoffice%2520Mitarbeiter.bmml%22%20alt%3D%22Backoffice%20Mitarbeiter%22%20id%3D%222_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C161%2C82%2C190%22%20href%3D%22Backoffice%2520Umsaetze.bmml%22%20alt%3D%22Backoffice%20Umsaetze%22%20id%3D%222_4%22/%3E%0A</map>
-        <selectedIndex>4</selectedIndex>
+        <selectedIndex>1</selectedIndex>
         <text>Home%0ARechnungen%0AProjekte%0AMitarbeiter%0AUms%E4tze</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="106" y="42" w="-1" h="-1" measuredW="227" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="220" y="92" w="-1" h="-1" measuredW="176" measuredH="63" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Ein%20und%20Ausgaben%20per%20Monat%20oder%20Jahr</text>
+        <hrefs>Backoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Rechnungen2%26bm%3BBackoffice%20Rechnungen2.bmml%26bm%3BBackoffice%20Rechnungen2.bmml%26bm%3BBackoffice%20Rechnungen2.bmml%2CBackoffice%20Rechnungen3%26bm%3BBackoffice%20Rechnungen3.bmml%26bm%3BBackoffice%20Rechnungen3.bmml%26bm%3BBackoffice%20Rechnungen3.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22200%2C81%2C376%2C102%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22200%2C102%2C376%2C123%22%20href%3D%22Backoffice%2520Rechnungen2.bmml%22%20alt%3D%22Backoffice%20Rechnungen2%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22200%2C123%2C376%2C144%22%20href%3D%22Backoffice%2520Rechnungen3.bmml%22%20alt%3D%22Backoffice%20Rechnungen3%22%20id%3D%227_2%22/%3E%0A</map>
+        <text>%28%20%29%20Alle%20Rechnungen%0A%28o%29%20Nur%20offene%20Rechnungen%0A%28%20%29%20Nur%20bezahlte%20Rechnungen</text>
       </controlProperties>
     </control>
-    <control controlID="9" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="106" y="85" w="-1" h="-1" measuredW="106" measuredH="273" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="106" y="42" w="-1" h="-1" measuredW="259" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>%5B%20%5D%20Jannuar%0A%5B%20%5D%20Februar%0A%5B%20%5D%20M%E4rz%0A%5B%20%5D%20April%0A%5B%20%5D%20Mai%0A%5B%20%5D%20Juni%0A%5B%20%5D%20Juli%0A%5B%20%5D%20August%0A%5B%20%5D%20September%0A%5B%20%5D%20Oktober%0A%5B%20%5D%20November%0A%5B%20%5D%20Dezember%0A%5Bx%5D%20Ganzes%20Jahr</text>
+        <text>Finde%20Rechnungen%20der%20angegebenen%20Monate</text>
       </controlProperties>
     </control>
-    <control controlID="13" controlTypeID="com.balsamiq.mockups::ComboBox" x="272" y="85" w="-1" h="-1" measuredW="64" measuredH="110" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="220" y="177" w="167" h="28" measuredW="65" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
+        <menuIcon>false</menuIcon>
         <state>up</state>
-        <text>2000%0A2001%0A2002%0A2003%0A2004%0A2005</text>
-      </controlProperties>
-    </control>
-    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="227" y="220" w="169" h="32" measuredW="65" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
-      <controlProperties>
         <text>Suchen</text>
       </controlProperties>
     </control>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::StickyNote" x="212" y="237" w="195" h="167" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::ComboBox" x="110" y="102" w="-1" h="-1" measuredW="75" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>*-Wie%20hoch%20sind%20die%20aktuellen%20Einnahmen/Ausgaben%20nach%20Monat%0A*%20*-Wie%20hoch%20ist%20der%20prognostizierte%20Jahresumsatz%20aufgrund%20der%20Angebote*</text>
+        <state>closed</state>
+        <text>J%E4nner%20%0AFebruar%0AM%E4rz%0AApril%0AMai%0AJuni%0AJuli%0AAugust%0ASeptember%0AOktober%0ANovember%0ADezember</text>
       </controlProperties>
     </control>
   </controls>
