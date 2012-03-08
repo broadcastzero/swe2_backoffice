@@ -32,16 +32,15 @@
         <underline>true</underline>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="215" y="144" w="-1" h="-1" measuredW="72" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="205" y="144" w="93" h="64" measuredW="159" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Version%20info</text>
+        <align>center</align>
+        <text>Version%20info%20and%20other%20stuff</text>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="172" y="285" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="172" y="274" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>htttp%3A//www.homepage.net</text>
-        <textOrientation>right</textOrientation>
-        <underline>true</underline>
       </controlProperties>
     </control>
   </controls>

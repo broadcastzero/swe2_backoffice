@@ -37,7 +37,7 @@
       <controlProperties>
         <hrefs>%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Projekte2%26bm%3BBackoffice%20Projekte2.bmml%26bm%3BBackoffice%20Projekte2.bmml%26bm%3BBackoffice%20Projekte2.bmml%2CBackoffice%20Projekte3%26bm%3BBackoffice%20Projekte3.bmml%26bm%3BBackoffice%20Projekte3.bmml%26bm%3BBackoffice%20Projekte3.bmml</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C115%2C283%2C136%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C136%2C283%2C157%22%20href%3D%22Backoffice%2520Projekte2.bmml%22%20alt%3D%22Backoffice%20Projekte2%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C157%2C283%2C178%22%20href%3D%22Backoffice%2520Projekte3.bmml%22%20alt%3D%22Backoffice%20Projekte3%22%20id%3D%227_2%22/%3E%0A</map>
-        <text>Projektstatus%0A%28o%29%20Alle%0A%28%20%29%20Abgeschlossen%0A%28%20%29%20Offen</text>
+        <text>Projektstatus%0A%28%20%29%20Alle%0A%28%20%29%20Abgeschlossen%0A%28o%29%20Offen</text>
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="166" y="220" w="-1" h="-1" measuredW="160" measuredH="105" zOrder="5" locked="false" isInGroup="-1">

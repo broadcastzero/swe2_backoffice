@@ -23,5 +23,10 @@
         <text>Home%0ARechnungen%0AProjekte%0AMitarbeiter%0AUms%E4tze</text>
       </controlProperties>
     </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::StickyNote" x="158" y="153" w="195" h="123" measuredW="109" measuredH="123" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tab%20nicht%20ben%F6tigt%20da%20in%20projekte%20verwirklicht</text>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
