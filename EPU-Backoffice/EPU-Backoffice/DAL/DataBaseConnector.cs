@@ -61,9 +61,11 @@ namespace EPU_Backoffice.Dal
                 sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname VARCHAR(50) NOT NULL); ");
                 sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname VARCHAR(50) NOT NULL); ");
                 sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, aktiv BOOLEAN DEFAULT 'false' NOT NULL); ");
-                sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, projektID INTEGER NOT NULL, stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100)); ");
-                sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, projektID INTEGER NOT NULL, kundenID INTEGER NOT NULL, Angebotssumme FLOAT, Dauer INTEGER, Datum TIMESTAMP, Umsetzung FLOAT, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL); ");
-                sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, angebotsID INTEGER NOT NULL, Stunden INTEGER NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100)); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, kundenID INTEGER NOT NULL, Angebotssumme FLOAT, Dauer INTEGER, Datum TIMESTAMP, Umsetzung FLOAT, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotsID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL, Stunden INTEGER NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KundenID INTEGER NOT NULL); ");
+
 
                 command = new SQLiteCommand(connection);
                 command.CommandText = sb.ToString();
