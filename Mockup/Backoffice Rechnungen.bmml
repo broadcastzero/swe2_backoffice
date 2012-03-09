@@ -55,8 +55,8 @@
     </control>
     <control controlID="13" controlTypeID="com.balsamiq.mockups::ButtonBar" x="143" y="44" w="-1" h="-1" measuredW="222" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
-        <hrefs>%2CBackoffice%20Rechnungen4%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%2C</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22196%2C33%2C269%2C62%22%20href%3D%22Backoffice%2520Rechnungen4.bmml%22%20alt%3D%22Backoffice%20Rechnungen4%22%20id%3D%2213_0%22/%3E%0A</map>
+        <hrefs>Backoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Rechnungen4%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%2CBackoffice%20Rechnungen5%26bm%3BBackoffice%20Rechnungen5.bmml%26bm%3BBackoffice%20Rechnungen5.bmml%26bm%3BBackoffice%20Rechnungen5.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22123%2C33%2C194%2C62%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%2213_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22196%2C33%2C269%2C62%22%20href%3D%22Backoffice%2520Rechnungen4.bmml%22%20alt%3D%22Backoffice%20Rechnungen4%22%20id%3D%2213_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22271%2C33%2C349%2C62%22%20href%3D%22Backoffice%2520Rechnungen5.bmml%22%20alt%3D%22Backoffice%20Rechnungen5%22%20id%3D%2213_2%22/%3E%0A</map>
         <text>Suchen%2C%20Eingang%2C%20Ausgang</text>
       </controlProperties>
     </control>
