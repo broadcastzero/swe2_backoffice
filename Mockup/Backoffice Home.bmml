@@ -12,18 +12,7 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="346" measuredW="200" measuredH="220" zOrder="1" locked="false" isInGroup="-1">
-      <controlProperties>
-        <backgroundAlpha>1</backgroundAlpha>
-        <borderStyle>none</borderStyle>
-        <color>16777215</color>
-        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Kunden%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%2CBackoffice%20Kontakte%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%2CBackoffice%20Umsaetze%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C45%2C82%2C74%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%222_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C74%2C82%2C103%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%222_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C103%2C82%2C132%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%222_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C132%2C82%2C161%22%20href%3D%22Backoffice%2520Kunden.bmml%22%20alt%3D%22Backoffice%20Kunden%22%20id%3D%222_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C161%2C82%2C190%22%20href%3D%22Backoffice%2520Kontakte.bmml%22%20alt%3D%22Backoffice%20Kontakte%22%20id%3D%222_4%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C190%2C82%2C219%22%20href%3D%22Backoffice%2520Umsaetze.bmml%22%20alt%3D%22Backoffice%20Umsaetze%22%20id%3D%222_5%22/%3E%0A</map>
-        <selectedIndex>0</selectedIndex>
-        <text>Home%0ARechnungen%0AProjekte%0AKunden%0AKontakte%0AUms%E4tze</text>
-      </controlProperties>
-    </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="164" y="65" w="-1" h="-1" measuredW="174" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="164" y="65" w="-1" h="-1" measuredW="174" measuredH="28" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <size>20</size>
@@ -32,15 +21,26 @@
         <underline>true</underline>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="205" y="144" w="93" h="64" measuredW="159" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="205" y="144" w="93" h="64" measuredW="159" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
         <text>Version%20info%20and%20other%20stuff</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="172" y="274" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="172" y="274" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <text>htttp%3A//www.homepage.net</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="346" measuredW="200" measuredH="241" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderStyle>none</borderStyle>
+        <color>16777215</color>
+        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Angebote%26bm%3BBackoffice%20Angebote.bmml%26bm%3BBackoffice%20Angebote.bmml%26bm%3BBackoffice%20Angebote.bmml%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Kunden%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%2CBackoffice%20Kontakte%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%2CBackoffice%20Umsaetze%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C45%2C82%2C74%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C74%2C82%2C103%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C103%2C82%2C132%22%20href%3D%22Backoffice%2520Angebote.bmml%22%20alt%3D%22Backoffice%20Angebote%22%20id%3D%227_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C132%2C82%2C161%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%227_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C161%2C82%2C190%22%20href%3D%22Backoffice%2520Kunden.bmml%22%20alt%3D%22Backoffice%20Kunden%22%20id%3D%227_4%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C190%2C82%2C219%22%20href%3D%22Backoffice%2520Kontakte.bmml%22%20alt%3D%22Backoffice%20Kontakte%22%20id%3D%227_5%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C219%2C82%2C248%22%20href%3D%22Backoffice%2520Umsaetze.bmml%22%20alt%3D%22Backoffice%20Umsaetze%22%20id%3D%227_6%22/%3E%0A</map>
+        <selectedIndex>0</selectedIndex>
+        <text>Home%0ARechnungen%0AAngebote%0AProjekte%0AKunden%0AKontakte%0AUms%E4tze</text>
       </controlProperties>
     </control>
   </controls>

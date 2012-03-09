@@ -1,0 +1,142 @@
+<mockup version="1.0" skin="sketch" measuredW="649" measuredH="562" mockupW="629" mockupH="551">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="20" y="11" w="391" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>23</bottomheight>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Backoffice%201.0</text>
+        <topheight>26</topheight>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="20" y="36" w="382" h="346" measuredW="200" measuredH="241" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderStyle>none</borderStyle>
+        <color>16777215</color>
+        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Angebote%26bm%3BBackoffice%20Angebote.bmml%26bm%3BBackoffice%20Angebote.bmml%26bm%3BBackoffice%20Angebote.bmml%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Kunden%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%26bm%3BBackoffice%20Kunden.bmml%2CBackoffice%20Kontakte%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%26bm%3BBackoffice%20Kontakte.bmml%2CBackoffice%20Umsaetze%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml%26bm%3BBackoffice%20Umsaetze.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C45%2C82%2C74%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%222_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C74%2C82%2C103%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%222_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C103%2C82%2C132%22%20href%3D%22Backoffice%2520Angebote.bmml%22%20alt%3D%22Backoffice%20Angebote%22%20id%3D%222_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C132%2C82%2C161%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%222_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C161%2C82%2C190%22%20href%3D%22Backoffice%2520Kunden.bmml%22%20alt%3D%22Backoffice%20Kunden%22%20id%3D%222_4%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C190%2C82%2C219%22%20href%3D%22Backoffice%2520Kontakte.bmml%22%20alt%3D%22Backoffice%20Kontakte%22%20id%3D%222_5%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%220%2C219%2C82%2C248%22%20href%3D%22Backoffice%2520Umsaetze.bmml%22%20alt%3D%22Backoffice%20Umsaetze%22%20id%3D%222_6%22/%3E%0A</map>
+        <selectedIndex>2</selectedIndex>
+        <text>Home%0ARechnungen%0AAngebote%0AProjekte%0AKunden%0AKontakte%0AUms%E4tze</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="223" y="38" w="118" h="21" measuredW="110" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Angebot%20anzeigen</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::ComboBox" x="185" y="59" w="-1" h="-1" measuredW="156" measuredH="23" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%23302%3A%20Nagios-Server</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="103" y="84" w="301" h="48" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>SUM%28%u20AC%29%20%7C%20Dauer%28h%29%20%7C%20Datum%20%7C%20Chance%20%7C%20Kunde%0A320.12%20%20%20%20%2060%20%20%20%20%20%2031.2.2012%20%20%2065%25%20%20%20%20Rudolf%20Meyer</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="196" y="180" w="-1" h="-1" measuredW="114" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Angebot%20eintragen</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::PointyButton" x="283" y="342" w="-1" h="-1" measuredW="75" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Eintragen</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="183" y="208" w="-1" h="-1" measuredW="79" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="103" y="211" w="-1" h="-1" measuredW="73" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Summe%20%28%u20AC%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="103" y="238" w="-1" h="-1" measuredW="60" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Dauer%20%28h%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="103" y="264" w="-1" h="-1" measuredW="43" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Datum</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::TextInput" x="176" y="235" w="-1" h="-1" measuredW="79" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="159" y="263" w="-1" h="-1" measuredW="79" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TextInput" x="151" y="295" w="-1" h="-1" measuredW="79" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="98" y="298" w="48" h="21" measuredW="50" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Chance</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="103" y="330" w="41" h="24" measuredW="41" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Kunde</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::ComboBox" x="155" y="331" w="-1" h="-1" measuredW="90" measuredH="23" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Franz%20Karl</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::StickyNote" x="463" y="36" w="186" h="526" measuredW="109" measuredH="123" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-%20Angebotsverwaltung%0A%20%0AWird%20ein%20Angebot%20eingetragen%2C%20so%20wird%20auch%20automatisch%20ein%20%28noch%20vorl%E4ufiges%29%20Projekt%20erstellt.%0ASo%20wird%20es%20m%F6glich%2C%20alle%20Angebote%2C%20die%20zu%20einem%20Projekt%20geh%F6ren%2C%20miteinander%20zu%20verbinden.%0AIn%20der%20Tabelle%20Projekt%20gibt%20es%20eine%20Status-bool-variable%20%22aktiv%22%2C%20die%20angibt%2C%20ob%20das%20Projekt%20gestartet%20wurde%2C%0Aoder%20sich%20erst%20in%20der%20Entwurfsphase%20befindet.%0AIn%20der%20Tabelle%20Angebote%20gibt%20es%20eine%20Status-bool-Variable%2C%20die%20angibt%2C%20ob%20dieses%20Angebot%20akzeptiert%20wurde.%0ADiese%20wird%20auf%20%22true%22%20gesetzt%2C%20wenn%20der%20User%20auf%20den%20%22Akzeptiert%22-Button%20dr%FCckt.%20Dabei%20wird%20in%20der%20Tabelle%20%22Projekt%22%20die%20bool-Variable%20%22aktiv%22%20auf%20%22true%22%20gesetzt.%0A%20%0ADamit%20ein%20Angebot%20erstellt%20werden%20kann%2C%20MUSS%20zuerst%20ein%20Projekt%20eingetragen%20werden.</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::PointyButton" x="230" y="141" w="-1" h="-1" measuredW="181" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Akzeptiert%20-%20Projekt%20starten</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Button" x="103" y="141" w="-1" h="-1" measuredW="117" measuredH="27" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Angebot%20l%F6schen</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Label" x="294" y="236" w="105" h="24" measuredW="107" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>geh%F6rt%20zu%20Projekt</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::ComboBox" x="259" y="260" w="-1" h="-1" measuredW="149" measuredH="23" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Backoffice%20Angebote2%26bm%3BBackoffice%20Angebote2.bmml%26bm%3BBackoffice%20Angebote2.bmml%26bm%3BBackoffice%20Angebote2.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22239%2C249%2C388%2C272%22%20href%3D%22Backoffice%2520Angebote2.bmml%22%20alt%3D%22Backoffice%20Angebote2%22%20id%3D%2223%22/%3E</map>
+        <text>%3C%3CNeues%20Projekt%3E%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::TextInput" x="271" y="309" w="98" h="-1" measuredW="79" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="262" y="285" w="134" h="24" measuredW="124" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Name%20neues%20Projekt</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
