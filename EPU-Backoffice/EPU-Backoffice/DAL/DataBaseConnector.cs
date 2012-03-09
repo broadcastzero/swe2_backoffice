@@ -8,6 +8,7 @@ namespace EPU_Backoffice.Dal
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
     using System.Configuration;
     using System.Data.SQLite;
 
@@ -24,9 +25,7 @@ namespace EPU_Backoffice.Dal
         /// </summary>
         public DataBaseConnector()
         {
-            /***
-             * Define the database-file (or get path from configuration-file) and declare variables
-             */
+            // get connection string out of configuration file
             this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
 
             // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config - if not, create
@@ -50,20 +49,24 @@ namespace EPU_Backoffice.Dal
             SQLiteConnection connection = null;
             SQLiteCommand command = null;
 
-            /***
-             * Connect to the database
-             */
+            // Connect to the database
             try
             {
                 connection = new SQLiteConnection();
                 connection.ConnectionString = this.settings.ConnectionString;
                 connection.Open();
 
-                /***
-                 * Create tables if they do not exist
-                 */
+                // Create tables if they do not exist
+                StringBuilder sb = new StringBuilder();
+                sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname VARCHAR(50) NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname VARCHAR(50) NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, aktiv BOOLEAN DEFAULT 'false' NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, projektID INTEGER NOT NULL, stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100)); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, projektID INTEGER NOT NULL, kundenID INTEGER NOT NULL, Angebotssumme FLOAT, Dauer INTEGER, Datum TIMESTAMP, Umsetzung FLOAT, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL); ");
+                sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, angebotsID INTEGER NOT NULL, Stunden INTEGER NOT NULL); ");
+
                 command = new SQLiteCommand(connection);
-                command.CommandText = "CREATE TABLE IF NOT EXISTS test (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name VARCHAR(100) NOT NULL);";
+                command.CommandText = sb.ToString();
                 command.ExecuteNonQuery();
             }
             catch (SQLiteException)
@@ -72,9 +75,7 @@ namespace EPU_Backoffice.Dal
             }
             finally
             {
-                /***
-                 * Free allocated resources and lose connection
-                 */
+                // Free allocated resources and close connection
                 command.Dispose();
 
                 connection.Close();
