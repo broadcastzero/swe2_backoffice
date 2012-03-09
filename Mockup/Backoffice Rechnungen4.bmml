@@ -23,41 +23,49 @@
         <text>Home%0ARechnungen%0AProjekte%0AKunden%0AUms%E4tze</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="200" y="132" w="-1" h="-1" measuredW="176" measuredH="63" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="117" y="90" w="-1" h="-1" measuredW="280" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <hrefs>Backoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2CBackoffice%20Rechnungen2%26bm%3BBackoffice%20Rechnungen2.bmml%26bm%3BBackoffice%20Rechnungen2.bmml%26bm%3BBackoffice%20Rechnungen2.bmml%2CBackoffice%20Rechnungen3%26bm%3BBackoffice%20Rechnungen3.bmml%26bm%3BBackoffice%20Rechnungen3.bmml%26bm%3BBackoffice%20Rechnungen3.bmml</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22180%2C121%2C356%2C142%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22180%2C142%2C356%2C163%22%20href%3D%22Backoffice%2520Rechnungen2.bmml%22%20alt%3D%22Backoffice%20Rechnungen2%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22180%2C163%2C356%2C184%22%20href%3D%22Backoffice%2520Rechnungen3.bmml%22%20alt%3D%22Backoffice%20Rechnungen3%22%20id%3D%227_2%22/%3E%0A</map>
-        <text>%28o%29%20Alle%20Rechnungen%0A%28%20%29%20Nur%20offene%20Rechnungen%0A%28%20%29%20Nur%20bezahlte%20Rechnungen</text>
+        <text>Bitte%20w%E4hlen%20Sie%20die%20zu%20importierende%20Rechnung%21</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="117" y="90" w="-1" h="-1" measuredW="259" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Finde%20Rechnungen%20der%20angegebenen%20Monate</text>
-      </controlProperties>
-    </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="164" y="228" w="167" h="28" measuredW="65" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="154" y="235" w="167" h="28" measuredW="90" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <menuIcon>false</menuIcon>
         <state>up</state>
-        <text>Suchen</text>
+        <text>Importieren</text>
       </controlProperties>
     </control>
-    <control controlID="11" controlTypeID="com.balsamiq.mockups::ComboBox" x="117" y="132" w="-1" h="-1" measuredW="75" measuredH="23" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::StickyNote" x="154" y="271" w="167" h="116" measuredW="109" measuredH="123" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
-        <state>closed</state>
-        <text>J%E4nner%20%0AFebruar%0AM%E4rz%0AApril%0AMai%0AJuni%0AJuli%0AAugust%0ASeptember%0AOktober%0ANovember%0ADezember</text>
+        <text>*-%20Eingangsrechnungen%20importieren%0A*-%20Format%20pr%FCfen%20und%20in%20Ordner%20verschieben</text>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::StickyNote" x="154" y="256" w="186" h="123" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::ButtonBar" x="143" y="44" w="-1" h="-1" measuredW="222" measuredH="29" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>*-Wie%20viele%20Rechnungen%20sind%20offen*</text>
-      </controlProperties>
-    </control>
-    <control controlID="13" controlTypeID="com.balsamiq.mockups::ButtonBar" x="143" y="44" w="-1" h="-1" measuredW="222" measuredH="29" zOrder="7" locked="false" isInGroup="-1">
-      <controlProperties>
-        <hrefs>%2CBackoffice%20Rechnungen4%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%26bm%3BBackoffice%20Rechnungen4.bmml%2C</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22196%2C33%2C269%2C62%22%20href%3D%22Backoffice%2520Rechnungen4.bmml%22%20alt%3D%22Backoffice%20Rechnungen4%22%20id%3D%2213_0%22/%3E%0A</map>
+        <hrefs>Backoffice%20Rechnungen%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%26bm%3BBackoffice%20Rechnungen.bmml%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22123%2C33%2C194%2C62%22%20href%3D%22Backoffice%2520Rechnungen.bmml%22%20alt%3D%22Backoffice%20Rechnungen%22%20id%3D%2213_0%22/%3E%0A</map>
+        <selectedIndex>1</selectedIndex>
         <text>Suchen%2C%20Eingang%2C%20Ausgang</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="117" y="126" w="227" h="-1" measuredW="224" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>C%3A%5CScans%5Ceingangsrechnung_205.pdf</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::PointyButton" x="349" y="126" w="47" h="-1" measuredW="39" measuredH="27" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%3E%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="117" y="168" w="-1" h="-1" measuredW="265" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Zu%20welchem%20Kontakt%20geh%F6rt%20diese%20Rechnung%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::ComboBox" x="182" y="196" w="-1" h="-1" measuredW="110" measuredH="23" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Hubert%20Meyer</text>
       </controlProperties>
     </control>
   </controls>
