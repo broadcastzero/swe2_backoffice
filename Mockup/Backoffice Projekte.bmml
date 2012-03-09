@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" measuredW="411" measuredH="411" mockupW="391" mockupH="400">
+<mockup version="1.0" skin="sketch" measuredW="438" measuredH="411" mockupW="418" mockupH="400">
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="20" y="11" w="391" h="400" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -23,26 +23,32 @@
         <text>Home%0ARechnungen%0AAngebote%0AProjekte%0AKunden%0AKontakte%0AUms%E4tze%0AZeiterfassung</text>
       </controlProperties>
     </control>
-    <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="118" y="51" w="257" h="21" measuredW="99" measuredH="21" zOrder="2" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Projekt%20Reports</text>
-      </controlProperties>
-    </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="181" y="340" w="131" h="27" measuredW="65" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="181" y="340" w="131" h="27" measuredW="65" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Suchen</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="190" y="105" w="-1" h="-1" measuredW="113" measuredH="84" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="124" y="93" w="-1" h="-1" measuredW="113" measuredH="105" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <hrefs>%2CBackoffice%20Projekte%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%26bm%3BBackoffice%20Projekte.bmml%2CBackoffice%20Projekte2%26bm%3BBackoffice%20Projekte2.bmml%26bm%3BBackoffice%20Projekte2.bmml%26bm%3BBackoffice%20Projekte2.bmml%2CBackoffice%20Projekte3%26bm%3BBackoffice%20Projekte3.bmml%26bm%3BBackoffice%20Projekte3.bmml%26bm%3BBackoffice%20Projekte3.bmml</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C115%2C283%2C136%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C136%2C283%2C157%22%20href%3D%22Backoffice%2520Projekte2.bmml%22%20alt%3D%22Backoffice%20Projekte2%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22170%2C157%2C283%2C178%22%20href%3D%22Backoffice%2520Projekte3.bmml%22%20alt%3D%22Backoffice%20Projekte3%22%20id%3D%227_2%22/%3E%0A</map>
-        <text>Projektstatus%0A%28o%29%20Alle%0A%28%20%29%20Abgeschlossen%0A%28%20%29%20Offen</text>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22104%2C103%2C217%2C124%22%20href%3D%22Backoffice%2520Projekte.bmml%22%20alt%3D%22Backoffice%20Projekte%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22104%2C124%2C217%2C145%22%20href%3D%22Backoffice%2520Projekte2.bmml%22%20alt%3D%22Backoffice%20Projekte2%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22104%2C145%2C217%2C166%22%20href%3D%22Backoffice%2520Projekte3.bmml%22%20alt%3D%22Backoffice%20Projekte3%22%20id%3D%227_2%22/%3E%0A</map>
+        <text>Suche%20nach%0A%28%20%29%20Name%0A%28%20%29%20Alle%0A%28%20%29%20Abgeschlossen%0A%28o%29%20Offen</text>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="166" y="220" w="-1" h="-1" measuredW="160" measuredH="105" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="166" y="220" w="-1" h="-1" measuredW="160" measuredH="105" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Zusatzoptionen%0A%5B%20%5D%20Stundensatz%20anzeigen%0A%5B%20%5D%20Voraussichtliches%20Ende%0A%5B%20%5D%20Budget%0A%5B%20%5D%20Zugeteilte%20MItarbeiter</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="181" y="42" w="257" h="21" measuredW="99" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Projekt%20Reports</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::ComboBox" x="257" y="112" w="-1" h="-1" measuredW="104" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%3C%3Ckeines%3E%3E</text>
       </controlProperties>
     </control>
   </controls>
