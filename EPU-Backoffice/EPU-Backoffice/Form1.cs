@@ -7,10 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EPU_Backoffice
+namespace EPUBackoffice
 {
+    /// <summary>
+    /// Class of main window
+    /// </summary>
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Form of first window
+        /// </summary>
         public Form1()
         {
             InitializeComponent();

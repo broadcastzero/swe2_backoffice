@@ -4,52 +4,72 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
-        <member name="M:EPU_Backoffice.Program.Main">
+        <member name="T:EPUBackoffice.Program">
+            <summary>
+            The main entry class of the application.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Program.Main">
             <summary>
             Main entry point of the application.
             </summary>
         </member>
-        <member name="T:EPU_Backoffice.Properties.Resources">
+        <member name="T:EPUBackoffice.Properties.Resources">
             <summary>
-              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="P:EPU_Backoffice.Properties.Resources.ResourceManager">
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
             <summary>
-              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="P:EPU_Backoffice.Properties.Resources.Culture">
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
             <summary>
-              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-              Ressourcenlookups, die diese stark typisierte Ressourcenklasse verwenden.
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="F:EPU_Backoffice.Form1.components">
+        <member name="T:EPUBackoffice.Form1">
+            <summary>
+            Class of main window
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Form1.#ctor">
+            <summary>
+            Form of first window
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.Form1.components">
             <summary>
             Erforderliche Designervariable.
             </summary>
         </member>
-        <member name="M:EPU_Backoffice.Form1.Dispose(System.Boolean)">
+        <member name="M:EPUBackoffice.Form1.Dispose(System.Boolean)">
             <summary>
             Verwendete Ressourcen bereinigen.
             </summary>
             <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
         </member>
-        <member name="M:EPU_Backoffice.Form1.InitializeComponent">
+        <member name="M:EPUBackoffice.Form1.InitializeComponent">
             <summary>
             Erforderliche Methode für die Designerunterstützung.
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
             </summary>
         </member>
-        <member name="T:EPU_Backoffice.Dal.DataBaseConnector">
+        <member name="T:EPUBackoffice.Dal.DataBaseConnector">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
             </summary>
         </member>
-        <member name="M:EPU_Backoffice.Dal.DataBaseConnector.#ctor">
+        <member name="F:EPUBackoffice.Dal.DataBaseConnector.settings">
             <summary>
-            Constructor: creates needed tables if they do not exist yet
+            Set the connection string. Standard = backoffice_data.db, or name set in .config-file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.#ctor">
+            <summary>
+            Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
             </summary>
         </member>
     </members>

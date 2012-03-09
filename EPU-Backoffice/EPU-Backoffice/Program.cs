@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using EPU_Backoffice.Dal;
+using EPUBackoffice.Dal;
 
-namespace EPU_Backoffice
+namespace EPUBackoffice
 {
+    /// <summary>
+    /// The main entry class of the application.
+    /// </summary>
     static class Program
     {
         /// <summary>
@@ -18,7 +21,7 @@ namespace EPU_Backoffice
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            DataBaseConnector db_c = new DataBaseConnector();
+            DataBaseConnector dbc = new DataBaseConnector();
             Console.ReadLine();
         }
     }

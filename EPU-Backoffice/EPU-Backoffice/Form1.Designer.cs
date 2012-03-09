@@ -1,4 +1,4 @@
-﻿namespace EPU_Backoffice
+﻿namespace EPUBackoffice
 {
     partial class Form1
     {
@@ -13,9 +13,9 @@
         /// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
             base.Dispose(disposing);
         }
