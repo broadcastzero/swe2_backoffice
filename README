@@ -3,3 +3,17 @@ swe2_backoffice
 ---------------
 
 This solution is created for education purposes.
+
+Standard git commands:
+
+git commit -am 'mycommitmessage' => select changes for committing and leave a commitmessage
+git push origin master => upload committed changes to repository
+
+git pull origin master => get up-to-date files from repository
+
+if git pull leads to message: error - local changes would be overwritten,
+make sure to save all important stuff you did since your last pull, and then:
+
+git stash save .
+git pull origin master
+git stash drop <<doubletabulator>>
