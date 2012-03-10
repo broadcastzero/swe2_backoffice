@@ -19,14 +19,24 @@ namespace EPUBackoffice.Dal
     public class DataBaseConnector
     {
         /// <summary>
-        /// Set the connection string. Standard = backoffice_data.db, or name set in .config-file.
+        /// Sets the connection string. User gives path to .db file.
         /// </summary>
-        private ConnectionStringSettings settings = null;
+        private ConnectionStringSettings settings;
+
+        /// <summary>
+        /// Checks if the database file exists and is valid
+        /// </summary>
+        /// <returns></returns>
+        public bool checkDataBaseExistance()
+        {
+            // write your check code here
+            return false;
+        }
 
         /// <summary>
         /// Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
         /// </summary>
-        public DataBaseConnector()
+        public void setDatabasePath()
         {
             // get connection string out of configuration file
             this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
@@ -48,7 +58,13 @@ namespace EPUBackoffice.Dal
                     throw;
                 }
             }
+        }
 
+        /// <summary>
+        /// Creates the database file and its tables at the wished path.
+        /// </summary>
+        public void createDataBase()
+        {
             SQLiteConnection connection = null;
             SQLiteCommand command = null;
 
@@ -65,7 +81,7 @@ namespace EPUBackoffice.Dal
             sb.Append("CREATE TABLE IF NOT EXISTS Eingangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KontaktID INTEGER NOT NULL, Archivierungspfad VARCHAR(100) NOT NULL, Archivierdatum TIMESTAMP); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Eingangsbuchung (BuchungszeilenID INTEGER NOT NULL, EingangsrechnungsID INTEGER NOT NULL, PRIMARY KEY (BuchungszeilenID, EingangsrechnungsID)); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Buchungszeilen (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KategorieID INTEGER NOT NULL, EingangsbuchungsID INTEGER NOT NULL, BankkontoID INTEGER NOT NULL, BetragUST FLOAT NOT NULL, BetragNetto FLOAT NOT NULL); ");
-            sb.Append("CREATE TABLE IF  NOT EXISTS Kategorien (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Name VARCHAR(50) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Kategorien (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Name VARCHAR(50) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Bankkonto (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Kontonummer INTEGER NOT NULL, BLZ INTEGER NOT NULL); ");
 
             // Connect to the database
@@ -79,6 +95,9 @@ namespace EPUBackoffice.Dal
                 command = new SQLiteCommand(connection);
                 command.CommandText = sb.ToString();
                 command.ExecuteNonQuery();
+
+                command.CommandText = "select * from Bankkonto;";
+                SQLiteDataReader sr = command.ExecuteReader();
             }
             catch (SQLiteException)
             {

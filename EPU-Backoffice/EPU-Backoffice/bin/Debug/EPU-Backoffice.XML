@@ -14,20 +14,30 @@
             Main entry point of the application.
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Properties.Resources">
+        <member name="T:EPUBackoffice.Dal.DataBaseConnector">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+        <member name="F:EPUBackoffice.Dal.DataBaseConnector.settings">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+            Sets the connection string. User gives path to .db file.
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.checkDataBaseExistance">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+            Checks if the database file exists and is valid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.setDatabasePath">
+            <summary>
+            Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.createDataBase">
+            <summary>
+            Creates the database file and its tables at the wished path.
             </summary>
         </member>
         <member name="T:EPUBackoffice.Form1">
@@ -57,19 +67,20 @@
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.DataBaseConnector">
+        <member name="T:EPUBackoffice.Properties.Resources">
             <summary>
-            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="F:EPUBackoffice.Dal.DataBaseConnector.settings">
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
             <summary>
-            Set the connection string. Standard = backoffice_data.db, or name set in .config-file.
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.#ctor">
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
             <summary>
-            Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
     </members>

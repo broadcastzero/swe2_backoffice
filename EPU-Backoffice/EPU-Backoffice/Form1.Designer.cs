@@ -43,7 +43,7 @@
             // 
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(619, 535);
-            this.splitContainer1.SplitterDistance = 206;
+            this.splitContainer1.SplitterDistance = 205;
             this.splitContainer1.TabIndex = 0;
             // 
             // Form1
@@ -63,6 +63,5 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-
     }
 }
