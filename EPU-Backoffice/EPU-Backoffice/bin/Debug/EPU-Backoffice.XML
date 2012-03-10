@@ -4,16 +4,6 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
-        <member name="T:EPUBackoffice.Program">
-            <summary>
-            The main entry class of the application.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Program.Main">
-            <summary>
-            Main entry point of the application.
-            </summary>
-        </member>
         <member name="T:EPUBackoffice.Dal.DataBaseConnector">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
@@ -38,6 +28,32 @@
         <member name="M:EPUBackoffice.Dal.DataBaseConnector.createDataBase">
             <summary>
             Creates the database file and its tables at the wished path.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Program">
+            <summary>
+            The main entry class of the application.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Program.Main">
+            <summary>
+            Main entry point of the application.
             </summary>
         </member>
         <member name="T:EPUBackoffice.Form1">
@@ -65,22 +81,6 @@
             <summary>
             Erforderliche Methode für die Designerunterstützung.
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
             </summary>
         </member>
     </members>
