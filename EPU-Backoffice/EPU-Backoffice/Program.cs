@@ -33,10 +33,12 @@ namespace EPUBackoffice
                     dbc.setDatabasePath();
                 }
             }
-            
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            else
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
         }
     }
 }
