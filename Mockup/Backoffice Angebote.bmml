@@ -34,9 +34,9 @@
         <text>%23302%3A%20Nagios-Server</text>
       </controlProperties>
     </control>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="103" y="84" w="301" h="48" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="103" y="84" w="320" h="48" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>SUM%28%u20AC%29%20%7C%20Dauer%28h%29%20%7C%20Datum%20%7C%20Chance%20%7C%20Kunde%0A320.12%20%20%20%20%2060%20%20%20%20%20%2031.2.2012%20%20%2065%25%20%20%20%20Rudolf%20Meyer</text>
+        <text>SUM%28%u20AC%29%20%7C%20Dauer%28h%29%20%7C%20Datum%20%7C%20Chance%20%7C%20Kunde%20%7C%20Projekt%0A320.12%20%20%20%20%2060%20%20%20%20%20%2031.2.2012%20%20%2065%25%20%20%20%20Rudolf%20Meyer%20%7C%20klobla</text>
       </controlProperties>
     </control>
     <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="196" y="180" w="-1" h="-1" measuredW="114" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
@@ -65,7 +65,7 @@
         <text>Dauer%20%28h%29</text>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="103" y="264" w="-1" h="-1" measuredW="43" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="103" y="264" w="-1" h="-1" measuredW="44" measuredH="21" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Datum</text>
       </controlProperties>
@@ -85,12 +85,12 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="98" y="298" w="48" h="21" measuredW="50" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="98" y="298" w="48" h="21" measuredW="49" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Chance</text>
       </controlProperties>
     </control>
-    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="103" y="330" w="41" h="24" measuredW="41" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="103" y="330" w="41" h="24" measuredW="42" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Kunde</text>
       </controlProperties>
