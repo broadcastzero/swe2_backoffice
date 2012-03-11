@@ -11,6 +11,8 @@ namespace EPUBackoffice.Dal
     using System.Collections.Generic;
     using System.Configuration;
     using System.Data.SQLite;
+    using System.Diagnostics;
+    using System.IO;
     using System.Text;
 
     /// <summary>
@@ -24,44 +26,92 @@ namespace EPUBackoffice.Dal
         private ConnectionStringSettings settings;
 
         /// <summary>
-        /// Checks if the database file exists and is valid
+        /// Gets database path out of config file, checks if the database file exists.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
+        /// </returns>
         public bool checkDataBaseExistance()
         {
-            // write your check code here
-            return false;
+            // get location of .db file out of configuration file
+            this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
+
+            // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config
+            if (this.settings == null)
+            {
+                Trace.WriteLine("No entry 'SQLite' in config file.");
+                return false;
+            }
+
+            // get file location out of connection string
+            string path = settings.ConnectionString;
+            int index1, index2;
+            index1 = path.IndexOf("Data Source=");
+            index2 = path.IndexOf(".db");
+            try
+            {
+                path = path.Substring(index1 + 12, (index2 + 3) - (index1 + 12));
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Trace.WriteLine("No (correct) path found in config file.");
+                return false;
+            }
+            Debug.WriteLine("Path of SQLite file: " + path);
+
+            if (checkDataBaseExistance(path))
+            {
+                return true;
+            }
+            else { return false; }
         }
 
         /// <summary>
+        /// Checks if database file exists at given path.
+        /// </summary>
+        /// <returns>
+        /// bool. true: file exists, false: file does not exist.
+        /// </returns>
+        public bool checkDataBaseExistance(string path)
+        {
+            // check if file exists
+            if (File.Exists(path))
+            {
+                setDatabasePath(path);
+                Debug.WriteLine("Database path set in config file.");
+                return true;
+            }
+            else
+            {
+                Trace.WriteLine("Given file path in config file is wrong. File does not exist!");
+                return false;
+            }
+        }
+        /// <summary>
         /// Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
         /// </summary>
-        public void setDatabasePath()
+        /// <param name="path">File path of the SQLite database.</param>
+        public void setDatabasePath(string path)
         {
-            // get connection string out of configuration file
-            this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
-
-            // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config - if not, create
-            if (this.settings == null)
+            this.settings = new ConnectionStringSettings();
+            this.settings.Name = "SQLite";
+            this.settings.ConnectionString = "Data Source=" + path;
+            try
             {
-                this.settings = new ConnectionStringSettings();
-                this.settings.Name = "SQLite";
-                this.settings.ConnectionString = @"Data Source=.\backoffice_data.db";
-                try
-                {
-                    Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                    config.ConnectionStrings.ConnectionStrings.Add(this.settings);
-                    config.Save();
-                }
-                catch (System.Configuration.ConfigurationErrorsException)
-                {
-                    throw;
-                }
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.ConnectionStrings.ConnectionStrings.Remove(this.settings); // clear old path
+                config.ConnectionStrings.ConnectionStrings.Add(this.settings);
+                config.Save();
+            }
+            catch (System.Configuration.ConfigurationErrorsException e)
+            {
+                Trace.WriteLine(e.Message);
+                throw;
             }
         }
 
         /// <summary>
-        /// Creates the database file and its tables at the wished path.
+        /// Connect to the database and create its tables if they do not exist yet.
         /// </summary>
         public void createDataBase()
         {

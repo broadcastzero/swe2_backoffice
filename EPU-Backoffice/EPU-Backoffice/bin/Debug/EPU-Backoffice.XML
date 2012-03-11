@@ -16,34 +16,29 @@
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseConnector.checkDataBaseExistance">
             <summary>
-            Checks if the database file exists and is valid
+            Gets database path out of config file, checks if the database file exists.
             </summary>
-            <returns></returns>
+            <returns>
+            bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
+            </returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.setDatabasePath">
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.checkDataBaseExistance(System.String)">
+            <summary>
+            Checks if database file exists at given path.
+            </summary>
+            <returns>
+            bool. true: file exists, false: file does not exist.
+            </returns>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseConnector.setDatabasePath(System.String)">
             <summary>
             Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
             </summary>
+            <param name="path">File path of the SQLite database.</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseConnector.createDataBase">
             <summary>
-            Creates the database file and its tables at the wished path.
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+            Connect to the database and create its tables if they do not exist yet.
             </summary>
         </member>
         <member name="T:EPUBackoffice.Program">
@@ -81,6 +76,22 @@
             <summary>
             Erforderliche Methode für die Designerunterstützung.
             Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
     </members>
