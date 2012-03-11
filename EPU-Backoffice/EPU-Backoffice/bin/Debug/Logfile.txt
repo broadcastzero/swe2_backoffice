@@ -1,0 +1,2 @@
+No entry 'SQLite' in config file.
+Database path set in config file.
