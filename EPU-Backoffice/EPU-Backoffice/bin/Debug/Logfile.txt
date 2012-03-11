@@ -1,2 +1,2 @@
-No entry 'SQLite' in config file.
+Path of SQLite file: db.db
 Database path set in config file.
