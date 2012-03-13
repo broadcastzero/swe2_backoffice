@@ -37,7 +37,13 @@ namespace EPUBackoffice
             {
                 // show info-form and ask for user input
                 // ask user for path
-                dbc.checkDataBaseExistance("db.db");
+                //while (exists == false)
+                {
+                    string path = "db.db";
+                    exists = dbc.checkDataBaseExistance(path);
+                    if (exists == true)
+                    { dbc.setDatabasePath(path); }
+                }
                 // give path or create new? -> input window
                 // do the following in an eventhandler!!
                 //create new database (if user has not given path)

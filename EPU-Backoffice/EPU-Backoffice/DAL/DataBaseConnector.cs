@@ -74,10 +74,10 @@ namespace EPUBackoffice.Dal
         /// </returns>
         public bool checkDataBaseExistance(string path)
         {
+            string p = System.Environment.CurrentDirectory;
             // check if file exists
-            if (File.Exists(path))
+            if (File.Exists(path) && path.EndsWith(".db"))
             {
-                setDatabasePath(path);
                 Debug.WriteLine("Database path set in config file.");
                 return true;
             }
@@ -120,7 +120,7 @@ namespace EPUBackoffice.Dal
 
             // save CREATE-statements
             StringBuilder sb = new StringBuilder();
-            sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50) NOT NULL, Nachname VARCHAR(50) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname/Firmenname VARCHAR(50) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50) NOT NULL, Nachname VARCHAR(50) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, aktiv BOOLEAN DEFAULT 'false' NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100) NOT NULL); ");
