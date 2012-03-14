@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SingletonPattern">
+</Property><Property Name="Projektmappendatei" Value="D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern.sln">
+</Property><Property Name="Benutzeroptionendatei" Value="D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern.suo">
+</Property><Property Name="Date" Value="Donnerstag, 01. März 2012">
+</Property><Property Name="Time" Value="15:11">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SingletonPattern.sln" Description="Datei wurde erfolgreich als &quot;D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern.sln&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="" Source="SingletonPattern.suo" Description="Datei wurde erfolgreich als &quot;D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern.suo&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\SingletonPattern.csproj" Description="Projektdatei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\SingletonPattern.csproj">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\SingletonPattern.csproj.user" Description="Die Projektbenutzerdatei wurde erfolgreich als &quot;D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\SingletonPattern.csproj.user&quot; gesichert.">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\MyDbManager.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\MyDbManager.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\MyLazyLogger.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\MyLazyLogger.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\ConsoleUse.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\ConsoleUse.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\MyLogger.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\MyLogger.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\Program.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\Program.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\Properties\AssemblyInfo.cs" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\Libs\System.Data.SQLite.DLL" Description="Datei erfolgreich gesichert als D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\Backup\SingletonPattern\Libs\System.Data.SQLite.DLL">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\SingletonPattern.csproj" Description="Projekt erfolgreich konvertiert">
+</Event><Event ErrorLevel="3" Project="SingletonPattern" Source="SingletonPattern\SingletonPattern.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SingletonPattern.sln" Description="Die Projektmappe wurde erfolgreich konvertiert.">
+</Event><Event ErrorLevel="3" Project="" Source="SingletonPattern.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SingletonPattern" Source="SingletonPattern\SingletonPattern.csproj" Description="Überprüfung abgeschlossen: Upgrade der Projektdateien nicht erforderlich.">
+</Event></UpgradeLog>

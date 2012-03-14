@@ -1,0 +1,72 @@
+<mockup version="1.0" skin="sketch" measuredW="1239" measuredH="646" mockupW="1031" mockupH="636">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="249" y="57" w="925" h="298" measuredW="450" measuredH="400" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>23</bottomheight>
+        <close>true</close>
+        <maximizeRestore>true</maximizeRestore>
+        <minimize>true</minimize>
+        <text>Backoffice%201.0</text>
+        <topheight>26</topheight>
+        <value>0</value>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::VerticalTabBar" x="249" y="82" w="144" h="244" measuredW="200" measuredH="241" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderStyle>none</borderStyle>
+        <color>16777215</color>
+        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20kk%20neu%26bm%3BBackoffice%20kk%20neu.bmml%26bm%3BBackoffice%20kk%20neu.bmml%26bm%3BBackoffice%20kk%20neu.bmml%2CBackoffice%20Rechnungsverwaltung%20Ausgang%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%2C%2C%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C92%2C177%2C121%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C121%2C177%2C150%22%20href%3D%22Backoffice%2520kk%2520neu.bmml%22%20alt%3D%22Backoffice%20kk%20neu%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C150%2C177%2C179%22%20href%3D%22Backoffice%2520Rechnungsverwaltung%2520Ausgang.bmml%22%20alt%3D%22Backoffice%20Rechnungsverwaltung%20Ausgang%22%20id%3D%227_2%22/%3E%0A</map>
+        <selectedIndex>1</selectedIndex>
+        <text>Home%0AKunden%20%26%20Kontakte%0ARechnungsverwaltung%0AAngeboten%0AProjektverwaltung%0AZeiterfassung%0AReports</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Canvas" x="208" y="10" w="1031" h="636" measuredW="100" measuredH="70" zOrder="0" locked="true" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::TabBar" x="384" y="82" w="790" h="100" measuredW="225" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <hrefs>Backoffice%20kk%20neu%26bm%3BBackoffice%20kk%20neu.bmml%26bm%3BBackoffice%20kk%20neu.bmml%26bm%3BBackoffice%20kk%20neu.bmml%2CBackoffice%20kk%20suchen%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22196%2C72%2C234%2C97%22%20href%3D%22Backoffice%2520kk%2520neu.bmml%22%20alt%3D%22Backoffice%20kk%20neu%22%20id%3D%2210_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22234%2C72%2C349%2C97%22%20href%3D%22Backoffice%2520kk%2520suchen.bmml%22%20alt%3D%22Backoffice%20kk%20suchen%22%20id%3D%2210_1%22/%3E%0A</map>
+        <selectedIndex>0</selectedIndex>
+        <text>Neu%2C%20Suchen%20%26%20%C4ndern</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="399" y="194" w="85" h="42" measuredW="72" measuredH="42" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20Kunde%0A%28%20%29%20Kontakt</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="399" y="119" w="222" h="-1" measuredW="79" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TextInput" x="399" y="155" w="222" h="-1" measuredW="79" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Label" x="630" y="122" w="-1" h="-1" measuredW="58" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Vorname</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="630" y="158" w="-1" h="-1" measuredW="115" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nachname%20/%20Firma*</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="484" y="193" w="137" h="27" measuredW="81" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Speichern</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Button" x="484" y="224" w="137" h="27" measuredW="142" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Felder%20zur%FCcksetzen</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
