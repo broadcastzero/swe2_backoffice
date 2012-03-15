@@ -41,6 +41,40 @@
             Connect to the database and create its tables if they do not exist yet.
             </summary>
         </member>
+        <member name="F:EPUBackoffice.GUI.HomeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.GUI.DBNotFoundForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.Program">
             <summary>
             The main entry class of the application.
@@ -65,40 +99,6 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.GUI.DBNotFoundForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.GUI.HomeForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.GUI.HomeForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.GUI.HomeForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
             </summary>
         </member>
     </members>
