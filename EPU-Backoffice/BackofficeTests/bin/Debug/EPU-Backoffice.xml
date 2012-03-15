@@ -4,17 +4,17 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
-        <member name="T:EPUBackoffice.Dal.DataBaseConnector">
+        <member name="T:EPUBackoffice.DAL.DataBaseConnector">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
             </summary>
         </member>
-        <member name="F:EPUBackoffice.Dal.DataBaseConnector.settings">
+        <member name="F:EPUBackoffice.DAL.DataBaseConnector.settings">
             <summary>
             Sets the connection string. User gives path to .db file.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.checkDataBaseExistance">
+        <member name="M:EPUBackoffice.DAL.DataBaseConnector.checkDataBaseExistance">
             <summary>
             Gets database path out of config file, checks if the database file exists.
             </summary>
@@ -22,7 +22,7 @@
             bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
             </returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.checkDataBaseExistance(System.String)">
+        <member name="M:EPUBackoffice.DAL.DataBaseConnector.checkDataBaseExistance(System.String)">
             <summary>
             Checks if database file exists at given path.
             </summary>
@@ -30,13 +30,13 @@
             bool. true: file exists, false: file does not exist.
             </returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.setDatabasePath(System.String)">
+        <member name="M:EPUBackoffice.DAL.DataBaseConnector.setDatabasePath(System.String)">
             <summary>
             Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
             </summary>
             <param name="path">File path of the SQLite database.</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.createDataBase">
+        <member name="M:EPUBackoffice.DAL.DataBaseConnector.createDataBase">
             <summary>
             Connect to the database and create its tables if they do not exist yet.
             </summary>
@@ -49,33 +49,6 @@
         <member name="M:EPUBackoffice.Program.Main">
             <summary>
             Main entry point of the application.
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Form1">
-            <summary>
-            Class of main window
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Form1.#ctor">
-            <summary>
-            Form of first window
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.Form1.components">
-            <summary>
-            Erforderliche Designervariable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Form1.Dispose(System.Boolean)">
-            <summary>
-            Verwendete Ressourcen bereinigen.
-            </summary>
-            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
-        </member>
-        <member name="M:EPUBackoffice.Form1.InitializeComponent">
-            <summary>
-            Erforderliche Methode für die Designerunterstützung.
-            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
             </summary>
         </member>
         <member name="T:EPUBackoffice.Properties.Resources">
@@ -92,6 +65,40 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.GUI.DBNotFoundForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.GUI.HomeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
     </members>

@@ -1,11 +1,11 @@
-﻿using EPUBackoffice.Dal;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Configuration;
-using System.Diagnostics;
+﻿namespace BackofficeTests
+{
+    using EPUBackoffice.DAL;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System;
+    using System.Configuration;
+    using System.Diagnostics;
 
-namespace BackofficeTests
-{    
     /// <summary>
     ///This is a test class for DataBaseConnectorTest and is intended
     ///to contain all DataBaseConnectorTest Unit Tests
@@ -71,7 +71,7 @@ namespace BackofficeTests
         [TestMethod()]
         public void checkDataBaseExistanceTest1()
         {
-            string path = "../../../EPU-Backoffice/bin/Debug/testdb.db"; // create this file in test folder!
+            string path = "../../../EPU-Backoffice/bin/Debug/backoffice_database.db"; // create this file in test folder!
             bool expected = true;
             bool actual;
             actual = target.checkDataBaseExistance(path);

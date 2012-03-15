@@ -55,16 +55,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DataBaseConnector.cs" />
-    <Compile Include="GUI\Form1.cs">
+    <Compile Include="GUI\DBNotFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\DBNotFoundForm.Designer.cs">
+      <DependentUpon>DBNotFoundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\Program.cs" />
+    <Compile Include="GUI\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DBNotFoundForm.resx">
+      <DependentUpon>DBNotFoundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

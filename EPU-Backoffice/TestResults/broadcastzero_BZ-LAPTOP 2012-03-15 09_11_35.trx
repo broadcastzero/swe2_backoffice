@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="dfe3220d-82df-4026-948f-4beea00d6253" name="broadcastzero@BZ-LAPTOP 2012-03-15 09:11:35" runUser="bz-LAPTOP\broadcastzero" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ab2dda47-df62-4ee6-a16b-845126e8200d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="broadcastzero_BZ-LAPTOP 2012-03-15 09_11_35">
+      <DeploymentItem filename="C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\EPU-Backoffice.exe" />
+      <DeploymentItem filename="C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\System.Data.SQLite.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-15T09:11:35.1569119+01:00" queuing="2012-03-15T09:11:35.2319162+01:00" start="2012-03-15T09:11:35.2639181+01:00" finish="2012-03-15T09:11:35.5559348+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="checkLogfileExistanceTest" storage="c:\users\broadcastzero\0 fh\4. semester\swe2\0 backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="987a42ac-cba2-27f1-f65e-b7861f9b9aff">
+      <Execution id="ee61c1b9-1f13-43c2-bde1-10752f8f4a55" />
+      <TestMethod codeBase="C:/Users/broadcastzero/0 FH/4. Semester/SWE2/0 Backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkLogfileExistanceTest" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest1" storage="c:\users\broadcastzero\0 fh\4. semester\swe2\0 backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="18323371-49ff-3213-27a2-1f00b51e3e32">
+      <Execution id="1d7fe829-4b6e-4baa-9809-034807913864" />
+      <TestMethod codeBase="C:/Users/broadcastzero/0 FH/4. Semester/SWE2/0 Backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest1" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest2" storage="c:\users\broadcastzero\0 fh\4. semester\swe2\0 backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="bec93e86-8b92-e2a7-8084-af5fc8a0b81c">
+      <Execution id="41c6fe26-ceea-4bb3-ab93-d04372401a52" />
+      <TestMethod codeBase="C:/Users/broadcastzero/0 FH/4. Semester/SWE2/0 Backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="18323371-49ff-3213-27a2-1f00b51e3e32" executionId="1d7fe829-4b6e-4baa-9809-034807913864" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="987a42ac-cba2-27f1-f65e-b7861f9b9aff" executionId="ee61c1b9-1f13-43c2-bde1-10752f8f4a55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bec93e86-8b92-e2a7-8084-af5fc8a0b81c" executionId="41c6fe26-ceea-4bb3-ab93-d04372401a52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1d7fe829-4b6e-4baa-9809-034807913864" testId="18323371-49ff-3213-27a2-1f00b51e3e32" testName="checkDataBaseExistanceTest1" computerName="BZ-LAPTOP" duration="00:00:00.0152021" startTime="2012-03-15T09:11:35.2689184+01:00" endTime="2012-03-15T09:11:35.5239329+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d7fe829-4b6e-4baa-9809-034807913864">
+      <Output>
+        <DebugTrace>Database path set in config file.
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ee61c1b9-1f13-43c2-bde1-10752f8f4a55" testId="987a42ac-cba2-27f1-f65e-b7861f9b9aff" testName="checkLogfileExistanceTest" computerName="BZ-LAPTOP" duration="00:00:00.0011661" startTime="2012-03-15T09:11:35.5249330+01:00" endTime="2012-03-15T09:11:35.5309333+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee61c1b9-1f13-43c2-bde1-10752f8f4a55">
+      <Output>
+        <DebugTrace>No entry 'SQLite' in config file.
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="41c6fe26-ceea-4bb3-ab93-d04372401a52" testId="bec93e86-8b92-e2a7-8084-af5fc8a0b81c" testName="checkDataBaseExistanceTest2" computerName="BZ-LAPTOP" duration="00:00:00.0004088" startTime="2012-03-15T09:11:35.5339335+01:00" endTime="2012-03-15T09:11:35.5369337+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41c6fe26-ceea-4bb3-ab93-d04372401a52">
+      <Output>
+        <DebugTrace>Given file path is wrong. File does not exist!
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

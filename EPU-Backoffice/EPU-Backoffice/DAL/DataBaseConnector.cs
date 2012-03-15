@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.Dal
+namespace EPUBackoffice.DAL
 {
     using System;
     using System.Collections.Generic;
@@ -52,9 +52,9 @@ namespace EPUBackoffice.Dal
             {
                 path = path.Substring(index1 + 12, (index2 + 3) - (index1 + 12));
             }
-            catch (ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException e)
             {
-                Trace.WriteLine("No (correct) path found in config file.");
+                Trace.WriteLine(e.Source + "No (correct) path found in config file.");
                 return false;
             }
             Debug.WriteLine("Path of SQLite file: " + path);
@@ -74,8 +74,6 @@ namespace EPUBackoffice.Dal
         /// </returns>
         public bool checkDataBaseExistance(string path)
         {
-            string p = System.Environment.CurrentDirectory;
-            // check if file exists
             if (File.Exists(path) && path.EndsWith(".db"))
             {
                 Debug.WriteLine("Database path set in config file.");
@@ -122,7 +120,7 @@ namespace EPUBackoffice.Dal
             StringBuilder sb = new StringBuilder();
             sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname/Firmenname VARCHAR(50) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname/Firmenname VARCHAR(50) NOT NULL); ");
-            sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, aktiv BOOLEAN DEFAULT 'false' NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Projektname VARCHAR(100) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Dauer INTEGER NOT NULL, Datum TIMESTAMP NOT NULL, Umsetzung FLOAT NOT NULL, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotsID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL,BEzeichnung Varchar(200), Stunden INTEGER NOT NULL); ");
@@ -145,12 +143,10 @@ namespace EPUBackoffice.Dal
                 command = new SQLiteCommand(connection);
                 command.CommandText = sb.ToString();
                 command.ExecuteNonQuery();
-
-                command.CommandText = "select * from Bankkonto;";
-                SQLiteDataReader sr = command.ExecuteReader();
             }
-            catch (SQLiteException)
+            catch (SQLiteException e)
             {
+                Trace.WriteLine(e.Message + e.Source);
                 throw; // pass exception to caller
             }
             finally

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Windows.Forms;
-using EPUBackoffice.Dal;
-
-namespace EPUBackoffice
+﻿namespace EPUBackoffice
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.Linq;
+    using System.Windows.Forms;
+    using EPUBackoffice.DAL;
+    using EPUBackoffice.GUI;
+
     /// <summary>
     /// The main entry class of the application.
     /// </summary>
@@ -21,7 +22,6 @@ namespace EPUBackoffice
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form1 startscreen = new Form1();
             /***
              * Inplements error logging.
              * Debug.WriteLines will be stored in logfile only in Debug-Mode.
@@ -39,6 +39,8 @@ namespace EPUBackoffice
             bool exists = dbc.checkDataBaseExistance();
             if (!exists)
             {
+                Application.Run(new DBNotFoundForm());
+
                 // show info-form and ask for user input
                 // ask user for path
                 //while (exists == false)
@@ -56,11 +58,11 @@ namespace EPUBackoffice
                 {
                     dbc.createDataBase();
                 }
-                Application.Run(startscreen);  
+                 
             }
             else // database found. Start with home screen.
             {
-                Application.Run(startscreen);
+                Application.Run(new HomeForm());
             }
         }
     }

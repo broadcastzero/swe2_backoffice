@@ -1,2 +1,3 @@
-No (correct) path found in config file.
+Path of SQLite file: .db
+Given file path is wrong. File does not exist!
 Database path set in config file.
