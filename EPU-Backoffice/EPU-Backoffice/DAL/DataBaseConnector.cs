@@ -83,7 +83,7 @@ namespace EPUBackoffice.Dal
             }
             else
             {
-                Trace.WriteLine("Given file path in config file is wrong. File does not exist!");
+                Trace.WriteLine("Given file path is wrong. File does not exist!");
                 return false;
             }
         }

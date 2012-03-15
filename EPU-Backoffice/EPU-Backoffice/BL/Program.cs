@@ -18,6 +18,10 @@ namespace EPUBackoffice
         [STAThread]
         static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            Form1 startscreen = new Form1();
             /***
              * Inplements error logging.
              * Debug.WriteLines will be stored in logfile only in Debug-Mode.
@@ -39,7 +43,7 @@ namespace EPUBackoffice
                 // ask user for path
                 //while (exists == false)
                 {
-                    string path = "db.db";
+                    string path = "backoffice_database.db";
                     exists = dbc.checkDataBaseExistance(path);
                     if (exists == true)
                     { dbc.setDatabasePath(path); }
@@ -52,12 +56,11 @@ namespace EPUBackoffice
                 {
                     dbc.createDataBase();
                 }
+                Application.Run(startscreen);  
             }
             else // database found. Start with home screen.
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
+                Application.Run(startscreen);
             }
         }
     }
