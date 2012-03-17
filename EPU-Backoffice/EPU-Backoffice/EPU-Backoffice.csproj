@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Tables\AngebotTable.cs" />
     <Compile Include="DAL\DataBaseConnector.cs" />
     <Compile Include="GUI\DBNotFoundForm.cs">
       <SubType>Form</SubType>

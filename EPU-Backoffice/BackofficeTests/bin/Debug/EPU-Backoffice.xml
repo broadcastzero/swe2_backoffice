@@ -4,6 +4,56 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
+        <member name="F:EPUBackoffice.GUI.DBNotFoundForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.GUI.HomeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.GUI.HomeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.DAL.DataBaseConnector">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
@@ -41,40 +91,6 @@
             Connect to the database and create its tables if they do not exist yet.
             </summary>
         </member>
-        <member name="F:EPUBackoffice.GUI.HomeForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.GUI.HomeForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.GUI.HomeForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.GUI.DBNotFoundForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
         <member name="T:EPUBackoffice.Program">
             <summary>
             The main entry class of the application.
@@ -85,20 +101,49 @@
             Main entry point of the application.
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Properties.Resources">
+        <member name="T:EPUBackoffice.BL.Tables.AngebotTable">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+            A class for the database table "Angebot" with its attributes
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.ID">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+            Unique ID for the table
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.ProjektID">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+            Foreign key to table Projekt
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.KundenID">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Angebotssumme">
+            <summary>
+            Sum of an Angebot
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Dauer">
+            <summary>
+            Dauer of an Angebot
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Datum">
+            <summary>
+            Datum of an Angebot
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Umsetzungschance">
+            <summary>
+            Chance in % of Umsetzung
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.akzeptiert">
+            <summary>
+            bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
     </members>
