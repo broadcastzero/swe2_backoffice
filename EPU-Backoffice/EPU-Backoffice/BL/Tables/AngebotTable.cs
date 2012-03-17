@@ -56,24 +56,24 @@ namespace EPUBackoffice.BL.Tables
         }
 
         // in hours
-        private int _Dauer;
+        private int _Angebotsdauer;
         /// <summary>
         /// Dauer of an Angebot
         /// </summary>
-        public int Dauer
+        public int Angebotsdauer
         {
-            get { return _Dauer; }
-            set { if (value >= 0) { _Dauer = value; } }
+            get { return _Angebotsdauer; }
+            set { if (value >= 0) { _Angebotsdauer = value; } }
         }
 
-        private DateTime _Datum;
+        private DateTime _Erstellungsdatum;
         /// <summary>
-        /// Datum of an Angebot
+        /// Datum of creation of an Angebot
         /// </summary>
-        public DateTime Datum
+        public DateTime Erstellungsdatum
         {
-            get { return _Datum; }
-            set { _Datum = value; }
+            get { return _Erstellungsdatum; }
+            set { _Erstellungsdatum = value; }
         }
 
         // between 0-1 (in %)
