@@ -101,49 +101,274 @@
             Main entry point of the application.
             </summary>
         </member>
-        <member name="T:EPUBackoffice.BL.Tables.AngebotTable">
+        <member name="T:EPUBackoffice.DAL.Tables.ProjektTable">
             <summary>
-            A class for the database table "Angebot" with its attributes
+            A class for the database table "Projekt" with its attributes
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.ID">
+        <member name="P:EPUBackoffice.DAL.Tables.ProjektTable.ID">
             <summary>
             Unique ID for the table
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.ProjektID">
+        <member name="P:EPUBackoffice.DAL.Tables.ProjektTable.Projektname">
             <summary>
-            Foreign key to table Projekt
+            The name of the project
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.KundenID">
+        <member name="P:EPUBackoffice.DAL.Tables.ProjektTable.Projektstart">
+            <summary>
+            Datum of creation of an Angebot
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.KundeTable">
+            <summary>
+            A class for the database table "Kunde" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KundeTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KundeTable.Vorname">
             <summary>
             Foreign key to table Kunde
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Angebotssumme">
+        <member name="P:EPUBackoffice.DAL.Tables.KundeTable.NachnameFirmenname">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.AngebotTable">
+            <summary>
+            A class for the database table "Angebot" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.ProjektID">
+            <summary>
+            Foreign key to table Projekt
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.KundenID">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.Angebotssumme">
             <summary>
             Sum of an Angebot
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Dauer">
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.Angebotsdauer">
             <summary>
             Dauer of an Angebot
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Datum">
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.Erstellungsdatum">
             <summary>
-            Datum of an Angebot
+            Datum of creation of an Angebot
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.Umsetzungschance">
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.Umsetzungschance">
             <summary>
             Chance in % of Umsetzung
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.Tables.AngebotTable.akzeptiert">
+        <member name="P:EPUBackoffice.DAL.Tables.AngebotTable.akzeptiert">
             <summary>
             bool-value, which shows if Angebot has been accepted
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.ZeitaufzeichnungTable">
+            <summary>
+            A class for the database table "Zeitaufzeichnung" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.ZeitaufzeichnungTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.ZeitaufzeichnungTable.ProjektID">
+            <summary>
+            Foreign key to table Projekt
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.ZeitaufzeichnungTable.Stunden">
+            <summary>
+            The number of hours that shall be booked
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.ZeitaufzeichnungTable.Bezeichnung">
+            <summary>
+            The description of what has been done
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.KontaktTable">
+            <summary>
+            A class for the database table "Kontakt" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KontaktTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KontaktTable.Vorname">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KontaktTable.NachnameFirmenname">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.RechnungszeileTable">
+            <summary>
+            A class for the database table "Rechnungszeile" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.RechnungszeileTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.RechnungszeileTable.AngebotsID">
+            <summary>
+            Foreign key to table Angebot
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.RechnungszeileTable.AusgangsrechnungsID">
+            <summary>
+            Foreign key to table Ausgangsrechnung
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.RechnungszeileTable.Stunden">
+            <summary>
+            The number of hours that shall be booked
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.AusgangsrechnungTable">
+            <summary>
+            A class for the database table "Ausgangsrechnung" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AusgangsrechnungTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AusgangsrechnungTable.KundenID">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.AusgangsrechnungTable.Rechnungsdatum">
+            <summary>
+            Datum of creation of an Rechnung
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.EingangsrechnungTable">
+            <summary>
+            A class for the database table "Eingangsrechnung" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.EingangsrechnungTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.EingangsrechnungTable.KontaktID">
+            <summary>
+            Foreign key to table Kontakte
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.EingangsrechnungTable.Archivierungspfad">
+            <summary>
+            The filepath where this Eingangsrechnung is stored
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.EingangsrechnungTable.Rechnungsdatum">
+            <summary>
+            Datum of creation of an Rechnung
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.BuchungszeilenTable">
+            <summary>
+            A class for the database table "Buchungszeilen" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.KategorieID">
+            <summary>
+            Foreign key to table Kategorien
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.BankkontoID">
+            <summary>
+            Foreign key to table Bankkonto
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.BetragUST">
+            <summary>
+            The taxes that have to be paid
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.BetragNetto">
+            <summary>
+            The (after taxes) amount of money that shall be booked
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BuchungszeilenTable.Buchungsdatum">
+            <summary>
+            Datum of booking
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.BankkontoTable">
+            <summary>
+            A class for the database table "Bankkonto" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BankkontoTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BankkontoTable.Kontonummer">
+            <summary>
+            Account number
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.BankkontoTable.BLZ">
+            <summary>
+            Bank code
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.DAL.Tables.KategorienTable">
+            <summary>
+            A class for the database table "Bankkonto" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KategorienTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.DAL.Tables.KategorienTable.Name">
+            <summary>
+            Foreign key to table Kunde
             </summary>
         </member>
     </members>

@@ -1,3 +1,2 @@
-Path of SQLite file: .db
-Given file path is wrong. File does not exist!
+Path of SQLite file: backoffice_database.db
 Database path set in config file.

@@ -1,20 +1,19 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ProjektTable.cs" company="">
+// <copyright file="KundeTable.cs" company="">
 // TODO: Update copyright text.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.BL.Tables
+namespace EPUBackoffice.DAL.Tables
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
 
     /// <summary>
-    /// A class for the database table "Projekt" with its attributes
+    /// A class for the database table "Kunde" with its attributes
     /// </summary>
-    public class ProjektTable
+    public class KundeTable
     {
         private int _ID;
         /// <summary>
@@ -26,24 +25,24 @@ namespace EPUBackoffice.BL.Tables
             set { if (value >= 0) { _ID = value; } }
         }
 
-        private string _Projektname;
+        private string _Vorname;
         /// <summary>
-        /// The name of the project
+        /// Foreign key to table Kunde
         /// </summary>
-        public string Projektname
+        public string Vorname
         {
-            get { return _Projektname; }
-            set { { _Projektname = value; } }
+            get { return _Vorname; }
+            set { { _Vorname = value; } }
         }
 
-        private DateTime _Projektstart;
+        private string _NachnameFirmenname;
         /// <summary>
-        /// Datum of creation of an Angebot
+        /// Foreign key to table Kunde
         /// </summary>
-        public DateTime Projektstart
+        public string NachnameFirmenname
         {
-            get { return _Projektstart; }
-            set { _Projektstart = value; }
+            get { return _NachnameFirmenname; }
+            set { { _NachnameFirmenname = value; } }
         }
     }
 }

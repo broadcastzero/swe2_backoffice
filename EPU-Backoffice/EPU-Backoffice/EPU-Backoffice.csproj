@@ -54,8 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\Tables\AngebotTable.cs" />
+    <Compile Include="DAL\Tables\AngebotTable.cs" />
+    <Compile Include="DAL\Tables\AusgangsrechnungTable.cs" />
+    <Compile Include="DAL\Tables\BankkontoTable.cs" />
+    <Compile Include="DAL\Tables\BuchungszeilenTable.cs" />
+    <Compile Include="DAL\Tables\EingangsrechnungTable.cs" />
+    <Compile Include="DAL\Tables\KategorienTable.cs" />
+    <Compile Include="DAL\Tables\KontaktTable.cs" />
+    <Compile Include="DAL\Tables\KundeTable.cs" />
+    <Compile Include="DAL\Tables\ProjektTable.cs" />
     <Compile Include="DAL\DataBaseConnector.cs" />
+    <Compile Include="DAL\Tables\RechnungszeileTable.cs" />
+    <Compile Include="DAL\Tables\ZeitaufzeichnungTable.cs" />
     <Compile Include="GUI\DBNotFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>

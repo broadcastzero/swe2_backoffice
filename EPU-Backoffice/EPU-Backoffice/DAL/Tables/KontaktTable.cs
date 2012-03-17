@@ -1,19 +1,19 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="KundeTable.cs" company="">
+// <copyright file="KontaktTable.cs" company="">
 // TODO: Update copyright text.
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.BL.Tables
+namespace EPUBackoffice.DAL.Tables
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
     /// <summary>
-    /// A class for the database table "Kunde" with its attributes
+    /// A class for the database table "Kontakt" with its attributes
     /// </summary>
-    public class KundeTable
+    public class KontaktTable
     {
         private int _ID;
         /// <summary>
