@@ -1,12 +1,19 @@
-﻿namespace EPUBackoffice.BL
+﻿// -----------------------------------------------------------------------
+// <copyright file="Program.cs" company="Marvin&Felix">
+// TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace EPUBackoffice.BL
 {
-    using EPUBackoffice.DAL;
-    using EPUBackoffice.GUI;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
     using System.Windows.Forms;
+    using EPUBackoffice.DAL;
+    using EPUBackoffice.GUI;
 
     /// <summary>
     /// The main entry class of the application.

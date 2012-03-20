@@ -1,10 +1,17 @@
-﻿namespace BackofficeTests
+﻿// -----------------------------------------------------------------------
+// <copyright file="DataBaseConnectorTest.cs" company="Marvin&Felix">
+// TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace BackofficeTests
 {
-    using EPUBackoffice.DAL;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
     using System.Configuration;
     using System.Diagnostics;
+    using EPUBackoffice.DAL;
 
     /// <summary>
     ///This is a test class for DataBaseConnectorTest and is intended

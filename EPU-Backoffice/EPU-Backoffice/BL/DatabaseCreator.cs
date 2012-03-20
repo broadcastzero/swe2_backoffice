@@ -1,17 +1,11 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="DatabaseCreator.cs" company="">
-// TODO: Update copyright text.
-// </copyright>
-// -----------------------------------------------------------------------
-
-namespace EPUBackoffice.BL
+﻿namespace EPUBackoffice.BL
 {
-    using EPUBackoffice.DAL;
     using System;
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
+    using EPUBackoffice.DAL;
 
     /// <summary>
     /// Creates a new SQLite ".db" file with its needed tables.
