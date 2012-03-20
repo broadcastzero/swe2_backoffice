@@ -36,7 +36,18 @@
              * Checks data base existance and creates if needed.
              */
             DataBaseConnector dbc = new DataBaseConnector();
-            bool exists = dbc.checkDataBaseExistance();
+            
+            bool exists = false;
+            try
+            {
+                exists = dbc.checkDataBaseExistance();
+            }
+            // probably syntax error in config file - see logfile
+            catch (System.Configuration.ConfigurationErrorsException)
+            {
+                Environment.Exit(1);
+            }
+            
             if (!exists)
             {
                 Application.Run(new DBNotFoundForm());                 

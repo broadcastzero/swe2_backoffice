@@ -30,7 +30,16 @@ namespace EPUBackoffice.GUI
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 DatabaseCreator creator = new DatabaseCreator();
-                creator.Create(dialog.FileName);
+
+                try
+                {
+                    creator.Create(dialog.FileName);
+                }
+                catch (System.Configuration.ConfigurationException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show("Bei der Erstellung der Datenbank ist etwas schiefgelaufen. Bitte prüfen Sie, ob Sie Schreibrechte für das Konfigurationsdatei besitzen. Löschen Sie die Konfigurationsdatei gegebenenfalls, sie wird beim nächsten Start neu erzeugt.");
+                }
 
                 //MessageBox.Show(dialog.FileName);
             }

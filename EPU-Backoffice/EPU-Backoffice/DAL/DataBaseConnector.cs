@@ -39,7 +39,18 @@ namespace EPUBackoffice.DAL
         public bool checkDataBaseExistance()
         {
             // shall mockDB be used instead of real one?
-            if(usingMockDatabase() == true)
+            bool mock;
+            try
+            {
+                mock = usingMockDatabase();
+            }
+            // error in config file
+            catch (System.Configuration.ConfigurationErrorsException)
+            {
+                throw;
+            }
+
+            if(mock == true)
             {
                 Debug.WriteLine("Using mock database");
             }
@@ -116,7 +127,7 @@ namespace EPUBackoffice.DAL
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
-                Trace.WriteLine(e.Message);
+                Trace.WriteLine(e.Message + e.Source);
                 throw;
             }
         }
@@ -127,15 +138,21 @@ namespace EPUBackoffice.DAL
         /// <returns>true, if mockDB shall be used</returns>
         private bool usingMockDatabase()
         {
-            AppSettingsReader config = new AppSettingsReader();
             try
             {
+                AppSettingsReader config = new AppSettingsReader();
                 this.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
             }
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
                 this.mockDB = false;
+            }
+            catch (ConfigurationErrorsException e)
+            { 
+                Trace.WriteLine("Syntax error in config file!");
+                Trace.WriteLine(e.Message);
+                throw; 
             }
 
             return this.mockDB == true ? true : false;            

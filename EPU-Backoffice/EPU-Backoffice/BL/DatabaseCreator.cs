@@ -25,7 +25,17 @@ namespace EPUBackoffice.BL
         {
             Debug.WriteLine("Filename from userinput: " + path);
             DataBaseConnector dbc = new DataBaseConnector();
-            dbc.setDatabasePath(path);
+
+            try
+            {
+                dbc.setDatabasePath(path);
+            }
+            // probably no write access to config file or syntax error in config file
+            catch (System.Configuration.ConfigurationException)
+            {
+                throw;
+            }
+
             dbc.createDataBase();
         }
     }
