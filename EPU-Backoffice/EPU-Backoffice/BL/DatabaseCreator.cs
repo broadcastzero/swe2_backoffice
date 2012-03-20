@@ -9,6 +9,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.DAL;
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
 
@@ -29,14 +30,18 @@ namespace EPUBackoffice.BL
             try
             {
                 dbc.setDatabasePath(path);
+                dbc.createDataBase();
             }
             // probably no write access to config file or syntax error in config file
             catch (System.Configuration.ConfigurationException)
             {
                 throw;
             }
-
-            dbc.createDataBase();
+            // database could not be created for some reason - see logfile
+            catch (SQLiteException)
+            {
+                throw;
+            }            
         }
     }
 }
