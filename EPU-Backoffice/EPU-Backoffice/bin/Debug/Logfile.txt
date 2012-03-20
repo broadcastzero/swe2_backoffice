@@ -1,2 +1,3 @@
-Syntax error in config file!
-Unrecognized attribute 'name'. Note that attribute names are case-sensitive. (C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\EPU-Backoffice.exe.Config line 4)
+Using SQLite database
+Saved path of database in config file : C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+Given file path is wrong. File does not exist!
