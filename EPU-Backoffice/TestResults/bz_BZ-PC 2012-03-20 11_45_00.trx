@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="24673620-f999-4415-a296-0fd3922d2340" name="bz@BZ-PC 2012-03-20 11:45:00" runUser="bz-PC\bz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ab2dda47-df62-4ee6-a16b-845126e8200d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="bz_BZ-PC 2012-03-20 11_45_00">
+      <DeploymentItem filename="C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\System.Data.SQLite.dll" />
+      <DeploymentItem filename="C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\EPU-Backoffice.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-20T11:45:00.1992516+01:00" queuing="2012-03-20T11:45:01.5793305+01:00" start="2012-03-20T11:45:01.7633411+01:00" finish="2012-03-20T11:45:02.8914056+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="checkLogfileExistanceTest" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="987a42ac-cba2-27f1-f65e-b7861f9b9aff">
+      <Execution id="4db3469b-6e3a-4a81-891d-dfb2dab8f7df" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkLogfileExistanceTest" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest1" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="18323371-49ff-3213-27a2-1f00b51e3e32">
+      <Execution id="72ade3ee-696a-42f6-96d7-0ee58e818637" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest1" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest2" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="bec93e86-8b92-e2a7-8084-af5fc8a0b81c">
+      <Execution id="b96c76a8-6e1f-47bd-9870-fb3e47941148" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.DataBaseConnectorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="18323371-49ff-3213-27a2-1f00b51e3e32" executionId="72ade3ee-696a-42f6-96d7-0ee58e818637" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="987a42ac-cba2-27f1-f65e-b7861f9b9aff" executionId="4db3469b-6e3a-4a81-891d-dfb2dab8f7df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bec93e86-8b92-e2a7-8084-af5fc8a0b81c" executionId="b96c76a8-6e1f-47bd-9870-fb3e47941148" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="72ade3ee-696a-42f6-96d7-0ee58e818637" testId="18323371-49ff-3213-27a2-1f00b51e3e32" testName="checkDataBaseExistanceTest1" computerName="BZ-PC" duration="00:00:00.1534029" startTime="2012-03-20T11:45:01.8053435+01:00" endTime="2012-03-20T11:45:02.6903941+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72ade3ee-696a-42f6-96d7-0ee58e818637">
+      <Output>
+        <DebugTrace>Given file path is wrong. File does not exist!
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;True&gt;. Actual:&lt;False&gt;. </Message>
+          <StackTrace>   at BackofficeTests.DataBaseConnectorTest.checkDataBaseExistanceTest1() in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\BackofficeTests\DataBaseConnectorTest.cs:line 78
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4db3469b-6e3a-4a81-891d-dfb2dab8f7df" testId="987a42ac-cba2-27f1-f65e-b7861f9b9aff" testName="checkLogfileExistanceTest" computerName="BZ-PC" duration="00:00:00.0262473" startTime="2012-03-20T11:45:02.7083951+01:00" endTime="2012-03-20T11:45:02.7483974+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4db3469b-6e3a-4a81-891d-dfb2dab8f7df">
+      <Output>
+        <DebugTrace>Using SQLite database
+No entry 'SQLite' in config file.
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b96c76a8-6e1f-47bd-9870-fb3e47941148" testId="bec93e86-8b92-e2a7-8084-af5fc8a0b81c" testName="checkDataBaseExistanceTest2" computerName="BZ-PC" duration="00:00:00.0011711" startTime="2012-03-20T11:45:02.7523976+01:00" endTime="2012-03-20T11:45:02.7713987+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b96c76a8-6e1f-47bd-9870-fb3e47941148">
+      <Output>
+        <DebugTrace>Given file path is wrong. File does not exist!
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
