@@ -1,12 +1,12 @@
-﻿namespace EPUBackoffice
+﻿namespace EPUBackoffice.BL
 {
+    using EPUBackoffice.DAL;
+    using EPUBackoffice.GUI;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
     using System.Windows.Forms;
-    using EPUBackoffice.DAL;
-    using EPUBackoffice.GUI;
 
     /// <summary>
     /// The main entry class of the application.
@@ -39,26 +39,7 @@
             bool exists = dbc.checkDataBaseExistance();
             if (!exists)
             {
-                Application.Run(new DBNotFoundForm());
-
-                // show info-form and ask for user input
-                // ask user for path
-                //while (exists == false)
-                {
-                    string path = "backoffice_database.db";
-                    exists = dbc.checkDataBaseExistance(path);
-                    if (exists == true)
-                    { dbc.setDatabasePath(path); }
-                }
-                // give path or create new? -> input window
-                // do the following in an eventhandler!!
-                //create new database (if user has not given path)
-                bool create = false;
-                if (create)
-                {
-                    dbc.createDataBase();
-                }
-                 
+                Application.Run(new DBNotFoundForm());                 
             }
             else // database found. Start with home screen.
             {

@@ -41,6 +41,12 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="M:EPUBackoffice.GUI.DBNotFoundForm.#ctor">
+            <summary>
+            This window shall be shown at the start-up of the application, 
+            in case that no valid SQLite-file has been found under the path in the configuration file.
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.DAL.Tables.RechnungszeileTable">
             <summary>
             A class for the database table "Rechnungszeile" with its attributes
@@ -326,7 +332,7 @@
         </member>
         <member name="M:EPUBackoffice.DAL.DataBaseConnector.checkDataBaseExistance">
             <summary>
-            Gets database path out of config file, checks if the database file exists.
+            Gets database path out of config file, checks if the database file exists and if mock database shall be used.
             </summary>
             <returns>
             bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
@@ -342,8 +348,11 @@
         </member>
         <member name="M:EPUBackoffice.DAL.DataBaseConnector.setDatabasePath(System.String)">
             <summary>
-            Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
+            Saves path of SQLite database in .config-file.
             </summary>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">
+            Thrown when configuration file could not be edited."
+            </exception>
             <param name="path">File path of the SQLite database.</param>
         </member>
         <member name="M:EPUBackoffice.DAL.DataBaseConnector.usingMockDatabase">
@@ -354,15 +363,15 @@
         </member>
         <member name="M:EPUBackoffice.DAL.DataBaseConnector.createDataBase">
             <summary>
-            Connect to the database and create its tables if they do not exist yet.
+            Connects to the database and creates its tables if they do not exist yet.
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Program">
+        <member name="T:EPUBackoffice.BL.Program">
             <summary>
             The main entry class of the application.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Program.Main">
+        <member name="M:EPUBackoffice.BL.Program.Main">
             <summary>
             Main entry point of the application.
             </summary>
@@ -381,6 +390,17 @@
             <summary>
             Foreign key to table Kunde
             </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.DatabaseCreator">
+            <summary>
+            Creates a new SQLite ".db" file with its needed tables.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DatabaseCreator.Create(System.String)">
+            <summary>
+            Saves the given filepath in the configuration file and creates new database.
+            </summary>
+            <param name="path">The name of the to-be-created database file.</param>
         </member>
     </members>
 </doc>

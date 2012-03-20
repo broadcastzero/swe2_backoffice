@@ -31,7 +31,7 @@ namespace EPUBackoffice.DAL
         private bool mockDB = false;
 
         /// <summary>
-        /// Gets database path out of config file, checks if the database file exists.
+        /// Gets database path out of config file, checks if the database file exists and if mock database shall be used.
         /// </summary>
         /// <returns>
         /// bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
@@ -69,13 +69,10 @@ namespace EPUBackoffice.DAL
                 Trace.WriteLine(e.Source + "No (correct) path found in config file.");
                 return false;
             }
-            Debug.WriteLine("Path of SQLite file: " + path);
+            Debug.WriteLine("Saved path of database in config file : " + path);
 
-            if (checkDataBaseExistance(path))
-            {
-                return true;
-            }
-            else { return false; }
+            // check if path exists in file system
+            return checkDataBaseExistance(path) == true ? true : false;
         }
 
         /// <summary>
@@ -99,8 +96,11 @@ namespace EPUBackoffice.DAL
         }
 
         /// <summary>
-        /// Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
+        /// Saves path of SQLite database in .config-file.
         /// </summary>
+        /// <exception cref="System.Configuration.ConfigurationErrorsException">
+        /// Thrown when configuration file could not be edited."
+        /// </exception>
         /// <param name="path">File path of the SQLite database.</param>
         public void setDatabasePath(string path)
         {
@@ -132,9 +132,9 @@ namespace EPUBackoffice.DAL
             {
                 this.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
             }
+            // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
-            { 
-                // no key found in .config-file - don't use mockDB
+            {
                 this.mockDB = false;
             }
 
@@ -142,17 +142,21 @@ namespace EPUBackoffice.DAL
         }
 
         /// <summary>
-        /// Connect to the database and create its tables if they do not exist yet.
+        /// Connects to the database and creates its tables if they do not exist yet.
         /// </summary>
         public void createDataBase()
         {
+            // if mock database shall be used, don't do anything
+            if (this.mockDB == true)
+            { return; }
+
             SQLiteConnection connection = null;
             SQLiteCommand command = null;
 
             // save CREATE-statements
             StringBuilder sb = new StringBuilder();
-            sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname/Firmenname VARCHAR(50) NOT NULL); ");
-            sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname/Firmenname VARCHAR(50) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname_Firmenname VARCHAR(50) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(50), Nachname_Firmenname VARCHAR(50) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Projektname VARCHAR(100) NOT NULL, Projektstart TIMESTAMP); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(100) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer INTEGER NOT NULL, Erstellungsdatum TIMESTAMP NOT NULL, Umsetzung FLOAT NOT NULL, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL); ");
@@ -190,6 +194,8 @@ namespace EPUBackoffice.DAL
                 connection.Close();
                 connection.Dispose();
             }
+
+            Trace.WriteLine("A new database has been created.");
         }
     }
 }

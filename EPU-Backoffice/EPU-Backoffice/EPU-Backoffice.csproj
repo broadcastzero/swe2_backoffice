@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EPUBackoffice.Program</StartupObject>
+    <StartupObject>EPUBackoffice.BL.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\DatabaseCreator.cs" />
     <Compile Include="DAL\Tables\AngebotTable.cs" />
     <Compile Include="DAL\Tables\AusgangsrechnungTable.cs" />
     <Compile Include="DAL\Tables\BankkontoTable.cs" />

@@ -1,3 +1,4 @@
 Using SQLite database
-Path of SQLite file: backoffice_database.db
-Database path set in config file.
+Path of SQLite file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newdatabase.db
+Given file path is wrong. File does not exist!
+A new database has been created.
