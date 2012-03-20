@@ -1,4 +1,4 @@
-﻿namespace EPUBackoffice.GUI
+﻿namespace EPUBackoffice.Gui
 {
     partial class HomeForm
     {

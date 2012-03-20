@@ -5,15 +5,15 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.BL
+namespace EPUBackoffice.Bl
 {
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Linq;
     using System.Windows.Forms;
-    using EPUBackoffice.DAL;
-    using EPUBackoffice.GUI;
+    using EPUBackoffice.Dal;
+    using EPUBackoffice.Gui;
 
     /// <summary>
     /// The main entry class of the application.
@@ -47,7 +47,7 @@ namespace EPUBackoffice.BL
             bool exists = false;
             try
             {
-                exists = dbc.checkDataBaseExistance();
+                exists = dbc.CheckDataBaseExistance();
             }
             // probably syntax error in config file - see logfile
             catch (System.Configuration.ConfigurationErrorsException)

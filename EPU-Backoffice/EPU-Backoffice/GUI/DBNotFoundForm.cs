@@ -1,4 +1,4 @@
-﻿namespace EPUBackoffice.GUI
+﻿namespace EPUBackoffice.Gui
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +8,7 @@
     using System.Drawing;
     using System.Text;
     using System.Windows.Forms;
-    using EPUBackoffice.BL;
+    using EPUBackoffice.Bl;
 
     public partial class DBNotFoundForm : Form
     {

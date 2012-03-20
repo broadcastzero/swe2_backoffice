@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EPUBackoffice.GUI
+namespace EPUBackoffice.Gui
 {
     public partial class HomeForm : Form
     {

@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.DAL.Tables
+namespace EPUBackoffice.Dal.Tables
 {
     using System;
     using System.Collections.Generic;
@@ -87,14 +87,14 @@ namespace EPUBackoffice.DAL.Tables
             set { if (value <= 1 && value >= 0) { _Umsetzungschance = value; } }
         }
 
-        private bool _akzeptiert;
+        private bool _Akzeptiert;
         /// <summary>
         /// bool-value, which shows if Angebot has been accepted
         /// </summary>
-        public bool akzeptiert
+        public bool Akzeptiert
         {
-            get { return _akzeptiert; }
-            set { _akzeptiert = value; }
+            get { return _Akzeptiert; }
+            set { _Akzeptiert = value; }
         }
     }
 }

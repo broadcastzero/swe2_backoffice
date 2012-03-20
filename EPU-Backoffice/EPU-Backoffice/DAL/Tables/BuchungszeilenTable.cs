@@ -4,7 +4,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.DAL.Tables
+namespace EPUBackoffice.Dal.Tables
 {
     using System;
     using System.Collections.Generic;

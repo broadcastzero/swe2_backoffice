@@ -11,7 +11,7 @@ namespace BackofficeTests
     using System;
     using System.Configuration;
     using System.Diagnostics;
-    using EPUBackoffice.DAL;
+    using EPUBackoffice.Dal;
 
     /// <summary>
     ///This is a test class for DataBaseConnectorTest and is intended
@@ -81,7 +81,7 @@ namespace BackofficeTests
             string path = "../../../EPU-Backoffice/bin/Debug/backoffice_database.db"; // create this file in test folder!
             bool expected = true;
             bool actual;
-            actual = target.checkDataBaseExistance(path);
+            actual = target.CheckDataBaseExistance(path);
             Assert.AreEqual(expected, actual);
         }
 
@@ -95,7 +95,7 @@ namespace BackofficeTests
             string path = "../../../EPU-Backoffice/bin/Debug/Logfile.txt";
             bool expected = false;
             bool actual;
-            actual = target.checkDataBaseExistance(path);
+            actual = target.CheckDataBaseExistance(path);
             Assert.AreEqual(expected, actual);
         }
 
@@ -108,7 +108,7 @@ namespace BackofficeTests
         {
             bool expected = false;
             bool actual;
-            actual = target.checkDataBaseExistance();
+            actual = target.CheckDataBaseExistance();
             Assert.AreEqual(expected, actual);
         }
     }

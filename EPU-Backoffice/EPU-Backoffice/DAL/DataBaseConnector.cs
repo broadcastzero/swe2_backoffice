@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.DAL
+namespace EPUBackoffice.Dal
 {
     using System;
     using System.Collections.Generic;
@@ -28,7 +28,7 @@ namespace EPUBackoffice.DAL
         /// <summary>
         /// Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
         /// </summary>
-        private bool mockDB = false;
+        private static bool mockDB = false;
 
         /// <summary>
         /// Gets database path out of config file, checks if the database file exists and if mock database shall be used.
@@ -36,13 +36,12 @@ namespace EPUBackoffice.DAL
         /// <returns>
         /// bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
         /// </returns>
-        public bool checkDataBaseExistance()
+        public bool CheckDataBaseExistance()
         {
             // shall mockDB be used instead of real one?
-            bool mock;
             try
             {
-                mock = usingMockDatabase();
+                DataBaseConnector.mockDB = UsingMockDatabase();
             }
             // error in config file
             catch (System.Configuration.ConfigurationErrorsException)
@@ -50,7 +49,7 @@ namespace EPUBackoffice.DAL
                 throw;
             }
 
-            if(mock == true)
+            if (DataBaseConnector.mockDB == true)
             {
                 Debug.WriteLine("Using mock database");
             }
@@ -83,7 +82,7 @@ namespace EPUBackoffice.DAL
             Debug.WriteLine("Saved path of database in config file : " + path);
 
             // check if path exists in file system
-            return checkDataBaseExistance(path) == true ? true : false;
+            return CheckDataBaseExistance(path) == true ? true : false;
         }
 
         /// <summary>
@@ -92,7 +91,7 @@ namespace EPUBackoffice.DAL
         /// <returns>
         /// bool. true: file exists, false: file does not exist.
         /// </returns>
-        public bool checkDataBaseExistance(string path)
+        public bool CheckDataBaseExistance(string path)
         {
             if (File.Exists(path) && path.EndsWith(".db"))
             {
@@ -113,7 +112,7 @@ namespace EPUBackoffice.DAL
         /// Thrown when configuration file could not be edited."
         /// </exception>
         /// <param name="path">File path of the SQLite database.</param>
-        public void setDatabasePath(string path)
+        public void SetDatabasePath(string path)
         {
             this.connect_settings = new ConnectionStringSettings();
             this.connect_settings.Name = "SQLite";
@@ -136,17 +135,17 @@ namespace EPUBackoffice.DAL
         /// Searches the config file for entry "mockDB" and saves value in private var this.mockDB
         /// </summary>
         /// <returns>true, if mockDB shall be used</returns>
-        private bool usingMockDatabase()
+        private bool UsingMockDatabase()
         {
             try
             {
                 AppSettingsReader config = new AppSettingsReader();
-                this.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
+                DataBaseConnector.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
             }
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
-                this.mockDB = false;
+                DataBaseConnector.mockDB = false;
             }
             catch (ConfigurationErrorsException e)
             { 
@@ -155,7 +154,7 @@ namespace EPUBackoffice.DAL
                 throw; 
             }
 
-            return this.mockDB == true ? true : false;            
+            return DataBaseConnector.mockDB == true ? true : false;            
         }
 
         /// <summary>
@@ -164,7 +163,7 @@ namespace EPUBackoffice.DAL
         public void createDataBase()
         {
             // if mock database shall be used, don't do anything
-            if (this.mockDB == true)
+            if (DataBaseConnector.mockDB == true)
             { return; }
 
             SQLiteConnection connection = null;

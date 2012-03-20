@@ -1,11 +1,11 @@
-﻿namespace EPUBackoffice.BL
+﻿namespace EPUBackoffice.Bl
 {
     using System;
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
-    using EPUBackoffice.DAL;
+    using EPUBackoffice.Dal;
 
     /// <summary>
     /// Creates a new SQLite ".db" file with its needed tables.
@@ -23,7 +23,7 @@
 
             try
             {
-                dbc.setDatabasePath(path);
+                dbc.SetDatabasePath(path);
                 dbc.createDataBase();
             }
             // probably no write access to config file or syntax error in config file
