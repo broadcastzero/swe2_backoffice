@@ -23,7 +23,12 @@ namespace EPUBackoffice.DAL
         /// <summary>
         /// Sets the connection string. User gives path to .db file.
         /// </summary>
-        private ConnectionStringSettings settings;
+        private ConnectionStringSettings connect_settings;
+
+        /// <summary>
+        /// Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
+        /// </summary>
+        private bool mockDB = false;
 
         /// <summary>
         /// Gets database path out of config file, checks if the database file exists.
@@ -33,18 +38,25 @@ namespace EPUBackoffice.DAL
         /// </returns>
         public bool checkDataBaseExistance()
         {
+            // shall mockDB be used instead of real one?
+            if(usingMockDatabase() == true)
+            {
+                Debug.WriteLine("Using mock database");
+            }
+            else { Debug.WriteLine("Using SQLite database"); }
+
             // get location of .db file out of configuration file
-            this.settings = ConfigurationManager.ConnectionStrings["SQLite"];
+            this.connect_settings = ConfigurationManager.ConnectionStrings["SQLite"];
 
             // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config
-            if (this.settings == null)
+            if (this.connect_settings == null)
             {
                 Trace.WriteLine("No entry 'SQLite' in config file.");
                 return false;
             }
 
             // get file location out of connection string
-            string path = settings.ConnectionString;
+            string path = connect_settings.ConnectionString;
             int index1, index2;
             index1 = path.IndexOf("Data Source=");
             index2 = path.IndexOf(".db");
@@ -85,20 +97,21 @@ namespace EPUBackoffice.DAL
                 return false;
             }
         }
+
         /// <summary>
         /// Initializes a new instance of the DataBaseConnector class. Creates needed database tables if they do not exist yet.
         /// </summary>
         /// <param name="path">File path of the SQLite database.</param>
         public void setDatabasePath(string path)
         {
-            this.settings = new ConnectionStringSettings();
-            this.settings.Name = "SQLite";
-            this.settings.ConnectionString = "Data Source=" + path;
+            this.connect_settings = new ConnectionStringSettings();
+            this.connect_settings.Name = "SQLite";
+            this.connect_settings.ConnectionString = "Data Source=" + path;
             try
             {
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.ConnectionStrings.ConnectionStrings.Remove(this.settings); // clear old path
-                config.ConnectionStrings.ConnectionStrings.Add(this.settings);
+                config.ConnectionStrings.ConnectionStrings.Remove(this.connect_settings); // clear old path
+                config.ConnectionStrings.ConnectionStrings.Add(this.connect_settings);
                 config.Save();
             }
             catch (System.Configuration.ConfigurationErrorsException e)
@@ -106,6 +119,26 @@ namespace EPUBackoffice.DAL
                 Trace.WriteLine(e.Message);
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Searches the config file for entry "mockDB" and saves value in private var this.mockDB
+        /// </summary>
+        /// <returns>true, if mockDB shall be used</returns>
+        private bool usingMockDatabase()
+        {
+            AppSettingsReader config = new AppSettingsReader();
+            try
+            {
+                this.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
+            }
+            catch (InvalidOperationException)
+            { 
+                // no key found in .config-file - don't use mockDB
+                this.mockDB = false;
+            }
+
+            return this.mockDB == true ? true : false;            
         }
 
         /// <summary>
@@ -136,7 +169,7 @@ namespace EPUBackoffice.DAL
             try
             {
                 connection = new SQLiteConnection();
-                connection.ConnectionString = this.settings.ConnectionString;
+                connection.ConnectionString = this.connect_settings.ConnectionString;
                 connection.Open();
 
                 // Create tables if they do not exist
