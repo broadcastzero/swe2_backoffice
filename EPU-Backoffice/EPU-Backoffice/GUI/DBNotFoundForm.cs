@@ -25,7 +25,7 @@
         {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Title = "Save file as...";
-            dialog.Filter = "SQLite files (*.db)|*.db|All files (*.*)|*.*";
+            dialog.Filter = "SQLite files (*.db)|*.db";//|All files (*.*)|*.*";
             dialog.RestoreDirectory = true;
 
             if (dialog.ShowDialog() == DialogResult.OK)

@@ -19,6 +19,13 @@
         public void Create(string path)
         {
             Debug.WriteLine("Filename from userinput: " + path);
+
+            // add .db, if not already done
+            if (!path.EndsWith(".db"))
+            {
+                path += ".db";
+            }
+
             DataBaseConnector dbc = new DataBaseConnector();
 
             try

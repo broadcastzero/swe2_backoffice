@@ -74,9 +74,9 @@ namespace EPUBackoffice.Dal
             {
                 path = path.Substring(index1 + 12, (index2 + 3) - (index1 + 12));
             }
-            catch (ArgumentOutOfRangeException e)
+            catch (ArgumentOutOfRangeException)
             {
-                Trace.WriteLine(e.Source + "No (correct) path found in config file.");
+                Trace.WriteLine("No (correct) path found in config file.");
                 return false;
             }
             Debug.WriteLine("Saved path of database in config file : " + path);
