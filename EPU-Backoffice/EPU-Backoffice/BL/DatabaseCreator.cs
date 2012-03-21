@@ -5,6 +5,8 @@
     using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
+    using System.Windows.Forms;
+    using EPUBackoffice.Gui;
     using EPUBackoffice.Dal;
 
     /// <summary>
@@ -16,7 +18,7 @@
         /// Saves the given filepath in the configuration file and creates new database.
         /// </summary>
         /// <param name="path">The name of the to-be-created database file.</param>
-        public void Create(string path)
+        public void Create(Form sender, string path)
         {
             Debug.WriteLine("Filename from userinput: " + path);
 
@@ -42,8 +44,19 @@
             catch (SQLiteException)
             {
                 throw;
-            }            
+            }
+
+            // database could be created - change to normal startscreen
+            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(OpenHomeScreen));
+            sender.Close();
+            t.Start();
         }
+
+        private void OpenHomeScreen()
+        {
+            Application.Run(new HomeForm());
+        }
+
     }
 }
 

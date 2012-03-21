@@ -1,4 +1,5 @@
-Using SQLite database
-mscorlibNo (correct) path found in config file.
-Filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.exe
-A new database has been created.
+Using mock database
+Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+Given file path is wrong. File does not exist!
+Filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+True

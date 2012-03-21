@@ -220,7 +220,7 @@
             Creates a new SQLite ".db" file with its needed tables.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Bl.DatabaseCreator.Create(System.String)">
+        <member name="M:EPUBackoffice.Bl.DatabaseCreator.Create(System.Windows.Forms.Form,System.String)">
             <summary>
             Saves the given filepath in the configuration file and creates new database.
             </summary>

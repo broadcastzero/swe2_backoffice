@@ -34,7 +34,7 @@
 
                 try
                 {
-                    creator.Create(dialog.FileName);
+                    creator.Create(this, dialog.FileName);
                 }
                 catch (System.Configuration.ConfigurationException)
                 {
