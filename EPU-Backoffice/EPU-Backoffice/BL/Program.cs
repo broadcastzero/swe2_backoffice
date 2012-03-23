@@ -10,7 +10,6 @@ namespace EPUBackoffice.Bl
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
-    using System.Linq;
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
 

@@ -9,6 +9,7 @@
     using System.Text;
     using System.Windows.Forms;
     using EPUBackoffice.Bl;
+    using EPUBackoffice.UserExceptions;
 
     /// <summary>
     /// This form lets the user create a new database or open an existing one.
@@ -29,12 +30,12 @@
         {
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Title = "Save file as...";
-            dialog.Filter = "SQLite files (*.db)|*.db";//|All files (*.*)|*.*";
+            dialog.Filter = "SQLite files (*.db)|*.db";
             dialog.RestoreDirectory = true;
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                DatabaseCreator creator = new DatabaseCreator();
+                DatabaseConnector creator = new DatabaseConnector();
 
                 try
                 {
@@ -67,13 +68,13 @@
             {
                 string path = openfile.FileName.ToString();
             
-                DatabaseCreator creator = new DatabaseCreator();
+                DatabaseConnector creator = new DatabaseConnector();
 
                 try
                 {
                     creator.Connect(this, path);
                 }
-                catch(Exception ex)
+                catch(InvalidFileException ex)
                 {
                     MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

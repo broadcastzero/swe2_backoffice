@@ -18,7 +18,7 @@ namespace EPUBackoffice.Dal
     /// <summary>
     /// This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
     /// </summary>
-    public class DataBaseConnector
+    public class DataBaseCreator
     {
         /// <summary>
         /// The information needed to create a connection
@@ -28,7 +28,7 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Connects to the database and creates its tables if they do not exist yet.
         /// </summary>
-        public void createDataBase()
+        public void CreateDataBase()
         {
             // if mock database shall be used, don't do anything
             if (ConfigFileManager.mockDB == true)
@@ -57,7 +57,7 @@ namespace EPUBackoffice.Dal
             try
             {
                 connection = new SQLiteConnection();
-                connection.ConnectionString = DataBaseConnector.connectionString;
+                connection.ConnectionString = DataBaseCreator.connectionString;
                 connection.Open();
 
                 // Create tables if they do not exist

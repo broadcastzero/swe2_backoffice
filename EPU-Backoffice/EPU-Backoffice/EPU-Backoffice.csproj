@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bl\ConfigFileManager.cs" />
-    <Compile Include="Bl\DatabaseCreator.cs" />
+    <Compile Include="Bl\DatabaseConnector.cs" />
     <Compile Include="Dal\Tables\AngebotTable.cs" />
     <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
     <Compile Include="Dal\Tables\BankkontoTable.cs" />
@@ -65,7 +65,7 @@
     <Compile Include="Dal\Tables\KontaktTable.cs" />
     <Compile Include="Dal\Tables\KundeTable.cs" />
     <Compile Include="Dal\Tables\ProjektTable.cs" />
-    <Compile Include="Dal\DataBaseConnector.cs" />
+    <Compile Include="Dal\DataBaseCreator.cs" />
     <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
     <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
     <Compile Include="Gui\DBNotFoundForm.cs">
@@ -82,6 +82,7 @@
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserExceptions\InvalidFileException.cs" />
     <EmbeddedResource Include="Gui\DBNotFoundForm.resx">
       <DependentUpon>DBNotFoundForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,9 +109,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserExceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

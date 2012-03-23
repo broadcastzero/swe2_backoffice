@@ -9,11 +9,12 @@
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.UserExceptions;
 
     /// <summary>
     /// Creates a new SQLite ".db" file with its needed tables.
     /// </summary>
-    public class DatabaseCreator
+    public class DatabaseConnector
     {
         /// <summary>
         /// Saves the given filepath in the configuration file and creates new database.
@@ -30,13 +31,13 @@
                 path += ".db";
             }
 
-            DataBaseConnector dbc = new DataBaseConnector();
+            DataBaseCreator dbc = new DataBaseCreator();
 
             try
             {
                 ConfigFileManager cfm = new ConfigFileManager();
                 cfm.SetDatabasePath(path);
-                dbc.createDataBase();
+                dbc.CreateDataBase();
             }
             // probably no write access to config file or syntax error in config file
             catch (System.Configuration.ConfigurationException)
@@ -60,13 +61,13 @@
         /// <returns>True, if database exists.</returns>
         /// <param name="sender">The caller of this method.</param>
         /// <param name="path">The path of the SQLite file</param>
-        /// <exception cref="Exception">Thrown if chosen file is invalid.</exception>
+        /// <exception cref="InvalidFileException">Thrown if chosen file is invalid.</exception>
         public void Connect(Form sender, string path)
         {
             ConfigFileManager cfm = new ConfigFileManager();
             bool exists = cfm.CheckDataBaseExistance(path);
 
-            if (exists == false) { throw new Exception(); }
+            if (exists == false) { throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!"); }
             else
             {
                 cfm.SetDatabasePath(path);

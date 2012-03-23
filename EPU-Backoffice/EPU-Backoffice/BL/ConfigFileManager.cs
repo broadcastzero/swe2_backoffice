@@ -49,7 +49,7 @@ namespace EPUBackoffice.Bl
                 config.Save();
 
                 // save connection string in static var
-                DataBaseConnector.connectionString = this.connect_settings.ConnectionString;
+                DataBaseCreator.connectionString = this.connect_settings.ConnectionString;
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
@@ -75,9 +75,8 @@ namespace EPUBackoffice.Bl
                 ConfigFileManager.mockDB = false;
             }
             catch (ConfigurationErrorsException e)
-            { 
-                Trace.WriteLine("Syntax error in config file!");
-                Trace.WriteLine(e.Message);
+            {
+                Trace.WriteLine("Syntax error in config file!" + e.Message);
                 throw; 
             }
         }
