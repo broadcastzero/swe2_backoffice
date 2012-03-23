@@ -12,7 +12,6 @@ namespace EPUBackoffice.Bl
     using System.Diagnostics;
     using System.Linq;
     using System.Windows.Forms;
-    using EPUBackoffice.Dal;
     using EPUBackoffice.Gui;
 
     /// <summary>
@@ -42,12 +41,20 @@ namespace EPUBackoffice.Bl
             /***
              * Checks data base existance and creates if needed.
              */
-            DataBaseConnector dbc = new DataBaseConnector();
-            
+            ConfigFileManager cfm = new ConfigFileManager();
             bool exists = false;
+
             try
             {
-                exists = dbc.CheckDataBaseExistance();
+                // Check if mock databse shall be used. Result is stored in var ConfigFileManager.mockDB
+                cfm.UsingMockDatabase();
+
+                // Save info in logfile
+                if (ConfigFileManager.mockDB == true)
+                { Debug.WriteLine("Using mock database"); }
+                else { Debug.WriteLine("Using SQLite database"); }
+
+                exists = cfm.CheckDataBaseExistance();
             }
             // probably syntax error in config file - see logfile
             catch (System.Configuration.ConfigurationErrorsException)
@@ -55,6 +62,7 @@ namespace EPUBackoffice.Bl
                 Environment.Exit(1);
             }
             
+            // Open window, which one depends on whether the database has been found or not
             if (!exists)
             {
                 Application.Run(new DBNotFoundForm());                 

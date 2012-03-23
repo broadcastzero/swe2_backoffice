@@ -54,37 +54,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\DatabaseCreator.cs" />
-    <Compile Include="DAL\Tables\AngebotTable.cs" />
-    <Compile Include="DAL\Tables\AusgangsrechnungTable.cs" />
-    <Compile Include="DAL\Tables\BankkontoTable.cs" />
-    <Compile Include="DAL\Tables\BuchungszeilenTable.cs" />
-    <Compile Include="DAL\Tables\EingangsrechnungTable.cs" />
-    <Compile Include="DAL\Tables\KategorienTable.cs" />
-    <Compile Include="DAL\Tables\KontaktTable.cs" />
-    <Compile Include="DAL\Tables\KundeTable.cs" />
-    <Compile Include="DAL\Tables\ProjektTable.cs" />
-    <Compile Include="DAL\DataBaseConnector.cs" />
-    <Compile Include="DAL\Tables\RechnungszeileTable.cs" />
-    <Compile Include="DAL\Tables\ZeitaufzeichnungTable.cs" />
-    <Compile Include="GUI\DBNotFoundForm.cs">
+    <Compile Include="Bl\ConfigFileManager.cs" />
+    <Compile Include="Bl\DatabaseCreator.cs" />
+    <Compile Include="Dal\Tables\AngebotTable.cs" />
+    <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
+    <Compile Include="Dal\Tables\BankkontoTable.cs" />
+    <Compile Include="Dal\Tables\BuchungszeilenTable.cs" />
+    <Compile Include="Dal\Tables\EingangsrechnungTable.cs" />
+    <Compile Include="Dal\Tables\KategorienTable.cs" />
+    <Compile Include="Dal\Tables\KontaktTable.cs" />
+    <Compile Include="Dal\Tables\KundeTable.cs" />
+    <Compile Include="Dal\Tables\ProjektTable.cs" />
+    <Compile Include="Dal\DataBaseConnector.cs" />
+    <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
+    <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
+    <Compile Include="Gui\DBNotFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DBNotFoundForm.Designer.cs">
+    <Compile Include="Gui\DBNotFoundForm.Designer.cs">
       <DependentUpon>DBNotFoundForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BL\Program.cs" />
-    <Compile Include="GUI\HomeForm.cs">
+    <Compile Include="Bl\Program.cs" />
+    <Compile Include="Gui\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HomeForm.Designer.cs">
+    <Compile Include="Gui\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\DBNotFoundForm.resx">
+    <EmbeddedResource Include="Gui\DBNotFoundForm.resx">
       <DependentUpon>DBNotFoundForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HomeForm.resx">
+    <EmbeddedResource Include="Gui\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,7 +108,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserExceptions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

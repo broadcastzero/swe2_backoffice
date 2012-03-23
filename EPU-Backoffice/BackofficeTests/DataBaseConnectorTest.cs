@@ -11,6 +11,7 @@ namespace BackofficeTests
     using System;
     using System.Configuration;
     using System.Diagnostics;
+    using EPUBackoffice.Bl;
     using EPUBackoffice.Dal;
 
     /// <summary>
@@ -21,7 +22,7 @@ namespace BackofficeTests
     public class DataBaseConnectorTest
     {
         private TestContext testContextInstance;
-        private DataBaseConnector target;
+        private ConfigFileManager target;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -60,7 +61,7 @@ namespace BackofficeTests
         [TestInitialize()]
         public void MyTestInitialize()
         {
-            target = new DataBaseConnector();
+            target = new ConfigFileManager();
         }
         //
         //Use TestCleanup to run code after each test has run

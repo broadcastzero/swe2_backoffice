@@ -61,6 +61,7 @@
             this.chooseButton.TabIndex = 2;
             this.chooseButton.Text = "Choose existing DB";
             this.chooseButton.UseVisualStyleBackColor = true;
+            this.chooseButton.Click += new System.EventHandler(this.chooseButton_Click);
             // 
             // DBNotFoundForm
             // 

@@ -9,50 +9,24 @@
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
             </summary>
         </member>
-        <member name="F:EPUBackoffice.Dal.DataBaseConnector.connect_settings">
-            <summary>
-            Sets the connection string. User gives path to .db file.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.Dal.DataBaseConnector.mockDB">
-            <summary>
-            Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.CheckDataBaseExistance">
-            <summary>
-            Gets database path out of config file, checks if the database file exists and if mock database shall be used.
-            </summary>
-            <returns>
-            bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
-            </returns>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.CheckDataBaseExistance(System.String)">
-            <summary>
-            Checks if database file exists at given path.
-            </summary>
-            <returns>
-            bool. true: file exists, false: file does not exist.
-            </returns>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.SetDatabasePath(System.String)">
-            <summary>
-            Saves path of SQLite database in .config-file.
-            </summary>
-            <exception cref="T:System.Configuration.ConfigurationErrorsException">
-            Thrown when configuration file could not be edited."
-            </exception>
-            <param name="path">File path of the SQLite database.</param>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseConnector.UsingMockDatabase">
-            <summary>
-            Searches the config file for entry "mockDB" and saves value in private var this.mockDB
-            </summary>
-            <returns>true, if mockDB shall be used</returns>
-        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseConnector.createDataBase">
             <summary>
             Connects to the database and creates its tables if they do not exist yet.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.DataBaseConnector.connectionString">
+            <summary>
+            The information needed to create a connection
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Gui.HomeForm">
+            <summary>
+            The standard home screen of the application.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.#ctor">
+            <summary>
+            Constructor, only calls InitializeComponent()
             </summary>
         </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
@@ -72,11 +46,24 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:EPUBackoffice.Gui.DBNotFoundForm">
+            <summary>
+            This form lets the user create a new database or open an existing one.
+            It will appear, if no valid database path is stored in the .exe.config-file.
+            </summary>
+        </member>
         <member name="M:EPUBackoffice.Gui.DBNotFoundForm.#ctor">
             <summary>
             This window shall be shown at the start-up of the application, 
             in case that no valid SQLite-file has been found under the path in the configuration file.
             </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.chooseButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Catches the event, when the user clicks on the "open existing database"-button.
+            </summary>
+            <param name="sender">The calling object</param>
+            <param name="e">Additional event arguments</param>
         </member>
         <member name="F:EPUBackoffice.Gui.DBNotFoundForm.components">
             <summary>
@@ -224,7 +211,29 @@
             <summary>
             Saves the given filepath in the configuration file and creates new database.
             </summary>
+            <param name="sender">The caller of this method.</param>
             <param name="path">The name of the to-be-created database file.</param>
+        </member>
+        <member name="M:EPUBackoffice.Bl.DatabaseCreator.Connect(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Checks if a database exists at the given path and stores it in the config file.
+            If everything went fine, this method closes the calling Form and opens the main window.
+            </summary>
+            <returns>True, if database exists.</returns>
+            <param name="sender">The caller of this method.</param>
+            <param name="path">The path of the SQLite file</param>
+            <exception cref="T:System.Exception">Thrown if chosen file is invalid.</exception>
+        </member>
+        <member name="M:EPUBackoffice.Bl.DatabaseCreator.ChangeToHomeScreen(System.Windows.Forms.Form)">
+            <summary>
+            Closes the calling form and opens the home screen in a new thread.
+            </summary>
+            <param name="sender">The calling form</param>
+        </member>
+        <member name="M:EPUBackoffice.Bl.DatabaseCreator.OpenHomeScreen">
+            <summary>
+            Opens the home screen
+            </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -400,6 +409,52 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Bl.ConfigFileManager">
+            <summary>
+            This class reads or writes the config file.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.Bl.ConfigFileManager.connect_settings">
+            <summary>
+            Sets the connection string. User gives path to .db file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Bl.ConfigFileManager.SetDatabasePath(System.String)">
+            <summary>
+            Saves path of SQLite database in .config-file.
+            </summary>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">
+            Thrown when configuration file could not be edited."
+            </exception>
+            <param name="path">File path of the SQLite database.</param>
+        </member>
+        <member name="M:EPUBackoffice.Bl.ConfigFileManager.UsingMockDatabase">
+            <summary>
+            Searches the config file for entry "mockDB" and saves value in private var this.mockDB
+            </summary>
+            <returns>true, if mockDB shall be used</returns>
+        </member>
+        <member name="M:EPUBackoffice.Bl.ConfigFileManager.CheckDataBaseExistance">
+            <summary>
+            Gets database path out of config file and checks if the database file exists
+            </summary>
+            <returns>
+            bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
+            </returns>
+        </member>
+        <member name="M:EPUBackoffice.Bl.ConfigFileManager.CheckDataBaseExistance(System.String)">
+            <summary>
+            Checks if database file exists at given path.
+            </summary>
+            <returns>
+            bool. true: file exists, false: file does not exist.
+            </returns>
+        </member>
+        <member name="P:EPUBackoffice.Bl.ConfigFileManager.mockDB">
+            <summary>
+            Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
             </summary>
         </member>
     </members>

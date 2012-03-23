@@ -10,6 +10,10 @@
     using System.Windows.Forms;
     using EPUBackoffice.Bl;
 
+    /// <summary>
+    /// This form lets the user create a new database or open an existing one.
+    /// It will appear, if no valid database path is stored in the .exe.config-file.
+    /// </summary>
     public partial class DBNotFoundForm : Form
     {
         /// <summary>
@@ -44,9 +48,36 @@
                 {
                     MessageBox.Show(ex.Message, "Datenbank konnte nicht erstellt werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                //MessageBox.Show(dialog.FileName);
             }
+        }
+
+        /// <summary>
+        /// Catches the event, when the user clicks on the "open existing database"-button.
+        /// </summary>
+        /// <param name="sender">The calling object</param>
+        /// <param name="e">Additional event arguments</param>
+        private void chooseButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();
+            openfile.Title = "Vorhandene Datenbank öffnen";
+            openfile.Filter = "SQLite files (*.db)|*.db";
+            openfile.RestoreDirectory = true;
+
+            if (openfile.ShowDialog() == DialogResult.OK)
+            {
+                string path = openfile.FileName.ToString();
+            
+                DatabaseCreator creator = new DatabaseCreator();
+
+                try
+                {
+                    creator.Connect(this, path);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }            
         }
     }
 }
