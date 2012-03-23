@@ -67,7 +67,11 @@
             ConfigFileManager cfm = new ConfigFileManager();
             bool exists = cfm.CheckDataBaseExistance(path);
 
-            if (exists == false) { throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!"); }
+            if (exists == false) 
+            {
+                Trace.WriteLine("Tried to open file " + path + "which does not exist or is not a alid SQLite file!");
+                throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!");
+            }
             else
             {
                 cfm.SetDatabasePath(path);
@@ -81,6 +85,7 @@
         /// <param name="sender">The calling form</param>
         private void ChangeToHomeScreen(Form sender)
         {
+            Debug.WriteLine("Closing old window");
             System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(OpenHomeScreen));
             sender.Close();
             t.Start();
@@ -91,6 +96,7 @@
         /// </summary>
         private void OpenHomeScreen()
         {
+            Debug.WriteLine("Open HomeForm");
             Application.Run(new HomeForm());
         }
 

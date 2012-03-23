@@ -48,6 +48,8 @@ namespace EPUBackoffice.Bl
                 config.ConnectionStrings.ConnectionStrings.Add(this.connect_settings);
                 config.Save();
 
+                Debug.WriteLine("Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
+
                 // save connection string in static var
                 DataBaseCreator.connectionString = this.connect_settings.ConnectionString;
             }
@@ -72,6 +74,7 @@ namespace EPUBackoffice.Bl
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
+                Trace.WriteLine("No mockDB key has been found in config file.");
                 ConfigFileManager.mockDB = false;
             }
             catch (ConfigurationErrorsException e)
@@ -129,12 +132,12 @@ namespace EPUBackoffice.Bl
         {
             if (File.Exists(path) && path.EndsWith(".db"))
             {
-                Debug.WriteLine("Database path set in config file.");
+                Debug.WriteLine("Database path set in config file: " + path);
                 return true;
             }
             else
             {
-                Trace.WriteLine("Given file path is wrong. File does not exist!");
+                Trace.WriteLine("Given file path is wrong. File does not exist: " + path);
                 return false;
             }
         }

@@ -1,4 +1,4 @@
 Using SQLite database
 Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
 Given file path is wrong. File does not exist!
-Given file path is wrong. File does not exist!
+Database path set in config file.
