@@ -25,7 +25,7 @@ namespace EPUBackoffice.Gui
         /* Event handling for buttons */
         private void homeButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void kundenKontakteButton_Click(object sender, EventArgs e)
@@ -72,20 +72,11 @@ namespace EPUBackoffice.Gui
             }
         }
 
-        /* Tabs within "Kunden und Kontakte" */
-        private void kundenCreateTab_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void kundenSearchTab_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kundenSearchTab_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
