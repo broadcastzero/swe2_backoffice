@@ -70,6 +70,16 @@ namespace EPUBackoffice.Gui
             {
                 Application.Exit();
             }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ra_kundenNeuKunde_CheckedChanged(object sender, EventArgs e)
+        {
+
         }      
     }
 }

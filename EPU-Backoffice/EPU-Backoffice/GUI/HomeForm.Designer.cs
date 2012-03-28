@@ -54,11 +54,20 @@
             this.projektTab = new System.Windows.Forms.TabPage();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.reportTab = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ra_kundenNeuKunde = new System.Windows.Forms.RadioButton();
+            this.ra_kundenNeuKontakt = new System.Windows.Forms.RadioButton();
+            this.bu_kundenNeuSave = new System.Windows.Forms.Button();
+            this.bu_kundenNeuReset = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.kundenKontakteTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.kundenTabCreate.SuspendLayout();
             this.rechnungsTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.SuspendLayout();
@@ -190,7 +199,7 @@
             this.kundenKontakteTab.Location = new System.Drawing.Point(34, 4);
             this.kundenKontakteTab.Name = "kundenKontakteTab";
             this.kundenKontakteTab.Padding = new System.Windows.Forms.Padding(3);
-            this.kundenKontakteTab.Size = new System.Drawing.Size(788, 255);
+            this.kundenKontakteTab.Size = new System.Drawing.Size(751, 255);
             this.kundenKontakteTab.TabIndex = 1;
             this.kundenKontakteTab.Text = "2";
             // 
@@ -207,6 +216,14 @@
             // kundenTabCreate
             // 
             this.kundenTabCreate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabCreate.Controls.Add(this.label2);
+            this.kundenTabCreate.Controls.Add(this.label1);
+            this.kundenTabCreate.Controls.Add(this.bu_kundenNeuReset);
+            this.kundenTabCreate.Controls.Add(this.bu_kundenNeuSave);
+            this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKontakt);
+            this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKunde);
+            this.kundenTabCreate.Controls.Add(this.textBox2);
+            this.kundenTabCreate.Controls.Add(this.textBox1);
             this.kundenTabCreate.Location = new System.Drawing.Point(4, 22);
             this.kundenTabCreate.Name = "kundenTabCreate";
             this.kundenTabCreate.Padding = new System.Windows.Forms.Padding(3);
@@ -231,7 +248,7 @@
             this.rechnungsTab.Location = new System.Drawing.Point(34, 4);
             this.rechnungsTab.Name = "rechnungsTab";
             this.rechnungsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.rechnungsTab.Size = new System.Drawing.Size(788, 255);
+            this.rechnungsTab.Size = new System.Drawing.Size(751, 255);
             this.rechnungsTab.TabIndex = 3;
             this.rechnungsTab.Text = "3";
             // 
@@ -293,7 +310,7 @@
             this.angeboteTab.Location = new System.Drawing.Point(34, 4);
             this.angeboteTab.Name = "angeboteTab";
             this.angeboteTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angeboteTab.Size = new System.Drawing.Size(788, 255);
+            this.angeboteTab.Size = new System.Drawing.Size(751, 255);
             this.angeboteTab.TabIndex = 4;
             this.angeboteTab.Text = "4";
             // 
@@ -303,7 +320,7 @@
             this.projektTab.Location = new System.Drawing.Point(34, 4);
             this.projektTab.Name = "projektTab";
             this.projektTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projektTab.Size = new System.Drawing.Size(788, 255);
+            this.projektTab.Size = new System.Drawing.Size(751, 255);
             this.projektTab.TabIndex = 5;
             this.projektTab.Text = "5";
             // 
@@ -313,7 +330,7 @@
             this.zeitTab.Location = new System.Drawing.Point(34, 4);
             this.zeitTab.Name = "zeitTab";
             this.zeitTab.Padding = new System.Windows.Forms.Padding(3);
-            this.zeitTab.Size = new System.Drawing.Size(788, 255);
+            this.zeitTab.Size = new System.Drawing.Size(751, 255);
             this.zeitTab.TabIndex = 6;
             this.zeitTab.Text = "6";
             // 
@@ -323,9 +340,83 @@
             this.reportTab.Location = new System.Drawing.Point(34, 4);
             this.reportTab.Name = "reportTab";
             this.reportTab.Padding = new System.Windows.Forms.Padding(3);
-            this.reportTab.Size = new System.Drawing.Size(788, 255);
+            this.reportTab.Size = new System.Drawing.Size(751, 255);
             this.reportTab.TabIndex = 7;
             this.reportTab.Text = "7";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(24, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(297, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(24, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(297, 20);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // ra_kundenNeuKunde
+            // 
+            this.ra_kundenNeuKunde.AutoSize = true;
+            this.ra_kundenNeuKunde.Location = new System.Drawing.Point(24, 101);
+            this.ra_kundenNeuKunde.Name = "ra_kundenNeuKunde";
+            this.ra_kundenNeuKunde.Size = new System.Drawing.Size(56, 17);
+            this.ra_kundenNeuKunde.TabIndex = 2;
+            this.ra_kundenNeuKunde.TabStop = true;
+            this.ra_kundenNeuKunde.Text = "Kunde";
+            this.ra_kundenNeuKunde.UseVisualStyleBackColor = true;
+            this.ra_kundenNeuKunde.CheckedChanged += new System.EventHandler(this.ra_kundenNeuKunde_CheckedChanged);
+            // 
+            // ra_kundenNeuKontakt
+            // 
+            this.ra_kundenNeuKontakt.AutoSize = true;
+            this.ra_kundenNeuKontakt.Location = new System.Drawing.Point(24, 124);
+            this.ra_kundenNeuKontakt.Name = "ra_kundenNeuKontakt";
+            this.ra_kundenNeuKontakt.Size = new System.Drawing.Size(62, 17);
+            this.ra_kundenNeuKontakt.TabIndex = 3;
+            this.ra_kundenNeuKontakt.TabStop = true;
+            this.ra_kundenNeuKontakt.Text = "Kontakt";
+            this.ra_kundenNeuKontakt.UseVisualStyleBackColor = true;
+            // 
+            // bu_kundenNeuSave
+            // 
+            this.bu_kundenNeuSave.Location = new System.Drawing.Point(187, 98);
+            this.bu_kundenNeuSave.Name = "bu_kundenNeuSave";
+            this.bu_kundenNeuSave.Size = new System.Drawing.Size(134, 23);
+            this.bu_kundenNeuSave.TabIndex = 4;
+            this.bu_kundenNeuSave.Text = "Speichern";
+            this.bu_kundenNeuSave.UseVisualStyleBackColor = true;
+            // 
+            // bu_kundenNeuReset
+            // 
+            this.bu_kundenNeuReset.Location = new System.Drawing.Point(187, 127);
+            this.bu_kundenNeuReset.Name = "bu_kundenNeuReset";
+            this.bu_kundenNeuReset.Size = new System.Drawing.Size(134, 23);
+            this.bu_kundenNeuReset.TabIndex = 5;
+            this.bu_kundenNeuReset.Text = "Felder zurücksetzen";
+            this.bu_kundenNeuReset.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(327, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Vorname";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(327, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nachname / Firma*";
             // 
             // HomeForm
             // 
@@ -348,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.kundenKontakteTab.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.kundenTabCreate.ResumeLayout(false);
+            this.kundenTabCreate.PerformLayout();
             this.rechnungsTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -381,6 +474,14 @@
         private System.Windows.Forms.Button reportsButton;
         private System.Windows.Forms.Button beendenButton;
         private System.Windows.Forms.Button projektverwaltungButton;
+        private System.Windows.Forms.Button bu_kundenNeuReset;
+        private System.Windows.Forms.Button bu_kundenNeuSave;
+        private System.Windows.Forms.RadioButton ra_kundenNeuKontakt;
+        private System.Windows.Forms.RadioButton ra_kundenNeuKunde;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
 
 
 
