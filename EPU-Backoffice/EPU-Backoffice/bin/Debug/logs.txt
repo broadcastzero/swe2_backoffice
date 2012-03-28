@@ -143,3 +143,18 @@
 28.03.2012 - 14:21 Info: Using mock database
 28.03.2012 - 14:21 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
 28.03.2012 - 14:21 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 15:19 Info: -----------------------------------------------------------
+28.03.2012 - 15:19 Info: Program is started.
+28.03.2012 - 15:19 Info: Using mock database
+28.03.2012 - 15:19 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semesteffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semesteffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Warning: The entry 'SQLite' has already been added.System.Configuration
+28.03.2012 - 15:19 Info: -----------------------------------------------------------
+28.03.2012 - 15:19 Info: Program is started.
+28.03.2012 - 15:19 Info: Using mock database
+28.03.2012 - 15:19 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semesteffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semesteffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+28.03.2012 - 15:19 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+28.03.2012 - 15:19 Info: Open HomeForm
