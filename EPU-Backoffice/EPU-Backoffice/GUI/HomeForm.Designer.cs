@@ -59,7 +59,6 @@
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
             this.rechnungUmsatzTab = new System.Windows.Forms.TabPage();
             this.angeboteTab = new System.Windows.Forms.TabPage();
-            this.projektTab = new System.Windows.Forms.TabPage();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.tb_kundenSearchVorname = new System.Windows.Forms.TextBox();
@@ -68,7 +67,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bu_kundenSearchSuchen = new System.Windows.Forms.Button();
             this.bu_kundenSearchAendern = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dg_kundenSearch = new System.Windows.Forms.DataGridView();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.projektTab = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,7 +90,15 @@
             this.kundenTabSearchChange.SuspendLayout();
             this.rechnungsTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.angeboteTab.SuspendLayout();
+            this.zeitTab.SuspendLayout();
+            this.reportTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_kundenSearch)).BeginInit();
+            this.tabControl3.SuspendLayout();
+            this.projektTab.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabControl6.SuspendLayout();
             this.SuspendLayout();
             // 
             // homeButton
@@ -319,7 +339,7 @@
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.kundenTabSearchChange.Controls.Add(this.dataGridView1);
+            this.kundenTabSearchChange.Controls.Add(this.dg_kundenSearch);
             this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchAendern);
             this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchSuchen);
             this.kundenTabSearchChange.Controls.Add(this.label4);
@@ -337,10 +357,10 @@
             // 
             this.rechnungsTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rechnungsTab.Controls.Add(this.tabControl2);
-            this.rechnungsTab.Location = new System.Drawing.Point(34, 4);
+            this.rechnungsTab.Location = new System.Drawing.Point(19, 4);
             this.rechnungsTab.Name = "rechnungsTab";
             this.rechnungsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.rechnungsTab.Size = new System.Drawing.Size(751, 255);
+            this.rechnungsTab.Size = new System.Drawing.Size(766, 255);
             this.rechnungsTab.TabIndex = 3;
             this.rechnungsTab.Text = "3";
             // 
@@ -399,26 +419,18 @@
             // angeboteTab
             // 
             this.angeboteTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.angeboteTab.Location = new System.Drawing.Point(34, 4);
+            this.angeboteTab.Controls.Add(this.tabControl3);
+            this.angeboteTab.Location = new System.Drawing.Point(19, 4);
             this.angeboteTab.Name = "angeboteTab";
             this.angeboteTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angeboteTab.Size = new System.Drawing.Size(751, 255);
+            this.angeboteTab.Size = new System.Drawing.Size(766, 255);
             this.angeboteTab.TabIndex = 4;
             this.angeboteTab.Text = "4";
-            // 
-            // projektTab
-            // 
-            this.projektTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.projektTab.Location = new System.Drawing.Point(34, 4);
-            this.projektTab.Name = "projektTab";
-            this.projektTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projektTab.Size = new System.Drawing.Size(751, 255);
-            this.projektTab.TabIndex = 5;
-            this.projektTab.Text = "5";
             // 
             // zeitTab
             // 
             this.zeitTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.zeitTab.Controls.Add(this.tabControl5);
             this.zeitTab.Location = new System.Drawing.Point(34, 4);
             this.zeitTab.Name = "zeitTab";
             this.zeitTab.Padding = new System.Windows.Forms.Padding(3);
@@ -429,6 +441,7 @@
             // reportTab
             // 
             this.reportTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.reportTab.Controls.Add(this.tabControl6);
             this.reportTab.Location = new System.Drawing.Point(34, 4);
             this.reportTab.Name = "reportTab";
             this.reportTab.Padding = new System.Windows.Forms.Padding(3);
@@ -487,14 +500,145 @@
             this.bu_kundenSearchAendern.UseVisualStyleBackColor = true;
             this.bu_kundenSearchAendern.Click += new System.EventHandler(this.bu_kundenSearchAendern_Click);
             // 
-            // dataGridView1
+            // dg_kundenSearch
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(346, 183);
-            this.dataGridView1.TabIndex = 6;
+            this.dg_kundenSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dg_kundenSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg_kundenSearch.Location = new System.Drawing.Point(383, 25);
+            this.dg_kundenSearch.Name = "dg_kundenSearch";
+            this.dg_kundenSearch.Size = new System.Drawing.Size(346, 183);
+            this.dg_kundenSearch.TabIndex = 6;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage1);
+            this.tabControl3.Controls.Add(this.tabPage2);
+            this.tabControl3.Location = new System.Drawing.Point(142, 94);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(200, 100);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // projektTab
+            // 
+            this.projektTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektTab.Controls.Add(this.tabControl4);
+            this.projektTab.Location = new System.Drawing.Point(34, 4);
+            this.projektTab.Name = "projektTab";
+            this.projektTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projektTab.Size = new System.Drawing.Size(751, 255);
+            this.projektTab.TabIndex = 5;
+            this.projektTab.Text = "5";
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage3);
+            this.tabControl4.Controls.Add(this.tabPage4);
+            this.tabControl4.Location = new System.Drawing.Point(203, 125);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(200, 100);
+            this.tabControl4.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(192, 74);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(192, 74);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage5);
+            this.tabControl5.Controls.Add(this.tabPage6);
+            this.tabControl5.Location = new System.Drawing.Point(132, 68);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(200, 100);
+            this.tabControl5.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(192, 74);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(192, 74);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabControl6
+            // 
+            this.tabControl6.Controls.Add(this.tabPage7);
+            this.tabControl6.Controls.Add(this.tabPage8);
+            this.tabControl6.Location = new System.Drawing.Point(137, 103);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(200, 100);
+            this.tabControl6.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(192, 74);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(192, 74);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "tabPage8";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
@@ -523,7 +667,15 @@
             this.kundenTabSearchChange.PerformLayout();
             this.rechnungsTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.angeboteTab.ResumeLayout(false);
+            this.zeitTab.ResumeLayout(false);
+            this.reportTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_kundenSearch)).EndInit();
+            this.tabControl3.ResumeLayout(false);
+            this.projektTab.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.tabControl6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -546,7 +698,6 @@
         private System.Windows.Forms.TabPage rechnungDruckenTab;
         private System.Windows.Forms.TabPage rechnungUmsatzTab;
         private System.Windows.Forms.TabPage angeboteTab;
-        private System.Windows.Forms.TabPage projektTab;
         private System.Windows.Forms.TabPage zeitTab;
         private System.Windows.Forms.Button kundenKontakteButton;
         private System.Windows.Forms.Button rechnungsverwaltungButton;
@@ -563,13 +714,26 @@
         private System.Windows.Forms.TextBox tb_kundenNeuVorname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dg_kundenSearch;
         private System.Windows.Forms.Button bu_kundenSearchAendern;
         private System.Windows.Forms.Button bu_kundenSearchSuchen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_kundenSearchNachname;
         private System.Windows.Forms.TextBox tb_kundenSearchVorname;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage projektTab;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
 
 
 
