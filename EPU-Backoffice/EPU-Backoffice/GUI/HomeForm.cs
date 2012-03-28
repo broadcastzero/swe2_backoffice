@@ -25,37 +25,37 @@ namespace EPUBackoffice.Gui
         /* Event handling for buttons */
         private void homeButton_Click(object sender, EventArgs e)
         {
-            
+            mainTab.SelectTab("homeTab");
         }
 
         private void kundenKontakteButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("kundenKontakteTab");   
         }
 
         private void rechnungsverwaltungButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("rechnungsTab");  
         }
 
         private void angeboteButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("angeboteTab");  
         }
 
         private void projektverwaltungButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("projektTab");  
         }
 
         private void zeiterfassungButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("zeitTab");  
         }
 
         private void reportsButton_Click(object sender, EventArgs e)
         {
-
+            mainTab.SelectTab("reportTab");  
         }
 
         private void beendenButton_Click(object sender, EventArgs e)
@@ -70,13 +70,6 @@ namespace EPUBackoffice.Gui
             {
                 Application.Exit();
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
+        }      
     }
 }
