@@ -41,7 +41,7 @@ namespace Logger
         /// </summary>
         protected Logger()
         { 
-            // create logfile here
+            // get path of logfile from config file or use standard filename
         }
 
         /// <summary>

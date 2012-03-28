@@ -1,4 +1,11 @@
-﻿namespace EPUBackoffice.Bl
+﻿// -----------------------------------------------------------------------
+// <copyright file="DataBaseConnector.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
+// </copyright>
+// -----------------------------------------------------------------------
+
+namespace EPUBackoffice.Bl
 {
     using System;
     using System.Collections.Generic;
@@ -33,7 +40,7 @@
                 path += ".db";
             }
 
-            DataBaseCreator dbc = new DataBaseCreator();
+            DataBaseManager dbc = new DataBaseManager();
 
             try
             {
@@ -71,7 +78,7 @@
 
             if (exists == false) 
             {
-                this.logger.Log(2, "Tried to open file " + path + "which does not exist or is not a alid SQLite file!");
+                this.logger.Log(2, "Tried to open file " + path + " which does not exist or is not a a valid SQLite file!");
                 throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!");
             }
             else

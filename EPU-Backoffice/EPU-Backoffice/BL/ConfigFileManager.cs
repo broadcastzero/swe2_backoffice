@@ -12,7 +12,6 @@ namespace EPUBackoffice.Bl
     using System.Configuration;
     using System.IO;
     using System.Text;
-    using EPUBackoffice.Dal;
     using Logger;
 
     /// <summary>
@@ -29,6 +28,11 @@ namespace EPUBackoffice.Bl
         /// A reference to the logger.
         /// </summary>
         private Logger logger = Logger.Instance;
+
+        /// <summary>
+        /// The information needed to create a connection
+        /// </summary>
+        public static string connectionString { get; set; }
 
         /// <summary>
         /// Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
@@ -57,7 +61,7 @@ namespace EPUBackoffice.Bl
                 this.logger.Log(0, "Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
 
                 // save connection string in static var
-                DataBaseCreator.connectionString = this.connect_settings.ConnectionString;
+                ConfigFileManager.connectionString = this.connect_settings.ConnectionString;
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
@@ -122,7 +126,7 @@ namespace EPUBackoffice.Bl
                 this.logger.Log(1, "No (correct) path found in config file.");
                 return false;
             }
-            this.logger.Log(0, "Saved path of database in config file : " + path);
+            this.logger.Log(0, "Saved path of database in config file: " + path);
 
             // check if path exists in file system
             return CheckDataBaseExistance(path) == true ? true : false;

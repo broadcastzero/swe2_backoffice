@@ -365,21 +365,6 @@
             Datum of creation of an Rechnung
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.DataBaseCreator">
-            <summary>
-            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseCreator.CreateDataBase">
-            <summary>
-            Connects to the database and creates its tables if they do not exist yet.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.DataBaseCreator.connectionString">
-            <summary>
-            The information needed to create a connection
-            </summary>
-        </member>
         <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
             <summary>
             A class for the database table "Rechnungszeile" with its attributes
@@ -491,6 +476,11 @@
             bool. true: file exists, false: file does not exist.
             </returns>
         </member>
+        <member name="P:EPUBackoffice.Bl.ConfigFileManager.connectionString">
+            <summary>
+            The information needed to create a connection
+            </summary>
+        </member>
         <member name="P:EPUBackoffice.Bl.ConfigFileManager.mockDB">
             <summary>
             Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
@@ -510,6 +500,47 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.DALFactory">
+            <summary>
+            A factory for the data access layer
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DALFactory.getDAL">
+            <summary>
+            This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EPUBackoffice.Dal.IDAL">
+            <summary>
+            An Interface to make the data access layer dynamic. Database class must implement these methods.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateDataBase">
+            <summary>
+            This method is responsible for creating a new (mock) database with all its needed tables
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.MockDataBaseManager">
+            <summary>
+            This class manages the mock database.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateDataBase">
+            <summary>
+            This method initializes the classes needed to create a mock database
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.DataBaseManager">
+            <summary>
+            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
+            <summary>
+            Connects to the database and creates its tables if they do not exist yet.
             </summary>
         </member>
     </members>

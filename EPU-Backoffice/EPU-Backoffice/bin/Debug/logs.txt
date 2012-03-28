@@ -1,7 +1,28 @@
-28.03.2012 - 11:26 Info: Using SQLite database
-28.03.2012 - 11:26 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\tst.db
-28.03.2012 - 11:26 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\tst.db
-28.03.2012 - 11:26 Info: Filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
-28.03.2012 - 11:26 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db has been stored in config file.
-28.03.2012 - 11:26 Info: A new database has been created.
-28.03.2012 - 11:26 Info: Open HomeForm
+28.03.2012 - 12:17 Info: Using SQLite database
+28.03.2012 - 12:17 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+28.03.2012 - 12:17 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+28.03.2012 - 12:17 Info: Filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adfadf.db
+28.03.2012 - 12:17 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adfadf.db has been stored in config file.
+28.03.2012 - 12:17 Info: A new database has been created.
+28.03.2012 - 12:17 Info: Open HomeForm
+28.03.2012 - 12:17 Info: Using SQLite database
+28.03.2012 - 12:17 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adfadf.db
+28.03.2012 - 12:17 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adfadf.db
+28.03.2012 - 12:17 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:17 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db has been stored in config file.
+28.03.2012 - 12:17 Info: Open HomeForm
+28.03.2012 - 12:19 Info: -----------------------------------------------------------
+28.03.2012 - 12:19 Info: Program is started.
+28.03.2012 - 12:19 Info: Using SQLite database
+28.03.2012 - 12:19 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:19 Info: -----------------------------------------------------------
+28.03.2012 - 12:19 Info: Program is started.
+28.03.2012 - 12:19 Info: Using SQLite database
+28.03.2012 - 12:19 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:19 Info: -----------------------------------------------------------
+28.03.2012 - 12:19 Info: Program is started.
+28.03.2012 - 12:19 Info: Using mock database
+28.03.2012 - 12:19 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+28.03.2012 - 12:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db

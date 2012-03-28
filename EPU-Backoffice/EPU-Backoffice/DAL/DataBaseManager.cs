@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="DataBaseConnector.cs" company="Marvin&Felix">
-// TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// <copyright file="DataBaseCreator.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -18,14 +18,9 @@ namespace EPUBackoffice.Dal
     /// <summary>
     /// This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
     /// </summary>
-    public class DataBaseCreator
+    public class DataBaseManager : IDAL
     {
         Logger logger = Logger.Instance;
-
-        /// <summary>
-        /// The information needed to create a connection
-        /// </summary>
-        public static string connectionString { get; set; }
 
         /// <summary>
         /// Connects to the database and creates its tables if they do not exist yet.
@@ -59,7 +54,7 @@ namespace EPUBackoffice.Dal
             try
             {
                 connection = new SQLiteConnection();
-                connection.ConnectionString = DataBaseCreator.connectionString;
+                connection.ConnectionString = ConfigFileManager.connectionString;
                 connection.Open();
 
                 // Create tables if they do not exist

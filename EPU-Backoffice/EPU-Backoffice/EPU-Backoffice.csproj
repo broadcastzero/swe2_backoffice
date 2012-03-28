@@ -56,6 +56,9 @@
   <ItemGroup>
     <Compile Include="Bl\ConfigFileManager.cs" />
     <Compile Include="Bl\DatabaseConnector.cs" />
+    <Compile Include="Dal\DALFactory.cs" />
+    <Compile Include="Dal\IDAL.cs" />
+    <Compile Include="Dal\MockDataBaseManager.cs" />
     <Compile Include="Dal\Tables\AngebotTable.cs" />
     <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
     <Compile Include="Dal\Tables\BankkontoTable.cs" />
@@ -65,7 +68,7 @@
     <Compile Include="Dal\Tables\KontaktTable.cs" />
     <Compile Include="Dal\Tables\KundeTable.cs" />
     <Compile Include="Dal\Tables\ProjektTable.cs" />
-    <Compile Include="Dal\DataBaseCreator.cs" />
+    <Compile Include="Dal\DataBaseManager.cs" />
     <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
     <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
     <Compile Include="Gui\DBNotFoundForm.cs">

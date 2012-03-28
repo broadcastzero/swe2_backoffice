@@ -38,7 +38,8 @@ namespace EPUBackoffice.Bl
             //Trace.Listeners.Add(tr1);
             //Trace.AutoFlush = true;
             Logger logger = Logger.Instance;
-
+            logger.Log(0, "-----------------------------------------------------------");
+            logger.Log(0, "Program is started.");
 
             /***
              * Checks data base existance and creates if needed.
