@@ -27,10 +27,6 @@ namespace EPUBackoffice.Dal
         /// </summary>
         public void CreateDataBase()
         {
-            // if mock database shall be used, don't do anything
-            if (ConfigFileManager.mockDB == true)
-            { return; }
-
             SQLiteConnection connection = null;
             SQLiteCommand command = null;
 

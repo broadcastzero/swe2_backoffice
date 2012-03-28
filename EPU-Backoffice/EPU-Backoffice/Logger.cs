@@ -84,6 +84,11 @@ namespace Logger
                 Trace.WriteLine(e.Message);
                 Trace.WriteLine(e.StackTrace);
             }
+            catch (UnauthorizedAccessException e)
+            {
+                Trace.WriteLine("Access to logfile denied.");
+                Trace.WriteLine(e.Message);
+            }
         }
     }
 }

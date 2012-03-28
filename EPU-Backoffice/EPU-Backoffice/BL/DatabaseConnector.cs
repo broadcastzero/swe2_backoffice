@@ -40,13 +40,11 @@ namespace EPUBackoffice.BL
                 path += ".db";
             }
 
-            DataBaseManager dbc = new DataBaseManager();
-
             try
             {
                 ConfigFileManager cfm = new ConfigFileManager();
                 cfm.SetDatabasePath(path);
-                dbc.CreateDataBase();
+                DALFactory.GetDAL().CreateDataBase();
             }
             // probably no write access to config file or syntax error in config file
             catch (System.Configuration.ConfigurationException)
