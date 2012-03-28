@@ -36,12 +36,16 @@
             this.rechnungsverwaltungButton = new System.Windows.Forms.Button();
             this.kundenKontakteButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
-            this.panelKunden = new System.Windows.Forms.Panel();
-            this.tabKundenKontakte = new System.Windows.Forms.TabControl();
-            this.kundenCreateTab = new System.Windows.Forms.TabPage();
-            this.kundenSearchTab = new System.Windows.Forms.TabPage();
-            this.panelKunden.SuspendLayout();
-            this.tabKundenKontakte.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // beendenButton
@@ -125,55 +129,110 @@
             this.homeButton.UseVisualStyleBackColor = true;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
-            // panelKunden
+            // tabControl1
             // 
-            this.panelKunden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelKunden.Controls.Add(this.tabKundenKontakte);
-            this.panelKunden.Location = new System.Drawing.Point(152, 12);
-            this.panelKunden.Name = "panelKunden";
-            this.panelKunden.Size = new System.Drawing.Size(770, 238);
-            this.panelKunden.TabIndex = 16;
-            this.panelKunden.Visible = false;
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Location = new System.Drawing.Point(127, 0);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(808, 265);
+            this.tabControl1.TabIndex = 16;
             // 
-            // tabKundenKontakte
+            // tabPage1
             // 
-            this.tabKundenKontakte.Controls.Add(this.kundenCreateTab);
-            this.tabKundenKontakte.Controls.Add(this.kundenSearchTab);
-            this.tabKundenKontakte.Location = new System.Drawing.Point(-1, -1);
-            this.tabKundenKontakte.Name = "tabKundenKontakte";
-            this.tabKundenKontakte.SelectedIndex = 0;
-            this.tabKundenKontakte.Size = new System.Drawing.Size(770, 238);
-            this.tabKundenKontakte.TabIndex = 0;
-            this.tabKundenKontakte.Click += new System.EventHandler(this.kundenSearchTab_Click);
+            this.tabPage1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Location = new System.Drawing.Point(42, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(762, 257);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
             // 
-            // kundenCreateTab
+            // tabPage2
             // 
-            this.kundenCreateTab.Location = new System.Drawing.Point(4, 22);
-            this.kundenCreateTab.Name = "kundenCreateTab";
-            this.kundenCreateTab.Padding = new System.Windows.Forms.Padding(3);
-            this.kundenCreateTab.Size = new System.Drawing.Size(762, 212);
-            this.kundenCreateTab.TabIndex = 0;
-            this.kundenCreateTab.Text = "Neu";
-            this.kundenCreateTab.UseVisualStyleBackColor = true;
-            this.kundenCreateTab.Click += new System.EventHandler(this.kundenCreateTab_Click);
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Location = new System.Drawing.Point(23, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(781, 257);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
             // 
-            // kundenSearchTab
+            // tabPage3
             // 
-            this.kundenSearchTab.Location = new System.Drawing.Point(4, 22);
-            this.kundenSearchTab.Name = "kundenSearchTab";
-            this.kundenSearchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.kundenSearchTab.Size = new System.Drawing.Size(762, 212);
-            this.kundenSearchTab.TabIndex = 1;
-            this.kundenSearchTab.Text = "Suchen & Aendern";
-            this.kundenSearchTab.UseVisualStyleBackColor = true;
-            this.kundenSearchTab.Click += new System.EventHandler(this.kundenSearchTab_Click_1);
+            this.tabPage3.Location = new System.Drawing.Point(23, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(781, 257);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(42, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(762, 257);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(42, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(762, 257);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(42, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(762, 257);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(42, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(762, 257);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(42, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(762, 257);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "tabPage8";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 262);
-            this.Controls.Add(this.panelKunden);
             this.Controls.Add(this.beendenButton);
             this.Controls.Add(this.reportsButton);
             this.Controls.Add(this.zeiterfassungButton);
@@ -182,10 +241,10 @@
             this.Controls.Add(this.rechnungsverwaltungButton);
             this.Controls.Add(this.kundenKontakteButton);
             this.Controls.Add(this.homeButton);
+            this.Controls.Add(this.tabControl1);
             this.Name = "HomeForm";
             this.Text = "EPU Backoffice 1.0";
-            this.panelKunden.ResumeLayout(false);
-            this.tabKundenKontakte.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,10 +259,15 @@
         private System.Windows.Forms.Button rechnungsverwaltungButton;
         private System.Windows.Forms.Button kundenKontakteButton;
         private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Panel panelKunden;
-        private System.Windows.Forms.TabControl tabKundenKontakte;
-        private System.Windows.Forms.TabPage kundenCreateTab;
-        private System.Windows.Forms.TabPage kundenSearchTab;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage8;
 
 
 
