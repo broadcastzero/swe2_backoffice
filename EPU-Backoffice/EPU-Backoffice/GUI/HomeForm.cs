@@ -80,6 +80,21 @@ namespace EPUBackoffice.Gui
         private void ra_kundenNeuKunde_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bu_kundenNeuSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bu_kundenNeuReset_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bu_kundenSearchAendern_Click(object sender, EventArgs e)
+        {
+
         }      
     }
 }

@@ -43,6 +43,14 @@
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bu_kundenNeuReset = new System.Windows.Forms.Button();
+            this.bu_kundenNeuSave = new System.Windows.Forms.Button();
+            this.ra_kundenNeuKontakt = new System.Windows.Forms.RadioButton();
+            this.ra_kundenNeuKunde = new System.Windows.Forms.RadioButton();
+            this.tb_kundenNeuNachname = new System.Windows.Forms.TextBox();
+            this.tb_kundenNeuVorname = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
             this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -54,22 +62,23 @@
             this.projektTab = new System.Windows.Forms.TabPage();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.reportTab = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.ra_kundenNeuKunde = new System.Windows.Forms.RadioButton();
-            this.ra_kundenNeuKontakt = new System.Windows.Forms.RadioButton();
-            this.bu_kundenNeuSave = new System.Windows.Forms.Button();
-            this.bu_kundenNeuReset = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tb_kundenSearchVorname = new System.Windows.Forms.TextBox();
+            this.tb_kundenSearchNachname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bu_kundenSearchSuchen = new System.Windows.Forms.Button();
+            this.bu_kundenSearchAendern = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.kundenKontakteTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.kundenTabCreate.SuspendLayout();
+            this.kundenTabSearchChange.SuspendLayout();
             this.rechnungsTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -222,8 +231,8 @@
             this.kundenTabCreate.Controls.Add(this.bu_kundenNeuSave);
             this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKontakt);
             this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKunde);
-            this.kundenTabCreate.Controls.Add(this.textBox2);
-            this.kundenTabCreate.Controls.Add(this.textBox1);
+            this.kundenTabCreate.Controls.Add(this.tb_kundenNeuNachname);
+            this.kundenTabCreate.Controls.Add(this.tb_kundenNeuVorname);
             this.kundenTabCreate.Location = new System.Drawing.Point(4, 22);
             this.kundenTabCreate.Name = "kundenTabCreate";
             this.kundenTabCreate.Padding = new System.Windows.Forms.Padding(3);
@@ -231,9 +240,92 @@
             this.kundenTabCreate.TabIndex = 0;
             this.kundenTabCreate.Text = "Neu";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(327, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nachname / Firma*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(327, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Vorname";
+            // 
+            // bu_kundenNeuReset
+            // 
+            this.bu_kundenNeuReset.Location = new System.Drawing.Point(187, 124);
+            this.bu_kundenNeuReset.Name = "bu_kundenNeuReset";
+            this.bu_kundenNeuReset.Size = new System.Drawing.Size(134, 23);
+            this.bu_kundenNeuReset.TabIndex = 5;
+            this.bu_kundenNeuReset.Text = "Felder zurücksetzen";
+            this.bu_kundenNeuReset.UseVisualStyleBackColor = true;
+            this.bu_kundenNeuReset.Click += new System.EventHandler(this.bu_kundenNeuReset_Click);
+            // 
+            // bu_kundenNeuSave
+            // 
+            this.bu_kundenNeuSave.Location = new System.Drawing.Point(187, 95);
+            this.bu_kundenNeuSave.Name = "bu_kundenNeuSave";
+            this.bu_kundenNeuSave.Size = new System.Drawing.Size(134, 23);
+            this.bu_kundenNeuSave.TabIndex = 4;
+            this.bu_kundenNeuSave.Text = "Speichern";
+            this.bu_kundenNeuSave.UseVisualStyleBackColor = true;
+            this.bu_kundenNeuSave.Click += new System.EventHandler(this.bu_kundenNeuSave_Click);
+            // 
+            // ra_kundenNeuKontakt
+            // 
+            this.ra_kundenNeuKontakt.AutoSize = true;
+            this.ra_kundenNeuKontakt.Location = new System.Drawing.Point(24, 124);
+            this.ra_kundenNeuKontakt.Name = "ra_kundenNeuKontakt";
+            this.ra_kundenNeuKontakt.Size = new System.Drawing.Size(62, 17);
+            this.ra_kundenNeuKontakt.TabIndex = 3;
+            this.ra_kundenNeuKontakt.TabStop = true;
+            this.ra_kundenNeuKontakt.Text = "Kontakt";
+            this.ra_kundenNeuKontakt.UseVisualStyleBackColor = true;
+            // 
+            // ra_kundenNeuKunde
+            // 
+            this.ra_kundenNeuKunde.AutoSize = true;
+            this.ra_kundenNeuKunde.Location = new System.Drawing.Point(24, 101);
+            this.ra_kundenNeuKunde.Name = "ra_kundenNeuKunde";
+            this.ra_kundenNeuKunde.Size = new System.Drawing.Size(56, 17);
+            this.ra_kundenNeuKunde.TabIndex = 2;
+            this.ra_kundenNeuKunde.TabStop = true;
+            this.ra_kundenNeuKunde.Text = "Kunde";
+            this.ra_kundenNeuKunde.UseVisualStyleBackColor = true;
+            this.ra_kundenNeuKunde.CheckedChanged += new System.EventHandler(this.ra_kundenNeuKunde_CheckedChanged);
+            // 
+            // tb_kundenNeuNachname
+            // 
+            this.tb_kundenNeuNachname.Location = new System.Drawing.Point(24, 52);
+            this.tb_kundenNeuNachname.Name = "tb_kundenNeuNachname";
+            this.tb_kundenNeuNachname.Size = new System.Drawing.Size(297, 20);
+            this.tb_kundenNeuNachname.TabIndex = 1;
+            this.tb_kundenNeuNachname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // tb_kundenNeuVorname
+            // 
+            this.tb_kundenNeuVorname.Location = new System.Drawing.Point(24, 26);
+            this.tb_kundenNeuVorname.Name = "tb_kundenNeuVorname";
+            this.tb_kundenNeuVorname.Size = new System.Drawing.Size(297, 20);
+            this.tb_kundenNeuVorname.TabIndex = 0;
+            // 
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabSearchChange.Controls.Add(this.dataGridView1);
+            this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchAendern);
+            this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchSuchen);
+            this.kundenTabSearchChange.Controls.Add(this.label4);
+            this.kundenTabSearchChange.Controls.Add(this.label3);
+            this.kundenTabSearchChange.Controls.Add(this.tb_kundenSearchNachname);
+            this.kundenTabSearchChange.Controls.Add(this.tb_kundenSearchVorname);
             this.kundenTabSearchChange.Location = new System.Drawing.Point(4, 22);
             this.kundenTabSearchChange.Name = "kundenTabSearchChange";
             this.kundenTabSearchChange.Padding = new System.Windows.Forms.Padding(3);
@@ -344,79 +436,65 @@
             this.reportTab.TabIndex = 7;
             this.reportTab.Text = "7";
             // 
-            // textBox1
+            // tb_kundenSearchVorname
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_kundenSearchVorname.Location = new System.Drawing.Point(24, 26);
+            this.tb_kundenSearchVorname.Name = "tb_kundenSearchVorname";
+            this.tb_kundenSearchVorname.Size = new System.Drawing.Size(214, 20);
+            this.tb_kundenSearchVorname.TabIndex = 0;
             // 
-            // textBox2
+            // tb_kundenSearchNachname
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.tb_kundenSearchNachname.Location = new System.Drawing.Point(24, 52);
+            this.tb_kundenSearchNachname.Name = "tb_kundenSearchNachname";
+            this.tb_kundenSearchNachname.Size = new System.Drawing.Size(214, 20);
+            this.tb_kundenSearchNachname.TabIndex = 1;
             // 
-            // ra_kundenNeuKunde
+            // label3
             // 
-            this.ra_kundenNeuKunde.AutoSize = true;
-            this.ra_kundenNeuKunde.Location = new System.Drawing.Point(24, 101);
-            this.ra_kundenNeuKunde.Name = "ra_kundenNeuKunde";
-            this.ra_kundenNeuKunde.Size = new System.Drawing.Size(56, 17);
-            this.ra_kundenNeuKunde.TabIndex = 2;
-            this.ra_kundenNeuKunde.TabStop = true;
-            this.ra_kundenNeuKunde.Text = "Kunde";
-            this.ra_kundenNeuKunde.UseVisualStyleBackColor = true;
-            this.ra_kundenNeuKunde.CheckedChanged += new System.EventHandler(this.ra_kundenNeuKunde_CheckedChanged);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(244, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Vorname";
             // 
-            // ra_kundenNeuKontakt
+            // label4
             // 
-            this.ra_kundenNeuKontakt.AutoSize = true;
-            this.ra_kundenNeuKontakt.Location = new System.Drawing.Point(24, 124);
-            this.ra_kundenNeuKontakt.Name = "ra_kundenNeuKontakt";
-            this.ra_kundenNeuKontakt.Size = new System.Drawing.Size(62, 17);
-            this.ra_kundenNeuKontakt.TabIndex = 3;
-            this.ra_kundenNeuKontakt.TabStop = true;
-            this.ra_kundenNeuKontakt.Text = "Kontakt";
-            this.ra_kundenNeuKontakt.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(244, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Nachname / Firma*";
             // 
-            // bu_kundenNeuSave
+            // bu_kundenSearchSuchen
             // 
-            this.bu_kundenNeuSave.Location = new System.Drawing.Point(187, 98);
-            this.bu_kundenNeuSave.Name = "bu_kundenNeuSave";
-            this.bu_kundenNeuSave.Size = new System.Drawing.Size(134, 23);
-            this.bu_kundenNeuSave.TabIndex = 4;
-            this.bu_kundenNeuSave.Text = "Speichern";
-            this.bu_kundenNeuSave.UseVisualStyleBackColor = true;
+            this.bu_kundenSearchSuchen.Location = new System.Drawing.Point(24, 101);
+            this.bu_kundenSearchSuchen.Name = "bu_kundenSearchSuchen";
+            this.bu_kundenSearchSuchen.Size = new System.Drawing.Size(101, 23);
+            this.bu_kundenSearchSuchen.TabIndex = 4;
+            this.bu_kundenSearchSuchen.Text = "Suchen";
+            this.bu_kundenSearchSuchen.UseVisualStyleBackColor = true;
             // 
-            // bu_kundenNeuReset
+            // bu_kundenSearchAendern
             // 
-            this.bu_kundenNeuReset.Location = new System.Drawing.Point(187, 127);
-            this.bu_kundenNeuReset.Name = "bu_kundenNeuReset";
-            this.bu_kundenNeuReset.Size = new System.Drawing.Size(134, 23);
-            this.bu_kundenNeuReset.TabIndex = 5;
-            this.bu_kundenNeuReset.Text = "Felder zurücksetzen";
-            this.bu_kundenNeuReset.UseVisualStyleBackColor = true;
+            this.bu_kundenSearchAendern.Location = new System.Drawing.Point(141, 101);
+            this.bu_kundenSearchAendern.Name = "bu_kundenSearchAendern";
+            this.bu_kundenSearchAendern.Size = new System.Drawing.Size(97, 23);
+            this.bu_kundenSearchAendern.TabIndex = 5;
+            this.bu_kundenSearchAendern.Text = "Ändern";
+            this.bu_kundenSearchAendern.UseVisualStyleBackColor = true;
+            this.bu_kundenSearchAendern.Click += new System.EventHandler(this.bu_kundenSearchAendern_Click);
             // 
-            // label1
+            // dataGridView1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(327, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Vorname";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Nachname / Firma*";
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(383, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(346, 183);
+            this.dataGridView1.TabIndex = 6;
             // 
             // HomeForm
             // 
@@ -441,8 +519,11 @@
             this.tabControl1.ResumeLayout(false);
             this.kundenTabCreate.ResumeLayout(false);
             this.kundenTabCreate.PerformLayout();
+            this.kundenTabSearchChange.ResumeLayout(false);
+            this.kundenTabSearchChange.PerformLayout();
             this.rechnungsTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,10 +559,17 @@
         private System.Windows.Forms.Button bu_kundenNeuSave;
         private System.Windows.Forms.RadioButton ra_kundenNeuKontakt;
         private System.Windows.Forms.RadioButton ra_kundenNeuKunde;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_kundenNeuNachname;
+        private System.Windows.Forms.TextBox tb_kundenNeuVorname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button bu_kundenSearchAendern;
+        private System.Windows.Forms.Button bu_kundenSearchSuchen;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tb_kundenSearchNachname;
+        private System.Windows.Forms.TextBox tb_kundenSearchVorname;
 
 
 
