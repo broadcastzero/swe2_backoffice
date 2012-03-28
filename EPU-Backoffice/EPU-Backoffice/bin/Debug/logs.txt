@@ -1,0 +1,7 @@
+28.03.2012 - 11:26 Info: Using SQLite database
+28.03.2012 - 11:26 Info: Saved path of database in config file : C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\tst.db
+28.03.2012 - 11:26 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\tst.db
+28.03.2012 - 11:26 Info: Filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+28.03.2012 - 11:26 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db has been stored in config file.
+28.03.2012 - 11:26 Info: A new database has been created.
+28.03.2012 - 11:26 Info: Open HomeForm

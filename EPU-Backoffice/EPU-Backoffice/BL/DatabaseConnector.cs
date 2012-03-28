@@ -3,19 +3,21 @@
     using System;
     using System.Collections.Generic;
     using System.Data.SQLite;
-    using System.Diagnostics;
     using System.IO;
     using System.Text;
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
     using EPUBackoffice.Dal;
     using EPUBackoffice.UserExceptions;
+    using Logger;
 
     /// <summary>
     /// Creates a new SQLite ".db" file with its needed tables.
     /// </summary>
     public class DatabaseConnector
     {
+        private Logger logger = Logger.Instance;
+
         /// <summary>
         /// Saves the given filepath in the configuration file and creates new database.
         /// </summary>
@@ -23,7 +25,7 @@
         /// <param name="path">The name of the to-be-created database file.</param>
         public void Create(Form sender, string path)
         {
-            Debug.WriteLine("Filename from userinput: " + path);
+            this.logger.Log(0, "Filename from userinput: " + path);
 
             // add .db, if not already done
             if (!path.EndsWith(".db"))
@@ -69,7 +71,7 @@
 
             if (exists == false) 
             {
-                Trace.WriteLine("Tried to open file " + path + "which does not exist or is not a alid SQLite file!");
+                this.logger.Log(2, "Tried to open file " + path + "which does not exist or is not a alid SQLite file!");
                 throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!");
             }
             else
@@ -85,7 +87,6 @@
         /// <param name="sender">The calling form</param>
         private void ChangeToHomeScreen(Form sender)
         {
-            Debug.WriteLine("Closing old window");
             System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(OpenHomeScreen));
             sender.Close();
             t.Start();
@@ -96,9 +97,8 @@
         /// </summary>
         private void OpenHomeScreen()
         {
-            Debug.WriteLine("Open HomeForm");
+            this.logger.Log(0, "Open HomeForm");
             Application.Run(new HomeForm());
         }
-
     }
 }

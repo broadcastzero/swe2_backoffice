@@ -12,6 +12,7 @@ namespace EPUBackoffice.Bl
     using System.Diagnostics;
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
+    using Logger;
 
     /// <summary>
     /// The main entry class of the application.
@@ -33,9 +34,11 @@ namespace EPUBackoffice.Bl
              * Trace.WriteLines will be stored in logfile in Debug AND Release Mode.
              * see http://support.microsoft.com/kb/815788 for further information.
              */
-            TextWriterTraceListener tr1 = new TextWriterTraceListener(System.IO.File.CreateText("Logfile.txt"));
-            Trace.Listeners.Add(tr1);
-            Trace.AutoFlush = true;
+            //TextWriterTraceListener tr1 = new TextWriterTraceListener(System.IO.File.CreateText("Logfile.txt"));
+            //Trace.Listeners.Add(tr1);
+            //Trace.AutoFlush = true;
+            Logger logger = Logger.Instance;
+
 
             /***
              * Checks data base existance and creates if needed.
@@ -50,8 +53,8 @@ namespace EPUBackoffice.Bl
 
                 // Save info in logfile
                 if (ConfigFileManager.mockDB == true)
-                { Debug.WriteLine("Using mock database"); }
-                else { Debug.WriteLine("Using SQLite database"); }
+                { logger.Log(0, "Using mock database"); }
+                else { logger.Log(0, "Using SQLite database"); }
 
                 exists = cfm.CheckDataBaseExistance();
             }

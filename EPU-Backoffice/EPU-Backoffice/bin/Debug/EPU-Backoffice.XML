@@ -4,6 +4,33 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
+        <member name="T:Logger.Logger">
+            <summary>
+            This class serves as a logger, which writes out messages in a textfile
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.#cctor">
+            <summary>
+            Creates an instance of the Logger class.
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.#ctor">
+            <summary>
+            Constructor of singleton class Logger.
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.Log(System.Int32,System.String)">
+            <summary>
+            Log the message.
+            </summary>
+            <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
+            <param name="msg">The message which has to be logged.</param>
+        </member>
+        <member name="P:Logger.Logger.Instance">
+            <summary>
+            The instance of the singleton class Logger.
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.Bl.DatabaseConnector">
             <summary>
             Creates a new SQLite ".db" file with its needed tables.
@@ -428,6 +455,11 @@
             Sets the connection string. User gives path to .db file.
             </summary>
         </member>
+        <member name="F:EPUBackoffice.Bl.ConfigFileManager.logger">
+            <summary>
+            A reference to the logger.
+            </summary>
+        </member>
         <member name="M:EPUBackoffice.Bl.ConfigFileManager.SetDatabasePath(System.String)">
             <summary>
             Saves path of SQLite database in .config-file.
@@ -478,50 +510,6 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Logger">
-            <summary>
-            This class serves as a logger, which writes out messages in a textfile
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Logger.#ctor">
-            <summary>
-            Creates an instance of the Logger class.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Info(System.String)">
-            <summary>
-            Writes out info messages to a textfile.
-            </summary>
-            <param name="message">The to-be-written string.</param>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Warn(System.String)">
-            <summary>
-            Writes out warning messages to a textfile.
-            </summary>
-            <param name="message">The to-be-written string.</param>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Error(System.String)">
-            <summary>
-            Writes out error messages to a textfile.
-            </summary>
-            <param name="message">The to-be-written string.</param>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Dispose">
-            <summary>
-            Calls Dispose()-method if not yet disposed
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Dispose(System.Boolean)">
-            <summary>
-            Cleans up own and foreign ressources
-            </summary>
-            <param name="disposing">Decision, if also own objects shall be freed or only foreign ressources</param>
-        </member>
-        <member name="M:EPUBackoffice.Logger.Finalize">
-            <summary>
-            Destructor - calls Dispose(false) and frees foreign ressources.
             </summary>
         </member>
     </members>

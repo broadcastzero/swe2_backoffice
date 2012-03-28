@@ -5,78 +5,85 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice
+namespace Logger
 {
     using System;
-    using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Text;
+    using System.IO;
 
     /// <summary>
     /// This class serves as a logger, which writes out messages in a textfile
     /// </summary>
-    public class Logger : IDisposable
+    public class Logger
     {
-        private bool disposed = false;
+        private static Logger _instance;
+        private static string logFilePath = "logs.txt";
+
+        /// <summary>
+        /// The instance of the singleton class Logger.
+        /// </summary>
+        public static Logger Instance
+        {
+            get { return _instance; }
+        }
 
         /// <summary>
         /// Creates an instance of the Logger class.
         /// </summary>
-        public Logger()
-        { }
-
-        /// <summary>
-        /// Writes out info messages to a textfile.
-        /// </summary>
-        /// <param name="message">The to-be-written string.</param>
-        public void Info(string message)
-        { }
-
-        /// <summary>
-        /// Writes out warning messages to a textfile.
-        /// </summary>
-        /// <param name="message">The to-be-written string.</param>
-        public void Warn(string message)
-        { }
-
-        /// <summary>
-        /// Writes out error messages to a textfile.
-        /// </summary>
-        /// <param name="message">The to-be-written string.</param>
-        public void Error(string message)
-        { }
-
-        /// <summary>
-        /// Calls Dispose()-method if not yet disposed
-        /// </summary>
-        public void Dispose()
+        static Logger()
         {
-            if (!disposed)
-            {
-                Dispose(true);
-                GC.SuppressFinalize(this);
-                disposed = true;
-            }
-        }
-
-         /// <summary>
-         /// Cleans up own and foreign ressources
-         /// </summary>
-         /// <param name="disposing">Decision, if also own objects shall be freed or only foreign ressources</param>
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                // Clean up of own objects
-            }
-            // Clean up of other objects
+            _instance = new Logger();
         }
 
         /// <summary>
-        /// Destructor - calls Dispose(false) and frees foreign ressources.
+        /// Constructor of singleton class Logger.
         /// </summary>
-        ~Logger()
+        protected Logger()
+        { 
+            // create logfile here
+        }
+
+        /// <summary>
+        /// Log the message.
+        /// </summary>
+        /// <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
+        /// <param name="msg">The message which has to be logged.</param>
+        public void Log(int level, string msg)
         {
-            Dispose(false);
+            StringBuilder sb = new StringBuilder();
+            sb.Append(DateTime.Today.ToShortDateString());
+            sb.Append(" - ");
+            sb.Append(DateTime.Now.ToShortTimeString());
+            
+            switch (level)
+            {
+               case 0: sb.Append(" Info: ");
+                   break;
+               case 1: sb.Append(" Warning: ");
+                   break;
+               case 2: sb.Append(" Error: ");
+                   break;
+               default: sb.Append(" Message: ");
+                   break;
+            }
+
+            sb.Append(msg);
+
+            // Write to file
+            try
+            {
+                using (StreamWriter sw = File.AppendText(Logger.logFilePath))
+                {
+                    sw.WriteLine(sb);
+                }
+            }
+            catch(Exception e)
+            {
+                Trace.WriteLine("Cannot write into logfile.");
+                Trace.WriteLine(e.Message);
+                Trace.WriteLine(e.StackTrace);
+            }
         }
     }
 }

@@ -10,16 +10,18 @@ namespace EPUBackoffice.Dal
     using System;
     using System.Collections.Generic;
     using System.Data.SQLite;
-    using System.Diagnostics;
     using System.IO;
     using System.Text;
     using EPUBackoffice.Bl;
+    using Logger;
 
     /// <summary>
     /// This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
     /// </summary>
     public class DataBaseCreator
     {
+        Logger logger = Logger.Instance;
+
         /// <summary>
         /// The information needed to create a connection
         /// </summary>
@@ -67,7 +69,7 @@ namespace EPUBackoffice.Dal
             }
             catch (SQLiteException e)
             {
-                Trace.WriteLine(e.Message + e.Source);
+                this.logger.Log(2, e.Message + e.Source);
                 throw; // pass exception to caller
             }
             finally
@@ -79,7 +81,7 @@ namespace EPUBackoffice.Dal
                 connection.Dispose();
             }
 
-            Trace.WriteLine("A new database has been created.");
+            this.logger.Log(0, "A new database has been created.");
         }
     }
 }

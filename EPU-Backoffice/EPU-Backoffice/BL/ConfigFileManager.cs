@@ -10,10 +10,10 @@ namespace EPUBackoffice.Bl
     using System;
     using System.Collections.Generic;
     using System.Configuration;
-    using System.Diagnostics;
     using System.IO;
     using System.Text;
     using EPUBackoffice.Dal;
+    using Logger;
 
     /// <summary>
     /// This class reads or writes the config file.
@@ -24,6 +24,11 @@ namespace EPUBackoffice.Bl
         /// Sets the connection string. User gives path to .db file.
         /// </summary>
         private ConnectionStringSettings connect_settings;
+
+        /// <summary>
+        /// A reference to the logger.
+        /// </summary>
+        private Logger logger = Logger.Instance;
 
         /// <summary>
         /// Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
@@ -49,14 +54,14 @@ namespace EPUBackoffice.Bl
                 config.ConnectionStrings.ConnectionStrings.Add(this.connect_settings);
                 config.Save();
 
-                Debug.WriteLine("Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
+                this.logger.Log(0, "Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
 
                 // save connection string in static var
                 DataBaseCreator.connectionString = this.connect_settings.ConnectionString;
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
-                Trace.WriteLine(e.Message + e.Source);
+                this.logger.Log(1, e.Message + e.Source);
                 throw;
             }
         }
@@ -75,12 +80,12 @@ namespace EPUBackoffice.Bl
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
-                Trace.WriteLine("No mockDB key has been found in config file.");
+                this.logger.Log(1, "No mockDB key has been found in config file.");
                 ConfigFileManager.mockDB = false;
             }
             catch (ConfigurationErrorsException e)
             {
-                Trace.WriteLine("Syntax error in config file!" + e.Message);
+                this.logger.Log(2, "Syntax error in config file!" + e.Message);
                 throw; 
             }
         }
@@ -99,7 +104,7 @@ namespace EPUBackoffice.Bl
             // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config
             if (this.connect_settings == null)
             {
-                Trace.WriteLine("No entry 'SQLite' in config file.");
+                this.logger.Log(1, "No entry 'SQLite' in config file.");
                 return false;
             }
 
@@ -114,10 +119,10 @@ namespace EPUBackoffice.Bl
             }
             catch (ArgumentOutOfRangeException)
             {
-                Trace.WriteLine("No (correct) path found in config file.");
+                this.logger.Log(1, "No (correct) path found in config file.");
                 return false;
             }
-            Debug.WriteLine("Saved path of database in config file : " + path);
+            this.logger.Log(0, "Saved path of database in config file : " + path);
 
             // check if path exists in file system
             return CheckDataBaseExistance(path) == true ? true : false;
@@ -133,12 +138,12 @@ namespace EPUBackoffice.Bl
         {
             if (File.Exists(path) && path.EndsWith(".db"))
             {
-                Debug.WriteLine("Database path set in config file: " + path);
+                this.logger.Log(0, "Database path set in config file: " + path);
                 return true;
             }
             else
             {
-                Trace.WriteLine("Given file path is wrong. File does not exist: " + path);
+                this.logger.Log(1, "Given file path is wrong. File does not exist: " + path);
                 return false;
             }
         }
