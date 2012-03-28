@@ -22,53 +22,54 @@ namespace EPUBackoffice.Gui
             InitializeComponent();
         }
 
-        private void test_Load(object sender, EventArgs e)
+        /* Event handling for buttons */
+        private void homeButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void kundenKontakteButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void rechnungsverwaltungButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void angeboteButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void projektverwaltungButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void zeiterfassungButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void reportsButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
+        private void beendenButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void splitContainer1_Panel2_Paint_1(object sender, PaintEventArgs e)
+        /* Tabs within "Kunden und Kontakte" */
+        private void kundenCreateTab_Click(object sender, EventArgs e)
         {
-        
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void kundenSearchTab_Click(object sender, EventArgs e)
         {
 
         }

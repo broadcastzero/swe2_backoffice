@@ -11,7 +11,7 @@ namespace BackofficeTests
     using System;
     using System.Configuration;
     using System.Diagnostics;
-    using EPUBackoffice.Bl;
+    using EPUBackoffice.BL;
     using EPUBackoffice.Dal;
 
     /// <summary>

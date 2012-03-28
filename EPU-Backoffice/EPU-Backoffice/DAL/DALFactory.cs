@@ -10,18 +10,18 @@ namespace EPUBackoffice.Dal
     using System;
     using System.Collections.Generic;
     using System.Text;
-    using EPUBackoffice.Bl;
+    using EPUBackoffice.BL;
 
     /// <summary>
     /// A factory for the data access layer
     /// </summary>
-    public class DALFactory
+    public static class DALFactory
     {
         /// <summary>
         /// This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
         /// </summary>
         /// <returns></returns>
-        public static IDAL getDAL()
+        public static IDAL GetDAL()
         {
             if (ConfigFileManager.mockDB == true)
             {

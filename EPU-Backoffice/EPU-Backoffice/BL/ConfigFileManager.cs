@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.Bl
+namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;

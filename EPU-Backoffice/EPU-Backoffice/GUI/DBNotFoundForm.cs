@@ -8,7 +8,7 @@
     using System.Drawing;
     using System.Text;
     using System.Windows.Forms;
-    using EPUBackoffice.Bl;
+    using EPUBackoffice.BL;
     using EPUBackoffice.UserExceptions;
 
     /// <summary>

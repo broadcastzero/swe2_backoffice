@@ -28,93 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.beendenButton = new System.Windows.Forms.Button();
+            this.reportsButton = new System.Windows.Forms.Button();
+            this.zeiterfassungButton = new System.Windows.Forms.Button();
+            this.projektverwaltungButton = new System.Windows.Forms.Button();
+            this.angeboteButton = new System.Windows.Forms.Button();
+            this.rechnungsverwaltungButton = new System.Windows.Forms.Button();
+            this.kundenKontakteButton = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
             this.panelKunden = new System.Windows.Forms.Panel();
             this.tabKundenKontakte = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.kundenCreateTab = new System.Windows.Forms.TabPage();
+            this.kundenSearchTab = new System.Windows.Forms.TabPage();
             this.panelKunden.SuspendLayout();
             this.tabKundenKontakte.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button8
+            // beendenButton
             // 
-            this.button8.Location = new System.Drawing.Point(12, 213);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(126, 23);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "Beenden";
-            this.button8.UseVisualStyleBackColor = true;
+            this.beendenButton.Location = new System.Drawing.Point(12, 213);
+            this.beendenButton.Name = "beendenButton";
+            this.beendenButton.Size = new System.Drawing.Size(126, 23);
+            this.beendenButton.TabIndex = 15;
+            this.beendenButton.Text = "Beenden";
+            this.beendenButton.UseVisualStyleBackColor = true;
+            this.beendenButton.Click += new System.EventHandler(this.beendenButton_Click);
             // 
-            // button7
+            // reportsButton
             // 
-            this.button7.Location = new System.Drawing.Point(12, 184);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(126, 23);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Reports";
-            this.button7.UseVisualStyleBackColor = true;
+            this.reportsButton.Location = new System.Drawing.Point(12, 184);
+            this.reportsButton.Name = "reportsButton";
+            this.reportsButton.Size = new System.Drawing.Size(126, 23);
+            this.reportsButton.TabIndex = 14;
+            this.reportsButton.Text = "Reports";
+            this.reportsButton.UseVisualStyleBackColor = true;
+            this.reportsButton.Click += new System.EventHandler(this.reportsButton_Click);
             // 
-            // button6
+            // zeiterfassungButton
             // 
-            this.button6.Location = new System.Drawing.Point(12, 155);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Zeiterfassung";
-            this.button6.UseVisualStyleBackColor = true;
+            this.zeiterfassungButton.Location = new System.Drawing.Point(12, 155);
+            this.zeiterfassungButton.Name = "zeiterfassungButton";
+            this.zeiterfassungButton.Size = new System.Drawing.Size(126, 23);
+            this.zeiterfassungButton.TabIndex = 13;
+            this.zeiterfassungButton.Text = "Zeiterfassung";
+            this.zeiterfassungButton.UseVisualStyleBackColor = true;
+            this.zeiterfassungButton.Click += new System.EventHandler(this.zeiterfassungButton_Click);
             // 
-            // button5
+            // projektverwaltungButton
             // 
-            this.button5.Location = new System.Drawing.Point(12, 126);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(126, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Projektverwaltung";
-            this.button5.UseVisualStyleBackColor = true;
+            this.projektverwaltungButton.Location = new System.Drawing.Point(12, 126);
+            this.projektverwaltungButton.Name = "projektverwaltungButton";
+            this.projektverwaltungButton.Size = new System.Drawing.Size(126, 23);
+            this.projektverwaltungButton.TabIndex = 12;
+            this.projektverwaltungButton.Text = "Projektverwaltung";
+            this.projektverwaltungButton.UseVisualStyleBackColor = true;
+            this.projektverwaltungButton.Click += new System.EventHandler(this.projektverwaltungButton_Click);
             // 
-            // button4
+            // angeboteButton
             // 
-            this.button4.Location = new System.Drawing.Point(12, 97);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(126, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Angebote";
-            this.button4.UseVisualStyleBackColor = true;
+            this.angeboteButton.Location = new System.Drawing.Point(12, 97);
+            this.angeboteButton.Name = "angeboteButton";
+            this.angeboteButton.Size = new System.Drawing.Size(126, 23);
+            this.angeboteButton.TabIndex = 11;
+            this.angeboteButton.Text = "Angebote";
+            this.angeboteButton.UseVisualStyleBackColor = true;
+            this.angeboteButton.Click += new System.EventHandler(this.angeboteButton_Click);
             // 
-            // button3
+            // rechnungsverwaltungButton
             // 
-            this.button3.Location = new System.Drawing.Point(12, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Rechnungsverwaltung";
-            this.button3.UseVisualStyleBackColor = true;
+            this.rechnungsverwaltungButton.Location = new System.Drawing.Point(12, 68);
+            this.rechnungsverwaltungButton.Name = "rechnungsverwaltungButton";
+            this.rechnungsverwaltungButton.Size = new System.Drawing.Size(126, 23);
+            this.rechnungsverwaltungButton.TabIndex = 10;
+            this.rechnungsverwaltungButton.Text = "Rechnungsverwaltung";
+            this.rechnungsverwaltungButton.UseVisualStyleBackColor = true;
+            this.rechnungsverwaltungButton.Click += new System.EventHandler(this.rechnungsverwaltungButton_Click);
             // 
-            // button2
+            // kundenKontakteButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Kunden und Kontakte";
-            this.button2.UseVisualStyleBackColor = true;
+            this.kundenKontakteButton.AccessibleName = "";
+            this.kundenKontakteButton.Location = new System.Drawing.Point(12, 39);
+            this.kundenKontakteButton.Name = "kundenKontakteButton";
+            this.kundenKontakteButton.Size = new System.Drawing.Size(126, 23);
+            this.kundenKontakteButton.TabIndex = 9;
+            this.kundenKontakteButton.Text = "Kunden und Kontakte";
+            this.kundenKontakteButton.UseVisualStyleBackColor = true;
+            this.kundenKontakteButton.Click += new System.EventHandler(this.kundenKontakteButton_Click);
             // 
-            // button1
+            // homeButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = true;
+            this.homeButton.Location = new System.Drawing.Point(12, 10);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(126, 23);
+            this.homeButton.TabIndex = 8;
+            this.homeButton.Text = "Home";
+            this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // panelKunden
             // 
@@ -125,37 +134,38 @@
             this.panelKunden.Size = new System.Drawing.Size(770, 238);
             this.panelKunden.TabIndex = 16;
             this.panelKunden.Visible = false;
-            this.panelKunden.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tabKundenKontakte
             // 
-            this.tabKundenKontakte.Controls.Add(this.tabPage1);
-            this.tabKundenKontakte.Controls.Add(this.tabPage2);
+            this.tabKundenKontakte.Controls.Add(this.kundenCreateTab);
+            this.tabKundenKontakte.Controls.Add(this.kundenSearchTab);
             this.tabKundenKontakte.Location = new System.Drawing.Point(-1, -1);
             this.tabKundenKontakte.Name = "tabKundenKontakte";
             this.tabKundenKontakte.SelectedIndex = 0;
             this.tabKundenKontakte.Size = new System.Drawing.Size(770, 238);
             this.tabKundenKontakte.TabIndex = 0;
+            this.tabKundenKontakte.Click += new System.EventHandler(this.kundenSearchTab_Click);
             // 
-            // tabPage1
+            // kundenCreateTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(762, 212);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Neu";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.kundenCreateTab.Location = new System.Drawing.Point(4, 22);
+            this.kundenCreateTab.Name = "kundenCreateTab";
+            this.kundenCreateTab.Padding = new System.Windows.Forms.Padding(3);
+            this.kundenCreateTab.Size = new System.Drawing.Size(762, 212);
+            this.kundenCreateTab.TabIndex = 0;
+            this.kundenCreateTab.Text = "Neu";
+            this.kundenCreateTab.UseVisualStyleBackColor = true;
+            this.kundenCreateTab.Click += new System.EventHandler(this.kundenCreateTab_Click);
             // 
-            // tabPage2
+            // kundenSearchTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(762, 212);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Suchen & Aendern";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.kundenSearchTab.Location = new System.Drawing.Point(4, 22);
+            this.kundenSearchTab.Name = "kundenSearchTab";
+            this.kundenSearchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.kundenSearchTab.Size = new System.Drawing.Size(762, 212);
+            this.kundenSearchTab.TabIndex = 1;
+            this.kundenSearchTab.Text = "Suchen & Aendern";
+            this.kundenSearchTab.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
@@ -163,17 +173,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 262);
             this.Controls.Add(this.panelKunden);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.beendenButton);
+            this.Controls.Add(this.reportsButton);
+            this.Controls.Add(this.zeiterfassungButton);
+            this.Controls.Add(this.projektverwaltungButton);
+            this.Controls.Add(this.angeboteButton);
+            this.Controls.Add(this.rechnungsverwaltungButton);
+            this.Controls.Add(this.kundenKontakteButton);
+            this.Controls.Add(this.homeButton);
             this.Name = "HomeForm";
             this.Text = "EPU Backoffice 1.0";
-            this.Load += new System.EventHandler(this.test_Load);
             this.panelKunden.ResumeLayout(false);
             this.tabKundenKontakte.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -182,18 +191,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button beendenButton;
+        private System.Windows.Forms.Button reportsButton;
+        private System.Windows.Forms.Button zeiterfassungButton;
+        private System.Windows.Forms.Button projektverwaltungButton;
+        private System.Windows.Forms.Button angeboteButton;
+        private System.Windows.Forms.Button rechnungsverwaltungButton;
+        private System.Windows.Forms.Button kundenKontakteButton;
+        private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Panel panelKunden;
         private System.Windows.Forms.TabControl tabKundenKontakte;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage kundenCreateTab;
+        private System.Windows.Forms.TabPage kundenSearchTab;
 
 
 

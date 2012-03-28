@@ -4,6 +4,232 @@
         <name>EPU-Backoffice</name>
     </assembly>
     <members>
+        <member name="T:Logger.Logger">
+            <summary>
+            This class serves as a logger, which writes out messages in a textfile
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.#cctor">
+            <summary>
+            Creates an instance of the Logger class.
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.#ctor">
+            <summary>
+            Constructor of singleton class Logger.
+            </summary>
+        </member>
+        <member name="M:Logger.Logger.Log(System.Int32,System.String)">
+            <summary>
+            Log the message.
+            </summary>
+            <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
+            <param name="msg">The message which has to be logged.</param>
+        </member>
+        <member name="P:Logger.Logger.Instance">
+            <summary>
+            The instance of the singleton class Logger.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.DatabaseConnector">
+            <summary>
+            Creates a new SQLite ".db" file with its needed tables.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DatabaseConnector.Create(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Saves the given filepath in the configuration file and creates new database.
+            </summary>
+            <param name="sender">The caller of this method.</param>
+            <param name="path">The name of the to-be-created database file.</param>
+        </member>
+        <member name="M:EPUBackoffice.BL.DatabaseConnector.Connect(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Checks if a database exists at the given path and stores it in the config file.
+            If everything went fine, this method closes the calling Form and opens the main window.
+            </summary>
+            <returns>True, if database exists.</returns>
+            <param name="sender">The caller of this method.</param>
+            <param name="path">The path of the SQLite file</param>
+            <exception cref="T:EPUBackoffice.UserExceptions.InvalidFileException">Thrown if chosen file is invalid.</exception>
+        </member>
+        <member name="M:EPUBackoffice.BL.DatabaseConnector.ChangeToHomeScreen(System.Windows.Forms.Form)">
+            <summary>
+            Closes the calling form and opens the home screen in a new thread.
+            </summary>
+            <param name="sender">The calling form</param>
+        </member>
+        <member name="M:EPUBackoffice.BL.DatabaseConnector.OpenHomeScreen">
+            <summary>
+            Opens the home screen
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Gui.HomeForm">
+            <summary>
+            The standard home screen of the application.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.#ctor">
+            <summary>
+            Constructor, only calls InitializeComponent()
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.Gui.HomeForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Gui.DBNotFoundForm">
+            <summary>
+            This form lets the user create a new database or open an existing one.
+            It will appear, if no valid database path is stored in the .exe.config-file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.#ctor">
+            <summary>
+            This window shall be shown at the start-up of the application, 
+            in case that no valid SQLite-file has been found under the path in the configuration file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.chooseButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Catches the event, when the user clicks on the "open existing database"-button.
+            </summary>
+            <param name="sender">The calling object</param>
+            <param name="e">Additional event arguments</param>
+        </member>
+        <member name="F:EPUBackoffice.Gui.DBNotFoundForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.Tables.ProjektTable">
+            <summary>
+            A class for the database table "Projekt" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.Projektname">
+            <summary>
+            The name of the project
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.Projektstart">
+            <summary>
+            Datum of creation of an Angebot
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.Tables.KategorienTable">
+            <summary>
+            A class for the database table "Bankkonto" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KategorienTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KategorienTable.Name">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor(System.String)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor(System.String,System.Exception)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+            <param name="inner">The base class</param>
+        </member>
+        <member name="T:EPUBackoffice.Dal.Tables.BuchungszeilenTable">
+            <summary>
+            A class for the database table "Buchungszeilen" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.KategorieID">
+            <summary>
+            Foreign key to table Kategorien
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BankkontoID">
+            <summary>
+            Foreign key to table Bankkonto
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BetragUST">
+            <summary>
+            The taxes that have to be paid
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BetragNetto">
+            <summary>
+            The (after taxes) amount of money that shall be booked
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.Buchungsdatum">
+            <summary>
+            Datum of booking
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.Program">
+            <summary>
+            The main entry class of the application.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.Program.Main">
+            <summary>
+            Main entry point of the application.
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.KontaktTable">
             <summary>
             A class for the database table "Kontakt" with its attributes
@@ -24,103 +250,69 @@
             Foreign key to table Kunde
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Gui.DBNotFoundForm">
+        <member name="T:EPUBackoffice.Dal.Tables.KundeTable">
             <summary>
-            This form lets the user create a new database or open an existing one.
-            It will appear, if no valid database path is stored in the .exe.config-file.
+            A class for the database table "Kunde" with its attributes
             </summary>
         </member>
-        <member name="F:EPUBackoffice.Gui.DBNotFoundForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.#ctor">
-            <summary>
-            This window shall be shown at the start-up of the application, 
-            in case that no valid SQLite-file has been found under the path in the configuration file.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.chooseButton_Click(System.Object,System.EventArgs)">
-            <summary>
-            Catches the event, when the user clicks on the "open existing database"-button.
-            </summary>
-            <param name="sender">The calling object</param>
-            <param name="e">Additional event arguments</param>
-        </member>
-        <member name="T:EPUBackoffice.Gui.HomeForm">
-            <summary>
-            The standard home screen of the application.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.Gui.HomeForm.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.#ctor">
-            <summary>
-            Constructor, only calls InitializeComponent()
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.DALFactory">
-            <summary>
-            A factory for the data access layer
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DALFactory.getDAL">
-            <summary>
-            This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
-            <summary>
-            A class for the database table "Rechnungszeile" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.ID">
+        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.ID">
             <summary>
             Unique ID for the table
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.AngebotsID">
+        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.Vorname">
             <summary>
-            Foreign key to table Angebot
+            Foreign key to table Kunde
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.AusgangsrechnungsID">
+        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.NachnameFirmenname">
             <summary>
-            Foreign key to table Ausgangsrechnung
+            Foreign key to table Kunde
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.Stunden">
+        <member name="T:EPUBackoffice.Dal.DataBaseManager">
+            <summary>
+            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.IDAL">
+            <summary>
+            An Interface to make the data access layer dynamic. Database class must implement these methods.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateDataBase">
+            <summary>
+            This method is responsible for creating a new (mock) database with all its needed tables
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
+            <summary>
+            Connects to the database and creates its tables if they do not exist yet.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
+            <summary>
+            A class for the database table "Zeitaufzeichnung" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.ProjektID">
+            <summary>
+            Foreign key to table Projekt
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.Stunden">
             <summary>
             The number of hours that shall be booked
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.Bezeichnung">
+            <summary>
+            The description of what has been done
             </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.AngebotTable">
@@ -168,78 +360,6 @@
             bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
-            <summary>
-            A class for the database table "Zeitaufzeichnung" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.ProjektID">
-            <summary>
-            Foreign key to table Projekt
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.Stunden">
-            <summary>
-            The number of hours that shall be booked
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable.Bezeichnung">
-            <summary>
-            The description of what has been done
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.IDAL">
-            <summary>
-            An Interface to make the data access layer dynamic. Database class must implement these methods.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.CreateDataBase">
-            <summary>
-            This method is responsible for creating a new (mock) database with all its needed tables
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.MockDataBaseManager">
-            <summary>
-            This class manages the mock database.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateDataBase">
-            <summary>
-            This method initializes the classes needed to create a mock database
-            </summary>
-        </member>
-        <member name="T:Logger.Logger">
-            <summary>
-            This class serves as a logger, which writes out messages in a textfile
-            </summary>
-        </member>
-        <member name="M:Logger.Logger.#cctor">
-            <summary>
-            Creates an instance of the Logger class.
-            </summary>
-        </member>
-        <member name="M:Logger.Logger.#ctor">
-            <summary>
-            Constructor of singleton class Logger.
-            </summary>
-        </member>
-        <member name="M:Logger.Logger.Log(System.Int32,System.String)">
-            <summary>
-            Log the message.
-            </summary>
-            <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
-            <param name="msg">The message which has to be logged.</param>
-        </member>
-        <member name="P:Logger.Logger.Instance">
-            <summary>
-            The instance of the singleton class Logger.
-            </summary>
-        </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
             A class for the database table "Eingangsrechnung" with its attributes
@@ -265,219 +385,29 @@
             Datum of creation of an Rechnung
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.Tables.AusgangsrechnungTable">
+        <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
             <summary>
-            A class for the database table "Ausgangsrechnung" with its attributes
+            A class for the database table "Rechnungszeile" with its attributes
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.ID">
+        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.ID">
             <summary>
             Unique ID for the table
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.KundenID">
+        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.AngebotsID">
             <summary>
-            Foreign key to table Kunde
+            Foreign key to table Angebot
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.Rechnungsdatum">
+        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.AusgangsrechnungsID">
             <summary>
-            Datum of creation of an Rechnung
+            Foreign key to table Ausgangsrechnung
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Properties.Resources">
+        <member name="P:EPUBackoffice.Dal.Tables.RechnungszeileTable.Stunden">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.KundeTable">
-            <summary>
-            A class for the database table "Kunde" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.Vorname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.NachnameFirmenname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.KategorienTable">
-            <summary>
-            A class for the database table "Bankkonto" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KategorienTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KategorienTable.Name">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.BuchungszeilenTable">
-            <summary>
-            A class for the database table "Buchungszeilen" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.KategorieID">
-            <summary>
-            Foreign key to table Kategorien
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BankkontoID">
-            <summary>
-            Foreign key to table Bankkonto
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BetragUST">
-            <summary>
-            The taxes that have to be paid
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.BetragNetto">
-            <summary>
-            The (after taxes) amount of money that shall be booked
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.BuchungszeilenTable.Buchungsdatum">
-            <summary>
-            Datum of booking
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Bl.ConfigFileManager">
-            <summary>
-            This class reads or writes the config file.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.Bl.ConfigFileManager.connect_settings">
-            <summary>
-            Sets the connection string. User gives path to .db file.
-            </summary>
-        </member>
-        <member name="F:EPUBackoffice.Bl.ConfigFileManager.logger">
-            <summary>
-            A reference to the logger.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Bl.ConfigFileManager.SetDatabasePath(System.String)">
-            <summary>
-            Saves path of SQLite database in .config-file.
-            </summary>
-            <exception cref="T:System.Configuration.ConfigurationErrorsException">
-            Thrown when configuration file could not be edited."
-            </exception>
-            <param name="path">File path of the SQLite database.</param>
-        </member>
-        <member name="M:EPUBackoffice.Bl.ConfigFileManager.UsingMockDatabase">
-            <summary>
-            Searches the config file for entry "mockDB" and saves value in private var this.mockDB
-            </summary>
-            <returns>true, if mockDB shall be used</returns>
-        </member>
-        <member name="M:EPUBackoffice.Bl.ConfigFileManager.CheckDataBaseExistance">
-            <summary>
-            Gets database path out of config file and checks if the database file exists
-            </summary>
-            <returns>
-            bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
-            </returns>
-        </member>
-        <member name="M:EPUBackoffice.Bl.ConfigFileManager.CheckDataBaseExistance(System.String)">
-            <summary>
-            Checks if database file exists at given path.
-            </summary>
-            <returns>
-            bool. true: file exists, false: file does not exist.
-            </returns>
-        </member>
-        <member name="P:EPUBackoffice.Bl.ConfigFileManager.connectionString">
-            <summary>
-            The information needed to create a connection
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Bl.ConfigFileManager.mockDB">
-            <summary>
-            Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor(System.String)">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-            <param name="message">The error message which is thrown</param>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidFileException.#ctor(System.String,System.Exception)">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-            <param name="message">The error message which is thrown</param>
-            <param name="inner">The base class</param>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.ProjektTable">
-            <summary>
-            A class for the database table "Projekt" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.Projektname">
-            <summary>
-            The name of the project
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.Projektstart">
-            <summary>
-            Datum of creation of an Angebot
-            </summary>
-        </member>
-        <member name="T:EPUBackoffice.Bl.Program">
-            <summary>
-            The main entry class of the application.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.Bl.Program.Main">
-            <summary>
-            Main entry point of the application.
+            The number of hours that shall be booked
             </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.BankkontoTable">
@@ -500,48 +430,118 @@
             Bank code
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Bl.DatabaseConnector">
+        <member name="T:EPUBackoffice.Dal.Tables.AusgangsrechnungTable">
             <summary>
-            Creates a new SQLite ".db" file with its needed tables.
+            A class for the database table "Ausgangsrechnung" with its attributes
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Bl.DatabaseConnector.Create(System.Windows.Forms.Form,System.String)">
+        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.ID">
             <summary>
-            Saves the given filepath in the configuration file and creates new database.
-            </summary>
-            <param name="sender">The caller of this method.</param>
-            <param name="path">The name of the to-be-created database file.</param>
-        </member>
-        <member name="M:EPUBackoffice.Bl.DatabaseConnector.Connect(System.Windows.Forms.Form,System.String)">
-            <summary>
-            Checks if a database exists at the given path and stores it in the config file.
-            If everything went fine, this method closes the calling Form and opens the main window.
-            </summary>
-            <returns>True, if database exists.</returns>
-            <param name="sender">The caller of this method.</param>
-            <param name="path">The path of the SQLite file</param>
-            <exception cref="T:EPUBackoffice.UserExceptions.InvalidFileException">Thrown if chosen file is invalid.</exception>
-        </member>
-        <member name="M:EPUBackoffice.Bl.DatabaseConnector.ChangeToHomeScreen(System.Windows.Forms.Form)">
-            <summary>
-            Closes the calling form and opens the home screen in a new thread.
-            </summary>
-            <param name="sender">The calling form</param>
-        </member>
-        <member name="M:EPUBackoffice.Bl.DatabaseConnector.OpenHomeScreen">
-            <summary>
-            Opens the home screen
+            Unique ID for the table
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.DataBaseManager">
+        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.KundenID">
             <summary>
-            This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
+            Foreign key to table Kunde
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
+        <member name="P:EPUBackoffice.Dal.Tables.AusgangsrechnungTable.Rechnungsdatum">
             <summary>
-            Connects to the database and creates its tables if they do not exist yet.
+            Datum of creation of an Rechnung
             </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.ConfigFileManager">
+            <summary>
+            This class reads or writes the config file.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.BL.ConfigFileManager.connect_settings">
+            <summary>
+            Sets the connection string. User gives path to .db file.
+            </summary>
+        </member>
+        <member name="F:EPUBackoffice.BL.ConfigFileManager.logger">
+            <summary>
+            A reference to the logger.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.ConfigFileManager.SetDatabasePath(System.String)">
+            <summary>
+            Saves path of SQLite database in .config-file.
+            </summary>
+            <exception cref="T:System.Configuration.ConfigurationErrorsException">
+            Thrown when configuration file could not be edited."
+            </exception>
+            <param name="path">File path of the SQLite database.</param>
+        </member>
+        <member name="M:EPUBackoffice.BL.ConfigFileManager.UsingMockDatabase">
+            <summary>
+            Searches the config file for entry "mockDB" and saves value in private var this.mockDB
+            </summary>
+            <returns>true, if mockDB shall be used</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.ConfigFileManager.CheckDataBaseExistance">
+            <summary>
+            Gets database path out of config file and checks if the database file exists
+            </summary>
+            <returns>
+            bool. true: file exists, false: file does not exist or invalid path in .exe.config file.
+            </returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.ConfigFileManager.CheckDataBaseExistance(System.String)">
+            <summary>
+            Checks if database file exists at given path.
+            </summary>
+            <returns>
+            bool. true: file exists, false: file does not exist.
+            </returns>
+        </member>
+        <member name="P:EPUBackoffice.BL.ConfigFileManager.connectionString">
+            <summary>
+            The information needed to create a connection
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.BL.ConfigFileManager.mockDB">
+            <summary>
+            Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.MockDataBaseManager">
+            <summary>
+            This class manages the mock database.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateDataBase">
+            <summary>
+            This method initializes the classes needed to create a mock database
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Dal.DALFactory">
+            <summary>
+            A factory for the data access layer
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DALFactory.GetDAL">
+            <summary>
+            This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

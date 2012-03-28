@@ -12,7 +12,7 @@ namespace EPUBackoffice.Dal
     using System.Data.SQLite;
     using System.IO;
     using System.Text;
-    using EPUBackoffice.Bl;
+    using EPUBackoffice.BL;
     using Logger;
 
     /// <summary>

@@ -78,7 +78,7 @@ namespace Logger
                     sw.WriteLine(sb);
                 }
             }
-            catch(Exception e)
+            catch (IOException e)
             {
                 Trace.WriteLine("Cannot write into logfile.");
                 Trace.WriteLine(e.Message);
