@@ -166,6 +166,7 @@
             this.kundenSearchTab.TabIndex = 1;
             this.kundenSearchTab.Text = "Suchen & Aendern";
             this.kundenSearchTab.UseVisualStyleBackColor = true;
+            this.kundenSearchTab.Click += new System.EventHandler(this.kundenSearchTab_Click_1);
             // 
             // HomeForm
             // 

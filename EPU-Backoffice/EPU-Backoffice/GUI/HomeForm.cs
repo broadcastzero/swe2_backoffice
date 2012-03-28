@@ -60,7 +60,19 @@ namespace EPUBackoffice.Gui
 
         private void beendenButton_Click(object sender, EventArgs e)
         {
+            string message = "Wollen Sie wirklich beenden?";
+            string caption = "Beenden";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(this, message, caption, buttons);
 
+            if (result == DialogResult.Yes)
+            {
+
+
+                Application.Exit();
+
+            }
         }
 
         /* Tabs within "Kunden und Kontakte" */
@@ -70,6 +82,11 @@ namespace EPUBackoffice.Gui
         }
 
         private void kundenSearchTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kundenSearchTab_Click_1(object sender, EventArgs e)
         {
 
         }
