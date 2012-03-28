@@ -156,7 +156,7 @@ namespace EPUBackoffice.Gui
 
         //Öffnung einer neuen Datenbank .. somehow not working
 
-        /*
+      /*
         private void bu_homeOpenNewDB_Click(object sender, EventArgs e)
         {
             OpenFileDialog openfile = new OpenFileDialog();
