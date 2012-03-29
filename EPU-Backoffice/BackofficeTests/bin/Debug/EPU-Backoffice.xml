@@ -553,7 +553,7 @@
         </member>
         <member name="T:EPUBackoffice.Gui.DataBaseOpener">
             <summary>
-            TODO: Update summary.
+            This class is responsible for showing an opening window, in which an existing SQLite file can be selected.
             </summary>
         </member>
         <member name="M:EPUBackoffice.Gui.DataBaseOpener.OpenExistingDatabase(System.Object,System.EventArgs,System.Windows.Forms.Form)">

@@ -7,14 +7,12 @@
 namespace EPUBackoffice.Gui
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using System.Windows.Forms;
     using EPUBackoffice.BL;
     using EPUBackoffice.UserExceptions;
 
     /// <summary>
-    /// TODO: Update summary.
+    /// This class is responsible for showing an opening window, in which an existing SQLite file can be selected.
     /// </summary>
     public class DataBaseOpener
     {

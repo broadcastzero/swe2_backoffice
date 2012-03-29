@@ -62,7 +62,7 @@ namespace EPUBackoffice.BL
             // probably syntax error in config file - see logfile
             catch (System.Configuration.ConfigurationErrorsException)
             {
-                Environment.Exit(1);
+                Application.Exit();
             }
             
             // Open window, which one depends on whether the database has been found or not

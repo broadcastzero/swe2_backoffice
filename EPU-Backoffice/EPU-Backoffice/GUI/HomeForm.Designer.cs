@@ -1165,6 +1165,7 @@
             this.Controls.Add(this.mainTab);
             this.Name = "HomeForm";
             this.Text = "EPU Backoffice 1.0";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
             this.mainTab.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
             this.homeTab.PerformLayout();

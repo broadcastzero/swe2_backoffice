@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Windows.Forms;
 using EPUBackoffice.BL;
@@ -109,6 +109,11 @@ namespace EPUBackoffice.Gui
             //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
             DataBaseOpener db_opener = new DataBaseOpener();
             db_opener.OpenExistingDatabase(sender, e, this);
+        }
+
+        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
