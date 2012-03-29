@@ -107,8 +107,8 @@ namespace EPUBackoffice.Gui
         private void bu_homeOpenNewDB_Click(object sender, EventArgs e)
         {
             //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
-            DBNotFoundForm dbForm = new DBNotFoundForm();
-            dbForm.OpenExistingDatabase(sender, e, this);
+            DataBaseOpener db_opener = new DataBaseOpener();
+            db_opener.OpenExistingDatabase(sender, e, this);
         }
     }
 }

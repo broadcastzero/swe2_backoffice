@@ -118,14 +118,6 @@
             <param name="sender">The calling object</param>
             <param name="e">Additional event arguments</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.OpenExistingDatabase(System.Object,System.EventArgs,System.Windows.Forms.Form)">
-            <summary>
-            Opens an existing database.
-            </summary>
-            <param name="sender">The element (button) which has called this function.</param>
-            <param name="e">Event arguments</param>
-            <param name="sendingForm">The form in which the sending element (button) was placed.</param>
-        </member>
         <member name="F:EPUBackoffice.Gui.DBNotFoundForm.components">
             <summary>
             Required designer variable.
@@ -558,6 +550,19 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:EPUBackoffice.Gui.DataBaseOpener">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.DataBaseOpener.OpenExistingDatabase(System.Object,System.EventArgs,System.Windows.Forms.Form)">
+            <summary>
+            Opens an existing database.
+            </summary>
+            <param name="sender">The element (button) which has called this function.</param>
+            <param name="e">Event arguments</param>
+            <param name="sendingForm">The form in which the sending element (button) was placed.</param>
         </member>
     </members>
 </doc>

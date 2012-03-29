@@ -99,9 +99,8 @@ namespace EPUBackoffice.BL
         /// <param name="sender">The calling form</param>
         private void ChangeToHomeScreen(Form sender)
         {
-            System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(OpenHomeScreen));
-            sender.Close();
-            t.Start();
+            sender.Hide();
+            this.OpenHomeScreen();
         }
 
         /// <summary>
@@ -110,7 +109,8 @@ namespace EPUBackoffice.BL
         private void OpenHomeScreen()
         {
             this.logger.Log(0, "Open HomeForm");
-            Application.Run(new HomeForm());
+            HomeForm hf = new HomeForm();
+            hf.Show();
         }
     }
 }

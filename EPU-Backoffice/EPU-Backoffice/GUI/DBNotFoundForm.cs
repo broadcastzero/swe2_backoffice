@@ -59,37 +59,8 @@
         /// <param name="e">Additional event arguments</param>
         private void chooseButton_Click(Object sender, EventArgs e)
         {
-            this.OpenExistingDatabase(sender, e, this);
-        }
-
-        /// <summary>
-        /// Opens an existing database.
-        /// </summary>
-        /// <param name="sender">The element (button) which has called this function.</param>
-        /// <param name="e">Event arguments</param>
-        /// <param name="sendingForm">The form in which the sending element (button) was placed.</param>
-        public void OpenExistingDatabase(Object sender, EventArgs e, Form sendingForm)
-        {
-            OpenFileDialog openfile = new OpenFileDialog();
-            openfile.Title = "Vorhandene Datenbank öffnen";
-            openfile.Filter = "SQLite files (*.db)|*.db";
-            openfile.RestoreDirectory = true;
-
-            if (openfile.ShowDialog() == DialogResult.OK)
-            {
-                string path = openfile.FileName.ToString();
-
-                DatabaseConnector creator = new DatabaseConnector();
-
-                try
-                {
-                    creator.Connect(sender, path, sendingForm);
-                }
-                catch (InvalidFileException ex)
-                {
-                    MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DataBaseOpener db_opener = new DataBaseOpener();
+            db_opener.OpenExistingDatabase(sender, e, this);
         }
 
         private void quitButton_Click(object sender, EventArgs e)

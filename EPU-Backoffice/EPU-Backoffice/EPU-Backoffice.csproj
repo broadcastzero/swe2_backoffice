@@ -71,6 +71,7 @@
     <Compile Include="Dal\DataBaseManager.cs" />
     <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
     <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
+    <Compile Include="Gui\DataBaseOpener.cs" />
     <Compile Include="Gui\TableControl.cs">
       <SubType>Component</SubType>
     </Compile>
