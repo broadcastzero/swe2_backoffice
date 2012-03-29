@@ -50,7 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bu_kundenNeuReset = new System.Windows.Forms.Button();
-            this.bu_kundenNeuSave = new System.Windows.Forms.Button();
+            this.kundenNeuSaveButton = new System.Windows.Forms.Button();
             this.ra_kundenNeuKontakt = new System.Windows.Forms.RadioButton();
             this.ra_kundenNeuKunde = new System.Windows.Forms.RadioButton();
             this.tb_kundenNeuNachname = new System.Windows.Forms.TextBox();
@@ -345,7 +345,7 @@
             this.kundenTabCreate.Controls.Add(this.label2);
             this.kundenTabCreate.Controls.Add(this.label1);
             this.kundenTabCreate.Controls.Add(this.bu_kundenNeuReset);
-            this.kundenTabCreate.Controls.Add(this.bu_kundenNeuSave);
+            this.kundenTabCreate.Controls.Add(this.kundenNeuSaveButton);
             this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKontakt);
             this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKunde);
             this.kundenTabCreate.Controls.Add(this.tb_kundenNeuNachname);
@@ -384,14 +384,14 @@
             this.bu_kundenNeuReset.Text = "Felder zurücksetzen";
             this.bu_kundenNeuReset.UseVisualStyleBackColor = true;
             // 
-            // bu_kundenNeuSave
+            // kundenNeuSaveButton
             // 
-            this.bu_kundenNeuSave.Location = new System.Drawing.Point(187, 95);
-            this.bu_kundenNeuSave.Name = "bu_kundenNeuSave";
-            this.bu_kundenNeuSave.Size = new System.Drawing.Size(134, 23);
-            this.bu_kundenNeuSave.TabIndex = 4;
-            this.bu_kundenNeuSave.Text = "Speichern";
-            this.bu_kundenNeuSave.UseVisualStyleBackColor = true;
+            this.kundenNeuSaveButton.Location = new System.Drawing.Point(187, 95);
+            this.kundenNeuSaveButton.Name = "kundenNeuSaveButton";
+            this.kundenNeuSaveButton.Size = new System.Drawing.Size(134, 23);
+            this.kundenNeuSaveButton.TabIndex = 4;
+            this.kundenNeuSaveButton.Text = "Speichern";
+            this.kundenNeuSaveButton.UseVisualStyleBackColor = true;
             // 
             // ra_kundenNeuKontakt
             // 
@@ -1008,23 +1008,23 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(747, 233);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(747, 233);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // projektTab
             // 
@@ -1049,23 +1049,23 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(747, 233);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(747, 233);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // zeitTab
             // 
@@ -1090,23 +1090,23 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(747, 233);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(747, 233);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "tabPage6";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // reportTab
             // 
@@ -1131,23 +1131,23 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(747, 233);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // tabPage8
             // 
+            this.tabPage8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(747, 233);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
-            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 
@@ -1233,7 +1233,7 @@
         private System.Windows.Forms.Button beendenButton;
         private System.Windows.Forms.Button projektverwaltungButton;
         private System.Windows.Forms.Button bu_kundenNeuReset;
-        private System.Windows.Forms.Button bu_kundenNeuSave;
+        private System.Windows.Forms.Button kundenNeuSaveButton;
         private System.Windows.Forms.RadioButton ra_kundenNeuKontakt;
         private System.Windows.Forms.RadioButton ra_kundenNeuKunde;
         private System.Windows.Forms.TextBox tb_kundenNeuNachname;
