@@ -32,12 +32,13 @@ namespace EPUBackoffice.BL
         /// <param name="path">The name of the to-be-created database file.</param>
         public void Create(Form sender, string path)
         {
-            this.logger.Log(0, "Filename from userinput: " + path);
+            this.logger.Log(0, "User wants to create new database - filename from userinput: " + path);
 
             // add .db, if not already done
             if (!path.EndsWith(".db"))
             {
                 path += ".db";
+                this.logger.Log(1, "No extension .db found. Added by application.");
             }
 
             try
@@ -68,8 +69,9 @@ namespace EPUBackoffice.BL
         /// <returns>True, if database exists.</returns>
         /// <param name="sender">The caller of this method.</param>
         /// <param name="path">The path of the SQLite file</param>
+        /// <param name="sendingForm">The form in which the sending element (button) was placed.</param>
         /// <exception cref="InvalidFileException">Thrown if chosen file is invalid.</exception>
-        public void Connect(Form sender, string path)
+        public void Connect(Object sender, string path, Form sendingForm)
         {
             ConfigFileManager cfm = new ConfigFileManager();
             bool exists = cfm.CheckDataBaseExistance(path);
@@ -82,7 +84,12 @@ namespace EPUBackoffice.BL
             else
             {
                 cfm.SetDatabasePath(path);
-                this.ChangeToHomeScreen(sender);
+
+                // only when sender was DBNotFoundForm, not when sender is HomeForm!
+                if (sendingForm.Name != "HomeForm")
+                {
+                    this.ChangeToHomeScreen(sendingForm);
+                }
             }
         }
 

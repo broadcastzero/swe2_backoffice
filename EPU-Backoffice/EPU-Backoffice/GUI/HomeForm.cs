@@ -74,42 +74,12 @@ namespace EPUBackoffice.Gui
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ra_kundenNeuKunde_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void bu_kundenNeuSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bu_kundenNeuReset_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bu_kundenSearchAendern_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click_1(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -124,61 +94,21 @@ namespace EPUBackoffice.Gui
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Öffnung einer neuen Datenbank .. somehow not working
-
-      /*
+        /// <summary>
+        /// Catches the event, when the user clicks on the "open existing database"-button.
+        /// </summary>
+        /// <param name="sender">The calling object</param>
+        /// <param name="e">Additional event arguments</param>
         private void bu_homeOpenNewDB_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openfile = new OpenFileDialog();
-            openfile.Title = "Vorhandene Datenbank öffnen";
-            openfile.Filter = "SQLite files (*.db)|*.db";
-            openfile.RestoreDirectory = true;
-
-            if (openfile.ShowDialog() == DialogResult.OK)
-            {
-                string path = openfile.FileName.ToString();
-
-                DatabaseConnector creator = new DatabaseConnector();
-
-                try
-                {
-                    creator.Connect(this, path);
-                }
-                catch (InvalidFileException ex)
-                {
-                    MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }*/
+            //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
+            DBNotFoundForm dbForm = new DBNotFoundForm();
+            dbForm.OpenExistingDatabase(sender, e, this);
+        }
     }
 }

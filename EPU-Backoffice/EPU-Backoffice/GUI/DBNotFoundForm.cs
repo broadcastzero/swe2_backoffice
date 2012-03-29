@@ -53,11 +53,22 @@
         }
 
         /// <summary>
-        /// Catches the event, when the user clicks on the "open existing database"-button.
+        /// Catches the event, when the user clicks on the "open existing database"-button and forwards to DBNotFoundForm.OpenExistingDatabase()
         /// </summary>
         /// <param name="sender">The calling object</param>
         /// <param name="e">Additional event arguments</param>
-        private void chooseButton_Click(object sender, EventArgs e)
+        private void chooseButton_Click(Object sender, EventArgs e)
+        {
+            this.OpenExistingDatabase(sender, e, this);
+        }
+
+        /// <summary>
+        /// Opens an existing database.
+        /// </summary>
+        /// <param name="sender">The element (button) which has called this function.</param>
+        /// <param name="e">Event arguments</param>
+        /// <param name="sendingForm">The form in which the sending element (button) was placed.</param>
+        public void OpenExistingDatabase(Object sender, EventArgs e, Form sendingForm)
         {
             OpenFileDialog openfile = new OpenFileDialog();
             openfile.Title = "Vorhandene Datenbank öffnen";
@@ -67,18 +78,18 @@
             if (openfile.ShowDialog() == DialogResult.OK)
             {
                 string path = openfile.FileName.ToString();
-            
+
                 DatabaseConnector creator = new DatabaseConnector();
 
                 try
                 {
-                    creator.Connect(this, path);
+                    creator.Connect(sender, path, sendingForm);
                 }
-                catch(InvalidFileException ex)
+                catch (InvalidFileException ex)
                 {
                     MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }            
+            }
         }
 
         private void quitButton_Click(object sender, EventArgs e)
