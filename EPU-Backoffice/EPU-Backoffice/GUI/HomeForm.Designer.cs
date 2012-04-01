@@ -283,6 +283,7 @@
             // 
             // homeCurrentDBLabel
             // 
+            this.homeCurrentDBLabel.AccessibleName = "homeCurrentDBLabel";
             this.homeCurrentDBLabel.AutoSize = true;
             this.homeCurrentDBLabel.Location = new System.Drawing.Point(3, 3);
             this.homeCurrentDBLabel.Name = "homeCurrentDBLabel";

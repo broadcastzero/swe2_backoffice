@@ -22,6 +22,10 @@ namespace EPUBackoffice.Gui
         public HomeForm()
         {
             InitializeComponent();
+            // set win title and label within "Home" subwindow to the currently opened database
+            this.homeCurrentDBLabel.Text = ConfigFileManager.dbName;
+            this.Text += " - ";
+            this.Text += ConfigFileManager.dbName;
         }
 
         /* Event handling for buttons */
@@ -109,6 +113,11 @@ namespace EPUBackoffice.Gui
             //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
             DataBaseOpener db_opener = new DataBaseOpener();
             db_opener.OpenExistingDatabase(sender, e, this);
+
+            // Update title bar and text within "Home" subwindow
+            this.Text = "EPU Backoffice 1.0 - ";
+            this.Text += ConfigFileManager.dbName;
+            this.homeCurrentDBLabel.Text = ConfigFileManager.dbName;
         }
 
         private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)

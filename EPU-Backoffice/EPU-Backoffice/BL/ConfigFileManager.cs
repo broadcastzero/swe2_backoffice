@@ -25,6 +25,11 @@ namespace EPUBackoffice.BL
         private ConnectionStringSettings connect_settings;
 
         /// <summary>
+        /// The name of the currently opened database
+        /// </summary>
+        public static string dbName { get; set; }
+
+        /// <summary>
         /// A reference to the logger.
         /// </summary>
         private Logger logger = Logger.Instance;
@@ -60,8 +65,9 @@ namespace EPUBackoffice.BL
 
                 this.logger.Log(0, "Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
 
-                // save connection string in static var
+                // save connection string and database name in static var
                 ConfigFileManager.connectionString = this.connect_settings.ConnectionString;
+                ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\')+1);
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
