@@ -23,7 +23,7 @@ namespace EPUBackoffice.Dal
         /// <returns></returns>
         public static IDAL GetDAL()
         {
-            if (ConfigFileManager.mockDB == true)
+            if (ConfigFileManager.mockDB == false)
             {
                 return new DataBaseManager();
             }

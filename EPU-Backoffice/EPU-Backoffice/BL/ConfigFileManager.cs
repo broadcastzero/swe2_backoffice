@@ -135,7 +135,17 @@ namespace EPUBackoffice.BL
             this.logger.Log(0, "Saved path of database in config file: " + path);
 
             // check if path exists in file system
-            return CheckDataBaseExistance(path) == true ? true : false;
+            bool exists = this.CheckDataBaseExistance(path);
+            if (exists == true)
+            {
+                // save connection string and database name in static var
+                ConfigFileManager.connectionString = this.connect_settings.ConnectionString;
+                ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\') + 1);
+
+                return true;
+            }
+            else { return false; }
+            //return CheckDataBaseExistance(path) == true ? true : false;
         }
 
         /// <summary>
