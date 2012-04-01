@@ -311,6 +311,20 @@
             <param name="sender">The calling object</param>
             <param name="e">Additional event arguments</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.newKundeResetButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Clear textblocks in which a new Kunde or Kontakt can be created
+            </summary>
+            <param name="sender">object sender</param>
+            <param name="e">Event args</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.createKundeButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            Get values of GUI elements and send them to the business layer, they shall be stored in the database.
+            </summary>
+            <param name="sender">object sender</param>
+            <param name="e">EventArgs</param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.
@@ -504,6 +518,14 @@
             This method is responsible for creating a new (mock) database with all its needed tables
             </summary>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.SaveNewKunde(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves a new Kunde or Kontakt to the database.
+            </summary>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+        </member>
         <member name="T:EPUBackoffice.Dal.MockDataBaseManager">
             <summary>
             This class manages the mock database.
@@ -513,6 +535,14 @@
             <summary>
             This method initializes the classes needed to create a mock database
             </summary>
+        </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.SaveNewKunde(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves a new Kunde or Kontakt to the mock database
+            </summary>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.AusgangsrechnungTable">
             <summary>
@@ -554,6 +584,14 @@
             Connects to the database and creates its tables if they do not exist yet.
             </summary>
         </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SaveNewKunde(System.String,System.Boolean,System.String)">
+            <summary>
+            Saves a new Kunde or Kontakt to the database
+            </summary>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.KategorienTable">
             <summary>
             A class for the database table "Bankkonto" with its attributes
@@ -568,6 +606,19 @@
             <summary>
             Foreign key to table Kunde
             </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.GuiDataValidator">
+            <summary>
+            Checks data from the GUI and forwards it to the database where it is saved.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.GuiDataValidator.saveNewKunde(System.String,System.String,System.Boolean)">
+            <summary>
+            Saves a new Kunde or Kontakt to the database.
+            </summary>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
     </members>
 </doc>

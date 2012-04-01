@@ -124,5 +124,37 @@ namespace EPUBackoffice.Gui
         {
             Process.GetCurrentProcess().Kill();
         }
+
+        /// <summary>
+        /// Clear textblocks in which a new Kunde or Kontakt can be created
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e">Event args</param>
+        private void newKundeResetButton_Click(object sender, EventArgs e)
+        {
+            this.createKundeVornameTextBlock.Clear();
+            this.createKundeNachnameTextBlock.Clear();
+        }
+
+        /// <summary>
+        /// Get values of GUI elements and send them to the business layer, they shall be stored in the database.
+        /// </summary>
+        /// <param name="sender">object sender</param>
+        /// <param name="e">EventArgs</param>
+        private void createKundeButton_Click(object sender, EventArgs e)
+        {
+            GuiDataValidator validator = new GuiDataValidator();
+            // bool type: false -> Kunde, true -> Kontakt
+            bool type = this.createKontaktRadioButton.Checked;
+            try
+            {
+                validator.saveNewKunde(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
+                // show user that everything went fine
+            }
+            catch(Exception ex) // TODO: add own exception here
+            {
+                // show user that something went wrong
+            }
+        }
     }
 }

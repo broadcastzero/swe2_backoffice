@@ -384,6 +384,7 @@
             this.newKundeResetButton.TabIndex = 5;
             this.newKundeResetButton.Text = "Felder zurücksetzen";
             this.newKundeResetButton.UseVisualStyleBackColor = true;
+            this.newKundeResetButton.Click += new System.EventHandler(this.newKundeResetButton_Click);
             // 
             // createKundeButton
             // 
@@ -393,6 +394,7 @@
             this.createKundeButton.TabIndex = 4;
             this.createKundeButton.Text = "Speichern";
             this.createKundeButton.UseVisualStyleBackColor = true;
+            this.createKundeButton.Click += new System.EventHandler(this.createKundeButton_Click);
             // 
             // createKontaktRadioButton
             // 
@@ -408,6 +410,7 @@
             // createKundeRadioButton
             // 
             this.createKundeRadioButton.AutoSize = true;
+            this.createKundeRadioButton.Checked = true;
             this.createKundeRadioButton.Location = new System.Drawing.Point(24, 101);
             this.createKundeRadioButton.Name = "createKundeRadioButton";
             this.createKundeRadioButton.Size = new System.Drawing.Size(56, 17);

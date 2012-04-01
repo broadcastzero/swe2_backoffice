@@ -74,5 +74,20 @@ namespace EPUBackoffice.Dal
 
             this.logger.Log(0, "A new database has been created.");
         }
+
+        /// <summary>
+        /// Saves a new Kunde or Kontakt to the database
+        /// </summary>
+        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
+        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
+        public void SaveNewKunde(string lastname, bool type, string firstname = "<null>")
+        {
+            string s_type;
+            if(type == false) { s_type = "Kunde"; }
+            else{ s_type = "Kontakt"; }
+
+            this.logger.Log(0, "A new " + s_type + " has been saved to the database: " + firstname + " " + lastname);
+        }
     }
 }

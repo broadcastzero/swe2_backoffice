@@ -25,5 +25,16 @@ namespace EPUBackoffice.Dal
             //TODO: create instance of tables and store some mock data
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Saves a new Kunde or Kontakt to the mock database
+        /// </summary>
+        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
+        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
+        public void SaveNewKunde(string lastname, bool type, string firstname)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

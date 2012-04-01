@@ -20,5 +20,13 @@ namespace EPUBackoffice.Dal
         /// This method is responsible for creating a new (mock) database with all its needed tables
         /// </summary>
         void CreateDataBase();
+
+        /// <summary>
+        /// Saves a new Kunde or Kontakt to the database.
+        /// </summary>
+        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
+        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
+        void SaveNewKunde(string lastname, bool type, string firstname="<null>");
     }
 }
