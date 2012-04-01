@@ -49,20 +49,20 @@
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bu_kundenNeuReset = new System.Windows.Forms.Button();
-            this.kundenNeuSaveButton = new System.Windows.Forms.Button();
-            this.ra_kundenNeuKontakt = new System.Windows.Forms.RadioButton();
-            this.ra_kundenNeuKunde = new System.Windows.Forms.RadioButton();
-            this.tb_kundenNeuNachname = new System.Windows.Forms.TextBox();
-            this.tb_kundenNeuVorname = new System.Windows.Forms.TextBox();
+            this.newKundeResetButton = new System.Windows.Forms.Button();
+            this.createKundeButton = new System.Windows.Forms.Button();
+            this.createKontaktRadioButton = new System.Windows.Forms.RadioButton();
+            this.createKundeRadioButton = new System.Windows.Forms.RadioButton();
+            this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
+            this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
             this.dg_kundenSearch = new System.Windows.Forms.DataGridView();
             this.bu_kundenSearchAendern = new System.Windows.Forms.Button();
             this.bu_kundenSearchSuchen = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tb_kundenSearchNachname = new System.Windows.Forms.TextBox();
-            this.tb_kundenSearchVorname = new System.Windows.Forms.TextBox();
+            this.seachKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
+            this.searchKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.rechnungsTabControl = new System.Windows.Forms.TabControl();
             this.rechnungAusgangTab = new System.Windows.Forms.TabPage();
@@ -345,12 +345,12 @@
             this.kundenTabCreate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.kundenTabCreate.Controls.Add(this.label2);
             this.kundenTabCreate.Controls.Add(this.label1);
-            this.kundenTabCreate.Controls.Add(this.bu_kundenNeuReset);
-            this.kundenTabCreate.Controls.Add(this.kundenNeuSaveButton);
-            this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKontakt);
-            this.kundenTabCreate.Controls.Add(this.ra_kundenNeuKunde);
-            this.kundenTabCreate.Controls.Add(this.tb_kundenNeuNachname);
-            this.kundenTabCreate.Controls.Add(this.tb_kundenNeuVorname);
+            this.kundenTabCreate.Controls.Add(this.newKundeResetButton);
+            this.kundenTabCreate.Controls.Add(this.createKundeButton);
+            this.kundenTabCreate.Controls.Add(this.createKontaktRadioButton);
+            this.kundenTabCreate.Controls.Add(this.createKundeRadioButton);
+            this.kundenTabCreate.Controls.Add(this.createKundeNachnameTextBlock);
+            this.kundenTabCreate.Controls.Add(this.createKundeVornameTextBlock);
             this.kundenTabCreate.Location = new System.Drawing.Point(4, 22);
             this.kundenTabCreate.Name = "kundenTabCreate";
             this.kundenTabCreate.Padding = new System.Windows.Forms.Padding(3);
@@ -376,61 +376,61 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Vorname";
             // 
-            // bu_kundenNeuReset
+            // newKundeResetButton
             // 
-            this.bu_kundenNeuReset.Location = new System.Drawing.Point(187, 124);
-            this.bu_kundenNeuReset.Name = "bu_kundenNeuReset";
-            this.bu_kundenNeuReset.Size = new System.Drawing.Size(134, 23);
-            this.bu_kundenNeuReset.TabIndex = 5;
-            this.bu_kundenNeuReset.Text = "Felder zurücksetzen";
-            this.bu_kundenNeuReset.UseVisualStyleBackColor = true;
+            this.newKundeResetButton.Location = new System.Drawing.Point(187, 124);
+            this.newKundeResetButton.Name = "newKundeResetButton";
+            this.newKundeResetButton.Size = new System.Drawing.Size(134, 23);
+            this.newKundeResetButton.TabIndex = 5;
+            this.newKundeResetButton.Text = "Felder zurücksetzen";
+            this.newKundeResetButton.UseVisualStyleBackColor = true;
             // 
-            // kundenNeuSaveButton
+            // createKundeButton
             // 
-            this.kundenNeuSaveButton.Location = new System.Drawing.Point(187, 95);
-            this.kundenNeuSaveButton.Name = "kundenNeuSaveButton";
-            this.kundenNeuSaveButton.Size = new System.Drawing.Size(134, 23);
-            this.kundenNeuSaveButton.TabIndex = 4;
-            this.kundenNeuSaveButton.Text = "Speichern";
-            this.kundenNeuSaveButton.UseVisualStyleBackColor = true;
+            this.createKundeButton.Location = new System.Drawing.Point(187, 95);
+            this.createKundeButton.Name = "createKundeButton";
+            this.createKundeButton.Size = new System.Drawing.Size(134, 23);
+            this.createKundeButton.TabIndex = 4;
+            this.createKundeButton.Text = "Speichern";
+            this.createKundeButton.UseVisualStyleBackColor = true;
             // 
-            // ra_kundenNeuKontakt
+            // createKontaktRadioButton
             // 
-            this.ra_kundenNeuKontakt.AutoSize = true;
-            this.ra_kundenNeuKontakt.Location = new System.Drawing.Point(24, 124);
-            this.ra_kundenNeuKontakt.Name = "ra_kundenNeuKontakt";
-            this.ra_kundenNeuKontakt.Size = new System.Drawing.Size(62, 17);
-            this.ra_kundenNeuKontakt.TabIndex = 3;
-            this.ra_kundenNeuKontakt.TabStop = true;
-            this.ra_kundenNeuKontakt.Text = "Kontakt";
-            this.ra_kundenNeuKontakt.UseVisualStyleBackColor = true;
+            this.createKontaktRadioButton.AutoSize = true;
+            this.createKontaktRadioButton.Location = new System.Drawing.Point(24, 124);
+            this.createKontaktRadioButton.Name = "createKontaktRadioButton";
+            this.createKontaktRadioButton.Size = new System.Drawing.Size(62, 17);
+            this.createKontaktRadioButton.TabIndex = 3;
+            this.createKontaktRadioButton.TabStop = true;
+            this.createKontaktRadioButton.Text = "Kontakt";
+            this.createKontaktRadioButton.UseVisualStyleBackColor = true;
             // 
-            // ra_kundenNeuKunde
+            // createKundeRadioButton
             // 
-            this.ra_kundenNeuKunde.AutoSize = true;
-            this.ra_kundenNeuKunde.Location = new System.Drawing.Point(24, 101);
-            this.ra_kundenNeuKunde.Name = "ra_kundenNeuKunde";
-            this.ra_kundenNeuKunde.Size = new System.Drawing.Size(56, 17);
-            this.ra_kundenNeuKunde.TabIndex = 2;
-            this.ra_kundenNeuKunde.TabStop = true;
-            this.ra_kundenNeuKunde.Text = "Kunde";
-            this.ra_kundenNeuKunde.UseVisualStyleBackColor = true;
-            this.ra_kundenNeuKunde.CheckedChanged += new System.EventHandler(this.ra_kundenNeuKunde_CheckedChanged);
+            this.createKundeRadioButton.AutoSize = true;
+            this.createKundeRadioButton.Location = new System.Drawing.Point(24, 101);
+            this.createKundeRadioButton.Name = "createKundeRadioButton";
+            this.createKundeRadioButton.Size = new System.Drawing.Size(56, 17);
+            this.createKundeRadioButton.TabIndex = 2;
+            this.createKundeRadioButton.TabStop = true;
+            this.createKundeRadioButton.Text = "Kunde";
+            this.createKundeRadioButton.UseVisualStyleBackColor = true;
+            this.createKundeRadioButton.CheckedChanged += new System.EventHandler(this.ra_kundenNeuKunde_CheckedChanged);
             // 
-            // tb_kundenNeuNachname
+            // createKundeNachnameTextBlock
             // 
-            this.tb_kundenNeuNachname.Location = new System.Drawing.Point(24, 52);
-            this.tb_kundenNeuNachname.Name = "tb_kundenNeuNachname";
-            this.tb_kundenNeuNachname.Size = new System.Drawing.Size(297, 20);
-            this.tb_kundenNeuNachname.TabIndex = 1;
-            this.tb_kundenNeuNachname.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.createKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
+            this.createKundeNachnameTextBlock.Name = "createKundeNachnameTextBlock";
+            this.createKundeNachnameTextBlock.Size = new System.Drawing.Size(297, 20);
+            this.createKundeNachnameTextBlock.TabIndex = 1;
+            this.createKundeNachnameTextBlock.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // tb_kundenNeuVorname
+            // createKundeVornameTextBlock
             // 
-            this.tb_kundenNeuVorname.Location = new System.Drawing.Point(24, 26);
-            this.tb_kundenNeuVorname.Name = "tb_kundenNeuVorname";
-            this.tb_kundenNeuVorname.Size = new System.Drawing.Size(297, 20);
-            this.tb_kundenNeuVorname.TabIndex = 0;
+            this.createKundeVornameTextBlock.Location = new System.Drawing.Point(24, 26);
+            this.createKundeVornameTextBlock.Name = "createKundeVornameTextBlock";
+            this.createKundeVornameTextBlock.Size = new System.Drawing.Size(297, 20);
+            this.createKundeVornameTextBlock.TabIndex = 0;
             // 
             // kundenTabSearchChange
             // 
@@ -440,8 +440,8 @@
             this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchSuchen);
             this.kundenTabSearchChange.Controls.Add(this.label4);
             this.kundenTabSearchChange.Controls.Add(this.label3);
-            this.kundenTabSearchChange.Controls.Add(this.tb_kundenSearchNachname);
-            this.kundenTabSearchChange.Controls.Add(this.tb_kundenSearchVorname);
+            this.kundenTabSearchChange.Controls.Add(this.seachKundeNachnameTextBlock);
+            this.kundenTabSearchChange.Controls.Add(this.searchKundeVornameTextBlock);
             this.kundenTabSearchChange.Location = new System.Drawing.Point(4, 22);
             this.kundenTabSearchChange.Name = "kundenTabSearchChange";
             this.kundenTabSearchChange.Padding = new System.Windows.Forms.Padding(3);
@@ -494,19 +494,19 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Vorname";
             // 
-            // tb_kundenSearchNachname
+            // seachKundeNachnameTextBlock
             // 
-            this.tb_kundenSearchNachname.Location = new System.Drawing.Point(24, 52);
-            this.tb_kundenSearchNachname.Name = "tb_kundenSearchNachname";
-            this.tb_kundenSearchNachname.Size = new System.Drawing.Size(214, 20);
-            this.tb_kundenSearchNachname.TabIndex = 1;
+            this.seachKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
+            this.seachKundeNachnameTextBlock.Name = "seachKundeNachnameTextBlock";
+            this.seachKundeNachnameTextBlock.Size = new System.Drawing.Size(214, 20);
+            this.seachKundeNachnameTextBlock.TabIndex = 1;
             // 
-            // tb_kundenSearchVorname
+            // searchKundeVornameTextBlock
             // 
-            this.tb_kundenSearchVorname.Location = new System.Drawing.Point(24, 26);
-            this.tb_kundenSearchVorname.Name = "tb_kundenSearchVorname";
-            this.tb_kundenSearchVorname.Size = new System.Drawing.Size(214, 20);
-            this.tb_kundenSearchVorname.TabIndex = 0;
+            this.searchKundeVornameTextBlock.Location = new System.Drawing.Point(24, 26);
+            this.searchKundeVornameTextBlock.Name = "searchKundeVornameTextBlock";
+            this.searchKundeVornameTextBlock.Size = new System.Drawing.Size(214, 20);
+            this.searchKundeVornameTextBlock.TabIndex = 0;
             // 
             // rechnungsTab
             // 
@@ -1233,12 +1233,12 @@
         private System.Windows.Forms.Button reportsButton;
         private System.Windows.Forms.Button beendenButton;
         private System.Windows.Forms.Button projektverwaltungButton;
-        private System.Windows.Forms.Button bu_kundenNeuReset;
-        private System.Windows.Forms.Button kundenNeuSaveButton;
-        private System.Windows.Forms.RadioButton ra_kundenNeuKontakt;
-        private System.Windows.Forms.RadioButton ra_kundenNeuKunde;
-        private System.Windows.Forms.TextBox tb_kundenNeuNachname;
-        private System.Windows.Forms.TextBox tb_kundenNeuVorname;
+        private System.Windows.Forms.Button newKundeResetButton;
+        private System.Windows.Forms.Button createKundeButton;
+        private System.Windows.Forms.RadioButton createKontaktRadioButton;
+        private System.Windows.Forms.RadioButton createKundeRadioButton;
+        private System.Windows.Forms.TextBox createKundeNachnameTextBlock;
+        private System.Windows.Forms.TextBox createKundeVornameTextBlock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dg_kundenSearch;
@@ -1246,8 +1246,8 @@
         private System.Windows.Forms.Button bu_kundenSearchSuchen;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_kundenSearchNachname;
-        private System.Windows.Forms.TextBox tb_kundenSearchVorname;
+        private System.Windows.Forms.TextBox seachKundeNachnameTextBlock;
+        private System.Windows.Forms.TextBox searchKundeVornameTextBlock;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

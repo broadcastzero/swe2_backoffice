@@ -452,3 +452,8 @@
 01.04.2012 - 16:28 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db has been stored in config file.
 01.04.2012 - 16:28 Info: A new database has been created.
 01.04.2012 - 16:28 Info: Open HomeForm
+01.04.2012 - 16:33 Info: -----------------------------------------------------------
+01.04.2012 - 16:33 Info: Program is started.
+01.04.2012 - 16:33 Info: Using SQLite database.
+01.04.2012 - 16:33 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+01.04.2012 - 16:33 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
