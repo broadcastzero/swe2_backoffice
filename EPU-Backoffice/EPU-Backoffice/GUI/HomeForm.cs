@@ -76,27 +76,7 @@ namespace EPUBackoffice.Gui
             {
                 Application.Exit();
             }
-        }
-
-        private void ra_kundenNeuKunde_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }      
 
         private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
         {
