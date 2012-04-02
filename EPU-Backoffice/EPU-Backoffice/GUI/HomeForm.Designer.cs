@@ -114,28 +114,18 @@
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.angeboteTab = new System.Windows.Forms.TabPage();
-            this.projektTab = new System.Windows.Forms.TabPage();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.zeitTab = new System.Windows.Forms.TabPage();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.reportTab = new System.Windows.Forms.TabPage();
-            this.tabControl6 = new System.Windows.Forms.TabControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.angebotErstellenTab = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.angebotTab = new System.Windows.Forms.TabControl();
+            this.angebotErstellenTab = new System.Windows.Forms.TabPage();
+            this.angebotErstellenNProjektButton = new System.Windows.Forms.Button();
+            this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
+            this.angebotErstellenBKundeButton = new System.Windows.Forms.Button();
+            this.angebotErstellenBProjektButton = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.angebotErstellenProjektCheckbox = new System.Windows.Forms.CheckBox();
-            this.angebotErstellenKundeCheckbox = new System.Windows.Forms.CheckBox();
             this.angebotErstellenSubTab = new TablessControl();
             this.angebotErstellenNKNPTab = new System.Windows.Forms.TabPage();
             this.angeboteErstellenNKNPKontaktRadiobutton = new System.Windows.Forms.RadioButton();
@@ -146,7 +136,7 @@
             this.angebotErstellenNKNPProjektTextbox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKNPNachnameTextbox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKNPVornametextbox = new System.Windows.Forms.TextBox();
-            this.angebotErstellenBKBP = new System.Windows.Forms.TabPage();
+            this.angebotErstellenBKBPTab = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -179,6 +169,18 @@
             this.angebotSuchenProjektnameTextbox = new System.Windows.Forms.TextBox();
             this.angebotSuchenNachnameTextbox = new System.Windows.Forms.TextBox();
             this.angebotSuchenVornameTextbox = new System.Windows.Forms.TextBox();
+            this.projektTab = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.zeitTab = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.reportTab = new System.Windows.Forms.TabPage();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -199,21 +201,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.rechnungUmsatzTab.SuspendLayout();
             this.angeboteTab.SuspendLayout();
+            this.angebotTab.SuspendLayout();
+            this.angebotErstellenTab.SuspendLayout();
+            this.angebotErstellenSubTab.SuspendLayout();
+            this.angebotErstellenNKNPTab.SuspendLayout();
+            this.angebotErstellenBKBPTab.SuspendLayout();
+            this.angebotErstellenNKBPTab.SuspendLayout();
+            this.angebotErstellenBKNPTab.SuspendLayout();
+            this.angebotSuchenTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.projektTab.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.zeitTab.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.reportTab.SuspendLayout();
             this.tabControl6.SuspendLayout();
-            this.angebotErstellenTab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.angebotErstellenSubTab.SuspendLayout();
-            this.angebotErstellenNKNPTab.SuspendLayout();
-            this.angebotErstellenBKBP.SuspendLayout();
-            this.angebotErstellenNKBPTab.SuspendLayout();
-            this.angebotErstellenBKNPTab.SuspendLayout();
-            this.angebotSuchenTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -1048,7 +1050,7 @@
             // angeboteTab
             // 
             this.angeboteTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.angeboteTab.Controls.Add(this.angebotErstellenTab);
+            this.angeboteTab.Controls.Add(this.angebotTab);
             this.angeboteTab.Location = new System.Drawing.Point(34, 4);
             this.angeboteTab.Name = "angeboteTab";
             this.angeboteTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1056,162 +1058,83 @@
             this.angeboteTab.TabIndex = 4;
             this.angeboteTab.Text = "Angebot";
             // 
-            // projektTab
+            // angebotTab
             // 
-            this.projektTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.projektTab.Controls.Add(this.tabControl4);
-            this.projektTab.Location = new System.Drawing.Point(34, 4);
-            this.projektTab.Name = "projektTab";
-            this.projektTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projektTab.Size = new System.Drawing.Size(751, 255);
-            this.projektTab.TabIndex = 5;
-            this.projektTab.Text = "Projekt";
-            // 
-            // tabControl4
-            // 
-            this.tabControl4.Controls.Add(this.tabPage3);
-            this.tabControl4.Controls.Add(this.tabPage4);
-            this.tabControl4.Location = new System.Drawing.Point(0, 0);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(755, 259);
-            this.tabControl4.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 233);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(747, 233);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            // 
-            // zeitTab
-            // 
-            this.zeitTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.zeitTab.Controls.Add(this.tabControl5);
-            this.zeitTab.Location = new System.Drawing.Point(34, 4);
-            this.zeitTab.Name = "zeitTab";
-            this.zeitTab.Padding = new System.Windows.Forms.Padding(3);
-            this.zeitTab.Size = new System.Drawing.Size(751, 255);
-            this.zeitTab.TabIndex = 6;
-            this.zeitTab.Text = "Zeit";
-            // 
-            // tabControl5
-            // 
-            this.tabControl5.Controls.Add(this.tabPage5);
-            this.tabControl5.Controls.Add(this.tabPage6);
-            this.tabControl5.Location = new System.Drawing.Point(0, 0);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(755, 259);
-            this.tabControl5.TabIndex = 0;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(747, 233);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "tabPage5";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(747, 233);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "tabPage6";
-            // 
-            // reportTab
-            // 
-            this.reportTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.reportTab.Controls.Add(this.tabControl6);
-            this.reportTab.Location = new System.Drawing.Point(34, 4);
-            this.reportTab.Name = "reportTab";
-            this.reportTab.Padding = new System.Windows.Forms.Padding(3);
-            this.reportTab.Size = new System.Drawing.Size(751, 255);
-            this.reportTab.TabIndex = 7;
-            this.reportTab.Text = "Report";
-            // 
-            // tabControl6
-            // 
-            this.tabControl6.Controls.Add(this.tabPage7);
-            this.tabControl6.Controls.Add(this.tabPage8);
-            this.tabControl6.Location = new System.Drawing.Point(0, 0);
-            this.tabControl6.Name = "tabControl6";
-            this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(755, 259);
-            this.tabControl6.TabIndex = 0;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(747, 233);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "tabPage7";
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(747, 233);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "tabPage8";
+            this.angebotTab.Controls.Add(this.angebotErstellenTab);
+            this.angebotTab.Controls.Add(this.angebotSuchenTab);
+            this.angebotTab.Location = new System.Drawing.Point(-2, -2);
+            this.angebotTab.Name = "angebotTab";
+            this.angebotTab.SelectedIndex = 0;
+            this.angebotTab.Size = new System.Drawing.Size(755, 259);
+            this.angebotTab.TabIndex = 2;
             // 
             // angebotErstellenTab
             // 
-            this.angebotErstellenTab.Controls.Add(this.tabPage1);
-            this.angebotErstellenTab.Controls.Add(this.angebotSuchenTab);
-            this.angebotErstellenTab.Location = new System.Drawing.Point(-2, -2);
+            this.angebotErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenNProjektButton);
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenBProjektButton);
+            this.angebotErstellenTab.Controls.Add(this.label35);
+            this.angebotErstellenTab.Controls.Add(this.label34);
+            this.angebotErstellenTab.Controls.Add(this.label33);
+            this.angebotErstellenTab.Controls.Add(this.dateTimePicker6);
+            this.angebotErstellenTab.Controls.Add(this.textBox11);
+            this.angebotErstellenTab.Controls.Add(this.textBox10);
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenSubTab);
+            this.angebotErstellenTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenTab.Name = "angebotErstellenTab";
-            this.angebotErstellenTab.SelectedIndex = 0;
-            this.angebotErstellenTab.Size = new System.Drawing.Size(755, 259);
-            this.angebotErstellenTab.TabIndex = 2;
+            this.angebotErstellenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.angebotErstellenTab.Size = new System.Drawing.Size(747, 233);
+            this.angebotErstellenTab.TabIndex = 0;
+            this.angebotErstellenTab.Text = "Erstellen";
             // 
-            // tabPage1
+            // angebotErstellenNProjektButton
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.Controls.Add(this.label35);
-            this.tabPage1.Controls.Add(this.label34);
-            this.tabPage1.Controls.Add(this.label33);
-            this.tabPage1.Controls.Add(this.dateTimePicker6);
-            this.tabPage1.Controls.Add(this.textBox11);
-            this.tabPage1.Controls.Add(this.textBox10);
-            this.tabPage1.Controls.Add(this.angebotErstellenProjektCheckbox);
-            this.tabPage1.Controls.Add(this.angebotErstellenKundeCheckbox);
-            this.tabPage1.Controls.Add(this.angebotErstellenSubTab);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(747, 233);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Erstellen";
+            this.angebotErstellenNProjektButton.Location = new System.Drawing.Point(6, 35);
+            this.angebotErstellenNProjektButton.Name = "angebotErstellenNProjektButton";
+            this.angebotErstellenNProjektButton.Size = new System.Drawing.Size(131, 23);
+            this.angebotErstellenNProjektButton.TabIndex = 13;
+            this.angebotErstellenNProjektButton.Text = "Neues Projekt";
+            this.angebotErstellenNProjektButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenNProjektButton.Visible = false;
+            this.angebotErstellenNProjektButton.Click += new System.EventHandler(this.angebotErstellenNProjektButton_Click);
+            // 
+            // angebotErstellenNKundeButton
+            // 
+            this.angebotErstellenNKundeButton.Location = new System.Drawing.Point(6, 6);
+            this.angebotErstellenNKundeButton.Name = "angebotErstellenNKundeButton";
+            this.angebotErstellenNKundeButton.Size = new System.Drawing.Size(131, 23);
+            this.angebotErstellenNKundeButton.TabIndex = 12;
+            this.angebotErstellenNKundeButton.Text = "Neuer Kunde";
+            this.angebotErstellenNKundeButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenNKundeButton.Visible = false;
+            this.angebotErstellenNKundeButton.Click += new System.EventHandler(this.angebotErstellenNKundeButton_Click);
+            // 
+            // angebotErstellenBKundeButton
+            // 
+            this.angebotErstellenBKundeButton.Location = new System.Drawing.Point(6, 6);
+            this.angebotErstellenBKundeButton.Name = "angebotErstellenBKundeButton";
+            this.angebotErstellenBKundeButton.Size = new System.Drawing.Size(131, 23);
+            this.angebotErstellenBKundeButton.TabIndex = 11;
+            this.angebotErstellenBKundeButton.Text = "Bestehender Kunde";
+            this.angebotErstellenBKundeButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenBKundeButton.Click += new System.EventHandler(this.angebotErstellenBKundeButton_Click);
+            // 
+            // angebotErstellenBProjektButton
+            // 
+            this.angebotErstellenBProjektButton.Location = new System.Drawing.Point(6, 35);
+            this.angebotErstellenBProjektButton.Name = "angebotErstellenBProjektButton";
+            this.angebotErstellenBProjektButton.Size = new System.Drawing.Size(131, 23);
+            this.angebotErstellenBProjektButton.TabIndex = 10;
+            this.angebotErstellenBProjektButton.Text = "Bestehendes Projekt";
+            this.angebotErstellenBProjektButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenBProjektButton.Click += new System.EventHandler(this.angebotErstellenBProjektButton_Click);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(359, 162);
+            this.label35.Location = new System.Drawing.Point(356, 139);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(152, 13);
             this.label35.TabIndex = 8;
@@ -1220,7 +1143,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(359, 138);
+            this.label34.Location = new System.Drawing.Point(356, 115);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(91, 13);
             this.label34.TabIndex = 7;
@@ -1229,7 +1152,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(359, 110);
+            this.label33.Location = new System.Drawing.Point(356, 87);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(85, 13);
             this.label33.TabIndex = 6;
@@ -1237,49 +1160,29 @@
             // 
             // dateTimePicker6
             // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(153, 133);
+            this.dateTimePicker6.Location = new System.Drawing.Point(150, 110);
             this.dateTimePicker6.Name = "dateTimePicker6";
             this.dateTimePicker6.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker6.TabIndex = 5;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(153, 159);
+            this.textBox11.Location = new System.Drawing.Point(150, 136);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(200, 20);
             this.textBox11.TabIndex = 4;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(153, 107);
+            this.textBox10.Location = new System.Drawing.Point(150, 84);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(200, 20);
             this.textBox10.TabIndex = 3;
             // 
-            // angebotErstellenProjektCheckbox
-            // 
-            this.angebotErstellenProjektCheckbox.AutoSize = true;
-            this.angebotErstellenProjektCheckbox.Location = new System.Drawing.Point(17, 48);
-            this.angebotErstellenProjektCheckbox.Name = "angebotErstellenProjektCheckbox";
-            this.angebotErstellenProjektCheckbox.Size = new System.Drawing.Size(124, 17);
-            this.angebotErstellenProjektCheckbox.TabIndex = 2;
-            this.angebotErstellenProjektCheckbox.Text = "Bestehendes Projekt";
-            this.angebotErstellenProjektCheckbox.UseVisualStyleBackColor = true;
-            // 
-            // angebotErstellenKundeCheckbox
-            // 
-            this.angebotErstellenKundeCheckbox.AutoSize = true;
-            this.angebotErstellenKundeCheckbox.Location = new System.Drawing.Point(17, 22);
-            this.angebotErstellenKundeCheckbox.Name = "angebotErstellenKundeCheckbox";
-            this.angebotErstellenKundeCheckbox.Size = new System.Drawing.Size(120, 17);
-            this.angebotErstellenKundeCheckbox.TabIndex = 1;
-            this.angebotErstellenKundeCheckbox.Text = "Bestehender Kunde";
-            this.angebotErstellenKundeCheckbox.UseVisualStyleBackColor = true;
-            // 
             // angebotErstellenSubTab
             // 
             this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenNKNPTab);
-            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKBP);
+            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKBPTab);
             this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenNKBPTab);
             this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKNPTab);
             this.angebotErstellenSubTab.Location = new System.Drawing.Point(143, 0);
@@ -1376,19 +1279,19 @@
             this.angebotErstellenNKNPVornametextbox.Size = new System.Drawing.Size(200, 20);
             this.angebotErstellenNKNPVornametextbox.TabIndex = 0;
             // 
-            // angebotErstellenBKBP
+            // angebotErstellenBKBPTab
             // 
-            this.angebotErstellenBKBP.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.angebotErstellenBKBP.Controls.Add(this.label30);
-            this.angebotErstellenBKBP.Controls.Add(this.label29);
-            this.angebotErstellenBKBP.Controls.Add(this.comboBox3);
-            this.angebotErstellenBKBP.Controls.Add(this.comboBox1);
-            this.angebotErstellenBKBP.Location = new System.Drawing.Point(4, 22);
-            this.angebotErstellenBKBP.Name = "angebotErstellenBKBP";
-            this.angebotErstellenBKBP.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenBKBP.Size = new System.Drawing.Size(450, 78);
-            this.angebotErstellenBKBP.TabIndex = 1;
-            this.angebotErstellenBKBP.Text = "BKBP";
+            this.angebotErstellenBKBPTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.angebotErstellenBKBPTab.Controls.Add(this.label30);
+            this.angebotErstellenBKBPTab.Controls.Add(this.label29);
+            this.angebotErstellenBKBPTab.Controls.Add(this.comboBox3);
+            this.angebotErstellenBKBPTab.Controls.Add(this.comboBox1);
+            this.angebotErstellenBKBPTab.Location = new System.Drawing.Point(4, 22);
+            this.angebotErstellenBKBPTab.Name = "angebotErstellenBKBPTab";
+            this.angebotErstellenBKBPTab.Padding = new System.Windows.Forms.Padding(3);
+            this.angebotErstellenBKBPTab.Size = new System.Drawing.Size(450, 78);
+            this.angebotErstellenBKBPTab.TabIndex = 1;
+            this.angebotErstellenBKBPTab.Text = "BKBP";
             // 
             // label30
             // 
@@ -1689,6 +1592,129 @@
             this.angebotSuchenVornameTextbox.Size = new System.Drawing.Size(200, 20);
             this.angebotSuchenVornameTextbox.TabIndex = 0;
             // 
+            // projektTab
+            // 
+            this.projektTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektTab.Controls.Add(this.tabControl4);
+            this.projektTab.Location = new System.Drawing.Point(34, 4);
+            this.projektTab.Name = "projektTab";
+            this.projektTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projektTab.Size = new System.Drawing.Size(751, 255);
+            this.projektTab.TabIndex = 5;
+            this.projektTab.Text = "Projekt";
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage3);
+            this.tabControl4.Controls.Add(this.tabPage4);
+            this.tabControl4.Location = new System.Drawing.Point(0, 0);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(755, 259);
+            this.tabControl4.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(747, 233);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "tabPage3";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(747, 233);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // zeitTab
+            // 
+            this.zeitTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.zeitTab.Controls.Add(this.tabControl5);
+            this.zeitTab.Location = new System.Drawing.Point(34, 4);
+            this.zeitTab.Name = "zeitTab";
+            this.zeitTab.Padding = new System.Windows.Forms.Padding(3);
+            this.zeitTab.Size = new System.Drawing.Size(751, 255);
+            this.zeitTab.TabIndex = 6;
+            this.zeitTab.Text = "Zeit";
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage5);
+            this.tabControl5.Controls.Add(this.tabPage6);
+            this.tabControl5.Location = new System.Drawing.Point(0, 0);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(755, 259);
+            this.tabControl5.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(747, 233);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "tabPage5";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(747, 233);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "tabPage6";
+            // 
+            // reportTab
+            // 
+            this.reportTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.reportTab.Controls.Add(this.tabControl6);
+            this.reportTab.Location = new System.Drawing.Point(34, 4);
+            this.reportTab.Name = "reportTab";
+            this.reportTab.Padding = new System.Windows.Forms.Padding(3);
+            this.reportTab.Size = new System.Drawing.Size(751, 255);
+            this.reportTab.TabIndex = 7;
+            this.reportTab.Text = "Report";
+            // 
+            // tabControl6
+            // 
+            this.tabControl6.Controls.Add(this.tabPage7);
+            this.tabControl6.Controls.Add(this.tabPage8);
+            this.tabControl6.Location = new System.Drawing.Point(0, 0);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(755, 259);
+            this.tabControl6.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(747, 233);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "tabPage7";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(747, 233);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "tabPage8";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1735,20 +1761,14 @@
             this.rechnungUmsatzTab.ResumeLayout(false);
             this.rechnungUmsatzTab.PerformLayout();
             this.angeboteTab.ResumeLayout(false);
-            this.projektTab.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
-            this.zeitTab.ResumeLayout(false);
-            this.tabControl5.ResumeLayout(false);
-            this.reportTab.ResumeLayout(false);
-            this.tabControl6.ResumeLayout(false);
+            this.angebotTab.ResumeLayout(false);
             this.angebotErstellenTab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.angebotErstellenTab.PerformLayout();
             this.angebotErstellenSubTab.ResumeLayout(false);
             this.angebotErstellenNKNPTab.ResumeLayout(false);
             this.angebotErstellenNKNPTab.PerformLayout();
-            this.angebotErstellenBKBP.ResumeLayout(false);
-            this.angebotErstellenBKBP.PerformLayout();
+            this.angebotErstellenBKBPTab.ResumeLayout(false);
+            this.angebotErstellenBKBPTab.PerformLayout();
             this.angebotErstellenNKBPTab.ResumeLayout(false);
             this.angebotErstellenNKBPTab.PerformLayout();
             this.angebotErstellenBKNPTab.ResumeLayout(false);
@@ -1756,6 +1776,12 @@
             this.angebotSuchenTab.ResumeLayout(false);
             this.angebotSuchenTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.projektTab.ResumeLayout(false);
+            this.tabControl4.ResumeLayout(false);
+            this.zeitTab.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.reportTab.ResumeLayout(false);
+            this.tabControl6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1859,8 +1885,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TabControl angebotErstellenTab;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl angebotTab;
+        private System.Windows.Forms.TabPage angebotErstellenTab;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
@@ -1876,7 +1902,7 @@
         private System.Windows.Forms.TextBox angebotErstellenNKNPProjektTextbox;
         private System.Windows.Forms.TextBox angebotErstellenNKNPNachnameTextbox;
         private System.Windows.Forms.TextBox angebotErstellenNKNPVornametextbox;
-        private System.Windows.Forms.TabPage angebotErstellenBKBP;
+        private System.Windows.Forms.TabPage angebotErstellenBKBPTab;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -1909,9 +1935,11 @@
         private System.Windows.Forms.TextBox angebotSuchenProjektnameTextbox;
         private System.Windows.Forms.TextBox angebotSuchenNachnameTextbox;
         private System.Windows.Forms.TextBox angebotSuchenVornameTextbox;
-        private System.Windows.Forms.CheckBox angebotErstellenProjektCheckbox;
-        private System.Windows.Forms.CheckBox angebotErstellenKundeCheckbox;
         private TablessControl angebotErstellenSubTab;
+        private System.Windows.Forms.Button angebotErstellenBKundeButton;
+        private System.Windows.Forms.Button angebotErstellenBProjektButton;
+        private System.Windows.Forms.Button angebotErstellenNProjektButton;
+        private System.Windows.Forms.Button angebotErstellenNKundeButton;
 
 
 

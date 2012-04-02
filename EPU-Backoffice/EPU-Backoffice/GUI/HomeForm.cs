@@ -83,34 +83,7 @@ namespace EPUBackoffice.Gui
 
         }
 
-        //change angebots screen during runtime .. needs work!
-        /*
-        private void offerManagement() 
-        {
-            if (angebotErstellenKundeCheckbox.Checked)
-            {
-                if (angebotErstellenProjektCheckbox.Checked)
-                {
-                    angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
-                }
-                else 
-                {
-                    angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
-                }
-            }
-            else 
-            {
-                if (angebotErstellenProjektCheckbox.Checked)
-                {
-                    angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
-                }
-                else 
-                {
-                    angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
-                }
-            }
-
-        }*/
+        
 
         /// <summary>
         /// Catches the event, when the user clicks on the "open existing database"-button.
@@ -133,6 +106,8 @@ namespace EPUBackoffice.Gui
         {
             Process.GetCurrentProcess().Kill();
         }
+
+
 
         /// <summary>
         /// Clear textblocks in which a new Kunde or Kontakt can be created
@@ -163,6 +138,65 @@ namespace EPUBackoffice.Gui
             catch(Exception ex) // TODO: add own exception here
             {
                 // show user that something went wrong
+            }
+        }
+
+        private void angebotErstellenBProjektButton_Click(object sender, EventArgs e)
+        {
+            angebotErstellenBProjektButton.Hide();
+            angebotErstellenNProjektButton.Show();
+            if (angebotErstellenBKundeButton.Visible == true)
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
+            }
+            else 
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
+            }
+        }
+
+        private void angebotErstellenBKundeButton_Click(object sender, EventArgs e)
+        {
+            angebotErstellenBKundeButton.Hide();
+            angebotErstellenNKundeButton.Show();
+            if (angebotErstellenBProjektButton.Visible == true)
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
+            }
+            else
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
+            }
+        }
+
+        private void angebotErstellenNKundeButton_Click(object sender, EventArgs e)
+        {
+            angebotErstellenNKundeButton.Hide();
+            angebotErstellenBKundeButton.Show();
+
+            if (angebotErstellenBProjektButton.Visible == true)
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
+            }
+            else
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
+            }
+
+        }
+
+        private void angebotErstellenNProjektButton_Click(object sender, EventArgs e)
+        {
+            angebotErstellenNProjektButton.Hide();
+            angebotErstellenBProjektButton.Show();
+
+            if (angebotErstellenBKundeButton.Visible == true)
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
+            }
+            else
+            {
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
             }
         }
     }
