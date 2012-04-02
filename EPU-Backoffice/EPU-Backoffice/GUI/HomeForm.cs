@@ -135,9 +135,10 @@ namespace EPUBackoffice.Gui
                 validator.saveNewKunde(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
                 // show user that everything went fine
             }
-            catch(Exception ex) // TODO: add own exception here
+            catch(InvalidInputException ex)
             {
-                // show user that something went wrong
+                string s_type = type == false ? "Kunde" : "Kontakt";
+                MessageBox.Show(ex.Message, "Neuer " + s_type + " konnte nicht angelegt werden!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
