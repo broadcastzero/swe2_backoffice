@@ -176,8 +176,8 @@
             this.angebotSuchenVornameTextbox = new System.Windows.Forms.TextBox();
             this.projektTab = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.projektErstellenTab = new System.Windows.Forms.TabPage();
+            this.projektSuchenTab = new System.Windows.Forms.TabPage();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -186,6 +186,12 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.projektNeuStartdatumDatepicker = new System.Windows.Forms.DateTimePicker();
+            this.projektNeuProjekttitelTextbox = new System.Windows.Forms.TextBox();
+            this.projektNeuSpeichernButton = new System.Windows.Forms.Button();
+            this.projektNeuResetButton = new System.Windows.Forms.Button();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -217,6 +223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.projektTab.SuspendLayout();
             this.tabControl4.SuspendLayout();
+            this.projektErstellenTab.SuspendLayout();
             this.zeitTab.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.reportTab.SuspendLayout();
@@ -1670,33 +1677,39 @@
             // 
             // tabControl4
             // 
-            this.tabControl4.Controls.Add(this.tabPage3);
-            this.tabControl4.Controls.Add(this.tabPage4);
+            this.tabControl4.Controls.Add(this.projektErstellenTab);
+            this.tabControl4.Controls.Add(this.projektSuchenTab);
             this.tabControl4.Location = new System.Drawing.Point(0, 0);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(755, 259);
             this.tabControl4.TabIndex = 0;
             // 
-            // tabPage3
+            // projektErstellenTab
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(747, 233);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "tabPage3";
+            this.projektErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektErstellenTab.Controls.Add(this.projektNeuResetButton);
+            this.projektErstellenTab.Controls.Add(this.projektNeuSpeichernButton);
+            this.projektErstellenTab.Controls.Add(this.projektNeuProjekttitelTextbox);
+            this.projektErstellenTab.Controls.Add(this.projektNeuStartdatumDatepicker);
+            this.projektErstellenTab.Controls.Add(this.label38);
+            this.projektErstellenTab.Controls.Add(this.label37);
+            this.projektErstellenTab.Location = new System.Drawing.Point(4, 22);
+            this.projektErstellenTab.Name = "projektErstellenTab";
+            this.projektErstellenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projektErstellenTab.Size = new System.Drawing.Size(747, 233);
+            this.projektErstellenTab.TabIndex = 0;
+            this.projektErstellenTab.Text = "Erstellen";
             // 
-            // tabPage4
+            // projektSuchenTab
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(747, 233);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
+            this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektSuchenTab.Location = new System.Drawing.Point(4, 22);
+            this.projektSuchenTab.Name = "projektSuchenTab";
+            this.projektSuchenTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projektSuchenTab.Size = new System.Drawing.Size(747, 233);
+            this.projektSuchenTab.TabIndex = 1;
+            this.projektSuchenTab.Text = "Suchen";
             // 
             // zeitTab
             // 
@@ -1780,6 +1793,58 @@
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(212, 9);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(56, 13);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Projekttitel";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(212, 38);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(58, 13);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Startdatum";
+            // 
+            // projektNeuStartdatumDatepicker
+            // 
+            this.projektNeuStartdatumDatepicker.Location = new System.Drawing.Point(6, 32);
+            this.projektNeuStartdatumDatepicker.Name = "projektNeuStartdatumDatepicker";
+            this.projektNeuStartdatumDatepicker.Size = new System.Drawing.Size(200, 20);
+            this.projektNeuStartdatumDatepicker.TabIndex = 2;
+            // 
+            // projektNeuProjekttitelTextbox
+            // 
+            this.projektNeuProjekttitelTextbox.Location = new System.Drawing.Point(6, 6);
+            this.projektNeuProjekttitelTextbox.Name = "projektNeuProjekttitelTextbox";
+            this.projektNeuProjekttitelTextbox.Size = new System.Drawing.Size(200, 20);
+            this.projektNeuProjekttitelTextbox.TabIndex = 3;
+            // 
+            // projektNeuSpeichernButton
+            // 
+            this.projektNeuSpeichernButton.Location = new System.Drawing.Point(6, 58);
+            this.projektNeuSpeichernButton.Name = "projektNeuSpeichernButton";
+            this.projektNeuSpeichernButton.Size = new System.Drawing.Size(200, 23);
+            this.projektNeuSpeichernButton.TabIndex = 4;
+            this.projektNeuSpeichernButton.Text = "Speichern";
+            this.projektNeuSpeichernButton.UseVisualStyleBackColor = true;
+            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.projektNeuSpeichernButton_Click);
+            // 
+            // projektNeuResetButton
+            // 
+            this.projektNeuResetButton.Location = new System.Drawing.Point(6, 87);
+            this.projektNeuResetButton.Name = "projektNeuResetButton";
+            this.projektNeuResetButton.Size = new System.Drawing.Size(200, 23);
+            this.projektNeuResetButton.TabIndex = 5;
+            this.projektNeuResetButton.Text = "Felder zurücksetzen";
+            this.projektNeuResetButton.UseVisualStyleBackColor = true;
+            this.projektNeuResetButton.Click += new System.EventHandler(this.projektNeuResetButton_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1843,6 +1908,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.projektTab.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
+            this.projektErstellenTab.ResumeLayout(false);
+            this.projektErstellenTab.PerformLayout();
             this.zeitTab.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.reportTab.ResumeLayout(false);
@@ -1894,8 +1961,8 @@
         private System.Windows.Forms.TextBox searchKundeVornameTextBlock;
         private System.Windows.Forms.TabPage projektTab;
         private System.Windows.Forms.TabControl tabControl4;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage projektErstellenTab;
+        private System.Windows.Forms.TabPage projektSuchenTab;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
@@ -2010,6 +2077,12 @@
         public System.Windows.Forms.Label kundeNeuErrVornameLabel;
         public System.Windows.Forms.Label kundeNeuErrNachnameLabel;
         public System.Windows.Forms.Label kundeNeuErrExistingEntryLabel;
+        private System.Windows.Forms.Button projektNeuResetButton;
+        private System.Windows.Forms.Button projektNeuSpeichernButton;
+        private System.Windows.Forms.TextBox projektNeuProjekttitelTextbox;
+        private System.Windows.Forms.DateTimePicker projektNeuStartdatumDatepicker;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
 
 
 

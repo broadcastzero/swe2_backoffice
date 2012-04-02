@@ -230,5 +230,15 @@ namespace EPUBackoffice.Gui
         {
 
         }
+
+        private void projektNeuSpeichernButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projektNeuResetButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
