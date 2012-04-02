@@ -47,6 +47,11 @@
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
             this.kundenTabControl = new System.Windows.Forms.TabControl();
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
+            this.kundenNeuErrGeneralLabel = new System.Windows.Forms.Label();
+            this.kundeNeuErrExistingEntryLabel = new System.Windows.Forms.Label();
+            this.kundeNeuSuccsesLabel = new System.Windows.Forms.Label();
+            this.kundeNeuErrNachnameLabel = new System.Windows.Forms.Label();
+            this.kundeNeuErrVornameLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.newKundeResetButton = new System.Windows.Forms.Button();
@@ -403,6 +408,11 @@
             // kundenTabCreate
             // 
             this.kundenTabCreate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabCreate.Controls.Add(this.kundenNeuErrGeneralLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuErrExistingEntryLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuSuccsesLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuErrNachnameLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuErrVornameLabel);
             this.kundenTabCreate.Controls.Add(this.label2);
             this.kundenTabCreate.Controls.Add(this.label1);
             this.kundenTabCreate.Controls.Add(this.newKundeResetButton);
@@ -417,6 +427,61 @@
             this.kundenTabCreate.Size = new System.Drawing.Size(771, 233);
             this.kundenTabCreate.TabIndex = 0;
             this.kundenTabCreate.Text = "Neu";
+            // 
+            // kundenNeuErrGeneralLabel
+            // 
+            this.kundenNeuErrGeneralLabel.AutoSize = true;
+            this.kundenNeuErrGeneralLabel.ForeColor = System.Drawing.Color.Red;
+            this.kundenNeuErrGeneralLabel.Location = new System.Drawing.Point(327, 100);
+            this.kundenNeuErrGeneralLabel.Name = "kundenNeuErrGeneralLabel";
+            this.kundenNeuErrGeneralLabel.Size = new System.Drawing.Size(39, 13);
+            this.kundenNeuErrGeneralLabel.TabIndex = 13;
+            this.kundenNeuErrGeneralLabel.Text = "Fehler:";
+            this.kundenNeuErrGeneralLabel.Visible = false;
+            // 
+            // kundeNeuErrExistingEntryLabel
+            // 
+            this.kundeNeuErrExistingEntryLabel.AutoSize = true;
+            this.kundeNeuErrExistingEntryLabel.ForeColor = System.Drawing.Color.Red;
+            this.kundeNeuErrExistingEntryLabel.Location = new System.Drawing.Point(363, 126);
+            this.kundeNeuErrExistingEntryLabel.Name = "kundeNeuErrExistingEntryLabel";
+            this.kundeNeuErrExistingEntryLabel.Size = new System.Drawing.Size(115, 13);
+            this.kundeNeuErrExistingEntryLabel.TabIndex = 12;
+            this.kundeNeuErrExistingEntryLabel.Text = "Eintrag existiert bereits!";
+            this.kundeNeuErrExistingEntryLabel.Visible = false;
+            // 
+            // kundeNeuSuccsesLabel
+            // 
+            this.kundeNeuSuccsesLabel.AutoSize = true;
+            this.kundeNeuSuccsesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.kundeNeuSuccsesLabel.Location = new System.Drawing.Point(327, 140);
+            this.kundeNeuSuccsesLabel.Name = "kundeNeuSuccsesLabel";
+            this.kundeNeuSuccsesLabel.Size = new System.Drawing.Size(110, 13);
+            this.kundeNeuSuccsesLabel.TabIndex = 11;
+            this.kundeNeuSuccsesLabel.Text = "Eingabe erfolgreich! :)";
+            this.kundeNeuSuccsesLabel.Visible = false;
+            // 
+            // kundeNeuErrNachnameLabel
+            // 
+            this.kundeNeuErrNachnameLabel.AutoSize = true;
+            this.kundeNeuErrNachnameLabel.ForeColor = System.Drawing.Color.Red;
+            this.kundeNeuErrNachnameLabel.Location = new System.Drawing.Point(363, 113);
+            this.kundeNeuErrNachnameLabel.Name = "kundeNeuErrNachnameLabel";
+            this.kundeNeuErrNachnameLabel.Size = new System.Drawing.Size(102, 13);
+            this.kundeNeuErrNachnameLabel.TabIndex = 9;
+            this.kundeNeuErrNachnameLabel.Text = "Nachname ungültig!";
+            this.kundeNeuErrNachnameLabel.Visible = false;
+            // 
+            // kundeNeuErrVornameLabel
+            // 
+            this.kundeNeuErrVornameLabel.AutoSize = true;
+            this.kundeNeuErrVornameLabel.ForeColor = System.Drawing.Color.Red;
+            this.kundeNeuErrVornameLabel.Location = new System.Drawing.Point(363, 100);
+            this.kundeNeuErrVornameLabel.Name = "kundeNeuErrVornameLabel";
+            this.kundeNeuErrVornameLabel.Size = new System.Drawing.Size(92, 13);
+            this.kundeNeuErrVornameLabel.TabIndex = 8;
+            this.kundeNeuErrVornameLabel.Text = "Vorname ungültig!";
+            this.kundeNeuErrVornameLabel.Visible = false;
             // 
             // label2
             // 
@@ -1940,6 +2005,11 @@
         private System.Windows.Forms.Button angebotErstellenBProjektButton;
         private System.Windows.Forms.Button angebotErstellenNProjektButton;
         private System.Windows.Forms.Button angebotErstellenNKundeButton;
+        private System.Windows.Forms.Label kundeNeuSuccsesLabel;
+        private System.Windows.Forms.Label kundenNeuErrGeneralLabel;
+        public System.Windows.Forms.Label kundeNeuErrVornameLabel;
+        public System.Windows.Forms.Label kundeNeuErrNachnameLabel;
+        public System.Windows.Forms.Label kundeNeuErrExistingEntryLabel;
 
 
 

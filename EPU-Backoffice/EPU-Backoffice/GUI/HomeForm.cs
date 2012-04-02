@@ -118,6 +118,17 @@ namespace EPUBackoffice.Gui
         {
             this.createKundeVornameTextBlock.Clear();
             this.createKundeNachnameTextBlock.Clear();
+            this.hideMessagesKundeNeu();
+       
+        }
+
+        public void hideMessagesKundeNeu() 
+        {
+            this.kundeNeuErrVornameLabel.Hide();
+            this.kundeNeuErrNachnameLabel.Hide();
+            this.kundeNeuErrExistingEntryLabel.Hide();
+            this.kundeNeuSuccsesLabel.Hide();
+            this.kundenNeuErrGeneralLabel.Hide();
         }
 
         /// <summary>
@@ -143,12 +154,16 @@ namespace EPUBackoffice.Gui
             catch(InvalidInputException ex)
             {
                 saved = false;
+                hideMessagesKundeNeu();
+                this.kundenNeuErrGeneralLabel.Show();
                 MessageBox.Show(ex.Message, "Neuer " + s_type + " konnte nicht angelegt werden!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (saved)
             {
-                MessageBox.Show("Ein neuer " + s_type + " wurde erfolgreich angelegt.", "Anlegen erfolgreich!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.hideMessagesKundeNeu();
+                this.kundeNeuSuccsesLabel.Show();
+                //MessageBox.Show("Ein neuer " + s_type + " wurde erfolgreich angelegt.", "Anlegen erfolgreich!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -176,7 +191,7 @@ namespace EPUBackoffice.Gui
             }
             else
             {
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
             }
         }
 
@@ -209,6 +224,11 @@ namespace EPUBackoffice.Gui
             {
                 angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
             }
+        }
+
+        private void kundeNeuErrVornameLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.Dal;
     using UserExceptions;
     using Logger;
-
+    
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.
     /// </summary>
@@ -41,6 +41,7 @@ namespace EPUBackoffice.BL
             {
                 this.logger.Log(2, "");
                 throw new InvalidInputException("Feld 'Nachname' ist ungültig!");
+                
             }
             // else save new Kunde or Kontakt in database
             // first name is optional, if empty, just send lastname and type
