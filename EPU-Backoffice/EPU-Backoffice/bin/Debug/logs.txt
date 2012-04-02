@@ -4,3 +4,16 @@
 01.04.2012 - 17:09 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 01.04.2012 - 17:09 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 01.04.2012 - 17:09 Info: A new Kunde has been saved to the database.
+02.04.2012 - 13:58 Info: -----------------------------------------------------------
+02.04.2012 - 13:58 Info: Program is started.
+02.04.2012 - 13:58 Info: Using SQLite database.
+02.04.2012 - 13:58 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 13:58 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 13:58 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 13:58 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db has been stored in config file.
+02.04.2012 - 13:58 Info: Open HomeForm
+02.04.2012 - 14:00 Info: -----------------------------------------------------------
+02.04.2012 - 14:00 Info: Program is started.
+02.04.2012 - 14:00 Info: Using SQLite database.
+02.04.2012 - 14:00 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 14:00 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db

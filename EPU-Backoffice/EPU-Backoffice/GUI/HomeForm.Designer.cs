@@ -1867,9 +1867,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker6;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.CheckBox angebotErstellenProjektCheckbox;
-        private System.Windows.Forms.CheckBox angebotErstellenKundeCheckbox;
-        private TablessControl angebotErstellenSubTab;
         private System.Windows.Forms.TabPage angebotErstellenNKNPTab;
         private System.Windows.Forms.RadioButton angeboteErstellenNKNPKontaktRadiobutton;
         private System.Windows.Forms.RadioButton angeboteErstellenNKNPKundeRadiobutton;
@@ -1912,6 +1909,9 @@
         private System.Windows.Forms.TextBox angebotSuchenProjektnameTextbox;
         private System.Windows.Forms.TextBox angebotSuchenNachnameTextbox;
         private System.Windows.Forms.TextBox angebotSuchenVornameTextbox;
+        private System.Windows.Forms.CheckBox angebotErstellenProjektCheckbox;
+        private System.Windows.Forms.CheckBox angebotErstellenKundeCheckbox;
+        private TablessControl angebotErstellenSubTab;
 
 
 

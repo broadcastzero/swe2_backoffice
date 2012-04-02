@@ -83,6 +83,35 @@ namespace EPUBackoffice.Gui
 
         }
 
+        //change angebots screen during runtime .. needs work!
+        /*
+        private void offerManagement() 
+        {
+            if (angebotErstellenKundeCheckbox.Checked)
+            {
+                if (angebotErstellenProjektCheckbox.Checked)
+                {
+                    angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
+                }
+                else 
+                {
+                    angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
+                }
+            }
+            else 
+            {
+                if (angebotErstellenProjektCheckbox.Checked)
+                {
+                    angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
+                }
+                else 
+                {
+                    angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
+                }
+            }
+
+        }*/
+
         /// <summary>
         /// Catches the event, when the user clicks on the "open existing database"-button.
         /// </summary>
