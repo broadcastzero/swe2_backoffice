@@ -188,3 +188,26 @@
 02.04.2012 - 19:21 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
 02.04.2012 - 19:21 Info: Open HomeForm
 02.04.2012 - 19:21 Error: 
+02.04.2012 - 20:21 Info: -----------------------------------------------------------
+02.04.2012 - 20:21 Info: Program is started.
+02.04.2012 - 20:21 Info: Using SQLite database.
+02.04.2012 - 20:21 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 20:21 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 20:22 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
+02.04.2012 - 20:22 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
+02.04.2012 - 20:22 Info: Open HomeForm
+02.04.2012 - 20:22 Error: 
+02.04.2012 - 20:22 Error: 
+02.04.2012 - 20:22 Info: A new Kunde has been saved to the database: tete te
+02.04.2012 - 20:22 Info: -----------------------------------------------------------
+02.04.2012 - 20:22 Info: Program is started.
+02.04.2012 - 20:22 Info: Using SQLite database.
+02.04.2012 - 20:22 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 20:22 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+02.04.2012 - 20:22 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.04.2012 - 20:22 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.04.2012 - 20:22 Info: Open HomeForm
+02.04.2012 - 20:22 Error: 
+02.04.2012 - 20:22 Info: A new Kunde has been saved to the database: daf adfd
+02.04.2012 - 20:23 Info: A new Kontakt has been saved to the database: daf adfd
+02.04.2012 - 20:23 Info: A new Kontakt has been saved to the database:  adfd

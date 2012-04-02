@@ -127,9 +127,14 @@ namespace EPUBackoffice.Gui
         /// <param name="e">EventArgs</param>
         private void createKundeButton_Click(object sender, EventArgs e)
         {
+            // is set to false in case of error
+            bool saved = true;
+
             GuiDataValidator validator = new GuiDataValidator();
             // bool type: false -> Kunde, true -> Kontakt
             bool type = this.createKontaktRadioButton.Checked;
+            string s_type = type == false ? "Kunde" : "Kontakt";
+
             try
             {
                 validator.saveNewKunde(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
@@ -137,8 +142,13 @@ namespace EPUBackoffice.Gui
             }
             catch(InvalidInputException ex)
             {
-                string s_type = type == false ? "Kunde" : "Kontakt";
+                saved = false;
                 MessageBox.Show(ex.Message, "Neuer " + s_type + " konnte nicht angelegt werden!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (saved)
+            {
+                MessageBox.Show("Ein neuer " + s_type + " wurde erfolgreich angelegt.", "Anlegen erfolgreich!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

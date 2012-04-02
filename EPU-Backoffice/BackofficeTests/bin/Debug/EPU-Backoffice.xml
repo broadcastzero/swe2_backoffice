@@ -242,6 +242,29 @@
             Datum of booking
             </summary>
         </member>
+        <member name="T:EPUBackoffice.UserExceptions.InvalidInputException">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor">
+            <summary>
+            This Exception is thrown if the user tries to make an invalid input
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor(System.String)">
+            <summary>
+            This Exception is thrown if the user tries to make an invalid input
+            </summary>
+            <param name="message">The error message which is thrown</param>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor(System.String,System.Exception)">
+            <summary>
+            This Exception is thrown if the user tries to make an invalid input
+            </summary>
+            <param name="message">The error message which is thrown</param>
+            <param name="inner">The base class</param>
+        </member>
         <member name="T:EPUBackoffice.BL.Program">
             <summary>
             The main entry class of the application.
@@ -619,29 +642,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns></returns>
-        </member>
-        <member name="T:EPUBackoffice.UserExceptions.InvalidInputException">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor">
-            <summary>
-            This Exception is thrown if the user tries to make an invalid input
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor(System.String)">
-            <summary>
-            This Exception is thrown if the user tries to make an invalid input
-            </summary>
-            <param name="message">The error message which is thrown</param>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.InvalidInputException.#ctor(System.String,System.Exception)">
-            <summary>
-            This Exception is thrown if the user tries to make an invalid input
-            </summary>
-            <param name="message">The error message which is thrown</param>
-            <param name="inner">The base class</param>
         </member>
     </members>
 </doc>
