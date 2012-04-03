@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ffce231a-bead-49ef-a037-f30c98f7d05d" name="Mexx@MEXX-PC 2012-04-03 13:49:44" runUser="Mexx-PC\Mexx" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ab2dda47-df62-4ee6-a16b-845126e8200d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Mexx_MEXX-PC 2012-04-03 13_49_44">
+      <DeploymentItem filename="C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\System.Data.SQLite.dll" />
+      <DeploymentItem filename="C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\EPU-Backoffice.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-03T13:49:44.4732974+02:00" queuing="2012-04-03T13:49:44.4872982+02:00" start="2012-04-03T13:49:44.5042992+02:00" finish="2012-04-03T13:49:44.8403184+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="11" executed="11" passed="8" error="0" failed="1" timeout="0" aborted="0" inconclusive="2" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="checkDataBaseExistanceTest2" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="6970dadb-9f56-c9d4-db6b-6b668bf94610">
+      <Execution id="58f4bd35-76bc-49d0-8ad7-eb7a83a6e553" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest2" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest1" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776">
+      <Execution id="849ae2a0-8dc4-4356-b0da-ad0387fe24e7" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest1" />
+    </UnitTest>
+    <UnitTest name="saveNewKundeTest0" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="40a51d21-ad3a-c2bf-e291-bb9c53991aa8">
+      <Execution id="271b1d71-bd44-4774-b2b0-b4b88dbe79e4" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.GuiDataValidatorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="saveNewKundeTest0" />
+    </UnitTest>
+    <UnitTest name="saveNewKundeTest3" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="9b3a540f-3d0d-46ca-3f2c-7cb273f91b2a">
+      <Execution id="7b8adc0d-accf-493c-a691-10bdfab675a5" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.GuiDataValidatorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="saveNewKundeTest3" />
+    </UnitTest>
+    <UnitTest name="saveNewKundeTest1" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="8f61d8a9-73fe-9160-11f3-e7ef4b006af5">
+      <Execution id="104ab78e-a24c-4b7b-9da6-1f1789de5256" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.GuiDataValidatorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="saveNewKundeTest1" />
+    </UnitTest>
+    <UnitTest name="CreateDataBaseTest" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="8a8da676-6d8e-ed39-c279-5fd64035d021">
+      <Execution id="56fadab4-5d16-4d16-a571-aa4f909d1e59" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.MockDataBaseManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreateDataBaseTest" />
+    </UnitTest>
+    <UnitTest name="saveNewKundeTest4" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="d5dec836-675c-ce51-4fc0-1bb720503f84">
+      <Execution id="ffb9c681-7825-48ab-984a-7acf78af36cd" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.GuiDataValidatorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="saveNewKundeTest4" />
+    </UnitTest>
+    <UnitTest name="checkLogfileExistanceTest" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="b2292057-8ef8-0fcf-2f24-3fae36502c01">
+      <Execution id="50cc60f9-9ecc-4e12-adfc-e834452fcdf3" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkLogfileExistanceTest" />
+    </UnitTest>
+    <UnitTest name="SaveNewKundeTest" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="e2d50257-2c5d-6cbb-24c4-dee8a47e303e">
+      <Execution id="5c91fefa-680f-4d2f-9085-ee977cfdbd2b" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.MockDataBaseManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SaveNewKundeTest" />
+    </UnitTest>
+    <UnitTest name="saveNewKundeTest2" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="993b5e98-01a2-0823-5578-f64674863af1">
+      <Execution id="511fb759-c858-4569-b0f3-7b56f936b9d7" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.GuiDataValidatorTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="saveNewKundeTest2" />
+    </UnitTest>
+    <UnitTest name="MockDataBaseManagerConstructorTest" storage="c:\users\mexx\desktop\fh\4. semester\swe 2\github\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="5c2d1abf-ada6-1817-87f9-fcce5d98ce31">
+      <Execution id="d7927c80-1f08-4e9e-8fec-56a836ed8346" />
+      <TestMethod codeBase="C:/Users/Mexx/Desktop/FH/4. Semester/SWE 2/Github/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.MockDataBaseManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MockDataBaseManagerConstructorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776" executionId="849ae2a0-8dc4-4356-b0da-ad0387fe24e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="40a51d21-ad3a-c2bf-e291-bb9c53991aa8" executionId="271b1d71-bd44-4774-b2b0-b4b88dbe79e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c2d1abf-ada6-1817-87f9-fcce5d98ce31" executionId="d7927c80-1f08-4e9e-8fec-56a836ed8346" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6970dadb-9f56-c9d4-db6b-6b668bf94610" executionId="58f4bd35-76bc-49d0-8ad7-eb7a83a6e553" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a8da676-6d8e-ed39-c279-5fd64035d021" executionId="56fadab4-5d16-4d16-a571-aa4f909d1e59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f61d8a9-73fe-9160-11f3-e7ef4b006af5" executionId="104ab78e-a24c-4b7b-9da6-1f1789de5256" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="993b5e98-01a2-0823-5578-f64674863af1" executionId="511fb759-c858-4569-b0f3-7b56f936b9d7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b3a540f-3d0d-46ca-3f2c-7cb273f91b2a" executionId="7b8adc0d-accf-493c-a691-10bdfab675a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2292057-8ef8-0fcf-2f24-3fae36502c01" executionId="50cc60f9-9ecc-4e12-adfc-e834452fcdf3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5dec836-675c-ce51-4fc0-1bb720503f84" executionId="ffb9c681-7825-48ab-984a-7acf78af36cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2d50257-2c5d-6cbb-24c4-dee8a47e303e" executionId="5c91fefa-680f-4d2f-9085-ee977cfdbd2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="849ae2a0-8dc4-4356-b0da-ad0387fe24e7" testId="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776" testName="checkDataBaseExistanceTest1" computerName="MEXX-PC" duration="00:00:00.0148948" startTime="2012-04-03T13:49:44.5183000+02:00" endTime="2012-04-03T13:49:44.7193115+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="849ae2a0-8dc4-4356-b0da-ad0387fe24e7">
+    </UnitTestResult>
+    <UnitTestResult executionId="271b1d71-bd44-4774-b2b0-b4b88dbe79e4" testId="40a51d21-ad3a-c2bf-e291-bb9c53991aa8" testName="saveNewKundeTest0" computerName="MEXX-PC" duration="00:00:00.0158251" startTime="2012-04-03T13:49:44.7233117+02:00" endTime="2012-04-03T13:49:44.7433129+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="271b1d71-bd44-4774-b2b0-b4b88dbe79e4">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method BackofficeTests.GuiDataValidatorTest.saveNewKundeTest0 threw exception: 
+EPUBackoffice.UserExceptions.InvalidInputException: Feld 'Vorname' ist ungültig!</Message>
+          <StackTrace>    bei EPUBackoffice.BL.GuiDataValidator.saveNewKunde(String firstname, String lastname, Boolean type) in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\BL\GuiDataValidator.cs:Zeile 37.
+   bei BackofficeTests.GuiDataValidatorTest.saveNewKundeTest0() in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\BackofficeTests\GuiDataValidatorTest.cs:Zeile 83.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d7927c80-1f08-4e9e-8fec-56a836ed8346" testId="5c2d1abf-ada6-1817-87f9-fcce5d98ce31" testName="MockDataBaseManagerConstructorTest" computerName="MEXX-PC" duration="00:00:00.0003002" startTime="2012-04-03T13:49:44.7453130+02:00" endTime="2012-04-03T13:49:44.7513133+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7927c80-1f08-4e9e-8fec-56a836ed8346">
+    </UnitTestResult>
+    <UnitTestResult executionId="58f4bd35-76bc-49d0-8ad7-eb7a83a6e553" testId="6970dadb-9f56-c9d4-db6b-6b668bf94610" testName="checkDataBaseExistanceTest2" computerName="MEXX-PC" duration="00:00:00.0006090" startTime="2012-04-03T13:49:44.7523134+02:00" endTime="2012-04-03T13:49:44.7583137+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="58f4bd35-76bc-49d0-8ad7-eb7a83a6e553">
+    </UnitTestResult>
+    <UnitTestResult executionId="56fadab4-5d16-4d16-a571-aa4f909d1e59" testId="8a8da676-6d8e-ed39-c279-5fd64035d021" testName="CreateDataBaseTest" computerName="MEXX-PC" duration="00:00:00.0138623" startTime="2012-04-03T13:49:44.7593138+02:00" endTime="2012-04-03T13:49:44.7783149+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="56fadab4-5d16-4d16-a571-aa4f909d1e59">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. A method that does not return a value cannot be verified.</Message>
+          <StackTrace>   bei BackofficeTests.MockDataBaseManagerTest.CreateDataBaseTest() in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\BackofficeTests\MockDataBaseManagerTest.cs:Zeile 89.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="104ab78e-a24c-4b7b-9da6-1f1789de5256" testId="8f61d8a9-73fe-9160-11f3-e7ef4b006af5" testName="saveNewKundeTest1" computerName="MEXX-PC" duration="00:00:00.0016321" startTime="2012-04-03T13:49:44.7793149+02:00" endTime="2012-04-03T13:49:44.7863153+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="104ab78e-a24c-4b7b-9da6-1f1789de5256">
+    </UnitTestResult>
+    <UnitTestResult executionId="511fb759-c858-4569-b0f3-7b56f936b9d7" testId="993b5e98-01a2-0823-5578-f64674863af1" testName="saveNewKundeTest2" computerName="MEXX-PC" duration="00:00:00.0008201" startTime="2012-04-03T13:49:44.7873154+02:00" endTime="2012-04-03T13:49:44.7923157+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="511fb759-c858-4569-b0f3-7b56f936b9d7">
+    </UnitTestResult>
+    <UnitTestResult executionId="7b8adc0d-accf-493c-a691-10bdfab675a5" testId="9b3a540f-3d0d-46ca-3f2c-7cb273f91b2a" testName="saveNewKundeTest3" computerName="MEXX-PC" duration="00:00:00.0010158" startTime="2012-04-03T13:49:44.7933157+02:00" endTime="2012-04-03T13:49:44.7983160+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b8adc0d-accf-493c-a691-10bdfab675a5">
+    </UnitTestResult>
+    <UnitTestResult executionId="50cc60f9-9ecc-4e12-adfc-e834452fcdf3" testId="b2292057-8ef8-0fcf-2f24-3fae36502c01" testName="checkLogfileExistanceTest" computerName="MEXX-PC" duration="00:00:00.0014753" startTime="2012-04-03T13:49:44.7993161+02:00" endTime="2012-04-03T13:49:44.8113168+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50cc60f9-9ecc-4e12-adfc-e834452fcdf3">
+    </UnitTestResult>
+    <UnitTestResult executionId="ffb9c681-7825-48ab-984a-7acf78af36cd" testId="d5dec836-675c-ce51-4fc0-1bb720503f84" testName="saveNewKundeTest4" computerName="MEXX-PC" duration="00:00:00.0009567" startTime="2012-04-03T13:49:44.8133169+02:00" endTime="2012-04-03T13:49:44.8193172+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffb9c681-7825-48ab-984a-7acf78af36cd">
+    </UnitTestResult>
+    <UnitTestResult executionId="5c91fefa-680f-4d2f-9085-ee977cfdbd2b" testId="e2d50257-2c5d-6cbb-24c4-dee8a47e303e" testName="SaveNewKundeTest" computerName="MEXX-PC" duration="00:00:00.0018153" startTime="2012-04-03T13:49:44.8203173+02:00" endTime="2012-04-03T13:49:44.8273177+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c91fefa-680f-4d2f-9085-ee977cfdbd2b">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. A method that does not return a value cannot be verified.</Message>
+          <StackTrace>   bei BackofficeTests.MockDataBaseManagerTest.SaveNewKundeTest() in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\BackofficeTests\MockDataBaseManagerTest.cs:Zeile 103.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

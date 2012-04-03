@@ -31,7 +31,7 @@ namespace EPUBackoffice.BL
         public void saveNewKunde(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
-            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z]+$"))
+            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
                 this.logger.Log(2, "Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
