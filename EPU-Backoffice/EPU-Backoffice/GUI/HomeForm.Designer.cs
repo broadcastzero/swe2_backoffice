@@ -444,7 +444,7 @@
             // 
             this.kundeNeuSuccessLabel.AutoSize = true;
             this.kundeNeuSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kundeNeuSuccessLabel.Location = new System.Drawing.Point(327, 126);
+            this.kundeNeuSuccessLabel.Location = new System.Drawing.Point(327, 100);
             this.kundeNeuSuccessLabel.Name = "kundeNeuSuccessLabel";
             this.kundeNeuSuccessLabel.Size = new System.Drawing.Size(110, 13);
             this.kundeNeuSuccessLabel.TabIndex = 11;

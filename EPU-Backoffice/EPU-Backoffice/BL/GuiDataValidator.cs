@@ -37,7 +37,7 @@ namespace EPUBackoffice.BL
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             // if 'Nachname' is null or invalid sign is found
-            else if (!Regex.IsMatch(lastname, @"^[a-zA-Z]+$"))
+            else if (!Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
                 this.logger.Log(2, "");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");

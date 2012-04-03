@@ -154,7 +154,7 @@ namespace EPUBackoffice.Gui
             if (saved)
             {
                 this.hideMessagesKundeNeu();
-                this.kundeNeuSuccessLabel.Show();
+                this.kundeNeuSuccessLabel.Show(); // TODO: show what has been saved!
             }
         }
 
