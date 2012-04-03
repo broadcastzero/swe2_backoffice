@@ -1,9 +1,0 @@
-03.04.2012 - 13:44 Info: Database path set in config file: ../../../EPU-Backoffice/bin/Debug/backoffice_database.db
-03.04.2012 - 13:44 Warning: Given file path is wrong. File does not exist: ../../../EPU-Backoffice/bin/Debug/logs.txt
-03.04.2012 - 13:44 Info: Es wird kein Vorname eingetragen.
-03.04.2012 - 13:44 Info: A new Kontakt has been saved in the mockDB.
-03.04.2012 - 13:44 Error: 
-03.04.2012 - 13:44 Error: Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
-03.04.2012 - 13:44 Warning: No entry 'SQLite' in config file.
-03.04.2012 - 13:44 Error: 
-03.04.2012 - 13:44 Info: A new Kunde has been saved in the mockDB.

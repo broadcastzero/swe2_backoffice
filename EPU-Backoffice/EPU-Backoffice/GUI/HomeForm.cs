@@ -117,7 +117,6 @@ namespace EPUBackoffice.Gui
             this.createKundeVornameTextBlock.Clear();
             this.createKundeNachnameTextBlock.Clear();
             this.hideMessagesKundeNeu();
-       
         }
 
         /// <summary>

@@ -514,3 +514,21 @@
 03.04.2012 - 13:35 Info: Using SQLite database.
 03.04.2012 - 13:35 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 03.04.2012 - 13:35 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 18:20 Info: -----------------------------------------------------------
+03.04.2012 - 18:20 Info: Program is started.
+03.04.2012 - 18:20 Info: Using SQLite database.
+03.04.2012 - 18:20 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 18:20 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 18:20 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db
+03.04.2012 - 18:20 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db has been stored in config file.
+03.04.2012 - 18:44 Info: -----------------------------------------------------------
+03.04.2012 - 18:44 Info: Program is started.
+03.04.2012 - 18:44 Info: Using SQLite database.
+03.04.2012 - 18:44 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 18:44 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 18:44 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db
+03.04.2012 - 18:44 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db has been stored in config file.
+03.04.2012 - 18:44 Info: A new Kunde has been saved to the database: test test
+03.04.2012 - 18:44 Info: A new Kunde has been saved to the database: test test-test
+03.04.2012 - 18:44 Info: A new Kunde has been saved to the database: test test-testadsfad33
+03.04.2012 - 18:44 Error: 

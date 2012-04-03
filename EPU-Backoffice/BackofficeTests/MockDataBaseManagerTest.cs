@@ -10,7 +10,8 @@ namespace BackofficeTests
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
     using EPUBackoffice.BL;
-    using EPUBackoffice.Dal;    
+    using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
 
     /// <summary>
     ///This is a test class for MockDataBaseManagerTest and is intended
@@ -20,6 +21,7 @@ namespace BackofficeTests
     public class MockDataBaseManagerTest
     {
         private TestContext testContextInstance;
+        private MockDataBaseManager mdb;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -54,10 +56,11 @@ namespace BackofficeTests
         //}
         //
         //Use TestInitialize to run code before running each test
-        //[TestInitialize()]
-        //public void MyTestInitialize()
-        //{
-        //}
+        [TestInitialize()]
+        public void MyTestInitialize()
+        {
+            this.mdb = new MockDataBaseManager();
+        }
         //
         //Use TestCleanup to run code after each test has run
         //[TestCleanup()]
@@ -67,40 +70,61 @@ namespace BackofficeTests
         //
         #endregion
 
-
         /// <summary>
-        ///A test for MockDataBaseManager Constructor
-        ///</summary>
-        [TestMethod()]
-        public void MockDataBaseManagerConstructorTest()
-        {
-            MockDataBaseManager target = new MockDataBaseManager();
-            //Assert.AreEqual(
-        }
-
-        /// <summary>
-        ///A test for CreateDataBase
+        ///A test for CreateDataBase - the two static lists savedKontakte and savedKunden have to be initialized afterwards
         ///</summary>
         [TestMethod()]
         public void CreateDataBaseTest()
         {
-            MockDataBaseManager target = new MockDataBaseManager(); // TODO: Initialize to an appropriate value
-            target.CreateDataBase();
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            Assert.IsNotNull(MockDataBaseManager.savedKontakte);
+            Assert.IsNotNull(MockDataBaseManager.savedKunden);
         }
 
         /// <summary>
-        ///A test for SaveNewKunde
+        ///A test for SaveNewKunde - the saved Kunde has to be stored within the kunden-mockDB
+        ///type: false...Kunde, true...Kontakt
         ///</summary>
         [TestMethod()]
         public void SaveNewKundeTest()
         {
-            MockDataBaseManager target = new MockDataBaseManager(); // TODO: Initialize to an appropriate value
-            string lastname = string.Empty; // TODO: Initialize to an appropriate value
-            bool type = false; // TODO: Initialize to an appropriate value
-            string firstname = string.Empty; // TODO: Initialize to an appropriate value
-            target.SaveNewKunde(lastname, type, firstname);
-            Assert.Inconclusive("A method that does not return a value cannot be verified.");
+            int count_before = MockDataBaseManager.savedKunden.Count;
+
+            string lastname = "Grausgruber";
+            bool type = false; // Kunde
+            string firstname = "Karl";
+            this.mdb.SaveNewKunde(lastname, type, firstname);
+
+            int count_after = MockDataBaseManager.savedKunden.Count;
+
+            Assert.AreEqual(count_before + 1, count_after);
+        }
+
+        /// <summary>
+        ///A test for SaveNewKunde - the saved Kontakt has to be stored within the kontakt-mockDB
+        ///</summary>
+        [TestMethod()]
+        public void SaveNewKundeTest2()
+        {
+            int count_before = MockDataBaseManager.savedKontakte.Count;
+
+            string lastname = "Huber";
+            bool type = true; // Kontakt
+            string firstname = "Hans";
+            this.mdb.SaveNewKunde(lastname, type, firstname);
+
+            int count_after = MockDataBaseManager.savedKontakte.Count;
+
+            Assert.AreEqual(count_before+1, count_after);
+        }
+
+        /// <summary>
+        ///A test for SaveNewKunde - check if ID is continuing
+        ///</summary>
+        [TestMethod()]
+        public void SaveNewKundeTest3()
+        {
+            int current = MockDataBaseManager.kundenID;
+            Assert.AreEqual(current + 1, MockDataBaseManager.kundenID);
         }
     }
 }
