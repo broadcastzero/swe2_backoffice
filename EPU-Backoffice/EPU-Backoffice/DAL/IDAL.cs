@@ -22,6 +22,22 @@ namespace EPUBackoffice.Dal
         void CreateDataBase();
 
         /// <summary>
+        /// This function gets (a) certain Kontakt(e) from the saved objects.
+        /// If firstname and lastname should be empty, display all
+        /// </summary>
+        /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
+        /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+        void GetKontakt(string firstname = null, string lastname = null);
+
+        /// <summary>
+        /// This function gets (a) certain Kunde(n) from the saved objects.
+        /// If firstname and lastname should be empty, display all
+        /// </summary>
+        /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
+        /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
+        void GetKunde(string firstname = null, string lastname = null);
+
+        /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
         /// </summary>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>

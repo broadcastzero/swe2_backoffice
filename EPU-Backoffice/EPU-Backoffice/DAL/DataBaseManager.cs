@@ -119,5 +119,27 @@ namespace EPUBackoffice.Dal
 
             this.logger.Log(0, successmessage);
         }
+
+        /// <summary>
+        /// This function gets (a) certain Kontakt(e) from the saved objects in the database.
+        /// If firstname and lastname should be empty, display all
+        /// </summary>
+        /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
+        /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+        public void GetKontakt(string firstname = null, string lastname = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This function gets (a) certain Kunde(n) from the saved objects in the database.
+        /// If firstname and lastname should be empty, display all
+        /// </summary>
+        /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
+        /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
+        public void GetKunde(string firstname = null, string lastname = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

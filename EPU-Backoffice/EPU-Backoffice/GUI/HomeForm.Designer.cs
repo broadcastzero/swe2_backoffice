@@ -194,6 +194,8 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
+            this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -535,6 +537,8 @@
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
+            this.kundenTabSearchChange.Controls.Add(this.searchKundeRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchDataGridView);
             this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchAendern);
             this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchSuchen);
@@ -560,10 +564,10 @@
             this.vornameDataGridViewTextBoxColumn,
             this.nachnameFirmennameDataGridViewTextBoxColumn});
             this.kundenSearchDataGridView.DataSource = this.kundeTableBindingSource;
-            this.kundenSearchDataGridView.Location = new System.Drawing.Point(383, 25);
+            this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
             this.kundenSearchDataGridView.ReadOnly = true;
-            this.kundenSearchDataGridView.Size = new System.Drawing.Size(346, 183);
+            this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
             // 
             // iDDataGridViewTextBoxColumn
@@ -593,7 +597,7 @@
             // 
             // bu_kundenSearchAendern
             // 
-            this.bu_kundenSearchAendern.Location = new System.Drawing.Point(141, 101);
+            this.bu_kundenSearchAendern.Location = new System.Drawing.Point(141, 112);
             this.bu_kundenSearchAendern.Name = "bu_kundenSearchAendern";
             this.bu_kundenSearchAendern.Size = new System.Drawing.Size(97, 23);
             this.bu_kundenSearchAendern.TabIndex = 5;
@@ -602,7 +606,7 @@
             // 
             // bu_kundenSearchSuchen
             // 
-            this.bu_kundenSearchSuchen.Location = new System.Drawing.Point(24, 101);
+            this.bu_kundenSearchSuchen.Location = new System.Drawing.Point(24, 112);
             this.bu_kundenSearchSuchen.Name = "bu_kundenSearchSuchen";
             this.bu_kundenSearchSuchen.Size = new System.Drawing.Size(101, 23);
             this.bu_kundenSearchSuchen.TabIndex = 4;
@@ -1846,6 +1850,29 @@
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             // 
+            // searchKontaktRadioButton
+            // 
+            this.searchKontaktRadioButton.AutoSize = true;
+            this.searchKontaktRadioButton.Location = new System.Drawing.Point(95, 78);
+            this.searchKontaktRadioButton.Name = "searchKontaktRadioButton";
+            this.searchKontaktRadioButton.Size = new System.Drawing.Size(62, 17);
+            this.searchKontaktRadioButton.TabIndex = 8;
+            this.searchKontaktRadioButton.TabStop = true;
+            this.searchKontaktRadioButton.Text = "Kontakt";
+            this.searchKontaktRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // searchKundeRadioButton
+            // 
+            this.searchKundeRadioButton.AutoSize = true;
+            this.searchKundeRadioButton.Checked = true;
+            this.searchKundeRadioButton.Location = new System.Drawing.Point(24, 78);
+            this.searchKundeRadioButton.Name = "searchKundeRadioButton";
+            this.searchKundeRadioButton.Size = new System.Drawing.Size(56, 17);
+            this.searchKundeRadioButton.TabIndex = 7;
+            this.searchKundeRadioButton.TabStop = true;
+            this.searchKundeRadioButton.Text = "Kunde";
+            this.searchKundeRadioButton.UseVisualStyleBackColor = true;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2087,6 +2114,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vornameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nachnameFirmennameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.RadioButton searchKontaktRadioButton;
+        private System.Windows.Forms.RadioButton searchKundeRadioButton;
 
 
 
