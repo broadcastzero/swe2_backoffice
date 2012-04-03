@@ -1,0 +1,3 @@
+03.04.2012 - 09:41 Info: Database path set in config file: ../../../EPU-Backoffice/bin/Debug/backoffice_database.db
+03.04.2012 - 09:41 Warning: Given file path is wrong. File does not exist: ../../../EPU-Backoffice/bin/Debug/Logfile.txt
+03.04.2012 - 09:41 Warning: No entry 'SQLite' in config file.

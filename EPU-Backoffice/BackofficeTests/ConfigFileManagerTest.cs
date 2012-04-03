@@ -15,11 +15,11 @@ namespace BackofficeTests
     using EPUBackoffice.Dal;
 
     /// <summary>
-    ///This is a test class for DataBaseConnectorTest and is intended
-    ///to contain all DataBaseConnectorTest Unit Tests
+    ///This is a test class for ConfigFileManager and is intended
+    ///to contain all ConfigFileManager Unit Tests
     ///</summary>
     [TestClass()]
-    public class DataBaseConnectorTest
+    public class ConfigFileManagerTest
     {
         private TestContext testContextInstance;
         private ConfigFileManager target;
@@ -93,7 +93,7 @@ namespace BackofficeTests
         [TestMethod()]
         public void checkDataBaseExistanceTest2()
         {
-            string path = "../../../EPU-Backoffice/bin/Debug/Logfile.txt";
+            string path = "../../../EPU-Backoffice/bin/Debug/logs.txt";
             bool expected = false;
             bool actual;
             actual = target.CheckDataBaseExistance(path);

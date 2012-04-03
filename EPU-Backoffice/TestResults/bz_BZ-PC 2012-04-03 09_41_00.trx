@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3820e134-37ba-4fda-a4ec-a3ac0ecac0a3" name="bz@BZ-PC 2012-04-03 09:41:00" runUser="bz-PC\bz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="ab2dda47-df62-4ee6-a16b-845126e8200d">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="bz_BZ-PC 2012-04-03 09_41_00">
+      <DeploymentItem filename="C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\System.Data.SQLite.dll" />
+      <DeploymentItem filename="C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\EPU-Backoffice.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-04-03T09:41:00.4726954+02:00" queuing="2012-04-03T09:41:09.5362138+02:00" start="2012-04-03T09:41:10.1772505+02:00" finish="2012-04-03T09:41:11.6823366+02:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="checkLogfileExistanceTest" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="b2292057-8ef8-0fcf-2f24-3fae36502c01">
+      <Execution id="6d67402b-62aa-45c7-a27b-ed5dd2a5430a" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkLogfileExistanceTest" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest1" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776">
+      <Execution id="8443eb65-6e97-47cc-9b31-4be0e44d39c0" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest1" />
+    </UnitTest>
+    <UnitTest name="checkDataBaseExistanceTest2" storage="c:\users\bz\0 fh\swe 2\swe2_backoffice\epu-backoffice\backofficetests\bin\debug\backofficetests.dll" id="6970dadb-9f56-c9d4-db6b-6b668bf94610">
+      <Execution id="59490d9b-fe6f-4d2c-967c-f0ed51e1c1ef" />
+      <TestMethod codeBase="C:/Users/bz/0 FH/SWE 2/swe2_backoffice/EPU-Backoffice/BackofficeTests/bin/Debug/BackofficeTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="BackofficeTests.ConfigFileManagerTest, BackofficeTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="checkDataBaseExistanceTest2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776" executionId="8443eb65-6e97-47cc-9b31-4be0e44d39c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6970dadb-9f56-c9d4-db6b-6b668bf94610" executionId="59490d9b-fe6f-4d2c-967c-f0ed51e1c1ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2292057-8ef8-0fcf-2f24-3fae36502c01" executionId="6d67402b-62aa-45c7-a27b-ed5dd2a5430a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8443eb65-6e97-47cc-9b31-4be0e44d39c0" testId="0e0be8c8-7d1d-4e7c-2e1a-8f223116e776" testName="checkDataBaseExistanceTest1" computerName="BZ-PC" duration="00:00:00.0746224" startTime="2012-04-03T09:41:10.4082637+02:00" endTime="2012-04-03T09:41:11.3343167+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8443eb65-6e97-47cc-9b31-4be0e44d39c0">
+    </UnitTestResult>
+    <UnitTestResult executionId="59490d9b-fe6f-4d2c-967c-f0ed51e1c1ef" testId="6970dadb-9f56-c9d4-db6b-6b668bf94610" testName="checkDataBaseExistanceTest2" computerName="BZ-PC" duration="00:00:00.0030892" startTime="2012-04-03T09:41:11.3633183+02:00" endTime="2012-04-03T09:41:11.3823194+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59490d9b-fe6f-4d2c-967c-f0ed51e1c1ef">
+    </UnitTestResult>
+    <UnitTestResult executionId="6d67402b-62aa-45c7-a27b-ed5dd2a5430a" testId="b2292057-8ef8-0fcf-2f24-3fae36502c01" testName="checkLogfileExistanceTest" computerName="BZ-PC" duration="00:00:00.0048089" startTime="2012-04-03T09:41:11.3853196+02:00" endTime="2012-04-03T09:41:11.4153213+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d67402b-62aa-45c7-a27b-ed5dd2a5430a">
+    </UnitTestResult>
+  </Results>
+</TestRun>
