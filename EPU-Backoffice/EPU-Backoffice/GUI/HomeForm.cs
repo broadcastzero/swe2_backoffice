@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Diagnostics;
-using System.Text;
-using System.Windows.Forms;
-using EPUBackoffice.BL;
-using EPUBackoffice.UserExceptions;
+﻿// -----------------------------------------------------------------------
+// <copyright file="HomeForm.cs" company="Marvin&Felix">
+// TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
+// </copyright>
+// -----------------------------------------------------------------------
 
 namespace EPUBackoffice.Gui
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Diagnostics;
+    using System.Text;
+    using System.Windows.Forms;
+    using EPUBackoffice.BL;
+    using EPUBackoffice.UserExceptions;
     /// <summary>
     /// The standard home screen of the application.
     /// </summary>

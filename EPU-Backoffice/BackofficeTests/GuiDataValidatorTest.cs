@@ -74,14 +74,16 @@ namespace BackofficeTests
 
         public void saveNewKundeTest0()
         {
-            MockDataBaseManager testMockDB = new MockDataBaseManager();
+            
             GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            MockDataBaseManager testMockDB = new MockDataBaseManager();
+            testMockDB.CreateDataBase();
             ConfigFileManager.mockDB = true;
             string firstname = "Hans"; // TODO: Initialize to an appropriate value
             string lastname = "Mayer"; // TODO: Initialize to an appropriate value
             bool type = true; // TODO: Initialize to an appropriate value
             target.saveNewKunde(firstname, lastname, type);
-            Assert.AreNotEqual(MockDataBaseManager.savedKontakte.Count, 0);
+            Assert.AreNotEqual(MockDataBaseManager.savedKontakte.Count,0);
         }
        
         /// <summary>
@@ -94,6 +96,7 @@ namespace BackofficeTests
         {
             GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
             MockDataBaseManager testMockDB = new MockDataBaseManager();
+            testMockDB.CreateDataBase();
             ConfigFileManager.mockDB = true;
             string firstname = string.Empty; // TODO: Initialize to an appropriate value
             string lastname = "Mayer-Bielemann"; // TODO: Initialize to an appropriate value
@@ -138,7 +141,7 @@ namespace BackofficeTests
         ///test wrong entry, invalid lastname / comp
         ///</summary>
         [TestMethod()]
-        [ExpectedException(typeof(InvalidInputException), "Feld 'Nachname/Firma' ist ungültig!")]
+        [ExpectedException(typeof(InvalidInputException), "Fel 'Nachname/Firma' ist ungültig!")]
         public void saveNewKundeTest4()
         {
             GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
