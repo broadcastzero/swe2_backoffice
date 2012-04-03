@@ -48,10 +48,7 @@
             this.kundenTabControl = new System.Windows.Forms.TabControl();
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
             this.kundenNeuErrGeneralLabel = new System.Windows.Forms.Label();
-            this.kundeNeuErrExistingEntryLabel = new System.Windows.Forms.Label();
-            this.kundeNeuSuccsesLabel = new System.Windows.Forms.Label();
-            this.kundeNeuErrNachnameLabel = new System.Windows.Forms.Label();
-            this.kundeNeuErrVornameLabel = new System.Windows.Forms.Label();
+            this.kundeNeuSuccessLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.newKundeResetButton = new System.Windows.Forms.Button();
@@ -177,6 +174,12 @@
             this.projektTab = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.projektErstellenTab = new System.Windows.Forms.TabPage();
+            this.projektNeuResetButton = new System.Windows.Forms.Button();
+            this.projektNeuSpeichernButton = new System.Windows.Forms.Button();
+            this.projektNeuProjekttitelTextbox = new System.Windows.Forms.TextBox();
+            this.projektNeuStartdatumDatepicker = new System.Windows.Forms.DateTimePicker();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.projektSuchenTab = new System.Windows.Forms.TabPage();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
@@ -186,12 +189,6 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.projektNeuStartdatumDatepicker = new System.Windows.Forms.DateTimePicker();
-            this.projektNeuProjekttitelTextbox = new System.Windows.Forms.TextBox();
-            this.projektNeuSpeichernButton = new System.Windows.Forms.Button();
-            this.projektNeuResetButton = new System.Windows.Forms.Button();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -416,10 +413,7 @@
             // 
             this.kundenTabCreate.BackColor = System.Drawing.Color.WhiteSmoke;
             this.kundenTabCreate.Controls.Add(this.kundenNeuErrGeneralLabel);
-            this.kundenTabCreate.Controls.Add(this.kundeNeuErrExistingEntryLabel);
-            this.kundenTabCreate.Controls.Add(this.kundeNeuSuccsesLabel);
-            this.kundenTabCreate.Controls.Add(this.kundeNeuErrNachnameLabel);
-            this.kundenTabCreate.Controls.Add(this.kundeNeuErrVornameLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuSuccessLabel);
             this.kundenTabCreate.Controls.Add(this.label2);
             this.kundenTabCreate.Controls.Add(this.label1);
             this.kundenTabCreate.Controls.Add(this.newKundeResetButton);
@@ -446,49 +440,16 @@
             this.kundenNeuErrGeneralLabel.Text = "Fehler:";
             this.kundenNeuErrGeneralLabel.Visible = false;
             // 
-            // kundeNeuErrExistingEntryLabel
+            // kundeNeuSuccessLabel
             // 
-            this.kundeNeuErrExistingEntryLabel.AutoSize = true;
-            this.kundeNeuErrExistingEntryLabel.ForeColor = System.Drawing.Color.Red;
-            this.kundeNeuErrExistingEntryLabel.Location = new System.Drawing.Point(363, 126);
-            this.kundeNeuErrExistingEntryLabel.Name = "kundeNeuErrExistingEntryLabel";
-            this.kundeNeuErrExistingEntryLabel.Size = new System.Drawing.Size(115, 13);
-            this.kundeNeuErrExistingEntryLabel.TabIndex = 12;
-            this.kundeNeuErrExistingEntryLabel.Text = "Eintrag existiert bereits!";
-            this.kundeNeuErrExistingEntryLabel.Visible = false;
-            // 
-            // kundeNeuSuccsesLabel
-            // 
-            this.kundeNeuSuccsesLabel.AutoSize = true;
-            this.kundeNeuSuccsesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kundeNeuSuccsesLabel.Location = new System.Drawing.Point(327, 140);
-            this.kundeNeuSuccsesLabel.Name = "kundeNeuSuccsesLabel";
-            this.kundeNeuSuccsesLabel.Size = new System.Drawing.Size(110, 13);
-            this.kundeNeuSuccsesLabel.TabIndex = 11;
-            this.kundeNeuSuccsesLabel.Text = "Eingabe erfolgreich! :)";
-            this.kundeNeuSuccsesLabel.Visible = false;
-            // 
-            // kundeNeuErrNachnameLabel
-            // 
-            this.kundeNeuErrNachnameLabel.AutoSize = true;
-            this.kundeNeuErrNachnameLabel.ForeColor = System.Drawing.Color.Red;
-            this.kundeNeuErrNachnameLabel.Location = new System.Drawing.Point(363, 113);
-            this.kundeNeuErrNachnameLabel.Name = "kundeNeuErrNachnameLabel";
-            this.kundeNeuErrNachnameLabel.Size = new System.Drawing.Size(102, 13);
-            this.kundeNeuErrNachnameLabel.TabIndex = 9;
-            this.kundeNeuErrNachnameLabel.Text = "Nachname ungültig!";
-            this.kundeNeuErrNachnameLabel.Visible = false;
-            // 
-            // kundeNeuErrVornameLabel
-            // 
-            this.kundeNeuErrVornameLabel.AutoSize = true;
-            this.kundeNeuErrVornameLabel.ForeColor = System.Drawing.Color.Red;
-            this.kundeNeuErrVornameLabel.Location = new System.Drawing.Point(363, 100);
-            this.kundeNeuErrVornameLabel.Name = "kundeNeuErrVornameLabel";
-            this.kundeNeuErrVornameLabel.Size = new System.Drawing.Size(92, 13);
-            this.kundeNeuErrVornameLabel.TabIndex = 8;
-            this.kundeNeuErrVornameLabel.Text = "Vorname ungültig!";
-            this.kundeNeuErrVornameLabel.Visible = false;
+            this.kundeNeuSuccessLabel.AutoSize = true;
+            this.kundeNeuSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.kundeNeuSuccessLabel.Location = new System.Drawing.Point(327, 126);
+            this.kundeNeuSuccessLabel.Name = "kundeNeuSuccessLabel";
+            this.kundeNeuSuccessLabel.Size = new System.Drawing.Size(110, 13);
+            this.kundeNeuSuccessLabel.TabIndex = 11;
+            this.kundeNeuSuccessLabel.Text = "Eingabe erfolgreich! :)";
+            this.kundeNeuSuccessLabel.Visible = false;
             // 
             // label2
             // 
@@ -1117,7 +1078,6 @@
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
-            this.dateTimePicker4.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
             // 
             // angeboteTab
             // 
@@ -1701,6 +1661,58 @@
             this.projektErstellenTab.TabIndex = 0;
             this.projektErstellenTab.Text = "Erstellen";
             // 
+            // projektNeuResetButton
+            // 
+            this.projektNeuResetButton.Location = new System.Drawing.Point(6, 87);
+            this.projektNeuResetButton.Name = "projektNeuResetButton";
+            this.projektNeuResetButton.Size = new System.Drawing.Size(200, 23);
+            this.projektNeuResetButton.TabIndex = 5;
+            this.projektNeuResetButton.Text = "Felder zurücksetzen";
+            this.projektNeuResetButton.UseVisualStyleBackColor = true;
+            this.projektNeuResetButton.Click += new System.EventHandler(this.projektNeuResetButton_Click);
+            // 
+            // projektNeuSpeichernButton
+            // 
+            this.projektNeuSpeichernButton.Location = new System.Drawing.Point(6, 58);
+            this.projektNeuSpeichernButton.Name = "projektNeuSpeichernButton";
+            this.projektNeuSpeichernButton.Size = new System.Drawing.Size(200, 23);
+            this.projektNeuSpeichernButton.TabIndex = 4;
+            this.projektNeuSpeichernButton.Text = "Speichern";
+            this.projektNeuSpeichernButton.UseVisualStyleBackColor = true;
+            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.projektNeuSpeichernButton_Click);
+            // 
+            // projektNeuProjekttitelTextbox
+            // 
+            this.projektNeuProjekttitelTextbox.Location = new System.Drawing.Point(6, 6);
+            this.projektNeuProjekttitelTextbox.Name = "projektNeuProjekttitelTextbox";
+            this.projektNeuProjekttitelTextbox.Size = new System.Drawing.Size(200, 20);
+            this.projektNeuProjekttitelTextbox.TabIndex = 3;
+            // 
+            // projektNeuStartdatumDatepicker
+            // 
+            this.projektNeuStartdatumDatepicker.Location = new System.Drawing.Point(6, 32);
+            this.projektNeuStartdatumDatepicker.Name = "projektNeuStartdatumDatepicker";
+            this.projektNeuStartdatumDatepicker.Size = new System.Drawing.Size(200, 20);
+            this.projektNeuStartdatumDatepicker.TabIndex = 2;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(212, 38);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(58, 13);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Startdatum";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(212, 9);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(56, 13);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Projekttitel";
+            // 
             // projektSuchenTab
             // 
             this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1792,58 +1804,6 @@
             this.tabPage8.Size = new System.Drawing.Size(747, 233);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(212, 9);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(56, 13);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Projekttitel";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(212, 38);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(58, 13);
-            this.label38.TabIndex = 1;
-            this.label38.Text = "Startdatum";
-            // 
-            // projektNeuStartdatumDatepicker
-            // 
-            this.projektNeuStartdatumDatepicker.Location = new System.Drawing.Point(6, 32);
-            this.projektNeuStartdatumDatepicker.Name = "projektNeuStartdatumDatepicker";
-            this.projektNeuStartdatumDatepicker.Size = new System.Drawing.Size(200, 20);
-            this.projektNeuStartdatumDatepicker.TabIndex = 2;
-            // 
-            // projektNeuProjekttitelTextbox
-            // 
-            this.projektNeuProjekttitelTextbox.Location = new System.Drawing.Point(6, 6);
-            this.projektNeuProjekttitelTextbox.Name = "projektNeuProjekttitelTextbox";
-            this.projektNeuProjekttitelTextbox.Size = new System.Drawing.Size(200, 20);
-            this.projektNeuProjekttitelTextbox.TabIndex = 3;
-            // 
-            // projektNeuSpeichernButton
-            // 
-            this.projektNeuSpeichernButton.Location = new System.Drawing.Point(6, 58);
-            this.projektNeuSpeichernButton.Name = "projektNeuSpeichernButton";
-            this.projektNeuSpeichernButton.Size = new System.Drawing.Size(200, 23);
-            this.projektNeuSpeichernButton.TabIndex = 4;
-            this.projektNeuSpeichernButton.Text = "Speichern";
-            this.projektNeuSpeichernButton.UseVisualStyleBackColor = true;
-            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.projektNeuSpeichernButton_Click);
-            // 
-            // projektNeuResetButton
-            // 
-            this.projektNeuResetButton.Location = new System.Drawing.Point(6, 87);
-            this.projektNeuResetButton.Name = "projektNeuResetButton";
-            this.projektNeuResetButton.Size = new System.Drawing.Size(200, 23);
-            this.projektNeuResetButton.TabIndex = 5;
-            this.projektNeuResetButton.Text = "Felder zurücksetzen";
-            this.projektNeuResetButton.UseVisualStyleBackColor = true;
-            this.projektNeuResetButton.Click += new System.EventHandler(this.projektNeuResetButton_Click);
             // 
             // HomeForm
             // 
@@ -2072,11 +2032,8 @@
         private System.Windows.Forms.Button angebotErstellenBProjektButton;
         private System.Windows.Forms.Button angebotErstellenNProjektButton;
         private System.Windows.Forms.Button angebotErstellenNKundeButton;
-        private System.Windows.Forms.Label kundeNeuSuccsesLabel;
+        private System.Windows.Forms.Label kundeNeuSuccessLabel;
         private System.Windows.Forms.Label kundenNeuErrGeneralLabel;
-        public System.Windows.Forms.Label kundeNeuErrVornameLabel;
-        public System.Windows.Forms.Label kundeNeuErrNachnameLabel;
-        public System.Windows.Forms.Label kundeNeuErrExistingEntryLabel;
         private System.Windows.Forms.Button projektNeuResetButton;
         private System.Windows.Forms.Button projektNeuSpeichernButton;
         private System.Windows.Forms.TextBox projektNeuProjekttitelTextbox;

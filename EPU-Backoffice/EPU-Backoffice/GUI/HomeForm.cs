@@ -36,7 +36,8 @@ namespace EPUBackoffice.Gui
 
         private void kundenKontakteButton_Click(object sender, EventArgs e)
         {
-            mainTab.SelectTab("kundenKontakteTab");   
+            mainTab.SelectTab("kundenKontakteTab");
+            this.hideMessagesKundeNeu();
         }
 
         private void rechnungsverwaltungButton_Click(object sender, EventArgs e)
@@ -78,13 +79,6 @@ namespace EPUBackoffice.Gui
             }
         }      
 
-        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
         /// <summary>
         /// Catches the event, when the user clicks on the "open existing database"-button.
         /// </summary>
@@ -107,8 +101,6 @@ namespace EPUBackoffice.Gui
             Process.GetCurrentProcess().Kill();
         }
 
-
-
         /// <summary>
         /// Clear textblocks in which a new Kunde or Kontakt can be created
         /// </summary>
@@ -122,12 +114,12 @@ namespace EPUBackoffice.Gui
        
         }
 
+        /// <summary>
+        /// Removes all success or error messages from panel "add Kunde/Kontakt"
+        /// </summary>
         public void hideMessagesKundeNeu() 
         {
-            this.kundeNeuErrVornameLabel.Hide();
-            this.kundeNeuErrNachnameLabel.Hide();
-            this.kundeNeuErrExistingEntryLabel.Hide();
-            this.kundeNeuSuccsesLabel.Hide();
+            this.kundeNeuSuccessLabel.Hide();
             this.kundenNeuErrGeneralLabel.Hide();
         }
 
@@ -149,21 +141,20 @@ namespace EPUBackoffice.Gui
             try
             {
                 validator.saveNewKunde(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
-                // show user that everything went fine
             }
             catch(InvalidInputException ex)
             {
                 saved = false;
                 hideMessagesKundeNeu();
+                this.kundenNeuErrGeneralLabel.Text = "Fehler: " + ex.Message;
                 this.kundenNeuErrGeneralLabel.Show();
-                MessageBox.Show(ex.Message, "Neuer " + s_type + " konnte nicht angelegt werden!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // show user that everything went fine
             if (saved)
             {
                 this.hideMessagesKundeNeu();
-                this.kundeNeuSuccsesLabel.Show();
-                //MessageBox.Show("Ein neuer " + s_type + " wurde erfolgreich angelegt.", "Anlegen erfolgreich!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.kundeNeuSuccessLabel.Show();
             }
         }
 
@@ -224,11 +215,6 @@ namespace EPUBackoffice.Gui
             {
                 angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
             }
-        }
-
-        private void kundeNeuErrVornameLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void projektNeuSpeichernButton_Click(object sender, EventArgs e)

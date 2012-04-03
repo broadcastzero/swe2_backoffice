@@ -347,3 +347,34 @@
 02.04.2012 - 23:32 Info: Using SQLite database.
 02.04.2012 - 23:32 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 02.04.2012 - 23:32 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:16 Info: -----------------------------------------------------------
+03.04.2012 - 08:16 Info: Program is started.
+03.04.2012 - 08:16 Info: Using SQLite database.
+03.04.2012 - 08:16 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:16 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:17 Error: 
+03.04.2012 - 08:17 Info: A new Kunde has been saved to the database: adsf adf
+03.04.2012 - 08:17 Error: 
+03.04.2012 - 08:27 Info: -----------------------------------------------------------
+03.04.2012 - 08:27 Info: Program is started.
+03.04.2012 - 08:27 Info: Using SQLite database.
+03.04.2012 - 08:27 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:27 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:27 Error: 
+03.04.2012 - 08:27 Info: A new Kunde has been saved to the database: atest adsf
+03.04.2012 - 08:27 Error: 
+03.04.2012 - 08:27 Error: Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+03.04.2012 - 08:27 Info: -----------------------------------------------------------
+03.04.2012 - 08:27 Info: Program is started.
+03.04.2012 - 08:27 Info: Using SQLite database.
+03.04.2012 - 08:27 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:27 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:27 Error: 
+03.04.2012 - 08:28 Error: 
+03.04.2012 - 08:28 Info: A new Kontakt has been saved to the database: asdf asdf
+03.04.2012 - 08:28 Error: 
+03.04.2012 - 08:28 Info: -----------------------------------------------------------
+03.04.2012 - 08:28 Info: Program is started.
+03.04.2012 - 08:28 Info: Using SQLite database.
+03.04.2012 - 08:28 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 08:28 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db

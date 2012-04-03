@@ -40,7 +40,7 @@ namespace EPUBackoffice.BL
             else if (!Regex.IsMatch(lastname, @"^[a-zA-Z]+$"))
             {
                 this.logger.Log(2, "");
-                throw new InvalidInputException("Feld 'Nachname' ist ungültig!");
+                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
                 
             }
             // else save new Kunde or Kontakt in database
