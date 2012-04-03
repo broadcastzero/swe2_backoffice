@@ -9,32 +9,58 @@ namespace EPUBackoffice.Dal
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
+    using EPUBackoffice.Dal.Tables;
+    using Logger;
 
     /// <summary>
     /// This class manages the mock database.
     /// </summary>
     public class MockDataBaseManager : IDAL
     {
+        // Private fields for tables Kunden/Kontakte
+        private static int kunden_id = 0;
+        private static int kontakt_id = 0;
+        private List<KundeTable> savedKunden;
+        private List<KontaktTable> savedKontakte;
+
         /// <summary>
         /// This method initializes the classes needed to create a mock database
         /// </summary>
         public void CreateDataBase()
         {
-            //TODO: create instance of tables and store some mock data
-            throw new NotImplementedException();
+            this.savedKunden = new List<KundeTable>();
+            this.savedKontakte = new List<KontaktTable>();
         }
 
         /// <summary>
-        /// Saves a new Kunde or Kontakt to the mock database
+        /// Saves a new Kunde or Kontakt to the mock database (IList)
         /// </summary>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void SaveNewKunde(string lastname, bool type, string firstname)
+        public void SaveNewKunde(string lastname, bool type, string firstname = null)
         {
-            throw new NotImplementedException();
+            if (type == false)
+            {
+                KundeTable kunde = new KundeTable();
+                kunde.ID = MockDataBaseManager.kunden_id++;
+                kunde.Vorname = firstname;
+                kunde.NachnameFirmenname = lastname;
+
+                // save to list
+                this.savedKunden.Add(kunde);
+            }
+            else
+            {
+                KontaktTable kontakt = new KontaktTable();
+                kontakt.ID = MockDataBaseManager.kontakt_id++;
+                kontakt.Vorname = firstname;
+                kontakt.NachnameFirmenname = lastname;
+
+                // save to list
+                this.savedKontakte.Add(kontakt);
+            }
         }
     }
 }

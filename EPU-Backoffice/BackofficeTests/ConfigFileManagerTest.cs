@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="DataBaseConnectorTest.cs" company="Marvin&Felix">
+// <copyright file="ConfigFileManagerTest.cs" company="Marvin&Felix">
 // TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
 // </copyright>
