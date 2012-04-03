@@ -59,6 +59,8 @@
             this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
+            this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
+            this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -194,8 +196,6 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
-            this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -553,6 +553,29 @@
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
             // 
+            // searchKontaktRadioButton
+            // 
+            this.searchKontaktRadioButton.AutoSize = true;
+            this.searchKontaktRadioButton.Location = new System.Drawing.Point(95, 78);
+            this.searchKontaktRadioButton.Name = "searchKontaktRadioButton";
+            this.searchKontaktRadioButton.Size = new System.Drawing.Size(62, 17);
+            this.searchKontaktRadioButton.TabIndex = 8;
+            this.searchKontaktRadioButton.TabStop = true;
+            this.searchKontaktRadioButton.Text = "Kontakt";
+            this.searchKontaktRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // searchKundeRadioButton
+            // 
+            this.searchKundeRadioButton.AutoSize = true;
+            this.searchKundeRadioButton.Checked = true;
+            this.searchKundeRadioButton.Location = new System.Drawing.Point(24, 78);
+            this.searchKundeRadioButton.Name = "searchKundeRadioButton";
+            this.searchKundeRadioButton.Size = new System.Drawing.Size(56, 17);
+            this.searchKundeRadioButton.TabIndex = 7;
+            this.searchKundeRadioButton.TabStop = true;
+            this.searchKundeRadioButton.Text = "Kunde";
+            this.searchKundeRadioButton.UseVisualStyleBackColor = true;
+            // 
             // kundenSearchDataGridView
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
@@ -612,6 +635,7 @@
             this.bu_kundenSearchSuchen.TabIndex = 4;
             this.bu_kundenSearchSuchen.Text = "Suchen";
             this.bu_kundenSearchSuchen.UseVisualStyleBackColor = true;
+            this.bu_kundenSearchSuchen.Click += new System.EventHandler(this.bu_kundenSearchSuchen_Click);
             // 
             // label4
             // 
@@ -1849,29 +1873,6 @@
             this.tabPage8.Size = new System.Drawing.Size(747, 233);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
-            // 
-            // searchKontaktRadioButton
-            // 
-            this.searchKontaktRadioButton.AutoSize = true;
-            this.searchKontaktRadioButton.Location = new System.Drawing.Point(95, 78);
-            this.searchKontaktRadioButton.Name = "searchKontaktRadioButton";
-            this.searchKontaktRadioButton.Size = new System.Drawing.Size(62, 17);
-            this.searchKontaktRadioButton.TabIndex = 8;
-            this.searchKontaktRadioButton.TabStop = true;
-            this.searchKontaktRadioButton.Text = "Kontakt";
-            this.searchKontaktRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // searchKundeRadioButton
-            // 
-            this.searchKundeRadioButton.AutoSize = true;
-            this.searchKundeRadioButton.Checked = true;
-            this.searchKundeRadioButton.Location = new System.Drawing.Point(24, 78);
-            this.searchKundeRadioButton.Name = "searchKundeRadioButton";
-            this.searchKundeRadioButton.Size = new System.Drawing.Size(56, 17);
-            this.searchKundeRadioButton.TabIndex = 7;
-            this.searchKundeRadioButton.TabStop = true;
-            this.searchKundeRadioButton.Text = "Kunde";
-            this.searchKundeRadioButton.UseVisualStyleBackColor = true;
             // 
             // HomeForm
             // 

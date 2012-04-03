@@ -235,6 +235,16 @@ namespace EPUBackoffice.Gui
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        /// <summary>
+        /// Gets Kunden or Kontakte out of the database (over the business layer, check for valid input)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bu_kundenSearchSuchen_Click(object sender, EventArgs e)
+        {
             // sample code for databinding - get real values out of database!
             KundeTable k1 = new KundeTable();
             k1.ID = 0;
