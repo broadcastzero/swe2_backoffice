@@ -16,6 +16,7 @@ namespace EPUBackoffice.Gui
     using System.Text;
     using System.Windows.Forms;
     using EPUBackoffice.BL;
+    using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     /// <summary>
     /// The standard home screen of the application.
@@ -230,6 +231,29 @@ namespace EPUBackoffice.Gui
         private void projektNeuResetButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            // sample code for databinding - get real values out of database!
+            KundeTable k1 = new KundeTable();
+            k1.ID = 0;
+            k1.Vorname = "Franz";
+            k1.NachnameFirmenname = "Huber";
+
+            KundeTable k2 = new KundeTable();
+            k2.ID = 1;
+            k2.Vorname = "Michael";
+            k2.NachnameFirmenname = "Gorbatschow";
+
+            KundeTable k3 = new KundeTable();
+            k3.ID = 2;
+            k3.Vorname = "Martin";
+            k3.NachnameFirmenname = "Klein";
+
+            kundeTableBindingSource.Add(k1);
+            kundeTableBindingSource.Add(k2);
+            kundeTableBindingSource.Add(k3);
         }
     }
 }
