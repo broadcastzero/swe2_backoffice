@@ -582,3 +582,10 @@
 03.04.2012 - 19:59 Info: Using SQLite database.
 03.04.2012 - 19:59 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 03.04.2012 - 19:59 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 20:18 Info: -----------------------------------------------------------
+03.04.2012 - 20:18 Info: Program is started.
+03.04.2012 - 20:18 Info: Using SQLite database.
+03.04.2012 - 20:18 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 20:18 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+03.04.2012 - 20:18 Error: 
+03.04.2012 - 20:18 Info: A new Kunde has been saved to the database: test test

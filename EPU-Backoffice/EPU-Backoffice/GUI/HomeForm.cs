@@ -266,7 +266,7 @@ namespace EPUBackoffice.Gui
             kundeTableBindingSource.Add(k3);
 
             // real code
-            DataLoader loader = new DataLoader();
+            /*DataLoader loader = new DataLoader();
             if (this.searchKontaktRadioButton.Checked)
             {
                 List<KontaktTable> contact_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
@@ -274,7 +274,7 @@ namespace EPUBackoffice.Gui
             else
             {
                 List<KundeTable> cost_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
-            }
+            }*/
         }
     }
 }
