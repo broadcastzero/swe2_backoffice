@@ -13,6 +13,7 @@ namespace EPUBackoffice.Dal
     using System.IO;
     using System.Text;
     using EPUBackoffice.BL;
+    using EPUBackoffice.Dal.Tables;
     using Logger;
 
     /// <summary>
@@ -126,7 +127,7 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        public void GetKontakt(string firstname = null, string lastname = null)
+        public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
         {
             throw new NotImplementedException();
         }
@@ -137,7 +138,7 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        public void GetKunde(string firstname = null, string lastname = null)
+        public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
         {
             throw new NotImplementedException();
         }

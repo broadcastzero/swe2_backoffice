@@ -10,6 +10,7 @@ namespace EPUBackoffice.Dal
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using EPUBackoffice.Dal.Tables;
 
     /// <summary>
     /// An Interface to make the data access layer dynamic. Database class must implement these methods.
@@ -27,7 +28,8 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        void GetKontakt(string firstname = null, string lastname = null);
+        /// <returns>A list of the requested Kontakte</returns>
+        List<KontaktTable> GetKontakte(string firstname = null, string lastname = null);
 
         /// <summary>
         /// This function gets (a) certain Kunde(n) from the saved objects.
@@ -35,7 +37,8 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        void GetKunde(string firstname = null, string lastname = null);
+        /// <returns>A list of the requested Kunden</returns>
+        List<KundeTable> GetKunden(string firstname = null, string lastname = null);
 
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.

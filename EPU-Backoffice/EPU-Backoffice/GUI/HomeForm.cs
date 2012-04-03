@@ -264,6 +264,17 @@ namespace EPUBackoffice.Gui
             kundeTableBindingSource.Add(k1);
             kundeTableBindingSource.Add(k2);
             kundeTableBindingSource.Add(k3);
+
+            // real code
+            DataLoader loader = new DataLoader();
+            if (this.searchKontaktRadioButton.Checked)
+            {
+                List<KontaktTable> contact_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+            }
+            else
+            {
+                List<KundeTable> cost_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+            }
         }
     }
 }

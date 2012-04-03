@@ -95,9 +95,10 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        public void GetKontakt(string firstname = null, string lastname = null)
+        /// <returns>A list of the requested Kontakte</returns>
+        public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
         {
-            throw new NotImplementedException();
+            return new List<KontaktTable>();
         }
 
         /// <summary>
@@ -106,9 +107,10 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        public void GetKunde(string firstname = null, string lastname = null)
+        /// <returns>A list of the requested Kunden</returns>
+        public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
         {
-            throw new NotImplementedException();
+            return new List<KundeTable>();
         }
     }
 }

@@ -530,21 +530,23 @@
             This method is responsible for creating a new (mock) database with all its needed tables
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.GetKontakt(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.GetKontakte(System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the saved objects.
             If firstname and lastname should be empty, display all
             </summary>
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+            <returns>A list of the requested Kontakte</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.GetKunde(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.GetKunden(System.String,System.String)">
             <summary>
             This function gets (a) certain Kunde(n) from the saved objects.
             If firstname and lastname should be empty, display all
             </summary>
             <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
+            <returns>A list of the requested Kunden</returns>
         </member>
         <member name="M:EPUBackoffice.Dal.IDAL.SaveNewKunde(System.String,System.Boolean,System.String)">
             <summary>
@@ -572,21 +574,23 @@
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKontakt(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKontakte(System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the mock database.
             If firstname and lastname should be empty, display all
             </summary>
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+            <returns>A list of the requested Kontakte</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKunde(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKunden(System.String,System.String)">
             <summary>
             This function gets (a) certain Kunde(n) from the mockDB.
             If firstname and lastname should be empty, display all
             </summary>
             <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
+            <returns>A list of the requested Kunden</returns>
         </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.kundenID">
             <summary>
@@ -679,7 +683,7 @@
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKontakt(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKontakte(System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the saved objects in the database.
             If firstname and lastname should be empty, display all
@@ -687,7 +691,7 @@
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKunde(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKunden(System.String,System.String)">
             <summary>
             This function gets (a) certain Kunde(n) from the saved objects in the database.
             If firstname and lastname should be empty, display all
@@ -722,6 +726,21 @@
             <param name="firstname">The first name of the Kunde/Kontakt</param>
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="T:EPUBackoffice.BL.DataLoader">
+            <summary>
+            This class' methods load data out of the database and returns a list of requested data.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DataLoader.LoadKunden(System.String,System.String)">
+            <summary>
+            Gets requested Kunden out of the database.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DataLoader.LoadKontakte(System.String,System.String)">
+            <summary>
+            Gets requested Kontakte out of the database.
+            </summary>
         </member>
     </members>
 </doc>
