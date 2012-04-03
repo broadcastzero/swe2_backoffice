@@ -81,13 +81,43 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void SaveNewKunde(string lastname, bool type, string firstname = "<null>")
+        public void SaveNewKunde(string lastname, bool type, string firstname = null)
         {
-            string s_type;
-            if(type == false) { s_type = "Kunde"; }
-            else{ s_type = "Kontakt"; }
+            string s_type = type == false ? "Kunde" : "Kontakt";
 
-            this.logger.Log(0, "A new " + s_type + " has been saved to the database: " + firstname + " " + lastname);
+            string sql = "INSERT INTO " + s_type + " (Vorname, Nachname_Firmenname) VALUES (?, ?)";
+
+            // open connection and save new Kunde/Kontakt in database
+            using (SQLiteConnection con = new SQLiteConnection(ConfigFileManager.connectionString))
+            {
+                con.Open();
+
+                using (SQLiteTransaction tra = con.BeginTransaction())
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, con))
+                {
+                    SQLiteParameter p_firstname = new SQLiteParameter();
+                    SQLiteParameter p_lastname = new SQLiteParameter();
+
+                    // bind first name
+                    p_firstname.Value = firstname;
+                    cmd.Parameters.Add(p_firstname);
+
+                    // bind last name
+                    p_lastname.Value = lastname;
+                    cmd.Parameters.Add(p_lastname);
+
+                    // execute and commit
+                    cmd.ExecuteNonQuery();
+                    tra.Commit();
+                }
+            }
+
+            // success logging
+            string successmessage = "A new " + s_type + " has been saved to the database: ";
+            if( firstname != null) { successmessage = successmessage + firstname + ' '; }
+            successmessage += lastname;
+
+            this.logger.Log(0, successmessage);
         }
     }
 }

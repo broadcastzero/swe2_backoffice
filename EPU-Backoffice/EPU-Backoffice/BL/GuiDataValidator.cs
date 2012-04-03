@@ -45,7 +45,7 @@ namespace EPUBackoffice.BL
             }
             // else save new Kunde or Kontakt in database
             // first name is optional, if empty, just send lastname and type
-            else if (firstname == null)
+            else if (firstname == "")
             {
                 this.logger.Log(0, "Es wird kein Vorname eingetragen.");
                 DALFactory.GetDAL().SaveNewKunde(lastname, type);
