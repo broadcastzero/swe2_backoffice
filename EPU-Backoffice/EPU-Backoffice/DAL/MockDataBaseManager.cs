@@ -21,16 +21,16 @@ namespace EPUBackoffice.Dal
         // Private fields for tables Kunden/Kontakte
         private static int kunden_id = 0;
         private static int kontakt_id = 0;
-        private List<KundeTable> savedKunden;
-        private List<KontaktTable> savedKontakte;
+        private static List<KundeTable> savedKunden;
+        private static List<KontaktTable> savedKontakte;
 
         /// <summary>
         /// This method initializes the classes needed to create a mock database
         /// </summary>
         public void CreateDataBase()
         {
-            this.savedKunden = new List<KundeTable>();
-            this.savedKontakte = new List<KontaktTable>();
+            MockDataBaseManager.savedKunden = new List<KundeTable>();
+            MockDataBaseManager.savedKontakte = new List<KontaktTable>();
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace EPUBackoffice.Dal
                 kunde.NachnameFirmenname = lastname;
 
                 // save to list
-                this.savedKunden.Add(kunde);
+                MockDataBaseManager.savedKunden.Add(kunde);
             }
             else
             {
@@ -59,7 +59,7 @@ namespace EPUBackoffice.Dal
                 kontakt.NachnameFirmenname = lastname;
 
                 // save to list
-                this.savedKontakte.Add(kontakt);
+                MockDataBaseManager.savedKontakte.Add(kontakt);
             }
         }
     }
