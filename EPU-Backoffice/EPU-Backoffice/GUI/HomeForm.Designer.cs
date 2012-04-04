@@ -62,9 +62,6 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nachnameFirmennameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kundeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bu_kundenSearchAendern = new System.Windows.Forms.Button();
             this.bu_kundenSearchSuchen = new System.Windows.Forms.Button();
@@ -580,39 +577,12 @@
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
             this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kundenSearchDataGridView.AutoGenerateColumns = false;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kundenSearchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.vornameDataGridViewTextBoxColumn,
-            this.nachnameFirmennameDataGridViewTextBoxColumn});
-            this.kundenSearchDataGridView.DataSource = this.kundeTableBindingSource;
             this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
             this.kundenSearchDataGridView.ReadOnly = true;
             this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // vornameDataGridViewTextBoxColumn
-            // 
-            this.vornameDataGridViewTextBoxColumn.DataPropertyName = "Vorname";
-            this.vornameDataGridViewTextBoxColumn.HeaderText = "Vorname";
-            this.vornameDataGridViewTextBoxColumn.Name = "vornameDataGridViewTextBoxColumn";
-            this.vornameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nachnameFirmennameDataGridViewTextBoxColumn
-            // 
-            this.nachnameFirmennameDataGridViewTextBoxColumn.DataPropertyName = "NachnameFirmenname";
-            this.nachnameFirmennameDataGridViewTextBoxColumn.HeaderText = "NachnameFirmenname";
-            this.nachnameFirmennameDataGridViewTextBoxColumn.Name = "nachnameFirmennameDataGridViewTextBoxColumn";
-            this.nachnameFirmennameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // kundeTableBindingSource
             // 
@@ -635,7 +605,7 @@
             this.bu_kundenSearchSuchen.TabIndex = 4;
             this.bu_kundenSearchSuchen.Text = "Suchen";
             this.bu_kundenSearchSuchen.UseVisualStyleBackColor = true;
-            this.bu_kundenSearchSuchen.Click += new System.EventHandler(this.bu_kundenSearchSuchen_Click);
+            this.bu_kundenSearchSuchen.Click += new System.EventHandler(this.kundenSearchSuchenButton_Click);
             // 
             // label4
             // 
@@ -657,7 +627,6 @@
             // 
             // seachKundeNachnameTextBlock
             // 
-            this.seachKundeNachnameTextBlock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kundeTableBindingSource, "NachnameFirmenname", true));
             this.seachKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
             this.seachKundeNachnameTextBlock.Name = "seachKundeNachnameTextBlock";
             this.seachKundeNachnameTextBlock.Size = new System.Drawing.Size(214, 20);
@@ -665,7 +634,6 @@
             // 
             // searchKundeVornameTextBlock
             // 
-            this.searchKundeVornameTextBlock.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kundeTableBindingSource, "Vorname", true));
             this.searchKundeVornameTextBlock.Location = new System.Drawing.Point(24, 26);
             this.searchKundeVornameTextBlock.Name = "searchKundeVornameTextBlock";
             this.searchKundeVornameTextBlock.Size = new System.Drawing.Size(214, 20);
@@ -2112,9 +2080,6 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.BindingSource kundeTableBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vornameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nachnameFirmennameDataGridViewTextBoxColumn;
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
 

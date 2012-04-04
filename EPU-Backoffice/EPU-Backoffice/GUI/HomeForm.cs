@@ -243,9 +243,9 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bu_kundenSearchSuchen_Click(object sender, EventArgs e)
+        private void kundenSearchSuchenButton_Click(object sender, EventArgs e)
         {
-            // sample code for databinding - get real values out of database!
+            /* sample code for databinding - get real values out of database!
             KundeTable k1 = new KundeTable();
             k1.ID = 0;
             k1.Vorname = "Franz";
@@ -259,22 +259,7 @@ namespace EPUBackoffice.Gui
             KundeTable k3 = new KundeTable();
             k3.ID = 2;
             k3.Vorname = "Martin";
-            k3.NachnameFirmenname = "Klein";
-
-            kundeTableBindingSource.Add(k1);
-            kundeTableBindingSource.Add(k2);
-            kundeTableBindingSource.Add(k3);
-
-            // real code
-            /*DataLoader loader = new DataLoader();
-            if (this.searchKontaktRadioButton.Checked)
-            {
-                List<KontaktTable> contact_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
-            }
-            else
-            {
-                List<KundeTable> cost_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
-            }*/
+            k3.NachnameFirmenname = "Klein";*/
         }
     }
 }

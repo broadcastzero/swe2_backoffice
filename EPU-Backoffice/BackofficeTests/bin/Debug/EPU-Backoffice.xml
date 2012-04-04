@@ -330,7 +330,7 @@
             <param name="sender">object sender</param>
             <param name="e">EventArgs</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.bu_kundenSearchSuchen_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.kundenSearchSuchenButton_Click(System.Object,System.EventArgs)">
             <summary>
             Gets Kunden or Kontakte out of the database (over the business layer, check for valid input)
             </summary>
