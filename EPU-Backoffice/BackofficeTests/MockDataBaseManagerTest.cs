@@ -44,10 +44,11 @@ namespace BackofficeTests
         //You can use the following additional attributes as you write your tests:
         //
         //Use ClassInitialize to run code before running the first test in the class
-        //[ClassInitialize()]
-        //public static void MyClassInitialize(TestContext testContext)
-        //{
-        //}
+        [ClassInitialize()]
+        public static void MyClassInitialize(TestContext testContext)
+        {
+            ConfigFileManager.mockDB = true;
+        }
         //
         //Use ClassCleanup to run code after all tests in a class have run
         //[ClassCleanup()]
@@ -60,6 +61,12 @@ namespace BackofficeTests
         public void MyTestInitialize()
         {
             this.mdb = new MockDataBaseManager();
+
+            if (MockDataBaseManager.savedKontakte == null)
+            {
+                MockDataBaseManager testMockDB = new MockDataBaseManager();
+                testMockDB.CreateDataBase();
+            }
         }
         //
         //Use TestCleanup to run code after each test has run

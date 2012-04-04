@@ -43,8 +43,9 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.79.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EPU-Backoffice\bin\Debug\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -59,7 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigFileManagerTest.cs" />
-    <Compile Include="GuiDataValidatorTest.cs" />
+    <Compile Include="DataBaseManagerTest.cs" />
+    <Compile Include="DataSaverTest.cs" />
     <Compile Include="MockDataBaseManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

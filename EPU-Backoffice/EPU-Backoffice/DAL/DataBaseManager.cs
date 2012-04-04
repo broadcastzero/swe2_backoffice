@@ -142,11 +142,11 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name</param>
         /// <param name="lastname">The last name</param>
         /// <returns>SQLite prepared statement string</returns>
-        private string GetKundenKontakteSQL(string type, string firstname, string lastname)
+        public string GetKundenKontakteSQL(string type, string firstname, string lastname)
         {
             if (firstname == null && lastname == null)
             {
-                return "SELECT * from " + type;
+                return "SELECT * FROM " + type;
             }
             else if (firstname != null && lastname == null)
             {

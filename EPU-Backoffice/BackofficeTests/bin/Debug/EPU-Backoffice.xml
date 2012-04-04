@@ -676,6 +676,19 @@
             <param name="message">The error message which is thrown</param>
             <param name="inner">The base class</param>
         </member>
+        <member name="T:EPUBackoffice.BL.DataSaver">
+            <summary>
+            Checks data from the GUI and forwards it to the database where it is saved.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DataSaver.saveNewKunde(System.String,System.String,System.Boolean)">
+            <summary>
+            Saves a new Kunde or Kontakt to the database.
+            </summary>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
         <member name="T:EPUBackoffice.BL.Program">
             <summary>
             The main entry class of the application.
@@ -743,19 +756,6 @@
             <summary>
             Foreign key to table Kunde
             </summary>
-        </member>
-        <member name="T:EPUBackoffice.BL.DataSaver">
-            <summary>
-            Checks data from the GUI and forwards it to the database where it is saved.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.DataSaver.saveNewKunde(System.String,System.String,System.Boolean)">
-            <summary>
-            Saves a new Kunde or Kontakt to the database.
-            </summary>
-            <param name="firstname">The first name of the Kunde/Kontakt</param>
-            <param name="lastname">The last name of the Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
     </members>
 </doc>
