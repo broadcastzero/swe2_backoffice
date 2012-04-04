@@ -9,6 +9,7 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Text;
     using System.Text.RegularExpressions;
     using EPUBackoffice.Dal;
@@ -19,7 +20,7 @@ namespace EPUBackoffice.BL
     /// <summary>
     /// This class' methods load data out of the database and returns a list of requested data.
     /// </summary>
-    public class DataLoader
+    public class KundenKontakteLoader
     {
         private Logger logger = Logger.Instance;
 
@@ -45,17 +46,48 @@ namespace EPUBackoffice.BL
             }
             else if(firstname == "" && lastname == "")
             {
-                return DALFactory.GetDAL().GetKunden();
+                try
+                {
+                    return DALFactory.GetDAL().GetKunden();
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
             else if (firstname != "" && lastname == "")
             {
-                return DALFactory.GetDAL().GetKunden(firstname);
+                try
+                {
+                    return DALFactory.GetDAL().GetKunden(firstname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
             else if (firstname == "" && lastname != "")
             {
-                return DALFactory.GetDAL().GetKunden(lastname);
+                try
+                {
+                    return DALFactory.GetDAL().GetKunden(lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
-            else { return DALFactory.GetDAL().GetKunden(firstname, lastname); }
+            else 
+            {
+                try
+                {
+                    return DALFactory.GetDAL().GetKunden(firstname, lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
         }
 
         /// <summary>

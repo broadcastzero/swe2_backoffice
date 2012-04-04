@@ -601,3 +601,14 @@
 04.04.2012 - 09:54 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
 04.04.2012 - 09:54 Info: A new Kunde has been saved to the database: hans huber
 04.04.2012 - 09:54 Error: Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+04.04.2012 - 10:16 Info: -----------------------------------------------------------
+04.04.2012 - 10:16 Info: Program is started.
+04.04.2012 - 10:16 Info: Using SQLite database.
+04.04.2012 - 10:16 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+04.04.2012 - 10:16 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+04.04.2012 - 10:16 Error: User tried to search for invalid last name!
+04.04.2012 - 10:17 Info: -----------------------------------------------------------
+04.04.2012 - 10:17 Info: Program is started.
+04.04.2012 - 10:17 Info: Using SQLite database.
+04.04.2012 - 10:17 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
+04.04.2012 - 10:17 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db

@@ -460,12 +460,12 @@
             bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
-        <member name="T:EPUBackoffice.BL.DataLoader">
+        <member name="T:EPUBackoffice.BL.KundenKontakteLoader">
             <summary>
             This class' methods load data out of the database and returns a list of requested data.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.DataLoader.LoadKunden(System.String,System.String)">
+        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKunden(System.String,System.String)">
             <summary>
             Gets requested Kunden out of the database.
             </summary>
@@ -473,7 +473,7 @@
             <param name="lastname">The last name of the to-be-searched Kunde</param>
             <returns>List of matching Kunden</returns>
         </member>
-        <member name="M:EPUBackoffice.BL.DataLoader.LoadKontakte(System.String,System.String)">
+        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKontakte(System.String,System.String)">
             <summary>
             Gets requested Kontakte out of the database.
             </summary>

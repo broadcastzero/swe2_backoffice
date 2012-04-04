@@ -247,7 +247,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e"></param>
         private void kundenSearchButton_Click(object sender, EventArgs e)
         {
-            DataLoader loader = new DataLoader();
+            KundenKontakteLoader loader = new KundenKontakteLoader();
             
             if(this.searchKontaktRadioButton.Checked)
             {

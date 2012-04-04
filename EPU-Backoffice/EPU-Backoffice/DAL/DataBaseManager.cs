@@ -172,7 +172,65 @@ namespace EPUBackoffice.Dal
         public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
         {
             string sql = GetKundenKontakteSQL("Kontakt", firstname, lastname);
-            return null;            
+
+            // open connection and get requested Kontakt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.connectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // bind first name
+                if (firstname != null)
+                {
+                    SQLiteParameter p_firstname = new SQLiteParameter();
+                    p_firstname.Value = firstname;
+                    cmd.Parameters.Add(p_firstname);
+                }
+                
+                // bind last name
+                if (lastname != null)
+                {
+                    SQLiteParameter p_lastname = new SQLiteParameter();
+                    p_lastname.Value = lastname;
+                    cmd.Parameters.Add(p_lastname);
+                }
+                
+                // execute and get results
+                List<KontaktTable> resultlist = new List<KontaktTable>();
+
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    KontaktTable k = new KontaktTable();
+                    k.ID = reader.GetInt32(0);
+                    k.Vorname = reader.GetString(1);
+                    k.NachnameFirmenname = reader.GetString(2);
+
+                    resultlist.Add(k);
+                }
+
+                return resultlist;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
 
         /// <summary>
@@ -184,7 +242,65 @@ namespace EPUBackoffice.Dal
         public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
         {
             string sql = GetKundenKontakteSQL("Kunde", firstname, lastname);
-            return null;
+
+            // open connection and get requested Kunde(n) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.connectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // bind first name
+                if (firstname != null)
+                {
+                    SQLiteParameter p_firstname = new SQLiteParameter();
+                    p_firstname.Value = firstname;
+                    cmd.Parameters.Add(p_firstname);
+                }
+
+                // bind last name
+                if (lastname != null)
+                {
+                    SQLiteParameter p_lastname = new SQLiteParameter();
+                    p_lastname.Value = lastname;
+                    cmd.Parameters.Add(p_lastname);
+                }
+
+                // execute and get results
+                List<KundeTable> resultlist = new List<KundeTable>();
+
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    KundeTable k = new KundeTable();
+                    k.ID = reader.GetInt32(0);
+                    k.Vorname = reader.GetString(1);
+                    k.NachnameFirmenname = reader.GetString(2);
+
+                    resultlist.Add(k);
+                }
+
+                return resultlist;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
     }
 }

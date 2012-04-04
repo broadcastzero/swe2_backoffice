@@ -9,6 +9,7 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Text;
     using System.Text.RegularExpressions;
     using EPUBackoffice.Dal;
@@ -48,11 +49,26 @@ namespace EPUBackoffice.BL
             else if (firstname == "")
             {
                 this.logger.Log(0, "Es wird kein Vorname eingetragen.");
-                DALFactory.GetDAL().SaveNewKunde(lastname, type);
+
+                try
+                {
+                    DALFactory.GetDAL().SaveNewKunde(lastname, type);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
             else
             {
-                DALFactory.GetDAL().SaveNewKunde(lastname, type, firstname);
+                try
+                {
+                    DALFactory.GetDAL().SaveNewKunde(lastname, type, firstname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
         }
     }
