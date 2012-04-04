@@ -32,7 +32,7 @@ namespace EPUBackoffice.Gui
 
                 if (openfile.ShowDialog() == DialogResult.OK)
                 {
-                    string path = openfile.FileName.ToString();
+                    string path = openfile.FileName;
 
                     DatabaseConnector creator = new DatabaseConnector();
 

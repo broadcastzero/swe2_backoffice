@@ -33,17 +33,17 @@ namespace EPUBackoffice.BL
         /// <returns>List of matching Kontakt</returns>
         public List<KundeKontaktTable> LoadKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
-            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
+            if (firstname != null && firstname.Length != 0 && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
                 logger.Log(2, "User tried to search for invalid first name in Kontakte!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname != "" && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
+            else if (lastname != null && lastname.Length != 0 && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
                 logger.Log(2, "User tried to search for invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
-            else if (firstname == "" && lastname == "")
+            else if (firstname.Length == 0 && lastname.Length == 0)
             {
                 try
                 {
@@ -54,7 +54,7 @@ namespace EPUBackoffice.BL
                     throw;
                 }
             }
-            else if (firstname != "" && lastname == "")
+            else if (firstname.Length != 0 && lastname.Length == 0)
             {
                 try
                 {
@@ -65,7 +65,7 @@ namespace EPUBackoffice.BL
                     throw;
                 }
             }
-            else if (firstname == "" && lastname != "")
+            else if (firstname.Length == 0 && lastname.Length != 0)
             {
                 try
                 {
