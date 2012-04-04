@@ -649,3 +649,41 @@
 04.04.2012 - 12:22 Info: Using SQLite database.
 04.04.2012 - 12:22 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
 04.04.2012 - 12:22 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:21 Info: -----------------------------------------------------------
+04.04.2012 - 13:21 Info: Program is started.
+04.04.2012 - 13:21 Info: Using SQLite database.
+04.04.2012 - 13:21 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:21 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:21 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db
+04.04.2012 - 13:21 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db has been stored in config file.
+04.04.2012 - 13:22 Info: -----------------------------------------------------------
+04.04.2012 - 13:22 Info: Program is started.
+04.04.2012 - 13:22 Info: Using SQLite database.
+04.04.2012 - 13:22 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:22 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:22 Info: -----------------------------------------------------------
+04.04.2012 - 13:22 Info: Program is started.
+04.04.2012 - 13:22 Info: Using SQLite database.
+04.04.2012 - 13:22 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:22 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:22 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db
+04.04.2012 - 13:22 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\realone.db has been stored in config file.
+04.04.2012 - 13:22 Info: Open HomeForm
+04.04.2012 - 13:23 Info: -----------------------------------------------------------
+04.04.2012 - 13:23 Info: Program is started.
+04.04.2012 - 13:23 Info: Using SQLite database.
+04.04.2012 - 13:23 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:23 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:23 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfads.db
+04.04.2012 - 13:23 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfads.db has been stored in config file.
+04.04.2012 - 13:23 Info: A new database has been created.
+04.04.2012 - 13:23 Info: Open HomeForm
+04.04.2012 - 13:29 Info: -----------------------------------------------------------
+04.04.2012 - 13:29 Info: Program is started.
+04.04.2012 - 13:29 Info: Using SQLite database.
+04.04.2012 - 13:29 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:29 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:29 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfd.db
+04.04.2012 - 13:29 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfd.db has been stored in config file.
+04.04.2012 - 13:29 Info: A new database has been created.
+04.04.2012 - 13:29 Info: Open HomeForm
