@@ -257,11 +257,13 @@ namespace EPUBackoffice.Gui
             {
                 if (this.searchKontaktRadioButton.Checked)
                 {
-                    List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                    List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
+                    this.kundenSearchDataGridView.DataSource = kontakt_results;
                 }
                 else if (this.searchKundeRadioButton.Checked)
                 {
-                    List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                    List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
+                    this.kundenSearchDataGridView.DataSource = kunde_results;
                 }
             }
             catch (InvalidInputException ex)

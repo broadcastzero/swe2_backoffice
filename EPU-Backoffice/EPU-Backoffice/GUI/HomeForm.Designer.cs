@@ -66,7 +66,7 @@
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.seachKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
+            this.searchKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.searchKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.rechnungsTabControl = new System.Windows.Forms.TabControl();
@@ -543,7 +543,7 @@
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchButton);
             this.kundenTabSearchChange.Controls.Add(this.label4);
             this.kundenTabSearchChange.Controls.Add(this.label3);
-            this.kundenTabSearchChange.Controls.Add(this.seachKundeNachnameTextBlock);
+            this.kundenTabSearchChange.Controls.Add(this.searchKundeNachnameTextBlock);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeVornameTextBlock);
             this.kundenTabSearchChange.Location = new System.Drawing.Point(4, 22);
             this.kundenTabSearchChange.Name = "kundenTabSearchChange";
@@ -625,10 +625,10 @@
             // 
             // seachKundeNachnameTextBlock
             // 
-            this.seachKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
-            this.seachKundeNachnameTextBlock.Name = "seachKundeNachnameTextBlock";
-            this.seachKundeNachnameTextBlock.Size = new System.Drawing.Size(214, 20);
-            this.seachKundeNachnameTextBlock.TabIndex = 1;
+            this.searchKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
+            this.searchKundeNachnameTextBlock.Name = "seachKundeNachnameTextBlock";
+            this.searchKundeNachnameTextBlock.Size = new System.Drawing.Size(214, 20);
+            this.searchKundeNachnameTextBlock.TabIndex = 1;
             // 
             // searchKundeVornameTextBlock
             // 
@@ -1969,7 +1969,7 @@
         private System.Windows.Forms.Button kundenSearchButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox seachKundeNachnameTextBlock;
+        private System.Windows.Forms.TextBox searchKundeNachnameTextBlock;
         private System.Windows.Forms.TextBox searchKundeVornameTextBlock;
         private System.Windows.Forms.TabPage projektTab;
         private System.Windows.Forms.TabControl tabControl4;

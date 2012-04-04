@@ -71,7 +71,7 @@
             string type = "Kunde";
             string firstname = null;
             string lastname = "Huber";
-            string expected = "SELECT ID, Nachname_Firmenname FROM " + type + " WHERE Nachname_Firmenname = ?";
+            string expected = "SELECT * FROM " + type + " WHERE Nachname_Firmenname = ?";
             string actual;
             actual = target.GetKundenKontakteSQL(type, firstname, lastname);
             Assert.AreEqual(expected, actual);
@@ -88,7 +88,7 @@
             string type = "Kunde";
             string firstname = "Franz";
             string lastname = null;
-            string expected = "SELECT ID, Vorname FROM " + type + " WHERE Vorname = ?";
+            string expected = "SELECT * FROM " + type + " WHERE Vorname = ?";
             string actual;
             actual = target.GetKundenKontakteSQL(type, firstname, lastname);
             Assert.AreEqual(expected, actual);
@@ -122,7 +122,7 @@
             string type = "Kontakt";
             string firstname = "Hans";
             string lastname = "Huber";
-            string expected = "SELECT ID, Vorname, Nachname_Firmenname FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+            string expected = "SELECT * FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
             string actual;
             actual = target.GetKundenKontakteSQL(type, firstname, lastname);
             Assert.AreEqual(expected, actual);

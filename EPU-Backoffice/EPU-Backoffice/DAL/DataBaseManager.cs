@@ -150,15 +150,15 @@ namespace EPUBackoffice.Dal
             }
             else if (firstname != null && lastname == null)
             {
-                return "SELECT ID, Vorname FROM " + type + " WHERE Vorname = ?";
+                return "SELECT * FROM " + type + " WHERE Vorname = ?";
             }
             else if (firstname == null && lastname != null)
             {
-                return "SELECT ID, Nachname_Firmenname FROM " + type + " WHERE Nachname_Firmenname = ?";
+                return "SELECT * FROM " + type + " WHERE Nachname_Firmenname = ?";
             }
             else
             {
-                return "SELECT ID, Vorname, Nachname_Firmenname FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+                return "SELECT * FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
             }
         }
         /// <summary>

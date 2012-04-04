@@ -32,12 +32,12 @@ namespace EPUBackoffice.BL
         /// <returns>List of matching Kunden</returns>
         public List<KundeTable> LoadKunden(string firstname, string lastname)
         {
-            if (firstname != null && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
+            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
                 logger.Log(2, "User tried to search for invalid first name!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname != null && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
+            else if (lastname != "" && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
                 logger.Log(2, "User tried to search for invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
@@ -57,7 +57,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKunden(firstname);
+                    return DALFactory.GetDAL().GetKunden(firstname: firstname);
                 }
                 catch (SQLiteException)
                 {
@@ -68,7 +68,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKunden(lastname);
+                    return DALFactory.GetDAL().GetKunden(lastname: lastname);
                 }
                 catch (SQLiteException)
                 {
@@ -96,31 +96,60 @@ namespace EPUBackoffice.BL
         /// <returns>List of matching Kontakt</returns>
         public List<KontaktTable> LoadKontakte(string firstname = null, string lastname = null)
         {
-            if (firstname != null && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
+            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
-                string msg = "User tried to search for invalid first name!";
-                logger.Log(2, msg);
-                throw new InvalidInputException(msg);
+                logger.Log(2, "User tried to search for invalid first name in Kontakte!");
+                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname != null && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
+            else if (lastname != "" && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
-                string msg = "User tried to search for invalid last name!";
-                logger.Log(2, msg);
-                throw new InvalidInputException(msg);
+                logger.Log(2, "User tried to search for invalid last name!");
+                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
             else if (firstname == "" && lastname == "")
             {
-                return DALFactory.GetDAL().GetKontakte(firstname, lastname);
+                try
+                {
+                    return DALFactory.GetDAL().GetKontakte();
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
             else if (firstname != "" && lastname == "")
             {
-                return DALFactory.GetDAL().GetKontakte(firstname, lastname);
+                try
+                {
+                    return DALFactory.GetDAL().GetKontakte(firstname: firstname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
             else if (firstname == "" && lastname != "")
             {
-                return DALFactory.GetDAL().GetKontakte(firstname, lastname);
+                try
+                {
+                    return DALFactory.GetDAL().GetKontakte(lastname: lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
             }
-            else { return DALFactory.GetDAL().GetKontakte(firstname, lastname); }
+            else
+            {
+                try
+                {
+                    return DALFactory.GetDAL().GetKontakte(firstname, lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
         }
     }
 }

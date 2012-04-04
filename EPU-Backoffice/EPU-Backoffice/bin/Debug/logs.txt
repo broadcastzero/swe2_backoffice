@@ -761,3 +761,117 @@
 04.04.2012 - 14:19 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newdb.db has been stored in config file.
 04.04.2012 - 14:19 Info: A new database has been created.
 04.04.2012 - 14:19 Info: Open HomeForm
+04.04.2012 - 18:43 Info: -----------------------------------------------------------
+04.04.2012 - 18:43 Info: Program is started.
+04.04.2012 - 18:43 Info: Using SQLite database.
+04.04.2012 - 18:43 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:43 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:44 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:44 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:44 Info: Open HomeForm
+04.04.2012 - 18:44 Info: A new Kunde has been saved to the database: Franz Huber
+04.04.2012 - 18:44 Info: A new Kunde has been saved to the database: Franz Huber
+04.04.2012 - 18:44 Info: A new Kunde has been saved to the database: Franz Karl
+04.04.2012 - 18:44 Info: A new Kontakt has been saved to the database: Franz Heinz
+04.04.2012 - 18:44 Error: User tried to search for invalid last name!
+04.04.2012 - 18:45 Error: User tried to search for invalid first name!
+04.04.2012 - 18:45 Error: User tried to search for invalid first name!
+04.04.2012 - 18:46 Error: User tried to search for invalid first name!
+04.04.2012 - 18:46 Error: User tried to search for invalid first name!
+04.04.2012 - 18:46 Error: User tried to search for invalid first name!
+04.04.2012 - 18:47 Info: -----------------------------------------------------------
+04.04.2012 - 18:47 Info: Program is started.
+04.04.2012 - 18:47 Info: Using SQLite database.
+04.04.2012 - 18:47 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:47 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:47 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:47 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:47 Info: Open HomeForm
+04.04.2012 - 18:48 Error: User tried to search for invalid first name!
+04.04.2012 - 18:52 Info: -----------------------------------------------------------
+04.04.2012 - 18:52 Info: Program is started.
+04.04.2012 - 18:52 Info: Using SQLite database.
+04.04.2012 - 18:52 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:52 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:52 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:52 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:52 Info: Open HomeForm
+04.04.2012 - 18:53 Info: -----------------------------------------------------------
+04.04.2012 - 18:53 Info: Program is started.
+04.04.2012 - 18:53 Info: Using SQLite database.
+04.04.2012 - 18:53 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:53 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:53 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:53 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:53 Info: Open HomeForm
+04.04.2012 - 18:53 Info: A new Kunde has been saved to the database: Herr Karl
+04.04.2012 - 18:53 Info: A new Kunde has been saved to the database: Fritz Karl
+04.04.2012 - 18:53 Info: Es wird kein Vorname eingetragen.
+04.04.2012 - 18:53 Info: A new Kunde has been saved to the database: <null> Karl
+04.04.2012 - 18:53 Info: A new Kunde has been saved to the database: Monika Karl
+04.04.2012 - 18:55 Info: -----------------------------------------------------------
+04.04.2012 - 18:55 Info: Program is started.
+04.04.2012 - 18:55 Info: Using SQLite database.
+04.04.2012 - 18:55 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:55 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:56 Info: -----------------------------------------------------------
+04.04.2012 - 18:56 Info: Program is started.
+04.04.2012 - 18:56 Info: Using SQLite database.
+04.04.2012 - 18:56 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:56 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:56 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:56 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:56 Info: Open HomeForm
+04.04.2012 - 18:57 Info: -----------------------------------------------------------
+04.04.2012 - 18:57 Info: Program is started.
+04.04.2012 - 18:57 Info: Using SQLite database.
+04.04.2012 - 18:57 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:57 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:57 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:57 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:57 Info: Open HomeForm
+04.04.2012 - 18:58 Info: -----------------------------------------------------------
+04.04.2012 - 18:58 Info: Program is started.
+04.04.2012 - 18:58 Info: Using SQLite database.
+04.04.2012 - 18:58 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:58 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 18:58 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 18:58 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 18:58 Info: Open HomeForm
+04.04.2012 - 19:02 Info: -----------------------------------------------------------
+04.04.2012 - 19:02 Info: Program is started.
+04.04.2012 - 19:02 Info: Using SQLite database.
+04.04.2012 - 19:02 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:02 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:02 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 19:02 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 19:02 Info: Open HomeForm
+04.04.2012 - 19:10 Info: -----------------------------------------------------------
+04.04.2012 - 19:10 Info: Program is started.
+04.04.2012 - 19:10 Info: Using SQLite database.
+04.04.2012 - 19:10 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:10 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:10 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 19:10 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 19:10 Info: Open HomeForm
+04.04.2012 - 19:13 Info: -----------------------------------------------------------
+04.04.2012 - 19:13 Info: Program is started.
+04.04.2012 - 19:13 Info: Using SQLite database.
+04.04.2012 - 19:13 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:13 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:13 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
+04.04.2012 - 19:13 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
+04.04.2012 - 19:13 Info: A new database has been created.
+04.04.2012 - 19:13 Info: Open HomeForm
+04.04.2012 - 19:13 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 19:13 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 19:14 Info: A new Kontakt has been saved to the database: Herr Heinz
+04.04.2012 - 19:18 Info: -----------------------------------------------------------
+04.04.2012 - 19:18 Info: Program is started.
+04.04.2012 - 19:18 Info: Using SQLite database.
+04.04.2012 - 19:18 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:18 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 19:18 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 19:18 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 19:18 Info: Open HomeForm
+04.04.2012 - 19:18 Info: A new Kontakt has been saved to the database: Hubert Neugebauer
