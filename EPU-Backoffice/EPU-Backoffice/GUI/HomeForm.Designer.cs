@@ -193,6 +193,7 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.kundeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchKundeErrorLabel = new System.Windows.Forms.Label();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -534,6 +535,7 @@
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabSearchChange.Controls.Add(this.searchKundeErrorLabel);
             this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchDataGridView);
@@ -1842,6 +1844,17 @@
             // 
             this.kundeTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeTable);
             // 
+            // searchKundeErrorLabel
+            // 
+            this.searchKundeErrorLabel.AutoSize = true;
+            this.searchKundeErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.searchKundeErrorLabel.Location = new System.Drawing.Point(163, 80);
+            this.searchKundeErrorLabel.Name = "searchKundeErrorLabel";
+            this.searchKundeErrorLabel.Size = new System.Drawing.Size(39, 13);
+            this.searchKundeErrorLabel.TabIndex = 14;
+            this.searchKundeErrorLabel.Text = "Fehler:";
+            this.searchKundeErrorLabel.Visible = false;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2082,6 +2095,7 @@
         private System.Windows.Forms.BindingSource kundeTableBindingSource;
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
+        private System.Windows.Forms.Label searchKundeErrorLabel;
 
 
 

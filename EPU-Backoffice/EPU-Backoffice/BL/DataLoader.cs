@@ -34,15 +34,13 @@ namespace EPUBackoffice.BL
         {
             if (firstname != null && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
-                string msg = "User tried to search for invalid first name!";
-                logger.Log(2, msg);
-                throw new InvalidInputException(msg);
+                logger.Log(2, "User tried to search for invalid first name!");
+                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             else if (lastname != null && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
-                string msg = "User tried to search for invalid last name!";
-                logger.Log(2, msg);
-                throw new InvalidInputException(msg);
+                logger.Log(2, "User tried to search for invalid last name!");
+                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
             else if(firstname == "" && lastname == "")
             {

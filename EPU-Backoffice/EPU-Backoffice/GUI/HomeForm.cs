@@ -127,6 +127,7 @@ namespace EPUBackoffice.Gui
         {
             this.kundeNeuSuccessLabel.Hide();
             this.kundenNeuErrGeneralLabel.Hide();
+            this.searchKundeErrorLabel.Hide();
         }
 
         /// <summary>
@@ -247,15 +248,26 @@ namespace EPUBackoffice.Gui
         /// <param name="e"></param>
         private void kundenSearchButton_Click(object sender, EventArgs e)
         {
+            // hide error message
+            this.searchKundeErrorLabel.Hide();
+
             KundenKontakteLoader loader = new KundenKontakteLoader();
-            
-            if(this.searchKontaktRadioButton.Checked)
+
+            try
             {
-                List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                if (this.searchKontaktRadioButton.Checked)
+                {
+                    List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                }
+                else if (this.searchKundeRadioButton.Checked)
+                {
+                    List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                }
             }
-            else if (this.searchKundeRadioButton.Checked)
+            catch (InvalidInputException ex)
             {
-                List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+                this.searchKundeErrorLabel.Text = "Error: " + ex.Message;
+                this.searchKundeErrorLabel.Show();
             }
             
 
