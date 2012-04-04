@@ -89,28 +89,44 @@ namespace EPUBackoffice.Dal
             string sql = "INSERT INTO " + s_type + " (Vorname, Nachname_Firmenname) VALUES (?, ?)";
 
             // open connection and save new Kunde/Kontakt in database
-            using (SQLiteConnection con = new SQLiteConnection(ConfigFileManager.connectionString))
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            try
             {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.connectionString);
                 con.Open();
 
-                using (SQLiteTransaction tra = con.BeginTransaction())
-                using (SQLiteCommand cmd = new SQLiteCommand(sql, con))
-                {
-                    SQLiteParameter p_firstname = new SQLiteParameter();
-                    SQLiteParameter p_lastname = new SQLiteParameter();
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
 
-                    // bind first name
-                    p_firstname.Value = firstname;
-                    cmd.Parameters.Add(p_firstname);
+                // initialise parameter
+                SQLiteParameter p_firstname = new SQLiteParameter();
+                SQLiteParameter p_lastname = new SQLiteParameter();
 
-                    // bind last name
-                    p_lastname.Value = lastname;
-                    cmd.Parameters.Add(p_lastname);
-
-                    // execute and commit
-                    cmd.ExecuteNonQuery();
-                    tra.Commit();
-                }
+                // bind first name
+                p_firstname.Value = firstname;
+                cmd.Parameters.Add(p_firstname);
+                
+                // bind last name
+                p_lastname.Value = lastname;
+                cmd.Parameters.Add(p_lastname);
+                
+                // execute and commit
+                cmd.ExecuteNonQuery();
+                tra.Commit();
+            }
+            catch(SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
             }
 
             // success logging
