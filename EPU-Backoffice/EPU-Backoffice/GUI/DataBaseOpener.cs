@@ -24,24 +24,26 @@ namespace EPUBackoffice.Gui
         /// <param name="sendingForm">The form in which the sending element (button) was placed.</param>
         public void OpenExistingDatabase(Object sender, EventArgs e, Form sendingForm)
         {
-            OpenFileDialog openfile = new OpenFileDialog();
-            openfile.Title = "Vorhandene Datenbank öffnen";
-            openfile.Filter = "SQLite files (*.db)|*.db";
-            openfile.RestoreDirectory = true;
-
-            if (openfile.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openfile = new OpenFileDialog())
             {
-                string path = openfile.FileName.ToString();
+                openfile.Title = "Vorhandene Datenbank öffnen";
+                openfile.Filter = "SQLite files (*.db)|*.db";
+                openfile.RestoreDirectory = true;
 
-                DatabaseConnector creator = new DatabaseConnector();
+                if (openfile.ShowDialog() == DialogResult.OK)
+                {
+                    string path = openfile.FileName.ToString();
 
-                try
-                {
-                    creator.Connect(sender, path, sendingForm);
-                }
-                catch (InvalidFileException ex)
-                {
-                    MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DatabaseConnector creator = new DatabaseConnector();
+
+                    try
+                    {
+                        creator.Connect(sender, path, sendingForm);
+                    }
+                    catch (InvalidFileException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Datenbank konnte nicht geöffnet werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

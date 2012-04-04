@@ -68,8 +68,6 @@ namespace EPUBackoffice.Dal
             {
                 // Free allocated resources and close connection
                 command.Dispose();
-
-                connection.Close();
                 connection.Dispose();
             }
 

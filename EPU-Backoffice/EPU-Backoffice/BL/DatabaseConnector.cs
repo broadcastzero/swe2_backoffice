@@ -109,8 +109,8 @@ namespace EPUBackoffice.BL
         private void OpenHomeScreen()
         {
             this.logger.Log(0, "Open HomeForm");
-            HomeForm hf = new HomeForm();
-            hf.Show();
+            using (HomeForm hf = new HomeForm())
+            { hf.Show(); }
         }
     }
 }

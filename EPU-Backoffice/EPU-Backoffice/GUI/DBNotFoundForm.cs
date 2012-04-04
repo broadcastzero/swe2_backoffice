@@ -28,26 +28,28 @@
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Title = "Save file as...";
-            dialog.Filter = "SQLite files (*.db)|*.db";
-            dialog.RestoreDirectory = true;
-
-            if (dialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog dialog = new SaveFileDialog())
             {
-                DatabaseConnector creator = new DatabaseConnector();
+                dialog.Title = "Save file as...";
+                dialog.Filter = "SQLite files (*.db)|*.db";
+                dialog.RestoreDirectory = true;
 
-                try
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
-                    creator.Create(this, dialog.FileName);
-                }
-                catch (System.Configuration.ConfigurationException)
-                {
-                    MessageBox.Show("Bei der Erstellung der Datenbank ist etwas schiefgelaufen. Bitte prüfen Sie, ob Sie Schreibrechte für das Konfigurationsdatei besitzen. Löschen Sie die Konfigurationsdatei gegebenenfalls, sie wird beim nächsten Start neu erzeugt.", "Fehlerhafte Konfigurationsdatei", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (SQLiteException ex)
-                {
-                    MessageBox.Show(ex.Message, "Datenbank konnte nicht erstellt werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DatabaseConnector creator = new DatabaseConnector();
+
+                    try
+                    {
+                        creator.Create(this, dialog.FileName);
+                    }
+                    catch (System.Configuration.ConfigurationException)
+                    {
+                        MessageBox.Show("Bei der Erstellung der Datenbank ist etwas schiefgelaufen. Bitte prüfen Sie, ob Sie Schreibrechte für das Konfigurationsdatei besitzen. Löschen Sie die Konfigurationsdatei gegebenenfalls, sie wird beim nächsten Start neu erzeugt.", "Fehlerhafte Konfigurationsdatei", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (SQLiteException ex)
+                    {
+                        MessageBox.Show(ex.Message, "Datenbank konnte nicht erstellt werden.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

@@ -12,6 +12,7 @@ namespace EPUBackoffice.UserExceptions
     /// This Exception is thrown if the user tries to open or save an invalid file.
     /// </summary>
 
+    [Serializable]
     public class InvalidFileException : Exception
     {
         /// <summary>
