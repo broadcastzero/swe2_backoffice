@@ -687,3 +687,11 @@
 04.04.2012 - 13:29 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfd.db has been stored in config file.
 04.04.2012 - 13:29 Info: A new database has been created.
 04.04.2012 - 13:29 Info: Open HomeForm
+04.04.2012 - 13:35 Info: -----------------------------------------------------------
+04.04.2012 - 13:35 Info: Program is started.
+04.04.2012 - 13:35 Info: Using SQLite database.
+04.04.2012 - 13:35 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:35 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:35 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 13:35 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db has been stored in config file.
+04.04.2012 - 13:35 Info: Open HomeForm
