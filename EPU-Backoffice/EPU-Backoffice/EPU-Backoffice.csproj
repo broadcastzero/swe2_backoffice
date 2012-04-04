@@ -56,8 +56,8 @@
   <ItemGroup>
     <Compile Include="BL\ConfigFileManager.cs" />
     <Compile Include="BL\DatabaseConnector.cs" />
-    <Compile Include="BL\DataLoader.cs" />
-    <Compile Include="BL\DataSaver.cs" />
+    <Compile Include="BL\KundenKontakteLoader.cs" />
+    <Compile Include="BL\KundenKontakteSaver.cs" />
     <Compile Include="Dal\DALFactory.cs" />
     <Compile Include="Dal\IDAL.cs" />
     <Compile Include="Dal\MockDataBaseManager.cs" />
@@ -67,8 +67,7 @@
     <Compile Include="Dal\Tables\BuchungszeilenTable.cs" />
     <Compile Include="Dal\Tables\EingangsrechnungTable.cs" />
     <Compile Include="Dal\Tables\KategorienTable.cs" />
-    <Compile Include="Dal\Tables\KontaktTable.cs" />
-    <Compile Include="Dal\Tables\KundeTable.cs" />
+    <Compile Include="Dal\Tables\KundeKontaktTable.cs" />
     <Compile Include="Dal\Tables\ProjektTable.cs" />
     <Compile Include="Dal\DataBaseManager.cs" />
     <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
@@ -99,6 +98,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

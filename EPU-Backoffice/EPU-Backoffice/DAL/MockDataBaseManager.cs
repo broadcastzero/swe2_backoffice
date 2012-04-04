@@ -25,8 +25,8 @@ namespace EPUBackoffice.Dal
         private static int _kontaktID = 0;
 
         // Private fields for saved Kunden/Kontakte (ILists)
-        private static List<KundeTable> _savedKunden;
-        private static List<KontaktTable> _savedKontakte;
+        private static List<KundeKontaktTable> _savedKunden;
+        private static List<KundeKontaktTable> _savedKontakte;
 
         /// <summary>
         /// A continuing, unique ID for the table "Kunden"
@@ -41,20 +41,20 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Static list in which created Kunden are stored
         /// </summary>
-        public static List<KundeTable> savedKunden { get { return _savedKunden; } }
+        public static List<KundeKontaktTable> savedKunden { get { return _savedKunden; } }
 
         /// <summary>
         /// Static list in which created Kontakt are stored
         /// </summary>
-        public static List<KontaktTable> savedKontakte { get { return _savedKontakte; } }
+        public static List<KundeKontaktTable> savedKontakte { get { return _savedKontakte; } }
 
         /// <summary>
         /// This method initializes the classes needed to create a mock database
         /// </summary>
         public void CreateDataBase()
         {
-            MockDataBaseManager._savedKunden = new List<KundeTable>();
-            MockDataBaseManager._savedKontakte = new List<KontaktTable>();
+            MockDataBaseManager._savedKunden = new List<KundeKontaktTable>();
+            MockDataBaseManager._savedKontakte = new List<KundeKontaktTable>();
         }
 
         /// <summary>
@@ -63,11 +63,11 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void SaveNewKunde(string lastname, bool type, string firstname = null)
+        public void SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
         {
             if (type == false)
             {
-                KundeTable kunde = new KundeTable();
+                KundeKontaktTable kunde = new KundeKontaktTable();
                 kunde.ID = MockDataBaseManager.kundenID;
                 kunde.Vorname = firstname;
                 kunde.NachnameFirmenname = lastname;
@@ -78,7 +78,7 @@ namespace EPUBackoffice.Dal
             }
             else
             {
-                KontaktTable kontakt = new KontaktTable();
+                KundeKontaktTable kontakt = new KundeKontaktTable();
                 kontakt.ID = MockDataBaseManager.kontaktID;
                 kontakt.Vorname = firstname;
                 kontakt.NachnameFirmenname = lastname;
@@ -96,9 +96,9 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         /// <returns>A list of the requested Kontakte</returns>
-        public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
+        public List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
-            return new List<KontaktTable>();
+            return new List<KundeKontaktTable>();
         }
 
         /// <summary>
@@ -108,9 +108,9 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
         /// <returns>A list of the requested Kunden</returns>
-        public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
+        public List<KundeKontaktTable> GetKunden(bool type, string firstname = null, string lastname = null)
         {
-            return new List<KundeTable>();
+            return new List<KundeKontaktTable>();
         }
     }
 }

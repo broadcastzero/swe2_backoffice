@@ -99,7 +99,7 @@ namespace BackofficeTests
             string lastname = "Grausgruber";
             bool type = false; // Kunde
             string firstname = "Karl";
-            this.mdb.SaveNewKunde(lastname, type, firstname);
+            this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
 
             int count_after = MockDataBaseManager.savedKunden.Count;
 
@@ -117,7 +117,7 @@ namespace BackofficeTests
             string lastname = "Huber";
             bool type = true; // Kontakt
             string firstname = "Hans";
-            this.mdb.SaveNewKunde(lastname, type, firstname);
+            this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
 
             int count_after = MockDataBaseManager.savedKontakte.Count;
 

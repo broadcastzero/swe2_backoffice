@@ -25,76 +25,13 @@ namespace EPUBackoffice.BL
         private Logger logger = Logger.Instance;
 
         /// <summary>
-        /// Gets requested Kunden out of the database.
-        /// </summary>
-        /// <param name="firstname">The first name of the to-be-searched Kunde</param>
-        /// <param name="lastname">The last name of the to-be-searched Kunde</param>
-        /// <returns>List of matching Kunden</returns>
-        public List<KundeTable> LoadKunden(string firstname, string lastname)
-        {
-            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
-            {
-                logger.Log(2, "User tried to search for invalid first name!");
-                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
-            }
-            else if (lastname != "" && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
-            {
-                logger.Log(2, "User tried to search for invalid last name!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
-            }
-            else if(firstname == "" && lastname == "")
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKunden();
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if (firstname != "" && lastname == "")
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKunden(firstname: firstname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if (firstname == "" && lastname != "")
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKunden(lastname: lastname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else 
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKunden(firstname, lastname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-        }
-
-        /// <summary>
         /// Gets requested Kontakte out of the database.
         /// </summary>
         /// <param name="firstname">The first name of the to-be-searched Kontakt</param>
         /// <param name="lastname">The last name of the to-be-searched Kontakt</param>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <returns>List of matching Kontakt</returns>
-        public List<KontaktTable> LoadKontakte(string firstname = null, string lastname = null)
+        public List<KundeKontaktTable> LoadKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
             if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
@@ -110,7 +47,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKontakte();
+                    return DALFactory.GetDAL().GetKundenKontakte(type);
                 }
                 catch (SQLiteException)
                 {
@@ -121,7 +58,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKontakte(firstname: firstname);
+                    return DALFactory.GetDAL().GetKundenKontakte(type, firstname: firstname);
                 }
                 catch (SQLiteException)
                 {
@@ -132,7 +69,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKontakte(lastname: lastname);
+                    return DALFactory.GetDAL().GetKundenKontakte(type, lastname: lastname);
                 }
                 catch (SQLiteException)
                 {
@@ -143,7 +80,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().GetKontakte(firstname, lastname);
+                    return DALFactory.GetDAL().GetKundenKontakte(type, firstname, lastname);
                 }
                 catch (SQLiteException)
                 {

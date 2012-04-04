@@ -59,6 +59,7 @@
             this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
+            this.searchKundeErrorLabel = new System.Windows.Forms.Label();
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
@@ -192,8 +193,7 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.kundeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchKundeErrorLabel = new System.Windows.Forms.Label();
+            this.KundeKontaktTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -230,7 +230,7 @@
             this.tabControl5.SuspendLayout();
             this.reportTab.SuspendLayout();
             this.tabControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -552,6 +552,17 @@
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
             // 
+            // searchKundeErrorLabel
+            // 
+            this.searchKundeErrorLabel.AutoSize = true;
+            this.searchKundeErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.searchKundeErrorLabel.Location = new System.Drawing.Point(163, 80);
+            this.searchKundeErrorLabel.Name = "searchKundeErrorLabel";
+            this.searchKundeErrorLabel.Size = new System.Drawing.Size(39, 13);
+            this.searchKundeErrorLabel.TabIndex = 14;
+            this.searchKundeErrorLabel.Text = "Fehler:";
+            this.searchKundeErrorLabel.Visible = false;
+            // 
             // searchKontaktRadioButton
             // 
             this.searchKontaktRadioButton.AutoSize = true;
@@ -579,6 +590,7 @@
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
             this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
@@ -623,10 +635,10 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Vorname";
             // 
-            // seachKundeNachnameTextBlock
+            // searchKundeNachnameTextBlock
             // 
             this.searchKundeNachnameTextBlock.Location = new System.Drawing.Point(24, 52);
-            this.searchKundeNachnameTextBlock.Name = "seachKundeNachnameTextBlock";
+            this.searchKundeNachnameTextBlock.Name = "searchKundeNachnameTextBlock";
             this.searchKundeNachnameTextBlock.Size = new System.Drawing.Size(214, 20);
             this.searchKundeNachnameTextBlock.TabIndex = 1;
             // 
@@ -1840,20 +1852,9 @@
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             // 
-            // kundeTableBindingSource
+            // KundeKontaktTableBindingSource
             // 
-            this.kundeTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeTable);
-            // 
-            // searchKundeErrorLabel
-            // 
-            this.searchKundeErrorLabel.AutoSize = true;
-            this.searchKundeErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.searchKundeErrorLabel.Location = new System.Drawing.Point(163, 80);
-            this.searchKundeErrorLabel.Name = "searchKundeErrorLabel";
-            this.searchKundeErrorLabel.Size = new System.Drawing.Size(39, 13);
-            this.searchKundeErrorLabel.TabIndex = 14;
-            this.searchKundeErrorLabel.Text = "Fehler:";
-            this.searchKundeErrorLabel.Visible = false;
+            this.KundeKontaktTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeKontaktTable);
             // 
             // HomeForm
             // 
@@ -1925,7 +1926,7 @@
             this.tabControl5.ResumeLayout(false);
             this.reportTab.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2092,7 +2093,7 @@
         private System.Windows.Forms.DateTimePicker projektNeuStartdatumDatepicker;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.BindingSource kundeTableBindingSource;
+        private System.Windows.Forms.BindingSource KundeKontaktTableBindingSource;
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.Label searchKundeErrorLabel;

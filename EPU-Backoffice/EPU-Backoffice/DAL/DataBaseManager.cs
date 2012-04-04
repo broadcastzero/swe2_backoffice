@@ -80,7 +80,7 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void SaveNewKunde(string lastname, bool type, string firstname = null)
+        public void SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
         {
             string s_type = type == false ? "Kunde" : "Kontakt";
 
@@ -128,10 +128,7 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = "A new " + s_type + " has been saved to the database: ";
-            if( firstname != null) { successmessage = successmessage + firstname + ' '; }
-            successmessage += lastname;
-
+            string successmessage = "A new " + s_type + " has been saved to the database: " + firstname + " " + lastname;
             this.logger.Log(0, successmessage);
         }
 
@@ -167,9 +164,12 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
+        /// <param name="type">false...Kunde, true...Kontakt</param>
+        public List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
-            string sql = GetKundenKontakteSQL("Kontakt", firstname, lastname);
+            string s_type = type == false ? "Kunde" : "Kontakt";
+            string sql = GetKundenKontakteSQL(s_type, firstname, lastname);
+            List<KundeKontaktTable> resultlist = new List<KundeKontaktTable>();
 
             // open connection and get requested Kontakt(e) out of database
             SQLiteConnection con = null;
@@ -203,82 +203,10 @@ namespace EPUBackoffice.Dal
                 }
                 
                 // execute and get results
-                List<KontaktTable> resultlist = new List<KontaktTable>();
-
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    KontaktTable k = new KontaktTable();
-                    k.ID = reader.GetInt32(0);
-                    k.Vorname = reader.GetString(1);
-                    k.NachnameFirmenname = reader.GetString(2);
-
-                    resultlist.Add(k);
-                }
-
-                return resultlist;
-            }
-            catch (SQLiteException)
-            {
-                throw;
-            }
-            finally
-            {
-                if (reader != null) { reader.Dispose(); }
-                if (tra != null) { tra.Dispose(); }
-                if (cmd != null) { cmd.Dispose(); }
-                if (con != null) { con.Dispose(); }
-            }
-        }
-
-        /// <summary>
-        /// This function gets (a) certain Kunde(n) from the saved objects in the database.
-        /// If firstname and lastname should be empty, display all
-        /// </summary>
-        /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
-        {
-            string sql = GetKundenKontakteSQL("Kunde", firstname, lastname);
-
-            // open connection and get requested Kunde(n) out of database
-            SQLiteConnection con = null;
-            SQLiteTransaction tra = null;
-            SQLiteCommand cmd = null;
-            SQLiteDataReader reader = null;
-            try
-            {
-                // initialise connection
-                con = new SQLiteConnection(ConfigFileManager.connectionString);
-                con.Open();
-
-                // initialise transaction
-                tra = con.BeginTransaction();
-                cmd = new SQLiteCommand(sql, con);
-
-                // bind first name
-                if (firstname != null)
-                {
-                    SQLiteParameter p_firstname = new SQLiteParameter();
-                    p_firstname.Value = firstname;
-                    cmd.Parameters.Add(p_firstname);
-                }
-
-                // bind last name
-                if (lastname != null)
-                {
-                    SQLiteParameter p_lastname = new SQLiteParameter();
-                    p_lastname.Value = lastname;
-                    cmd.Parameters.Add(p_lastname);
-                }
-
-                // execute and get results
-                List<KundeTable> resultlist = new List<KundeTable>();
-
-                reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    KundeTable k = new KundeTable();
+                    KundeKontaktTable k = new KundeKontaktTable();
                     k.ID = reader.GetInt32(0);
                     k.Vorname = reader.GetString(1);
                     k.NachnameFirmenname = reader.GetString(2);

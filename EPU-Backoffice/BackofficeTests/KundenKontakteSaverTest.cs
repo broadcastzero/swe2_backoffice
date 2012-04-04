@@ -12,7 +12,7 @@ namespace BackofficeTests
     ///to contain all GuiDataValidatorTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class DataSaverTest
+    public class KundenKontakteSaverTest
     {
         private TestContext testContextInstance;
 
@@ -76,11 +76,11 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException), "Feld 'Vorname' ist ungültig!")]
         public void saveNewKundeTest()
         {
-            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
+            KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
             string firstname = "Hans4*"; // TODO: Initialize to an appropriate value
             string lastname = "Mayer"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value
-            target.saveNewKunde(firstname, lastname, type);
+            target.saveNewKundeKontakt(firstname, lastname, type);
         }
 
         /// <summary>
@@ -91,11 +91,11 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException), "Feld 'Nachname/Firma' ist ungültig!")]
         public void saveNewKundeTest1()
         {
-            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
+            KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
             string firstname = string.Empty; // TODO: Initialize to an appropriate value
             string lastname = "#"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value
-            target.saveNewKunde(firstname, lastname, type);
+            target.saveNewKundeKontakt(firstname, lastname, type);
         }
     }
 }

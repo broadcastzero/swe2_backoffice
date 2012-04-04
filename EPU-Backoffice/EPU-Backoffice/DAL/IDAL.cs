@@ -29,16 +29,7 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         /// <returns>A list of the requested Kontakte</returns>
-        List<KontaktTable> GetKontakte(string firstname = null, string lastname = null);
-
-        /// <summary>
-        /// This function gets (a) certain Kunde(n) from the saved objects.
-        /// If firstname and lastname should be empty, display all
-        /// </summary>
-        /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        /// <returns>A list of the requested Kunden</returns>
-        List<KundeTable> GetKunden(string firstname = null, string lastname = null);
+        List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null);
 
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
@@ -46,6 +37,6 @@ namespace EPUBackoffice.Dal
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        void SaveNewKunde(string lastname, bool type, string firstname="<null>");
+        void SaveNewKundeKontakt(string lastname, bool type, string firstname="<null>");
     }
 }

@@ -140,14 +140,14 @@ namespace EPUBackoffice.Gui
             // is set to false in case of error
             bool saved = true;
 
-            DataSaver validator = new DataSaver();
+            KundenKontakteSaver validator = new KundenKontakteSaver();
             // bool type: false -> Kunde, true -> Kontakt
             bool type = this.createKontaktRadioButton.Checked;
             string s_type = type == false ? "Kunde" : "Kontakt";
 
             try
             {
-                validator.saveNewKunde(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
+                validator.saveNewKundeKontakt(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
             }
             catch(InvalidInputException ex)
             {
@@ -255,16 +255,17 @@ namespace EPUBackoffice.Gui
 
             try
             {
+                List<KundeKontaktTable> results;
+               
+                // Kunde (false) or Kontakt (true)?
+                bool type = false;
                 if (this.searchKontaktRadioButton.Checked)
                 {
-                    List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
-                    this.kundenSearchDataGridView.DataSource = kontakt_results;
+                    type = true;
                 }
-                else if (this.searchKundeRadioButton.Checked)
-                {
-                    List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
-                    this.kundenSearchDataGridView.DataSource = kunde_results;
-                }
+
+                results = loader.LoadKundenKontakte(type, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
+                this.kundenSearchDataGridView.DataSource = results;
             }
             catch (InvalidInputException ex)
             {
@@ -274,17 +275,17 @@ namespace EPUBackoffice.Gui
             
 
             /* sample code for databinding - get real values out of database!
-            KundeTable k1 = new KundeTable();
+            KundeKontaktTable k1 = new KundeKontaktTable();
             k1.ID = 0;
             k1.Vorname = "Franz";
             k1.NachnameFirmenname = "Huber";
 
-            KundeTable k2 = new KundeTable();
+            KundeKontaktTable k2 = new KundeKontaktTable();
             k2.ID = 1;
             k2.Vorname = "Michael";
             k2.NachnameFirmenname = "Gorbatschow";
 
-            KundeTable k3 = new KundeTable();
+            KundeKontaktTable k3 = new KundeKontaktTable();
             k3.ID = 2;
             k3.Vorname = "Martin";
             k3.NachnameFirmenname = "Klein";*/

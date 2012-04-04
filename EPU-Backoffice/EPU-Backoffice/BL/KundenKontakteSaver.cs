@@ -19,7 +19,7 @@ namespace EPUBackoffice.BL
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.
     /// </summary>
-    public class DataSaver
+    public class KundenKontakteSaver
     {
         Logger logger = Logger.Instance;
 
@@ -29,7 +29,7 @@ namespace EPUBackoffice.BL
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void saveNewKunde(string firstname, string lastname, bool type)
+        public void saveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
             if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
@@ -52,7 +52,7 @@ namespace EPUBackoffice.BL
 
                 try
                 {
-                    DALFactory.GetDAL().SaveNewKunde(lastname, type);
+                    DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type);
                 }
                 catch (SQLiteException)
                 {
@@ -63,7 +63,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    DALFactory.GetDAL().SaveNewKunde(lastname, type, firstname);
+                    DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type, firstname);
                 }
                 catch (SQLiteException)
                 {

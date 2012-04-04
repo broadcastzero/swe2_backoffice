@@ -184,26 +184,6 @@
             The number of hours that shall be booked
             </summary>
         </member>
-        <member name="T:EPUBackoffice.Dal.Tables.KontaktTable">
-            <summary>
-            A class for the database table "Kontakt" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KontaktTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KontaktTable.Vorname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KontaktTable.NachnameFirmenname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
         <member name="T:EPUBackoffice.BL.DatabaseConnector">
             <summary>
             Creates a new SQLite ".db" file with its needed tables.
@@ -250,26 +230,6 @@
             <param name="sender">The element (button) which has called this function.</param>
             <param name="e">Event arguments</param>
             <param name="sendingForm">The form in which the sending element (button) was placed.</param>
-        </member>
-        <member name="T:EPUBackoffice.Dal.Tables.KundeTable">
-            <summary>
-            A class for the database table "Kunde" with its attributes
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.ID">
-            <summary>
-            Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.Vorname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeTable.NachnameFirmenname">
-            <summary>
-            Foreign key to table Kunde
-            </summary>
         </member>
         <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
             <summary>
@@ -460,27 +420,6 @@
             bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
-        <member name="T:EPUBackoffice.BL.KundenKontakteLoader">
-            <summary>
-            This class' methods load data out of the database and returns a list of requested data.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKunden(System.String,System.String)">
-            <summary>
-            Gets requested Kunden out of the database.
-            </summary>
-            <param name="firstname">The first name of the to-be-searched Kunde</param>
-            <param name="lastname">The last name of the to-be-searched Kunde</param>
-            <returns>List of matching Kunden</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKontakte(System.String,System.String)">
-            <summary>
-            Gets requested Kontakte out of the database.
-            </summary>
-            <param name="firstname">The first name of the to-be-searched Kontakt</param>
-            <param name="lastname">The last name of the to-be-searched Kontakt</param>
-            <returns>List of matching Kontakt</returns>
-        </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
             A class for the database table "Eingangsrechnung" with its attributes
@@ -551,7 +490,7 @@
             This method is responsible for creating a new (mock) database with all its needed tables
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.GetKontakte(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.GetKundenKontakte(System.Boolean,System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the saved objects.
             If firstname and lastname should be empty, display all
@@ -560,16 +499,7 @@
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <returns>A list of the requested Kontakte</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.GetKunden(System.String,System.String)">
-            <summary>
-            This function gets (a) certain Kunde(n) from the saved objects.
-            If firstname and lastname should be empty, display all
-            </summary>
-            <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-            <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-            <returns>A list of the requested Kunden</returns>
-        </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.SaveNewKunde(System.String,System.Boolean,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.SaveNewKundeKontakt(System.String,System.Boolean,System.String)">
             <summary>
             Saves a new Kunde or Kontakt to the database.
             </summary>
@@ -587,7 +517,7 @@
             This method initializes the classes needed to create a mock database
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.SaveNewKunde(System.String,System.Boolean,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.SaveNewKundeKontakt(System.String,System.Boolean,System.String)">
             <summary>
             Saves a new Kunde or Kontakt to the mock database (IList)
             </summary>
@@ -595,7 +525,7 @@
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKontakte(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKundenKontakte(System.Boolean,System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the mock database.
             If firstname and lastname should be empty, display all
@@ -604,7 +534,7 @@
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <returns>A list of the requested Kontakte</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKunden(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKunden(System.Boolean,System.String,System.String)">
             <summary>
             This function gets (a) certain Kunde(n) from the mockDB.
             If firstname and lastname should be empty, display all
@@ -676,19 +606,6 @@
             <param name="message">The error message which is thrown</param>
             <param name="inner">The base class</param>
         </member>
-        <member name="T:EPUBackoffice.BL.DataSaver">
-            <summary>
-            Checks data from the GUI and forwards it to the database where it is saved.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.DataSaver.saveNewKunde(System.String,System.String,System.Boolean)">
-            <summary>
-            Saves a new Kunde or Kontakt to the database.
-            </summary>
-            <param name="firstname">The first name of the Kunde/Kontakt</param>
-            <param name="lastname">The last name of the Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        </member>
         <member name="T:EPUBackoffice.BL.Program">
             <summary>
             The main entry class of the application.
@@ -709,7 +626,7 @@
             Connects to the database and creates its tables if they do not exist yet.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.SaveNewKunde(System.String,System.Boolean,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SaveNewKundeKontakt(System.String,System.Boolean,System.String)">
             <summary>
             Saves a new Kunde or Kontakt to the database
             </summary>
@@ -726,21 +643,14 @@
             <param name="lastname">The last name</param>
             <returns>SQLite prepared statement string</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKontakte(System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKundenKontakte(System.Boolean,System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the saved objects in the database.
             If firstname and lastname should be empty, display all
             </summary>
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKunden(System.String,System.String)">
-            <summary>
-            This function gets (a) certain Kunde(n) from the saved objects in the database.
-            If firstname and lastname should be empty, display all
-            </summary>
-            <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-            <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.KategorienTable">
             <summary>
@@ -755,6 +665,58 @@
         <member name="P:EPUBackoffice.Dal.Tables.KategorienTable.Name">
             <summary>
             Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.KundenKontakteLoader">
+            <summary>
+            This class' methods load data out of the database and returns a list of requested data.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKundenKontakte(System.Boolean,System.String,System.String)">
+            <summary>
+            Gets requested Kontakte out of the database.
+            </summary>
+            <param name="firstname">The first name of the to-be-searched Kontakt</param>
+            <param name="lastname">The last name of the to-be-searched Kontakt</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
+            <returns>List of matching Kontakt</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.KundenKontakteSaver">
+            <summary>
+            Checks data from the GUI and forwards it to the database where it is saved.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteSaver.saveNewKundeKontakt(System.String,System.String,System.Boolean)">
+            <summary>
+            Saves a new Kunde or Kontakt to the database.
+            </summary>
+            <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="T:EPUBackoffice.Dal.Tables.KundeKontaktTable">
+            <summary>
+            A class for the database table "Kontakt" with its attributes
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.ID">
+            <summary>
+            Unique ID for the table
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.Vorname">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.NachnameFirmenname">
+            <summary>
+            Foreign key to table Kunde
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.type">
+            <summary>
+            Is it a Kunde (false) or a Kontakt (true) we are talking about?
             </summary>
         </member>
     </members>

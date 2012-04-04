@@ -13,7 +13,7 @@ namespace EPUBackoffice.Dal.Tables
     /// <summary>
     /// A class for the database table "Kontakt" with its attributes
     /// </summary>
-    public class KontaktTable
+    public class KundeKontaktTable
     {
         private int _ID;
         /// <summary>
@@ -44,5 +44,12 @@ namespace EPUBackoffice.Dal.Tables
             get { return _NachnameFirmenname; }
             set { { _NachnameFirmenname = value; } }
         }
+
+        // Kunde...false, Kontakt...true
+        private bool _type;
+        /// <summary>
+        /// Is it a Kunde (false) or a Kontakt (true) we are talking about?
+        /// </summary>
+        public bool type { get { return _type; } set { _type = value; } }
     }
 }
