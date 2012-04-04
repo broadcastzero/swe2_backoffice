@@ -93,6 +93,7 @@ namespace EPUBackoffice.Dal
         /// This function gets (a) certain Kontakt(e) from the mock database.
         /// If firstname and lastname should be empty, display all
         /// </summary>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         /// <returns>A list of the requested Kontakte</returns>
@@ -105,6 +106,7 @@ namespace EPUBackoffice.Dal
         /// This function gets (a) certain Kunde(n) from the mockDB.
         /// If firstname and lastname should be empty, display all
         /// </summary>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
         /// <returns>A list of the requested Kunden</returns>

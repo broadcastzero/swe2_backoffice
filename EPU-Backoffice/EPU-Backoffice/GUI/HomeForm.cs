@@ -266,6 +266,7 @@ namespace EPUBackoffice.Gui
 
                 results = loader.LoadKundenKontakte(type, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
                 this.kundenSearchDataGridView.DataSource = results;
+                kundenSearchDataGridView.Columns["type"].Visible = false;
             }
             catch (InvalidInputException ex)
             {

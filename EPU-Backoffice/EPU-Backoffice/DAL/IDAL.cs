@@ -26,6 +26,7 @@ namespace EPUBackoffice.Dal
         /// This function gets (a) certain Kontakt(e) from the saved objects.
         /// If firstname and lastname should be empty, display all
         /// </summary>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         /// <returns>A list of the requested Kontakte</returns>
