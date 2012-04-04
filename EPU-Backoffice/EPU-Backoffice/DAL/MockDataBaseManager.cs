@@ -53,8 +53,11 @@ namespace EPUBackoffice.Dal
         /// </summary>
         public void CreateDataBase()
         {
-            MockDataBaseManager._savedKunden = new List<KundeKontaktTable>();
-            MockDataBaseManager._savedKontakte = new List<KundeKontaktTable>();
+            lock(MockDataBaseManager._savedKunden)
+            {
+                MockDataBaseManager._savedKunden = new List<KundeKontaktTable>();
+                MockDataBaseManager._savedKontakte = new List<KundeKontaktTable>();
+            }
         }
 
         /// <summary>

@@ -29,7 +29,7 @@ namespace EPUBackoffice.BL
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void saveNewKundeKontakt(string firstname, string lastname, bool type)
+        public void SaveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
             if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
@@ -46,7 +46,7 @@ namespace EPUBackoffice.BL
             }
             // else save new Kunde or Kontakt in database
             // first name is optional, if empty, just send lastname and type
-            else if (firstname == "")
+            else if (firstname.Length == 0)
             {
                 this.logger.Log(0, "Es wird kein Vorname eingetragen.");
 

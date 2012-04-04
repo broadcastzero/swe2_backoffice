@@ -46,10 +46,10 @@ namespace EPUBackoffice.Dal.Tables
         }
 
         // Kunde...false, Kontakt...true
-        private bool _type;
+        private bool _Type;
         /// <summary>
         /// Is it a Kunde (false) or a Kontakt (true) we are talking about?
         /// </summary>
-        public bool type { get { return _type; } set { _type = value; } }
+        public bool Type { get { return _Type; } set { _Type = value; } }
     }
 }

@@ -689,7 +689,7 @@
             Checks data from the GUI and forwards it to the database where it is saved.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteSaver.saveNewKundeKontakt(System.String,System.String,System.Boolean)">
+        <member name="M:EPUBackoffice.BL.KundenKontakteSaver.SaveNewKundeKontakt(System.String,System.String,System.Boolean)">
             <summary>
             Saves a new Kunde or Kontakt to the database.
             </summary>
@@ -717,7 +717,7 @@
             Foreign key to table Kunde
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.type">
+        <member name="P:EPUBackoffice.Dal.Tables.KundeKontaktTable.Type">
             <summary>
             Is it a Kunde (false) or a Kontakt (true) we are talking about?
             </summary>

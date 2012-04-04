@@ -80,7 +80,7 @@ namespace BackofficeTests
             string firstname = "Hans4*"; // TODO: Initialize to an appropriate value
             string lastname = "Mayer"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value
-            target.saveNewKundeKontakt(firstname, lastname, type);
+            target.SaveNewKundeKontakt(firstname, lastname, type);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace BackofficeTests
             string firstname = string.Empty; // TODO: Initialize to an appropriate value
             string lastname = "#"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value
-            target.saveNewKundeKontakt(firstname, lastname, type);
+            target.SaveNewKundeKontakt(firstname, lastname, type);
         }
     }
 }

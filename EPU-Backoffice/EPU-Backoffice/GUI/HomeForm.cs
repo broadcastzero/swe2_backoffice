@@ -147,7 +147,7 @@ namespace EPUBackoffice.Gui
 
             try
             {
-                validator.saveNewKundeKontakt(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
+                validator.SaveNewKundeKontakt(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
             }
             catch(InvalidInputException ex)
             {

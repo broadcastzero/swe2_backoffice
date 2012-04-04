@@ -970,3 +970,14 @@
 04.04.2012 - 20:33 Info: Es wird kein Vorname eingetragen.
 04.04.2012 - 20:33 Info: A new Kontakt has been saved to the database: <null> test
 04.04.2012 - 20:33 Info: A new Kontakt has been saved to the database: test test
+04.04.2012 - 20:42 Info: -----------------------------------------------------------
+04.04.2012 - 20:42 Info: Program is started.
+04.04.2012 - 20:42 Info: Using SQLite database.
+04.04.2012 - 20:42 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 20:42 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+04.04.2012 - 20:43 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+04.04.2012 - 20:43 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+04.04.2012 - 20:43 Info: Open HomeForm
+04.04.2012 - 20:43 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+04.04.2012 - 20:43 Info: A new Kunde has been saved to the database: test test
+04.04.2012 - 20:43 Info: A new Kontakt has been saved to the database: tet tet
