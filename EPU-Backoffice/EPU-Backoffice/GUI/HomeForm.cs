@@ -139,7 +139,7 @@ namespace EPUBackoffice.Gui
             // is set to false in case of error
             bool saved = true;
 
-            GuiDataValidator validator = new GuiDataValidator();
+            DataSaver validator = new DataSaver();
             // bool type: false -> Kunde, true -> Kontakt
             bool type = this.createKontaktRadioButton.Checked;
             string s_type = type == false ? "Kunde" : "Kontakt";
@@ -161,6 +161,8 @@ namespace EPUBackoffice.Gui
             {
                 this.hideMessagesKundeNeu();
                 this.kundeNeuSuccessLabel.Show(); // TODO: show what has been saved!
+                this.createKundeVornameTextBlock.Clear(); // delete input fields
+                this.createKundeNachnameTextBlock.Clear();
             }
         }
 
@@ -239,12 +241,24 @@ namespace EPUBackoffice.Gui
         }
 
         /// <summary>
-        /// Gets Kunden or Kontakte out of the database (over the business layer, check for valid input)
+        /// Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void kundenSearchSuchenButton_Click(object sender, EventArgs e)
+        private void kundenSearchButton_Click(object sender, EventArgs e)
         {
+            DataLoader loader = new DataLoader();
+            
+            if(this.searchKontaktRadioButton.Checked)
+            {
+                List<KontaktTable> kontakt_results = loader.LoadKontakte(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+            }
+            else if (this.searchKundeRadioButton.Checked)
+            {
+                List<KundeTable> kunde_results = loader.LoadKunden(this.searchKundeVornameTextBlock.Text, this.seachKundeNachnameTextBlock.Text);
+            }
+            
+
             /* sample code for databinding - get real values out of database!
             KundeTable k1 = new KundeTable();
             k1.ID = 0;

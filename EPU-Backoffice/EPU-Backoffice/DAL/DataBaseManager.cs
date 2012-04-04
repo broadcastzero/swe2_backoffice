@@ -122,6 +122,32 @@ namespace EPUBackoffice.Dal
         }
 
         /// <summary>
+        /// Create SQL-wrapper string for Kunden/Kontakte
+        /// </summary>
+        /// <param name="type">"Kunde" or "Kontakt"</param>
+        /// <param name="firstname">The first name</param>
+        /// <param name="lastname">The last name</param>
+        /// <returns>SQLite prepared statement string</returns>
+        private string GetKundenKontakteSQL(string type, string firstname, string lastname)
+        {
+            if (firstname == null && lastname == null)
+            {
+                return "SELECT * from " + type;
+            }
+            else if (firstname != null && lastname == null)
+            {
+                return "SELECT ID, Vorname FROM " + type + " WHERE Vorname = ?";
+            }
+            else if (firstname == null && lastname != null)
+            {
+                return "SELECT ID, Nachname_Firmenname FROM " + type + " WHERE Nachname_Firmenname = ?";
+            }
+            else
+            {
+                return "SELECT ID, Vorname, Nachname_Firmenname FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+            }
+        }
+        /// <summary>
         /// This function gets (a) certain Kontakt(e) from the saved objects in the database.
         /// If firstname and lastname should be empty, display all
         /// </summary>
@@ -129,7 +155,8 @@ namespace EPUBackoffice.Dal
         /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
         public List<KontaktTable> GetKontakte(string firstname = null, string lastname = null)
         {
-            throw new NotImplementedException();
+            string sql = GetKundenKontakteSQL("Kontakt", firstname, lastname);
+            return null;            
         }
 
         /// <summary>
@@ -140,7 +167,8 @@ namespace EPUBackoffice.Dal
         /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
         public List<KundeTable> GetKunden(string firstname = null, string lastname = null)
         {
-            throw new NotImplementedException();
+            string sql = GetKundenKontakteSQL("Kunde", firstname, lastname);
+            return null;
         }
     }
 }

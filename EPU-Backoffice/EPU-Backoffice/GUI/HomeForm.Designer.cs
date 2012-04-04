@@ -62,9 +62,8 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.kundeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bu_kundenSearchAendern = new System.Windows.Forms.Button();
-            this.bu_kundenSearchSuchen = new System.Windows.Forms.Button();
+            this.kundenChangeButton = new System.Windows.Forms.Button();
+            this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.seachKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
@@ -193,6 +192,7 @@
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.kundeTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -202,7 +202,6 @@
             this.kundenTabCreate.SuspendLayout();
             this.kundenTabSearchChange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSearchDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).BeginInit();
             this.rechnungsTab.SuspendLayout();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
@@ -230,6 +229,7 @@
             this.tabControl5.SuspendLayout();
             this.reportTab.SuspendLayout();
             this.tabControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -537,8 +537,8 @@
             this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchDataGridView);
-            this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchAendern);
-            this.kundenTabSearchChange.Controls.Add(this.bu_kundenSearchSuchen);
+            this.kundenTabSearchChange.Controls.Add(this.kundenChangeButton);
+            this.kundenTabSearchChange.Controls.Add(this.kundenSearchButton);
             this.kundenTabSearchChange.Controls.Add(this.label4);
             this.kundenTabSearchChange.Controls.Add(this.label3);
             this.kundenTabSearchChange.Controls.Add(this.seachKundeNachnameTextBlock);
@@ -584,28 +584,24 @@
             this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
             // 
-            // kundeTableBindingSource
+            // kundenChangeButton
             // 
-            this.kundeTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeTable);
+            this.kundenChangeButton.Location = new System.Drawing.Point(141, 112);
+            this.kundenChangeButton.Name = "kundenChangeButton";
+            this.kundenChangeButton.Size = new System.Drawing.Size(97, 23);
+            this.kundenChangeButton.TabIndex = 5;
+            this.kundenChangeButton.Text = "Ändern";
+            this.kundenChangeButton.UseVisualStyleBackColor = true;
             // 
-            // bu_kundenSearchAendern
+            // kundenSearchButton
             // 
-            this.bu_kundenSearchAendern.Location = new System.Drawing.Point(141, 112);
-            this.bu_kundenSearchAendern.Name = "bu_kundenSearchAendern";
-            this.bu_kundenSearchAendern.Size = new System.Drawing.Size(97, 23);
-            this.bu_kundenSearchAendern.TabIndex = 5;
-            this.bu_kundenSearchAendern.Text = "Ändern";
-            this.bu_kundenSearchAendern.UseVisualStyleBackColor = true;
-            // 
-            // bu_kundenSearchSuchen
-            // 
-            this.bu_kundenSearchSuchen.Location = new System.Drawing.Point(24, 112);
-            this.bu_kundenSearchSuchen.Name = "bu_kundenSearchSuchen";
-            this.bu_kundenSearchSuchen.Size = new System.Drawing.Size(101, 23);
-            this.bu_kundenSearchSuchen.TabIndex = 4;
-            this.bu_kundenSearchSuchen.Text = "Suchen";
-            this.bu_kundenSearchSuchen.UseVisualStyleBackColor = true;
-            this.bu_kundenSearchSuchen.Click += new System.EventHandler(this.kundenSearchSuchenButton_Click);
+            this.kundenSearchButton.Location = new System.Drawing.Point(24, 112);
+            this.kundenSearchButton.Name = "kundenSearchButton";
+            this.kundenSearchButton.Size = new System.Drawing.Size(101, 23);
+            this.kundenSearchButton.TabIndex = 4;
+            this.kundenSearchButton.Text = "Suchen";
+            this.kundenSearchButton.UseVisualStyleBackColor = true;
+            this.kundenSearchButton.Click += new System.EventHandler(this.kundenSearchButton_Click);
             // 
             // label4
             // 
@@ -1842,6 +1838,10 @@
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             // 
+            // kundeTableBindingSource
+            // 
+            this.kundeTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeTable);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1873,7 +1873,6 @@
             this.kundenTabSearchChange.ResumeLayout(false);
             this.kundenTabSearchChange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSearchDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).EndInit();
             this.rechnungsTab.ResumeLayout(false);
             this.rechnungsTabControl.ResumeLayout(false);
             this.rechnungAusgangTab.ResumeLayout(false);
@@ -1913,6 +1912,7 @@
             this.tabControl5.ResumeLayout(false);
             this.reportTab.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kundeTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1952,8 +1952,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView kundenSearchDataGridView;
-        private System.Windows.Forms.Button bu_kundenSearchAendern;
-        private System.Windows.Forms.Button bu_kundenSearchSuchen;
+        private System.Windows.Forms.Button kundenChangeButton;
+        private System.Windows.Forms.Button kundenSearchButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox seachKundeNachnameTextBlock;

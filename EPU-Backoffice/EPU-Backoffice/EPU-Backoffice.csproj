@@ -57,7 +57,7 @@
     <Compile Include="BL\ConfigFileManager.cs" />
     <Compile Include="BL\DatabaseConnector.cs" />
     <Compile Include="BL\DataLoader.cs" />
-    <Compile Include="BL\GuiDataValidator.cs" />
+    <Compile Include="BL\DataSaver.cs" />
     <Compile Include="Dal\DALFactory.cs" />
     <Compile Include="Dal\IDAL.cs" />
     <Compile Include="Dal\MockDataBaseManager.cs" />

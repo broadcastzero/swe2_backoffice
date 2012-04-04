@@ -18,7 +18,7 @@ namespace EPUBackoffice.BL
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.
     /// </summary>
-    public class GuiDataValidator
+    public class DataSaver
     {
         Logger logger = Logger.Instance;
 
@@ -39,7 +39,7 @@ namespace EPUBackoffice.BL
             // if 'Nachname' is null or invalid sign is found
             else if (!Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
-                this.logger.Log(2, "");
+                this.logger.Log(2, "Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
                 
             }

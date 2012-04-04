@@ -75,7 +75,7 @@ namespace BackofficeTests
         public void saveNewKundeTest0()
         {
             
-            GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
             MockDataBaseManager testMockDB = new MockDataBaseManager();
             testMockDB.CreateDataBase();
             ConfigFileManager.mockDB = true;
@@ -94,7 +94,7 @@ namespace BackofficeTests
 
         public void saveNewKundeTest1()
         {
-            GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
             MockDataBaseManager testMockDB = new MockDataBaseManager();
             testMockDB.CreateDataBase();
             ConfigFileManager.mockDB = true;
@@ -114,7 +114,7 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException),"Feld 'Nachname/Firma' ist ungültig!")]
         public void saveNewKundeTest2()
         {
-            GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
             string firstname = "Hans"; // TODO: Initialize to an appropriate value
             string lastname = string.Empty; // TODO: Initialize to an appropriate value
             bool type = true; // TODO: Initialize to an appropriate value
@@ -129,7 +129,7 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException),"Feld 'Vorname' ist ungültig!")]
         public void saveNewKundeTest3()
         {
-            GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
             string firstname = "Hans4"; // TODO: Initialize to an appropriate value
             string lastname = "Mayer"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value
@@ -144,7 +144,7 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException), "Fel 'Nachname/Firma' ist ungültig!")]
         public void saveNewKundeTest4()
         {
-            GuiDataValidator target = new GuiDataValidator(); // TODO: Initialize to an appropriate value
+            DataSaver target = new DataSaver(); // TODO: Initialize to an appropriate value
             string firstname = string.Empty; // TODO: Initialize to an appropriate value
             string lastname = "#"; // TODO: Initialize to an appropriate value
             bool type = false; // TODO: Initialize to an appropriate value

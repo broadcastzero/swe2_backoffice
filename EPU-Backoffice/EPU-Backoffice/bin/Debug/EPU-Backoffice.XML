@@ -330,9 +330,9 @@
             <param name="sender">object sender</param>
             <param name="e">EventArgs</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.kundenSearchSuchenButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.kundenSearchButton_Click(System.Object,System.EventArgs)">
             <summary>
-            Gets Kunden or Kontakte out of the database (over the business layer, check for valid input)
+            Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
@@ -459,6 +459,27 @@
             <summary>
             bool-value, which shows if Angebot has been accepted
             </summary>
+        </member>
+        <member name="T:EPUBackoffice.BL.DataLoader">
+            <summary>
+            This class' methods load data out of the database and returns a list of requested data.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.DataLoader.LoadKunden(System.String,System.String)">
+            <summary>
+            Gets requested Kunden out of the database.
+            </summary>
+            <param name="firstname">The first name of the to-be-searched Kunde</param>
+            <param name="lastname">The last name of the to-be-searched Kunde</param>
+            <returns>List of matching Kunden</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.DataLoader.LoadKontakte(System.String,System.String)">
+            <summary>
+            Gets requested Kontakte out of the database.
+            </summary>
+            <param name="firstname">The first name of the to-be-searched Kontakt</param>
+            <param name="lastname">The last name of the to-be-searched Kontakt</param>
+            <returns>List of matching Kontakt</returns>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
@@ -683,6 +704,15 @@
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKundenKontakteSQL(System.String,System.String,System.String)">
+            <summary>
+            Create SQL-wrapper string for Kunden/Kontakte
+            </summary>
+            <param name="type">"Kunde" or "Kontakt"</param>
+            <param name="firstname">The first name</param>
+            <param name="lastname">The last name</param>
+            <returns>SQLite prepared statement string</returns>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKontakte(System.String,System.String)">
             <summary>
             This function gets (a) certain Kontakt(e) from the saved objects in the database.
@@ -714,33 +744,18 @@
             Foreign key to table Kunde
             </summary>
         </member>
-        <member name="T:EPUBackoffice.BL.GuiDataValidator">
+        <member name="T:EPUBackoffice.BL.DataSaver">
             <summary>
             Checks data from the GUI and forwards it to the database where it is saved.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.GuiDataValidator.saveNewKunde(System.String,System.String,System.Boolean)">
+        <member name="M:EPUBackoffice.BL.DataSaver.saveNewKunde(System.String,System.String,System.Boolean)">
             <summary>
             Saves a new Kunde or Kontakt to the database.
             </summary>
             <param name="firstname">The first name of the Kunde/Kontakt</param>
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        </member>
-        <member name="T:EPUBackoffice.BL.DataLoader">
-            <summary>
-            This class' methods load data out of the database and returns a list of requested data.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.DataLoader.LoadKunden(System.String,System.String)">
-            <summary>
-            Gets requested Kunden out of the database.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.DataLoader.LoadKontakte(System.String,System.String)">
-            <summary>
-            Gets requested Kontakte out of the database.
-            </summary>
         </member>
     </members>
 </doc>
