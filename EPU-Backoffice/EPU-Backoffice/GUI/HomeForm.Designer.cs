@@ -172,6 +172,21 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.KundeKontaktTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projektErstellenCombobox = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.projektSuchenSearchButton = new System.Windows.Forms.Button();
+            this.projektSuchenChangeButton = new System.Windows.Forms.Button();
+            this.projektSuchenProjekttitelcombobox = new System.Windows.Forms.ComboBox();
+            this.projektSuchenKundeCombobox = new System.Windows.Forms.ComboBox();
+            this.projektSuchenKundeCheckbox = new System.Windows.Forms.CheckBox();
+            this.projektSuchenkontaktcheckbox = new System.Windows.Forms.CheckBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.projektSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
+            this.projektSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.projektSuchenPrintButton = new System.Windows.Forms.Button();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -202,11 +217,13 @@
             this.projektTab.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.projektErstellenTab.SuspendLayout();
+            this.projektSuchenTab.SuspendLayout();
             this.zeitTab.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.reportTab.SuspendLayout();
             this.tabControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -1299,7 +1316,7 @@
             this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
             this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenBKTab.Size = new System.Drawing.Size(450, 78);
+            this.angebotErstellenBKTab.Size = new System.Drawing.Size(450, 52);
             this.angebotErstellenBKTab.TabIndex = 3;
             this.angebotErstellenBKTab.Text = "BK";
             // 
@@ -1455,6 +1472,8 @@
             // projektErstellenTab
             // 
             this.projektErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektErstellenTab.Controls.Add(this.label25);
+            this.projektErstellenTab.Controls.Add(this.projektErstellenCombobox);
             this.projektErstellenTab.Controls.Add(this.projektNeuResetButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuSpeichernButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuProjekttitelTextbox);
@@ -1470,7 +1489,7 @@
             // 
             // projektNeuResetButton
             // 
-            this.projektNeuResetButton.Location = new System.Drawing.Point(6, 87);
+            this.projektNeuResetButton.Location = new System.Drawing.Point(6, 112);
             this.projektNeuResetButton.Name = "projektNeuResetButton";
             this.projektNeuResetButton.Size = new System.Drawing.Size(200, 23);
             this.projektNeuResetButton.TabIndex = 5;
@@ -1480,7 +1499,7 @@
             // 
             // projektNeuSpeichernButton
             // 
-            this.projektNeuSpeichernButton.Location = new System.Drawing.Point(6, 58);
+            this.projektNeuSpeichernButton.Location = new System.Drawing.Point(6, 83);
             this.projektNeuSpeichernButton.Name = "projektNeuSpeichernButton";
             this.projektNeuSpeichernButton.Size = new System.Drawing.Size(200, 23);
             this.projektNeuSpeichernButton.TabIndex = 4;
@@ -1497,7 +1516,7 @@
             // 
             // projektNeuStartdatumDatepicker
             // 
-            this.projektNeuStartdatumDatepicker.Location = new System.Drawing.Point(6, 32);
+            this.projektNeuStartdatumDatepicker.Location = new System.Drawing.Point(6, 57);
             this.projektNeuStartdatumDatepicker.Name = "projektNeuStartdatumDatepicker";
             this.projektNeuStartdatumDatepicker.Size = new System.Drawing.Size(200, 20);
             this.projektNeuStartdatumDatepicker.TabIndex = 2;
@@ -1505,11 +1524,12 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(212, 38);
+            this.label38.Location = new System.Drawing.Point(212, 63);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(58, 13);
             this.label38.TabIndex = 1;
             this.label38.Text = "Startdatum";
+            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // label37
             // 
@@ -1523,6 +1543,19 @@
             // projektSuchenTab
             // 
             this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektSuchenTab.Controls.Add(this.projektSuchenPrintButton);
+            this.projektSuchenTab.Controls.Add(this.label28);
+            this.projektSuchenTab.Controls.Add(this.label27);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenBisDatepicker);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenVonDatepicker);
+            this.projektSuchenTab.Controls.Add(this.label26);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenkontaktcheckbox);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenKundeCheckbox);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenKundeCombobox);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenProjekttitelcombobox);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenChangeButton);
+            this.projektSuchenTab.Controls.Add(this.projektSuchenSearchButton);
+            this.projektSuchenTab.Controls.Add(this.dataGridView4);
             this.projektSuchenTab.Location = new System.Drawing.Point(4, 22);
             this.projektSuchenTab.Name = "projektSuchenTab";
             this.projektSuchenTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1616,6 +1649,137 @@
             // 
             this.KundeKontaktTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeKontaktTable);
             // 
+            // projektErstellenCombobox
+            // 
+            this.projektErstellenCombobox.FormattingEnabled = true;
+            this.projektErstellenCombobox.Location = new System.Drawing.Point(6, 30);
+            this.projektErstellenCombobox.Name = "projektErstellenCombobox";
+            this.projektErstellenCombobox.Size = new System.Drawing.Size(200, 21);
+            this.projektErstellenCombobox.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(212, 33);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(47, 13);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Angebot";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(366, 25);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(363, 183);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // projektSuchenSearchButton
+            // 
+            this.projektSuchenSearchButton.Location = new System.Drawing.Point(6, 110);
+            this.projektSuchenSearchButton.Name = "projektSuchenSearchButton";
+            this.projektSuchenSearchButton.Size = new System.Drawing.Size(200, 23);
+            this.projektSuchenSearchButton.TabIndex = 1;
+            this.projektSuchenSearchButton.Text = "Suchen";
+            this.projektSuchenSearchButton.UseVisualStyleBackColor = true;
+            // 
+            // projektSuchenChangeButton
+            // 
+            this.projektSuchenChangeButton.Location = new System.Drawing.Point(6, 139);
+            this.projektSuchenChangeButton.Name = "projektSuchenChangeButton";
+            this.projektSuchenChangeButton.Size = new System.Drawing.Size(200, 23);
+            this.projektSuchenChangeButton.TabIndex = 2;
+            this.projektSuchenChangeButton.Text = "Ändern";
+            this.projektSuchenChangeButton.UseVisualStyleBackColor = true;
+            // 
+            // projektSuchenProjekttitelcombobox
+            // 
+            this.projektSuchenProjekttitelcombobox.FormattingEnabled = true;
+            this.projektSuchenProjekttitelcombobox.Location = new System.Drawing.Point(6, 33);
+            this.projektSuchenProjekttitelcombobox.Name = "projektSuchenProjekttitelcombobox";
+            this.projektSuchenProjekttitelcombobox.Size = new System.Drawing.Size(200, 21);
+            this.projektSuchenProjekttitelcombobox.TabIndex = 3;
+            // 
+            // projektSuchenKundeCombobox
+            // 
+            this.projektSuchenKundeCombobox.FormattingEnabled = true;
+            this.projektSuchenKundeCombobox.Location = new System.Drawing.Point(6, 6);
+            this.projektSuchenKundeCombobox.Name = "projektSuchenKundeCombobox";
+            this.projektSuchenKundeCombobox.Size = new System.Drawing.Size(200, 21);
+            this.projektSuchenKundeCombobox.TabIndex = 5;
+            // 
+            // projektSuchenKundeCheckbox
+            // 
+            this.projektSuchenKundeCheckbox.AutoSize = true;
+            this.projektSuchenKundeCheckbox.Checked = true;
+            this.projektSuchenKundeCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.projektSuchenKundeCheckbox.Location = new System.Drawing.Point(215, 8);
+            this.projektSuchenKundeCheckbox.Name = "projektSuchenKundeCheckbox";
+            this.projektSuchenKundeCheckbox.Size = new System.Drawing.Size(57, 17);
+            this.projektSuchenKundeCheckbox.TabIndex = 6;
+            this.projektSuchenKundeCheckbox.Text = "Kunde";
+            this.projektSuchenKundeCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // projektSuchenkontaktcheckbox
+            // 
+            this.projektSuchenkontaktcheckbox.AutoSize = true;
+            this.projektSuchenkontaktcheckbox.Location = new System.Drawing.Point(278, 8);
+            this.projektSuchenkontaktcheckbox.Name = "projektSuchenkontaktcheckbox";
+            this.projektSuchenkontaktcheckbox.Size = new System.Drawing.Size(63, 17);
+            this.projektSuchenkontaktcheckbox.TabIndex = 7;
+            this.projektSuchenkontaktcheckbox.Text = "Kontakt";
+            this.projektSuchenkontaktcheckbox.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(216, 36);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(56, 13);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Projekttitel";
+            // 
+            // projektSuchenVonDatepicker
+            // 
+            this.projektSuchenVonDatepicker.Location = new System.Drawing.Point(6, 58);
+            this.projektSuchenVonDatepicker.Name = "projektSuchenVonDatepicker";
+            this.projektSuchenVonDatepicker.Size = new System.Drawing.Size(200, 20);
+            this.projektSuchenVonDatepicker.TabIndex = 9;
+            // 
+            // projektSuchenBisDatepicker
+            // 
+            this.projektSuchenBisDatepicker.Location = new System.Drawing.Point(6, 84);
+            this.projektSuchenBisDatepicker.Name = "projektSuchenBisDatepicker";
+            this.projektSuchenBisDatepicker.Size = new System.Drawing.Size(200, 20);
+            this.projektSuchenBisDatepicker.TabIndex = 10;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(212, 64);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(26, 13);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Von";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(212, 90);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(21, 13);
+            this.label28.TabIndex = 12;
+            this.label28.Text = "Bis";
+            // 
+            // projektSuchenPrintButton
+            // 
+            this.projektSuchenPrintButton.Location = new System.Drawing.Point(6, 168);
+            this.projektSuchenPrintButton.Name = "projektSuchenPrintButton";
+            this.projektSuchenPrintButton.Size = new System.Drawing.Size(200, 23);
+            this.projektSuchenPrintButton.TabIndex = 13;
+            this.projektSuchenPrintButton.Text = "Drucken";
+            this.projektSuchenPrintButton.UseVisualStyleBackColor = true;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1678,11 +1842,14 @@
             this.tabControl4.ResumeLayout(false);
             this.projektErstellenTab.ResumeLayout(false);
             this.projektErstellenTab.PerformLayout();
+            this.projektSuchenTab.ResumeLayout(false);
+            this.projektSuchenTab.PerformLayout();
             this.zeitTab.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.reportTab.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1831,6 +1998,21 @@
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.Label searchKundeErrorLabel;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox projektErstellenCombobox;
+        private System.Windows.Forms.Button projektSuchenPrintButton;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DateTimePicker projektSuchenBisDatepicker;
+        private System.Windows.Forms.DateTimePicker projektSuchenVonDatepicker;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.CheckBox projektSuchenkontaktcheckbox;
+        private System.Windows.Forms.CheckBox projektSuchenKundeCheckbox;
+        private System.Windows.Forms.ComboBox projektSuchenKundeCombobox;
+        private System.Windows.Forms.ComboBox projektSuchenProjekttitelcombobox;
+        private System.Windows.Forms.Button projektSuchenChangeButton;
+        private System.Windows.Forms.Button projektSuchenSearchButton;
+        private System.Windows.Forms.DataGridView dataGridView4;
 
 
 
