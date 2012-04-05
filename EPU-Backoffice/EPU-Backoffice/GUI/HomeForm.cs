@@ -167,64 +167,22 @@ namespace EPUBackoffice.Gui
             }
         }
 
-        private void angebotErstellenBProjektButton_Click(object sender, EventArgs e)
-        {
-            angebotErstellenBProjektButton.Hide();
-            angebotErstellenNProjektButton.Show();
-            if (angebotErstellenBKundeButton.Visible == true)
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
-            }
-            else 
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
-            }
-        }
+        
 
         private void angebotErstellenBKundeButton_Click(object sender, EventArgs e)
         {
-            angebotErstellenBKundeButton.Hide();
-            angebotErstellenNKundeButton.Show();
-            if (angebotErstellenBProjektButton.Visible == true)
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
-            }
-            else
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenBKBPTab");
-            }
+                angebotErstellenBKundeButton.Hide();
+                angebotErstellenNKundeButton.Show();
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKTab");
         }
 
         private void angebotErstellenNKundeButton_Click(object sender, EventArgs e)
         {
-            angebotErstellenNKundeButton.Hide();
-            angebotErstellenBKundeButton.Show();
-
-            if (angebotErstellenBProjektButton.Visible == true)
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
-            }
-            else
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKBPTab");
-            }
-
+                angebotErstellenBKundeButton.Show();
+                angebotErstellenNKundeButton.Hide();
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKTab");
         }
-
-        private void angebotErstellenNProjektButton_Click(object sender, EventArgs e)
-        {
-            angebotErstellenNProjektButton.Hide();
-            angebotErstellenBProjektButton.Show();
-
-            if (angebotErstellenBKundeButton.Visible == true)
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKNPTab");
-            }
-            else
-            {
-                angebotErstellenSubTab.SelectTab("angebotErstellenBKNPTab");
-            }
-        }
+        
 
         private void projektNeuSpeichernButton_Click(object sender, EventArgs e)
         {
