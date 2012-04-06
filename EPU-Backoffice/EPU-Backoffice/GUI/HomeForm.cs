@@ -199,6 +199,22 @@ namespace EPUBackoffice.Gui
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>False...Kunde, true...Kontakt</returns>
+        private bool GetKundeKontaktType()
+        {
+            if (this.searchKontaktRadioButton.Checked)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
         /// </summary>
         /// <param name="sender"></param>
@@ -215,11 +231,7 @@ namespace EPUBackoffice.Gui
                 List<KundeKontaktTable> results;
                
                 // Kunde (false) or Kontakt (true)?
-                bool type = false;
-                if (this.searchKontaktRadioButton.Checked)
-                {
-                    type = true;
-                }
+                bool type = this.GetKundeKontaktType();
 
                 results = loader.LoadKundenKontakte(type, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
                 this.kundenSearchDataGridView.DataSource = results;
@@ -275,7 +287,28 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void changeKundeOrKontakt(object sender, EventArgs e)
         {
+            if (kundenSearchDataGridView.SelectedCells.Count > 0)
+            {
+                bool type = this.GetKundeKontaktType();
+                int id = (int)kundenSearchDataGridView.SelectedCells[0].OwningRow.Cells[0].Value;
+                int selectedRow = kundenSearchDataGridView.SelectedCells[0].OwningRow.Index;
+                KundenKontakteChanger changer = new KundenKontakteChanger();
 
+                string buttonName="";
+                if (sender is Button)
+                {
+                    buttonName = ((Button)sender).Name;
+                }
+
+                if(buttonName == "changeKundeButton")
+                {
+                    changer.Change(id, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text, type);
+                }
+                else if(buttonName == "deleteKundeButton")
+                {
+                    changer.Delete(id, type);
+                }
+            }
         }
     }
 }

@@ -17,11 +17,11 @@ namespace EPUBackoffice.BL
     public static class RuleManager
     {
         /// <summary>
-        /// Checks if input string contains only letters and hyphens and does not have more than 150 chars
+        /// Checks if input string contains only letters and hyphens
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string valid</returns>
-        public static bool ValidateLettersHyphenLength(string input)
+        public static bool ValidateLettersHyphen(string input)
         {
             if(!Regex.IsMatch(input, @"^[a-zA-Z-]+$") || input.Length > 150)
             {
@@ -34,11 +34,11 @@ namespace EPUBackoffice.BL
         }
 
         /// <summary>
-        /// Checks if input string contains only letters, numbers and hyphens and does not have more than 150 chars
+        /// Checks if input string contains only letters, numbers and hyphens
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string is valid</returns>
-        public static bool ValidateLettersNumbersHyphenLength(string input)
+        public static bool ValidateLettersNumbersHyphen(string input)
         {
             if (!Regex.IsMatch(input, @"^[a-zA-Z0-9-]+$") || input.Length > 150)
             {
@@ -48,6 +48,18 @@ namespace EPUBackoffice.BL
             {
                 return true;
             }
+        }
+
+        /// <summary>
+        /// and does not have more than 150 chars
+        /// </summary>
+        /// <param name="input">The string that shall be checked</param>
+        /// <returns>True, if string is valid</returns>
+        public static bool CheckStringLength150(string input)
+        {
+            if (input.Length > 150)
+            { return false; }
+            else { return true; }
         }
     }
 }

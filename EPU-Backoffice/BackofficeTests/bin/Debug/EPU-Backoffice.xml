@@ -138,6 +138,12 @@
             <param name="sender">object sender</param>
             <param name="e">EventArgs</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.GetKundeKontaktType">
+            <summary>
+            
+            </summary>
+            <returns>False...Kunde, true...Kontakt</returns>
+        </member>
         <member name="M:EPUBackoffice.Gui.HomeForm.SearchKundenOrKontakte(System.Object,System.EventArgs)">
             <summary>
             Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
@@ -364,6 +370,13 @@
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
             <param name="firstname">The first name of the Kunde/Kontakt</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.DeleteKundeKontakt(System.Int32,System.Boolean)">
+            <summary>
+            Deletes an existing Kunde or Kontakt out of the database
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
             <summary>
             Connects to the database and creates its tables if they do not exist yet.
@@ -394,6 +407,13 @@
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <param name="type">false...Kunde, true...Kontakt</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
+            <summary>
+            Deletes an existing Kunde or Kontakt out of the SQLite database
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -697,6 +717,13 @@
             <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
             <returns>A list of the requested Kunden</returns>
         </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
+            <summary>
+            Deletes an existing Kunde or Kontakt out of the mock database
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
             <summary>
             A continuing, unique ID for the table "Kunden"
@@ -733,19 +760,47 @@
             This class checks the user input for invalid characters
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphenLength(System.String)">
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphen(System.String)">
             <summary>
-            Checks if input string contains only letters and hyphens and does not have more than 150 chars
+            Checks if input string contains only letters and hyphens
             </summary>
             <param name="input">The string that shall be checked</param>
             <returns>True, if string valid</returns>
         </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphenLength(System.String)">
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
             <summary>
-            Checks if input string contains only letters, numbers and hyphens and does not have more than 150 chars
+            Checks if input string contains only letters, numbers and hyphens
             </summary>
             <param name="input">The string that shall be checked</param>
             <returns>True, if string is valid</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.CheckStringLength150(System.String)">
+            <summary>
+            and does not have more than 150 chars
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.KundenKontakteChanger">
+            <summary>
+            Changes or deletes a existing Kunde/Kontakt
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Change(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Changes data of an existing Kunde/Kontakt
+            </summary>
+            <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
+            <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
+            <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(System.Int32,System.Boolean)">
+            <summary>
+            Deletes an existing Kunde/Kontakt
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
     </members>
 </doc>

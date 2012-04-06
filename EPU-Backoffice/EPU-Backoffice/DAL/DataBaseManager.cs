@@ -211,6 +211,9 @@ namespace EPUBackoffice.Dal
                     k.Vorname = reader.GetString(1);
                     k.NachnameFirmenname = reader.GetString(2);
 
+                    if (k.Vorname == "<null>")
+                    { k.Vorname = string.Empty; }
+
                     resultlist.Add(k);
                 }
 
@@ -227,6 +230,16 @@ namespace EPUBackoffice.Dal
                 if (cmd != null) { cmd.Dispose(); }
                 if (con != null) { con.Dispose(); }
             }
+        }
+
+        /// <summary>
+        /// Deletes an existing Kunde or Kontakt out of the SQLite database
+        /// </summary>
+        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        public void DeleteKundeKontakt(int id, bool type)
+        {
+            throw new NotImplementedException();
         }
     }
 }

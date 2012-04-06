@@ -58,11 +58,12 @@
             this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
+            this.deleteKundeButton = new System.Windows.Forms.Button();
             this.searchKundeErrorLabel = new System.Windows.Forms.Label();
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.kundenChangeButton = new System.Windows.Forms.Button();
+            this.changeKundeButton = new System.Windows.Forms.Button();
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -525,11 +526,12 @@
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.kundenTabSearchChange.Controls.Add(this.deleteKundeButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeErrorLabel);
             this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchDataGridView);
-            this.kundenTabSearchChange.Controls.Add(this.kundenChangeButton);
+            this.kundenTabSearchChange.Controls.Add(this.changeKundeButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchButton);
             this.kundenTabSearchChange.Controls.Add(this.label4);
             this.kundenTabSearchChange.Controls.Add(this.label3);
@@ -541,6 +543,17 @@
             this.kundenTabSearchChange.Size = new System.Drawing.Size(771, 233);
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
+            this.kundenTabSearchChange.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            // 
+            // deleteKundeButton
+            // 
+            this.deleteKundeButton.Location = new System.Drawing.Point(81, 141);
+            this.deleteKundeButton.Name = "deleteKundeButton";
+            this.deleteKundeButton.Size = new System.Drawing.Size(97, 23);
+            this.deleteKundeButton.TabIndex = 15;
+            this.deleteKundeButton.Text = "Löschen";
+            this.deleteKundeButton.UseVisualStyleBackColor = true;
+            this.deleteKundeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
             // 
             // searchKundeErrorLabel
             // 
@@ -591,15 +604,15 @@
             this.kundenSearchDataGridView.TabIndex = 6;
             this.kundenSearchDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BindToKundenSearchLabels);
             // 
-            // kundenChangeButton
+            // changeKundeButton
             // 
-            this.kundenChangeButton.Location = new System.Drawing.Point(141, 112);
-            this.kundenChangeButton.Name = "kundenChangeButton";
-            this.kundenChangeButton.Size = new System.Drawing.Size(97, 23);
-            this.kundenChangeButton.TabIndex = 5;
-            this.kundenChangeButton.Text = "Ändern";
-            this.kundenChangeButton.UseVisualStyleBackColor = true;
-            this.kundenChangeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            this.changeKundeButton.Location = new System.Drawing.Point(141, 112);
+            this.changeKundeButton.Name = "changeKundeButton";
+            this.changeKundeButton.Size = new System.Drawing.Size(97, 23);
+            this.changeKundeButton.TabIndex = 5;
+            this.changeKundeButton.Text = "Ändern";
+            this.changeKundeButton.UseVisualStyleBackColor = true;
+            this.changeKundeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
             // 
             // kundenSearchButton
             // 
@@ -1896,7 +1909,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView kundenSearchDataGridView;
-        private System.Windows.Forms.Button kundenChangeButton;
+        private System.Windows.Forms.Button changeKundeButton;
         private System.Windows.Forms.Button kundenSearchButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -2021,6 +2034,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button deleteKundeButton;
 
 
 

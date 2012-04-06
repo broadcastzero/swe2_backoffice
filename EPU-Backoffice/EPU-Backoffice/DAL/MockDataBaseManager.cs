@@ -117,5 +117,15 @@ namespace EPUBackoffice.Dal
         {
             return new List<KundeKontaktTable>();
         }
+
+        /// <summary>
+        /// Deletes an existing Kunde or Kontakt out of the mock database
+        /// </summary>
+        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        public void DeleteKundeKontakt(int id, bool type)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

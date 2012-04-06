@@ -39,5 +39,12 @@ namespace EPUBackoffice.Dal
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         void SaveNewKundeKontakt(string lastname, bool type, string firstname = "<null>");
+
+        /// <summary>
+        /// Deletes an existing Kunde or Kontakt out of the database
+        /// </summary>
+        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        void DeleteKundeKontakt(int id, bool type);
     }
 }
