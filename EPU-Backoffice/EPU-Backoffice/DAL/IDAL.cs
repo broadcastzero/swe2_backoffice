@@ -41,6 +41,15 @@ namespace EPUBackoffice.Dal
         void SaveNewKundeKontakt(string lastname, bool type, string firstname = "<null>");
 
         /// <summary>
+        /// Changes data of an existing Kunde/Kontakt
+        /// </summary>
+        /// <param name="id">The id of the to-be-updated Kunde/Kontakt</param>
+        /// <param name="firstname">The new first name</param>
+        /// <param name="lastname">The new last name</param>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
+        void UpdateKundeKontakte(int id, string firstname, string lastname, bool type);
+
+        /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the database
         /// </summary>
         /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>

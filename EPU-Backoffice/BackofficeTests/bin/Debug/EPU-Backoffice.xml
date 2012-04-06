@@ -407,6 +407,15 @@
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
             <param name="firstname">The first name of the Kunde/Kontakt</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.UpdateKundeKontakte(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Changes data of an existing Kunde/Kontakt
+            </summary>
+            <param name="id">The id of the to-be-updated Kunde/Kontakt</param>
+            <param name="firstname">The new first name</param>
+            <param name="lastname">The new last name</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
+        </member>
         <member name="M:EPUBackoffice.Dal.IDAL.DeleteKundeKontakt(System.Int32,System.Boolean)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the database
@@ -445,12 +454,28 @@
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <param name="type">false...Kunde, true...Kontakt</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.UpdateKundeKontakte(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Updates an existing Kunde or Kontakt in the SQLite database
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+            <param name="firstname">The new first name</param>
+            <param name="lastname">The new last name</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the SQLite database
             </summary>
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32)">
+            <summary>
+            Gets an sql statement and an ID + 2 Params and commits statement
+            </summary>
+            <param name="sql">The sql statement</param>
+            <param name="id">The ID - used for binding</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -792,6 +817,15 @@
             <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <returns>A list of the requested Kontakte</returns>
+        </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.UpdateKundeKontakte(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Updates information of an existing Kunde or Kontakt
+            </summary>
+            <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
+            <param name="firstname">The first name</param>
+            <param name="lastname">The last name</param>
+            <param name="type">false...Kunde, true...Kontakt</param>
         </member>
         <member name="M:EPUBackoffice.Dal.MockDataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
             <summary>

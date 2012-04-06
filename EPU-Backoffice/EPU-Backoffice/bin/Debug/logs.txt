@@ -312,3 +312,78 @@
 06.04.2012 - 17:14 Info: Starts getting Kunden out of database...
 06.04.2012 - 17:14 Info: Starts getting Kunden out of database...
 06.04.2012 - 17:14 Info: Starts getting Kunden out of database...
+06.04.2012 - 17:16 Info: -----------------------------------------------------------
+06.04.2012 - 17:16 Info: Program is started.
+06.04.2012 - 17:16 Info: Using SQLite database.
+06.04.2012 - 17:16 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:16 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:16 Info: A new Kunde has been saved to the database: Felix Wagner
+06.04.2012 - 17:16 Info: User requested to delete False with ID 18
+06.04.2012 - 17:35 Info: -----------------------------------------------------------
+06.04.2012 - 17:35 Info: Program is started.
+06.04.2012 - 17:35 Info: Using SQLite database.
+06.04.2012 - 17:35 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:35 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:35 Info: User requested to delete False with ID 3
+06.04.2012 - 17:37 Info: -----------------------------------------------------------
+06.04.2012 - 17:37 Info: Program is started.
+06.04.2012 - 17:37 Info: Using SQLite database.
+06.04.2012 - 17:37 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:37 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:37 Info: User requested to delete False with ID 3
+06.04.2012 - 17:38 Info: -----------------------------------------------------------
+06.04.2012 - 17:38 Info: Program is started.
+06.04.2012 - 17:38 Info: Using SQLite database.
+06.04.2012 - 17:38 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:38 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:38 Info: User requested to delete False with ID 3
+06.04.2012 - 17:38 Info: Kunde has been dropped from the database. ID: 3
+06.04.2012 - 17:38 Info: User requested to delete False with ID 20
+06.04.2012 - 17:38 Info: Kunde has been dropped from the database. ID: 20
+06.04.2012 - 17:38 Info: User requested to delete False with ID 13
+06.04.2012 - 17:38 Info: Kunde has been dropped from the database. ID: 13
+06.04.2012 - 17:38 Info: User requested to delete False with ID 9
+06.04.2012 - 17:38 Info: Kunde has been dropped from the database. ID: 9
+06.04.2012 - 17:39 Info: User requested to delete False with ID 6
+06.04.2012 - 17:39 Info: Kunde has been dropped from the database. ID: 6
+06.04.2012 - 17:39 Info: User requested to delete False with ID 18
+06.04.2012 - 17:39 Info: Kunde has been dropped from the database. ID: 18
+06.04.2012 - 17:39 Error: User tried to search for invalid first name in Kontakte!
+06.04.2012 - 17:39 Info: User requested to delete False with ID 18
+06.04.2012 - 17:39 Info: Kunde has been dropped from the database. ID: 18
+06.04.2012 - 17:39 Error: User tried to search for invalid first name in Kontakte!
+06.04.2012 - 17:40 Info: -----------------------------------------------------------
+06.04.2012 - 17:40 Info: Program is started.
+06.04.2012 - 17:40 Info: Using SQLite database.
+06.04.2012 - 17:40 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:40 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:40 Info: User requested to delete False with ID 14
+06.04.2012 - 17:40 Info: Kunde has been dropped from the database. ID: 14
+06.04.2012 - 17:41 Info: User requested to delete False with ID 15
+06.04.2012 - 17:41 Info: Kunde has been dropped from the database. ID: 15
+06.04.2012 - 17:42 Info: -----------------------------------------------------------
+06.04.2012 - 17:42 Info: Program is started.
+06.04.2012 - 17:42 Info: Using SQLite database.
+06.04.2012 - 17:42 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:42 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:42 Info: User requested to delete False with ID 1
+06.04.2012 - 17:42 Info: Kunde has been dropped from the database. ID: 1
+06.04.2012 - 17:42 Info: User requested to delete False with ID 11
+06.04.2012 - 17:42 Info: Kunde has been dropped from the database. ID: 11
+06.04.2012 - 17:42 Info: User requested to delete False with ID 4
+06.04.2012 - 17:42 Info: Kunde has been dropped from the database. ID: 4
+06.04.2012 - 17:43 Info: -----------------------------------------------------------
+06.04.2012 - 17:43 Info: Program is started.
+06.04.2012 - 17:43 Info: Using SQLite database.
+06.04.2012 - 17:43 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:43 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:43 Info: User requested to delete False with ID 19
+06.04.2012 - 17:43 Info: Kunde has been dropped from the database. ID: 19
+06.04.2012 - 17:43 Info: User requested to delete False with ID 7
+06.04.2012 - 17:43 Info: Kunde has been dropped from the database. ID: 7
+06.04.2012 - 17:44 Info: User requested to delete False with ID 2
+06.04.2012 - 17:44 Info: Kunde has been dropped from the database. ID: 2
+06.04.2012 - 17:44 Info: User requested to delete False with ID 5
+06.04.2012 - 17:44 Info: Kunde has been dropped from the database. ID: 5
+06.04.2012 - 17:44 Info: User requested to delete False with ID 8
+06.04.2012 - 17:44 Info: Kunde has been dropped from the database. ID: 8

@@ -233,13 +233,82 @@ namespace EPUBackoffice.Dal
         }
 
         /// <summary>
+        /// Updates an existing Kunde or Kontakt in the SQLite database
+        /// </summary>
+        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
+        /// <param name="firstname">The new first name</param>
+        /// <param name="lastname">The new last name</param>
+        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        public void UpdateKundeKontakte(int id, string firstname, string lastname, bool type)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the SQLite database
         /// </summary>
         /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         public void DeleteKundeKontakt(int id, bool type)
         {
-            throw new NotImplementedException();
+            string s_type = type == false ? "Kunde" : "Kontakt";
+            string sql = "DELETE FROM " + s_type + " WHERE ID = ?";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, id);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            // success logging
+            string successmessage = s_type + " has been dropped from the database. ID: " + id;
+            this.logger.Log(0, successmessage);
+        }
+
+        /// <summary>
+        /// Gets an sql statement and an ID + 2 Params and commits statement
+        /// </summary>
+        /// <param name="sql">The sql statement</param>
+        /// <param name="id">The ID - used for binding</param>
+        private void SendStatementToDatabase(string sql, int id)
+        {
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // initialise parameter
+                SQLiteParameter p_first = new SQLiteParameter();
+
+                // bind param (ID)
+                p_first.Value = id;
+                cmd.Parameters.Add(p_first);
+
+                // execute and commit
+                cmd.ExecuteNonQuery();
+                tra.Commit();
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
     }
 }

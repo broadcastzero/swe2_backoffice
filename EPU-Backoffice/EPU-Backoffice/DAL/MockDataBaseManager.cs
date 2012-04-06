@@ -166,6 +166,18 @@ namespace EPUBackoffice.Dal
         }
 
         /// <summary>
+        /// Updates information of an existing Kunde or Kontakt
+        /// </summary>
+        /// <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
+        /// <param name="firstname">The first name</param>
+        /// <param name="lastname">The last name</param>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
+        public void UpdateKundeKontakte(int id, string firstname, string lastname, bool type)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the mock database
         /// </summary>
         /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>

@@ -40,6 +40,9 @@ namespace EPUBackoffice.BL
                 this.logger.Log(2, "Field 'Nachname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
+
+            // Update data
+            DALFactory.GetDAL().UpdateKundeKontakte(id, firstname, lastname, type);
         }
 
         /// <summary>
