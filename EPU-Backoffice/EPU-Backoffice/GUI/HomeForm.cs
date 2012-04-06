@@ -244,24 +244,13 @@ namespace EPUBackoffice.Gui
             }
 
             this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);
-            /* sample code for databinding - get real values out of database!
-            KundeKontaktTable k1 = new KundeKontaktTable();
-            k1.ID = 0;
-            k1.Vorname = "Franz";
-            k1.NachnameFirmenname = "Huber";
-
-            KundeKontaktTable k2 = new KundeKontaktTable();
-            k2.ID = 1;
-            k2.Vorname = "Michael";
-            k2.NachnameFirmenname = "Gorbatschow";
-
-            KundeKontaktTable k3 = new KundeKontaktTable();
-            k3.ID = 2;
-            k3.Vorname = "Martin";
-            k3.NachnameFirmenname = "Klein";*/
         }
 
-        // when user clicks on a row within the search results, write data to labels, so that user can change the values
+        /// <summary>
+        /// when user clicks on a row within the search results, write data to labels, so that user can change the values
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The DataGridViewCellEventArgs</param> 
         private void BindToKundenSearchLabels(object sender, DataGridViewCellEventArgs e)
         {
             int selectedRowID = e == null ? 0 : e.RowIndex;
@@ -281,6 +270,27 @@ namespace EPUBackoffice.Gui
         }
 
         /// <summary>
+        /// After changing an entry, also display changes within DataGridView
+        /// </summary>
+        /// <param name="action">Shall row be updated or deleted?</param>
+        /// <param name="row">The selected row</param>
+        /// <param name="firstname">The new first name</param>
+        /// <param name="lastname">The new last name</param>
+        private void BindFromKundenSearchTextBlock(string action, int row, string firstname, string lastname)
+        {
+            if (action == "changeKundeButton")
+            {
+                this.kundenSearchDataGridView.Rows[row].Cells[1].Value = firstname;
+                this.kundenSearchDataGridView.Rows[row].Cells[2].Value = lastname;
+            }
+            else if (action == "deleteKundeButton")
+            {
+                // does not show anything - but clears datagridview - only solution I have found
+                this.SearchKundenOrKontakte(null, null);
+            }
+        }
+
+        /// <summary>
         /// Changes information of an existing Kunde
         /// </summary>
         /// <param name="sender">The sender</param>
@@ -291,7 +301,11 @@ namespace EPUBackoffice.Gui
             {
                 bool type = this.GetKundeKontaktType();
                 int id = (int)kundenSearchDataGridView.SelectedCells[0].OwningRow.Cells[0].Value;
+                string firstname = this.searchKundeVornameTextBlock.Text;
+                string lastname = this.searchKundeNachnameTextBlock.Text;
+
                 int selectedRow = kundenSearchDataGridView.SelectedCells[0].OwningRow.Index;
+
                 KundenKontakteChanger changer = new KundenKontakteChanger();
 
                 string buttonName="";
@@ -302,13 +316,26 @@ namespace EPUBackoffice.Gui
 
                 if(buttonName == "changeKundeButton")
                 {
-                    changer.Change(id, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text, type);
+                    changer.Change(id, firstname, lastname, type);
                 }
                 else if(buttonName == "deleteKundeButton")
                 {
                     changer.Delete(id, type);
                 }
+
+                // update displayed rows
+                this.BindFromKundenSearchTextBlock(buttonName, selectedRow, firstname, lastname);
             }
+        }
+
+        // reset everything within Kunden/Kontakte search
+        private void ResetSearchKunden(object sender, EventArgs e)
+        {
+            this.searchKundeVornameTextBlock.Clear();
+            this.searchKundeNachnameTextBlock.Clear();
+            this.searchKundeErrorLabel.Hide();
+
+            this.SearchKundenOrKontakte(null, null);
         }
     }
 }

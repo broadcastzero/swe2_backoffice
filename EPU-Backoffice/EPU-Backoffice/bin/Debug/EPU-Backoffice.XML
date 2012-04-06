@@ -151,6 +151,22 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.BindToKundenSearchLabels(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            when user clicks on a row within the search results, write data to labels, so that user can change the values
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The DataGridViewCellEventArgs</param> 
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.BindFromKundenSearchTextBlock(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            After changing an entry, also display changes within DataGridView
+            </summary>
+            <param name="action">Shall row be updated or deleted?</param>
+            <param name="row">The selected row</param>
+            <param name="firstname">The new first name</param>
+            <param name="lastname">The new last name</param>
+        </member>
         <member name="M:EPUBackoffice.Gui.HomeForm.changeKundeOrKontakt(System.Object,System.EventArgs)">
             <summary>
             Changes information of an existing Kunde

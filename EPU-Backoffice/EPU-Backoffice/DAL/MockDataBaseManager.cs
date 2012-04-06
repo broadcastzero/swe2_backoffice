@@ -206,6 +206,7 @@ namespace EPUBackoffice.Dal
             // no entry found
             if (removed != 1)
             {
+                this.logger.Log(2, "There is no entry in the mockDB with the ID " + id);
                 throw new EntryNotFoundException("There is no entry in the mockDB with the ID " + id);
             }
         }

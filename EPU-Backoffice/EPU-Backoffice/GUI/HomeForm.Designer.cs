@@ -588,6 +588,7 @@
             this.searchKundeRadioButton.TabStop = true;
             this.searchKundeRadioButton.Text = "Kunde";
             this.searchKundeRadioButton.UseVisualStyleBackColor = true;
+            this.searchKundeRadioButton.CheckedChanged += new System.EventHandler(this.ResetSearchKunden);
             // 
             // kundenSearchDataGridView
             // 
