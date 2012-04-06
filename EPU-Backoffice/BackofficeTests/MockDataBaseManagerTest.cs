@@ -62,7 +62,7 @@ namespace BackofficeTests
         {
             this.mdb = new MockDataBaseManager();
 
-            if (MockDataBaseManager.savedKontakte == null)
+            if (MockDataBaseManager.SavedKontakte == null)
             {
                 MockDataBaseManager testMockDB = new MockDataBaseManager();
                 testMockDB.CreateDataBase();
@@ -83,8 +83,8 @@ namespace BackofficeTests
         [TestMethod()]
         public void CreateDataBaseTest()
         {
-            Assert.IsNotNull(MockDataBaseManager.savedKontakte);
-            Assert.IsNotNull(MockDataBaseManager.savedKunden);
+            Assert.IsNotNull(MockDataBaseManager.SavedKontakte);
+            Assert.IsNotNull(MockDataBaseManager.SavedKunden);
         }
 
         /// <summary>
@@ -94,14 +94,14 @@ namespace BackofficeTests
         [TestMethod()]
         public void SaveNewKundeTest()
         {
-            int count_before = MockDataBaseManager.savedKunden.Count;
+            int count_before = MockDataBaseManager.SavedKunden.Count;
 
             string lastname = "Grausgruber";
             bool type = false; // Kunde
             string firstname = "Karl";
             this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
 
-            int count_after = MockDataBaseManager.savedKunden.Count;
+            int count_after = MockDataBaseManager.SavedKunden.Count;
 
             Assert.AreEqual(count_before + 1, count_after);
         }
@@ -112,14 +112,14 @@ namespace BackofficeTests
         [TestMethod()]
         public void SaveNewKundeTest2()
         {
-            int count_before = MockDataBaseManager.savedKontakte.Count;
+            int count_before = MockDataBaseManager.SavedKontakte.Count;
 
             string lastname = "Huber";
             bool type = true; // Kontakt
             string firstname = "Hans";
             this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
 
-            int count_after = MockDataBaseManager.savedKontakte.Count;
+            int count_after = MockDataBaseManager.SavedKontakte.Count;
 
             Assert.AreEqual(count_before+1, count_after);
         }
@@ -130,8 +130,8 @@ namespace BackofficeTests
         [TestMethod()]
         public void SaveNewKundeTest3()
         {
-            int current = MockDataBaseManager.kundenID;
-            Assert.AreEqual(current + 1, MockDataBaseManager.kundenID);
+            int current = MockDataBaseManager.KundenID;
+            Assert.AreEqual(current + 1, MockDataBaseManager.KundenID);
         }
     }
 }

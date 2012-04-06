@@ -15,41 +15,41 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class KundeKontaktTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private string _Vorname;
+        private string vorname;
         /// <summary>
         /// Foreign key to table Kunde
         /// </summary>
         public string Vorname
         {
-            get { return _Vorname; }
-            set { { _Vorname = value; } }
+            get { return vorname; }
+            set { { vorname = value; } }
         }
 
-        private string _NachnameFirmenname;
+        private string nachnameFirmenname;
         /// <summary>
         /// Foreign key to table Kunde
         /// </summary>
         public string NachnameFirmenname
         {
-            get { return _NachnameFirmenname; }
-            set { { _NachnameFirmenname = value; } }
+            get { return nachnameFirmenname; }
+            set { { nachnameFirmenname = value; } }
         }
 
         // Kunde...false, Kontakt...true
-        private bool _Type;
+        private bool type;
         /// <summary>
         /// Is it a Kunde (false) or a Kontakt (true) we are talking about?
         /// </summary>
-        public bool Type { get { return _Type; } set { _Type = value; } }
+        public bool Type { get { return type; } set { type = value; } }
     }
 }

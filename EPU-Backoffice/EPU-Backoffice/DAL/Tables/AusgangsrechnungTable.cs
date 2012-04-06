@@ -15,34 +15,34 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class AusgangsrechnungTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private int _KundenID;
+        private int kundenID;
         /// <summary>
         /// Foreign key to table Kunde
         /// </summary>
         public int KundenID
         {
-            get { return _KundenID; }
-            set { if (value >= 0) { _KundenID = value; } }
+            get { return kundenID; }
+            set { if (value >= 0) { kundenID = value; } }
         }
 
-        private DateTime _Rechnungsdatum;
+        private DateTime rechnungsdatum;
         /// <summary>
         /// Datum of creation of an Rechnung
         /// </summary>
         public DateTime Rechnungsdatum
         {
-            get { return _Rechnungsdatum; }
-            set { _Rechnungsdatum = value; }
+            get { return rechnungsdatum; }
+            set { rechnungsdatum = value; }
         }
     }
 }

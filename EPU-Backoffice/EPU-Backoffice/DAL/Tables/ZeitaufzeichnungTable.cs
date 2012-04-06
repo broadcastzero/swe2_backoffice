@@ -15,44 +15,44 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class ZeitaufzeichnungTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private int _ProjektID;
+        private int projektID;
         /// <summary>
         /// Foreign key to table Projekt
         /// </summary>
         public int ProjektID
         {
-            get { return _ProjektID; }
-            set { if (value >= 0) { _ProjektID = value; } }
+            get { return projektID; }
+            set { if (value >= 0) { projektID = value; } }
         }
 
-        private int _Stunden;
+        private int stunden;
         /// <summary>
         /// The number of hours that shall be booked
         /// </summary>
         public int Stunden
         {
-            get { return _Stunden; }
-            set { if (value >= 0) { _Stunden = value; } }
+            get { return stunden; }
+            set { if (value >= 0) { stunden = value; } }
         }
 
-        private string _Bezeichnung;
+        private string bezeichnung;
         /// <summary>
         /// The description of what has been done
         /// </summary>
         public string Bezeichnung
         {
-            get { return _Bezeichnung; }
-            set { { _Bezeichnung = value; } }
+            get { return bezeichnung; }
+            set { { bezeichnung = value; } }
         }
     }
 }

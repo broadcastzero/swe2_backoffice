@@ -16,34 +16,34 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class ProjektTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private string _Projektname;
+        private string projektname;
         /// <summary>
         /// The name of the project
         /// </summary>
         public string Projektname
         {
-            get { return _Projektname; }
-            set { { _Projektname = value; } }
+            get { return projektname; }
+            set { { projektname = value; } }
         }
 
-        private DateTime _Projektstart;
+        private DateTime projektstart;
         /// <summary>
         /// Datum of creation of an Angebot
         /// </summary>
         public DateTime Projektstart
         {
-            get { return _Projektstart; }
-            set { _Projektstart = value; }
+            get { return projektstart; }
+            set { projektstart = value; }
         }
     }
 }

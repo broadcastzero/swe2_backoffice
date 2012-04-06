@@ -15,86 +15,86 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class AngebotTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
-        public int ID 
+        public int ID
         { 
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } } 
+            get { return id; }
+            set { if (value >= 0) { id = value; } } 
         }
 
-        private int _ProjektID;
+        private int projektID;
         /// <summary>
         /// Foreign key to table Projekt
         /// </summary>
         public int ProjektID
         {
-            get { return _ProjektID; }
-            set { if (value >= 0) { _ProjektID = value; } }
+            get { return projektID; }
+            set { if (value >= 0) { projektID = value; } }
         }
 
-        private int _KundenID;
+        private int kundenID;
         /// <summary>
         /// Foreign key to table Kunde
         /// </summary>
         public int KundenID
         {
-            get { return _KundenID; }
-            set { if (value >= 0) { _KundenID = value; } }
+            get { return kundenID; }
+            set { if (value >= 0) { kundenID = value; } }
         }
 
-        private double _Angebotssumme;
+        private double angebotssumme;
         /// <summary>
         /// Sum of an Angebot
         /// </summary>
         public double Angebotssumme
         {
-            get { return _KundenID; }
-            set { if (value >= 0) { _Angebotssumme = value; } }
+            get { return kundenID; }
+            set { if (value >= 0) { angebotssumme = value; } }
         }
 
         // in hours
-        private int _Angebotsdauer;
+        private int angebotsdauer;
         /// <summary>
         /// Dauer of an Angebot
         /// </summary>
         public int Angebotsdauer
         {
-            get { return _Angebotsdauer; }
-            set { if (value >= 0) { _Angebotsdauer = value; } }
+            get { return angebotsdauer; }
+            set { if (value >= 0) { angebotsdauer = value; } }
         }
 
-        private DateTime _Erstellungsdatum;
+        private DateTime erstellungsdatum;
         /// <summary>
         /// Datum of creation of an Angebot
         /// </summary>
         public DateTime Erstellungsdatum
         {
-            get { return _Erstellungsdatum; }
-            set { _Erstellungsdatum = value; }
+            get { return erstellungsdatum; }
+            set { erstellungsdatum = value; }
         }
 
         // between 0-1 (in %)
-        private double _Umsetzungschance;
+        private double umsetzungschance;
         /// <summary>
         /// Chance in % of Umsetzung
         /// </summary>
         public double Umsetzungschance
         {
-            get { return _Umsetzungschance; }
-            set { if (value <= 1 && value >= 0) { _Umsetzungschance = value; } }
+            get { return umsetzungschance; }
+            set { if (value <= 1 && value >= 0) { umsetzungschance = value; } }
         }
 
-        private bool _Akzeptiert;
+        private bool akzeptiert;
         /// <summary>
         /// bool-value, which shows if Angebot has been accepted
         /// </summary>
         public bool Akzeptiert
         {
-            get { return _Akzeptiert; }
-            set { _Akzeptiert = value; }
+            get { return akzeptiert; }
+            set { akzeptiert = value; }
         }
     }
 }

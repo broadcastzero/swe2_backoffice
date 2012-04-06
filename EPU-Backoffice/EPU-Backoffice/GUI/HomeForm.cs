@@ -36,44 +36,44 @@ namespace EPUBackoffice.Gui
         }
 
         /* Event handling for buttons */
-        private void homeButton_Click(object sender, EventArgs e)
+        private void SelectHomeTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("homeTab");
         }
 
-        private void kundenKontakteButton_Click(object sender, EventArgs e)
+        private void SelectKundenKontakteTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("kundenKontakteTab");
-            this.hideMessagesKundeNeu();
+            this.HideKundeNeuMessages();
 
         }
 
-        private void rechnungsverwaltungButton_Click(object sender, EventArgs e)
+        private void SelectRechnungsverwaltungTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("rechnungsTab");  
         }
 
-        private void angeboteButton_Click(object sender, EventArgs e)
+        private void SelectAngeboteTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("angeboteTab");  
         }
 
-        private void projektverwaltungButton_Click(object sender, EventArgs e)
+        private void SelectProjektverwaltungTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("projektTab");  
         }
 
-        private void zeiterfassungButton_Click(object sender, EventArgs e)
+        private void SelectZeiterfassungTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("zeitTab");  
         }
 
-        private void reportsButton_Click(object sender, EventArgs e)
+        private void SelectReportsTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("reportTab");  
         }
 
-        private void beendenButton_Click(object sender, EventArgs e)
+        private void ShowExitMessageBox(object sender, EventArgs e)
         {
             string message = "Wollen Sie wirklich beenden?";
             string caption = "Beenden";
@@ -92,7 +92,7 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender">The calling object</param>
         /// <param name="e">Additional event arguments</param>
-        private void homeOpenNewDbButton_Click(object sender, EventArgs e)
+        private void ShowOpenNewDbDialogue(object sender, EventArgs e)
         {
             //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
             DataBaseOpener db_opener = new DataBaseOpener();
@@ -104,7 +104,7 @@ namespace EPUBackoffice.Gui
             this.homeCurrentDBLabel.Text = ConfigFileManager.dbName;
         }
 
-        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void KillProcess(object sender, FormClosedEventArgs e)
         {
             Process.GetCurrentProcess().Kill();
         }
@@ -114,17 +114,17 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender">object sender</param>
         /// <param name="e">Event args</param>
-        private void newKundeResetButton_Click(object sender, EventArgs e)
+        private void ResetNewKundeTextBlocks(object sender, EventArgs e)
         {
             this.createKundeVornameTextBlock.Clear();
             this.createKundeNachnameTextBlock.Clear();
-            this.hideMessagesKundeNeu();
+            this.HideKundeNeuMessages();
         }
 
         /// <summary>
         /// Removes all success or error messages from panel "add Kunde/Kontakt"
         /// </summary>
-        public void hideMessagesKundeNeu() 
+        public void HideKundeNeuMessages() 
         {
             this.kundeNeuSuccessLabel.Hide();
             this.kundenNeuErrGeneralLabel.Hide();
@@ -136,7 +136,7 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender">object sender</param>
         /// <param name="e">EventArgs</param>
-        private void createKundeButton_Click(object sender, EventArgs e)
+        private void CreateKundeOrKontakt(object sender, EventArgs e)
         {
             // is set to false in case of error
             bool saved = true;
@@ -153,7 +153,7 @@ namespace EPUBackoffice.Gui
             catch(InvalidInputException ex)
             {
                 saved = false;
-                hideMessagesKundeNeu();
+                HideKundeNeuMessages();
                 this.kundenNeuErrGeneralLabel.Text = "Fehler: " + ex.Message;
                 this.kundenNeuErrGeneralLabel.Show();
             }
@@ -161,21 +161,21 @@ namespace EPUBackoffice.Gui
             // show user that everything went fine
             if (saved)
             {
-                this.hideMessagesKundeNeu();
+                this.HideKundeNeuMessages();
                 this.kundeNeuSuccessLabel.Show();
                 this.createKundeVornameTextBlock.Clear(); // delete input fields
                 this.createKundeNachnameTextBlock.Clear();
             }
         }
 
-        private void angebotErstellenBKundeButton_Click(object sender, EventArgs e)
+        private void ShowNKundeButton(object sender, EventArgs e)
         {
                 angebotErstellenBKundeButton.Hide();
                 angebotErstellenNKundeButton.Show();
                 angebotErstellenSubTab.SelectTab("angebotErstellenBKTab");
         }
 
-        private void angebotErstellenNKundeButton_Click(object sender, EventArgs e)
+        private void ShowBKundeButton(object sender, EventArgs e)
         {
                 angebotErstellenBKundeButton.Show();
                 angebotErstellenNKundeButton.Hide();
@@ -183,17 +183,17 @@ namespace EPUBackoffice.Gui
         }
         
 
-        private void projektNeuSpeichernButton_Click(object sender, EventArgs e)
+        private void SaveNewProject(object sender, EventArgs e)
         {
 
         }
 
-        private void projektNeuResetButton_Click(object sender, EventArgs e)
+        private void ResetNewProjectTextBlocks(object sender, EventArgs e)
         {
 
         }
 
-        private void HomeForm_Load(object sender, EventArgs e)
+        private void LoadHomeForm(object sender, EventArgs e)
         {
 
         }
@@ -203,7 +203,7 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void kundenSearchButton_Click(object sender, EventArgs e)
+        private void SearchKundenOrKontakte(object sender, EventArgs e)
         {
             // hide error message
             this.searchKundeErrorLabel.Hide();

@@ -16,24 +16,24 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class KategorienTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private string _Name;
+        private string name;
         /// <summary>
         /// Foreign key to table Kunde
         /// </summary>
         public string Name
         {
-            get { return _Name; }
-            set { { _Name = value; } }
+            get { return name; }
+            set { { name = value; } }
         }
     }
 }

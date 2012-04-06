@@ -16,34 +16,34 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class BankkontoTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private int _Kontonummer;
+        private int kontonummer;
         /// <summary>
         /// Account number
         /// </summary>
         public int Kontonummer
         {
-            get { return _Kontonummer; }
-            set { if (value >= 0) { _Kontonummer = value; } }
+            get { return kontonummer; }
+            set { if (value >= 0) { kontonummer = value; } }
         }
 
-        private int _BLZ;
+        private int blz;
         /// <summary>
         /// Bank code
         /// </summary>
         public int BLZ
         {
-            get { return _BLZ; }
-            set { if (value >= 0) { _BLZ = value; } }
+            get { return blz; }
+            set { if (value >= 0) { blz = value; } }
         }
     }
 }

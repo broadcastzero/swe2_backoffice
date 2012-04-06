@@ -234,7 +234,7 @@
             this.homeButton.TabIndex = 8;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            this.homeButton.Click += new System.EventHandler(this.SelectHomeTab);
             // 
             // kundenKontakteButton
             // 
@@ -245,7 +245,7 @@
             this.kundenKontakteButton.TabIndex = 9;
             this.kundenKontakteButton.Text = "Kunden und Kontakte";
             this.kundenKontakteButton.UseVisualStyleBackColor = true;
-            this.kundenKontakteButton.Click += new System.EventHandler(this.kundenKontakteButton_Click);
+            this.kundenKontakteButton.Click += new System.EventHandler(this.SelectKundenKontakteTab);
             // 
             // rechnungsverwaltungButton
             // 
@@ -255,7 +255,7 @@
             this.rechnungsverwaltungButton.TabIndex = 10;
             this.rechnungsverwaltungButton.Text = "Rechnungsverwaltung";
             this.rechnungsverwaltungButton.UseVisualStyleBackColor = true;
-            this.rechnungsverwaltungButton.Click += new System.EventHandler(this.rechnungsverwaltungButton_Click);
+            this.rechnungsverwaltungButton.Click += new System.EventHandler(this.SelectRechnungsverwaltungTab);
             // 
             // angeboteButton
             // 
@@ -265,7 +265,7 @@
             this.angeboteButton.TabIndex = 11;
             this.angeboteButton.Text = "Angebote";
             this.angeboteButton.UseVisualStyleBackColor = true;
-            this.angeboteButton.Click += new System.EventHandler(this.angeboteButton_Click);
+            this.angeboteButton.Click += new System.EventHandler(this.SelectAngeboteTab);
             // 
             // zeiterfassungButton
             // 
@@ -275,7 +275,7 @@
             this.zeiterfassungButton.TabIndex = 13;
             this.zeiterfassungButton.Text = "Zeiterfassung";
             this.zeiterfassungButton.UseVisualStyleBackColor = true;
-            this.zeiterfassungButton.Click += new System.EventHandler(this.zeiterfassungButton_Click);
+            this.zeiterfassungButton.Click += new System.EventHandler(this.SelectZeiterfassungTab);
             // 
             // reportsButton
             // 
@@ -285,7 +285,7 @@
             this.reportsButton.TabIndex = 14;
             this.reportsButton.Text = "Reports";
             this.reportsButton.UseVisualStyleBackColor = true;
-            this.reportsButton.Click += new System.EventHandler(this.reportsButton_Click);
+            this.reportsButton.Click += new System.EventHandler(this.SelectReportsTab);
             // 
             // beendenButton
             // 
@@ -295,7 +295,7 @@
             this.beendenButton.TabIndex = 15;
             this.beendenButton.Text = "Beenden";
             this.beendenButton.UseVisualStyleBackColor = true;
-            this.beendenButton.Click += new System.EventHandler(this.beendenButton_Click);
+            this.beendenButton.Click += new System.EventHandler(this.ShowExitMessageBox);
             // 
             // projektverwaltungButton
             // 
@@ -305,7 +305,7 @@
             this.projektverwaltungButton.TabIndex = 12;
             this.projektverwaltungButton.Text = "Projektverwaltung";
             this.projektverwaltungButton.UseVisualStyleBackColor = true;
-            this.projektverwaltungButton.Click += new System.EventHandler(this.projektverwaltungButton_Click);
+            this.projektverwaltungButton.Click += new System.EventHandler(this.SelectProjektverwaltungTab);
             // 
             // mainTab
             // 
@@ -367,7 +367,7 @@
             this.homeOpenNewDbButton.TabIndex = 2;
             this.homeOpenNewDbButton.Text = "Datenbank auswählen";
             this.homeOpenNewDbButton.UseVisualStyleBackColor = true;
-            this.homeOpenNewDbButton.Click += new System.EventHandler(this.homeOpenNewDbButton_Click);
+            this.homeOpenNewDbButton.Click += new System.EventHandler(this.ShowOpenNewDbDialogue);
             // 
             // la_homeTextCurrent
             // 
@@ -476,7 +476,7 @@
             this.newKundeResetButton.TabIndex = 5;
             this.newKundeResetButton.Text = "Felder zurücksetzen";
             this.newKundeResetButton.UseVisualStyleBackColor = true;
-            this.newKundeResetButton.Click += new System.EventHandler(this.newKundeResetButton_Click);
+            this.newKundeResetButton.Click += new System.EventHandler(this.ResetNewKundeTextBlocks);
             // 
             // createKundeButton
             // 
@@ -486,7 +486,7 @@
             this.createKundeButton.TabIndex = 4;
             this.createKundeButton.Text = "Speichern";
             this.createKundeButton.UseVisualStyleBackColor = true;
-            this.createKundeButton.Click += new System.EventHandler(this.createKundeButton_Click);
+            this.createKundeButton.Click += new System.EventHandler(this.CreateKundeOrKontakt);
             // 
             // createKontaktRadioButton
             // 
@@ -611,7 +611,7 @@
             this.kundenSearchButton.TabIndex = 4;
             this.kundenSearchButton.Text = "Suchen";
             this.kundenSearchButton.UseVisualStyleBackColor = true;
-            this.kundenSearchButton.Click += new System.EventHandler(this.kundenSearchButton_Click);
+            this.kundenSearchButton.Click += new System.EventHandler(this.SearchKundenOrKontakte);
             // 
             // label4
             // 
@@ -1171,7 +1171,7 @@
             this.angebotErstellenNKundeButton.Text = "Neuer Kunde";
             this.angebotErstellenNKundeButton.UseVisualStyleBackColor = true;
             this.angebotErstellenNKundeButton.Visible = false;
-            this.angebotErstellenNKundeButton.Click += new System.EventHandler(this.angebotErstellenNKundeButton_Click);
+            this.angebotErstellenNKundeButton.Click += new System.EventHandler(this.ShowBKundeButton);
             // 
             // angebotErstellenBKundeButton
             // 
@@ -1181,7 +1181,7 @@
             this.angebotErstellenBKundeButton.TabIndex = 11;
             this.angebotErstellenBKundeButton.Text = "Bestehender Kunde";
             this.angebotErstellenBKundeButton.UseVisualStyleBackColor = true;
-            this.angebotErstellenBKundeButton.Click += new System.EventHandler(this.angebotErstellenBKundeButton_Click);
+            this.angebotErstellenBKundeButton.Click += new System.EventHandler(this.ShowNKundeButton);
             // 
             // label35
             // 
@@ -1515,7 +1515,7 @@
             this.projektNeuResetButton.TabIndex = 5;
             this.projektNeuResetButton.Text = "Felder zurücksetzen";
             this.projektNeuResetButton.UseVisualStyleBackColor = true;
-            this.projektNeuResetButton.Click += new System.EventHandler(this.projektNeuResetButton_Click);
+            this.projektNeuResetButton.Click += new System.EventHandler(this.ResetNewProjectTextBlocks);
             // 
             // projektNeuSpeichernButton
             // 
@@ -1525,7 +1525,7 @@
             this.projektNeuSpeichernButton.TabIndex = 4;
             this.projektNeuSpeichernButton.Text = "Speichern";
             this.projektNeuSpeichernButton.UseVisualStyleBackColor = true;
-            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.projektNeuSpeichernButton_Click);
+            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.SaveNewProject);
             // 
             // projektNeuProjekttitelTextbox
             // 
@@ -1549,7 +1549,6 @@
             this.label38.Size = new System.Drawing.Size(58, 13);
             this.label38.TabIndex = 1;
             this.label38.Text = "Startdatum";
-            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // label37
             // 
@@ -1738,7 +1737,6 @@
             this.zeiterfassungdescriptionTextbox.Name = "zeiterfassungdescriptionTextbox";
             this.zeiterfassungdescriptionTextbox.Size = new System.Drawing.Size(200, 20);
             this.zeiterfassungdescriptionTextbox.TabIndex = 2;
-            this.zeiterfassungdescriptionTextbox.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label29
             // 
@@ -1765,7 +1763,6 @@
             this.zeiterfassungAddButton.TabIndex = 3;
             this.zeiterfassungAddButton.Text = "Hinzufügen";
             this.zeiterfassungAddButton.UseVisualStyleBackColor = true;
-            this.zeiterfassungAddButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // zeiterfassungHoursTextbox
             // 
@@ -1814,8 +1811,8 @@
             this.Controls.Add(this.mainTab);
             this.Name = "HomeForm";
             this.Text = "EPU Backoffice 1.0";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
-            this.Load += new System.EventHandler(this.HomeForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KillProcess);
+            this.Load += new System.EventHandler(this.LoadHomeForm);
             this.mainTab.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
             this.homeTab.PerformLayout();

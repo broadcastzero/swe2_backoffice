@@ -113,33 +113,33 @@
             Constructor, only calls InitializeComponent()
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.homeOpenNewDbButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.ShowOpenNewDbDialogue(System.Object,System.EventArgs)">
             <summary>
             Catches the event, when the user clicks on the "open existing database"-button.
             </summary>
             <param name="sender">The calling object</param>
             <param name="e">Additional event arguments</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.newKundeResetButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetNewKundeTextBlocks(System.Object,System.EventArgs)">
             <summary>
             Clear textblocks in which a new Kunde or Kontakt can be created
             </summary>
             <param name="sender">object sender</param>
             <param name="e">Event args</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.hideMessagesKundeNeu">
+        <member name="M:EPUBackoffice.Gui.HomeForm.HideKundeNeuMessages">
             <summary>
             Removes all success or error messages from panel "add Kunde/Kontakt"
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.createKundeButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.CreateKundeOrKontakt(System.Object,System.EventArgs)">
             <summary>
             Get values of GUI elements and send them to the business layer, they shall be stored in the database.
             </summary>
             <param name="sender">object sender</param>
             <param name="e">EventArgs</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.kundenSearchButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.SearchKundenOrKontakte(System.Object,System.EventArgs)">
             <summary>
             Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
             </summary>
@@ -175,7 +175,7 @@
             in case that no valid SQLite-file has been found under the path in the configuration file.
             </summary>
         </member>
-        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.chooseButton_Click(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.DBNotFoundForm.ShowOpenExistingDbDialogue(System.Object,System.EventArgs)">
             <summary>
             Catches the event, when the user clicks on the "open existing database"-button and forwards to DBNotFoundForm.OpenExistingDatabase()
             </summary>
@@ -568,7 +568,7 @@
             This class reads or writes the config file.
             </summary>
         </member>
-        <member name="F:EPUBackoffice.BL.ConfigFileManager.connect_settings">
+        <member name="F:EPUBackoffice.BL.ConfigFileManager.connectSettings">
             <summary>
             Sets the connection string. User gives path to .db file.
             </summary>
@@ -691,22 +691,22 @@
             <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
             <returns>A list of the requested Kunden</returns>
         </member>
-        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.kundenID">
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
             <summary>
             A continuing, unique ID for the table "Kunden"
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.kontaktID">
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KontaktID">
             <summary>
             A continuing, unique ID for the table "Kontakte"
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.savedKunden">
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.SavedKunden">
             <summary>
             Static list in which created Kunden are stored
             </summary>
         </member>
-        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.savedKontakte">
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.SavedKontakte">
             <summary>
             Static list in which created Kontakt are stored
             </summary>

@@ -22,7 +22,7 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Sets the connection string. User gives path to .db file.
         /// </summary>
-        private ConnectionStringSettings connect_settings;
+        private ConnectionStringSettings connectSettings;
 
         /// <summary>
         /// The name of the currently opened database
@@ -53,20 +53,20 @@ namespace EPUBackoffice.BL
         /// <param name="path">File path of the SQLite database.</param>
         public void SetDatabasePath(string path)
         {
-            this.connect_settings = new ConnectionStringSettings();
-            this.connect_settings.Name = "SQLite";
-            this.connect_settings.ConnectionString = "Data Source=" + path;
+            this.connectSettings = new ConnectionStringSettings();
+            this.connectSettings.Name = "SQLite";
+            this.connectSettings.ConnectionString = "Data Source=" + path;
             try
             {
                 Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                config.ConnectionStrings.ConnectionStrings.Remove(this.connect_settings); // clear old path
-                config.ConnectionStrings.ConnectionStrings.Add(this.connect_settings);
+                config.ConnectionStrings.ConnectionStrings.Remove(this.connectSettings); // clear old path
+                config.ConnectionStrings.ConnectionStrings.Add(this.connectSettings);
                 config.Save();
 
-                this.logger.Log(0, "Connection string " + this.connect_settings.ConnectionString + " has been stored in config file.");
+                this.logger.Log(0, "Connection string " + this.connectSettings.ConnectionString + " has been stored in config file.");
 
                 // save connection string and database name in static var
-                ConfigFileManager.connectionString = this.connect_settings.ConnectionString;
+                ConfigFileManager.connectionString = this.connectSettings.ConnectionString;
                 ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\')+1);
             }
             catch (System.Configuration.ConfigurationErrorsException e)
@@ -109,17 +109,17 @@ namespace EPUBackoffice.BL
         public bool CheckDataBaseExistance()
         {
             // get location of .db file out of configuration file
-            this.connect_settings = ConfigurationManager.ConnectionStrings["SQLite"];
+            this.connectSettings = ConfigurationManager.ConnectionStrings["SQLite"];
 
             // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config
-            if (this.connect_settings == null)
+            if (this.connectSettings == null)
             {
                 this.logger.Log(1, "No entry 'SQLite' in config file.");
                 return false;
             }
 
             // get file location out of connection string
-            string path = connect_settings.ConnectionString;
+            string path = connectSettings.ConnectionString;
             int index1, index2;
             index1 = path.IndexOf("Data Source=");
             index2 = path.IndexOf(".db");
@@ -139,7 +139,7 @@ namespace EPUBackoffice.BL
             if (exists == true)
             {
                 // save connection string and database name in static var
-                ConfigFileManager.connectionString = this.connect_settings.ConnectionString;
+                ConfigFileManager.connectionString = this.connectSettings.ConnectionString;
                 ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\') + 1);
 
                 return true;

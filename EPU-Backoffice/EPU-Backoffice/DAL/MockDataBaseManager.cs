@@ -21,42 +21,42 @@ namespace EPUBackoffice.Dal
         Logger logger = Logger.Instance;
 
         // Private fields for Kunden/Kontakte-IDs
-        private static int _kundenID = 0;
-        private static int _kontaktID = 0;
+        private static int kundenID = 0;
+        private static int kontaktID = 0;
 
         // Private fields for saved Kunden/Kontakte (ILists)
-        private static List<KundeKontaktTable> _savedKunden;
-        private static List<KundeKontaktTable> _savedKontakte;
+        private static List<KundeKontaktTable> savedKunden;
+        private static List<KundeKontaktTable> savedKontakte;
 
         /// <summary>
         /// A continuing, unique ID for the table "Kunden"
         /// </summary>
-        public static int kundenID { get { return _kundenID++; } }
+        public static int KundenID { get { return kundenID++; } }
 
         /// <summary>
         /// A continuing, unique ID for the table "Kontakte"
         /// </summary>
-        public static int kontaktID { get { return _kontaktID++; } }
+        public static int KontaktID { get { return kontaktID++; } }
 
         /// <summary>
         /// Static list in which created Kunden are stored
         /// </summary>
-        public static List<KundeKontaktTable> savedKunden { get { return _savedKunden; } }
+        public static List<KundeKontaktTable> SavedKunden { get { return savedKunden; } }
 
         /// <summary>
         /// Static list in which created Kontakt are stored
         /// </summary>
-        public static List<KundeKontaktTable> savedKontakte { get { return _savedKontakte; } }
+        public static List<KundeKontaktTable> SavedKontakte { get { return savedKontakte; } }
 
         /// <summary>
         /// This method initializes the classes needed to create a mock database
         /// </summary>
         public void CreateDataBase()
         {
-            lock(MockDataBaseManager._savedKunden)
+            lock(MockDataBaseManager.SavedKunden)
             {
-                MockDataBaseManager._savedKunden = new List<KundeKontaktTable>();
-                MockDataBaseManager._savedKontakte = new List<KundeKontaktTable>();
+                MockDataBaseManager.savedKunden = new List<KundeKontaktTable>();
+                MockDataBaseManager.savedKontakte = new List<KundeKontaktTable>();
             }
         }
 
@@ -76,7 +76,7 @@ namespace EPUBackoffice.Dal
                 kunde.NachnameFirmenname = lastname;
 
                 // save to list
-                MockDataBaseManager.savedKunden.Add(kunde);
+                MockDataBaseManager.SavedKunden.Add(kunde);
                 this.logger.Log(0, "A new Kunde has been saved in the mockDB.");
             }
             else
@@ -87,7 +87,7 @@ namespace EPUBackoffice.Dal
                 kontakt.NachnameFirmenname = lastname;
 
                 // save to list
-                MockDataBaseManager.savedKontakte.Add(kontakt);
+                MockDataBaseManager.SavedKontakte.Add(kontakt);
                 this.logger.Log(0, "A new Kontakt has been saved in the mockDB.");
             }
         }

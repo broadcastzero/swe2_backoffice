@@ -53,7 +53,7 @@ namespace BackofficeTests
         [TestInitialize()]
         public void MyTestInitialize()
         {
-            if (MockDataBaseManager.savedKontakte == null)
+            if (MockDataBaseManager.SavedKontakte == null)
             {
                 MockDataBaseManager testMockDB = new MockDataBaseManager();
                 testMockDB.CreateDataBase();
@@ -74,7 +74,7 @@ namespace BackofficeTests
         ///</summary>
         [TestMethod()]
         [ExpectedException(typeof(InvalidInputException), "Feld 'Vorname' ist ungültig!")]
-        public void saveNewKundeTest()
+        public void SaveNewKundeTest()
         {
             KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
             string firstname = "Hans4*"; // TODO: Initialize to an appropriate value
@@ -89,7 +89,7 @@ namespace BackofficeTests
         ///</summary>
         [TestMethod()]
         [ExpectedException(typeof(InvalidInputException), "Feld 'Nachname/Firma' ist ungültig!")]
-        public void saveNewKundeTest1()
+        public void SaveNewKundeTest1()
         {
             KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
             string firstname = string.Empty; // TODO: Initialize to an appropriate value

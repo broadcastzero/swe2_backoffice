@@ -8,7 +8,6 @@ namespace EPUBackoffice.Dal.Tables
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
 
     /// <summary>
@@ -16,44 +15,44 @@ namespace EPUBackoffice.Dal.Tables
     /// </summary>
     public class RechnungszeileTable
     {
-        private int _ID;
+        private int id;
         /// <summary>
         /// Unique ID for the table
         /// </summary>
         public int ID
         {
-            get { return _ID; }
-            set { if (value >= 0) { _ID = value; } }
+            get { return id; }
+            set { if (value >= 0) { id = value; } }
         }
 
-        private int _AngebotsID;
+        private int angebotsID;
         /// <summary>
         /// Foreign key to table Angebot
         /// </summary>
         public int AngebotsID
         {
-            get { return _AngebotsID; }
-            set { if (value >= 0) { _AngebotsID = value; } }
+            get { return angebotsID; }
+            set { if (value >= 0) { angebotsID = value; } }
         }
 
-        private int _AusgangsrechnungsID;
+        private int ausgangsrechnungsID;
         /// <summary>
         /// Foreign key to table Ausgangsrechnung
         /// </summary>
         public int AusgangsrechnungsID
         {
-            get { return _AusgangsrechnungsID; }
-            set { if (value >= 0) { _AusgangsrechnungsID = value; } }
+            get { return ausgangsrechnungsID; }
+            set { if (value >= 0) { ausgangsrechnungsID = value; } }
         }
 
-        private int _Stunden;
+        private int stunden;
         /// <summary>
         /// The number of hours that shall be booked
         /// </summary>
         public int Stunden
         {
-            get { return _Stunden; }
-            set { if (value >= 0) { _Stunden = value; } }
+            get { return stunden; }
+            set { if (value >= 0) { stunden = value; } }
         }
     }
 }

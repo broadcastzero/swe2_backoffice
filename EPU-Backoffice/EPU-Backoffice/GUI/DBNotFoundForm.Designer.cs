@@ -52,7 +52,7 @@
             this.createButton.TabIndex = 1;
             this.createButton.Text = "Create new database";
             this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            this.createButton.Click += new System.EventHandler(this.ShowCreateNewDbDialogue);
             // 
             // chooseButton
             // 
@@ -62,7 +62,7 @@
             this.chooseButton.TabIndex = 2;
             this.chooseButton.Text = "Choose existing DB";
             this.chooseButton.UseVisualStyleBackColor = true;
-            this.chooseButton.Click += new System.EventHandler(this.chooseButton_Click);
+            this.chooseButton.Click += new System.EventHandler(this.ShowOpenExistingDbDialogue);
             // 
             // quitButton
             // 

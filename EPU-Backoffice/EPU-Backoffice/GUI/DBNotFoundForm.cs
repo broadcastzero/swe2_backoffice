@@ -26,7 +26,7 @@
             InitializeComponent();
         }
 
-        private void createButton_Click(object sender, EventArgs e)
+        private void ShowCreateNewDbDialogue(object sender, EventArgs e)
         {
             using (SaveFileDialog dialog = new SaveFileDialog())
             {
@@ -59,10 +59,10 @@
         /// </summary>
         /// <param name="sender">The calling object</param>
         /// <param name="e">Additional event arguments</param>
-        private void chooseButton_Click(Object sender, EventArgs e)
+        private void ShowOpenExistingDbDialogue(Object sender, EventArgs e)
         {
-            DataBaseOpener db_opener = new DataBaseOpener();
-            db_opener.OpenExistingDatabase(sender, e, this);
+            DataBaseOpener dbOpener = new DataBaseOpener();
+            dbOpener.OpenExistingDatabase(sender, e, this);
         }
 
         private void quitButton_Click(object sender, EventArgs e)

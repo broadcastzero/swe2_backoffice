@@ -77,7 +77,7 @@ namespace BackofficeTests
         ///A test for checkDataBaseExistance with a string as parameter
         ///</summary>
         [TestMethod()]
-        public void checkDataBaseExistanceTest1()
+        public void CheckDataBaseExistanceTest1()
         {
             string path = "../../../EPU-Backoffice/bin/Debug/backoffice_database.db"; // create this file in test folder!
             bool expected = true;
@@ -91,7 +91,7 @@ namespace BackofficeTests
         /// Should return false, because "Logfile.txt" does exist, but does not end with ".db".
         /// </summary>
         [TestMethod()]
-        public void checkDataBaseExistanceTest2()
+        public void CheckDataBaseExistanceTest2()
         {
             string path = "../../../EPU-Backoffice/bin/Debug/logs.txt";
             bool expected = false;
@@ -105,7 +105,7 @@ namespace BackofficeTests
         ///Actual should be false, when no Logfile is found (which is the case within the path in which tests are run).
         ///</summary>
         [TestMethod()]
-        public void checkLogfileExistanceTest()
+        public void CheckLogfileExistanceTest()
         {
             bool expected = false;
             bool actual;
