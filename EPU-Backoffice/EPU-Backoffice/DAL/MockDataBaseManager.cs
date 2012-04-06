@@ -18,7 +18,7 @@ namespace EPUBackoffice.Dal
     /// </summary>
     public class MockDataBaseManager : IDAL
     {
-        Logger logger = Logger.Instance;
+        private Logger logger = Logger.Instance;
 
         // Private fields for Kunden/Kontakte-IDs
         private static int kundenID = 0;

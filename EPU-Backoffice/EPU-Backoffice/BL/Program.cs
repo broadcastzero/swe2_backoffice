@@ -34,9 +34,6 @@ namespace EPUBackoffice.BL
              * Trace.WriteLines will be stored in logfile in Debug AND Release Mode.
              * see http://support.microsoft.com/kb/815788 for further information.
              */
-            //TextWriterTraceListener tr1 = new TextWriterTraceListener(System.IO.File.CreateText("Logfile.txt"));
-            //Trace.Listeners.Add(tr1);
-            //Trace.AutoFlush = true;
             Logger logger = Logger.Instance;
             logger.Log(0, "-----------------------------------------------------------");
             logger.Log(0, "Program is started.");
@@ -53,9 +50,14 @@ namespace EPUBackoffice.BL
                 cfm.UsingMockDatabase();
 
                 // Save info in logfile
-                if (ConfigFileManager.mockDB == true)
-                { logger.Log(0, "Using mock database."); }
-                else { logger.Log(0, "Using SQLite database."); }
+                if (ConfigFileManager.MockDB == true)
+                { 
+                    logger.Log(0, "Using mock database."); 
+                }
+                else 
+                { 
+                    logger.Log(0, "Using SQLite database."); 
+                }
 
                 exists = cfm.CheckDataBaseExistance();
             }

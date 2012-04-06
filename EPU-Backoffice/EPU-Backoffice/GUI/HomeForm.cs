@@ -30,9 +30,9 @@ namespace EPUBackoffice.Gui
         {
             InitializeComponent();
             // set win title and label within "Home" subwindow to the currently opened database
-            this.homeCurrentDBLabel.Text = ConfigFileManager.dbName;
+            this.homeCurrentDBLabel.Text = ConfigFileManager.DbName;
             this.Text += " - ";
-            this.Text += ConfigFileManager.dbName;
+            this.Text += ConfigFileManager.DbName;
         }
 
         /* Event handling for buttons */
@@ -100,8 +100,8 @@ namespace EPUBackoffice.Gui
 
             // Update title bar and text within "Home" subwindow
             this.Text = "EPU Backoffice 1.0 - ";
-            this.Text += ConfigFileManager.dbName;
-            this.homeCurrentDBLabel.Text = ConfigFileManager.dbName;
+            this.Text += ConfigFileManager.DbName;
+            this.homeCurrentDBLabel.Text = ConfigFileManager.DbName;
         }
 
         private void KillProcess(object sender, FormClosedEventArgs e)

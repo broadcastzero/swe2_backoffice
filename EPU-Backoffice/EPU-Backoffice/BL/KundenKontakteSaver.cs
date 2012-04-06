@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Program.cs" company="Marvin&Felix">
+// <copyright file="KundenKontakteSaver.cs" company="Marvin&Felix">
 // TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
 // </copyright>
@@ -13,15 +13,15 @@ namespace EPUBackoffice.BL
     using System.Text;
     using System.Text.RegularExpressions;
     using EPUBackoffice.Dal;
-    using UserExceptions;
     using Logger;
+    using UserExceptions;
     
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.
     /// </summary>
     public class KundenKontakteSaver
     {
-        Logger logger = Logger.Instance;
+        private Logger logger = Logger.Instance;
 
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
@@ -32,7 +32,7 @@ namespace EPUBackoffice.BL
         public void SaveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
-            if (firstname != "" && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
+            if (firstname.Length == 0 && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
                 this.logger.Log(2, "Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
@@ -41,8 +41,7 @@ namespace EPUBackoffice.BL
             else if (!Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
                 this.logger.Log(2, "Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
-                
+                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");                
             }
             // else save new Kunde or Kontakt in database
             // first name is optional, if empty, just send lastname and type

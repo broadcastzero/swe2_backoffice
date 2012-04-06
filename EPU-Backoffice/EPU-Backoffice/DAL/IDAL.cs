@@ -38,6 +38,6 @@ namespace EPUBackoffice.Dal
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        void SaveNewKundeKontakt(string lastname, bool type, string firstname="<null>");
+        void SaveNewKundeKontakt(string lastname, bool type, string firstname = "<null>");
     }
 }

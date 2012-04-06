@@ -47,7 +47,7 @@ namespace BackofficeTests
         [ClassInitialize()]
         public static void MyClassInitialize(TestContext testContext)
         {
-            ConfigFileManager.mockDB = true;
+            ConfigFileManager.MockDB = true;
         }
         //
         //Use ClassCleanup to run code after all tests in a class have run

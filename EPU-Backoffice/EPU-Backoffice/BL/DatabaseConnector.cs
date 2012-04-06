@@ -13,8 +13,8 @@ namespace EPUBackoffice.BL
     using System.IO;
     using System.Text;
     using System.Windows.Forms;
-    using EPUBackoffice.Gui;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.Gui;
     using EPUBackoffice.UserExceptions;
     using Logger;
 
@@ -66,12 +66,11 @@ namespace EPUBackoffice.BL
         /// Checks if a database exists at the given path and stores it in the config file.
         /// If everything went fine, this method closes the calling Form and opens the main window.
         /// </summary>
-        /// <returns>True, if database exists.</returns>
         /// <param name="sender">The caller of this method.</param>
         /// <param name="path">The path of the SQLite file</param>
         /// <param name="sendingForm">The form in which the sending element (button) was placed.</param>
         /// <exception cref="InvalidFileException">Thrown if chosen file is invalid.</exception>
-        public void Connect(Object sender, string path, Form sendingForm)
+        public void Connect(object sender, string path, Form sendingForm)
         {
             ConfigFileManager cfm = new ConfigFileManager();
             bool exists = cfm.CheckDataBaseExistance(path);

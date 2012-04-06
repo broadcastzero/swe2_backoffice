@@ -21,7 +21,7 @@ namespace EPUBackoffice.Dal
     /// </summary>
     public class DataBaseManager : IDAL
     {
-        Logger logger = Logger.Instance;
+        private Logger logger = Logger.Instance;
 
         /// <summary>
         /// Connects to the database and creates its tables if they do not exist yet.
@@ -51,7 +51,7 @@ namespace EPUBackoffice.Dal
             try
             {
                 connection = new SQLiteConnection();
-                connection.ConnectionString = ConfigFileManager.connectionString;
+                connection.ConnectionString = ConfigFileManager.ConnectionString;
                 connection.Open();
 
                 // Create tables if they do not exist
@@ -78,8 +78,8 @@ namespace EPUBackoffice.Dal
         /// Saves a new Kunde or Kontakt to the database
         /// </summary>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
+        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         public void SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
         {
             string s_type = type == false ? "Kunde" : "Kontakt";
@@ -93,7 +93,7 @@ namespace EPUBackoffice.Dal
             try
             {
                 // initialise connection
-                con = new SQLiteConnection(ConfigFileManager.connectionString);
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
                 con.Open();
 
                 // initialise transaction
@@ -179,7 +179,7 @@ namespace EPUBackoffice.Dal
             try
             {
                 // initialise connection
-                con = new SQLiteConnection(ConfigFileManager.connectionString);
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
                 con.Open();
 
                 // initialise transaction

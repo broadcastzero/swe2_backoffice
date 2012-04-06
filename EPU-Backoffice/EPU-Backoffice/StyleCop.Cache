@@ -566,82 +566,37 @@
   <project key="-1106428070">
     <configuration>DEBUG;TRACE</configuration>
   </project>
-  <sourcecode name="KundenKontakteSaver.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="KundenKontakteLoader.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 09:01:14</timestamp>
-    <milliseconds>896</milliseconds>
+    <timestamp>04/06/2012 10:52:40</timestamp>
+    <milliseconds>710</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>16</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The field must have an access modifier.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
-        <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>46</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>47</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
-        <context>A comment may not be placed within the bracketed statement.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
-        <context>A comment may not be placed within the bracketed statement.</context>
-        <line>47</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseStringEmptyForEmptyStrings" ruleCheckId="SA1122">
-        <context>Use string.Empty rather than "".</context>
-        <line>35</line>
+        <line>25</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="DatabaseConnector.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 09:01:14</timestamp>
-    <milliseconds>896</milliseconds>
+    <timestamp>04/06/2012 10:52:40</timestamp>
+    <milliseconds>695</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>16</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
@@ -669,25 +624,15 @@
         <line>55</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="VoidReturnValueMustNotBeDocumented" ruleCheckId="SA1617">
-        <context>The documentation header should not contain a returns tag, since the element has no return value.</context>
-        <line>74</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
-        <context>Use the built-in type alias 'object' rather than Object or System.Object.</context>
-        <line>74</line>
-        <warning>False</warning>
-      </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="KundenKontakteLoader.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="KundenKontakteSaver.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 09:13:55</timestamp>
-    <milliseconds>502</milliseconds>
+    <timestamp>04/06/2012 10:47:26</timestamp>
+    <milliseconds>751</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
@@ -696,102 +641,62 @@
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>25</line>
+        <line>24</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementParameterDocumentationMustMatchElementParameters" ruleCheckId="SA1612">
-        <context>The param tags in the documentation header must match the element's parameter list.</context>
-        <line>34</line>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>40</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to logger must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>38</line>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>46</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to logger must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>43</line>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>46</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="ConfigFileManager.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:10:57</timestamp>
-    <milliseconds>331</milliseconds>
+    <timestamp>04/06/2012 10:50:32</timestamp>
+    <milliseconds>637</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
-        <context>property names begin with an upper-case letter: dbName.</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All properties must be placed after all fields.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
-        <context>property names begin with an upper-case letter: connectionString.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether</context>
         <line>45</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
-        <context>property names begin with an upper-case letter: mockDB.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1009">
-        <context>Invalid spacing around the closing parenthesis.</context>
-        <line>70</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '+' is invalid.</context>
-        <line>70</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '+' is invalid.</context>
-        <line>70</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="VoidReturnValueMustNotBeDocumented" ruleCheckId="SA1617">
-        <context>The documentation header should not contain a returns tag, since the element has no return value.</context>
-        <line>83</line>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether </context>
+        <line>40</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
         <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>90</line>
+        <line>89</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
         <context>A comment may not be placed within the bracketed statement.</context>
-        <line>90</line>
+        <line>89</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
@@ -799,85 +704,85 @@
         <line>147</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>134</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>148</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to connectSettings must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>122</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>148</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementParametersMustBeDocumented" ruleCheckId="SA1611">
-        <context>The documentation header must contain param tags matching the element's parameter list.</context>
-        <line>157</line>
-        <warning>False</warning>
-      </violation>
     </violations>
   </sourcecode>
   <sourcecode name="DALFactory.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/01/2012 19:29:06</timestamp>
-    <milliseconds>594</milliseconds>
+    <timestamp>04/06/2012 10:48:02</timestamp>
+    <milliseconds>901</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementReturnValueDocumentationMustHaveText" ruleCheckId="SA1616">
-        <context>The returns section in the documentation header must not be empty.</context>
-        <line>24</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="IDAL.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 09:13:55</timestamp>
-    <milliseconds>520</milliseconds>
+    <timestamp>04/06/2012 10:51:23</timestamp>
+    <milliseconds>711</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>41</line>
+    </violations>
+  </sourcecode>
+  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/06/2012 10:51:53</timestamp>
+    <milliseconds>734</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>41</line>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The class must have an access modifier.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>64</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>64</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>75</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="DataBaseManager.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="MockDataBaseManager.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 09:13:55</timestamp>
-    <milliseconds>489</milliseconds>
+    <timestamp>04/06/2012 10:52:01</timestamp>
+    <milliseconds>547</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
@@ -886,11 +791,101 @@
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="StaticElementsMustAppearBeforeInstanceElements" ruleCheckId="SA1204">
+        <context>All static private fields must be placed before all non-static private fields.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
         <line>24</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The field must have an access modifier.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets </context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets </context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets </context>
+        <line>44</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>44</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets </context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
+        <context>The spacing around the keyword 'lock' is invalid.</context>
+        <line>56</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementParameterDocumentationMustMatchElementParameters" ruleCheckId="SA1612">
+        <context>The param tags in the documentation header must match the element's parameter list.</context>
+        <line>69</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="DataBaseManager.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/06/2012 10:52:22</timestamp>
+    <milliseconds>527</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
         <line>24</line>
         <warning>False</warning>
       </violation>
@@ -986,41 +981,71 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="MockDataBaseManager.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="AusgangsrechnungTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:21:45</timestamp>
-    <milliseconds>482</milliseconds>
+    <timestamp>04/06/2012 10:15:35</timestamp>
+    <milliseconds>220</milliseconds>
     <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
-        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchFileName" ruleCheckId="SA1638">
+        <context>The file attribute in the file header's copyright tag must contain the name of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchTypeName" ruleCheckId="SA1649">
+        <context>The file attribute in the file header's copyright tag must contain the name of the first type in the file and can be any of these: "AusgangsrechnungTable", "AusgangsrechnungTable"</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
+        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
         <line>1</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>21</line>
+        <line>18</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The field must have an access modifier.</context>
-        <line>21</line>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>22</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="StaticElementsMustAppearBeforeInstanceElements" ruleCheckId="SA1204">
-        <context>All static private fields must be placed before all non-static private fields.</context>
-        <line>21</line>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>22</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>38</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>24</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>25</line>
         <warning>False</warning>
       </violation>
@@ -1029,136 +1054,71 @@
         <line>28</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
         <line>29</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets </context>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to kundenID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets </context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets </context>
-        <line>44</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>44</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets </context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The property must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
-        <context>The spacing around the keyword 'lock' is invalid.</context>
-        <line>56</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementParameterDocumentationMustMatchElementParameters" ruleCheckId="SA1612">
-        <context>The param tags in the documentation header must match the element's parameter list.</context>
-        <line>69</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
-  <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>03/29/2012 14:00:02</timestamp>
-    <milliseconds>533</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
-        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The class must have an access modifier.</context>
-        <line>20</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
         <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>57</line>
+        <line>35</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>58</line>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to kundenID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>35</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>37</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>62</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The method must have an access modifier.</context>
-        <line>26</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
-        <context>A comment may not be placed within the bracketed statement.</context>
-        <line>62</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
-        <context>A comment may not be placed within the bracketed statement.</context>
-        <line>73</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>37</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
         <line>38</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>42</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>42</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
         <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>44</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>45</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="AngebotTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:15:09</timestamp>
@@ -1175,7 +1135,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>22</line>
         <warning>False</warning>
       </violation>
@@ -1245,7 +1205,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>32</line>
         <warning>False</warning>
       </violation>
@@ -1280,7 +1240,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>42</line>
         <warning>False</warning>
       </violation>
@@ -1315,7 +1275,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>52</line>
         <warning>False</warning>
       </violation>
@@ -1350,7 +1310,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>63</line>
         <warning>False</warning>
       </violation>
@@ -1385,7 +1345,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>73</line>
         <warning>False</warning>
       </violation>
@@ -1415,7 +1375,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>84</line>
         <warning>False</warning>
       </violation>
@@ -1450,7 +1410,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether</context>
+        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether </context>
         <line>94</line>
         <warning>False</warning>
       </violation>
@@ -1476,144 +1436,9 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="AusgangsrechnungTable.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/06/2012 10:15:35</timestamp>
-    <milliseconds>220</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchFileName" ruleCheckId="SA1638">
-        <context>The file attribute in the file header's copyright tag must contain the name of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchTypeName" ruleCheckId="SA1649">
-        <context>The file attribute in the file header's copyright tag must contain the name of the first type in the file and can be any of these: "AusgangsrechnungTable", "AusgangsrechnungTable"</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
-        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>18</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>19</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>38</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>25</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>25</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>32</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>32</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to kundenID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to kundenID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>38</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>42</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>42</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>44</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="BankkontoTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:15:55</timestamp>
@@ -1630,7 +1455,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>23</line>
         <warning>False</warning>
       </violation>
@@ -1675,7 +1500,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>33</line>
         <warning>False</warning>
       </violation>
@@ -1710,7 +1535,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>43</line>
         <warning>False</warning>
       </violation>
@@ -1741,9 +1566,174 @@
       </violation>
     </violations>
   </sourcecode>
+  <sourcecode name="EingangsrechnungTable.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/06/2012 10:17:09</timestamp>
+    <milliseconds>35</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
+        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>33</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>33</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>30</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to kontaktID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>35</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>36</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to kontaktID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>36</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>43</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>43</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to archivierungspfad must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>45</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>46</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to archivierungspfad must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>46</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>53</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>53</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>50</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>55</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>56</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
   <sourcecode name="KategorienTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:17:19</timestamp>
@@ -1760,7 +1750,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>23</line>
         <warning>False</warning>
       </violation>
@@ -1800,7 +1790,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>33</line>
         <warning>False</warning>
       </violation>
@@ -1833,7 +1823,7 @@
   </sourcecode>
   <sourcecode name="BuchungszeilenTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:16:41</timestamp>
@@ -1850,7 +1840,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>23</line>
         <warning>False</warning>
       </violation>
@@ -1910,7 +1900,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>33</line>
         <warning>False</warning>
       </violation>
@@ -1945,7 +1935,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>43</line>
         <warning>False</warning>
       </violation>
@@ -1980,7 +1970,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>53</line>
         <warning>False</warning>
       </violation>
@@ -2015,7 +2005,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>63</line>
         <warning>False</warning>
       </violation>
@@ -2050,7 +2040,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>73</line>
         <warning>False</warning>
       </violation>
@@ -2076,13 +2066,13 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="EingangsrechnungTable.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="ProjektTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:17:09</timestamp>
-    <milliseconds>35</milliseconds>
+    <timestamp>04/06/2012 10:18:04</timestamp>
+    <milliseconds>629</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
         <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
@@ -2095,7 +2085,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>23</line>
         <warning>False</warning>
       </violation>
@@ -2119,11 +2109,6 @@
         <line>39</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
         <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>25</line>
@@ -2145,7 +2130,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>33</line>
         <warning>False</warning>
       </violation>
@@ -2160,7 +2145,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to kontaktID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to projektname must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>35</line>
         <warning>False</warning>
       </violation>
@@ -2170,7 +2155,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to kontaktID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to projektname must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>36</line>
         <warning>False</warning>
       </violation>
@@ -2180,7 +2165,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>43</line>
         <warning>False</warning>
       </violation>
@@ -2195,55 +2180,20 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to archivierungspfad must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to projektstart must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>45</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to projektstart must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>46</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to archivierungspfad must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>46</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>53</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>53</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>50</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>55</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to rechnungsdatum must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>56</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="KundeKontaktTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:17:49</timestamp>
@@ -2270,7 +2220,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>22</line>
         <warning>False</warning>
       </violation>
@@ -2320,7 +2270,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>32</line>
         <warning>False</warning>
       </violation>
@@ -2355,7 +2305,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>42</line>
         <warning>False</warning>
       </violation>
@@ -2390,7 +2340,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether</context>
+        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether </context>
         <line>53</line>
         <warning>False</warning>
       </violation>
@@ -2421,304 +2371,9 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="ProjektTable.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/06/2012 10:18:04</timestamp>
-    <milliseconds>629</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
-        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>19</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>23</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>23</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>20</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>25</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>26</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>26</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>33</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>33</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektname must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektname must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>43</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>43</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektstart must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektstart must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>46</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
-  <sourcecode name="RechnungszeileTable.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/06/2012 10:18:28</timestamp>
-    <milliseconds>788</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
-        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>18</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>19</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>38</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All properties must be placed after all fields.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>25</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>25</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>32</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>32</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to angebotsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to angebotsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>38</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>42</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>42</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to ausgangsrechnungsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>44</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to ausgangsrechnungsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
-        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>54</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
-        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>55</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>55</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="DataBaseOpener.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 09:01:14</timestamp>
@@ -2736,13 +2391,13 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="ZeitaufzeichnungTable.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="RechnungszeileTable.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:18:50</timestamp>
-    <milliseconds>925</milliseconds>
+    <timestamp>04/06/2012 10:18:28</timestamp>
+    <milliseconds>788</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
         <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
@@ -2755,7 +2410,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>22</line>
         <warning>False</warning>
       </violation>
@@ -2805,7 +2460,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>32</line>
         <warning>False</warning>
       </violation>
@@ -2820,7 +2475,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to angebotsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>34</line>
         <warning>False</warning>
       </violation>
@@ -2830,7 +2485,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to projektID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to angebotsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>35</line>
         <warning>False</warning>
       </violation>
@@ -2840,7 +2495,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>42</line>
         <warning>False</warning>
       </violation>
@@ -2855,7 +2510,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to ausgangsrechnungsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>44</line>
         <warning>False</warning>
       </violation>
@@ -2865,7 +2520,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to ausgangsrechnungsID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>45</line>
         <warning>False</warning>
       </violation>
@@ -2875,7 +2530,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
-        <context>The property's documentation summary text must begin with: Gets or sets</context>
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
         <line>52</line>
         <warning>False</warning>
       </violation>
@@ -2890,7 +2545,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to bezeichnung must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>54</line>
         <warning>False</warning>
       </violation>
@@ -2900,7 +2555,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to bezeichnung must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>55</line>
         <warning>False</warning>
       </violation>
@@ -2908,7 +2563,7 @@
   </sourcecode>
   <sourcecode name="TableControl.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/29/2012 08:09:33</timestamp>
@@ -2948,7 +2603,7 @@
   </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/07/2012 12:54:12</timestamp>
@@ -2961,128 +2616,188 @@
       </violation>
     </violations>
   </sourcecode>
+  <sourcecode name="ZeitaufzeichnungTable.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/06/2012 10:18:50</timestamp>
+    <milliseconds>925</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
+        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>18</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>22</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>22</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>38</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
+        <context>All properties must be placed after all fields.</context>
+        <line>48</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>24</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to id must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to projektID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>35</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to projektID must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>35</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>38</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>42</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>42</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>44</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>45</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to stunden must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>45</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>48</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets </context>
+        <line>52</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>52</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeaderMustBePrecededByBlankLine" ruleCheckId="SA1514">
+        <context>A documentation header must be preceded by a blank line or must be the first item in its scope.</context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to bezeichnung must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>54</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="StatementMustNotBeOnSingleLine" ruleCheckId="SA1501">
+        <context>A statement containing curly brackets must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>55</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to bezeichnung must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>55</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
   <sourcecode name="Resources.Designer.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/10/2012 12:25:38</timestamp>
     <milliseconds>522</milliseconds>
     <violations />
   </sourcecode>
-  <sourcecode name="InvalidFileException.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/04/2012 13:00:15</timestamp>
-    <milliseconds>343</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
-        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeadersMustNotBeFollowedByBlankLine" ruleCheckId="SA1506">
-        <context>A documentation header line must not be followed by a blank line.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>37</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
-  <sourcecode name="InvalidValueException.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/04/2012 13:00:15</timestamp>
-    <milliseconds>343</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchFileName" ruleCheckId="SA1638">
-        <context>The file attribute in the file header's copyright tag must contain the name of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchTypeName" ruleCheckId="SA1649">
-        <context>The file attribute in the file header's copyright tag must contain the name of the first type in the file and can be any of these: "InvalidInputException", "InvalidInputException"</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
-        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeadersMustNotBeFollowedByBlankLine" ruleCheckId="SA1506">
-        <context>A documentation header line must not be followed by a blank line.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
-        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
-        <line>37</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="Logger.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/28/2012 14:54:10</timestamp>
@@ -3129,20 +2844,130 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes static members of the {Type name} class.</context>
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes static members of the &lt;see cref="Logger" /&gt; class.</context>
         <line>34</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="Logger" /&gt; class.</context>
         <line>42</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="InvalidFileException.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/04/2012 13:00:15</timestamp>
+    <milliseconds>343</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
+        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeadersMustNotBeFollowedByBlankLine" ruleCheckId="SA1506">
+        <context>A documentation header line must not be followed by a blank line.</context>
+        <line>11</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidFileException" /&gt; class.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>22</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidFileException" /&gt; class.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidFileException" /&gt; class.</context>
+        <line>35</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="InvalidValueException.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/04/2012 13:00:15</timestamp>
+    <milliseconds>343</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchFileName" ruleCheckId="SA1638">
+        <context>The file attribute in the file header's copyright tag must contain the name of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderFileNameDocumentationMustMatchTypeName" ruleCheckId="SA1649">
+        <context>The file attribute in the file header's copyright tag must contain the name of the first type in the file and can be any of these: "InvalidInputException", "InvalidInputException"</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileHeaderMustHaveValidCompanyText" ruleCheckId="SA1640">
+        <context>The copyright tag in the file header must contain a company attribute which contains the name of the company.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementDocumentationHeadersMustNotBeFollowedByBlankLine" ruleCheckId="SA1506">
+        <context>A documentation header line must not be followed by a blank line.</context>
+        <line>11</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidInputException" /&gt; class.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>22</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidInputException" /&gt; class.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="InvalidInputException" /&gt; class.</context>
+        <line>35</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementMustNotBeOnSingleLine" ruleCheckId="SA1502">
+        <context>The constructor must not be placed on a single line. The opening and closing curly brackets must each be placed on their own line.</context>
+        <line>37</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
   <sourcecode name="DBNotFoundForm.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:23:26</timestamp>
@@ -3154,7 +2979,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="DBNotFoundForm" /&gt; class.</context>
         <line>24</line>
         <warning>False</warning>
       </violation>
@@ -3192,7 +3017,7 @@
   </sourcecode>
   <sourcecode name="Settings.Designer.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/10/2012 12:25:38</timestamp>
@@ -3201,7 +3026,7 @@
   </sourcecode>
   <sourcecode name="DBNotFoundForm.Designer.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:23:09</timestamp>
@@ -3281,11 +3106,11 @@
   </sourcecode>
   <sourcecode name="HomeForm.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:08:33</timestamp>
-    <milliseconds>411</milliseconds>
+    <timestamp>04/06/2012 10:39:30</timestamp>
+    <milliseconds>23</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
@@ -3313,7 +3138,7 @@
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ConstructorSummaryDocumentationMustBeginWithStandardText" ruleCheckId="SA1642">
-        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the {Type name} class.</context>
+        <context>The documentation text within the constructor's summary tag must begin with the text: Initializes a new instance of the &lt;see cref="HomeForm" /&gt; class.</context>
         <line>29</line>
         <warning>False</warning>
       </violation>
@@ -3566,7 +3391,7 @@
   </sourcecode>
   <sourcecode name="HomeForm.Designer.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:08:29</timestamp>

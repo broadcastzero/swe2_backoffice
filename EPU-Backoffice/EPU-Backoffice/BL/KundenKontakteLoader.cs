@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="DataLoader.cs" company="Marvin&Felix">
+// <copyright file="KundenKontakteLoader.cs" company="Marvin&Felix">
 // TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
 // </copyright>
@@ -27,20 +27,20 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Gets requested Kontakte out of the database.
         /// </summary>
+        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="firstname">The first name of the to-be-searched Kontakt</param>
         /// <param name="lastname">The last name of the to-be-searched Kontakt</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <returns>List of matching Kontakt</returns>
         public List<KundeKontaktTable> LoadKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
             if (firstname != null && firstname.Length != 0 && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
             {
-                logger.Log(2, "User tried to search for invalid first name in Kontakte!");
+                this.logger.Log(2, "User tried to search for invalid first name in Kontakte!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             else if (lastname != null && lastname.Length != 0 && !Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
             {
-                logger.Log(2, "User tried to search for invalid last name!");
+                this.logger.Log(2, "User tried to search for invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
             else if (firstname.Length == 0 && lastname.Length == 0)

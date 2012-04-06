@@ -25,24 +25,24 @@ namespace EPUBackoffice.BL
         private ConnectionStringSettings connectSettings;
 
         /// <summary>
-        /// The name of the currently opened database
+        /// Gets or sets the name of the currently opened database
         /// </summary>
-        public static string dbName { get; set; }
+        public static string DbName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the connection string needed to create a connection
+        /// </summary>
+        public static string ConnectionString { get; set; }
+
+        /// <summary>
+        /// Gets or sets the value indicating, if a mock database is used. Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
+        /// </summary>
+        public static bool MockDB { get; set; }
 
         /// <summary>
         /// A reference to the logger.
         /// </summary>
         private Logger logger = Logger.Instance;
-
-        /// <summary>
-        /// The information needed to create a connection
-        /// </summary>
-        public static string connectionString { get; set; }
-
-        /// <summary>
-        /// Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
-        /// </summary>
-        public static bool mockDB { get; set; }
 
         /// <summary>
         /// Saves path of SQLite database in .config-file.
@@ -66,8 +66,8 @@ namespace EPUBackoffice.BL
                 this.logger.Log(0, "Connection string " + this.connectSettings.ConnectionString + " has been stored in config file.");
 
                 // save connection string and database name in static var
-                ConfigFileManager.connectionString = this.connectSettings.ConnectionString;
-                ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\')+1);
+                ConfigFileManager.ConnectionString = this.connectSettings.ConnectionString;
+                ConfigFileManager.DbName = ConnectionString.Substring(ConnectionString.LastIndexOf('\\') + 1);
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
@@ -79,19 +79,18 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Searches the config file for entry "mockDB" and saves value in private var this.mockDB
         /// </summary>
-        /// <returns>true, if mockDB shall be used</returns>
         public void UsingMockDatabase()
         {
             try
             {
                 AppSettingsReader config = new AppSettingsReader();
-                ConfigFileManager.mockDB = (bool)config.GetValue("mockDB", typeof(bool));
+                ConfigFileManager.MockDB = (bool)config.GetValue("mockDB", typeof(bool));
             }
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
                 this.logger.Log(1, "No mockDB key has been found in config file.");
-                ConfigFileManager.mockDB = false;
+                ConfigFileManager.MockDB = false;
             }
             catch (ConfigurationErrorsException e)
             {
@@ -119,7 +118,7 @@ namespace EPUBackoffice.BL
             }
 
             // get file location out of connection string
-            string path = connectSettings.ConnectionString;
+            string path = this.connectSettings.ConnectionString;
             int index1, index2;
             index1 = path.IndexOf("Data Source=");
             index2 = path.IndexOf(".db");
@@ -132,6 +131,7 @@ namespace EPUBackoffice.BL
                 this.logger.Log(1, "No (correct) path found in config file.");
                 return false;
             }
+
             this.logger.Log(0, "Saved path of database in config file: " + path);
 
             // check if path exists in file system
@@ -139,18 +139,18 @@ namespace EPUBackoffice.BL
             if (exists == true)
             {
                 // save connection string and database name in static var
-                ConfigFileManager.connectionString = this.connectSettings.ConnectionString;
-                ConfigFileManager.dbName = connectionString.Substring(connectionString.LastIndexOf('\\') + 1);
+                ConfigFileManager.ConnectionString = this.connectSettings.ConnectionString;
+                ConfigFileManager.DbName = ConnectionString.Substring(ConnectionString.LastIndexOf('\\') + 1);
 
                 return true;
             }
             else { return false; }
-            //return CheckDataBaseExistance(path) == true ? true : false;
         }
 
         /// <summary>
         /// Checks if database file exists at given path.
         /// </summary>
+        /// <param name="path">The path which shall be checked</param>
         /// <returns>
         /// bool. true: file exists, false: file does not exist.
         /// </returns>

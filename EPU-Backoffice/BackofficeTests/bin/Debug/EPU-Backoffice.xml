@@ -86,7 +86,6 @@
             Checks if a database exists at the given path and stores it in the config file.
             If everything went fine, this method closes the calling Form and opens the main window.
             </summary>
-            <returns>True, if database exists.</returns>
             <param name="sender">The caller of this method.</param>
             <param name="path">The path of the SQLite file</param>
             <param name="sendingForm">The form in which the sending element (button) was placed.</param>
@@ -368,8 +367,8 @@
             Saves a new Kunde or Kontakt to the database
             </summary>
             <param name="firstname">The first name of the Kunde/Kontakt</param>
-            <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
+            <param name="lastname">The last name of the Kunde/Kontakt</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKundenKontakteSQL(System.String,System.String,System.String)">
             <summary>
@@ -493,9 +492,9 @@
             <summary>
             Gets requested Kontakte out of the database.
             </summary>
+            <param name="type">false...Kunde, true...Kontakt</param>
             <param name="firstname">The first name of the to-be-searched Kontakt</param>
             <param name="lastname">The last name of the to-be-searched Kontakt</param>
-            <param name="type">false...Kunde, true...Kontakt</param>
             <returns>List of matching Kontakt</returns>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
@@ -591,7 +590,6 @@
             <summary>
             Searches the config file for entry "mockDB" and saves value in private var this.mockDB
             </summary>
-            <returns>true, if mockDB shall be used</returns>
         </member>
         <member name="M:EPUBackoffice.BL.ConfigFileManager.CheckDataBaseExistance">
             <summary>
@@ -605,23 +603,24 @@
             <summary>
             Checks if database file exists at given path.
             </summary>
+            <param name="path">The path which shall be checked</param>
             <returns>
             bool. true: file exists, false: file does not exist.
             </returns>
         </member>
-        <member name="P:EPUBackoffice.BL.ConfigFileManager.dbName">
+        <member name="P:EPUBackoffice.BL.ConfigFileManager.DbName">
             <summary>
-            The name of the currently opened database
+            Gets or sets the name of the currently opened database
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.ConfigFileManager.connectionString">
+        <member name="P:EPUBackoffice.BL.ConfigFileManager.ConnectionString">
             <summary>
-            The information needed to create a connection
+            Gets or sets the connection string needed to create a connection
             </summary>
         </member>
-        <member name="P:EPUBackoffice.BL.ConfigFileManager.mockDB">
+        <member name="P:EPUBackoffice.BL.ConfigFileManager.MockDB">
             <summary>
-            Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
+            Gets or sets the value indicating, if a mock database is used. Is true, if the mockDB shall be used. Is false, when real SQLite-DB shall be used (default).
             </summary>
         </member>
         <member name="T:EPUBackoffice.Properties.Resources">
@@ -720,7 +719,7 @@
             <summary>
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
-            <returns></returns>
+            <returns>An object of the database type that shall be used</returns>
         </member>
     </members>
 </doc>

@@ -283,7 +283,7 @@
   </project>
   <sourcecode name="ConfigFileManagerTest.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 10:09:28</timestamp>
@@ -541,9 +541,239 @@
       </violation>
     </violations>
   </sourcecode>
+  <sourcecode name="KundenKontakteSaverTest.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>03/17/2012 21:08:00</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>04/06/2012 10:42:30</timestamp>
+    <milliseconds>901</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
+        <context>The comment is empty. Add text to the comment or remove it.</context>
+        <line>36</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
+        <context>The comment is empty. Add text to the comment or remove it.</context>
+        <line>62</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
+        <context>The comment is empty. Add text to the comment or remove it.</context>
+        <line>68</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives" ruleCheckId="SA1208">
+        <context>System using directives must be placed before all other using directives.</context>
+        <line>5</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
+        <context>Using directives must be sorted alphabetically by the namespaces.</context>
+        <line>7</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>62</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
+        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
+        <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>11</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>12</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>13</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>46</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>47</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>48</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>49</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>50</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>52</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>63</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>64</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>65</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>66</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>67</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>22</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to testContextInstance must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>27</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
+        <context>The call to testContextInstance must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+        <line>31</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>41</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
+        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>54</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
+        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
+        <line>53</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
+        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
+        <line>75</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>72</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>73</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>74</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
+        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
+        <line>90</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>87</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>88</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
+        <context>The documentation header line must start with a single space.</context>
+        <line>89</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
   <sourcecode name="DataBaseManagerTest.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>04/06/2012 09:01:14</timestamp>
@@ -801,239 +1031,9 @@
       </violation>
     </violations>
   </sourcecode>
-  <sourcecode name="KundenKontakteSaverTest.cs" parser="StyleCop.CSharp.CsParser">
-    <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
-      <milliseconds>0</milliseconds>
-    </settings>
-    <timestamp>04/06/2012 10:20:37</timestamp>
-    <milliseconds>765</milliseconds>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
-        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
-        <context>The comment is empty. Add text to the comment or remove it.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
-        <context>The comment is empty. Add text to the comment or remove it.</context>
-        <line>62</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CommentsMustContainText" ruleCheckId="SA1120">
-        <context>The comment is empty. Add text to the comment or remove it.</context>
-        <line>68</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives" ruleCheckId="SA1208">
-        <context>System using directives must be placed before all other using directives.</context>
-        <line>5</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>7</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
-        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>62</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
-        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
-        <line>14</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>37</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>39</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>46</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>47</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>49</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>50</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>63</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>64</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>65</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>66</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
-        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>67</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>17</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>20</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to testContextInstance must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>27</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to testContextInstance must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>31</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>41</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
-        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>54</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
-        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
-        <line>53</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
-        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
-        <line>75</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>72</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>73</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>74</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AttributeConstructorMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1411">
-        <context>The attribute constructor does not need parenthesis, since it's parameter list is empty.</context>
-        <line>90</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>87</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>88</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="DocumentationLinesMustBeginWithSingleSpace" ruleCheckId="SA1004">
-        <context>The documentation header line must start with a single space.</context>
-        <line>89</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
-  </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
     <timestamp>03/13/2012 14:52:05</timestamp>
@@ -1048,11 +1048,11 @@
   </sourcecode>
   <sourcecode name="MockDataBaseManagerTest.cs" parser="StyleCop.CSharp.CsParser">
     <settings>
-      <timestamp>03/17/2012 22:08:00</timestamp>
+      <timestamp>03/17/2012 21:08:00</timestamp>
       <milliseconds>0</milliseconds>
     </settings>
-    <timestamp>04/06/2012 10:20:37</timestamp>
-    <milliseconds>763</milliseconds>
+    <timestamp>04/06/2012 10:42:30</timestamp>
+    <milliseconds>899</milliseconds>
     <violations>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>

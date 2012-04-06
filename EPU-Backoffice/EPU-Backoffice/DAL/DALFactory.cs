@@ -20,10 +20,10 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>An object of the database type that shall be used</returns>
         public static IDAL GetDAL()
         {
-            if (ConfigFileManager.mockDB == false)
+            if (ConfigFileManager.MockDB == false)
             {
                 return new DataBaseManager();
             }
