@@ -92,7 +92,7 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender">The calling object</param>
         /// <param name="e">Additional event arguments</param>
-        private void bu_homeOpenNewDB_Click(object sender, EventArgs e)
+        private void homeOpenNewDbButton_Click(object sender, EventArgs e)
         {
             //Same code already written in DBNotFoundForm -> just call this method with HomeScreen as sender
             DataBaseOpener db_opener = new DataBaseOpener();
@@ -162,13 +162,11 @@ namespace EPUBackoffice.Gui
             if (saved)
             {
                 this.hideMessagesKundeNeu();
-                this.kundeNeuSuccessLabel.Show(); // TODO: show what has been saved!
+                this.kundeNeuSuccessLabel.Show();
                 this.createKundeVornameTextBlock.Clear(); // delete input fields
                 this.createKundeNachnameTextBlock.Clear();
             }
         }
-
-        
 
         private void angebotErstellenBKundeButton_Click(object sender, EventArgs e)
         {
@@ -232,8 +230,8 @@ namespace EPUBackoffice.Gui
                 this.searchKundeErrorLabel.Text = "Error: " + ex.Message;
                 this.searchKundeErrorLabel.Show();
             }
-            
 
+            this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);
             /* sample code for databinding - get real values out of database!
             KundeKontaktTable k1 = new KundeKontaktTable();
             k1.ID = 0;
@@ -251,19 +249,23 @@ namespace EPUBackoffice.Gui
             k3.NachnameFirmenname = "Klein";*/
         }
 
-        private void label38_Click(object sender, EventArgs e)
+        // when user clicks on a row within the search results, write data to labels, so that user can change the values
+        private void BindToKundenSearchLabels(object sender, DataGridViewCellEventArgs e)
         {
+            int selectedRowID = e == null ? 0 : e.RowIndex;
 
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            // if there are results
+            if (this.kundenSearchDataGridView.RowCount > 0)
+            {
+                this.searchKundeVornameTextBlock.Text = this.kundenSearchDataGridView[1, selectedRowID].Value.ToString();
+                this.searchKundeNachnameTextBlock.Text = this.kundenSearchDataGridView[2, selectedRowID].Value.ToString();
+            }
+            // clear textbox if there are no results
+            else
+            { 
+                this.searchKundeVornameTextBlock.Text = string.Empty;
+                this.searchKundeNachnameTextBlock.Text = string.Empty;
+            }
         }
     }
 }

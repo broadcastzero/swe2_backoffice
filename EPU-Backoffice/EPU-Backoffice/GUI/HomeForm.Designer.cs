@@ -42,7 +42,7 @@
             this.homeTab = new System.Windows.Forms.TabPage();
             this.currentlyOpenedDbPanel = new System.Windows.Forms.Panel();
             this.homeCurrentDBLabel = new System.Windows.Forms.Label();
-            this.bu_homeOpenNewDB = new System.Windows.Forms.Button();
+            this.homeOpenNewDbButton = new System.Windows.Forms.Button();
             this.la_homeTextCurrent = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
@@ -187,8 +187,8 @@
             this.zeiterfassungAddButton = new System.Windows.Forms.Button();
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
-            this.KundeKontaktTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button8 = new System.Windows.Forms.Button();
+            this.KundeKontaktTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -330,7 +330,7 @@
             // 
             this.homeTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.homeTab.Controls.Add(this.currentlyOpenedDbPanel);
-            this.homeTab.Controls.Add(this.bu_homeOpenNewDB);
+            this.homeTab.Controls.Add(this.homeOpenNewDbButton);
             this.homeTab.Controls.Add(this.la_homeTextCurrent);
             this.homeTab.Controls.Add(this.logoPictureBox);
             this.homeTab.Location = new System.Drawing.Point(34, 4);
@@ -359,15 +359,15 @@
             this.homeCurrentDBLabel.TabIndex = 3;
             this.homeCurrentDBLabel.Text = "*null*";
             // 
-            // bu_homeOpenNewDB
+            // homeOpenNewDbButton
             // 
-            this.bu_homeOpenNewDB.Location = new System.Drawing.Point(518, 94);
-            this.bu_homeOpenNewDB.Name = "bu_homeOpenNewDB";
-            this.bu_homeOpenNewDB.Size = new System.Drawing.Size(193, 23);
-            this.bu_homeOpenNewDB.TabIndex = 2;
-            this.bu_homeOpenNewDB.Text = "Datenbank auswählen";
-            this.bu_homeOpenNewDB.UseVisualStyleBackColor = true;
-            this.bu_homeOpenNewDB.Click += new System.EventHandler(this.bu_homeOpenNewDB_Click);
+            this.homeOpenNewDbButton.Location = new System.Drawing.Point(518, 94);
+            this.homeOpenNewDbButton.Name = "homeOpenNewDbButton";
+            this.homeOpenNewDbButton.Size = new System.Drawing.Size(193, 23);
+            this.homeOpenNewDbButton.TabIndex = 2;
+            this.homeOpenNewDbButton.Text = "Datenbank auswählen";
+            this.homeOpenNewDbButton.UseVisualStyleBackColor = true;
+            this.homeOpenNewDbButton.Click += new System.EventHandler(this.homeOpenNewDbButton_Click);
             // 
             // la_homeTextCurrent
             // 
@@ -582,14 +582,17 @@
             // kundenSearchDataGridView
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
+            this.kundenSearchDataGridView.AllowUserToDeleteRows = false;
             this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
+            this.kundenSearchDataGridView.MultiSelect = false;
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
             this.kundenSearchDataGridView.ReadOnly = true;
             this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
+            this.kundenSearchDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BindToKundenSearchLabels);
             // 
             // kundenChangeButton
             // 
@@ -1782,10 +1785,6 @@
             this.reportTab.TabIndex = 7;
             this.reportTab.Text = "Report";
             // 
-            // KundeKontaktTableBindingSource
-            // 
-            this.KundeKontaktTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeKontaktTable);
-            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(69, 28);
@@ -1794,6 +1793,10 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
+            // 
+            // KundeKontaktTableBindingSource
+            // 
+            this.KundeKontaktTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeKontaktTable);
             // 
             // HomeForm
             // 
@@ -1914,7 +1917,7 @@
         private System.Windows.Forms.TabPage projektErstellenTab;
         private System.Windows.Forms.TabPage projektSuchenTab;
         private System.Windows.Forms.Label homeCurrentDBLabel;
-        private System.Windows.Forms.Button bu_homeOpenNewDB;
+        private System.Windows.Forms.Button homeOpenNewDbButton;
         private System.Windows.Forms.Label la_homeTextCurrent;
         private System.Windows.Forms.Panel currentlyOpenedDbPanel;
         private System.Windows.Forms.ComboBox ausgangsrechnungComboBox;
