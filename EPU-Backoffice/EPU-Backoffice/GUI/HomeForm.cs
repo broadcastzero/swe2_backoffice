@@ -267,5 +267,15 @@ namespace EPUBackoffice.Gui
                 this.searchKundeNachnameTextBlock.Text = string.Empty;
             }
         }
+
+        /// <summary>
+        /// Changes information of an existing Kunde
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The params</param>
+        private void changeKundeOrKontakt(object sender, EventArgs e)
+        {
+
+        }
     }
 }

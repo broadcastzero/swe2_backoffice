@@ -11,7 +11,6 @@ namespace EPUBackoffice.BL
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Text;
-    using System.Text.RegularExpressions;
     using EPUBackoffice.Dal;
     using Logger;
     using UserExceptions;
@@ -32,13 +31,13 @@ namespace EPUBackoffice.BL
         public void SaveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
-            if (firstname.Length == 0 && !Regex.IsMatch(firstname, @"^[a-zA-Z-]+$"))
+            if (firstname != null && firstname.Length == 0 && RuleManager.ValidateLettersAndHyphen(firstname) == false)
             {
                 this.logger.Log(2, "Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             // if 'Nachname' is null or invalid sign is found
-            else if (!Regex.IsMatch(lastname, @"^[a-zA-Z0-9-]+$"))
+            else if (lastname != null && RuleManager.ValidateLettersNumbersHyphen(lastname) == false)
             {
                 this.logger.Log(2, "Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");                

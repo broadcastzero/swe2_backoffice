@@ -145,6 +145,13 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.changeKundeOrKontakt(System.Object,System.EventArgs)">
+            <summary>
+            Changes information of an existing Kunde
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The params</param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.
@@ -720,6 +727,25 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.RuleManager">
+            <summary>
+            This class checks the user input for invalid characters
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersAndHyphen(System.String)">
+            <summary>
+            Checks if input string contains only letters and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string valid</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
+            <summary>
+            Checks if input string contains only letters, numbers and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
         </member>
     </members>
 </doc>

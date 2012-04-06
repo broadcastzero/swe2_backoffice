@@ -602,6 +602,7 @@
             this.kundenChangeButton.TabIndex = 5;
             this.kundenChangeButton.Text = "Ändern";
             this.kundenChangeButton.UseVisualStyleBackColor = true;
+            this.kundenChangeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
             // 
             // kundenSearchButton
             // 
