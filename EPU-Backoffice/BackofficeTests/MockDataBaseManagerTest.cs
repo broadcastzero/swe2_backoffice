@@ -1,4 +1,9 @@
-﻿// -----------------------------------------------------------------------
+﻿using EPUBackoffice.Dal;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using EPUBackoffice.Dal.Tables;
+using System.Collections.Generic;
+// -----------------------------------------------------------------------
 // <copyright file="MockDataBaseManagerTest.cs" company="Marvin&Felix">
 // TODO: You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
@@ -12,6 +17,7 @@ namespace BackofficeTests
     using EPUBackoffice.BL;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.UserExceptions;
 
     /// <summary>
     ///This is a test class for MockDataBaseManagerTest and is intended
@@ -22,6 +28,8 @@ namespace BackofficeTests
     {
         private TestContext testContextInstance;
         private MockDataBaseManager mdb;
+
+        private static Object lockObj = new Object();
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -132,6 +140,35 @@ namespace BackofficeTests
         {
             int current = MockDataBaseManager.KundenID;
             Assert.AreEqual(current + 1, MockDataBaseManager.KundenID);
+        }
+
+        /// <summary>
+        ///A test for DeleteKundeKontakt - must throw an exception, for there will never be an entry with the id -1
+        ///</summary>
+        [TestMethod()]
+        [ExpectedException(typeof(EntryNotFoundException))]
+        public void DeleteKundeKontaktTest()
+        {
+            int id = -1;
+            bool type = false;
+            this.mdb.DeleteKundeKontakt(id, type);
+        }
+
+        /// <summary>
+        ///A test for DeleteKundeKontakt - after deleting an entry, there must be one entry less in the list
+        ///</summary>
+        [TestMethod()]
+        public void DeleteKundeKontaktTest1()
+        {
+            int id = MockDataBaseManager.KundenID +1;
+            this.mdb.SaveNewKundeKontakt("Huber", false);
+            bool type = false;
+            
+            int savedBefore = MockDataBaseManager.SavedKunden.Count;
+            this.mdb.DeleteKundeKontakt(id, type);
+            int savedAfter = MockDataBaseManager.SavedKunden.Count;
+            
+            Assert.AreEqual(savedBefore, savedAfter+1);
         }
     }
 }

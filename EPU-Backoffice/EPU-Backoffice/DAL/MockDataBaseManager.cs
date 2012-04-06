@@ -77,6 +77,7 @@ namespace EPUBackoffice.Dal
                 kunde.ID = MockDataBaseManager.KundenID;
                 kunde.Vorname = firstname;
                 kunde.NachnameFirmenname = lastname;
+                kunde.Type = false;
 
                 // save to list
                 MockDataBaseManager.SavedKunden.Add(kunde);
@@ -88,6 +89,7 @@ namespace EPUBackoffice.Dal
                 kontakt.ID = MockDataBaseManager.KontaktID;
                 kontakt.Vorname = firstname;
                 kontakt.NachnameFirmenname = lastname;
+                kontakt.Type = true;
 
                 // save to list
                 MockDataBaseManager.SavedKontakte.Add(kontakt);

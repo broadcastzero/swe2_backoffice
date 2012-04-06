@@ -337,6 +337,27 @@
             Main entry point of the application.
             </summary>
         </member>
+        <member name="T:EPUBackoffice.BL.KundenKontakteChanger">
+            <summary>
+            Changes or deletes a existing Kunde/Kontakt
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Change(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Changes data of an existing Kunde/Kontakt
+            </summary>
+            <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
+            <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
+            <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(System.Int32,System.Boolean)">
+            <summary>
+            Deletes an existing Kunde/Kontakt
+            </summary>
+            <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
+            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
         <member name="T:EPUBackoffice.Dal.DataBaseManager">
             <summary>
             This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.
@@ -485,6 +506,32 @@
             bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
+        <member name="T:EPUBackoffice.BL.RuleManager">
+            <summary>
+            This class checks the user input for invalid characters
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphen(System.String)">
+            <summary>
+            Checks if input string contains only letters and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string valid</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
+            <summary>
+            Checks if input string contains only letters, numbers and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.CheckStringLength150(System.String)">
+            <summary>
+            and does not have more than 150 chars
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
             A class for the database table "Eingangsrechnung" with its attributes
@@ -523,6 +570,29 @@
             <param name="firstname">The first name of the to-be-searched Kontakt</param>
             <param name="lastname">The last name of the to-be-searched Kontakt</param>
             <returns>List of matching Kontakt</returns>
+        </member>
+        <member name="T:EPUBackoffice.UserExceptions.EntryNotFoundException">
+            <summary>
+            This Exception is thrown if the user tries to access an entry of the database which does not exist.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+            <param name="inner">The base class</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
             <summary>
@@ -744,76 +814,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
-        </member>
-        <member name="T:EPUBackoffice.BL.RuleManager">
-            <summary>
-            This class checks the user input for invalid characters
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphen(System.String)">
-            <summary>
-            Checks if input string contains only letters and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string valid</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
-            <summary>
-            Checks if input string contains only letters, numbers and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.CheckStringLength150(System.String)">
-            <summary>
-            and does not have more than 150 chars
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="T:EPUBackoffice.BL.KundenKontakteChanger">
-            <summary>
-            Changes or deletes a existing Kunde/Kontakt
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Change(System.Int32,System.String,System.String,System.Boolean)">
-            <summary>
-            Changes data of an existing Kunde/Kontakt
-            </summary>
-            <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
-            <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
-            <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(System.Int32,System.Boolean)">
-            <summary>
-            Deletes an existing Kunde/Kontakt
-            </summary>
-            <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        </member>
-        <member name="T:EPUBackoffice.UserExceptions.EntryNotFoundException">
-            <summary>
-            This Exception is thrown if the user tries to access an entry of the database which does not exist.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String)">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-            <param name="message">The error message which is thrown</param>
-        </member>
-        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String,System.Exception)">
-            <summary>
-            This Exception is thrown if the user tries to open or save an invalid file.
-            </summary>
-            <param name="message">The error message which is thrown</param>
-            <param name="inner">The base class</param>
         </member>
     </members>
 </doc>
