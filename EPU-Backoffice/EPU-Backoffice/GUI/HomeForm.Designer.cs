@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.homeButton = new System.Windows.Forms.Button();
             this.kundenKontakteButton = new System.Windows.Forms.Button();
@@ -188,7 +187,6 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
-            this.KundeKontaktTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -223,7 +221,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.zeitTab.SuspendLayout();
             this.reportTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // homeButton
@@ -1792,10 +1789,6 @@
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // KundeKontaktTableBindingSource
-            // 
-            this.KundeKontaktTableBindingSource.DataSource = typeof(EPUBackoffice.Dal.Tables.KundeKontaktTable);
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1864,7 +1857,6 @@
             this.zeitTab.ResumeLayout(false);
             this.zeitTab.PerformLayout();
             this.reportTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.KundeKontaktTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2003,7 +1995,6 @@
         private System.Windows.Forms.DateTimePicker projektNeuStartdatumDatepicker;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.BindingSource KundeKontaktTableBindingSource;
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.Label searchKundeErrorLabel;

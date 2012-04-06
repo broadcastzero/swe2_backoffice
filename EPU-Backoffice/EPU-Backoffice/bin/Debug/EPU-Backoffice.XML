@@ -733,16 +733,16 @@
             This class checks the user input for invalid characters
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersAndHyphen(System.String)">
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphenLength(System.String)">
             <summary>
-            Checks if input string contains only letters and hyphens
+            Checks if input string contains only letters and hyphens and does not have more than 150 chars
             </summary>
             <param name="input">The string that shall be checked</param>
             <returns>True, if string valid</returns>
         </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphenLength(System.String)">
             <summary>
-            Checks if input string contains only letters, numbers and hyphens
+            Checks if input string contains only letters, numbers and hyphens and does not have more than 150 chars
             </summary>
             <param name="input">The string that shall be checked</param>
             <returns>True, if string is valid</returns>

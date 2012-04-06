@@ -17,13 +17,13 @@ namespace EPUBackoffice.BL
     public static class RuleManager
     {
         /// <summary>
-        /// Checks if input string contains only letters and hyphens
+        /// Checks if input string contains only letters and hyphens and does not have more than 150 chars
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string valid</returns>
-        public static bool ValidateLettersAndHyphen(string input)
+        public static bool ValidateLettersHyphenLength(string input)
         {
-            if(!Regex.IsMatch(input, @"^[a-zA-Z-]+$"))
+            if(!Regex.IsMatch(input, @"^[a-zA-Z-]+$") || input.Length > 150)
             {
                 return false;
             }
@@ -34,13 +34,13 @@ namespace EPUBackoffice.BL
         }
 
         /// <summary>
-        /// Checks if input string contains only letters, numbers and hyphens
+        /// Checks if input string contains only letters, numbers and hyphens and does not have more than 150 chars
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string is valid</returns>
-        public static bool ValidateLettersNumbersHyphen(string input)
+        public static bool ValidateLettersNumbersHyphenLength(string input)
         {
-            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9-]+$"))
+            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9-]+$") || input.Length > 150)
             {
                 return false;
             }

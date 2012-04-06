@@ -31,13 +31,13 @@ namespace EPUBackoffice.BL
         public void SaveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
-            if (firstname != null && firstname.Length == 0 && RuleManager.ValidateLettersAndHyphen(firstname) == false)
+            if (firstname.Length != 0 && RuleManager.ValidateLettersHyphenLength(firstname) == false)
             {
                 this.logger.Log(2, "Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             // if 'Nachname' is null or invalid sign is found
-            else if (lastname != null && RuleManager.ValidateLettersNumbersHyphen(lastname) == false)
+            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenLength(lastname) == false)
             {
                 this.logger.Log(2, "Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");                
