@@ -285,7 +285,7 @@ namespace EPUBackoffice.Gui
             }
             else if (action == "deleteKundeButton")
             {
-                // does not show anything - but clears datagridview - only solution I have found
+                // update datagridview - clear textblocks first, so that not only the same results are displayed
                 this.searchKundeVornameTextBlock.Clear();
                 this.searchKundeNachnameTextBlock.Clear();
                 this.SearchKundenOrKontakte(null, null);

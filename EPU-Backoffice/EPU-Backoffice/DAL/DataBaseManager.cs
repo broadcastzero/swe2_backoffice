@@ -241,7 +241,21 @@ namespace EPUBackoffice.Dal
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         public void UpdateKundeKontakte(int id, string firstname, string lastname, bool type)
         {
-            throw new NotImplementedException();
+            string s_type = type == false ? "Kunde" : "Kontakt";
+            string sql = "UPDATE " + s_type + " SET Vorname = ?, Nachname_Firmenname = ? WHERE ID = ?";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, id, firstname, lastname);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            // success logging
+            string successmessage = s_type + " has been updated in the SQLite database: ID: " + id + " " + firstname + " " + lastname;
+            this.logger.Log(0, successmessage);
         }
 
         /// <summary>
@@ -264,16 +278,18 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = s_type + " has been dropped from the database. ID: " + id;
+            string successmessage = s_type + " has been dropped from the SQLite database. ID: " + id;
             this.logger.Log(0, successmessage);
         }
 
         /// <summary>
-        /// Gets an sql statement and an ID + 2 Params and commits statement
+        /// Gets an sql statement and an ID and commits statement
         /// </summary>
         /// <param name="sql">The sql statement</param>
         /// <param name="id">The ID - used for binding</param>
-        private void SendStatementToDatabase(string sql, int id)
+        /// <param name="param1">Optional string parameter 1</param>
+        /// <param name="param2">Optional string parameter 2</param>
+        private void SendStatementToDatabase(string sql, int id, string param1 = null, string param2 = null)
         {
             SQLiteConnection con = null;
             SQLiteTransaction tra = null;
@@ -288,12 +304,26 @@ namespace EPUBackoffice.Dal
                 tra = con.BeginTransaction();
                 cmd = new SQLiteCommand(sql, con);
 
-                // initialise parameter
-                SQLiteParameter p_first = new SQLiteParameter();
+                // Set optional parameter 1
+                if (param1 != null)
+                {
+                    SQLiteParameter p_1 = new SQLiteParameter();
+                    p_1.Value = param1;
+                    cmd.Parameters.Add(p_1);
+                }
 
-                // bind param (ID)
-                p_first.Value = id;
-                cmd.Parameters.Add(p_first);
+                // Set optional parameter 2
+                if (param2 != null)
+                {
+                    SQLiteParameter p_2 = new SQLiteParameter();
+                    p_2.Value = param1;
+                    cmd.Parameters.Add(p_2);
+                }
+
+                // initialise and bind ID - at the end of the string, mostly in WHERE needed!
+                SQLiteParameter p_ID = new SQLiteParameter();
+                p_ID.Value = id;
+                cmd.Parameters.Add(p_ID);
 
                 // execute and commit
                 cmd.ExecuteNonQuery();

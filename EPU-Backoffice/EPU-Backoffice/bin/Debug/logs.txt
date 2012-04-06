@@ -387,3 +387,30 @@
 06.04.2012 - 17:44 Info: Kunde has been dropped from the database. ID: 5
 06.04.2012 - 17:44 Info: User requested to delete False with ID 8
 06.04.2012 - 17:44 Info: Kunde has been dropped from the database. ID: 8
+06.04.2012 - 17:55 Info: -----------------------------------------------------------
+06.04.2012 - 17:55 Info: Program is started.
+06.04.2012 - 17:55 Info: Using SQLite database.
+06.04.2012 - 17:55 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:55 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:55 Info: User requested to delete False with ID 17
+06.04.2012 - 17:55 Info: Kunde has been dropped from the database. ID: 17
+06.04.2012 - 17:56 Info: -----------------------------------------------------------
+06.04.2012 - 17:56 Info: Program is started.
+06.04.2012 - 17:56 Info: Using SQLite database.
+06.04.2012 - 17:56 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 17:56 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:00 Info: -----------------------------------------------------------
+06.04.2012 - 18:00 Info: Program is started.
+06.04.2012 - 18:00 Info: Using SQLite database.
+06.04.2012 - 18:00 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:00 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:00 Info: Kunde has been updated in the SQLite database: ID: 10 Monika Karli
+06.04.2012 - 18:00 Info: -----------------------------------------------------------
+06.04.2012 - 18:00 Info: Program is started.
+06.04.2012 - 18:00 Info: Using SQLite database.
+06.04.2012 - 18:00 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:00 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:01 Info: A new Kunde has been saved to the database: Marvin Vesely
+06.04.2012 - 18:01 Info: User requested to delete False with ID 16
+06.04.2012 - 18:01 Info: Kunde has been dropped from the SQLite database. ID: 16
+06.04.2012 - 18:01 Info: Kunde has been updated in the SQLite database: ID: 24 marvin vesely

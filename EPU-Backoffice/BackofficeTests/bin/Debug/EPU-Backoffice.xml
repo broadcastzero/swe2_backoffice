@@ -470,12 +470,14 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.String,System.String)">
             <summary>
-            Gets an sql statement and an ID + 2 Params and commits statement
+            Gets an sql statement and an ID and commits statement
             </summary>
             <param name="sql">The sql statement</param>
             <param name="id">The ID - used for binding</param>
+            <param name="param1">Optional string parameter 1</param>
+            <param name="param2">Optional string parameter 2</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
