@@ -707,16 +707,6 @@
             <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
             <returns>A list of the requested Kontakte</returns>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKunden(System.Boolean,System.String,System.String)">
-            <summary>
-            This function gets (a) certain Kunde(n) from the mockDB.
-            If firstname and lastname should be empty, display all
-            </summary>
-            <param name="type">false...Kunde, true...Kontakt</param>
-            <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-            <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-            <returns>A list of the requested Kunden</returns>
-        </member>
         <member name="M:EPUBackoffice.Dal.MockDataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the mock database
@@ -801,6 +791,29 @@
             </summary>
             <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        </member>
+        <member name="T:EPUBackoffice.UserExceptions.EntryNotFoundException">
+            <summary>
+            This Exception is thrown if the user tries to access an entry of the database which does not exist.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+        </member>
+        <member name="M:EPUBackoffice.UserExceptions.EntryNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            This Exception is thrown if the user tries to open or save an invalid file.
+            </summary>
+            <param name="message">The error message which is thrown</param>
+            <param name="inner">The base class</param>
         </member>
     </members>
 </doc>

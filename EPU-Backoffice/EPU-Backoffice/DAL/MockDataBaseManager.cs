@@ -11,6 +11,7 @@ namespace EPUBackoffice.Dal
     using System.Collections.Generic;
     using System.Text;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.UserExceptions;
     using Logger;
 
     /// <summary>
@@ -48,12 +49,14 @@ namespace EPUBackoffice.Dal
         /// </summary>
         public static List<KundeKontaktTable> SavedKontakte { get { return savedKontakte; } }
 
+        private static Object lockObject = new Object();
+
         /// <summary>
         /// This method initializes the classes needed to create a mock database
         /// </summary>
         public void CreateDataBase()
         {
-            lock(MockDataBaseManager.SavedKunden)
+            lock(MockDataBaseManager.lockObject)
             {
                 MockDataBaseManager.savedKunden = new List<KundeKontaktTable>();
                 MockDataBaseManager.savedKontakte = new List<KundeKontaktTable>();
@@ -71,7 +74,7 @@ namespace EPUBackoffice.Dal
             if (type == false)
             {
                 KundeKontaktTable kunde = new KundeKontaktTable();
-                kunde.ID = MockDataBaseManager.kundenID;
+                kunde.ID = MockDataBaseManager.KundenID;
                 kunde.Vorname = firstname;
                 kunde.NachnameFirmenname = lastname;
 
@@ -82,7 +85,7 @@ namespace EPUBackoffice.Dal
             else
             {
                 KundeKontaktTable kontakt = new KundeKontaktTable();
-                kontakt.ID = MockDataBaseManager.kontaktID;
+                kontakt.ID = MockDataBaseManager.KontaktID;
                 kontakt.Vorname = firstname;
                 kontakt.NachnameFirmenname = lastname;
 
@@ -102,20 +105,62 @@ namespace EPUBackoffice.Dal
         /// <returns>A list of the requested Kontakte</returns>
         public List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null)
         {
-            return new List<KundeKontaktTable>();
-        }
+            List<KundeKontaktTable> resultlist = new List<KundeKontaktTable>();
 
-        /// <summary>
-        /// This function gets (a) certain Kunde(n) from the mockDB.
-        /// If firstname and lastname should be empty, display all
-        /// </summary>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        /// <param name="firstname">First name of the to-be-searched Kunde (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kunde (optional)</param>
-        /// <returns>A list of the requested Kunden</returns>
-        public List<KundeKontaktTable> GetKunden(bool type, string firstname = null, string lastname = null)
-        {
-            return new List<KundeKontaktTable>();
+            // get Kunden
+            if (type == false)
+            {
+                this.logger.Log(0, "Starts getting Kunden out of database...");
+
+                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKunden)
+                {
+                    if (firstname == null && lastname == null)
+                    { resultlist.Add(k); }
+                    else if (firstname != null && lastname == null)
+                    {
+                        if(k.Vorname == firstname)
+                        resultlist.Add(k);
+                    }
+                    else if (lastname != null && firstname == null)
+                    {
+                        if (k.NachnameFirmenname == lastname)
+                        { resultlist.Add(k); }
+                    }
+                    else
+                    {
+                        if (k.NachnameFirmenname == lastname && k.Vorname == firstname)
+                        { resultlist.Add(k); }
+                    }
+                }
+            }
+            // get Kontakt
+            else if (type == true)
+            {
+                this.logger.Log(0, "Starts getting Kontakte out of database...");
+
+                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKontakte)
+                {
+                    if (firstname == null && lastname == null)
+                    { resultlist.Add(k); }
+                    else if (firstname != null && lastname == null)
+                    {
+                        if (k.Vorname == firstname)
+                            resultlist.Add(k);
+                    }
+                    else if (lastname != null && firstname == null)
+                    {
+                        if (k.NachnameFirmenname == lastname)
+                        { resultlist.Add(k); }
+                    }
+                    else
+                    {
+                        if (k.NachnameFirmenname == lastname && k.Vorname == firstname)
+                        { resultlist.Add(k); }
+                    }
+                }
+            }
+
+            return resultlist;
         }
 
         /// <summary>
@@ -125,7 +170,42 @@ namespace EPUBackoffice.Dal
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         public void DeleteKundeKontakt(int id, bool type)
         {
-            throw new NotImplementedException();
+            int removed = 0;
+
+            // delete Kunde
+            if (type == false)
+            {
+                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKunden)
+                {
+                    if(k.ID == id)
+                    {
+                        MockDataBaseManager.savedKunden.Remove(k);
+                        removed++;
+                        logger.Log(0, "Kunde has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        break;
+                    }
+                }
+            }
+            // delete Kontakt
+            else if (type == true)
+            {
+                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKontakte)
+                {
+                    if (k.ID == id)
+                    {
+                        MockDataBaseManager.savedKontakte.Remove(k);
+                        removed++;
+                        logger.Log(0, "Kontakt has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        break;
+                    }
+                }
+            }
+
+            // no entry found
+            if (removed != 1)
+            {
+                throw new EntryNotFoundException("There is no entry in the mockDB with the ID " + id);
+            }
         }
     }
 }

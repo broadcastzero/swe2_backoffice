@@ -12,6 +12,7 @@ namespace EPUBackoffice.BL
     using System.Configuration;
     using System.IO;
     using System.Text;
+    using EPUBackoffice.Dal;
     using Logger;
 
     /// <summary>
@@ -96,6 +97,13 @@ namespace EPUBackoffice.BL
             {
                 this.logger.Log(2, "Syntax error in config file!" + e.Message);
                 throw; 
+            }
+
+            // in case that mockDb shall be used, initialise static lists
+            if (ConfigFileManager.MockDB == true && (MockDataBaseManager.SavedKontakte == null || MockDataBaseManager.SavedKunden == null))
+            {
+                MockDataBaseManager mdm = new MockDataBaseManager();
+                mdm.CreateDataBase();
             }
         }
 

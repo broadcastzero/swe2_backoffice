@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserExceptions\EntryNotFoundException.cs" />
     <Compile Include="UserExceptions\InvalidFileException.cs" />
     <Compile Include="UserExceptions\InvalidValueException.cs" />
     <EmbeddedResource Include="Gui\DBNotFoundForm.resx">

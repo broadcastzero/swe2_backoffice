@@ -46,7 +46,7 @@ namespace EPUBackoffice.BL
 
             try
             {
-                // Check if mock databse shall be used. Result is stored in var ConfigFileManager.mockDB
+                // Check if mock database shall be used. Result is stored in var ConfigFileManager.mockDB
                 cfm.UsingMockDatabase();
 
                 // Save info in logfile
