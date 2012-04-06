@@ -60,7 +60,7 @@ namespace EPUBackoffice.BL
             }
 
             string s_type = type == false ? "Kunde" : "Kontakt";
-            this.logger.Log(0, "User requested to delete " + type + " with ID " + id);
+            this.logger.Log(0, "User requested to delete " + s_type + " with ID " + id);
 
             try
             {
