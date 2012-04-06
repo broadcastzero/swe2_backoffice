@@ -9,6 +9,7 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Text;
     using EPUBackoffice.Dal;
     using EPUBackoffice.UserExceptions;
@@ -61,7 +62,14 @@ namespace EPUBackoffice.BL
             string s_type = type == false ? "Kunde" : "Kontakt";
             this.logger.Log(0, "User requested to delete " + type + " with ID " + id);
 
-            DALFactory.GetDAL().DeleteKundeKontakt(id, type);
+            try
+            {
+                DALFactory.GetDAL().DeleteKundeKontakt(id, type);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
         }
     }
 }

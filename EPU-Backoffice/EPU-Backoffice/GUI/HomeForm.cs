@@ -128,6 +128,7 @@ namespace EPUBackoffice.Gui
         {
             this.kundeNeuSuccessLabel.Hide();
             this.kundenNeuErrGeneralLabel.Hide();
+            this.searchKundeSuccessLabel.Hide();
             this.searchKundeErrorLabel.Hide();
         }
 
@@ -299,6 +300,9 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void changeKundeOrKontakt(object sender, EventArgs e)
         {
+            this.searchKundeErrorLabel.Hide();
+            this.searchKundeSuccessLabel.Hide();
+
             if (kundenSearchDataGridView.SelectedCells.Count > 0)
             {
                 bool type = this.GetKundeKontaktType();
@@ -316,17 +320,26 @@ namespace EPUBackoffice.Gui
                     buttonName = ((Button)sender).Name;
                 }
 
-                if(buttonName == "changeKundeButton")
+                try
                 {
-                    changer.Change(id, firstname, lastname, type);
+                    if (buttonName == "changeKundeButton")
+                    {
+                        changer.Change(id, firstname, lastname, type);
+                    }
+                    else if (buttonName == "deleteKundeButton")
+                    {
+                        changer.Delete(id, type);
+                    }
                 }
-                else if(buttonName == "deleteKundeButton")
+                catch (InvalidInputException ex)
                 {
-                    changer.Delete(id, type);
+                    this.searchKundeErrorLabel.Text = ex.Message;
+                    this.searchKundeErrorLabel.Show();
                 }
 
                 // update displayed rows
                 this.BindFromKundenSearchTextBlock(buttonName, selectedRow, firstname, lastname);
+                this.searchKundeSuccessLabel.Show();
             }
         }
 
@@ -336,6 +349,7 @@ namespace EPUBackoffice.Gui
             this.searchKundeVornameTextBlock.Clear();
             this.searchKundeNachnameTextBlock.Clear();
             this.searchKundeErrorLabel.Hide();
+            this.searchKundeSuccessLabel.Hide();
 
             this.SearchKundenOrKontakte(null, null);
         }
