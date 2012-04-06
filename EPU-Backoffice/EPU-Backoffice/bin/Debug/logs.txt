@@ -1149,3 +1149,13 @@
 06.04.2012 - 10:23 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db
 06.04.2012 - 10:23 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db has been stored in config file.
 06.04.2012 - 10:23 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+06.04.2012 - 10:31 Info: -----------------------------------------------------------
+06.04.2012 - 10:31 Info: Program is started.
+06.04.2012 - 10:31 Info: Using SQLite database.
+06.04.2012 - 10:31 Info: Saved path of database in config file: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+06.04.2012 - 10:31 Warning: Given file path is wrong. File does not exist: C:\Usackoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\file.db
+06.04.2012 - 10:32 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 10:32 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+06.04.2012 - 10:32 Info: Open HomeForm
+06.04.2012 - 10:32 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db
+06.04.2012 - 10:32 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db has been stored in config file.
