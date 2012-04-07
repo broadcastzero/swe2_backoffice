@@ -181,6 +181,13 @@
             <param name="sender">The sender</param>
             <param name="e">The event args</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.CreateNewAngebot(System.Object,System.EventArgs)">
+            <summary>
+            Reads values of concerning fields and asks business layer to create a new Angebot with the provided parameters
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The event params</param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.
@@ -554,6 +561,11 @@
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Akzeptiert">
             <summary>
             bool-value, which shows if Angebot has been accepted
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Beschreibung">
+            <summary>
+            A description of the Angebot
             </summary>
         </member>
         <member name="T:EPUBackoffice.BL.RuleManager">

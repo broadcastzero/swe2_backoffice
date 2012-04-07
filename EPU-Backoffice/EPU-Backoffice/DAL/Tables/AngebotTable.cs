@@ -96,5 +96,15 @@ namespace EPUBackoffice.Dal.Tables
             get { return akzeptiert; }
             set { akzeptiert = value; }
         }
+
+        private string beschreibung;
+        /// <summary>
+        /// A description of the Angebot
+        /// </summary>
+        public string Beschreibung
+        {
+            get { return beschreibung; }
+            set { { beschreibung = value; } }
+        }
     }
 }

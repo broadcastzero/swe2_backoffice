@@ -123,6 +123,8 @@
             this.angeboteTab = new System.Windows.Forms.TabPage();
             this.angebotTab = new System.Windows.Forms.TabControl();
             this.angebotErstellenTab = new System.Windows.Forms.TabPage();
+            this.label34 = new System.Windows.Forms.Label();
+            this.createAngebotDescriptionLabel = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
             this.angebotCreateButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -136,8 +138,8 @@
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.angebotErstellenNKNPNachnameTextbox = new System.Windows.Forms.TextBox();
-            this.angebotErstellenNKNPVornametextbox = new System.Windows.Forms.TextBox();
+            this.createAngebotNewKundeNnTextBox = new System.Windows.Forms.TextBox();
+            this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
             this.existingKundeComboBox = new System.Windows.Forms.ComboBox();
@@ -1170,6 +1172,8 @@
             // angebotErstellenTab
             // 
             this.angebotErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.angebotErstellenTab.Controls.Add(this.label34);
+            this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionLabel);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
             this.angebotErstellenTab.Controls.Add(this.angebotCreateButton);
             this.angebotErstellenTab.Controls.Add(this.label33);
@@ -1187,6 +1191,22 @@
             this.angebotErstellenTab.TabIndex = 0;
             this.angebotErstellenTab.Text = "Erstellen";
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(373, 162);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(79, 13);
+            this.label34.TabIndex = 15;
+            this.label34.Text = "Beschreibung *";
+            // 
+            // createAngebotDescriptionLabel
+            // 
+            this.createAngebotDescriptionLabel.Location = new System.Drawing.Point(164, 159);
+            this.createAngebotDescriptionLabel.Name = "createAngebotDescriptionLabel";
+            this.createAngebotDescriptionLabel.Size = new System.Drawing.Size(200, 20);
+            this.createAngebotDescriptionLabel.TabIndex = 14;
+            // 
             // angebotErstellenNKundeButton
             // 
             this.angebotErstellenNKundeButton.Location = new System.Drawing.Point(23, 30);
@@ -1199,32 +1219,33 @@
             // 
             // angebotCreateButton
             // 
-            this.angebotCreateButton.Location = new System.Drawing.Point(164, 190);
+            this.angebotCreateButton.Location = new System.Drawing.Point(166, 190);
             this.angebotCreateButton.Name = "angebotCreateButton";
             this.angebotCreateButton.Size = new System.Drawing.Size(113, 23);
             this.angebotCreateButton.TabIndex = 13;
             this.angebotCreateButton.Text = "Angebot erstellen";
             this.angebotCreateButton.UseVisualStyleBackColor = true;
+            this.angebotCreateButton.Click += new System.EventHandler(this.CreateNewAngebot);
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(373, 105);
+            this.label33.Location = new System.Drawing.Point(373, 88);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(85, 13);
+            this.label33.Size = new System.Drawing.Size(92, 13);
             this.label33.TabIndex = 6;
-            this.label33.Text = "Angebotssumme";
+            this.label33.Text = "Angebotssumme *";
             // 
             // angebotssummeTextBox
             // 
-            this.angebotssummeTextBox.Location = new System.Drawing.Point(166, 102);
+            this.angebotssummeTextBox.Location = new System.Drawing.Point(166, 81);
             this.angebotssummeTextBox.Name = "angebotssummeTextBox";
             this.angebotssummeTextBox.Size = new System.Drawing.Size(200, 20);
             this.angebotssummeTextBox.TabIndex = 3;
             // 
             // angebotValidUntilDateTimePicker
             // 
-            this.angebotValidUntilDateTimePicker.Location = new System.Drawing.Point(164, 154);
+            this.angebotValidUntilDateTimePicker.Location = new System.Drawing.Point(166, 133);
             this.angebotValidUntilDateTimePicker.Name = "angebotValidUntilDateTimePicker";
             this.angebotValidUntilDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.angebotValidUntilDateTimePicker.TabIndex = 5;
@@ -1243,24 +1264,24 @@
             // umsetzungswahrscheinlichkeitLabel
             // 
             this.umsetzungswahrscheinlichkeitLabel.AutoSize = true;
-            this.umsetzungswahrscheinlichkeitLabel.Location = new System.Drawing.Point(373, 132);
+            this.umsetzungswahrscheinlichkeitLabel.Location = new System.Drawing.Point(373, 114);
             this.umsetzungswahrscheinlichkeitLabel.Name = "umsetzungswahrscheinlichkeitLabel";
-            this.umsetzungswahrscheinlichkeitLabel.Size = new System.Drawing.Size(152, 13);
+            this.umsetzungswahrscheinlichkeitLabel.Size = new System.Drawing.Size(176, 13);
             this.umsetzungswahrscheinlichkeitLabel.TabIndex = 8;
-            this.umsetzungswahrscheinlichkeitLabel.Text = "Umsetzungswahrscheinlichkeit";
+            this.umsetzungswahrscheinlichkeitLabel.Text = "Umsetzungswahrscheinlichkeit (%) *";
             // 
             // angebotValidUntilLabel
             // 
             this.angebotValidUntilLabel.AutoSize = true;
-            this.angebotValidUntilLabel.Location = new System.Drawing.Point(373, 160);
+            this.angebotValidUntilLabel.Location = new System.Drawing.Point(372, 137);
             this.angebotValidUntilLabel.Name = "angebotValidUntilLabel";
-            this.angebotValidUntilLabel.Size = new System.Drawing.Size(91, 13);
+            this.angebotValidUntilLabel.Size = new System.Drawing.Size(98, 13);
             this.angebotValidUntilLabel.TabIndex = 7;
-            this.angebotValidUntilLabel.Text = "Angebot gültig bis";
+            this.angebotValidUntilLabel.Text = "Angebot gültig bis *";
             // 
             // umsetzungswahrscheinlichkeitTextBox
             // 
-            this.umsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 128);
+            this.umsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 107);
             this.umsetzungswahrscheinlichkeitTextBox.Name = "umsetzungswahrscheinlichkeitTextBox";
             this.umsetzungswahrscheinlichkeitTextBox.Size = new System.Drawing.Size(200, 20);
             this.umsetzungswahrscheinlichkeitTextBox.TabIndex = 4;
@@ -1269,7 +1290,7 @@
             // 
             this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenNKTab);
             this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKTab);
-            this.angebotErstellenSubTab.Location = new System.Drawing.Point(160, 24);
+            this.angebotErstellenSubTab.Location = new System.Drawing.Point(160, 6);
             this.angebotErstellenSubTab.Name = "angebotErstellenSubTab";
             this.angebotErstellenSubTab.SelectedIndex = 0;
             this.angebotErstellenSubTab.Size = new System.Drawing.Size(458, 73);
@@ -1280,8 +1301,8 @@
             this.angebotErstellenNKTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenNKTab.Controls.Add(this.label22);
             this.angebotErstellenNKTab.Controls.Add(this.label20);
-            this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPNachnameTextbox);
-            this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPVornametextbox);
+            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeNnTextBox);
+            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeVnTextBox);
             this.angebotErstellenNKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenNKTab.Name = "angebotErstellenNKTab";
             this.angebotErstellenNKTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1307,19 +1328,19 @@
             this.label20.TabIndex = 3;
             this.label20.Text = "Vorname";
             // 
-            // angebotErstellenNKNPNachnameTextbox
+            // createAngebotNewKundeNnTextBox
             // 
-            this.angebotErstellenNKNPNachnameTextbox.Location = new System.Drawing.Point(6, 32);
-            this.angebotErstellenNKNPNachnameTextbox.Name = "angebotErstellenNKNPNachnameTextbox";
-            this.angebotErstellenNKNPNachnameTextbox.Size = new System.Drawing.Size(200, 20);
-            this.angebotErstellenNKNPNachnameTextbox.TabIndex = 1;
+            this.createAngebotNewKundeNnTextBox.Location = new System.Drawing.Point(6, 32);
+            this.createAngebotNewKundeNnTextBox.Name = "createAngebotNewKundeNnTextBox";
+            this.createAngebotNewKundeNnTextBox.Size = new System.Drawing.Size(200, 20);
+            this.createAngebotNewKundeNnTextBox.TabIndex = 1;
             // 
-            // angebotErstellenNKNPVornametextbox
+            // createAngebotNewKundeVnTextBox
             // 
-            this.angebotErstellenNKNPVornametextbox.Location = new System.Drawing.Point(6, 6);
-            this.angebotErstellenNKNPVornametextbox.Name = "angebotErstellenNKNPVornametextbox";
-            this.angebotErstellenNKNPVornametextbox.Size = new System.Drawing.Size(200, 20);
-            this.angebotErstellenNKNPVornametextbox.TabIndex = 0;
+            this.createAngebotNewKundeVnTextBox.Location = new System.Drawing.Point(6, 6);
+            this.createAngebotNewKundeVnTextBox.Name = "createAngebotNewKundeVnTextBox";
+            this.createAngebotNewKundeVnTextBox.Size = new System.Drawing.Size(200, 20);
+            this.createAngebotNewKundeVnTextBox.TabIndex = 0;
             // 
             // angebotErstellenBKTab
             // 
@@ -1338,9 +1359,9 @@
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(212, 9);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(38, 13);
+            this.label32.Size = new System.Drawing.Size(45, 13);
             this.label32.TabIndex = 9;
-            this.label32.Text = "Kunde";
+            this.label32.Text = "Kunde *";
             // 
             // existingKundeComboBox
             // 
@@ -1978,8 +1999,8 @@
         private System.Windows.Forms.TabPage angebotErstellenNKTab;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox angebotErstellenNKNPNachnameTextbox;
-        private System.Windows.Forms.TextBox angebotErstellenNKNPVornametextbox;
+        private System.Windows.Forms.TextBox createAngebotNewKundeNnTextBox;
+        private System.Windows.Forms.TextBox createAngebotNewKundeVnTextBox;
         private System.Windows.Forms.TabPage angebotErstellenBKTab;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ComboBox existingKundeComboBox;
@@ -2035,6 +2056,8 @@
         private System.Windows.Forms.Button deleteKundeButton;
         private System.Windows.Forms.Label searchKundeSuccessLabel;
         private System.Windows.Forms.Button angebotCreateButton;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox createAngebotDescriptionLabel;
 
 
 

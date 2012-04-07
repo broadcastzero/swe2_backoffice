@@ -373,5 +373,15 @@ namespace EPUBackoffice.Gui
                 }
             }
         }
+
+        /// <summary>
+        /// Reads values of concerning fields and asks business layer to create a new Angebot with the provided parameters
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event params</param>
+        private void CreateNewAngebot(object sender, EventArgs e)
+        {
+
+        }
     }
 }
