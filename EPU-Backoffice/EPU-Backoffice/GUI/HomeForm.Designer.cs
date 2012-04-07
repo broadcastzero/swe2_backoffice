@@ -58,6 +58,7 @@
             this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
+            this.searchKundeSuccessLabel = new System.Windows.Forms.Label();
             this.deleteKundeButton = new System.Windows.Forms.Button();
             this.searchKundeErrorLabel = new System.Windows.Forms.Label();
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
@@ -132,8 +133,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.angebotErstellenSubTab = new TablessControl();
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
-            this.angeboteErstellenNKNPKontaktRadiobutton = new System.Windows.Forms.RadioButton();
-            this.angeboteErstellenNKNPKundeRadiobutton = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.angebotErstellenNKNPNachnameTextbox = new System.Windows.Forms.TextBox();
@@ -188,7 +187,6 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
-            this.searchKundeSuccessLabel = new System.Windows.Forms.Label();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -546,6 +544,17 @@
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
             this.kundenTabSearchChange.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            // 
+            // searchKundeSuccessLabel
+            // 
+            this.searchKundeSuccessLabel.AutoSize = true;
+            this.searchKundeSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.searchKundeSuccessLabel.Location = new System.Drawing.Point(163, 80);
+            this.searchKundeSuccessLabel.Name = "searchKundeSuccessLabel";
+            this.searchKundeSuccessLabel.Size = new System.Drawing.Size(117, 13);
+            this.searchKundeSuccessLabel.TabIndex = 16;
+            this.searchKundeSuccessLabel.Text = "Operation erfolgreich! :)";
+            this.searchKundeSuccessLabel.Visible = false;
             // 
             // deleteKundeButton
             // 
@@ -1164,7 +1173,6 @@
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
             this.angebotErstellenTab.Controls.Add(this.label35);
             this.angebotErstellenTab.Controls.Add(this.label34);
-            this.angebotErstellenTab.Controls.Add(this.label33);
             this.angebotErstellenTab.Controls.Add(this.dateTimePicker6);
             this.angebotErstellenTab.Controls.Add(this.textBox11);
             this.angebotErstellenTab.Controls.Add(this.textBox10);
@@ -1218,7 +1226,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(370, 85);
+            this.label33.Location = new System.Drawing.Point(206, 35);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(85, 13);
             this.label33.TabIndex = 6;
@@ -1258,40 +1266,17 @@
             // angebotErstellenNKTab
             // 
             this.angebotErstellenNKTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.angebotErstellenNKTab.Controls.Add(this.angeboteErstellenNKNPKontaktRadiobutton);
-            this.angebotErstellenNKTab.Controls.Add(this.angeboteErstellenNKNPKundeRadiobutton);
             this.angebotErstellenNKTab.Controls.Add(this.label22);
             this.angebotErstellenNKTab.Controls.Add(this.label20);
             this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPNachnameTextbox);
             this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPVornametextbox);
+            this.angebotErstellenNKTab.Controls.Add(this.label33);
             this.angebotErstellenNKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenNKTab.Name = "angebotErstellenNKTab";
             this.angebotErstellenNKTab.Padding = new System.Windows.Forms.Padding(3);
             this.angebotErstellenNKTab.Size = new System.Drawing.Size(450, 52);
             this.angebotErstellenNKTab.TabIndex = 0;
             this.angebotErstellenNKTab.Text = "NK";
-            // 
-            // angeboteErstellenNKNPKontaktRadiobutton
-            // 
-            this.angeboteErstellenNKNPKontaktRadiobutton.AutoSize = true;
-            this.angeboteErstellenNKNPKontaktRadiobutton.Location = new System.Drawing.Point(331, 26);
-            this.angeboteErstellenNKNPKontaktRadiobutton.Name = "angeboteErstellenNKNPKontaktRadiobutton";
-            this.angeboteErstellenNKNPKontaktRadiobutton.Size = new System.Drawing.Size(62, 17);
-            this.angeboteErstellenNKNPKontaktRadiobutton.TabIndex = 7;
-            this.angeboteErstellenNKNPKontaktRadiobutton.TabStop = true;
-            this.angeboteErstellenNKNPKontaktRadiobutton.Text = "Kontakt";
-            this.angeboteErstellenNKNPKontaktRadiobutton.UseVisualStyleBackColor = true;
-            // 
-            // angeboteErstellenNKNPKundeRadiobutton
-            // 
-            this.angeboteErstellenNKNPKundeRadiobutton.AutoSize = true;
-            this.angeboteErstellenNKNPKundeRadiobutton.Location = new System.Drawing.Point(331, 7);
-            this.angeboteErstellenNKNPKundeRadiobutton.Name = "angeboteErstellenNKNPKundeRadiobutton";
-            this.angeboteErstellenNKNPKundeRadiobutton.Size = new System.Drawing.Size(56, 17);
-            this.angeboteErstellenNKNPKundeRadiobutton.TabIndex = 6;
-            this.angeboteErstellenNKNPKundeRadiobutton.TabStop = true;
-            this.angeboteErstellenNKNPKundeRadiobutton.Text = "Kunde";
-            this.angeboteErstellenNKNPKundeRadiobutton.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -1342,9 +1327,9 @@
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(212, 9);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(86, 13);
+            this.label32.Size = new System.Drawing.Size(38, 13);
             this.label32.TabIndex = 9;
-            this.label32.Text = "Kunde / Kontakt";
+            this.label32.Text = "Kunde";
             // 
             // comboBox5
             // 
@@ -1805,17 +1790,6 @@
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // searchKundeSuccessLabel
-            // 
-            this.searchKundeSuccessLabel.AutoSize = true;
-            this.searchKundeSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.searchKundeSuccessLabel.Location = new System.Drawing.Point(163, 80);
-            this.searchKundeSuccessLabel.Name = "searchKundeSuccessLabel";
-            this.searchKundeSuccessLabel.Size = new System.Drawing.Size(117, 13);
-            this.searchKundeSuccessLabel.TabIndex = 16;
-            this.searchKundeSuccessLabel.Text = "Operation erfolgreich! :)";
-            this.searchKundeSuccessLabel.Visible = false;
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1990,8 +1964,6 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TabPage angebotErstellenNKTab;
-        private System.Windows.Forms.RadioButton angeboteErstellenNKNPKontaktRadiobutton;
-        private System.Windows.Forms.RadioButton angeboteErstellenNKNPKundeRadiobutton;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox angebotErstellenNKNPNachnameTextbox;

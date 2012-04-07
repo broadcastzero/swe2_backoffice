@@ -479,3 +479,13 @@
 06.04.2012 - 18:19 Info: User requested to delete False with ID 23
 06.04.2012 - 18:19 Info: Kunde has been dropped from the SQLite database. ID: 23
 06.04.2012 - 18:19 Info: A new Kunde has been saved to the database: Felix Wagner
+06.04.2012 - 18:29 Info: -----------------------------------------------------------
+06.04.2012 - 18:29 Info: Program is started.
+06.04.2012 - 18:29 Info: Using SQLite database.
+06.04.2012 - 18:29 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+06.04.2012 - 18:29 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 07:33 Info: -----------------------------------------------------------
+07.04.2012 - 07:33 Info: Program is started.
+07.04.2012 - 07:33 Info: Using SQLite database.
+07.04.2012 - 07:33 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 07:33 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
