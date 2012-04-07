@@ -9,15 +9,16 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.Text;
     using EPUBackoffice.Dal;
     using EPUBackoffice.UserExceptions;
     using Logger;
 
     /// <summary>
-    /// Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+    /// Contains methods to manipulate, save or load Angebote
     /// </summary>
-    public class AngebotCreator
+    public class AngebotManager
     {
         private Logger logger = Logger.Instance;
 
@@ -25,7 +26,7 @@ namespace EPUBackoffice.BL
         /// Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
         /// </summary>
         public void Create(string kundenID, bool createKunde, string firstname, string lastname, string angebotssumme, string umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
-        {            
+        {
             // parse strings
             double angebotssum = RuleManager.ValidatePositiveDouble(angebotssumme);
             int umsetzungswsk = RuleManager.ValidatePerCent(umsetzungswahrscheinlichkeit);
@@ -89,6 +90,15 @@ namespace EPUBackoffice.BL
 
             // create Angebot
             DALFactory.GetDAL().CreateAngebot(kID, angebotssum, umsetzungswsk, validUntil, description);
+        }
+
+        /// <summary>
+        /// Load an existing Angebot out of the database
+        /// </summary>
+        public void Load(string firstname, string lastname, DateTime from, DateTime until)
+        { 
+            // TODO: check parameter and parse dates to strings
+            DALFactory.GetDAL().LoadAngebote(firstname, lastname, from.ToShortDateString(), until.ToShortDateString());
         }
     }
 }

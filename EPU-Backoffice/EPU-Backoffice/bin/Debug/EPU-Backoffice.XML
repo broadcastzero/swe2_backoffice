@@ -203,6 +203,13 @@
             <param name="sender">The sender</param>
             <param name="e">The event args</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.SearchAngebote(System.Object,System.EventArgs)">
+            <summary>
+            Start searching for Angebote and pass arguments to business layer
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The params</param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.
@@ -463,6 +470,16 @@
             <param name="validUntil">Deadline date</param>
             <param name="description">A short description of the Angebot</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.LoadAngebote(System.String,System.String,System.String,System.String)">
+            <summary>
+            Receive params and load fitting existing Angebote
+            </summary>
+            <param name="firstname">The first name of the Kunde</param>
+            <param name="lastname">The last name of the Kunde</param>
+            <param name="from">A date string which indicates the search-begin date</param>
+            <param name="until">A date string which indicates the search-end date</param>
+            <returns>A resultlist of all fitting Angebote</returns>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
             <summary>
             Connects to the database and creates its tables if they do not exist yet.
@@ -528,6 +545,16 @@
             <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
             <param name="validUntil">Deadline date</param>
             <param name="description">A short description of the Angebot</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.LoadAngebote(System.String,System.String,System.String,System.String)">
+            <summary>
+            Receive params and load fitting existing Angebote from the SQLite database
+            </summary>
+            <param name="firstname">The first name of the Kunde</param>
+            <param name="lastname">The last name of the Kunde</param>
+            <param name="from">A date string which indicates the search-begin date</param>
+            <param name="until">A date string which indicates the search-end date</param>
+            <returns>A resultlist of all fitting Angebote</returns>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -712,16 +739,6 @@
             </summary>
             <param name="message">The error message which is thrown</param>
             <param name="inner">The base class</param>
-        </member>
-        <member name="T:EPUBackoffice.BL.AngebotCreator">
-            <summary>
-            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
-            <summary>
-            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
-            </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
             <summary>
@@ -933,6 +950,16 @@
             <param name="validUntil">Deadline date</param>
             <param name="description">A short description of the Angebot</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.LoadAngebote(System.String,System.String,System.String,System.String)">
+            <summary>
+            Receive params and load fitting existing Angebote from the mock database
+            </summary>
+            <param name="firstname">The first name of the Kunde</param>
+            <param name="lastname">The last name of the Kunde</param>
+            <param name="from">A date string which indicates the search-begin date</param>
+            <param name="until">A date string which indicates the search-end date</param>
+            <returns>A resultlist of all fitting Angebote</returns>
+        </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
             <summary>
             A continuing, unique ID for the table "Kunden"
@@ -963,6 +990,21 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.AngebotManager">
+            <summary>
+            Contains methods to manipulate, save or load Angebote
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotManager.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotManager.Load(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Load an existing Angebot out of the database
+            </summary>
         </member>
     </members>
 </doc>

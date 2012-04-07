@@ -153,7 +153,7 @@
             this.label36 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.angebotSuchenDruckenButton = new System.Windows.Forms.Button();
-            this.angebotSuchenSuchenButton = new System.Windows.Forms.Button();
+            this.angebotSuchenButton = new System.Windows.Forms.Button();
             this.angebotSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenNachnameTextbox = new System.Windows.Forms.TextBox();
@@ -1420,7 +1420,7 @@
             this.angebotSuchenTab.Controls.Add(this.label36);
             this.angebotSuchenTab.Controls.Add(this.dataGridView1);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenDruckenButton);
-            this.angebotSuchenTab.Controls.Add(this.angebotSuchenSuchenButton);
+            this.angebotSuchenTab.Controls.Add(this.angebotSuchenButton);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenBisDatepicker);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenVonDatepicker);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenNachnameTextbox);
@@ -1485,14 +1485,15 @@
             this.angebotSuchenDruckenButton.Text = "Drucken";
             this.angebotSuchenDruckenButton.UseVisualStyleBackColor = true;
             // 
-            // angebotSuchenSuchenButton
+            // angebotSuchenButton
             // 
-            this.angebotSuchenSuchenButton.Location = new System.Drawing.Point(27, 131);
-            this.angebotSuchenSuchenButton.Name = "angebotSuchenSuchenButton";
-            this.angebotSuchenSuchenButton.Size = new System.Drawing.Size(200, 23);
-            this.angebotSuchenSuchenButton.TabIndex = 5;
-            this.angebotSuchenSuchenButton.Text = "Suchen";
-            this.angebotSuchenSuchenButton.UseVisualStyleBackColor = true;
+            this.angebotSuchenButton.Location = new System.Drawing.Point(27, 131);
+            this.angebotSuchenButton.Name = "angebotSuchenButton";
+            this.angebotSuchenButton.Size = new System.Drawing.Size(200, 23);
+            this.angebotSuchenButton.TabIndex = 5;
+            this.angebotSuchenButton.Text = "Suchen";
+            this.angebotSuchenButton.UseVisualStyleBackColor = true;
+            this.angebotSuchenButton.Click += new System.EventHandler(this.SearchAngebote);
             // 
             // angebotSuchenBisDatepicker
             // 
@@ -2050,7 +2051,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button angebotSuchenDruckenButton;
-        private System.Windows.Forms.Button angebotSuchenSuchenButton;
+        private System.Windows.Forms.Button angebotSuchenButton;
         private System.Windows.Forms.DateTimePicker angebotSuchenBisDatepicker;
         private System.Windows.Forms.DateTimePicker angebotSuchenVonDatepicker;
         private System.Windows.Forms.TextBox angebotSuchenNachnameTextbox;

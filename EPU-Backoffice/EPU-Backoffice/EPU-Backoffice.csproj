@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\AngebotCreator.cs" />
+    <Compile Include="BL\AngebotManager.cs" />
     <Compile Include="BL\ConfigFileManager.cs" />
     <Compile Include="BL\DatabaseConnector.cs" />
     <Compile Include="BL\KundenKontakteChanger.cs" />

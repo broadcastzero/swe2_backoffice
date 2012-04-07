@@ -181,3 +181,52 @@
 07.04.2012 - 17:57 Error: User tried to create an Angebot with an invalid Beschreibung: 
 07.04.2012 - 17:57 Info: Start creating new Angebot...
 07.04.2012 - 17:57 Info: A new Kunde has been saved to the database: 44 adsf asd
+07.04.2012 - 18:02 Info: -----------------------------------------------------------
+07.04.2012 - 18:02 Info: Program is started.
+07.04.2012 - 18:02 Info: Using SQLite database.
+07.04.2012 - 18:02 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:02 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 40
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 40
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 41
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 41
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 34
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 34
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 35
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 35
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 36
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 36
+07.04.2012 - 18:03 Info: Kunde has been updated in the SQLite database: ID: 25 Felix Wagner
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 37
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 37
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 38
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 38
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 39
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 39
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 42
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 42
+07.04.2012 - 18:03 Info: User requested to delete Kunde with ID 43
+07.04.2012 - 18:03 Info: Kunde has been dropped from the SQLite database. ID: 43
+07.04.2012 - 18:03 Info: Start creating new Angebot...
+07.04.2012 - 18:03 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 18:06 Info: Start creating new Angebot...
+07.04.2012 - 18:06 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 18:06 Info: Start creating new Angebot...
+07.04.2012 - 18:06 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 18:07 Info: -----------------------------------------------------------
+07.04.2012 - 18:07 Info: Program is started.
+07.04.2012 - 18:07 Info: Using SQLite database.
+07.04.2012 - 18:07 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:07 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:10 Info: -----------------------------------------------------------
+07.04.2012 - 18:10 Info: Program is started.
+07.04.2012 - 18:10 Info: Using SQLite database.
+07.04.2012 - 18:10 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:10 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:11 Info: Start creating new Angebot...
+07.04.2012 - 18:11 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 18:28 Info: -----------------------------------------------------------
+07.04.2012 - 18:28 Info: Program is started.
+07.04.2012 - 18:28 Info: Using SQLite database.
+07.04.2012 - 18:28 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:28 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

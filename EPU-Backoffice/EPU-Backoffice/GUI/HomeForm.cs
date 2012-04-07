@@ -427,8 +427,8 @@ namespace EPUBackoffice.Gui
             try
             {
                 this.logger.Log(0, "Start creating new Angebot...");
-                AngebotCreator angebotCreator = new AngebotCreator();
-                angebotCreator.Create(kundenID, createKunde, firstname, lastname, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
+                AngebotManager manager = new AngebotManager();
+                manager.Create(kundenID, createKunde, firstname, lastname, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
             }
             catch (InvalidInputException ex)
             {
@@ -466,6 +466,18 @@ namespace EPUBackoffice.Gui
         {
             this.createAngebotErrorLabel.Hide();
             this.createAngebotSuccessLabel.Hide();
+        }
+
+        /// <summary>
+        /// Start searching for Angebote and pass arguments to business layer
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The params</param>
+        private void SearchAngebote(object sender, EventArgs e)
+        {
+            AngebotManager manager = new AngebotManager();
+            manager.Load(this.angebotSuchenVornameTextbox.Text, this.angebotSuchenNachnameTextbox.Text, this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
+            // TODO: catch InvalidInputException & maybe SQLite-exception
         }
     }
 }

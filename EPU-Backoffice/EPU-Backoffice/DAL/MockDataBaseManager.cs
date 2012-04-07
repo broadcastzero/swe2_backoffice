@@ -240,5 +240,18 @@ namespace EPUBackoffice.Dal
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Receive params and load fitting existing Angebote from the mock database
+        /// </summary>
+        /// <param name="firstname">The first name of the Kunde</param>
+        /// <param name="lastname">The last name of the Kunde</param>
+        /// <param name="from">A date string which indicates the search-begin date</param>
+        /// <param name="until">A date string which indicates the search-end date</param>
+        /// <returns>A resultlist of all fitting Angebote</returns>
+        public List<AngebotTable> LoadAngebote(string firstname, string lastname, string from, string until)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
