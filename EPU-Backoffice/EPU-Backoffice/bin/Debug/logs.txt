@@ -3,3 +3,181 @@
 07.04.2012 - 14:10 Info: Using SQLite database.
 07.04.2012 - 14:10 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 07.04.2012 - 14:10 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:12 Info: -----------------------------------------------------------
+07.04.2012 - 17:12 Info: Program is started.
+07.04.2012 - 17:12 Info: Using SQLite database.
+07.04.2012 - 17:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  
+07.04.2012 - 17:12 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 34 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 35 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Angebotssumme: adfs
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 36 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Angebotssumme: 0-4
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 37 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Angebotssumme: -2
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 38 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 
+07.04.2012 - 17:12 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:12 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:12 Info: A new Kunde has been saved to the database: 39 <null> adsf
+07.04.2012 - 17:12 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 101
+07.04.2012 - 17:13 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:13 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:13 Info: A new Kunde has been saved to the database: 40 <null> adsf
+07.04.2012 - 17:13 Error: User tried to create an Angebot with an invalid Beschreibung: 
+07.04.2012 - 17:13 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:13 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:13 Info: A new Kunde has been saved to the database: 41 <null> adsf
+07.04.2012 - 17:13 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: -1
+07.04.2012 - 17:13 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:13 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:13 Info: A new Kunde has been saved to the database: 42 <null> adsf
+07.04.2012 - 17:13 Error: User tried to create an Angebot with an invalid Beschreibung: 
+07.04.2012 - 17:13 Info: Start creating new Angebot with new Kunde:  adsf
+07.04.2012 - 17:13 Info: Es wird kein Vorname eingetragen.
+07.04.2012 - 17:13 Info: A new Kunde has been saved to the database: 43 <null> adsf
+07.04.2012 - 17:32 Info: -----------------------------------------------------------
+07.04.2012 - 17:32 Info: Program is started.
+07.04.2012 - 17:32 Info: Using SQLite database.
+07.04.2012 - 17:32 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:32 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:32 Info: Start creating new Angebot...
+07.04.2012 - 17:32 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:33 Info: Start creating new Angebot...
+07.04.2012 - 17:33 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:35 Info: -----------------------------------------------------------
+07.04.2012 - 17:35 Info: Program is started.
+07.04.2012 - 17:35 Info: Using SQLite database.
+07.04.2012 - 17:35 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:35 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:36 Info: Start creating new Angebot...
+07.04.2012 - 17:36 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:37 Info: -----------------------------------------------------------
+07.04.2012 - 17:37 Info: Program is started.
+07.04.2012 - 17:37 Info: Using SQLite database.
+07.04.2012 - 17:37 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:37 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:38 Info: -----------------------------------------------------------
+07.04.2012 - 17:38 Info: Program is started.
+07.04.2012 - 17:38 Info: Using SQLite database.
+07.04.2012 - 17:38 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:38 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:38 Info: Start creating new Angebot...
+07.04.2012 - 17:38 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:44 Info: -----------------------------------------------------------
+07.04.2012 - 17:44 Info: Program is started.
+07.04.2012 - 17:44 Info: Using SQLite database.
+07.04.2012 - 17:44 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:44 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:44 Info: Start creating new Angebot...
+07.04.2012 - 17:44 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:44 Info: Start creating new Angebot...
+07.04.2012 - 17:44 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:44 Info: Start creating new Angebot...
+07.04.2012 - 17:44 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:44 Info: Start creating new Angebot...
+07.04.2012 - 17:44 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:45 Info: Start creating new Angebot...
+07.04.2012 - 17:45 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:45 Info: -----------------------------------------------------------
+07.04.2012 - 17:45 Info: Program is started.
+07.04.2012 - 17:45 Info: Using SQLite database.
+07.04.2012 - 17:45 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:45 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:46 Info: Start creating new Angebot...
+07.04.2012 - 17:46 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:46 Info: -----------------------------------------------------------
+07.04.2012 - 17:46 Info: Program is started.
+07.04.2012 - 17:46 Info: Using SQLite database.
+07.04.2012 - 17:46 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:46 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:46 Info: Start creating new Angebot...
+07.04.2012 - 17:48 Info: -----------------------------------------------------------
+07.04.2012 - 17:48 Info: Program is started.
+07.04.2012 - 17:48 Info: Using SQLite database.
+07.04.2012 - 17:48 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:48 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:48 Info: Start creating new Angebot...
+07.04.2012 - 17:48 Info: -----------------------------------------------------------
+07.04.2012 - 17:48 Info: Program is started.
+07.04.2012 - 17:48 Info: Using SQLite database.
+07.04.2012 - 17:48 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:48 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:48 Info: Start creating new Angebot...
+07.04.2012 - 17:48 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+07.04.2012 - 17:48 Info: Start creating new Angebot...
+07.04.2012 - 17:48 Error: User tried to create an Angebot with invalid firstname of the newly to be created Kunde.
+07.04.2012 - 17:48 Info: Start creating new Angebot...
+07.04.2012 - 17:48 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+07.04.2012 - 17:50 Info: -----------------------------------------------------------
+07.04.2012 - 17:50 Info: Program is started.
+07.04.2012 - 17:50 Info: Using SQLite database.
+07.04.2012 - 17:50 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:50 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:51 Info: Start creating new Angebot...
+07.04.2012 - 17:51 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:51 Info: Start creating new Angebot...
+07.04.2012 - 17:51 Error: User tried to create an Angebot with invalid firstname of the newly to be created Kunde.
+07.04.2012 - 17:54 Info: -----------------------------------------------------------
+07.04.2012 - 17:54 Info: Program is started.
+07.04.2012 - 17:54 Info: Using SQLite database.
+07.04.2012 - 17:54 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:54 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:54 Info: Start creating new Angebot...
+07.04.2012 - 17:54 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 17:54 Info: Start creating new Angebot...
+07.04.2012 - 17:54 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 17:56 Info: -----------------------------------------------------------
+07.04.2012 - 17:56 Info: Program is started.
+07.04.2012 - 17:56 Info: Using SQLite database.
+07.04.2012 - 17:56 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:56 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Angebotssumme: dfa
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 101
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Beschreibung: 
+07.04.2012 - 17:56 Info: Start creating new Angebot...
+07.04.2012 - 17:56 Error: User tried to create an Angebot with an invalid Beschreibung: 
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Info: -----------------------------------------------------------
+07.04.2012 - 17:57 Info: Program is started.
+07.04.2012 - 17:57 Info: Using SQLite database.
+07.04.2012 - 17:57 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:57 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with invalid firstname of the newly to be created Kunde.
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with an invalid Angebotssumme: adsf
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Error: User tried to create an Angebot with an invalid Beschreibung: 
+07.04.2012 - 17:57 Info: Start creating new Angebot...
+07.04.2012 - 17:57 Info: A new Kunde has been saved to the database: 44 adsf asd

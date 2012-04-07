@@ -394,48 +394,47 @@ namespace EPUBackoffice.Gui
             // reset error/success labels
             this.ResetCreateAngebotLabels(null, null);
 
-            // get Kunden data - existing or newly to-be-created
-            // if new Kunde shall be created for this Angebot
+            // existing or newly to-be-created
+            bool createKunde = false;
+            string kundenID = null;
+
+            // new Kunde
             if (this.angebotErstellenSubTab.SelectedTab == this.angebotErstellenSubTab.TabPages[0])
             {
-                // get values
-                string firstname = this.createAngebotNewKundeVnTextBox.Text;
-                string lastname = this.createAngebotNewKundeNnTextBox.Text;
-
-                this.logger.Log(0, "Start creating new Angebot with new Kunde: " + firstname + " " + lastname);
-
-                bool type = false; // Kunde
-
-                // save Kunde
-                KundenKontakteSaver saver = new KundenKontakteSaver();
-                AngebotCreator angebotCreator = new AngebotCreator();
-
-                try
-                {
-                    // insert new Kunde
-                    int insertedID = saver.SaveNewKundeKontakt(firstname, lastname, type);
-
-                    // insert new Angebot
-                    angebotCreator.Create(insertedID, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
-                }
-                catch (InvalidInputException ex)
-                {
-                    this.createAngebotErrorLabel.Text = "Error: " + ex.Message;
-                    this.createAngebotErrorLabel.Show();
-                }
+                createKunde = true;
             }
-            // if existing Kunde shall be used
-            else 
+            // existing Kunde
+            else
             {
-                this.logger.Log(0, "Start creating new Angebot with existing Kunde: " + this.createAngebotExistingKundeComboBox.SelectedValue);
-
+                // no Kunde ausgewählt -> show error label
                 if (this.createAngebotExistingKundeComboBox.SelectedIndex < 0)
                 {
-                    this.createAngebotErrorLabel.Text = "Error: kein Kunde ausgewählt.";
+                    this.createAngebotErrorLabel.Text = "Error: kein Kunde ausgewählt";
+                    this.createAngebotErrorLabel.Show();
+                    return; // skip rest of function
+                }
+                // get ID out of ComboBox
+                else
+                { 
+                    kundenID = this.createAngebotExistingKundeComboBox.SelectedItem.ToString();
+                    kundenID = kundenID.Substring(0, kundenID.IndexOf(':'));
                 }
             }
 
-            // get remaining needed information
+            string firstname = this.createAngebotNewKundeVnTextBox.Text;
+            string lastname = this.createAngebotNewKundeNnTextBox.Text;
+
+            try
+            {
+                this.logger.Log(0, "Start creating new Angebot...");
+                AngebotCreator angebotCreator = new AngebotCreator();
+                angebotCreator.Create(kundenID, createKunde, firstname, lastname, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
+            }
+            catch (InvalidInputException ex)
+            {
+                this.createAngebotErrorLabel.Text = "Error: " + ex.Message;
+                this.createAngebotErrorLabel.Show();
+            }
 
             // show success message
             this.createAngebotSuccessLabel.Show();

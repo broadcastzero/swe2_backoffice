@@ -644,6 +644,13 @@
             <param name="input">The input string</param>
             <returns>The parsed Int, -1 in case of error</returns>
         </member>
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidatePositiveDouble(System.String)">
+            <summary>
+            Checks if given string is a positive double
+            </summary>
+            <param name="input">The input string</param>
+            <returns>The parsed double, -1 in case of error</returns>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
             A class for the database table "Eingangsrechnung" with its attributes
@@ -711,7 +718,7 @@
             Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.Int32,System.String,System.String,System.DateTime,System.String)">
+        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
             <summary>
             Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
             </summary>

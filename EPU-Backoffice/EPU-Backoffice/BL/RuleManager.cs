@@ -96,5 +96,20 @@ namespace EPUBackoffice.BL
             { return output; }
             else { return -1; }
         }
+
+        /// <summary>
+        /// Checks if given string is a positive double
+        /// </summary>
+        /// <param name="input">The input string</param>
+        /// <returns>The parsed double, -1 in case of error</returns>
+        public static double ValidatePositiveDouble(string input)
+        {
+            double output;
+            bool success = double.TryParse(input, out output);
+
+            if (success && output >= 0)
+            { return output; }
+            else { return -1; }
+        }
     }
 }
