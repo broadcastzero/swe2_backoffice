@@ -28,7 +28,8 @@ namespace EPUBackoffice.BL
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void SaveNewKundeKontakt(string firstname, string lastname, bool type)
+        /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
+        public int SaveNewKundeKontakt(string firstname, string lastname, bool type)
         {
             // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
             if (firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.CheckStringLength150(firstname) == false))
@@ -50,7 +51,7 @@ namespace EPUBackoffice.BL
 
                 try
                 {
-                    DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type);
+                    return DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type);
                 }
                 catch (SQLiteException)
                 {
@@ -61,7 +62,7 @@ namespace EPUBackoffice.BL
             {
                 try
                 {
-                    DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type, firstname);
+                    return DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type, firstname);
                 }
                 catch (SQLiteException)
                 {

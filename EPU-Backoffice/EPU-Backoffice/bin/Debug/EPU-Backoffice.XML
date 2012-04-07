@@ -68,6 +68,7 @@
             <param name="firstname">The first name of the Kunde/Kontakt</param>
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <returns>The ID of the newly inserted Kunde/Kontakt</returns>
         </member>
         <member name="T:EPUBackoffice.BL.DatabaseConnector">
             <summary>
@@ -420,6 +421,7 @@
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
             <param name="firstname">The first name of the Kunde/Kontakt</param>
+            <returns>The ID of the newly inserted Kunde/Kontakt</returns>
         </member>
         <member name="M:EPUBackoffice.Dal.IDAL.UpdateKundeKontakte(System.Int32,System.String,System.String,System.Boolean)">
             <summary>
@@ -828,6 +830,7 @@
             <param name="firstname">The first name of the Kunde/Kontakt</param>
             <param name="lastname">The last name of the Kunde/Kontakt</param>
             <param name="type">false...Kunde, true...Kontakt</param>
+            <returns>The ID of the newly inserted Kunde/Kontakt</returns>
         </member>
         <member name="M:EPUBackoffice.Dal.MockDataBaseManager.GetKundenKontakte(System.Boolean,System.String,System.String)">
             <summary>

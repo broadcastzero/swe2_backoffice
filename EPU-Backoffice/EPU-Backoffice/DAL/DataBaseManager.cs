@@ -80,8 +80,9 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
-        public void SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
+        public int SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
         {
+            int insertedID;
             string s_type = type == false ? "Kunde" : "Kontakt";
 
             string sql = "INSERT INTO " + s_type + " (Vorname, Nachname_Firmenname) VALUES (?, ?)";
@@ -115,6 +116,13 @@ namespace EPUBackoffice.Dal
                 // execute and commit
                 cmd.ExecuteNonQuery();
                 tra.Commit();
+
+                // get rowID
+                cmd.Parameters.Clear();
+                cmd.CommandText = "SELECT last_insert_rowid() AS id FROM " + s_type;
+                cmd.ExecuteNonQuery();
+                System.Object temp = cmd.ExecuteScalar();
+                insertedID = int.Parse(temp.ToString());
             }
             catch(SQLiteException)
             {
@@ -128,8 +136,11 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = "A new " + s_type + " has been saved to the database: " + firstname + " " + lastname;
+            string successmessage = "A new " + s_type + " has been saved to the database: " + insertedID + " " + firstname + " " + lastname;
             this.logger.Log(0, successmessage);
+
+            // return ID of inserted item
+            return insertedID;
         }
 
         /// <summary>

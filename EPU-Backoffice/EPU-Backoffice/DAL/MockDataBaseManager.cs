@@ -69,7 +69,8 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
+        /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
+        public int SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
         {
             if (type == false)
             {
@@ -82,6 +83,8 @@ namespace EPUBackoffice.Dal
                 // save to list
                 MockDataBaseManager.SavedKunden.Add(kunde);
                 this.logger.Log(0, "A new Kunde has been saved in the mockDB.");
+
+                return kunde.ID;
             }
             else
             {
@@ -94,6 +97,8 @@ namespace EPUBackoffice.Dal
                 // save to list
                 MockDataBaseManager.SavedKontakte.Add(kontakt);
                 this.logger.Log(0, "A new Kontakt has been saved in the mockDB.");
+
+                return kontakt.ID;
             }
         }
 
