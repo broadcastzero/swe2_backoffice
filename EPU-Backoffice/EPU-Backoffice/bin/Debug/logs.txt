@@ -1,0 +1,5 @@
+07.04.2012 - 14:10 Info: -----------------------------------------------------------
+07.04.2012 - 14:10 Info: Program is started.
+07.04.2012 - 14:10 Info: Using SQLite database.
+07.04.2012 - 14:10 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 14:10 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

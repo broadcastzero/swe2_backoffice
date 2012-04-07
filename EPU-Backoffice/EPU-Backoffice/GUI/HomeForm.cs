@@ -408,10 +408,15 @@ namespace EPUBackoffice.Gui
 
                 // save Kunde
                 KundenKontakteSaver saver = new KundenKontakteSaver();
+                AngebotCreator angebotCreator = new AngebotCreator();
 
                 try
                 {
-                    saver.SaveNewKundeKontakt(firstname, lastname, type);
+                    // insert new Kunde
+                    int insertedID = saver.SaveNewKundeKontakt(firstname, lastname, type);
+
+                    // insert new Angebot
+                    angebotCreator.Create(insertedID, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
                 }
                 catch (InvalidInputException ex)
                 {
@@ -436,21 +441,30 @@ namespace EPUBackoffice.Gui
             this.createAngebotSuccessLabel.Show();
         }
 
+        /// <summary>
+        /// Clears input fields in createAngebot
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
         private void ResetCreateAngebotFields(object sender, EventArgs e)
         {
-            // clear input fields
+            
             this.createAngebotNewKundeVnTextBox.Clear();
             this.createAngebotNewKundeNnTextBox.Clear();
             this.createAngebotAngebotssummeTextBox.Clear();
-            this.umsetzungswahrscheinlichkeitTextBox.Clear();
-            this.createAngebotDescriptionLabel.Clear();
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Clear();
+            this.createAngebotDescriptionTextBox.Clear();
 
             this.ResetCreateAngebotLabels(null, null);
         }
 
+        /// <summary>
+        /// Clears error/success labels
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
         private void ResetCreateAngebotLabels(object sender, EventArgs e)
         {
-            // clear error/success labels
             this.createAngebotErrorLabel.Hide();
             this.createAngebotSuccessLabel.Hide();
         }

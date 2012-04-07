@@ -56,5 +56,15 @@ namespace EPUBackoffice.Dal
         /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         void DeleteKundeKontakt(int id, bool type);
+
+        /// <summary>
+        /// Creates a new Angebot with the provided parameters
+        /// </summary>
+        /// <param name="kundenID">The foreign key to Kunde</param>
+        /// <param name="angebotssumme">The amount of money the costumer will have to pay</param>
+        /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
+        /// <param name="validUntil">Deadline date</param>
+        /// <param name="description">A short description of the Angebot</param>
+        void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, DateTime validUntil, string description);
     }
 }

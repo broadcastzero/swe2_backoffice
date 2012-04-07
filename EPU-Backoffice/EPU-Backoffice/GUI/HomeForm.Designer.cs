@@ -126,8 +126,8 @@
             this.createAngebotResetButton = new System.Windows.Forms.Button();
             this.createAngebotErrorLabel = new System.Windows.Forms.Label();
             this.createAngebotSuccessLabel = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.createAngebotDescriptionLabel = new System.Windows.Forms.TextBox();
+            this.createAngebotDescriptionLabel = new System.Windows.Forms.Label();
+            this.createAngebotDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
             this.createAngebotButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -136,7 +136,7 @@
             this.angebotErstellenBKundeButton = new System.Windows.Forms.Button();
             this.umsetzungswahrscheinlichkeitLabel = new System.Windows.Forms.Label();
             this.angebotValidUntilLabel = new System.Windows.Forms.Label();
-            this.umsetzungswahrscheinlichkeitTextBox = new System.Windows.Forms.TextBox();
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenSubTab = new TablessControl();
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
@@ -1178,8 +1178,8 @@
             this.angebotErstellenTab.Controls.Add(this.createAngebotResetButton);
             this.angebotErstellenTab.Controls.Add(this.createAngebotErrorLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotSuccessLabel);
-            this.angebotErstellenTab.Controls.Add(this.label34);
             this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionLabel);
+            this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionTextBox);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
             this.angebotErstellenTab.Controls.Add(this.createAngebotButton);
             this.angebotErstellenTab.Controls.Add(this.label33);
@@ -1188,7 +1188,7 @@
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
             this.angebotErstellenTab.Controls.Add(this.umsetzungswahrscheinlichkeitLabel);
             this.angebotErstellenTab.Controls.Add(this.angebotValidUntilLabel);
-            this.angebotErstellenTab.Controls.Add(this.umsetzungswahrscheinlichkeitTextBox);
+            this.angebotErstellenTab.Controls.Add(this.createAngebotUmsetzungswahrscheinlichkeitTextBox);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenSubTab);
             this.angebotErstellenTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenTab.Name = "angebotErstellenTab";
@@ -1229,21 +1229,21 @@
             this.createAngebotSuccessLabel.Text = "Eingabe erfolgreich! :)";
             this.createAngebotSuccessLabel.Visible = false;
             // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(373, 162);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(79, 13);
-            this.label34.TabIndex = 15;
-            this.label34.Text = "Beschreibung *";
-            // 
             // createAngebotDescriptionLabel
             // 
-            this.createAngebotDescriptionLabel.Location = new System.Drawing.Point(164, 159);
+            this.createAngebotDescriptionLabel.AutoSize = true;
+            this.createAngebotDescriptionLabel.Location = new System.Drawing.Point(373, 162);
             this.createAngebotDescriptionLabel.Name = "createAngebotDescriptionLabel";
-            this.createAngebotDescriptionLabel.Size = new System.Drawing.Size(200, 20);
-            this.createAngebotDescriptionLabel.TabIndex = 14;
+            this.createAngebotDescriptionLabel.Size = new System.Drawing.Size(79, 13);
+            this.createAngebotDescriptionLabel.TabIndex = 15;
+            this.createAngebotDescriptionLabel.Text = "Beschreibung *";
+            // 
+            // createAngebotDescriptionTextBox
+            // 
+            this.createAngebotDescriptionTextBox.Location = new System.Drawing.Point(164, 159);
+            this.createAngebotDescriptionTextBox.Name = "createAngebotDescriptionTextBox";
+            this.createAngebotDescriptionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.createAngebotDescriptionTextBox.TabIndex = 14;
             // 
             // angebotErstellenNKundeButton
             // 
@@ -1317,12 +1317,12 @@
             this.angebotValidUntilLabel.TabIndex = 7;
             this.angebotValidUntilLabel.Text = "Angebot gültig bis *";
             // 
-            // umsetzungswahrscheinlichkeitTextBox
+            // createAngebotUmsetzungswahrscheinlichkeitTextBox
             // 
-            this.umsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 107);
-            this.umsetzungswahrscheinlichkeitTextBox.Name = "umsetzungswahrscheinlichkeitTextBox";
-            this.umsetzungswahrscheinlichkeitTextBox.Size = new System.Drawing.Size(200, 20);
-            this.umsetzungswahrscheinlichkeitTextBox.TabIndex = 4;
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 107);
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Name = "createAngebotUmsetzungswahrscheinlichkeitTextBox";
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Size = new System.Drawing.Size(200, 20);
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.TabIndex = 4;
             // 
             // angebotErstellenSubTab
             // 
@@ -2033,7 +2033,7 @@
         private System.Windows.Forms.Label angebotValidUntilLabel;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DateTimePicker angebotValidUntilDateTimePicker;
-        private System.Windows.Forms.TextBox umsetzungswahrscheinlichkeitTextBox;
+        private System.Windows.Forms.TextBox createAngebotUmsetzungswahrscheinlichkeitTextBox;
         private System.Windows.Forms.TextBox createAngebotAngebotssummeTextBox;
         private System.Windows.Forms.TabPage angebotErstellenNKTab;
         private System.Windows.Forms.Label label22;
@@ -2095,8 +2095,8 @@
         private System.Windows.Forms.Button deleteKundeButton;
         private System.Windows.Forms.Label searchKundeSuccessLabel;
         private System.Windows.Forms.Button createAngebotButton;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox createAngebotDescriptionLabel;
+        private System.Windows.Forms.Label createAngebotDescriptionLabel;
+        private System.Windows.Forms.TextBox createAngebotDescriptionTextBox;
         private System.Windows.Forms.Label createAngebotErrorLabel;
         private System.Windows.Forms.Label createAngebotSuccessLabel;
         private System.Windows.Forms.Button createAngebotResetButton;

@@ -189,6 +189,20 @@
             <param name="sender">The sender</param>
             <param name="e">The event params</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetCreateAngebotFields(System.Object,System.EventArgs)">
+            <summary>
+            Clears input fields in createAngebot
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The event args</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetCreateAngebotLabels(System.Object,System.EventArgs)">
+            <summary>
+            Clears error/success labels
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The event args</param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.
@@ -439,6 +453,16 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+            <summary>
+            Creates a new Angebot with the provided parameters
+            </summary>
+            <param name="kundenID">The foreign key to Kunde</param>
+            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
+            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
+            <param name="validUntil">Deadline date</param>
+            <param name="description">A short description of the Angebot</param>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
             <summary>
             Connects to the database and creates its tables if they do not exist yet.
@@ -494,6 +518,16 @@
             <param name="id">The ID - used for binding</param>
             <param name="param1">Optional string parameter 1</param>
             <param name="param2">Optional string parameter 2</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+            <summary>
+            Creates a new Angebot with the provided parameters and saves it in the SQLite-DB
+            </summary>
+            <param name="kundenID">The foreign key to Kunde</param>
+            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
+            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
+            <param name="validUntil">Deadline date</param>
+            <param name="description">A short description of the Angebot</param>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -858,6 +892,16 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+            <summary>
+            Creates a new Angebot with the provided parameters and saves it in the mockDB
+            </summary>
+            <param name="kundenID">The foreign key to Kunde</param>
+            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
+            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
+            <param name="validUntil">Deadline date</param>
+            <param name="description">A short description of the Angebot</param>
+        </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
             <summary>
             A continuing, unique ID for the table "Kunden"
@@ -888,6 +932,16 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.AngebotCreator">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.Int32,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
         </member>
     </members>
 </doc>

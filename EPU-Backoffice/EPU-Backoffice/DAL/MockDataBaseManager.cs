@@ -227,5 +227,18 @@ namespace EPUBackoffice.Dal
                 throw new EntryNotFoundException("There is no entry in the mockDB with the ID " + id);
             }
         }
+
+        /// <summary>
+        /// Creates a new Angebot with the provided parameters and saves it in the mockDB
+        /// </summary>
+        /// <param name="kundenID">The foreign key to Kunde</param>
+        /// <param name="angebotssumme">The amount of money the costumer will have to pay</param>
+        /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
+        /// <param name="validUntil">Deadline date</param>
+        /// <param name="description">A short description of the Angebot</param>
+        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
