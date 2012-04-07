@@ -706,6 +706,16 @@
             <param name="message">The error message which is thrown</param>
             <param name="inner">The base class</param>
         </member>
+        <member name="T:EPUBackoffice.BL.AngebotCreator">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.Int32,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.RechnungszeileTable">
             <summary>
             A class for the database table "Rechnungszeile" with its attributes
@@ -946,16 +956,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
-        </member>
-        <member name="T:EPUBackoffice.BL.AngebotCreator">
-            <summary>
-            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.AngebotCreator.Create(System.Int32,System.String,System.String,System.DateTime,System.String)">
-            <summary>
-            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
-            </summary>
         </member>
     </members>
 </doc>

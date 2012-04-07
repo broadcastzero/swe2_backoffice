@@ -63,6 +63,7 @@
     <Compile Include="KundenKontakteSaverTest.cs" />
     <Compile Include="MockDataBaseManagerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleManagerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EPU-Backoffice\EPU-Backoffice.csproj">

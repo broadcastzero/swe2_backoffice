@@ -89,8 +89,12 @@ namespace EPUBackoffice.BL
         /// <returns>The parsed Int, -1 in case of error</returns>
         public static int ValidatePerCent(string input)
         {
-            // TODO: implement rule
-            return -1;
+            int output;
+            bool success = Int32.TryParse(input, out output);
+
+            if (success && output >= 0 && output <= 100)
+            { return output; }
+            else { return -1; }
         }
     }
 }
