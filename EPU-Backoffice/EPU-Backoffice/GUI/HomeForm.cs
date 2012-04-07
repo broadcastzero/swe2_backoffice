@@ -18,11 +18,15 @@ namespace EPUBackoffice.Gui
     using EPUBackoffice.BL;
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
+    using Logger;
+
     /// <summary>
     /// The standard home screen of the application.
     /// </summary>
     public partial class HomeForm : Form
     {
+        private Logger logger = Logger.Instance;
+
         /// <summary>
         /// Constructor, only calls InitializeComponent()
         /// </summary>
@@ -54,6 +58,8 @@ namespace EPUBackoffice.Gui
 
         private void SelectAngeboteTab(object sender, EventArgs e)
         {
+            this.ResetCreateAngebotFields(null, null);
+            this.ResetCreateAngebotLabels(null, null);
             mainTab.SelectTab("angeboteTab");  
         }
 
@@ -385,7 +391,68 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The event params</param>
         private void CreateNewAngebot(object sender, EventArgs e)
         {
+            // reset error/success labels
+            this.ResetCreateAngebotLabels(null, null);
 
+            // get Kunden data - existing or newly to-be-created
+            // if new Kunde shall be created for this Angebot
+            if (this.angebotErstellenSubTab.SelectedTab == this.angebotErstellenSubTab.TabPages[0])
+            {
+                // get values
+                string firstname = this.createAngebotNewKundeVnTextBox.Text;
+                string lastname = this.createAngebotNewKundeNnTextBox.Text;
+
+                this.logger.Log(0, "Start creating new Angebot with new Kunde: " + firstname + " " + lastname);
+
+                bool type = false; // Kunde
+
+                // save Kunde
+                KundenKontakteSaver saver = new KundenKontakteSaver();
+
+                try
+                {
+                    saver.SaveNewKundeKontakt(firstname, lastname, type);
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.createAngebotErrorLabel.Text = "Error: " + ex.Message;
+                    this.createAngebotErrorLabel.Show();
+                }
+            }
+            // if existing Kunde shall be used
+            else 
+            {
+                this.logger.Log(0, "Start creating new Angebot with existing Kunde: " + this.createAngebotExistingKundeComboBox.SelectedValue);
+
+                if (this.createAngebotExistingKundeComboBox.SelectedIndex < 0)
+                {
+                    this.createAngebotErrorLabel.Text = "Error: kein Kunde ausgewählt.";
+                }
+            }
+
+            // get remaining needed information
+
+            // show success message
+            this.createAngebotSuccessLabel.Show();
+        }
+
+        private void ResetCreateAngebotFields(object sender, EventArgs e)
+        {
+            // clear input fields
+            this.createAngebotNewKundeVnTextBox.Clear();
+            this.createAngebotNewKundeNnTextBox.Clear();
+            this.createAngebotAngebotssummeTextBox.Clear();
+            this.umsetzungswahrscheinlichkeitTextBox.Clear();
+            this.createAngebotDescriptionLabel.Clear();
+
+            this.ResetCreateAngebotLabels(null, null);
+        }
+
+        private void ResetCreateAngebotLabels(object sender, EventArgs e)
+        {
+            // clear error/success labels
+            this.createAngebotErrorLabel.Hide();
+            this.createAngebotSuccessLabel.Hide();
         }
     }
 }
