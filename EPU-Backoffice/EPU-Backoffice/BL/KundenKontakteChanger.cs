@@ -31,12 +31,12 @@ namespace EPUBackoffice.BL
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         public void Change(int id, string firstname, string lastname, bool type)
         {
-            if(firstname != null && firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.CheckStringLength150(firstname) == false))
+            if(firstname != null && firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.ValidateStringLength150(firstname) == false))
             {
                 this.logger.Log(2, "Field 'Vorname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.CheckStringLength150(lastname) == false)
+            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.ValidateStringLength150(lastname) == false)
             {
                 this.logger.Log(2, "Field 'Nachname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");

@@ -51,15 +51,46 @@ namespace EPUBackoffice.BL
         }
 
         /// <summary>
-        /// and does not have more than 150 chars
+        /// Check if string does not have more than 150 chars
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string is valid</returns>
-        public static bool CheckStringLength150(string input)
+        public static bool ValidateStringLength150(string input)
         {
             if (input.Length > 150)
             { return false; }
             else { return true; }
+        }
+
+        /// <summary>
+        /// Checks if string is a positive integer
+        /// </summary>
+        /// <param name="input">The input string</param>
+        /// <returns>The converted integer, -1 in case of error</returns>
+        public static int ValidatePositiveInt(string input)
+        {
+            int output;
+            bool success = Int32.TryParse(input, out output);
+
+            if (success && output >= 0)
+            {
+                return output;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        /// <summary>
+        /// Checks if given string is an integer between 0 and 100 (%)
+        /// </summary>
+        /// <param name="input">The input string</param>
+        /// <returns>The parsed Int, -1 in case of error</returns>
+        public static int ValidatePerCent(string input)
+        {
+            // TODO: implement rule
+            return -1;
         }
     }
 }
