@@ -729,3 +729,13 @@
 07.04.2012 - 12:28 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 07.04.2012 - 12:28 Info: Es wird kein Vorname eingetragen.
 07.04.2012 - 12:28 Info: A new Kunde has been saved to the database: <null> FH Johanneum Graz
+07.04.2012 - 12:32 Info: -----------------------------------------------------------
+07.04.2012 - 12:32 Info: Program is started.
+07.04.2012 - 12:32 Info: Using SQLite database.
+07.04.2012 - 12:32 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 12:32 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 12:33 Info: -----------------------------------------------------------
+07.04.2012 - 12:33 Info: Program is started.
+07.04.2012 - 12:33 Info: Using SQLite database.
+07.04.2012 - 12:33 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 12:33 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

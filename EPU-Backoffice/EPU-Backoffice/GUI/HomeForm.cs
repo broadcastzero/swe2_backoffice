@@ -370,7 +370,7 @@ namespace EPUBackoffice.Gui
             {
                 foreach (KundeKontaktTable k in results)
                 {
-                    string entry = k.ID + ": " + k.Vorname + " " + k.NachnameFirmenname;
+                    string entry = k.ID + ": " + k.Vorname + " - " + k.NachnameFirmenname;
                     listItems.Add(entry);
                 }
             }
