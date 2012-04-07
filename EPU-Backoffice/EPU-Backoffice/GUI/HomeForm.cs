@@ -172,14 +172,14 @@ namespace EPUBackoffice.Gui
         {
                 angebotErstellenBKundeButton.Hide();
                 angebotErstellenNKundeButton.Show();
-                angebotErstellenSubTab.SelectTab("angebotErstellenBKTab");
+                angebotErstellenSubTab.SelectTab("angebotErstellenNKTab");
         }
 
         private void ShowBKundeButton(object sender, EventArgs e)
         {
                 angebotErstellenBKundeButton.Show();
                 angebotErstellenNKundeButton.Hide();
-                angebotErstellenSubTab.SelectTab("angebotErstellenNKTab");
+                angebotErstellenSubTab.SelectTab("angebotErstellenBKTab");
         }
         
 

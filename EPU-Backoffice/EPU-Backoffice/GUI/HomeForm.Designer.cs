@@ -1195,7 +1195,6 @@
             this.angebotErstellenNKundeButton.TabIndex = 12;
             this.angebotErstellenNKundeButton.Text = "Neuer Kunde";
             this.angebotErstellenNKundeButton.UseVisualStyleBackColor = true;
-            this.angebotErstellenNKundeButton.Visible = false;
             this.angebotErstellenNKundeButton.Click += new System.EventHandler(this.ShowBKundeButton);
             // 
             // angebotCreateButton
@@ -1238,6 +1237,7 @@
             this.angebotErstellenBKundeButton.TabIndex = 11;
             this.angebotErstellenBKundeButton.Text = "Bestehender Kunde";
             this.angebotErstellenBKundeButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenBKundeButton.Visible = false;
             this.angebotErstellenBKundeButton.Click += new System.EventHandler(this.ShowNKundeButton);
             // 
             // umsetzungswahrscheinlichkeitLabel
