@@ -230,3 +230,21 @@
 07.04.2012 - 18:28 Info: Using SQLite database.
 07.04.2012 - 18:28 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 07.04.2012 - 18:28 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:34 Info: -----------------------------------------------------------
+07.04.2012 - 18:34 Info: Program is started.
+07.04.2012 - 18:34 Info: Using SQLite database.
+07.04.2012 - 18:34 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:34 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:34 Info: -----------------------------------------------------------
+07.04.2012 - 18:34 Info: Program is started.
+07.04.2012 - 18:34 Info: Using SQLite database.
+07.04.2012 - 18:34 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:34 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 18:34 Info: User requested to delete Kunde with ID 32
+07.04.2012 - 18:34 Info: Kunde has been dropped from the SQLite database. ID: 32
+07.04.2012 - 18:34 Info: Kunde has been updated in the SQLite database: ID: 33 Neuer Kunde
+07.04.2012 - 18:34 Info: A new Kunde has been saved to the database: 45 hans sachs
+07.04.2012 - 18:34 Info: User requested to delete Kunde with ID 25
+07.04.2012 - 18:34 Info: Kunde has been dropped from the SQLite database. ID: 25
+07.04.2012 - 18:35 Info: Start creating new Angebot...
+07.04.2012 - 18:35 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.

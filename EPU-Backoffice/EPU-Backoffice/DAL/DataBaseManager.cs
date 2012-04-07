@@ -300,7 +300,7 @@ namespace EPUBackoffice.Dal
         /// <param name="id">The ID - used for binding</param>
         /// <param name="param1">Optional string parameter 1</param>
         /// <param name="param2">Optional string parameter 2</param>
-        private void SendStatementToDatabase(string sql, int id, string param1 = null, string param2 = null)
+        private void SendStatementToDatabase(string sql, int id, params string[] parameter)
         {
             SQLiteConnection con = null;
             SQLiteTransaction tra = null;
@@ -315,20 +315,12 @@ namespace EPUBackoffice.Dal
                 tra = con.BeginTransaction();
                 cmd = new SQLiteCommand(sql, con);
 
-                // Set optional parameter 1
-                if (param1 != null)
+                // set optional string parameters
+                foreach (string p in parameter)
                 {
-                    SQLiteParameter p_1 = new SQLiteParameter();
-                    p_1.Value = param1;
-                    cmd.Parameters.Add(p_1);
-                }
-
-                // Set optional parameter 2
-                if (param2 != null)
-                {
-                    SQLiteParameter p_2 = new SQLiteParameter();
-                    p_2.Value = param2;
-                    cmd.Parameters.Add(p_2);
+                    SQLiteParameter param = new SQLiteParameter();
+                    param.Value = p;
+                    cmd.Parameters.Add(param);
                 }
 
                 // initialise and bind ID - at the end of the string, mostly in WHERE needed!

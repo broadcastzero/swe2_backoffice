@@ -527,7 +527,7 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.String[])">
             <summary>
             Gets an sql statement and an ID and commits statement
             </summary>
