@@ -36,7 +36,7 @@ namespace EPUBackoffice.BL
                 this.logger.Log(2, "Field 'Vorname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphen(lastname) == false || RuleManager.CheckStringLength150(lastname) == false)
+            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.CheckStringLength150(lastname) == false)
             {
                 this.logger.Log(2, "Field 'Nachname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");

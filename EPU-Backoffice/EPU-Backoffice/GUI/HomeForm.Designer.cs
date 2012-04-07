@@ -142,7 +142,7 @@
             this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
-            this.existingKundeComboBox = new System.Windows.Forms.ComboBox();
+            this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.angebotSuchenTab = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -1346,7 +1346,7 @@
             // 
             this.angebotErstellenBKTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenBKTab.Controls.Add(this.label32);
-            this.angebotErstellenBKTab.Controls.Add(this.existingKundeComboBox);
+            this.angebotErstellenBKTab.Controls.Add(this.createAngebotExistingKundeComboBox);
             this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
             this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1363,14 +1363,14 @@
             this.label32.TabIndex = 9;
             this.label32.Text = "Kunde *";
             // 
-            // existingKundeComboBox
+            // createAngebotExistingKundeComboBox
             // 
-            this.existingKundeComboBox.FormattingEnabled = true;
-            this.existingKundeComboBox.Location = new System.Drawing.Point(6, 6);
-            this.existingKundeComboBox.Name = "existingKundeComboBox";
-            this.existingKundeComboBox.Size = new System.Drawing.Size(200, 21);
-            this.existingKundeComboBox.TabIndex = 8;
-            this.existingKundeComboBox.Click += new System.EventHandler(this.BindFromExistingKunden);
+            this.createAngebotExistingKundeComboBox.FormattingEnabled = true;
+            this.createAngebotExistingKundeComboBox.Location = new System.Drawing.Point(6, 6);
+            this.createAngebotExistingKundeComboBox.Name = "createAngebotExistingKundeComboBox";
+            this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(200, 21);
+            this.createAngebotExistingKundeComboBox.TabIndex = 8;
+            this.createAngebotExistingKundeComboBox.DropDown += new System.EventHandler(this.BindFromExistingKunden);
             // 
             // angebotSuchenTab
             // 
@@ -2003,7 +2003,7 @@
         private System.Windows.Forms.TextBox createAngebotNewKundeVnTextBox;
         private System.Windows.Forms.TabPage angebotErstellenBKTab;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox existingKundeComboBox;
+        private System.Windows.Forms.ComboBox createAngebotExistingKundeComboBox;
         private System.Windows.Forms.TabPage angebotSuchenTab;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;

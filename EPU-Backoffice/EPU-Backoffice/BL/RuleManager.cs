@@ -38,9 +38,9 @@ namespace EPUBackoffice.BL
         /// </summary>
         /// <param name="input">The string that shall be checked</param>
         /// <returns>True, if string is valid</returns>
-        public static bool ValidateLettersNumbersHyphen(string input)
+        public static bool ValidateLettersNumbersHyphenSpace(string input)
         {
-            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9-]+$") || input.Length > 150)
+            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9- ]+$") || input.Length > 150)
             {
                 return false;
             }

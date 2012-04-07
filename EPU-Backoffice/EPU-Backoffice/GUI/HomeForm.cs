@@ -354,24 +354,28 @@ namespace EPUBackoffice.Gui
         }
 
         /// <summary>
-        /// Gets all existing Kunden from the Database and adds them to the existingKundenKomboBox
+        /// Gets all existing Kunden from the Database and adds them to the existingKundenComboBox
         /// </summary>
         /// <param name="sender">The sender</param>
         /// <param name="e">The event args</param>
         private void BindFromExistingKunden(object sender, EventArgs e)
         {
+            List<KundeKontaktTable> results;
+            List<string> listItems = new List<string>();
             KundenKontakteLoader loader = new KundenKontakteLoader();
 
-            // Kunde (false), Kontakt (true) => we are only interested in Kunden, for only Kunden can receive an Angebot
-            List<KundeKontaktTable> results = loader.LoadKundenKontakte(false);
+            results = loader.LoadKundenKontakte(false); // only get Kunden
 
-            if (results.Count != 0)
-            { 
-                foreach(KundeKontaktTable k in results)
+            if(results.Count != 0)
+            {
+                foreach (KundeKontaktTable k in results)
                 {
-                    Debug.WriteLine(k.ID);
+                    string entry = k.ID + ": " + k.Vorname + " " + k.NachnameFirmenname;
+                    listItems.Add(entry);
                 }
             }
+            
+            this.createAngebotExistingKundeComboBox.DataSource = listItems;
         }
 
         /// <summary>

@@ -176,7 +176,7 @@
         </member>
         <member name="M:EPUBackoffice.Gui.HomeForm.BindFromExistingKunden(System.Object,System.EventArgs)">
             <summary>
-            Gets all existing Kunden from the Database and adds them to the existingKundenKomboBox
+            Gets all existing Kunden from the Database and adds them to the existingKundenComboBox
             </summary>
             <param name="sender">The sender</param>
             <param name="e">The event args</param>
@@ -580,7 +580,7 @@
             <param name="input">The string that shall be checked</param>
             <returns>True, if string valid</returns>
         </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphen(System.String)">
+        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphenSpace(System.String)">
             <summary>
             Checks if input string contains only letters, numbers and hyphens
             </summary>

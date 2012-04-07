@@ -37,7 +37,7 @@ namespace EPUBackoffice.BL
                 this.logger.Log(2, "User tried to search for invalid first name in Kontakte!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphen(lastname) == false))
+            else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
             {
                 this.logger.Log(2, "User tried to search for invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
