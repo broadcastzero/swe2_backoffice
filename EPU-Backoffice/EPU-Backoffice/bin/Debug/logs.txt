@@ -489,3 +489,60 @@
 07.04.2012 - 07:33 Info: Using SQLite database.
 07.04.2012 - 07:33 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 07.04.2012 - 07:33 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 07:59 Info: -----------------------------------------------------------
+07.04.2012 - 07:59 Info: Program is started.
+07.04.2012 - 07:59 Info: Using SQLite database.
+07.04.2012 - 07:59 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 07:59 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:00 Info: -----------------------------------------------------------
+07.04.2012 - 08:00 Info: Program is started.
+07.04.2012 - 08:00 Info: Using SQLite database.
+07.04.2012 - 08:00 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:00 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:02 Info: -----------------------------------------------------------
+07.04.2012 - 08:02 Info: Program is started.
+07.04.2012 - 08:02 Info: Using SQLite database.
+07.04.2012 - 08:02 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:02 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:02 Error: User tried to search for invalid last name!
+07.04.2012 - 08:02 Error: User tried to search for invalid first name in Kontakte!
+07.04.2012 - 08:04 Info: -----------------------------------------------------------
+07.04.2012 - 08:04 Info: Program is started.
+07.04.2012 - 08:04 Info: Using SQLite database.
+07.04.2012 - 08:04 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:04 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:04 Error: User tried to search for invalid first name in Kontakte!
+07.04.2012 - 08:04 Error: User tried to search for invalid last name!
+07.04.2012 - 08:04 Error: User tried to search for invalid first name in Kontakte!
+07.04.2012 - 08:08 Info: -----------------------------------------------------------
+07.04.2012 - 08:08 Info: Program is started.
+07.04.2012 - 08:08 Info: Using SQLite database.
+07.04.2012 - 08:08 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:08 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:08 Error: User tried to search for invalid last name!
+07.04.2012 - 08:08 Info: Kontakt has been updated in the SQLite database: ID: 7 tilo Tilo
+07.04.2012 - 08:09 Info: Kunde has been updated in the SQLite database: ID: 25 Felix wagner
+07.04.2012 - 08:09 Info: User requested to delete Kontakt with ID 6
+07.04.2012 - 08:09 Info: Kontakt has been dropped from the SQLite database. ID: 6
+07.04.2012 - 08:10 Info: Kontakt has been updated in the SQLite database: ID: 5 test Test
+07.04.2012 - 08:10 Info: -----------------------------------------------------------
+07.04.2012 - 08:10 Info: Program is started.
+07.04.2012 - 08:10 Info: Using SQLite database.
+07.04.2012 - 08:10 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:10 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:11 Info: Kontakt has been updated in the SQLite database: ID: 7 tilo wagner
+07.04.2012 - 08:11 Info: -----------------------------------------------------------
+07.04.2012 - 08:11 Info: Program is started.
+07.04.2012 - 08:11 Info: Using SQLite database.
+07.04.2012 - 08:11 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:11 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:12 Info: -----------------------------------------------------------
+07.04.2012 - 08:12 Info: Program is started.
+07.04.2012 - 08:12 Info: Using mock database.
+07.04.2012 - 08:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:12 Error: Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!
+07.04.2012 - 08:12 Info: Starts getting Kunden out of database...
+07.04.2012 - 08:12 Info: A new Kunde has been saved in the mockDB.
+07.04.2012 - 08:12 Info: A new Kunde has been saved in the mockDB.
+07.04.2012 - 08:12 Info: Starts getting Kunden out of database...

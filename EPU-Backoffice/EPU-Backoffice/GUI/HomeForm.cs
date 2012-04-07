@@ -353,5 +353,26 @@ namespace EPUBackoffice.Gui
 
             this.SearchKundenOrKontakte(null, null);
         }
+
+        /// <summary>
+        /// Gets all existing Kunden from the Database and adds them to the existingKundenKomboBox
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
+        private void BindFromExistingKunden(object sender, EventArgs e)
+        {
+            KundenKontakteLoader loader = new KundenKontakteLoader();
+
+            // Kunde (false), Kontakt (true) => we are only interested in Kunden, for only Kunden can receive an Angebot
+            List<KundeKontaktTable> results = loader.LoadKundenKontakte(false);
+
+            if (results.Count != 0)
+            { 
+                foreach(KundeKontaktTable k in results)
+                {
+                    Debug.WriteLine(k.ID);
+                }
+            }
+        }
     }
 }

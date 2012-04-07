@@ -127,7 +127,6 @@
             this.angebotErstellenBKundeButton = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -137,9 +136,10 @@
             this.label20 = new System.Windows.Forms.Label();
             this.angebotErstellenNKNPNachnameTextbox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKNPVornametextbox = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.existingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.angebotSuchenTab = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -187,6 +187,7 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
+            this.angebotCreateButton = new System.Windows.Forms.Button();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -1169,6 +1170,7 @@
             // angebotErstellenTab
             // 
             this.angebotErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.angebotErstellenTab.Controls.Add(this.angebotCreateButton);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
             this.angebotErstellenTab.Controls.Add(this.label35);
@@ -1222,15 +1224,6 @@
             this.label34.Size = new System.Drawing.Size(91, 13);
             this.label34.TabIndex = 7;
             this.label34.Text = "Angebot gültig bis";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(206, 35);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(85, 13);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "Angebotssumme";
             // 
             // dateTimePicker6
             // 
@@ -1310,11 +1303,20 @@
             this.angebotErstellenNKNPVornametextbox.Size = new System.Drawing.Size(200, 20);
             this.angebotErstellenNKNPVornametextbox.TabIndex = 0;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(206, 35);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(85, 13);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Angebotssumme";
+            // 
             // angebotErstellenBKTab
             // 
             this.angebotErstellenBKTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenBKTab.Controls.Add(this.label32);
-            this.angebotErstellenBKTab.Controls.Add(this.comboBox5);
+            this.angebotErstellenBKTab.Controls.Add(this.existingKundeComboBox);
             this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
             this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1331,13 +1333,14 @@
             this.label32.TabIndex = 9;
             this.label32.Text = "Kunde";
             // 
-            // comboBox5
+            // existingKundeComboBox
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 6);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(200, 21);
-            this.comboBox5.TabIndex = 8;
+            this.existingKundeComboBox.FormattingEnabled = true;
+            this.existingKundeComboBox.Location = new System.Drawing.Point(6, 6);
+            this.existingKundeComboBox.Name = "existingKundeComboBox";
+            this.existingKundeComboBox.Size = new System.Drawing.Size(200, 21);
+            this.existingKundeComboBox.TabIndex = 8;
+            this.existingKundeComboBox.Click += new System.EventHandler(this.BindFromExistingKunden);
             // 
             // angebotSuchenTab
             // 
@@ -1790,6 +1793,15 @@
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // angebotCreateButton
+            // 
+            this.angebotCreateButton.Location = new System.Drawing.Point(164, 160);
+            this.angebotCreateButton.Name = "angebotCreateButton";
+            this.angebotCreateButton.Size = new System.Drawing.Size(113, 23);
+            this.angebotCreateButton.TabIndex = 13;
+            this.angebotCreateButton.Text = "Angebot erstellen";
+            this.angebotCreateButton.UseVisualStyleBackColor = true;
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1970,7 +1982,7 @@
         private System.Windows.Forms.TextBox angebotErstellenNKNPVornametextbox;
         private System.Windows.Forms.TabPage angebotErstellenBKTab;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox existingKundeComboBox;
         private System.Windows.Forms.TabPage angebotSuchenTab;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -2022,6 +2034,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button deleteKundeButton;
         private System.Windows.Forms.Label searchKundeSuccessLabel;
+        private System.Windows.Forms.Button angebotCreateButton;
 
 
 
