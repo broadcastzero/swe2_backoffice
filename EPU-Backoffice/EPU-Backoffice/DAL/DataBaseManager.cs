@@ -316,7 +316,7 @@ namespace EPUBackoffice.Dal
                 if (param2 != null)
                 {
                     SQLiteParameter p_2 = new SQLiteParameter();
-                    p_2.Value = param1;
+                    p_2.Value = param2;
                     cmd.Parameters.Add(p_2);
                 }
 

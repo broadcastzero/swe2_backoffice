@@ -546,3 +546,19 @@
 07.04.2012 - 08:12 Info: A new Kunde has been saved in the mockDB.
 07.04.2012 - 08:12 Info: A new Kunde has been saved in the mockDB.
 07.04.2012 - 08:12 Info: Starts getting Kunden out of database...
+07.04.2012 - 08:15 Info: -----------------------------------------------------------
+07.04.2012 - 08:15 Info: Program is started.
+07.04.2012 - 08:15 Info: Using SQLite database.
+07.04.2012 - 08:15 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:15 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:16 Info: -----------------------------------------------------------
+07.04.2012 - 08:16 Info: Program is started.
+07.04.2012 - 08:16 Info: Using SQLite database.
+07.04.2012 - 08:16 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:16 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:17 Info: -----------------------------------------------------------
+07.04.2012 - 08:17 Info: Program is started.
+07.04.2012 - 08:17 Info: Using SQLite database.
+07.04.2012 - 08:17 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:17 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+07.04.2012 - 08:17 Info: Kontakt has been updated in the SQLite database: ID: 7 tilo test
