@@ -124,19 +124,20 @@
             this.angebotTab = new System.Windows.Forms.TabControl();
             this.angebotErstellenTab = new System.Windows.Forms.TabPage();
             this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
+            this.angebotCreateButton = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.angebotssummeTextBox = new System.Windows.Forms.TextBox();
+            this.angebotValidUntilDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.angebotErstellenBKundeButton = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.umsetzungswahrscheinlichkeitLabel = new System.Windows.Forms.Label();
+            this.angebotValidUntilLabel = new System.Windows.Forms.Label();
+            this.umsetzungswahrscheinlichkeitTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenSubTab = new TablessControl();
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.angebotErstellenNKNPNachnameTextbox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKNPVornametextbox = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
             this.existingKundeComboBox = new System.Windows.Forms.ComboBox();
@@ -187,7 +188,6 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
-            this.angebotCreateButton = new System.Windows.Forms.Button();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -317,7 +317,7 @@
             this.mainTab.Controls.Add(this.reportTab);
             this.mainTab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.mainTab.ItemSize = new System.Drawing.Size(5, 15);
-            this.mainTab.Location = new System.Drawing.Point(144, -1);
+            this.mainTab.Location = new System.Drawing.Point(145, -1);
             this.mainTab.Multiline = true;
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
@@ -1170,14 +1170,15 @@
             // angebotErstellenTab
             // 
             this.angebotErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.angebotErstellenTab.Controls.Add(this.angebotCreateButton);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
+            this.angebotErstellenTab.Controls.Add(this.angebotCreateButton);
+            this.angebotErstellenTab.Controls.Add(this.label33);
+            this.angebotErstellenTab.Controls.Add(this.angebotssummeTextBox);
+            this.angebotErstellenTab.Controls.Add(this.angebotValidUntilDateTimePicker);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
-            this.angebotErstellenTab.Controls.Add(this.label35);
-            this.angebotErstellenTab.Controls.Add(this.label34);
-            this.angebotErstellenTab.Controls.Add(this.dateTimePicker6);
-            this.angebotErstellenTab.Controls.Add(this.textBox11);
-            this.angebotErstellenTab.Controls.Add(this.textBox10);
+            this.angebotErstellenTab.Controls.Add(this.umsetzungswahrscheinlichkeitLabel);
+            this.angebotErstellenTab.Controls.Add(this.angebotValidUntilLabel);
+            this.angebotErstellenTab.Controls.Add(this.umsetzungswahrscheinlichkeitTextBox);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenSubTab);
             this.angebotErstellenTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenTab.Name = "angebotErstellenTab";
@@ -1197,6 +1198,38 @@
             this.angebotErstellenNKundeButton.Visible = false;
             this.angebotErstellenNKundeButton.Click += new System.EventHandler(this.ShowBKundeButton);
             // 
+            // angebotCreateButton
+            // 
+            this.angebotCreateButton.Location = new System.Drawing.Point(164, 190);
+            this.angebotCreateButton.Name = "angebotCreateButton";
+            this.angebotCreateButton.Size = new System.Drawing.Size(113, 23);
+            this.angebotCreateButton.TabIndex = 13;
+            this.angebotCreateButton.Text = "Angebot erstellen";
+            this.angebotCreateButton.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(373, 105);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(85, 13);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Angebotssumme";
+            // 
+            // angebotssummeTextBox
+            // 
+            this.angebotssummeTextBox.Location = new System.Drawing.Point(166, 102);
+            this.angebotssummeTextBox.Name = "angebotssummeTextBox";
+            this.angebotssummeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.angebotssummeTextBox.TabIndex = 3;
+            // 
+            // angebotValidUntilDateTimePicker
+            // 
+            this.angebotValidUntilDateTimePicker.Location = new System.Drawing.Point(164, 154);
+            this.angebotValidUntilDateTimePicker.Name = "angebotValidUntilDateTimePicker";
+            this.angebotValidUntilDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.angebotValidUntilDateTimePicker.TabIndex = 5;
+            // 
             // angebotErstellenBKundeButton
             // 
             this.angebotErstellenBKundeButton.Location = new System.Drawing.Point(23, 30);
@@ -1207,44 +1240,30 @@
             this.angebotErstellenBKundeButton.UseVisualStyleBackColor = true;
             this.angebotErstellenBKundeButton.Click += new System.EventHandler(this.ShowNKundeButton);
             // 
-            // label35
+            // umsetzungswahrscheinlichkeitLabel
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(370, 137);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(152, 13);
-            this.label35.TabIndex = 8;
-            this.label35.Text = "Umsetzungswahrscheinlichkeit";
+            this.umsetzungswahrscheinlichkeitLabel.AutoSize = true;
+            this.umsetzungswahrscheinlichkeitLabel.Location = new System.Drawing.Point(373, 132);
+            this.umsetzungswahrscheinlichkeitLabel.Name = "umsetzungswahrscheinlichkeitLabel";
+            this.umsetzungswahrscheinlichkeitLabel.Size = new System.Drawing.Size(152, 13);
+            this.umsetzungswahrscheinlichkeitLabel.TabIndex = 8;
+            this.umsetzungswahrscheinlichkeitLabel.Text = "Umsetzungswahrscheinlichkeit";
             // 
-            // label34
+            // angebotValidUntilLabel
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(370, 113);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(91, 13);
-            this.label34.TabIndex = 7;
-            this.label34.Text = "Angebot gültig bis";
+            this.angebotValidUntilLabel.AutoSize = true;
+            this.angebotValidUntilLabel.Location = new System.Drawing.Point(373, 160);
+            this.angebotValidUntilLabel.Name = "angebotValidUntilLabel";
+            this.angebotValidUntilLabel.Size = new System.Drawing.Size(91, 13);
+            this.angebotValidUntilLabel.TabIndex = 7;
+            this.angebotValidUntilLabel.Text = "Angebot gültig bis";
             // 
-            // dateTimePicker6
+            // umsetzungswahrscheinlichkeitTextBox
             // 
-            this.dateTimePicker6.Location = new System.Drawing.Point(164, 108);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker6.TabIndex = 5;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(164, 134);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(200, 20);
-            this.textBox11.TabIndex = 4;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(164, 82);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(200, 20);
-            this.textBox10.TabIndex = 3;
+            this.umsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 128);
+            this.umsetzungswahrscheinlichkeitTextBox.Name = "umsetzungswahrscheinlichkeitTextBox";
+            this.umsetzungswahrscheinlichkeitTextBox.Size = new System.Drawing.Size(200, 20);
+            this.umsetzungswahrscheinlichkeitTextBox.TabIndex = 4;
             // 
             // angebotErstellenSubTab
             // 
@@ -1253,7 +1272,7 @@
             this.angebotErstellenSubTab.Location = new System.Drawing.Point(160, 24);
             this.angebotErstellenSubTab.Name = "angebotErstellenSubTab";
             this.angebotErstellenSubTab.SelectedIndex = 0;
-            this.angebotErstellenSubTab.Size = new System.Drawing.Size(458, 78);
+            this.angebotErstellenSubTab.Size = new System.Drawing.Size(458, 73);
             this.angebotErstellenSubTab.TabIndex = 0;
             // 
             // angebotErstellenNKTab
@@ -1263,18 +1282,17 @@
             this.angebotErstellenNKTab.Controls.Add(this.label20);
             this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPNachnameTextbox);
             this.angebotErstellenNKTab.Controls.Add(this.angebotErstellenNKNPVornametextbox);
-            this.angebotErstellenNKTab.Controls.Add(this.label33);
             this.angebotErstellenNKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenNKTab.Name = "angebotErstellenNKTab";
             this.angebotErstellenNKTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenNKTab.Size = new System.Drawing.Size(450, 52);
+            this.angebotErstellenNKTab.Size = new System.Drawing.Size(450, 47);
             this.angebotErstellenNKTab.TabIndex = 0;
             this.angebotErstellenNKTab.Text = "NK";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(212, 35);
+            this.label22.Location = new System.Drawing.Point(213, 36);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(102, 13);
             this.label22.TabIndex = 4;
@@ -1283,7 +1301,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(212, 9);
+            this.label20.Location = new System.Drawing.Point(213, 9);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 3;
@@ -1303,15 +1321,6 @@
             this.angebotErstellenNKNPVornametextbox.Size = new System.Drawing.Size(200, 20);
             this.angebotErstellenNKNPVornametextbox.TabIndex = 0;
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(206, 35);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(85, 13);
-            this.label33.TabIndex = 6;
-            this.label33.Text = "Angebotssumme";
-            // 
             // angebotErstellenBKTab
             // 
             this.angebotErstellenBKTab.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1320,7 +1329,7 @@
             this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
             this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
             this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenBKTab.Size = new System.Drawing.Size(450, 52);
+            this.angebotErstellenBKTab.Size = new System.Drawing.Size(450, 47);
             this.angebotErstellenBKTab.TabIndex = 3;
             this.angebotErstellenBKTab.Text = "BK";
             // 
@@ -1793,15 +1802,6 @@
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // angebotCreateButton
-            // 
-            this.angebotCreateButton.Location = new System.Drawing.Point(164, 160);
-            this.angebotCreateButton.Name = "angebotCreateButton";
-            this.angebotCreateButton.Size = new System.Drawing.Size(113, 23);
-            this.angebotCreateButton.TabIndex = 13;
-            this.angebotCreateButton.Text = "Angebot erstellen";
-            this.angebotCreateButton.UseVisualStyleBackColor = true;
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1969,12 +1969,12 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabControl angebotTab;
         private System.Windows.Forms.TabPage angebotErstellenTab;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label umsetzungswahrscheinlichkeitLabel;
+        private System.Windows.Forms.Label angebotValidUntilLabel;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.DateTimePicker angebotValidUntilDateTimePicker;
+        private System.Windows.Forms.TextBox umsetzungswahrscheinlichkeitTextBox;
+        private System.Windows.Forms.TextBox angebotssummeTextBox;
         private System.Windows.Forms.TabPage angebotErstellenNKTab;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;

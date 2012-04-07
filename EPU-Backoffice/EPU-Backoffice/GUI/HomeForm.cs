@@ -45,7 +45,6 @@ namespace EPUBackoffice.Gui
         {
             mainTab.SelectTab("kundenKontakteTab");
             this.HideKundeNeuMessages();
-
         }
 
         private void SelectRechnungsverwaltungTab(object sender, EventArgs e)
