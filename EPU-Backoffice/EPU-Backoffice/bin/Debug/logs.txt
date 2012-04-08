@@ -347,3 +347,81 @@
 08.04.2012 - 13:02 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 08.04.2012 - 13:02 Info: Start creating new Angebot...
 08.04.2012 - 13:02 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:17 Info: -----------------------------------------------------------
+08.04.2012 - 17:17 Info: Program is started.
+08.04.2012 - 17:17 Info: Using mock database.
+08.04.2012 - 17:17 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:17 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:18 Info: Start creating new Angebot...
+08.04.2012 - 17:18 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:18 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:18 Info: Start creating new Angebot...
+08.04.2012 - 17:18 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:18 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:18 Info: Starts getting Kunden out of database...
+08.04.2012 - 17:19 Info: -----------------------------------------------------------
+08.04.2012 - 17:19 Info: Program is started.
+08.04.2012 - 17:19 Info: Using mock database.
+08.04.2012 - 17:19 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:19 Info: Start creating new Angebot...
+08.04.2012 - 17:19 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:19 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:20 Info: -----------------------------------------------------------
+08.04.2012 - 17:20 Info: Program is started.
+08.04.2012 - 17:20 Info: Using mock database.
+08.04.2012 - 17:20 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:20 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:20 Info: Start creating new Angebot...
+08.04.2012 - 17:20 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:20 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:23 Info: -----------------------------------------------------------
+08.04.2012 - 17:23 Info: Program is started.
+08.04.2012 - 17:23 Info: Using mock database.
+08.04.2012 - 17:23 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:23 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:23 Info: Start creating new Angebot...
+08.04.2012 - 17:23 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:23 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:23 Info: Start creating new Angebot...
+08.04.2012 - 17:23 Error: User tried to create an Angebot with an invalid Angebotssumme: adsf
+08.04.2012 - 17:24 Info: -----------------------------------------------------------
+08.04.2012 - 17:24 Info: Program is started.
+08.04.2012 - 17:24 Info: Using mock database.
+08.04.2012 - 17:24 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:24 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:24 Info: Start creating new Angebot...
+08.04.2012 - 17:24 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:24 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:24 Info: Start creating new Angebot...
+08.04.2012 - 17:24 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+08.04.2012 - 17:24 Info: Start creating new Angebot...
+08.04.2012 - 17:24 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+08.04.2012 - 17:24 Info: Start creating new Angebot...
+08.04.2012 - 17:24 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+08.04.2012 - 17:25 Info: -----------------------------------------------------------
+08.04.2012 - 17:25 Info: Program is started.
+08.04.2012 - 17:25 Info: Using mock database.
+08.04.2012 - 17:25 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:25 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:26 Info: A new Kunde has been saved in the mockDB.
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Error: User tried to create an Angebot with invalid lastname of the newly to be created Kunde.
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Error: User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: 24**
+08.04.2012 - 17:26 Info: -----------------------------------------------------------
+08.04.2012 - 17:26 Info: Program is started.
+08.04.2012 - 17:26 Info: Using mock database.
+08.04.2012 - 17:26 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:26 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Error: User tried to create an Angebot with an invalid Angebotssumme: 
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Error: User tried to create an Angebot with an invalid Angebotssumme: adsf
+08.04.2012 - 17:26 Info: Start creating new Angebot...
+08.04.2012 - 17:26 Info: Es wird kein Vorname eingetragen.
+08.04.2012 - 17:26 Info: A new Kunde has been saved in the mockDB.

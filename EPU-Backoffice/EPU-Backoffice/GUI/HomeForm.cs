@@ -437,7 +437,10 @@ namespace EPUBackoffice.Gui
             }
 
             // show success message
-            this.createAngebotSuccessLabel.Show();
+            if (!createAngebotErrorLabel.Visible)
+            {
+                this.createAngebotSuccessLabel.Show();
+            }
         }
 
         /// <summary>
