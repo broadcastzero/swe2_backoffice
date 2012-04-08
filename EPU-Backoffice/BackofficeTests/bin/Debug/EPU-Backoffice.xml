@@ -210,6 +210,13 @@
             <param name="sender">The sender</param>
             <param name="e">The params</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.BindFromExistingAngebote(System.Object,System.EventArgs)">
+            <summary>
+            Get existing Angebote and bind the result to the calling ComboBox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="F:EPUBackoffice.Gui.HomeForm.components">
             <summary>
             Required designer variable.

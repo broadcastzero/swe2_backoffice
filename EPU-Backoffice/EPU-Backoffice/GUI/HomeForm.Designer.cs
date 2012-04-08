@@ -1576,11 +1576,13 @@
             // 
             // projektErstellenCombobox
             // 
+            this.projektErstellenCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.projektErstellenCombobox.FormattingEnabled = true;
             this.projektErstellenCombobox.Location = new System.Drawing.Point(16, 41);
             this.projektErstellenCombobox.Name = "projektErstellenCombobox";
             this.projektErstellenCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektErstellenCombobox.TabIndex = 6;
+            this.projektErstellenCombobox.DropDown += new System.EventHandler(this.BindFromExistingAngebote);
             // 
             // projektNeuResetButton
             // 

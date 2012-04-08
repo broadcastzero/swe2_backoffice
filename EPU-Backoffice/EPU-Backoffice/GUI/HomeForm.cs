@@ -436,7 +436,7 @@ namespace EPUBackoffice.Gui
                 this.createAngebotErrorLabel.Show();
             }
 
-            // show success message
+            // show success message, if no error has been thrown
             if (!createAngebotErrorLabel.Visible)
             {
                 this.createAngebotSuccessLabel.Show();
@@ -483,6 +483,32 @@ namespace EPUBackoffice.Gui
             // TODO: catch InvalidInputException & maybe SQLite-exception
 
             this.AngeboteSuchenDataGridView.DataSource = results;
+        }
+
+        /// <summary>
+        /// Get existing Angebote and bind the result to the calling ComboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BindFromExistingAngebote(object sender, EventArgs e)
+        {
+            AngebotManager loader = new AngebotManager();
+            DateTime from = new DateTime(2012, 1, 1);
+            DateTime until = new DateTime(2100, 1, 1);
+
+            List<AngebotTable> results = loader.Load(null, null, from, until);
+
+            // Create result strings which shall be displayed in ComboBox
+            List<string> resultStrings = new List<string>();
+            foreach(AngebotTable angebot in results)
+            {
+                resultStrings.Add(angebot.ID + ": " + angebot.Beschreibung);
+            }
+
+            if (results.Count > 0)
+            {
+                (sender as ComboBox).DataSource = resultStrings;
+            }
         }
     }
 }
