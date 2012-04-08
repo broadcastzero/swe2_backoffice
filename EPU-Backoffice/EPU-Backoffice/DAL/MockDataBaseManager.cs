@@ -25,9 +25,15 @@ namespace EPUBackoffice.Dal
         private static int kundenID = 0;
         private static int kontaktID = 0;
 
+        // Private fields for Angebot-IDs
+        private static int angebotID = 0;
+
         // Private fields for saved Kunden/Kontakte (ILists)
         private static List<KundeKontaktTable> savedKunden;
         private static List<KundeKontaktTable> savedKontakte;
+
+        // Private fields for saved Angebote (ILists)
+        private static List<AngebotTable> savedAngebote;
 
         /// <summary>
         /// A continuing, unique ID for the table "Kunden"
@@ -40,6 +46,11 @@ namespace EPUBackoffice.Dal
         public static int KontaktID { get { return kontaktID++; } }
 
         /// <summary>
+        /// A continuing, unique ID for the table "Angebote"
+        /// </summary>
+        public static int AngebotID { get { return angebotID++; } }
+
+        /// <summary>
         /// Static list in which created Kunden are stored
         /// </summary>
         public static List<KundeKontaktTable> SavedKunden { get { return savedKunden; } }
@@ -48,6 +59,11 @@ namespace EPUBackoffice.Dal
         /// Static list in which created Kontakt are stored
         /// </summary>
         public static List<KundeKontaktTable> SavedKontakte { get { return savedKontakte; } }
+
+        /// <summary>
+        /// Static list in which created Angebot is stored
+        /// </summary>
+        public static List<AngebotTable> SavedAngebote { get { return savedAngebote; } }
 
         private static Object lockObject = new Object();
 
@@ -60,6 +76,7 @@ namespace EPUBackoffice.Dal
             {
                 MockDataBaseManager.savedKunden = new List<KundeKontaktTable>();
                 MockDataBaseManager.savedKontakte = new List<KundeKontaktTable>();
+                MockDataBaseManager.savedAngebote = new List<AngebotTable>();
             }
         }
 
@@ -236,22 +253,31 @@ namespace EPUBackoffice.Dal
         /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
         /// <param name="validUntil">Deadline date</param>
         /// <param name="description">A short description of the Angebot</param>
-        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
+        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, string validUntil, string description)
         {
-            throw new NotImplementedException();
+            AngebotTable angebot = new AngebotTable();
+            angebot.ID = MockDataBaseManager.AngebotID;
+            angebot.KundenID = kundenID;
+            angebot.Angebotssumme = angebotssumme;
+            angebot.Umsetzungschance = umsetzungswahrscheinlichkeit;
+            angebot.Angebotsdauer = validUntil;
+            angebot.Beschreibung = description;
+
+            MockDataBaseManager.savedAngebote.Add(angebot);
         }
 
         /// <summary>
         /// Receive params and load fitting existing Angebote from the mock database
         /// </summary>
-        /// <param name="firstname">The first name of the Kunde</param>
-        /// <param name="lastname">The last name of the Kunde</param>
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
+        /// <param name="firstname">The first name of the Kunde</param>
+        /// <param name="lastname">The last name of the Kunde</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        public List<AngebotTable> LoadAngebote(string firstname, string lastname, string from, string until)
+        public List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null)
         {
-            throw new NotImplementedException();
+            // TODO: Add selective logic
+            return MockDataBaseManager.SavedAngebote;
         }
     }
 }

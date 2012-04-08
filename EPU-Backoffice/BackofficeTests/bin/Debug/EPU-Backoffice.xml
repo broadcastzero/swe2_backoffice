@@ -460,7 +460,7 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
             <summary>
             Creates a new Angebot with the provided parameters
             </summary>
@@ -474,10 +474,10 @@
             <summary>
             Receive params and load fitting existing Angebote
             </summary>
-            <param name="firstname">The first name of the Kunde</param>
-            <param name="lastname">The last name of the Kunde</param>
             <param name="from">A date string which indicates the search-begin date</param>
             <param name="until">A date string which indicates the search-end date</param>
+            <param name="firstname">The first name of the Kunde</param>
+            <param name="lastname">The last name of the Kunde</param>
             <returns>A resultlist of all fitting Angebote</returns>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
@@ -533,10 +533,9 @@
             </summary>
             <param name="sql">The sql statement</param>
             <param name="id">The ID - used for binding</param>
-            <param name="param1">Optional string parameter 1</param>
-            <param name="param2">Optional string parameter 2</param>
+            <param name="parameter">A string array of provided optional paramter</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
             <summary>
             Creates a new Angebot with the provided parameters and saves it in the SQLite-DB
             </summary>
@@ -555,6 +554,22 @@
             <param name="from">A date string which indicates the search-begin date</param>
             <param name="until">A date string which indicates the search-end date</param>
             <returns>A resultlist of all fitting Angebote</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.AngebotManager">
+            <summary>
+            Contains methods to manipulate, save or load Angebote
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotManager.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.AngebotManager.Load(System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Load an existing Angebot out of the database
+            </summary>
+            <returns>The requested Angebote</returns>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.ZeitaufzeichnungTable">
             <summary>
@@ -589,11 +604,6 @@
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.ID">
             <summary>
             Unique ID for the table
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.ProjektID">
-            <summary>
-            Foreign key to table Projekt
             </summary>
         </member>
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.KundenID">
@@ -940,7 +950,7 @@
             <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.DateTime,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
             <summary>
             Creates a new Angebot with the provided parameters and saves it in the mockDB
             </summary>
@@ -954,10 +964,10 @@
             <summary>
             Receive params and load fitting existing Angebote from the mock database
             </summary>
-            <param name="firstname">The first name of the Kunde</param>
-            <param name="lastname">The last name of the Kunde</param>
             <param name="from">A date string which indicates the search-begin date</param>
             <param name="until">A date string which indicates the search-end date</param>
+            <param name="firstname">The first name of the Kunde</param>
+            <param name="lastname">The last name of the Kunde</param>
             <returns>A resultlist of all fitting Angebote</returns>
         </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
@@ -970,6 +980,11 @@
             A continuing, unique ID for the table "Kontakte"
             </summary>
         </member>
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.AngebotID">
+            <summary>
+            A continuing, unique ID for the table "Angebote"
+            </summary>
+        </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.SavedKunden">
             <summary>
             Static list in which created Kunden are stored
@@ -978,6 +993,11 @@
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.SavedKontakte">
             <summary>
             Static list in which created Kontakt are stored
+            </summary>
+        </member>
+        <member name="P:EPUBackoffice.Dal.MockDataBaseManager.SavedAngebote">
+            <summary>
+            Static list in which created Angebot is stored
             </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.DALFactory">
@@ -990,21 +1010,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
-        </member>
-        <member name="T:EPUBackoffice.BL.AngebotManager">
-            <summary>
-            Contains methods to manipulate, save or load Angebote
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.AngebotManager.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
-            <summary>
-            Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.AngebotManager.Load(System.String,System.String,System.DateTime,System.DateTime)">
-            <summary>
-            Load an existing Angebot out of the database
-            </summary>
         </member>
     </members>
 </doc>

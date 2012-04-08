@@ -37,7 +37,7 @@ namespace EPUBackoffice.Dal
             sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(150), Nachname_Firmenname VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotID INTEGER NOT NULL, Projektname VARCHAR(150) NOT NULL, Projektstart TIMESTAMP); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(150) NOT NULL); ");
-            sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer INTEGER NOT NULL, Erstellungsdatum TIMESTAMP NOT NULL, Umsetzung FLOAT NOT NULL, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL), Beschreibung VARCHAR(150) NOT NULL; ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer VARCHAR(150) NOT NULL, Erstellungsdatum TIMESTAMP NOT NULL, Umsetzung FLOAT NOT NULL, akzeptiert BOOLEAN DEFAULT 'false' NOT NULL), Beschreibung VARCHAR(150) NOT NULL; ");
             sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotsID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL,BEzeichnung Varchar(150), Stunden INTEGER NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KundenID INTEGER NOT NULL, Rechnungsdatum TIMESTAMP NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsbuchung (BuchungszeilenID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL, PRIMARY KEY (BuchungszeilenID, AusgangsrechnungsID)); ");
@@ -298,8 +298,7 @@ namespace EPUBackoffice.Dal
         /// </summary>
         /// <param name="sql">The sql statement</param>
         /// <param name="id">The ID - used for binding</param>
-        /// <param name="param1">Optional string parameter 1</param>
-        /// <param name="param2">Optional string parameter 2</param>
+        /// <param name="parameter">A string array of provided optional paramter</param>
         private void SendStatementToDatabase(string sql, int id, params string[] parameter)
         {
             SQLiteConnection con = null;
@@ -352,7 +351,7 @@ namespace EPUBackoffice.Dal
         /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
         /// <param name="validUntil">Deadline date</param>
         /// <param name="description">A short description of the Angebot</param>
-        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
+        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, string validUntil, string description)
         {
             throw new NotImplementedException();
         }
@@ -365,7 +364,7 @@ namespace EPUBackoffice.Dal
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        public List<AngebotTable> LoadAngebote(string firstname, string lastname, string from, string until)
+        public List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null)
         {
             throw new NotImplementedException();
         }

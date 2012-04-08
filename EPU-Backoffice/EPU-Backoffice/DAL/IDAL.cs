@@ -65,16 +65,16 @@ namespace EPUBackoffice.Dal
         /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
         /// <param name="validUntil">Deadline date</param>
         /// <param name="description">A short description of the Angebot</param>
-        void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, DateTime validUntil, string description);
+        void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, string validUntil, string description);
 
         /// <summary>
         /// Receive params and load fitting existing Angebote
         /// </summary>
-        /// <param name="firstname">The first name of the Kunde</param>
-        /// <param name="lastname">The last name of the Kunde</param>
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
+        /// <param name="firstname">The first name of the Kunde</param>
+        /// <param name="lastname">The last name of the Kunde</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        List<AngebotTable> LoadAngebote(string firstname, string lastname, string from, string until);
+        List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null);
     }
 }

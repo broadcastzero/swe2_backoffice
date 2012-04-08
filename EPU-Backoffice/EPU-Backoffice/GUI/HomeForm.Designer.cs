@@ -151,7 +151,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AngeboteSuchenDataGridView = new System.Windows.Forms.DataGridView();
             this.angebotSuchenDruckenButton = new System.Windows.Forms.Button();
             this.angebotSuchenButton = new System.Windows.Forms.Button();
             this.angebotSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
@@ -219,7 +219,7 @@
             this.angebotErstellenNKTab.SuspendLayout();
             this.angebotErstellenBKTab.SuspendLayout();
             this.angebotSuchenTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).BeginInit();
             this.projektTab.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.projektErstellenTab.SuspendLayout();
@@ -1418,7 +1418,7 @@
             this.angebotSuchenTab.Controls.Add(this.label23);
             this.angebotSuchenTab.Controls.Add(this.label21);
             this.angebotSuchenTab.Controls.Add(this.label36);
-            this.angebotSuchenTab.Controls.Add(this.dataGridView1);
+            this.angebotSuchenTab.Controls.Add(this.AngeboteSuchenDataGridView);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenDruckenButton);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenButton);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenBisDatepicker);
@@ -1468,13 +1468,16 @@
             this.label36.TabIndex = 8;
             this.label36.Text = "Vorname";
             // 
-            // dataGridView1
+            // AngeboteSuchenDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(346, 183);
-            this.dataGridView1.TabIndex = 7;
+            this.AngeboteSuchenDataGridView.AllowUserToAddRows = false;
+            this.AngeboteSuchenDataGridView.AllowUserToDeleteRows = false;
+            this.AngeboteSuchenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AngeboteSuchenDataGridView.Location = new System.Drawing.Point(383, 25);
+            this.AngeboteSuchenDataGridView.Name = "AngeboteSuchenDataGridView";
+            this.AngeboteSuchenDataGridView.ReadOnly = true;
+            this.AngeboteSuchenDataGridView.Size = new System.Drawing.Size(346, 183);
+            this.AngeboteSuchenDataGridView.TabIndex = 7;
             // 
             // angebotSuchenDruckenButton
             // 
@@ -1920,7 +1923,7 @@
             this.angebotErstellenBKTab.PerformLayout();
             this.angebotSuchenTab.ResumeLayout(false);
             this.angebotSuchenTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).EndInit();
             this.projektTab.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.projektErstellenTab.ResumeLayout(false);
@@ -2049,7 +2052,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView AngeboteSuchenDataGridView;
         private System.Windows.Forms.Button angebotSuchenDruckenButton;
         private System.Windows.Forms.Button angebotSuchenButton;
         private System.Windows.Forms.DateTimePicker angebotSuchenBisDatepicker;

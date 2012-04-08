@@ -446,8 +446,7 @@ namespace EPUBackoffice.Gui
         /// <param name="sender">The sender</param>
         /// <param name="e">The event args</param>
         private void ResetCreateAngebotFields(object sender, EventArgs e)
-        {
-            
+        {            
             this.createAngebotNewKundeVnTextBox.Clear();
             this.createAngebotNewKundeNnTextBox.Clear();
             this.createAngebotAngebotssummeTextBox.Clear();
@@ -476,8 +475,11 @@ namespace EPUBackoffice.Gui
         private void SearchAngebote(object sender, EventArgs e)
         {
             AngebotManager manager = new AngebotManager();
-            manager.Load(this.angebotSuchenVornameTextbox.Text, this.angebotSuchenNachnameTextbox.Text, this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
+            List<AngebotTable> results;
+            results = manager.Load(this.angebotSuchenVornameTextbox.Text, this.angebotSuchenNachnameTextbox.Text, this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
             // TODO: catch InvalidInputException & maybe SQLite-exception
+
+            this.AngeboteSuchenDataGridView.DataSource = results;
         }
     }
 }

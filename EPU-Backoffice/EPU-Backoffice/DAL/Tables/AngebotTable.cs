@@ -25,16 +25,6 @@ namespace EPUBackoffice.Dal.Tables
             set { if (value >= 0) { id = value; } } 
         }
 
-        private int projektID;
-        /// <summary>
-        /// Foreign key to table Projekt
-        /// </summary>
-        public int ProjektID
-        {
-            get { return projektID; }
-            set { if (value >= 0) { projektID = value; } }
-        }
-
         private int kundenID;
         /// <summary>
         /// Foreign key to table Kunde
@@ -51,19 +41,19 @@ namespace EPUBackoffice.Dal.Tables
         /// </summary>
         public double Angebotssumme
         {
-            get { return kundenID; }
+            get { return angebotssumme; }
             set { if (value >= 0) { angebotssumme = value; } }
         }
 
-        // in hours
-        private int angebotsdauer;
+        // in Date (format: 20.12.2012)
+        private string angebotsdauer;
         /// <summary>
         /// Dauer of an Angebot
         /// </summary>
-        public int Angebotsdauer
+        public string Angebotsdauer
         {
             get { return angebotsdauer; }
-            set { if (value >= 0) { angebotsdauer = value; } }
+            set { angebotsdauer = value; }
         }
 
         private DateTime erstellungsdatum;
@@ -76,15 +66,15 @@ namespace EPUBackoffice.Dal.Tables
             set { erstellungsdatum = value; }
         }
 
-        // between 0-1 (in %)
-        private double umsetzungschance;
+        // between 0-100 (in %)
+        private int umsetzungschance;
         /// <summary>
         /// Chance in % of Umsetzung
         /// </summary>
-        public double Umsetzungschance
+        public int Umsetzungschance
         {
             get { return umsetzungschance; }
-            set { if (value <= 1 && value >= 0) { umsetzungschance = value; } }
+            set { if (value <= 100 && value >= 0) { umsetzungschance = value; } }
         }
 
         private bool akzeptiert;

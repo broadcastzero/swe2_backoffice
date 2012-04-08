@@ -9,9 +9,11 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     using Logger;
 
@@ -89,16 +91,71 @@ namespace EPUBackoffice.BL
             }
 
             // create Angebot
-            DALFactory.GetDAL().CreateAngebot(kID, angebotssum, umsetzungswsk, validUntil, description);
+            DALFactory.GetDAL().CreateAngebot(kID, angebotssum, umsetzungswsk, validUntil.ToShortDateString(), description);
         }
 
         /// <summary>
         /// Load an existing Angebot out of the database
         /// </summary>
-        public void Load(string firstname, string lastname, DateTime from, DateTime until)
-        { 
-            // TODO: check parameter and parse dates to strings
-            DALFactory.GetDAL().LoadAngebote(firstname, lastname, from.ToShortDateString(), until.ToShortDateString());
+        /// <returns>The requested Angebote</returns>
+        public List<AngebotTable> Load(string firstname, string lastname, DateTime from, DateTime until)
+        {
+            // check parameter
+            if (firstname != null && (firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false))
+            {
+                this.logger.Log(2, "User tried to search Angebot with invalid first name!");
+                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
+            }
+            else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
+            {
+                this.logger.Log(2, "User tried to search Angebot with invalid last name!");
+                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
+            }
+            // call GetAngebote function, depending on what parameters have been provided by the GUI
+            else if ((firstname == null || firstname.Length == 0) && (lastname == null || lastname.Length == 0))
+            {
+                try
+                {
+                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString());
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
+            else if ((firstname != null && firstname.Length != 0) && (lastname == null || lastname.Length == 0))
+            {
+                try
+                {
+                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), firstname: firstname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
+            else if ((firstname == null || firstname.Length == 0) && (lastname != null && lastname.Length != 0))
+            {
+                try
+                {
+                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), lastname: lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
+            else
+            {
+                try
+                {
+                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), firstname: firstname, lastname: lastname);
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
         }
     }
 }
