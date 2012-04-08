@@ -21,7 +21,7 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Checks parameters provided by the GUI and delegates values to database which saves them.
         /// </summary>
-        public void Create()
+        public void Create(string projekttitel, string angebotID, DateTime startdate)
         {
             throw new NotImplementedException();
             // after creating the angebot, set "angenommen"-attribute in AngebotTable true!

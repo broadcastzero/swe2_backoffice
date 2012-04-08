@@ -1106,7 +1106,7 @@
             This class is responsible for checking values provided by the GUI and creating or loading a project into/from the database
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.ProjektManager.Create">
+        <member name="M:EPUBackoffice.BL.ProjektManager.Create(System.String,System.String,System.DateTime)">
             <summary>
             Checks parameters provided by the GUI and delegates values to database which saves them.
             </summary>

@@ -200,6 +200,14 @@ namespace EPUBackoffice.Gui
             this.ResetProjektNeuMessages();
 
             //TODO: add logic
+            ProjektManager creator = new ProjektManager();
+
+            // Get AngebotsID
+            string angebotstring = this.projektErstellenAngebotCombobox.SelectedValue.ToString();
+            string angebotID = angebotstring.Substring(0, angebotstring.IndexOf(':'));
+
+            // Create Projekt
+            creator.Create(this.projektNeuProjekttitelTextbox.Text, angebotID, projektNeuStartdatumDatepicker.Value);
 
             //success logging
             this.projektNeuSuccessLabel.Show();
