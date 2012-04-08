@@ -60,6 +60,7 @@
     <Compile Include="BL\KundenKontakteChanger.cs" />
     <Compile Include="BL\KundenKontakteLoader.cs" />
     <Compile Include="BL\KundenKontakteSaver.cs" />
+    <Compile Include="BL\ProjektManager.cs" />
     <Compile Include="BL\RuleManager.cs" />
     <Compile Include="Dal\DALFactory.cs" />
     <Compile Include="Dal\IDAL.cs" />

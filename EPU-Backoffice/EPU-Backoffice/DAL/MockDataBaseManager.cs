@@ -279,5 +279,29 @@ namespace EPUBackoffice.Dal
             // TODO: Add selective logic
             return MockDataBaseManager.SavedAngebote;
         }
+
+        /// <summary>
+        /// Creates a new Projekt with the provided parameters and stores it in the mock database
+        /// </summary>
+        /// <param name="projektname">The name of the Projekt</param>
+        /// <param name="angebotID">The ID of the existing Angebot</param>
+        /// <param name="startdate">The start date of the Projekt</param>
+        public void CreateProjekt(string projektname, int angebotID, string startdate)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Loads existing Projekte out of the mock database
+        /// </summary>
+        /// <param name="from">Start searching date in format DD.MM.YYYY</param>
+        /// <param name="until">End searching date in format DD.MM.YYYY</param>
+        /// <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+        /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
+        /// <returns>A resultlist of the found matching Projekte</returns>
+        public List<ProjektTable> LoadProjekte(string from, string until, int projektID = -1, int kundenID = -1)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

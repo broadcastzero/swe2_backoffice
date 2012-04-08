@@ -516,6 +516,24 @@
             <param name="lastname">The last name of the Kunde</param>
             <returns>A resultlist of all fitting Angebote</returns>
         </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateProjekt(System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new Projekt with the provided parameters and stores it in the SQLite database
+            </summary>
+            <param name="projektname">The name of the Projekt</param>
+            <param name="angebotID">The ID of the existing Angebot</param>
+            <param name="startdate">The start date of the Projekt</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.IDAL.LoadProjekte(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Loads existing Projekte out of the SQLite database
+            </summary>
+            <param name="from">Start searching date in format DD.MM.YYYY</param>
+            <param name="until">End searching date in format DD.MM.YYYY</param>
+            <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+            <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
+            <returns>A resultlist of the found matching Projekte</returns>
+        </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateDataBase">
             <summary>
             Connects to the database and creates its tables if they do not exist yet.
@@ -590,6 +608,24 @@
             <param name="from">A date string which indicates the search-begin date</param>
             <param name="until">A date string which indicates the search-end date</param>
             <returns>A resultlist of all fitting Angebote</returns>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateProjekt(System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new Projekt with the provided parameters and stores it in the SQLite database
+            </summary>
+            <param name="projektname">The name of the Projekt</param>
+            <param name="angebotID">The ID of the existing Angebot</param>
+            <param name="startdate">The start date of the Projekt</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.LoadProjekte(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Loads existing Projekte out of the SQLite database
+            </summary>
+            <param name="from">Start searching date in format DD.MM.YYYY</param>
+            <param name="until">End searching date in format DD.MM.YYYY</param>
+            <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+            <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
+            <returns>A resultlist of the found matching Projekte</returns>
         </member>
         <member name="T:EPUBackoffice.BL.AngebotManager">
             <summary>
@@ -1006,6 +1042,24 @@
             <param name="lastname">The last name of the Kunde</param>
             <returns>A resultlist of all fitting Angebote</returns>
         </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateProjekt(System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new Projekt with the provided parameters and stores it in the mock database
+            </summary>
+            <param name="projektname">The name of the Projekt</param>
+            <param name="angebotID">The ID of the existing Angebot</param>
+            <param name="startdate">The start date of the Projekt</param>
+        </member>
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.LoadProjekte(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Loads existing Projekte out of the mock database
+            </summary>
+            <param name="from">Start searching date in format DD.MM.YYYY</param>
+            <param name="until">End searching date in format DD.MM.YYYY</param>
+            <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+            <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
+            <returns>A resultlist of the found matching Projekte</returns>
+        </member>
         <member name="P:EPUBackoffice.Dal.MockDataBaseManager.KundenID">
             <summary>
             A continuing, unique ID for the table "Kunden"
@@ -1046,6 +1100,22 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.ProjektManager">
+            <summary>
+            This class is responsible for checking values provided by the GUI and creating or loading a project into/from the database
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.ProjektManager.Create">
+            <summary>
+            Checks parameters provided by the GUI and delegates values to database which saves them.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.ProjektManager.Load">
+            <summary>
+            Checks parameters provided by the GUI and loads existing Projekte according to the provided values
+            </summary>
+            <returns>A list of all fitting Projekte</returns>
         </member>
     </members>
 </doc>

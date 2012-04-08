@@ -76,5 +76,23 @@ namespace EPUBackoffice.Dal
         /// <param name="lastname">The last name of the Kunde</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
         List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null);
+
+        /// <summary>
+        /// Creates a new Projekt with the provided parameters and stores it in the SQLite database
+        /// </summary>
+        /// <param name="projektname">The name of the Projekt</param>
+        /// <param name="angebotID">The ID of the existing Angebot</param>
+        /// <param name="startdate">The start date of the Projekt</param>
+        void CreateProjekt(string projektname, int angebotID, string startdate);
+
+        /// <summary>
+        /// Loads existing Projekte out of the SQLite database
+        /// </summary>
+        /// <param name="from">Start searching date in format DD.MM.YYYY</param>
+        /// <param name="until">End searching date in format DD.MM.YYYY</param>
+        /// <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+        /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
+        /// <returns>A resultlist of the found matching Projekte</returns>
+        List<ProjektTable> LoadProjekte(string from, string until, int projektID = -1, int kundenID = -1);
     }
 }
