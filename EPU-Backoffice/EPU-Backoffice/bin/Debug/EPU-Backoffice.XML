@@ -304,6 +304,11 @@
             Unique ID for the table
             </summary>
         </member>
+        <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.AngebotID">
+            <summary>
+            Unique ID for the related Angebot
+            </summary>
+        </member>
         <member name="P:EPUBackoffice.Dal.Tables.ProjektTable.Projektname">
             <summary>
             The name of the project

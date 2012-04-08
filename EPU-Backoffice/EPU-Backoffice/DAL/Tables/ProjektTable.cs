@@ -26,6 +26,16 @@ namespace EPUBackoffice.Dal.Tables
             set { if (value >= 0) { id = value; } }
         }
 
+        private int angebotID;
+        /// <summary>
+        /// Unique ID for the related Angebot
+        /// </summary>
+        public int AngebotID
+        {
+            get { return angebotID; }
+            set { if (value >= 0) { angebotID = value; } }
+        }
+
         private string projektname;
         /// <summary>
         /// The name of the project

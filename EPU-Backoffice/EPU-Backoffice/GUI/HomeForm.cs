@@ -65,8 +65,7 @@ namespace EPUBackoffice.Gui
 
         private void SelectProjektverwaltungTab(object sender, EventArgs e)
         {
-            this.ResetNewProjectTextBlocks();
-            this.ResetProjektNeuMessages();
+            this.ResetAllWithinProjects(sender, e);
 
             mainTab.SelectTab("projektTab"); 
         }
