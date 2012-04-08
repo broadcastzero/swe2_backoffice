@@ -65,7 +65,10 @@ namespace EPUBackoffice.Gui
 
         private void SelectProjektverwaltungTab(object sender, EventArgs e)
         {
-            mainTab.SelectTab("projektTab");  
+            this.ResetNewProjectTextBlocks();
+            this.ResetProjektNeuMessages();
+
+            mainTab.SelectTab("projektTab"); 
         }
 
         private void SelectZeiterfassungTab(object sender, EventArgs e)
@@ -188,15 +191,50 @@ namespace EPUBackoffice.Gui
                 angebotErstellenSubTab.SelectTab("angebotErstellenBKTab");
         }
         
-
+        /// <summary>
+        /// Get values of GUI elements and send them to Business Layer to store them in the database.
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The EventArgs</param>
         private void SaveNewProject(object sender, EventArgs e)
         {
+            this.ResetProjektNeuMessages();
 
+            //TODO: add logic
+
+            //success logging
+            this.projektNeuSuccessLabel.Show();
+            this.ResetNewProjectTextBlocks();
         }
 
-        private void ResetNewProjectTextBlocks(object sender, EventArgs e)
+        /// <summary>
+        /// Hides error/success labels and resets input fields within Project tab
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The EventArgs</param>
+        private void ResetAllWithinProjects(object sender, EventArgs e)
         {
+            this.ResetProjektNeuMessages();
+            this.ResetNewProjectTextBlocks();
+        }
 
+        /// <summary>
+        /// Resets input fields within Project tab
+        /// </summary>
+        private void ResetNewProjectTextBlocks()
+        {
+            this.projektNeuProjekttitelTextbox.Clear();
+            this.projektErstellenAngebotCombobox.ResetText();
+            this.projektNeuStartdatumDatepicker.ResetText();
+        }
+
+        /// <summary>
+        /// Resets error/succes labels within Project tab
+        /// </summary>
+        private void ResetProjektNeuMessages()
+        {
+            this.projektNeuErrorLabel.Hide();
+            this.projektNeuSuccessLabel.Hide();
         }
 
         private void LoadHomeForm(object sender, EventArgs e)
@@ -380,8 +418,9 @@ namespace EPUBackoffice.Gui
                     listItems.Add(entry);
                 }
             }
-            
-            this.createAngebotExistingKundeComboBox.DataSource = listItems;
+
+            (sender as ComboBox).DataSource = listItems;
+            //this.createAngebotExistingKundeComboBox.DataSource = listItems;
         }
 
         /// <summary>

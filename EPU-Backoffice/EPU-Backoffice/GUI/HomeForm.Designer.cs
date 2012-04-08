@@ -161,8 +161,10 @@
             this.projektTab = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.projektErstellenTab = new System.Windows.Forms.TabPage();
+            this.projektNeuErrorLabel = new System.Windows.Forms.Label();
+            this.projektNeuSuccessLabel = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.projektErstellenCombobox = new System.Windows.Forms.ComboBox();
+            this.projektErstellenAngebotCombobox = new System.Windows.Forms.ComboBox();
             this.projektNeuResetButton = new System.Windows.Forms.Button();
             this.projektNeuSpeichernButton = new System.Windows.Forms.Button();
             this.projektNeuProjekttitelTextbox = new System.Windows.Forms.TextBox();
@@ -170,14 +172,13 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.projektSuchenTab = new System.Windows.Forms.TabPage();
+            this.label34 = new System.Windows.Forms.Label();
             this.projektSuchenPrintButton = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.projektSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.projektSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
             this.label26 = new System.Windows.Forms.Label();
-            this.projektSuchenkontaktcheckbox = new System.Windows.Forms.CheckBox();
-            this.projektSuchenKundeCheckbox = new System.Windows.Forms.CheckBox();
             this.projektSuchenKundeCombobox = new System.Windows.Forms.ComboBox();
             this.projektSuchenProjekttitelcombobox = new System.Windows.Forms.ComboBox();
             this.projektSuchenChangeButton = new System.Windows.Forms.Button();
@@ -1550,8 +1551,10 @@
             // projektErstellenTab
             // 
             this.projektErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektErstellenTab.Controls.Add(this.projektNeuErrorLabel);
+            this.projektErstellenTab.Controls.Add(this.projektNeuSuccessLabel);
             this.projektErstellenTab.Controls.Add(this.label25);
-            this.projektErstellenTab.Controls.Add(this.projektErstellenCombobox);
+            this.projektErstellenTab.Controls.Add(this.projektErstellenAngebotCombobox);
             this.projektErstellenTab.Controls.Add(this.projektNeuResetButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuSpeichernButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuProjekttitelTextbox);
@@ -1565,24 +1568,46 @@
             this.projektErstellenTab.TabIndex = 0;
             this.projektErstellenTab.Text = "Erstellen";
             // 
+            // projektNeuErrorLabel
+            // 
+            this.projektNeuErrorLabel.AutoSize = true;
+            this.projektNeuErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.projektNeuErrorLabel.Location = new System.Drawing.Point(13, 149);
+            this.projektNeuErrorLabel.Name = "projektNeuErrorLabel";
+            this.projektNeuErrorLabel.Size = new System.Drawing.Size(39, 13);
+            this.projektNeuErrorLabel.TabIndex = 15;
+            this.projektNeuErrorLabel.Text = "Fehler:";
+            this.projektNeuErrorLabel.Visible = false;
+            // 
+            // projektNeuSuccessLabel
+            // 
+            this.projektNeuSuccessLabel.AutoSize = true;
+            this.projektNeuSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.projektNeuSuccessLabel.Location = new System.Drawing.Point(13, 149);
+            this.projektNeuSuccessLabel.Name = "projektNeuSuccessLabel";
+            this.projektNeuSuccessLabel.Size = new System.Drawing.Size(110, 13);
+            this.projektNeuSuccessLabel.TabIndex = 14;
+            this.projektNeuSuccessLabel.Text = "Eingabe erfolgreich! :)";
+            this.projektNeuSuccessLabel.Visible = false;
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(222, 44);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 13);
+            this.label25.Size = new System.Drawing.Size(54, 13);
             this.label25.TabIndex = 7;
-            this.label25.Text = "Angebot";
+            this.label25.Text = "Angebot *";
             // 
-            // projektErstellenCombobox
+            // projektErstellenAngebotCombobox
             // 
-            this.projektErstellenCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.projektErstellenCombobox.FormattingEnabled = true;
-            this.projektErstellenCombobox.Location = new System.Drawing.Point(16, 41);
-            this.projektErstellenCombobox.Name = "projektErstellenCombobox";
-            this.projektErstellenCombobox.Size = new System.Drawing.Size(200, 21);
-            this.projektErstellenCombobox.TabIndex = 6;
-            this.projektErstellenCombobox.DropDown += new System.EventHandler(this.BindFromExistingAngebote);
+            this.projektErstellenAngebotCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.projektErstellenAngebotCombobox.FormattingEnabled = true;
+            this.projektErstellenAngebotCombobox.Location = new System.Drawing.Point(16, 41);
+            this.projektErstellenAngebotCombobox.Name = "projektErstellenAngebotCombobox";
+            this.projektErstellenAngebotCombobox.Size = new System.Drawing.Size(200, 21);
+            this.projektErstellenAngebotCombobox.TabIndex = 6;
+            this.projektErstellenAngebotCombobox.DropDown += new System.EventHandler(this.BindFromExistingAngebote);
             // 
             // projektNeuResetButton
             // 
@@ -1592,7 +1617,7 @@
             this.projektNeuResetButton.TabIndex = 5;
             this.projektNeuResetButton.Text = "Felder zurücksetzen";
             this.projektNeuResetButton.UseVisualStyleBackColor = true;
-            this.projektNeuResetButton.Click += new System.EventHandler(this.ResetNewProjectTextBlocks);
+            this.projektNeuResetButton.Click += new System.EventHandler(this.ResetAllWithinProjects);
             // 
             // projektNeuSpeichernButton
             // 
@@ -1623,30 +1648,29 @@
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(222, 74);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(58, 13);
+            this.label38.Size = new System.Drawing.Size(65, 13);
             this.label38.TabIndex = 1;
-            this.label38.Text = "Startdatum";
+            this.label38.Text = "Startdatum *";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(222, 20);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(56, 13);
+            this.label37.Size = new System.Drawing.Size(63, 13);
             this.label37.TabIndex = 0;
-            this.label37.Text = "Projekttitel";
+            this.label37.Text = "Projekttitel *";
             // 
             // projektSuchenTab
             // 
             this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektSuchenTab.Controls.Add(this.label34);
             this.projektSuchenTab.Controls.Add(this.projektSuchenPrintButton);
             this.projektSuchenTab.Controls.Add(this.label28);
             this.projektSuchenTab.Controls.Add(this.label27);
             this.projektSuchenTab.Controls.Add(this.projektSuchenBisDatepicker);
             this.projektSuchenTab.Controls.Add(this.projektSuchenVonDatepicker);
             this.projektSuchenTab.Controls.Add(this.label26);
-            this.projektSuchenTab.Controls.Add(this.projektSuchenkontaktcheckbox);
-            this.projektSuchenTab.Controls.Add(this.projektSuchenKundeCheckbox);
             this.projektSuchenTab.Controls.Add(this.projektSuchenKundeCombobox);
             this.projektSuchenTab.Controls.Add(this.projektSuchenProjekttitelcombobox);
             this.projektSuchenTab.Controls.Add(this.projektSuchenChangeButton);
@@ -1658,6 +1682,15 @@
             this.projektSuchenTab.Size = new System.Drawing.Size(747, 233);
             this.projektSuchenTab.TabIndex = 1;
             this.projektSuchenTab.Text = "Suchen";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(225, 24);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(38, 13);
+            this.label34.TabIndex = 14;
+            this.label34.Text = "Kunde";
             // 
             // projektSuchenPrintButton
             // 
@@ -1709,38 +1742,19 @@
             this.label26.TabIndex = 8;
             this.label26.Text = "Projekttitel";
             // 
-            // projektSuchenkontaktcheckbox
-            // 
-            this.projektSuchenkontaktcheckbox.AutoSize = true;
-            this.projektSuchenkontaktcheckbox.Location = new System.Drawing.Point(287, 18);
-            this.projektSuchenkontaktcheckbox.Name = "projektSuchenkontaktcheckbox";
-            this.projektSuchenkontaktcheckbox.Size = new System.Drawing.Size(63, 17);
-            this.projektSuchenkontaktcheckbox.TabIndex = 7;
-            this.projektSuchenkontaktcheckbox.Text = "Kontakt";
-            this.projektSuchenkontaktcheckbox.UseVisualStyleBackColor = true;
-            // 
-            // projektSuchenKundeCheckbox
-            // 
-            this.projektSuchenKundeCheckbox.AutoSize = true;
-            this.projektSuchenKundeCheckbox.Checked = true;
-            this.projektSuchenKundeCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.projektSuchenKundeCheckbox.Location = new System.Drawing.Point(224, 18);
-            this.projektSuchenKundeCheckbox.Name = "projektSuchenKundeCheckbox";
-            this.projektSuchenKundeCheckbox.Size = new System.Drawing.Size(57, 17);
-            this.projektSuchenKundeCheckbox.TabIndex = 6;
-            this.projektSuchenKundeCheckbox.Text = "Kunde";
-            this.projektSuchenKundeCheckbox.UseVisualStyleBackColor = true;
-            // 
             // projektSuchenKundeCombobox
             // 
+            this.projektSuchenKundeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.projektSuchenKundeCombobox.FormattingEnabled = true;
             this.projektSuchenKundeCombobox.Location = new System.Drawing.Point(15, 16);
             this.projektSuchenKundeCombobox.Name = "projektSuchenKundeCombobox";
             this.projektSuchenKundeCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektSuchenKundeCombobox.TabIndex = 5;
+            this.projektSuchenKundeCombobox.DropDown += new System.EventHandler(this.BindFromExistingKunden);
             // 
             // projektSuchenProjekttitelcombobox
             // 
+            this.projektSuchenProjekttitelcombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.projektSuchenProjekttitelcombobox.FormattingEnabled = true;
             this.projektSuchenProjekttitelcombobox.Location = new System.Drawing.Point(15, 43);
             this.projektSuchenProjekttitelcombobox.Name = "projektSuchenProjekttitelcombobox";
@@ -1826,6 +1840,7 @@
             // 
             // zeiterfassungCombobox
             // 
+            this.zeiterfassungCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.zeiterfassungCombobox.FormattingEnabled = true;
             this.zeiterfassungCombobox.Location = new System.Drawing.Point(36, 22);
             this.zeiterfassungCombobox.Name = "zeiterfassungCombobox";
@@ -2076,15 +2091,13 @@
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.Label searchKundeErrorLabel;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox projektErstellenCombobox;
+        private System.Windows.Forms.ComboBox projektErstellenAngebotCombobox;
         private System.Windows.Forms.Button projektSuchenPrintButton;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DateTimePicker projektSuchenBisDatepicker;
         private System.Windows.Forms.DateTimePicker projektSuchenVonDatepicker;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.CheckBox projektSuchenkontaktcheckbox;
-        private System.Windows.Forms.CheckBox projektSuchenKundeCheckbox;
         private System.Windows.Forms.ComboBox projektSuchenKundeCombobox;
         private System.Windows.Forms.ComboBox projektSuchenProjekttitelcombobox;
         private System.Windows.Forms.Button projektSuchenChangeButton;
@@ -2106,6 +2119,9 @@
         private System.Windows.Forms.Label createAngebotErrorLabel;
         private System.Windows.Forms.Label createAngebotSuccessLabel;
         private System.Windows.Forms.Button createAngebotResetButton;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label projektNeuErrorLabel;
+        private System.Windows.Forms.Label projektNeuSuccessLabel;
 
 
 

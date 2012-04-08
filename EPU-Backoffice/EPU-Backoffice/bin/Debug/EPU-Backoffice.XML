@@ -139,6 +139,30 @@
             <param name="sender">object sender</param>
             <param name="e">EventArgs</param>
         </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.SaveNewProject(System.Object,System.EventArgs)">
+            <summary>
+            Get values of GUI elements and send them to Business Layer to store them in the database.
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The EventArgs</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetAllWithinProjects(System.Object,System.EventArgs)">
+            <summary>
+            Hides error/success labels and resets input fields within Project tab
+            </summary>
+            <param name="sender">The sender</param>
+            <param name="e">The EventArgs</param>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetNewProjectTextBlocks">
+            <summary>
+            Resets input fields within Project tab
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Gui.HomeForm.ResetProjektNeuMessages">
+            <summary>
+            Resets error/succes labels within Project tab
+            </summary>
+        </member>
         <member name="M:EPUBackoffice.Gui.HomeForm.GetKundeKontaktType">
             <summary>
             
