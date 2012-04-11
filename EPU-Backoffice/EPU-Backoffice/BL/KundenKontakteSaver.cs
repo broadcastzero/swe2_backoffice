@@ -14,6 +14,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.Dal;
     using Logger;
     using UserExceptions;
+    using Rulemanager;
     
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.

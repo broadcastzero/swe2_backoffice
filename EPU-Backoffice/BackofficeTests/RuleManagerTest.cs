@@ -1,11 +1,10 @@
 ﻿using EPUBackoffice.BL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Rulemanager;
 
 namespace BackofficeTests
-{
-    
-    
+{   
     /// <summary>
     ///This is a test class for RuleManagerTest and is intended
     ///to contain all RuleManagerTest Unit Tests

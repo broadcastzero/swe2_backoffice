@@ -14,6 +14,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.Dal;
     using EPUBackoffice.UserExceptions;
     using Logger;
+    using Rulemanager;
 
     /// <summary>
     /// Changes or deletes a existing Kunde/Kontakt

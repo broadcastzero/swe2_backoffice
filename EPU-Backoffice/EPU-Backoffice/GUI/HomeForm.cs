@@ -67,7 +67,7 @@ namespace EPUBackoffice.Gui
         {
             this.ResetAllWithinProjects(sender, e);
 
-            mainTab.SelectTab("projektTab"); 
+            mainTab.SelectTab("projektTab");
         }
 
         private void SelectZeiterfassungTab(object sender, EventArgs e)
@@ -558,3 +558,7 @@ namespace EPUBackoffice.Gui
         }
     }
 }
+
+
+//DataBindingFramework.Rules r1 = DataBindingFramework.Rules.PositiveInt;
+//DataBindingFramework.BindFromString(new TextBox(), "input", new Label(), r1);

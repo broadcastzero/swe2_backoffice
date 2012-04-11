@@ -61,7 +61,8 @@
     <Compile Include="BL\KundenKontakteLoader.cs" />
     <Compile Include="BL\KundenKontakteSaver.cs" />
     <Compile Include="BL\ProjektManager.cs" />
-    <Compile Include="BL\RuleManager.cs" />
+    <Compile Include="DataBindingFramework.cs" />
+    <Compile Include="RuleManager.cs" />
     <Compile Include="Dal\DALFactory.cs" />
     <Compile Include="Dal\IDAL.cs" />
     <Compile Include="Dal\MockDataBaseManager.cs" />

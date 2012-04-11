@@ -334,6 +334,88 @@
             Foreign key to table Kunde
             </summary>
         </member>
+        <member name="T:Rulemanager.Rules">
+            <summary>
+            An enum for rules
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.PositiveInt">
+            <summary>
+            A positive integer value is requested.
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.PositiveDouble">
+            <summary>
+            A positive double value is requested.
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.LettersHyphen">
+            <summary>
+            A string only containing letters and hyphens is requested.
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.LettersNumbersHyphenSpace">
+            <summary>
+            A string only containing letters, numbers, hyphens and spaces is requested.
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.StringLength150">
+            <summary>
+            A string only containing less or = 150 signs is requested.
+            </summary>
+        </member>
+        <member name="F:Rulemanager.Rules.PerCent">
+            <summary>
+            An integer between 0-100 is requested (%)
+            </summary>
+        </member>
+        <member name="T:Rulemanager.RuleManager">
+            <summary>
+            This class checks the user input for invalid characters
+            </summary>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidateLettersHyphen(System.String)">
+            <summary>
+            Checks if input string contains only letters and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string valid</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidateLettersNumbersHyphenSpace(System.String)">
+            <summary>
+            Checks if input string contains only letters, numbers and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidateStringLength150(System.String)">
+            <summary>
+            Check if string does not have more than 150 chars
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidatePositiveInt(System.String)">
+            <summary>
+            Checks if string is a positive integer
+            </summary>
+            <param name="input">The input string</param>
+            <returns>The converted integer, -1 in case of error</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidatePerCent(System.String)">
+            <summary>
+            Checks if given string is an integer between 0 and 100 (%)
+            </summary>
+            <param name="input">The input string</param>
+            <returns>The parsed Int, -1 in case of error</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidatePositiveDouble(System.String)">
+            <summary>
+            Checks if given string is a positive double
+            </summary>
+            <param name="input">The input string</param>
+            <returns>The parsed double, -1 in case of error</returns>
+        </member>
         <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
             <summary>
             This Exception is thrown if the user tries to open or save an invalid file.
@@ -668,6 +750,54 @@
             The description of what has been done
             </summary>
         </member>
+        <member name="T:EPUBackoffice.DataBindingFramework">
+            <summary>
+            Validates user input and binds data
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.DataBindingFramework.BindFromInt(System.Windows.Forms.TextBox,System.Windows.Forms.Label,Rulemanager.Rules[])">
+            <summary>
+            Checks input string and returns an integer
+            </summary>
+            <param name="sender">The sending TextBox</param>
+            <param name="label">The error/success label</param>
+            <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
+            <returns>integer (Format depending on rule)</returns>
+        </member>
+        <member name="M:EPUBackoffice.DataBindingFramework.BindFromString(System.Windows.Forms.TextBox,System.Windows.Forms.Label,Rulemanager.Rules[])">
+            <summary>
+            Checks input string and returns an integer
+            </summary>
+            <param name="sender">The sending TextBox</param>
+            <param name="label">The error/success label</param>
+            <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:EPUBackoffice.DataBindingFramework.BindFromDouble(System.Windows.Forms.TextBox,System.Windows.Forms.Label,Rulemanager.Rules[])">
+            <summary>
+            Checks input string and returns an integer
+            </summary>
+            <param name="sender">The sending TextBox</param>
+            <param name="label">The error/success label</param>
+            <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
+            <returns>A double value</returns>
+        </member>
+        <member name="T:EPUBackoffice.BL.ProjektManager">
+            <summary>
+            This class is responsible for checking values provided by the GUI and creating or loading a project into/from the database
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.ProjektManager.Create(System.String,System.String,System.DateTime)">
+            <summary>
+            Checks parameters provided by the GUI and delegates values to database which saves them.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.BL.ProjektManager.Load">
+            <summary>
+            Checks parameters provided by the GUI and loads existing Projekte according to the provided values
+            </summary>
+            <returns>A list of all fitting Projekte</returns>
+        </member>
         <member name="T:EPUBackoffice.Dal.Tables.AngebotTable">
             <summary>
             A class for the database table "Angebot" with its attributes
@@ -712,53 +842,6 @@
             <summary>
             A description of the Angebot
             </summary>
-        </member>
-        <member name="T:EPUBackoffice.BL.RuleManager">
-            <summary>
-            This class checks the user input for invalid characters
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersHyphen(System.String)">
-            <summary>
-            Checks if input string contains only letters and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string valid</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateLettersNumbersHyphenSpace(System.String)">
-            <summary>
-            Checks if input string contains only letters, numbers and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidateStringLength150(System.String)">
-            <summary>
-            Check if string does not have more than 150 chars
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidatePositiveInt(System.String)">
-            <summary>
-            Checks if string is a positive integer
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The converted integer, -1 in case of error</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidatePerCent(System.String)">
-            <summary>
-            Checks if given string is an integer between 0 and 100 (%)
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The parsed Int, -1 in case of error</returns>
-        </member>
-        <member name="M:EPUBackoffice.BL.RuleManager.ValidatePositiveDouble(System.String)">
-            <summary>
-            Checks if given string is a positive double
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The parsed double, -1 in case of error</returns>
         </member>
         <member name="T:EPUBackoffice.Dal.Tables.EingangsrechnungTable">
             <summary>
@@ -1100,22 +1183,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
-        </member>
-        <member name="T:EPUBackoffice.BL.ProjektManager">
-            <summary>
-            This class is responsible for checking values provided by the GUI and creating or loading a project into/from the database
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.ProjektManager.Create(System.String,System.String,System.DateTime)">
-            <summary>
-            Checks parameters provided by the GUI and delegates values to database which saves them.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.BL.ProjektManager.Load">
-            <summary>
-            Checks parameters provided by the GUI and loads existing Projekte according to the provided values
-            </summary>
-            <returns>A list of all fitting Projekte</returns>
         </member>
     </members>
 </doc>

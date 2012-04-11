@@ -5,11 +5,42 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice.BL
+namespace Rulemanager
 {
     using System;
     using System.Text;
-    using System.Text.RegularExpressions;    
+    using System.Text.RegularExpressions;
+
+    /// <summary>
+    /// An enum for rules
+    /// </summary>
+    public enum Rules
+    {
+        /// <summary>
+        /// A positive integer value is requested.
+        /// </summary>
+        PositiveInt = 0,
+        /// <summary>
+        /// A positive double value is requested.
+        /// </summary>
+        PositiveDouble = 1,
+        /// <summary>
+        /// A string only containing letters and hyphens is requested.
+        /// </summary>
+        LettersHyphen = 2,
+        /// <summary>
+        /// A string only containing letters, numbers, hyphens and spaces is requested.
+        /// </summary>
+        LettersNumbersHyphenSpace = 3,
+        /// <summary>
+        /// A string only containing less or = 150 signs is requested.
+        /// </summary>
+        StringLength150 = 4,
+        /// <summary>
+        /// An integer between 0-100 is requested (%)
+        /// </summary>
+        PerCent = 5
+    };
 
     /// <summary>
     /// This class checks the user input for invalid characters
@@ -40,7 +71,7 @@ namespace EPUBackoffice.BL
         /// <returns>True, if string is valid</returns>
         public static bool ValidateLettersNumbersHyphenSpace(string input)
         {
-            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9- ]+$") || input.Length > 150)
+            if (!Regex.IsMatch(input, @"^[a-zA-Z0-9- ]+$"))
             {
                 return false;
             }

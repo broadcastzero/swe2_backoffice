@@ -16,6 +16,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     using Logger;
+    using Rulemanager;
 
     /// <summary>
     /// Contains methods to manipulate, save or load Angebote

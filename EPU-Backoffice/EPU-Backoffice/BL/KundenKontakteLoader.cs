@@ -15,6 +15,7 @@ namespace EPUBackoffice.BL
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     using Logger;
+    using Rulemanager;
 
     /// <summary>
     /// This class' methods load data out of the database and returns a list of requested data.
