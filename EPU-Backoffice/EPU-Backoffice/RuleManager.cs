@@ -17,29 +17,33 @@ namespace Rulemanager
     public enum Rules
     {
         /// <summary>
+        /// Checks if string contains chars (MUST BE THE FIRST RULE TO CHECK!! WILL BE IGNORED OTHERWISE!) 
+        /// </summary>
+        IsAndCanBeNull = 0,
+        /// <summary>
         /// A positive integer value is requested.
         /// </summary>
-        PositiveInt = 0,
+        PositiveInt = 1,
         /// <summary>
         /// A positive double value is requested.
         /// </summary>
-        PositiveDouble = 1,
+        PositiveDouble = 2,
         /// <summary>
         /// A string only containing letters and hyphens is requested.
         /// </summary>
-        LettersHyphen = 2,
+        LettersHyphen = 3,
         /// <summary>
         /// A string only containing letters, numbers, hyphens and spaces is requested.
         /// </summary>
-        LettersNumbersHyphenSpace = 3,
+        LettersNumbersHyphenSpace = 4,
         /// <summary>
         /// A string only containing less or = 150 signs is requested.
         /// </summary>
-        StringLength150 = 4,
+        StringLength150 = 5,
         /// <summary>
         /// An integer between 0-100 is requested (%)
         /// </summary>
-        PerCent = 5
+        PerCent = 6,
     };
 
     /// <summary>
@@ -89,8 +93,13 @@ namespace Rulemanager
         public static bool ValidateStringLength150(string input)
         {
             if (input.Length > 150)
-            { return false; }
-            else { return true; }
+            { 
+                return false; 
+            }
+            else 
+            { 
+                return true; 
+            }
         }
 
         /// <summary>
@@ -141,6 +150,16 @@ namespace Rulemanager
             if (success && output >= 0)
             { return output; }
             else { return -1; }
+        }
+
+        /// <summary>
+        /// Checks if given string does contain chars - if not, then string is valid (ignore errors of other checks which occure because of string being empty)
+        /// </summary>
+        /// <param name="input">The input string</param>
+        /// <returns>false, if empty</returns>
+        public static bool IsAndCanBeNull(string input)
+        {
+            return input.Length == 0 ? true : false;
         }
     }
 }

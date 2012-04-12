@@ -133,7 +133,70 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rulemanager.Rules.PositiveInt);
+            actual = DataBindingFramework.BindFromInt(sender, label, Rules.PositiveInt, Rules.PerCent);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A fourth test for BindFromInt
+        ///</summary>
+        [TestMethod()]
+        public void BindFromIntTest5()
+        {
+            TextBox sender = new TextBox();
+            sender.Text = string.Empty;
+            Label label = new Label();
+            int expected = 0;
+            int actual;
+            actual = DataBindingFramework.BindFromInt(sender, label, Rules.IsAndCanBeNull, Rules.PositiveInt, Rules.PerCent);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for BindFromString
+        ///</summary>
+        [TestMethod()]
+        public void BindFromStringTest()
+        {
+            TextBox sender = new TextBox();
+            sender.Text = string.Empty;
+            Label label = new Label(); // TODO: Initialize to an appropriate value
+            Rules rule = Rules.LettersHyphen;
+            string actual;
+            actual = DataBindingFramework.BindFromString(sender, label, rule);
+
+            Assert.IsTrue(label.Visible);
+        }
+
+        /// <summary>
+        ///A test for BindFromDouble
+        ///</summary>
+        [TestMethod()]
+        public void BindFromDoubleTest()
+        {
+            TextBox sender = new TextBox();
+            sender.Text = "4,33";
+            Label label = new Label();
+            Rules[] rules = {Rules.PositiveDouble};
+            double expected = 4.33;
+            double actual;
+            actual = DataBindingFramework.BindFromDouble(sender, label, rules);
+            Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A second test for BindFromDouble
+        ///</summary>
+        [TestMethod()]
+        public void BindFromDoubleTest1()
+        {
+            TextBox sender = new TextBox();
+            sender.Text = string.Empty;
+            Label label = new Label();
+            Rules[] rules = { Rules.IsAndCanBeNull, Rules.PositiveDouble };
+            double expected = 0;
+            double actual;
+            actual = DataBindingFramework.BindFromDouble(sender, label, rules);
             Assert.AreEqual(expected, actual);
         }
     }

@@ -127,11 +127,6 @@
             <param name="sender">object sender</param>
             <param name="e">Event args</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.HideKundeNeuMessages">
-            <summary>
-            Removes all success or error messages from panel "add Kunde/Kontakt"
-            </summary>
-        </member>
         <member name="M:EPUBackoffice.Gui.HomeForm.CreateKundeOrKontakt(System.Object,System.EventArgs)">
             <summary>
             Get values of GUI elements and send them to the business layer, they shall be stored in the database.
@@ -339,6 +334,11 @@
             An enum for rules
             </summary>
         </member>
+        <member name="F:Rulemanager.Rules.IsAndCanBeNull">
+            <summary>
+            Checks if string contains chars (MUST BE THE FIRST RULE TO CHECK!! WILL BE IGNORED OTHERWISE!) 
+            </summary>
+        </member>
         <member name="F:Rulemanager.Rules.PositiveInt">
             <summary>
             A positive integer value is requested.
@@ -415,6 +415,13 @@
             </summary>
             <param name="input">The input string</param>
             <returns>The parsed double, -1 in case of error</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.IsAndCanBeNull(System.String)">
+            <summary>
+            Checks if given string does contain chars - if not, then string is valid (ignore errors of other checks which occure because of string being empty)
+            </summary>
+            <param name="input">The input string</param>
+            <returns>false, if empty</returns>
         </member>
         <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
             <summary>

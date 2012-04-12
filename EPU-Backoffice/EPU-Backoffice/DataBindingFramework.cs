@@ -31,21 +31,28 @@ namespace EPUBackoffice
         {
             int validInt = -1;
             string input = sender.Text;
+            bool isAndCanBeNull = false;
 
             // check value for every requested rule
             foreach (int rule in rules)
             {
                 switch (rule)
                 {
-                    case 0: validInt = RuleManager.ValidatePositiveInt(input);
+                    case 0: isAndCanBeNull = RuleManager.IsAndCanBeNull(input);
                         break;
-                    case 5: validInt = RuleManager.ValidatePerCent(input);
+                    case 1: validInt = RuleManager.ValidatePositiveInt(input);
+                        break;
+                    case 6: validInt = RuleManager.ValidatePerCent(input);
                         break;
                     default: validInt = -1; // no rule - error!
                         break;
                 }
 
-                if (validInt < 0)
+                if (isAndCanBeNull)
+                {
+                    return 0;
+                }
+                else if (validInt < 0)
                 {
                     // show error label
                     label.ForeColor = Color.Red;
@@ -69,23 +76,30 @@ namespace EPUBackoffice
         {
             string input = sender.Text;
             bool valid = true;
+            bool isAndCanBeNull = false;
 
             // check value for every requested rule
             foreach (int rule in rules)
             {
                 switch (rule)
                 {
-                    case 2: valid = RuleManager.ValidateLettersHyphen(input);
+                    case 0: isAndCanBeNull = RuleManager.IsAndCanBeNull(input);
                         break;
-                    case 3: valid = RuleManager.ValidateLettersNumbersHyphenSpace(input);
+                    case 3: valid = RuleManager.ValidateLettersHyphen(input);
                         break;
-                    case 4: valid = RuleManager.ValidateStringLength150(input);
+                    case 4: valid = RuleManager.ValidateLettersNumbersHyphenSpace(input);
+                        break;
+                    case 5: valid = RuleManager.ValidateStringLength150(input);
                         break;
                     default: // no rule
                         break;
                 }
 
-                if (!valid)
+                if (isAndCanBeNull)
+                {
+                    return string.Empty;
+                }
+                else if (!valid)
                 {
                     // show error label
                     label.ForeColor = Color.Red;
@@ -107,21 +121,32 @@ namespace EPUBackoffice
         /// <returns>A double value</returns>
         public static double BindFromDouble(TextBox sender, Label label, params Rules[] rules)
         {
-            string input = sender.ToString();
+            string input = sender.Text;
+
+            //convert dots in semicolons (4,33 instead of 4.33)
+            input = input.Replace('.', ',');
+
             double validDouble = -1;
+            bool isAndCanBeNull = false;
 
             // check value for every requested rule
             foreach (int rule in rules)
             {
                 switch (rule)
                 {
-                    case 1: validDouble = RuleManager.ValidatePositiveDouble(input);
+                    case 0: isAndCanBeNull = RuleManager.IsAndCanBeNull(input);
+                        break;
+                    case 2: validDouble = RuleManager.ValidatePositiveDouble(input);
                         break;
                     default: validDouble = -1;
                         break;
                 }
 
-                if (validDouble < 0)
+                if (isAndCanBeNull)
+                {
+                    return 0;
+                }
+                else if (validDouble < 0)
                 {
                     // show error label
                     label.ForeColor = Color.Red;

@@ -19,6 +19,7 @@ namespace EPUBackoffice.Gui
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     using Logger;
+    using Rulemanager;
 
     /// <summary>
     /// The standard home screen of the application.
@@ -48,7 +49,7 @@ namespace EPUBackoffice.Gui
         private void SelectKundenKontakteTab(object sender, EventArgs e)
         {
             mainTab.SelectTab("kundenKontakteTab");
-            this.HideKundeNeuMessages();
+            this.kundeNeuMsgLabel.Hide();
         }
 
         private void SelectRechnungsverwaltungTab(object sender, EventArgs e)
@@ -125,18 +126,6 @@ namespace EPUBackoffice.Gui
         {
             this.createKundeVornameTextBlock.Clear();
             this.createKundeNachnameTextBlock.Clear();
-            this.HideKundeNeuMessages();
-        }
-
-        /// <summary>
-        /// Removes all success or error messages from panel "add Kunde/Kontakt"
-        /// </summary>
-        public void HideKundeNeuMessages() 
-        {
-            this.kundeNeuSuccessLabel.Hide();
-            this.kundenNeuErrGeneralLabel.Hide();
-            this.searchKundeSuccessLabel.Hide();
-            this.searchKundeErrorLabel.Hide();
         }
 
         /// <summary>
@@ -146,10 +135,27 @@ namespace EPUBackoffice.Gui
         /// <param name="e">EventArgs</param>
         private void CreateKundeOrKontakt(object sender, EventArgs e)
         {
-            // is set to false in case of error
-            bool saved = true;
+            // hide error label
+            this.kundeNeuMsgLabel.Hide();
 
-            KundenKontakteSaver validator = new KundenKontakteSaver();
+            // is set to false in case of error
+            KundeKontaktTable k = new KundeKontaktTable();
+            // Field "Vorname" may be empty
+            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock, this.kundeNeuMsgLabel, Rules.LettersHyphen, Rules.StringLength150, Rules.IsAndCanBeNull);
+            k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock, this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            //k.Type = TODO
+
+            // if no errors, send to business layer
+            if (!this.kundeNeuMsgLabel.Visible)
+            {
+                KundenKontakteSaver saver = new KundenKontakteSaver();
+                saver.SaveNewKundeKontakt(k);
+            }
+
+
+            /*bool saved = true;
+
+            KundenKontakteSaver saver = new KundenKontakteSaver();
             // bool type: false -> Kunde, true -> Kontakt
             bool type = this.createKontaktRadioButton.Checked;
             string s_type = type == false ? "Kunde" : "Kontakt";
@@ -170,10 +176,10 @@ namespace EPUBackoffice.Gui
             if (saved)
             {
                 this.HideKundeNeuMessages();
-                this.kundeNeuSuccessLabel.Show();
+                this.kundeNeuMsgLabel.Show();
                 this.createKundeVornameTextBlock.Clear(); // delete input fields
                 this.createKundeNachnameTextBlock.Clear();
-            }
+            }*/
         }
 
         private void ShowNKundeButton(object sender, EventArgs e)
@@ -558,7 +564,3 @@ namespace EPUBackoffice.Gui
         }
     }
 }
-
-
-//DataBindingFramework.Rules r1 = DataBindingFramework.Rules.PositiveInt;
-//DataBindingFramework.BindFromString(new TextBox(), "input", new Label(), r1);

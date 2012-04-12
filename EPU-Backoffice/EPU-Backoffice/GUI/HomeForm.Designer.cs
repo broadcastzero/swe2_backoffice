@@ -47,8 +47,7 @@
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
             this.kundenTabControl = new System.Windows.Forms.TabControl();
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
-            this.kundenNeuErrGeneralLabel = new System.Windows.Forms.Label();
-            this.kundeNeuSuccessLabel = new System.Windows.Forms.Label();
+            this.kundeNeuMsgLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.newKundeResetButton = new System.Windows.Forms.Button();
@@ -415,8 +414,7 @@
             // kundenTabCreate
             // 
             this.kundenTabCreate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.kundenTabCreate.Controls.Add(this.kundenNeuErrGeneralLabel);
-            this.kundenTabCreate.Controls.Add(this.kundeNeuSuccessLabel);
+            this.kundenTabCreate.Controls.Add(this.kundeNeuMsgLabel);
             this.kundenTabCreate.Controls.Add(this.label2);
             this.kundenTabCreate.Controls.Add(this.label1);
             this.kundenTabCreate.Controls.Add(this.newKundeResetButton);
@@ -432,27 +430,16 @@
             this.kundenTabCreate.TabIndex = 0;
             this.kundenTabCreate.Text = "Neu";
             // 
-            // kundenNeuErrGeneralLabel
+            // kundeNeuMsgLabel
             // 
-            this.kundenNeuErrGeneralLabel.AutoSize = true;
-            this.kundenNeuErrGeneralLabel.ForeColor = System.Drawing.Color.Red;
-            this.kundenNeuErrGeneralLabel.Location = new System.Drawing.Point(327, 100);
-            this.kundenNeuErrGeneralLabel.Name = "kundenNeuErrGeneralLabel";
-            this.kundenNeuErrGeneralLabel.Size = new System.Drawing.Size(39, 13);
-            this.kundenNeuErrGeneralLabel.TabIndex = 13;
-            this.kundenNeuErrGeneralLabel.Text = "Fehler:";
-            this.kundenNeuErrGeneralLabel.Visible = false;
-            // 
-            // kundeNeuSuccessLabel
-            // 
-            this.kundeNeuSuccessLabel.AutoSize = true;
-            this.kundeNeuSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.kundeNeuSuccessLabel.Location = new System.Drawing.Point(327, 100);
-            this.kundeNeuSuccessLabel.Name = "kundeNeuSuccessLabel";
-            this.kundeNeuSuccessLabel.Size = new System.Drawing.Size(110, 13);
-            this.kundeNeuSuccessLabel.TabIndex = 11;
-            this.kundeNeuSuccessLabel.Text = "Eingabe erfolgreich! :)";
-            this.kundeNeuSuccessLabel.Visible = false;
+            this.kundeNeuMsgLabel.AutoSize = true;
+            this.kundeNeuMsgLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.kundeNeuMsgLabel.Location = new System.Drawing.Point(327, 100);
+            this.kundeNeuMsgLabel.Name = "kundeNeuMsgLabel";
+            this.kundeNeuMsgLabel.Size = new System.Drawing.Size(33, 13);
+            this.kundeNeuMsgLabel.TabIndex = 11;
+            this.kundeNeuMsgLabel.Text = "Label";
+            this.kundeNeuMsgLabel.Visible = false;
             // 
             // label2
             // 
@@ -2079,8 +2066,7 @@
         private TablessControl angebotErstellenSubTab;
         private System.Windows.Forms.Button angebotErstellenBKundeButton;
         private System.Windows.Forms.Button angebotErstellenNKundeButton;
-        private System.Windows.Forms.Label kundeNeuSuccessLabel;
-        private System.Windows.Forms.Label kundenNeuErrGeneralLabel;
+        private System.Windows.Forms.Label kundeNeuMsgLabel;
         private System.Windows.Forms.Button projektNeuResetButton;
         private System.Windows.Forms.Button projektNeuSpeichernButton;
         private System.Windows.Forms.TextBox projektNeuProjekttitelTextbox;
