@@ -291,8 +291,8 @@ namespace EPUBackoffice.Gui
                 bool type = this.GetKundeKontaktType();
 
                 results = loader.LoadKundenKontakte(type, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
-                this.kundenSearchDataGridView.DataSource = results;
-                kundenSearchDataGridView.Columns["type"].Visible = false;
+                this.kundenSuchenBindingSource.DataSource = results;
+                //this.kundenSuchenBindingSource.Filte
             }
             catch (InvalidInputException ex)
             {
@@ -313,10 +313,12 @@ namespace EPUBackoffice.Gui
             int selectedRowID = e == null ? 0 : e.RowIndex;
 
             // if there are results
-            if (this.kundenSearchDataGridView.RowCount > 0)
+            if (this.kundenSuchenBindingSource.Count > 0)
             {
-                this.searchKundeVornameTextBlock.Text = this.kundenSearchDataGridView[1, selectedRowID].Value.ToString();
-                this.searchKundeNachnameTextBlock.Text = this.kundenSearchDataGridView[2, selectedRowID].Value.ToString();
+                KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[selectedRowID];
+
+                this.searchKundeVornameTextBlock.Text = k.Vorname;
+                this.searchKundeNachnameTextBlock.Text = k.NachnameFirmenname;
             }
             // clear textbox if there are no results
             else
@@ -359,12 +361,17 @@ namespace EPUBackoffice.Gui
             this.searchKundeErrorLabel.Hide();
             this.searchKundeSuccessLabel.Hide();
 
-            if (kundenSearchDataGridView.SelectedCells.Count > 0)
+            // if there are results
+            if (this.kundenSuchenBindingSource.Count > 0)
             {
+                KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[this.kundenSearchDataGridView.SelectedRows[0].Index];
+
+
                 bool type = this.GetKundeKontaktType();
-                int id = (int)kundenSearchDataGridView.SelectedCells[0].OwningRow.Cells[0].Value;
-                string firstname = this.searchKundeVornameTextBlock.Text;
-                string lastname = this.searchKundeNachnameTextBlock.Text;
+
+                int id = k.ID;
+                string firstname = k.Vorname;
+                string lastname = k.NachnameFirmenname;
 
                 int selectedRow = kundenSearchDataGridView.SelectedCells[0].OwningRow.Index;
 
@@ -380,11 +387,11 @@ namespace EPUBackoffice.Gui
                 {
                     if (buttonName == "changeKundeButton")
                     {
-                        changer.Change(id, firstname, lastname, type);
+                        changer.Change(k, type);
                     }
                     else if (buttonName == "deleteKundeButton")
                     {
-                        changer.Delete(id, type);
+                        changer.Delete(k, type);
                     }
                 }
                 catch (InvalidInputException ex)
@@ -571,6 +578,16 @@ namespace EPUBackoffice.Gui
         private void angebotErstellenTab_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void kundenSearchDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewHeaderClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+             //Catch clicks on header of datagridview
         }
     }
 }

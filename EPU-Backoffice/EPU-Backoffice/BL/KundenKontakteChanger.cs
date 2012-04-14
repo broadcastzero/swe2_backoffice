@@ -12,6 +12,7 @@ namespace EPUBackoffice.BL
     using System.Data.SQLite;
     using System.Text;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
     using Logger;
     using Rulemanager;
@@ -30,7 +31,7 @@ namespace EPUBackoffice.BL
         /// <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void Change(int id, string firstname, string lastname, bool type)
+        public void Change(KundeKontaktTable k, bool type)
         {
             if(firstname != null && firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.ValidateStringLength150(firstname) == false))
             {
@@ -52,20 +53,20 @@ namespace EPUBackoffice.BL
         /// </summary>
         /// <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void Delete(int id, bool type)
+        public void Delete(KundeKontaktTable k, bool type)
         {
-            if (id < 0)
+            if (k.ID < 0)
             {
                 this.logger.Log(2, "No valid ID provided from GUI layer!");
                 throw new InvalidInputException("Es wurde keine gültige ID übergeben!");
             }
 
             string s_type = type == false ? "Kunde" : "Kontakt";
-            this.logger.Log(0, "User requested to delete " + s_type + " with ID " + id);
+            this.logger.Log(0, "User requested to delete " + s_type + " with ID " + k.ID);
 
             try
             {
-                DALFactory.GetDAL().DeleteKundeKontakt(id, type);
+                DALFactory.GetDAL().DeleteKundeKontakt(k.ID, type);
             }
             catch (SQLiteException)
             {

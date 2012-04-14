@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.homeButton = new System.Windows.Forms.Button();
             this.kundenKontakteButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.reportsButton = new System.Windows.Forms.Button();
             this.beendenButton = new System.Windows.Forms.Button();
             this.projektverwaltungButton = new System.Windows.Forms.Button();
+            this.kundenSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab = new TablessControl();
             this.homeTab = new System.Windows.Forms.TabPage();
             this.currentlyOpenedDbPanel = new System.Windows.Forms.Panel();
@@ -63,6 +65,10 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.changeKundeButton = new System.Windows.Forms.Button();
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -195,6 +201,7 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).BeginInit();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -313,6 +320,10 @@
             this.projektverwaltungButton.Text = "Projektverwaltung";
             this.projektverwaltungButton.UseVisualStyleBackColor = true;
             this.projektverwaltungButton.Click += new System.EventHandler(this.SelectProjektverwaltungTab);
+            // 
+            // kundenSuchenBindingSource
+            // 
+            this.kundenSuchenBindingSource.AllowNew = false;
             // 
             // mainTab
             // 
@@ -604,8 +615,15 @@
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
             this.kundenSearchDataGridView.AllowUserToDeleteRows = false;
             this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kundenSearchDataGridView.AutoGenerateColumns = false;
             this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kundenSearchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Vorname,
+            this.Nachname,
+            this.Type});
+            this.kundenSearchDataGridView.DataSource = this.kundenSuchenBindingSource;
             this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
             this.kundenSearchDataGridView.MultiSelect = false;
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
@@ -613,6 +631,38 @@
             this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
             this.kundenSearchDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BindToKundenSearchLabels);
+            this.kundenSearchDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
+            this.kundenSearchDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 43;
+            // 
+            // Vorname
+            // 
+            this.Vorname.HeaderText = "Vorname";
+            this.Vorname.Name = "Vorname";
+            this.Vorname.ReadOnly = true;
+            this.Vorname.Width = 74;
+            // 
+            // Nachname
+            // 
+            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nachname.HeaderText = "Nachname / Firmenname";
+            this.Nachname.Name = "Nachname";
+            this.Nachname.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Visible = false;
+            this.Type.Width = 56;
             // 
             // changeKundeButton
             // 
@@ -1919,6 +1969,7 @@
             this.Text = "EPU Backoffice 1.0";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KillProcess);
             this.Load += new System.EventHandler(this.LoadHomeForm);
+            ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).EndInit();
             this.mainTab.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
             this.homeTab.PerformLayout();
@@ -2142,6 +2193,11 @@
         private System.Windows.Forms.Button projektSuchenChangeButton;
         private System.Windows.Forms.Button projektSuchenDeleteButton;
         private System.Windows.Forms.DataGridView zeitaufzeichnungDataGridView;
+        private System.Windows.Forms.BindingSource kundenSuchenBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
 
 
 

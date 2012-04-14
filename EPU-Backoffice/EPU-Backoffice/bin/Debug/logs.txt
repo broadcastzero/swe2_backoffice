@@ -602,3 +602,213 @@
 14.04.2012 - 14:00 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 14.04.2012 - 14:00 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
 14.04.2012 - 14:00 Info: Open HomeForm
+14.04.2012 - 14:36 Info: -----------------------------------------------------------
+14.04.2012 - 14:36 Info: Program is started.
+14.04.2012 - 14:36 Info: Using SQLite database.
+14.04.2012 - 14:36 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:36 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:36 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db
+14.04.2012 - 14:36 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db has been stored in config file.
+14.04.2012 - 14:36 Info: Open HomeForm
+14.04.2012 - 14:39 Info: -----------------------------------------------------------
+14.04.2012 - 14:39 Info: Program is started.
+14.04.2012 - 14:39 Info: Using SQLite database.
+14.04.2012 - 14:39 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:39 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:39 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:39 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 14:39 Info: Open HomeForm
+14.04.2012 - 14:47 Info: -----------------------------------------------------------
+14.04.2012 - 14:47 Info: Program is started.
+14.04.2012 - 14:47 Info: Using SQLite database.
+14.04.2012 - 14:47 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:47 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:47 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db
+14.04.2012 - 14:47 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newtest.db has been stored in config file.
+14.04.2012 - 14:47 Info: Open HomeForm
+14.04.2012 - 14:55 Info: -----------------------------------------------------------
+14.04.2012 - 14:55 Info: Program is started.
+14.04.2012 - 14:55 Info: Using SQLite database.
+14.04.2012 - 14:55 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:55 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:55 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 14:55 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 14:55 Info: Open HomeForm
+14.04.2012 - 15:10 Info: -----------------------------------------------------------
+14.04.2012 - 15:10 Info: Program is started.
+14.04.2012 - 15:10 Info: Using SQLite database.
+14.04.2012 - 15:10 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:10 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:10 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:10 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:10 Info: Open HomeForm
+14.04.2012 - 15:11 Info: -----------------------------------------------------------
+14.04.2012 - 15:11 Info: Program is started.
+14.04.2012 - 15:11 Info: Using SQLite database.
+14.04.2012 - 15:11 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:11 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:11 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
+14.04.2012 - 15:11 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
+14.04.2012 - 15:11 Info: Open HomeForm
+14.04.2012 - 15:11 Info: -----------------------------------------------------------
+14.04.2012 - 15:11 Info: Program is started.
+14.04.2012 - 15:11 Info: Using SQLite database.
+14.04.2012 - 15:11 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:11 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:11 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:11 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:11 Info: Open HomeForm
+14.04.2012 - 15:12 Info: -----------------------------------------------------------
+14.04.2012 - 15:12 Info: Program is started.
+14.04.2012 - 15:12 Info: Using SQLite database.
+14.04.2012 - 15:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:12 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:12 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:12 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:12 Info: Open HomeForm
+14.04.2012 - 15:13 Info: -----------------------------------------------------------
+14.04.2012 - 15:13 Info: Program is started.
+14.04.2012 - 15:13 Info: Using SQLite database.
+14.04.2012 - 15:13 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:13 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:13 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:13 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:13 Info: Open HomeForm
+14.04.2012 - 15:14 Info: -----------------------------------------------------------
+14.04.2012 - 15:14 Info: Program is started.
+14.04.2012 - 15:14 Info: Using SQLite database.
+14.04.2012 - 15:14 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:14 Info: Open HomeForm
+14.04.2012 - 15:14 Info: -----------------------------------------------------------
+14.04.2012 - 15:14 Info: Program is started.
+14.04.2012 - 15:14 Info: Using SQLite database.
+14.04.2012 - 15:14 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:14 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:14 Info: Open HomeForm
+14.04.2012 - 15:19 Info: -----------------------------------------------------------
+14.04.2012 - 15:19 Info: Program is started.
+14.04.2012 - 15:19 Info: Using SQLite database.
+14.04.2012 - 15:19 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:19 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:19 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:19 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:19 Info: Open HomeForm
+14.04.2012 - 15:25 Info: -----------------------------------------------------------
+14.04.2012 - 15:25 Info: Program is started.
+14.04.2012 - 15:25 Info: Using SQLite database.
+14.04.2012 - 15:25 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:25 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:25 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:25 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:25 Info: Open HomeForm
+14.04.2012 - 15:40 Info: -----------------------------------------------------------
+14.04.2012 - 15:40 Info: Program is started.
+14.04.2012 - 15:40 Info: Using SQLite database.
+14.04.2012 - 15:40 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:40 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:40 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:40 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:40 Info: Open HomeForm
+14.04.2012 - 15:56 Info: -----------------------------------------------------------
+14.04.2012 - 15:56 Info: Program is started.
+14.04.2012 - 15:56 Info: Using SQLite database.
+14.04.2012 - 15:56 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:56 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:57 Info: -----------------------------------------------------------
+14.04.2012 - 15:57 Info: Program is started.
+14.04.2012 - 15:57 Info: Using SQLite database.
+14.04.2012 - 15:57 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:57 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:57 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 15:57 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 15:57 Info: Open HomeForm
+14.04.2012 - 16:00 Info: -----------------------------------------------------------
+14.04.2012 - 16:00 Info: Program is started.
+14.04.2012 - 16:00 Info: Using SQLite database.
+14.04.2012 - 16:00 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:00 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:00 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:00 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:00 Info: Open HomeForm
+14.04.2012 - 16:01 Info: -----------------------------------------------------------
+14.04.2012 - 16:01 Info: Program is started.
+14.04.2012 - 16:01 Info: Using SQLite database.
+14.04.2012 - 16:01 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:01 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:01 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:01 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:01 Info: Open HomeForm
+14.04.2012 - 16:13 Info: -----------------------------------------------------------
+14.04.2012 - 16:13 Info: Program is started.
+14.04.2012 - 16:13 Info: Using SQLite database.
+14.04.2012 - 16:13 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:13 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:13 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:13 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:13 Info: Open HomeForm
+14.04.2012 - 16:20 Info: -----------------------------------------------------------
+14.04.2012 - 16:20 Info: Program is started.
+14.04.2012 - 16:20 Info: Using SQLite database.
+14.04.2012 - 16:20 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:20 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:20 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:20 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:20 Info: Open HomeForm
+14.04.2012 - 16:21 Info: -----------------------------------------------------------
+14.04.2012 - 16:21 Info: Program is started.
+14.04.2012 - 16:21 Info: Using SQLite database.
+14.04.2012 - 16:21 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:21 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:21 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:21 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:21 Info: Open HomeForm
+14.04.2012 - 16:25 Info: -----------------------------------------------------------
+14.04.2012 - 16:25 Info: Program is started.
+14.04.2012 - 16:25 Info: Using SQLite database.
+14.04.2012 - 16:25 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:25 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:26 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:26 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:26 Info: Open HomeForm
+14.04.2012 - 16:31 Info: -----------------------------------------------------------
+14.04.2012 - 16:31 Info: Program is started.
+14.04.2012 - 16:31 Info: Using SQLite database.
+14.04.2012 - 16:31 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:31 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:31 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:31 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:31 Info: Open HomeForm
+14.04.2012 - 16:37 Info: -----------------------------------------------------------
+14.04.2012 - 16:37 Info: Program is started.
+14.04.2012 - 16:37 Info: Using SQLite database.
+14.04.2012 - 16:37 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:37 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:37 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:37 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:37 Info: Open HomeForm
+14.04.2012 - 16:38 Info: -----------------------------------------------------------
+14.04.2012 - 16:38 Info: Program is started.
+14.04.2012 - 16:38 Info: Using SQLite database.
+14.04.2012 - 16:38 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:38 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:38 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:38 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:38 Info: Open HomeForm
+14.04.2012 - 16:41 Info: -----------------------------------------------------------
+14.04.2012 - 16:41 Info: Program is started.
+14.04.2012 - 16:41 Info: Using SQLite database.
+14.04.2012 - 16:41 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:41 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:41 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:41 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+14.04.2012 - 16:41 Info: Open HomeForm
+14.04.2012 - 16:41 Info: -----------------------------------------------------------
+14.04.2012 - 16:41 Info: Program is started.
+14.04.2012 - 16:41 Info: Using SQLite database.
+14.04.2012 - 16:41 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+14.04.2012 - 16:41 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
