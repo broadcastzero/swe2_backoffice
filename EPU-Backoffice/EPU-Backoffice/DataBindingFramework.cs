@@ -92,7 +92,7 @@ namespace EPUBackoffice
                         break;
                     case 5: valid = RuleManager.ValidateStringLength150(input);
                         break;
-                    default: // no rule
+                    default: valid = false;// no rule
                         break;
                 }
 
@@ -104,8 +104,8 @@ namespace EPUBackoffice
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = sender.Name + " enthält ungültige Zeichen!";
-                    label.Show(); // do this in home form maybe?
+                    label.Text = name + " enthält ungültige Zeichen!";
+                    label.Show();
                     return string.Empty;
                 }
             }

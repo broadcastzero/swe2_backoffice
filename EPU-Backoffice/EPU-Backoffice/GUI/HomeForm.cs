@@ -141,7 +141,7 @@ namespace EPUBackoffice.Gui
             // is set to false in case of error
             KundeKontaktTable k = new KundeKontaktTable();
             // Field "Vorname" may be empty
-            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock, "Vorname", this.kundeNeuMsgLabel, Rules.LettersHyphen, Rules.StringLength150, Rules.IsAndCanBeNull);
+            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock, "Vorname", this.kundeNeuMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
             k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock, "Nachname/Firmenname", this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
             //k.Type = TODO
 
