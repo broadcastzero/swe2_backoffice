@@ -149,7 +149,7 @@ namespace EPUBackoffice.Gui
             if (!this.kundeNeuMsgLabel.Visible)
             {
                 KundenKontakteSaver saver = new KundenKontakteSaver();
-                saver.SaveNewKundeKontakt(k);
+                //kt(k);
             }
 
 

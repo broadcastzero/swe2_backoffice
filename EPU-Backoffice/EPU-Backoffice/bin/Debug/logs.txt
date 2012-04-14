@@ -540,3 +540,20 @@
 12.04.2012 - 08:45 Info: Using mock database.
 12.04.2012 - 08:45 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 12.04.2012 - 08:45 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:53 Info: -----------------------------------------------------------
+12.04.2012 - 10:53 Info: Program is started.
+12.04.2012 - 10:53 Info: Using mock database.
+12.04.2012 - 10:53 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:53 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:57 Info: -----------------------------------------------------------
+12.04.2012 - 10:57 Info: Program is started.
+12.04.2012 - 10:57 Info: Using mock database.
+12.04.2012 - 10:57 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:57 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:58 Info: Starts getting Kunden out of database...
+12.04.2012 - 10:59 Info: -----------------------------------------------------------
+12.04.2012 - 10:59 Info: Program is started.
+12.04.2012 - 10:59 Info: Using SQLite database.
+12.04.2012 - 10:59 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:59 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+12.04.2012 - 10:59 Info: Kunde has been updated in the SQLite database: ID: 33 Alter Kunde
