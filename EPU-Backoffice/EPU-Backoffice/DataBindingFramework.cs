@@ -69,10 +69,11 @@ namespace EPUBackoffice
         /// Checks input string and returns an integer
         /// </summary>
         /// <param name="sender">The sending TextBox</param>
+        /// <param name="name">The description of the input field, as "Vorname" i.e. Needed for error label</param>
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>String</returns>
-        public static string BindFromString(TextBox sender, Label label, params Rules[] rules)
+        public static string BindFromString(TextBox sender, string name, Label label, params Rules[] rules)
         {
             string input = sender.Text;
             bool valid = true;

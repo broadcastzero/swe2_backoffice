@@ -771,11 +771,12 @@
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>integer (Format depending on rule)</returns>
         </member>
-        <member name="M:EPUBackoffice.DataBindingFramework.BindFromString(System.Windows.Forms.TextBox,System.Windows.Forms.Label,Rulemanager.Rules[])">
+        <member name="M:EPUBackoffice.DataBindingFramework.BindFromString(System.Windows.Forms.TextBox,System.String,System.Windows.Forms.Label,Rulemanager.Rules[])">
             <summary>
             Checks input string and returns an integer
             </summary>
             <param name="sender">The sending TextBox</param>
+            <param name="name">The description of the input field, as "Vorname" i.e. Needed for error label</param>
             <param name="label">The error/success label</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>String</returns>

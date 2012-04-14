@@ -163,7 +163,7 @@ namespace BackofficeTests
             Label label = new Label(); // TODO: Initialize to an appropriate value
             Rules rule = Rules.LettersHyphen;
             string actual;
-            actual = DataBindingFramework.BindFromString(sender, label, rule);
+            actual = DataBindingFramework.BindFromString(sender, "anyname", label, rule);
 
             Assert.IsTrue(label.Visible);
         }
