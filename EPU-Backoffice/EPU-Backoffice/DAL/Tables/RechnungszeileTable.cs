@@ -54,5 +54,16 @@ namespace EPUBackoffice.Dal.Tables
             get { return stunden; }
             set { if (value >= 0) { stunden = value; } }
         }
+
+        private double stundenSatz;
+        /// <summary>
+        /// The number of hours that shall be booked
+        /// </summary>
+        public double Stundensatz
+        {
+            get { return stundenSatz; }
+            set { if (value >= 0) { stundenSatz = value; } }
+        }
+
     }
 }

@@ -562,5 +562,15 @@ namespace EPUBackoffice.Gui
                 (sender as ComboBox).DataSource = resultStrings;
             }
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void angebotErstellenTab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

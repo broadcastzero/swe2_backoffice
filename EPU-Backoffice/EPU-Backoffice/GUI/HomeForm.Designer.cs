@@ -72,6 +72,7 @@
             this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.rechnungsTabControl = new System.Windows.Forms.TabControl();
             this.rechnungAusgangTab = new System.Windows.Forms.TabPage();
+            this.label35 = new System.Windows.Forms.Label();
             this.ausgangsrechnungComboBox = new System.Windows.Forms.ComboBox();
             this.ausgangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
             this.unpaidBalancePanel = new System.Windows.Forms.Panel();
@@ -97,18 +98,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.rechnungUmsatzTab = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
@@ -171,6 +169,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.projektSuchenTab = new System.Windows.Forms.TabPage();
+            this.projektSuchenDeleteButton = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.projektSuchenPrintButton = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
@@ -184,6 +183,9 @@
             this.projektSuchenSearchButton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.zeitTab = new System.Windows.Forms.TabPage();
+            this.zeitaufzeichnungDataGridView = new System.Windows.Forms.DataGridView();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.zeiterfassungdescriptionTextbox = new System.Windows.Forms.TextBox();
@@ -226,6 +228,7 @@
             this.projektSuchenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.zeitTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).BeginInit();
             this.reportTab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -288,6 +291,7 @@
             this.reportsButton.TabIndex = 14;
             this.reportsButton.Text = "Reports";
             this.reportsButton.UseVisualStyleBackColor = true;
+            this.reportsButton.Visible = false;
             this.reportsButton.Click += new System.EventHandler(this.SelectReportsTab);
             // 
             // beendenButton
@@ -688,6 +692,7 @@
             // rechnungAusgangTab
             // 
             this.rechnungAusgangTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungAusgangTab.Controls.Add(this.label35);
             this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungComboBox);
             this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungDataGridView);
             this.rechnungAusgangTab.Controls.Add(this.unpaidBalancePanel);
@@ -701,6 +706,15 @@
             this.rechnungAusgangTab.Size = new System.Drawing.Size(771, 233);
             this.rechnungAusgangTab.TabIndex = 0;
             this.rechnungAusgangTab.Text = "Ausgangsrechnung";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(147, 19);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(81, 13);
+            this.label35.TabIndex = 8;
+            this.label35.Text = "Offene Projekte";
             // 
             // ausgangsrechnungComboBox
             // 
@@ -921,18 +935,15 @@
             // rechnungDruckenTab
             // 
             this.rechnungDruckenTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rechnungDruckenTab.Controls.Add(this.label17);
-            this.rechnungDruckenTab.Controls.Add(this.label16);
             this.rechnungDruckenTab.Controls.Add(this.label15);
+            this.rechnungDruckenTab.Controls.Add(this.comboBox3);
+            this.rechnungDruckenTab.Controls.Add(this.button1);
+            this.rechnungDruckenTab.Controls.Add(this.radioButton2);
+            this.rechnungDruckenTab.Controls.Add(this.radioButton1);
             this.rechnungDruckenTab.Controls.Add(this.label14);
+            this.rechnungDruckenTab.Controls.Add(this.comboBox1);
             this.rechnungDruckenTab.Controls.Add(this.button5);
             this.rechnungDruckenTab.Controls.Add(this.button4);
-            this.rechnungDruckenTab.Controls.Add(this.checkBox2);
-            this.rechnungDruckenTab.Controls.Add(this.checkBox1);
-            this.rechnungDruckenTab.Controls.Add(this.textBox7);
-            this.rechnungDruckenTab.Controls.Add(this.textBox6);
-            this.rechnungDruckenTab.Controls.Add(this.dateTimePicker3);
-            this.rechnungDruckenTab.Controls.Add(this.dateTimePicker2);
             this.rechnungDruckenTab.Controls.Add(this.dataGridView3);
             this.rechnungDruckenTab.Location = new System.Drawing.Point(4, 22);
             this.rechnungDruckenTab.Name = "rechnungDruckenTab";
@@ -941,45 +952,74 @@
             this.rechnungDruckenTab.TabIndex = 2;
             this.rechnungDruckenTab.Text = "Drucken";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(225, 100);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(21, 13);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Bis";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(225, 74);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Von";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(225, 45);
+            this.label15.Location = new System.Drawing.Point(146, 55);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 13);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Nachname / Firma*";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Zeitraum";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(19, 52);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Suchen";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(215, 51);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(117, 17);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Ausgangsrechnung";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(215, 28);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(114, 17);
+            this.radioButton1.TabIndex = 13;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Eingangsrechnung";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(225, 19);
+            this.label14.Location = new System.Drawing.Point(146, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Vorname";
+            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Kunde";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(19, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 9;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(19, 203);
+            this.button5.Location = new System.Drawing.Point(75, 159);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 23);
             this.button5.TabIndex = 8;
@@ -988,60 +1028,12 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(19, 174);
+            this.button4.Location = new System.Drawing.Point(75, 130);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 23);
             this.button4.TabIndex = 7;
             this.button4.Text = "Als PDF anzeigen";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(19, 151);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(115, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "Eingangsrechnung";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 128);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Ausgangsrechnung";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(19, 42);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(200, 20);
-            this.textBox7.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(19, 16);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 20);
-            this.textBox6.TabIndex = 3;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(19, 94);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(19, 68);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 1;
             // 
             // dataGridView3
             // 
@@ -1100,6 +1092,8 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(19, 66);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(65, 17);
@@ -1651,6 +1645,7 @@
             // projektSuchenTab
             // 
             this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektSuchenTab.Controls.Add(this.projektSuchenDeleteButton);
             this.projektSuchenTab.Controls.Add(this.label34);
             this.projektSuchenTab.Controls.Add(this.projektSuchenPrintButton);
             this.projektSuchenTab.Controls.Add(this.label28);
@@ -1670,6 +1665,15 @@
             this.projektSuchenTab.TabIndex = 1;
             this.projektSuchenTab.Text = "Suchen";
             // 
+            // projektSuchenDeleteButton
+            // 
+            this.projektSuchenDeleteButton.Location = new System.Drawing.Point(120, 178);
+            this.projektSuchenDeleteButton.Name = "projektSuchenDeleteButton";
+            this.projektSuchenDeleteButton.Size = new System.Drawing.Size(95, 23);
+            this.projektSuchenDeleteButton.TabIndex = 15;
+            this.projektSuchenDeleteButton.Text = "Löschen";
+            this.projektSuchenDeleteButton.UseVisualStyleBackColor = true;
+            // 
             // label34
             // 
             this.label34.AutoSize = true;
@@ -1681,7 +1685,7 @@
             // 
             // projektSuchenPrintButton
             // 
-            this.projektSuchenPrintButton.Location = new System.Drawing.Point(15, 178);
+            this.projektSuchenPrintButton.Location = new System.Drawing.Point(15, 149);
             this.projektSuchenPrintButton.Name = "projektSuchenPrintButton";
             this.projektSuchenPrintButton.Size = new System.Drawing.Size(200, 23);
             this.projektSuchenPrintButton.TabIndex = 13;
@@ -1750,9 +1754,9 @@
             // 
             // projektSuchenChangeButton
             // 
-            this.projektSuchenChangeButton.Location = new System.Drawing.Point(15, 149);
+            this.projektSuchenChangeButton.Location = new System.Drawing.Point(15, 178);
             this.projektSuchenChangeButton.Name = "projektSuchenChangeButton";
-            this.projektSuchenChangeButton.Size = new System.Drawing.Size(200, 23);
+            this.projektSuchenChangeButton.Size = new System.Drawing.Size(99, 23);
             this.projektSuchenChangeButton.TabIndex = 2;
             this.projektSuchenChangeButton.Text = "Ändern";
             this.projektSuchenChangeButton.UseVisualStyleBackColor = true;
@@ -1777,6 +1781,9 @@
             // zeitTab
             // 
             this.zeitTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.zeitTab.Controls.Add(this.zeitaufzeichnungDataGridView);
+            this.zeitTab.Controls.Add(this.label39);
+            this.zeitTab.Controls.Add(this.textBox1);
             this.zeitTab.Controls.Add(this.label31);
             this.zeitTab.Controls.Add(this.label30);
             this.zeitTab.Controls.Add(this.zeiterfassungdescriptionTextbox);
@@ -1790,6 +1797,30 @@
             this.zeitTab.Size = new System.Drawing.Size(751, 255);
             this.zeitTab.TabIndex = 6;
             this.zeitTab.Text = "Zeit";
+            // 
+            // zeitaufzeichnungDataGridView
+            // 
+            this.zeitaufzeichnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.zeitaufzeichnungDataGridView.Location = new System.Drawing.Point(366, 25);
+            this.zeitaufzeichnungDataGridView.Name = "zeitaufzeichnungDataGridView";
+            this.zeitaufzeichnungDataGridView.Size = new System.Drawing.Size(363, 183);
+            this.zeitaufzeichnungDataGridView.TabIndex = 9;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(242, 104);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(66, 13);
+            this.label39.TabIndex = 8;
+            this.label39.Text = "Stundensatz";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(36, 101);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // label31
             // 
@@ -1836,7 +1867,7 @@
             // 
             // zeiterfassungAddButton
             // 
-            this.zeiterfassungAddButton.Location = new System.Drawing.Point(36, 101);
+            this.zeiterfassungAddButton.Location = new System.Drawing.Point(36, 127);
             this.zeiterfassungAddButton.Name = "zeiterfassungAddButton";
             this.zeiterfassungAddButton.Size = new System.Drawing.Size(200, 23);
             this.zeiterfassungAddButton.TabIndex = 3;
@@ -1937,6 +1968,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.zeitTab.ResumeLayout(false);
             this.zeitTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).EndInit();
             this.reportTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2012,21 +2044,9 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Button button7;
@@ -2086,7 +2106,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox projektSuchenKundeCombobox;
         private System.Windows.Forms.ComboBox projektSuchenProjekttitelcombobox;
-        private System.Windows.Forms.Button projektSuchenChangeButton;
         private System.Windows.Forms.Button projektSuchenSearchButton;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Button zeiterfassungAddButton;
@@ -2108,6 +2127,21 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label projektNeuErrorLabel;
         private System.Windows.Forms.Label projektNeuSuccessLabel;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button projektSuchenChangeButton;
+        private System.Windows.Forms.Button projektSuchenDeleteButton;
+        private System.Windows.Forms.DataGridView zeitaufzeichnungDataGridView;
 
 
 
