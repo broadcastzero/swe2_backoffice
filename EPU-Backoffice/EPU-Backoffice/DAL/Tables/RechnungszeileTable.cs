@@ -25,14 +25,14 @@ namespace EPUBackoffice.Dal.Tables
             set { if (value >= 0) { id = value; } }
         }
 
-        private int angebotsID;
+        private int projektID;
         /// <summary>
         /// Foreign key to table Angebot
         /// </summary>
-        public int AngebotsID
+        public int ProjektID
         {
-            get { return angebotsID; }
-            set { if (value >= 0) { angebotsID = value; } }
+            get { return projektID; }
+            set { if (value >= 0) { projektID = value; } }
         }
 
         private int ausgangsrechnungsID;
