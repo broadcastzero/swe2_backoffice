@@ -150,21 +150,23 @@ namespace EPUBackoffice.Dal
         /// <returns>SQLite prepared statement string</returns>
         public string GetKundenKontakteSQL(KundeKontaktTable k)
         {
+            string type = k.Type == false ? "Kunde" : "Kontakt";
+
             if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
             {
-                return "SELECT * FROM " + k.Type;
+                return "SELECT * FROM " + type;
             }
             else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
             {
-                return "SELECT * FROM " + k.Type + " WHERE Vorname = ?";
+                return "SELECT * FROM " + type + " WHERE Vorname = ?";
             }
             else if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length != 0)
             {
-                return "SELECT * FROM " + k.Type + " WHERE Nachname_Firmenname = ?";
+                return "SELECT * FROM " + type + " WHERE Nachname_Firmenname = ?";
             }
             else
             {
-                return "SELECT * FROM " + k.Type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+                return "SELECT * FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
             }
         }
         /// <summary>

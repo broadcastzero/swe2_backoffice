@@ -257,18 +257,10 @@ namespace EPUBackoffice.Gui
             // only if binding had no errors
             if (!this.searchKundeErrorLabel.Visible)
             {
-                try
-                {
-                    List<KundeKontaktTable> results;
+                List<KundeKontaktTable> results;
 
-                    results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel);
-                    this.kundenSuchenBindingSource.DataSource = results;
-                }
-                catch (InvalidInputException ex)
-                {
-                    this.searchKundeErrorLabel.Text = "Error: " + ex.Message;
-                    this.searchKundeErrorLabel.Show();
-                }
+                results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel);
+                this.kundenSuchenBindingSource.DataSource = results;
             }
 
             this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);

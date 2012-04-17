@@ -35,7 +35,7 @@ namespace EPUBackoffice.BL
         public List<KundeKontaktTable> LoadKundenKontakte(KundeKontaktTable k, Label errorlabel)
         {
             DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
 
             if (errorlabel.Visible)
             {
