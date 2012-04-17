@@ -11,7 +11,10 @@ namespace EPUBackoffice.BL
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Text;
+    using System.Windows.Forms;
+    using DatabindingFramework;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
     using Logger;
     using UserExceptions;
     using Rulemanager;
@@ -26,49 +29,32 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
         /// </summary>
-        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        /// <param name="k">The Kunden/Kontakt table</param>
+        /// <param name="errorlabel">The label in which possible error messages will be displayed</param>
         /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
-        public int SaveNewKundeKontakt(string firstname, string lastname, bool type)
+        public int SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel)
         {
-            // if invalid chars are found, throw exception, don't check for null (field is not mandatory)
-            if (firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.ValidateStringLength150(firstname) == false))
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+
+            if (errorlabel.Visible)
             {
-                this.logger.Log(2, "Field 'Vorname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
-                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
+                throw new InvalidInputException();
             }
-            // if 'Nachname' is null or invalid sign is found or length is more than 150 chars
-            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.ValidateStringLength150(lastname) == false)
-            {
-                this.logger.Log(2, "Field 'Nachname' within tab 'Neuer Kunde/Kontakt' contains invalid characters!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");                
-            }
+
             // else save new Kunde or Kontakt in database
-            // first name is optional, if empty, just send lastname and type
-            else if (firstname.Length == 0)
+            if (k.Vorname.Length == 0)
             {
                 this.logger.Log(0, "Es wird kein Vorname eingetragen.");
-
-                try
-                {
-                    return DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
             }
-            else
+
+            try
             {
-                try
-                {
-                    return DALFactory.GetDAL().SaveNewKundeKontakt(lastname, type, firstname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
+                return DALFactory.GetDAL().SaveNewKundeKontakt(k);
+            }
+            catch (SQLiteException)
+            {
+                throw;
             }
         }
     }

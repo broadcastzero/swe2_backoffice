@@ -83,39 +83,29 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Saves a new Kunde or Kontakt to the mock database (IList)
         /// </summary>
-        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
+        /// <param name="k">The to-be-inserted Kunde (DAL table)</param>
         /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
-        public int SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
+        public int SaveNewKundeKontakt(KundeKontaktTable k)
         {
-            if (type == false)
+            if(k.Type == false)
             {
-                KundeKontaktTable kunde = new KundeKontaktTable();
-                kunde.ID = MockDataBaseManager.KundenID;
-                kunde.Vorname = firstname;
-                kunde.NachnameFirmenname = lastname;
-                kunde.Type = false;
+                k.ID = MockDataBaseManager.KundenID;
 
                 // save to list
-                MockDataBaseManager.SavedKunden.Add(kunde);
+                MockDataBaseManager.SavedKunden.Add(k);
                 this.logger.Log(0, "A new Kunde has been saved in the mockDB.");
 
-                return kunde.ID;
+                return k.ID;
             }
             else
             {
-                KundeKontaktTable kontakt = new KundeKontaktTable();
-                kontakt.ID = MockDataBaseManager.KontaktID;
-                kontakt.Vorname = firstname;
-                kontakt.NachnameFirmenname = lastname;
-                kontakt.Type = true;
+                k.ID = MockDataBaseManager.KontaktID;
 
                 // save to list
-                MockDataBaseManager.SavedKontakte.Add(kontakt);
+                MockDataBaseManager.SavedKontakte.Add(k);
                 this.logger.Log(0, "A new Kontakt has been saved in the mockDB.");
 
-                return kontakt.ID;
+                return k.ID;
             }
         }
 
@@ -123,63 +113,61 @@ namespace EPUBackoffice.Dal
         /// This function gets (a) certain Kontakt(e) from the mock database.
         /// If firstname and lastname should be empty, display all
         /// </summary>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+        /// <param name="k">The Kunde or Kontakt table object that shall be searched for</param>
         /// <returns>A list of the requested Kontakte</returns>
-        public List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null)
+        public List<KundeKontaktTable> GetKundenKontakte(KundeKontaktTable k)
         {
             List<KundeKontaktTable> resultlist = new List<KundeKontaktTable>();
 
             // get Kunden
-            if (type == false)
+            if (k.Type == false)
             {
                 this.logger.Log(0, "Starts getting Kunden out of database...");
 
-                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKunden)
+                foreach (KundeKontaktTable kunde in MockDataBaseManager.SavedKunden)
                 {
-                    if (firstname == null && lastname == null)
-                    { resultlist.Add(k); }
-                    else if (firstname != null && lastname == null)
+                    if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
+                    { resultlist.Add(kunde); }
+                    else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
                     {
-                        if(k.Vorname == firstname)
-                        resultlist.Add(k);
+                        if(kunde.Vorname == k.Vorname)
+                        resultlist.Add(kunde);
                     }
-                    else if (lastname != null && firstname == null)
+                    else if (k.NachnameFirmenname.Length != 0 && k.NachnameFirmenname.Length == 0)
                     {
-                        if (k.NachnameFirmenname == lastname)
-                        { resultlist.Add(k); }
+                        if (kunde.NachnameFirmenname == k.NachnameFirmenname)
+                        { resultlist.Add(kunde); }
                     }
                     else
                     {
-                        if (k.NachnameFirmenname == lastname && k.Vorname == firstname)
-                        { resultlist.Add(k); }
+                        if (kunde.NachnameFirmenname == k.NachnameFirmenname && kunde.Vorname == k.Vorname)
+                        { resultlist.Add(kunde); }
                     }
                 }
             }
             // get Kontakt
-            else if (type == true)
+            else if (k.Type == true)
             {
                 this.logger.Log(0, "Starts getting Kontakte out of database...");
 
-                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKontakte)
+                foreach (KundeKontaktTable kontakt in MockDataBaseManager.SavedKontakte)
                 {
-                    if (firstname == null && lastname == null)
-                    { resultlist.Add(k); }
-                    else if (firstname != null && lastname == null)
+                    if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
+                    { resultlist.Add(kontakt); }
+                    else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
                     {
-                        if (k.Vorname == firstname)
-                            resultlist.Add(k);
+                        if (kontakt.Vorname == k.Vorname)
+                            resultlist.Add(kontakt);
                     }
-                    else if (lastname != null && firstname == null)
+                    else if (k.NachnameFirmenname.Length != 0 && k.Vorname.Length == 0)
                     {
-                        if (k.NachnameFirmenname == lastname)
-                        { resultlist.Add(k); }
+                        if (kontakt.NachnameFirmenname == k.NachnameFirmenname)
+                        { resultlist.Add(kontakt); }
                     }
                     else
                     {
-                        if (k.NachnameFirmenname == lastname && k.Vorname == firstname)
-                        { resultlist.Add(k); }
+                        if (kontakt.NachnameFirmenname == k.NachnameFirmenname && kontakt.Vorname == k.Vorname)
+                        { resultlist.Add(kontakt); }
                     }
                 }
             }
@@ -190,11 +178,8 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Updates information of an existing Kunde or Kontakt
         /// </summary>
-        /// <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
-        /// <param name="firstname">The first name</param>
-        /// <param name="lastname">The last name</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        public void UpdateKundeKontakte(int id, string firstname, string lastname, bool type)
+        /// <param name="k">The to-be-changed Kunde or Kontakt</param>
+        public void UpdateKundeKontakte(KundeKontaktTable k)
         {
             throw new NotImplementedException();
         }

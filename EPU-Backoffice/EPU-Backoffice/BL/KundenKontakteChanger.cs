@@ -11,6 +11,8 @@ namespace EPUBackoffice.BL
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Text;
+    using System.Windows.Forms;
+    using DatabindingFramework;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
@@ -31,21 +33,33 @@ namespace EPUBackoffice.BL
         /// <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
         /// <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void Change(KundeKontaktTable k, bool type)
+        public void Change(KundeKontaktTable k, Label errorlabel)
         {
-            if(firstname != null && firstname.Length != 0 && (RuleManager.ValidateLettersHyphen(firstname) == false || RuleManager.ValidateStringLength150(firstname) == false))
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+
+            if (errorlabel.Visible)
             {
-                this.logger.Log(2, "Field 'Vorname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
-                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
+                throw new InvalidInputException();
             }
-            else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.ValidateStringLength150(lastname) == false)
+
+            // else save new Kunde or Kontakt in database
+            if (k.Vorname.Length == 0)
             {
-                this.logger.Log(2, "Field 'Nachname' within tab 'Change Kunde/Kontakt' contains invalid characters!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
+                this.logger.Log(0, "Es wird kein Vorname eingetragen.");
             }
 
             // Update data
-            DALFactory.GetDAL().UpdateKundeKontakte(id, firstname, lastname, type);
+            try
+            {
+                DALFactory.GetDAL().UpdateKundeKontakte(k);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            
         }
 
         /// <summary>

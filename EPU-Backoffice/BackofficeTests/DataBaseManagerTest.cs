@@ -1,8 +1,9 @@
 ﻿namespace BackofficeTests
 {
-    using EPUBackoffice.Dal;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
+    using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
 
     /// <summary>
     ///This is a test class for DataBaseManagerTest and is intended
@@ -68,12 +69,14 @@
         public void GetKundenKontakteSQLTest()
         {
             DataBaseManager target = new DataBaseManager();
-            string type = "Kunde";
-            string firstname = null;
-            string lastname = "Huber";
-            string expected = "SELECT * FROM " + type + " WHERE Nachname_Firmenname = ?";
+
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Type = false;
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = "Huber";
+            string expected = "SELECT * FROM " + k.Type + " WHERE Nachname_Firmenname = ?";
             string actual;
-            actual = target.GetKundenKontakteSQL(type, firstname, lastname);
+            actual = target.GetKundenKontakteSQL(k);
             Assert.AreEqual(expected, actual);
         }
 
@@ -85,12 +88,14 @@
         public void GetKundenKontakteSQLTest1()
         {
             DataBaseManager target = new DataBaseManager();
-            string type = "Kunde";
-            string firstname = "Franz";
-            string lastname = null;
-            string expected = "SELECT * FROM " + type + " WHERE Vorname = ?";
+
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Type = false;
+            k.Vorname = "Franz";
+            k.NachnameFirmenname = string.Empty;
+            string expected = "SELECT * FROM Kunde WHERE Vorname = ?";
             string actual;
-            actual = target.GetKundenKontakteSQL(type, firstname, lastname);
+            actual = target.GetKundenKontakteSQL(k);
             Assert.AreEqual(expected, actual);
         }
 
@@ -102,12 +107,14 @@
         public void GetKundenKontakteSQLTest2()
         {
             DataBaseManager target = new DataBaseManager();
-            string type = "Kunde";
-            string firstname = null;
-            string lastname = null;
-            string expected = "SELECT * FROM " + type;
+
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Type = false;
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = string.Empty;
+            string expected = "SELECT * FROM Kunde"; ;
             string actual;
-            actual = target.GetKundenKontakteSQL(type, firstname, lastname);
+            actual = target.GetKundenKontakteSQL(k);
             Assert.AreEqual(expected, actual);
         }
 
@@ -119,12 +126,13 @@
         public void GetKundenKontakteSQLTest3()
         {
             DataBaseManager target = new DataBaseManager();
-            string type = "Kontakt";
-            string firstname = "Hans";
-            string lastname = "Huber";
-            string expected = "SELECT * FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Type = true;
+            k.Vorname = "Hans";
+            k.NachnameFirmenname = "Huber";
+            string expected = "SELECT * FROM Kontakt WHERE Vorname = ? AND Nachname_Firmenname = ?";
             string actual;
-            actual = target.GetKundenKontakteSQL(type, firstname, lastname);
+            actual = target.GetKundenKontakteSQL(k);
             Assert.AreEqual(expected, actual);
         }
     }

@@ -6,6 +6,7 @@ namespace BackofficeTests
     using System.Data.SQLite;
     using EPUBackoffice.UserExceptions;
     using EPUBackoffice.Dal;
+    using EPUBackoffice.Dal.Tables;
 
     /// <summary>
     ///This is a test class for GuiDataValidatorTest and is intended
@@ -77,10 +78,12 @@ namespace BackofficeTests
         public void SaveNewKundeTest()
         {
             KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
-            string firstname = "Hans4*"; // TODO: Initialize to an appropriate value
-            string lastname = "Mayer"; // TODO: Initialize to an appropriate value
-            bool type = false; // TODO: Initialize to an appropriate value
-            target.SaveNewKundeKontakt(firstname, lastname, type);
+            KundeKontaktTable k = new KundeKontaktTable();
+
+            k.Vorname = "Hans4*";
+            k.NachnameFirmenname = "Mayer";
+            k.Type = false;
+            target.SaveNewKundeKontakt(k, new System.Windows.Forms.Label());
         }
 
         /// <summary>
@@ -91,11 +94,13 @@ namespace BackofficeTests
         [ExpectedException(typeof(InvalidInputException), "Feld 'Nachname/Firma' ist ungültig!")]
         public void SaveNewKundeTest1()
         {
-            KundenKontakteSaver target = new KundenKontakteSaver(); // TODO: Initialize to an appropriate value
-            string firstname = string.Empty; // TODO: Initialize to an appropriate value
-            string lastname = "#"; // TODO: Initialize to an appropriate value
-            bool type = false; // TODO: Initialize to an appropriate value
-            target.SaveNewKundeKontakt(firstname, lastname, type);
+            KundenKontakteSaver target = new KundenKontakteSaver();
+
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = "#";
+            k.Type = false;
+            target.SaveNewKundeKontakt(k, new System.Windows.Forms.Label());
         }
     }
 }

@@ -104,10 +104,12 @@ namespace BackofficeTests
         {
             int count_before = MockDataBaseManager.SavedKunden.Count;
 
-            string lastname = "Grausgruber";
-            bool type = false; // Kunde
-            string firstname = "Karl";
-            this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = "Karl";
+            k.NachnameFirmenname = "Grausgruber";
+            k.Type = false; // Kunde
+            
+            this.mdb.SaveNewKundeKontakt(k);
 
             int count_after = MockDataBaseManager.SavedKunden.Count;
 
@@ -122,10 +124,12 @@ namespace BackofficeTests
         {
             int count_before = MockDataBaseManager.SavedKontakte.Count;
 
-            string lastname = "Huber";
-            bool type = true; // Kontakt
-            string firstname = "Hans";
-            this.mdb.SaveNewKundeKontakt(lastname, type, firstname);
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = "Hans";
+            k.NachnameFirmenname = "Huber";
+            k.Type = true; // Kontakt
+            
+            this.mdb.SaveNewKundeKontakt(k);
 
             int count_after = MockDataBaseManager.SavedKontakte.Count;
 
@@ -154,21 +158,26 @@ namespace BackofficeTests
             this.mdb.DeleteKundeKontakt(id, type);
         }
 
-        /// <summary>
+        /*/// <summary>
         ///A test for DeleteKundeKontakt - after deleting an entry, there must be one entry less in the list
         ///</summary>
         [TestMethod()]
         public void DeleteKundeKontaktTest1()
         {
-            int id = MockDataBaseManager.KundenID +1;
-            this.mdb.SaveNewKundeKontakt("Huber", false);
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = "Huber";
+            k.Type = false;
+            k.ID = MockDataBaseManager.KundenID +1;
+
+            this.mdb.SaveNewKundeKontakt(k);
             bool type = false;
             
             int savedBefore = MockDataBaseManager.SavedKunden.Count;
-            this.mdb.DeleteKundeKontakt(id, type);
+            this.mdb.DeleteKundeKontakt();
             int savedAfter = MockDataBaseManager.SavedKunden.Count;
             
             Assert.AreEqual(savedBefore, savedAfter+1);
-        }
+        }*/
     }
 }

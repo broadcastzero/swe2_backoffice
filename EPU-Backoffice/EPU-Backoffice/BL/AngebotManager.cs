@@ -30,7 +30,7 @@ namespace EPUBackoffice.BL
         /// </summary>
         public void Create(string kundenID, bool createKunde, string firstname, string lastname, string angebotssumme, string umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
         {
-            // parse strings
+            /*// parse strings
             double angebotssum = RuleManager.ValidatePositiveDouble(angebotssumme);
             int umsetzungswsk = RuleManager.ValidatePerCent(umsetzungswahrscheinlichkeit);
             bool validDescr = RuleManager.ValidateLettersNumbersHyphenSpace(description);
@@ -84,7 +84,7 @@ namespace EPUBackoffice.BL
             {
                 KundenKontakteSaver saver = new KundenKontakteSaver();
                 bool type = false;
-                kID = saver.SaveNewKundeKontakt(firstname, lastname, type);
+                kID = saver.SaveNewKundeKontakt(k);
             }
             else
             {
@@ -93,7 +93,7 @@ namespace EPUBackoffice.BL
 
             // create Angebot
             DALFactory.GetDAL().CreateAngebot(kID, angebotssum, umsetzungswsk, validUntil.ToShortDateString(), description);
-        }
+        */}
 
         /// <summary>
         /// Load an existing Angebot out of the database

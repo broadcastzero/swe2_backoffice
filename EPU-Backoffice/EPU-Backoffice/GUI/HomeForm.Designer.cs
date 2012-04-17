@@ -59,7 +59,6 @@
             this.createKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
-            this.searchKundeSuccessLabel = new System.Windows.Forms.Label();
             this.deleteKundeButton = new System.Windows.Forms.Button();
             this.searchKundeErrorLabel = new System.Windows.Forms.Label();
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
@@ -534,7 +533,6 @@
             // kundenTabSearchChange
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.kundenTabSearchChange.Controls.Add(this.searchKundeSuccessLabel);
             this.kundenTabSearchChange.Controls.Add(this.deleteKundeButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeErrorLabel);
             this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
@@ -553,17 +551,6 @@
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
             this.kundenTabSearchChange.Click += new System.EventHandler(this.changeKundeOrKontakt);
-            // 
-            // searchKundeSuccessLabel
-            // 
-            this.searchKundeSuccessLabel.AutoSize = true;
-            this.searchKundeSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.searchKundeSuccessLabel.Location = new System.Drawing.Point(163, 80);
-            this.searchKundeSuccessLabel.Name = "searchKundeSuccessLabel";
-            this.searchKundeSuccessLabel.Size = new System.Drawing.Size(117, 13);
-            this.searchKundeSuccessLabel.TabIndex = 16;
-            this.searchKundeSuccessLabel.Text = "Operation erfolgreich! :)";
-            this.searchKundeSuccessLabel.Visible = false;
             // 
             // deleteKundeButton
             // 
@@ -2168,7 +2155,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button deleteKundeButton;
-        private System.Windows.Forms.Label searchKundeSuccessLabel;
         private System.Windows.Forms.Button createAngebotButton;
         private System.Windows.Forms.Label createAngebotDescriptionLabel;
         private System.Windows.Forms.TextBox createAngebotDescriptionTextBox;

@@ -26,11 +26,9 @@ namespace EPUBackoffice.Dal
         /// This function gets (a) certain Kontakt(e) from the saved objects.
         /// If firstname and lastname should be empty, display all
         /// </summary>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
+        /// <param name="k">The object that shall be searched for</param>
         /// <returns>A list of the requested Kontakte</returns>
-        List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null);
+        List<KundeKontaktTable> GetKundenKontakte(KundeKontaktTable k);
 
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
@@ -39,16 +37,13 @@ namespace EPUBackoffice.Dal
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
-        int SaveNewKundeKontakt(string lastname, bool type, string firstname = "<null>");
+        int SaveNewKundeKontakt(KundeKontaktTable k);
 
         /// <summary>
         /// Changes data of an existing Kunde/Kontakt
         /// </summary>
-        /// <param name="id">The id of the to-be-updated Kunde/Kontakt</param>
-        /// <param name="firstname">The new first name</param>
-        /// <param name="lastname">The new last name</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        void UpdateKundeKontakte(int id, string firstname, string lastname, bool type);
+        /// <param name="k">The values of the to-be-changed Kunde</param>
+        void UpdateKundeKontakte(KundeKontaktTable k);
 
         /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the database

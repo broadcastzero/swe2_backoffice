@@ -812,3 +812,38 @@
 14.04.2012 - 16:41 Info: Using SQLite database.
 14.04.2012 - 16:41 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 14.04.2012 - 16:41 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 14:55 Info: -----------------------------------------------------------
+17.04.2012 - 14:55 Info: Program is started.
+17.04.2012 - 14:55 Warning: No mockDB key has been found in config file.
+17.04.2012 - 14:55 Info: Using SQLite database.
+17.04.2012 - 14:55 Warning: No entry 'SQLite' in config file.
+17.04.2012 - 14:55 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 14:55 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+17.04.2012 - 14:55 Info: Open HomeForm
+17.04.2012 - 14:57 Info: -----------------------------------------------------------
+17.04.2012 - 14:57 Info: Program is started.
+17.04.2012 - 14:57 Warning: No mockDB key has been found in config file.
+17.04.2012 - 14:57 Info: Using SQLite database.
+17.04.2012 - 14:57 Warning: No entry 'SQLite' in config file.
+17.04.2012 - 14:57 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 14:57 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+17.04.2012 - 14:57 Info: Open HomeForm
+17.04.2012 - 14:59 Info: -----------------------------------------------------------
+17.04.2012 - 14:59 Info: Program is started.
+17.04.2012 - 14:59 Warning: No mockDB key has been found in config file.
+17.04.2012 - 14:59 Info: Using SQLite database.
+17.04.2012 - 14:59 Warning: No entry 'SQLite' in config file.
+17.04.2012 - 15:00 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 15:00 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+17.04.2012 - 15:00 Info: Open HomeForm
+17.04.2012 - 15:00 Info: Es wird kein Vorname eingetragen.
+17.04.2012 - 15:00 Info: A new Kunde has been saved to the database: 46  jutz
+17.04.2012 - 15:02 Info: -----------------------------------------------------------
+17.04.2012 - 15:02 Info: Program is started.
+17.04.2012 - 15:02 Warning: No mockDB key has been found in config file.
+17.04.2012 - 15:02 Info: Using SQLite database.
+17.04.2012 - 15:02 Warning: No entry 'SQLite' in config file.
+17.04.2012 - 15:02 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 15:02 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+17.04.2012 - 15:02 Info: Open HomeForm
+17.04.2012 - 15:02 Info: A new Kunde has been saved to the database: 47 adaf tresr

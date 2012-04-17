@@ -2,6 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Windows.Forms;
+using DatabindingFramework;
+using EPUBackoffice.Dal.Tables;
 using Rulemanager;
 
 namespace BackofficeTests
@@ -73,7 +75,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = 42;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rulemanager.Rules.PositiveInt);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
             Assert.AreEqual(expected, actual);
         }
 
@@ -88,7 +90,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rulemanager.Rules.PositiveInt);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
             Assert.AreEqual(expected, actual);
         }
 
@@ -103,7 +105,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rulemanager.Rules.PositiveInt);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
             Assert.AreEqual(expected, actual);
         }
 
@@ -118,7 +120,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = 41;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rulemanager.Rules.PositiveInt);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
             Assert.AreEqual(expected, actual);
         }
 
@@ -133,7 +135,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rules.PositiveInt, Rules.PerCent);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rules.PositiveInt, Rules.PerCent);
             Assert.AreEqual(expected, actual);
         }
 
@@ -148,7 +150,7 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = 0;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender, label, Rules.IsAndCanBeNull, Rules.PositiveInt, Rules.PerCent);
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rules.IsAndCanBeNull, Rules.PositiveInt, Rules.PerCent);
             Assert.AreEqual(expected, actual);
         }
 
@@ -163,7 +165,7 @@ namespace BackofficeTests
             Label label = new Label(); // TODO: Initialize to an appropriate value
             Rules rule = Rules.LettersHyphen;
             string actual;
-            actual = DataBindingFramework.BindFromString(sender, "anyname", label, rule);
+            actual = DataBindingFramework.BindFromString(sender.Text, "anyname", label, rule);
 
             Assert.IsTrue(label.Visible);
         }
@@ -180,7 +182,7 @@ namespace BackofficeTests
             Rules[] rules = {Rules.PositiveDouble};
             double expected = 4.33;
             double actual;
-            actual = DataBindingFramework.BindFromDouble(sender, label, rules);
+            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, rules);
             Assert.AreEqual(expected, actual);
         }
 
@@ -196,7 +198,7 @@ namespace BackofficeTests
             Rules[] rules = { Rules.IsAndCanBeNull, Rules.PositiveDouble };
             double expected = 0;
             double actual;
-            actual = DataBindingFramework.BindFromDouble(sender, label, rules);
+            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, rules);
             Assert.AreEqual(expected, actual);
         }
     }

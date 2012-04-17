@@ -15,6 +15,7 @@ namespace EPUBackoffice.Gui
     using System.Diagnostics;
     using System.Text;
     using System.Windows.Forms;
+    using DatabindingFramework;
     using EPUBackoffice.BL;
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
@@ -117,6 +118,14 @@ namespace EPUBackoffice.Gui
             Process.GetCurrentProcess().Kill();
         }
 
+        // Show success messages in an existing label
+        private void ShowSuccessLabel(Label l)
+        {
+            l.Text = "Erfolgreich eingetragen.";
+            l.ForeColor = Color.Green;
+            l.Show();
+        }
+
         /// <summary>
         /// Clear textblocks in which a new Kunde or Kontakt can be created
         /// </summary>
@@ -138,48 +147,21 @@ namespace EPUBackoffice.Gui
             // hide error label
             this.kundeNeuMsgLabel.Hide();
 
-            // is set to false in case of error
             KundeKontaktTable k = new KundeKontaktTable();
-            // Field "Vorname" may be empty
-            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock, "Vorname", this.kundeNeuMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock, "Nachname/Firmenname", this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
-            //k.Type = TODO
+            
+            // Bind data
+            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock.Text, "Vorname", this.kundeNeuMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock.Text, "Nachname/Firmenname", this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            k.Type = this.createKontaktRadioButton.Checked; // false - Kunde, true - Kontakt
 
-            // if no errors, send to business layer
+            // if no errors, send to business layer and show success message
             if (!this.kundeNeuMsgLabel.Visible)
             {
                 KundenKontakteSaver saver = new KundenKontakteSaver();
-                //kt(k);
+                saver.SaveNewKundeKontakt(k, this.kundeNeuMsgLabel);
+
+                this.ShowSuccessLabel(this.kundeNeuMsgLabel);                
             }
-
-
-            /*bool saved = true;
-
-            KundenKontakteSaver saver = new KundenKontakteSaver();
-            // bool type: false -> Kunde, true -> Kontakt
-            bool type = this.createKontaktRadioButton.Checked;
-            string s_type = type == false ? "Kunde" : "Kontakt";
-
-            try
-            {
-                validator.SaveNewKundeKontakt(this.createKundeVornameTextBlock.Text, this.createKundeNachnameTextBlock.Text, type);
-            }
-            catch(InvalidInputException ex)
-            {
-                saved = false;
-                HideKundeNeuMessages();
-                this.kundenNeuErrGeneralLabel.Text = "Fehler: " + ex.Message;
-                this.kundenNeuErrGeneralLabel.Show();
-            }
-
-            // show user that everything went fine
-            if (saved)
-            {
-                this.HideKundeNeuMessages();
-                this.kundeNeuMsgLabel.Show();
-                this.createKundeVornameTextBlock.Clear(); // delete input fields
-                this.createKundeNachnameTextBlock.Clear();
-            }*/
         }
 
         private void ShowNKundeButton(object sender, EventArgs e)
@@ -256,22 +238,6 @@ namespace EPUBackoffice.Gui
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>False...Kunde, true...Kontakt</returns>
-        private bool GetKundeKontaktType()
-        {
-            if (this.searchKontaktRadioButton.Checked)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /// <summary>
         /// Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
         /// </summary>
         /// <param name="sender"></param>
@@ -281,23 +247,28 @@ namespace EPUBackoffice.Gui
             // hide error message
             this.searchKundeErrorLabel.Hide();
 
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = DataBindingFramework.BindFromString(this.searchKundeVornameTextBlock.Text, "Vorname", this.searchKundeErrorLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            k.NachnameFirmenname = DataBindingFramework.BindFromString(this.searchKundeNachnameTextBlock.Text, "Nachname", this.searchKundeErrorLabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            k.Type = this.searchKontaktRadioButton.Checked; // False...Kunde, true...Kontakt
+
             KundenKontakteLoader loader = new KundenKontakteLoader();
 
-            try
+            // only if binding had no errors
+            if (!this.searchKundeErrorLabel.Visible)
             {
-                List<KundeKontaktTable> results;
-               
-                // Kunde (false) or Kontakt (true)?
-                bool type = this.GetKundeKontaktType();
+                try
+                {
+                    List<KundeKontaktTable> results;
 
-                results = loader.LoadKundenKontakte(type, this.searchKundeVornameTextBlock.Text, this.searchKundeNachnameTextBlock.Text);
-                this.kundenSuchenBindingSource.DataSource = results;
-                //this.kundenSuchenBindingSource.Filte
-            }
-            catch (InvalidInputException ex)
-            {
-                this.searchKundeErrorLabel.Text = "Error: " + ex.Message;
-                this.searchKundeErrorLabel.Show();
+                    results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel);
+                    this.kundenSuchenBindingSource.DataSource = results;
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.searchKundeErrorLabel.Text = "Error: " + ex.Message;
+                    this.searchKundeErrorLabel.Show();
+                }
             }
 
             this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);
@@ -359,7 +330,6 @@ namespace EPUBackoffice.Gui
         private void changeKundeOrKontakt(object sender, EventArgs e)
         {
             this.searchKundeErrorLabel.Hide();
-            this.searchKundeSuccessLabel.Hide();
 
             // if there are results
             if (this.kundenSuchenBindingSource.Count > 0)
@@ -367,7 +337,7 @@ namespace EPUBackoffice.Gui
                 KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[this.kundenSearchDataGridView.SelectedRows[0].Index];
 
 
-                bool type = this.GetKundeKontaktType();
+                bool type = this.searchKontaktRadioButton.Checked; ;
 
                 int id = k.ID;
                 string firstname = k.Vorname;
@@ -387,7 +357,7 @@ namespace EPUBackoffice.Gui
                 {
                     if (buttonName == "changeKundeButton")
                     {
-                        changer.Change(k, type);
+                        changer.Change(k, this.searchKundeErrorLabel);
                     }
                     else if (buttonName == "deleteKundeButton")
                     {
@@ -402,7 +372,10 @@ namespace EPUBackoffice.Gui
 
                 // update displayed rows
                 this.BindFromKundenSearchTextBlock(buttonName, selectedRow, firstname, lastname);
-                this.searchKundeSuccessLabel.Show();
+
+                this.searchKundeErrorLabel.ForeColor = Color.Green;
+                this.searchKundeErrorLabel.Text = "Success";
+                this.searchKundeErrorLabel.Show();
             }
         }
 
@@ -412,7 +385,6 @@ namespace EPUBackoffice.Gui
             this.searchKundeVornameTextBlock.Clear();
             this.searchKundeNachnameTextBlock.Clear();
             this.searchKundeErrorLabel.Hide();
-            this.searchKundeSuccessLabel.Hide();
 
             this.SearchKundenOrKontakte(null, null);
         }
@@ -428,13 +400,18 @@ namespace EPUBackoffice.Gui
             List<string> listItems = new List<string>();
             KundenKontakteLoader loader = new KundenKontakteLoader();
 
-            results = loader.LoadKundenKontakte(false); // only get Kunden
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = string.Empty;
+            k.Type = false;
+
+            results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel); // only get Kunden
 
             if(results.Count != 0)
             {
-                foreach (KundeKontaktTable k in results)
+                foreach (KundeKontaktTable kunde in results)
                 {
-                    string entry = k.ID + ": " + k.Vorname + " - " + k.NachnameFirmenname;
+                    string entry = kunde.ID + ": " + kunde.Vorname + " - " + kunde.NachnameFirmenname;
                     listItems.Add(entry);
                 }
             }

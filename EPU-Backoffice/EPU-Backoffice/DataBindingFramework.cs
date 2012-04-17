@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPUBackoffice
+namespace DatabindingFramework
 {
     using System;
     using System.Collections.Generic;
@@ -27,10 +27,9 @@ namespace EPUBackoffice
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>integer (Format depending on rule)</returns>
-        public static int BindFromInt(TextBox sender, Label label, params Rules[] rules)
+        public static int BindFromInt(string input, string name, Label label, params Rules[] rules)
         {
             int validInt = -1;
-            string input = sender.Text;
             bool isAndCanBeNull = false;
 
             // check value for every requested rule
@@ -56,7 +55,7 @@ namespace EPUBackoffice
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = sender.Name + " enthält ungültige Zeichen!";
+                    label.Text = name + " enthält ungültige Zeichen!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }
@@ -73,9 +72,8 @@ namespace EPUBackoffice
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>String</returns>
-        public static string BindFromString(TextBox sender, string name, Label label, params Rules[] rules)
+        public static string BindFromString(string input, string name, Label label, params Rules[] rules)
         {
-            string input = sender.Text;
             bool valid = true;
             bool isAndCanBeNull = false;
 
@@ -120,10 +118,8 @@ namespace EPUBackoffice
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>A double value</returns>
-        public static double BindFromDouble(TextBox sender, Label label, params Rules[] rules)
+        public static double BindFromDouble(string input, string name, Label label, params Rules[] rules)
         {
-            string input = sender.Text;
-
             //convert dots in semicolons (4,33 instead of 4.33)
             input = input.Replace('.', ',');
 
@@ -151,7 +147,7 @@ namespace EPUBackoffice
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = sender.Name + " enthält ungültige Zeichen!";
+                    label.Text = name + " enthält ungültige Zeichen!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }

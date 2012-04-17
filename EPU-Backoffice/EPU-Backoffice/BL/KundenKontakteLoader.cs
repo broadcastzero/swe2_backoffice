@@ -11,6 +11,8 @@ namespace EPUBackoffice.BL
     using System.Collections.Generic;
     using System.Data.SQLite;
     using System.Text;
+    using System.Windows.Forms;
+    using DatabindingFramework;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
@@ -27,65 +29,26 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Gets requested Kontakte out of the database.
         /// </summary>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        /// <param name="firstname">The first name of the to-be-searched Kontakt</param>
-        /// <param name="lastname">The last name of the to-be-searched Kontakt</param>
+        /// <param name="k">The Kunde/Kontakt object that shall be searched for</param>
+        /// <param name="errorlabel">A label in the homeform in which errormessages can be displayed</param>
         /// <returns>List of matching Kontakt</returns>
-        public List<KundeKontaktTable> LoadKundenKontakte(bool type, string firstname = null, string lastname = null)
+        public List<KundeKontaktTable> LoadKundenKontakte(KundeKontaktTable k, Label errorlabel)
         {
-            if (firstname != null && (firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false))
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+
+            if (errorlabel.Visible)
             {
-                this.logger.Log(2, "User tried to search for invalid first name in Kontakte!");
-                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
+                throw new InvalidInputException();
             }
-            else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
+
+            try
             {
-                this.logger.Log(2, "User tried to search for invalid last name!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
+                return DALFactory.GetDAL().GetKundenKontakte(k);
             }
-            else if ((firstname == null || firstname.Length == 0) && (lastname == null || lastname.Length == 0))
+            catch (SQLiteException)
             {
-                try
-                {
-                    return DALFactory.GetDAL().GetKundenKontakte(type);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if ((firstname != null && firstname.Length != 0) && (lastname == null || lastname.Length == 0))
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKundenKontakte(type, firstname: firstname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if ((firstname == null || firstname.Length == 0) && (lastname != null && lastname.Length != 0))
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKundenKontakte(type, lastname: lastname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else
-            {
-                try
-                {
-                    return DALFactory.GetDAL().GetKundenKontakte(type, firstname, lastname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
+                throw;
             }
         }
     }

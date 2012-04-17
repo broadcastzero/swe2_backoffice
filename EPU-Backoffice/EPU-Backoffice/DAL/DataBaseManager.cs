@@ -80,10 +80,10 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The first name of the Kunde/Kontakt</param>
         /// <param name="type">false...Kunde, true...Kontakt</param>
         /// <param name="lastname">The last name of the Kunde/Kontakt</param>
-        public int SaveNewKundeKontakt(string lastname, bool type, string firstname = null)
+        public int SaveNewKundeKontakt(KundeKontaktTable k)
         {
             int insertedID;
-            string s_type = type == false ? "Kunde" : "Kontakt";
+            string s_type = k.Type == false ? "Kunde" : "Kontakt";
 
             string sql = "INSERT INTO " + s_type + " (Vorname, Nachname_Firmenname) VALUES (?, ?)";
 
@@ -106,11 +106,11 @@ namespace EPUBackoffice.Dal
                 SQLiteParameter p_lastname = new SQLiteParameter();
 
                 // bind first name
-                p_firstname.Value = firstname;
+                p_firstname.Value = k.Vorname;
                 cmd.Parameters.Add(p_firstname);
                 
                 // bind last name
-                p_lastname.Value = lastname;
+                p_lastname.Value = k.NachnameFirmenname;
                 cmd.Parameters.Add(p_lastname);
                 
                 // execute and commit
@@ -136,7 +136,7 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = "A new " + s_type + " has been saved to the database: " + insertedID + " " + firstname + " " + lastname;
+            string successmessage = "A new " + s_type + " has been saved to the database: " + insertedID + " " + k.Vorname + " " + k.NachnameFirmenname;
             this.logger.Log(0, successmessage);
 
             // return ID of inserted item
@@ -146,40 +146,37 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Create SQL-wrapper string for Kunden/Kontakte
         /// </summary>
-        /// <param name="type">"Kunde" or "Kontakt"</param>
-        /// <param name="firstname">The first name</param>
-        /// <param name="lastname">The last name</param>
+        /// <param name="k">The to-be-searched Kunde/Kontakt table object</param>
         /// <returns>SQLite prepared statement string</returns>
-        public string GetKundenKontakteSQL(string type, string firstname, string lastname)
+        public string GetKundenKontakteSQL(KundeKontaktTable k)
         {
-            if (firstname == null && lastname == null)
+            if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
             {
-                return "SELECT * FROM " + type;
+                return "SELECT * FROM " + k.Type;
             }
-            else if (firstname != null && lastname == null)
+            else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
             {
-                return "SELECT * FROM " + type + " WHERE Vorname = ?";
+                return "SELECT * FROM " + k.Type + " WHERE Vorname = ?";
             }
-            else if (firstname == null && lastname != null)
+            else if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length != 0)
             {
-                return "SELECT * FROM " + type + " WHERE Nachname_Firmenname = ?";
+                return "SELECT * FROM " + k.Type + " WHERE Nachname_Firmenname = ?";
             }
             else
             {
-                return "SELECT * FROM " + type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
+                return "SELECT * FROM " + k.Type + " WHERE Vorname = ? AND Nachname_Firmenname = ?";
             }
         }
         /// <summary>
         /// This function gets (a) certain Kontakt(e) from the saved objects in the database.
         /// If firstname and lastname should be empty, display all
         /// </summary>
-        /// <param name="firstname">First name of the to-be-searched Kontakt (optional)</param>
-        /// <param name="lastname">Last name of the to-be-searched Kontakt (optional)</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        public List<KundeKontaktTable> GetKundenKontakte(bool type, string firstname = null, string lastname = null)
+        /// <param name="k">The Kunden/Kontakt table object</param>
+        /// <returns>A list of all found Kunden or Kontakte</returns>
+        public List<KundeKontaktTable> GetKundenKontakte(KundeKontaktTable k)
         {
-            string s_type = type == false ? "Kunde" : "Kontakt";
-            string sql = GetKundenKontakteSQL(s_type, firstname, lastname);
+            string s_type = k.Type == false ? "Kunde" : "Kontakt";
+            string sql = GetKundenKontakteSQL(k);
             List<KundeKontaktTable> resultlist = new List<KundeKontaktTable>();
 
             // open connection and get requested Kontakt(e) out of database
@@ -198,18 +195,18 @@ namespace EPUBackoffice.Dal
                 cmd = new SQLiteCommand(sql, con);
 
                 // bind first name
-                if (firstname != null)
+                if (k.Vorname.Length != 0)
                 {
                     SQLiteParameter p_firstname = new SQLiteParameter();
-                    p_firstname.Value = firstname;
+                    p_firstname.Value = k.Vorname;
                     cmd.Parameters.Add(p_firstname);
                 }
                 
                 // bind last name
-                if (lastname != null)
+                if (k.NachnameFirmenname.Length != 0)
                 {
                     SQLiteParameter p_lastname = new SQLiteParameter();
-                    p_lastname.Value = lastname;
+                    p_lastname.Value = k.NachnameFirmenname;
                     cmd.Parameters.Add(p_lastname);
                 }
                 
@@ -217,15 +214,15 @@ namespace EPUBackoffice.Dal
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    KundeKontaktTable k = new KundeKontaktTable();
-                    k.ID = reader.GetInt32(0);
-                    k.Vorname = reader.GetString(1);
-                    k.NachnameFirmenname = reader.GetString(2);
+                    KundeKontaktTable result = new KundeKontaktTable();
+                    result.ID = reader.GetInt32(0);
+                    result.Vorname = reader.GetString(1);
+                    result.NachnameFirmenname = reader.GetString(2);
 
-                    if (k.Vorname == "<null>")
+                    if (k.Vorname == "<null>") // is this still needed? test!
                     { k.Vorname = string.Empty; }
 
-                    resultlist.Add(k);
+                    resultlist.Add(result);
                 }
 
                 return resultlist;
@@ -250,14 +247,14 @@ namespace EPUBackoffice.Dal
         /// <param name="firstname">The new first name</param>
         /// <param name="lastname">The new last name</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void UpdateKundeKontakte(int id, string firstname, string lastname, bool type)
+        public void UpdateKundeKontakte(KundeKontaktTable k)
         {
-            string s_type = type == false ? "Kunde" : "Kontakt";
+            string s_type = k.Type == false ? "Kunde" : "Kontakt";
             string sql = "UPDATE " + s_type + " SET Vorname = ?, Nachname_Firmenname = ? WHERE ID = ?";
 
             try
             {
-                this.SendStatementToDatabase(sql, id, firstname, lastname);
+                this.SendStatementToDatabase(sql, k.ID, k.Vorname, k.NachnameFirmenname);
             }
             catch (SQLiteException)
             {
@@ -265,7 +262,7 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = s_type + " has been updated in the SQLite database: ID: " + id + " " + firstname + " " + lastname;
+            string successmessage = s_type + " has been updated in the SQLite database: ID: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname;
             this.logger.Log(0, successmessage);
         }
 
