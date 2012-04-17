@@ -74,7 +74,7 @@
             k.Type = false;
             k.Vorname = string.Empty;
             k.NachnameFirmenname = "Huber";
-            string expected = "SELECT * FROM " + k.Type + " WHERE Nachname_Firmenname = ?";
+            string expected = "SELECT * FROM Kunde WHERE Nachname_Firmenname = ?";
             string actual;
             actual = target.GetKundenKontakteSQL(k);
             Assert.AreEqual(expected, actual);

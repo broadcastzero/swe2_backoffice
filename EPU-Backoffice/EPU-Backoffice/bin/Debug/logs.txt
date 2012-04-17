@@ -876,3 +876,11 @@
 17.04.2012 - 15:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 17.04.2012 - 15:12 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
 17.04.2012 - 15:12 Info: Open HomeForm
+17.04.2012 - 15:12 Info: -----------------------------------------------------------
+17.04.2012 - 15:12 Info: Program is started.
+17.04.2012 - 15:12 Warning: No mockDB key has been found in config file.
+17.04.2012 - 15:12 Info: Using SQLite database.
+17.04.2012 - 15:12 Warning: No entry 'SQLite' in config file.
+17.04.2012 - 15:13 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+17.04.2012 - 15:13 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+17.04.2012 - 15:13 Info: Open HomeForm
