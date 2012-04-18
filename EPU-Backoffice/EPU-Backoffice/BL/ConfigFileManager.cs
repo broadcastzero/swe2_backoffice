@@ -72,7 +72,7 @@ namespace EPUBackoffice.BL
             }
             catch (System.Configuration.ConfigurationErrorsException e)
             {
-                this.logger.Log(1, e.Message + e.Source);
+                this.logger.Log(Logger.Level.Warning, e.Message + e.Source);
                 throw;
             }
         }
@@ -90,12 +90,12 @@ namespace EPUBackoffice.BL
             // no key found in .config-file - don't use mockDB
             catch (InvalidOperationException)
             {
-                this.logger.Log(1, "No mockDB key has been found in config file.");
+                this.logger.Log(Logger.Level.Warning, "No mockDB key has been found in config file.");
                 ConfigFileManager.MockDB = false;
             }
             catch (ConfigurationErrorsException e)
             {
-                this.logger.Log(2, "Syntax error in config file!" + e.Message);
+                this.logger.Log(Logger.Level.Error, "Syntax error in config file!" + e.Message);
                 throw; 
             }
 
@@ -121,7 +121,7 @@ namespace EPUBackoffice.BL
             // check if there is an entry "SQLite" in the EPU-Backoffice.exe.config
             if (this.connectSettings == null)
             {
-                this.logger.Log(1, "No entry 'SQLite' in config file.");
+                this.logger.Log(Logger.Level.Warning, "No entry 'SQLite' in config file.");
                 return false;
             }
 
@@ -136,7 +136,7 @@ namespace EPUBackoffice.BL
             }
             catch (ArgumentOutOfRangeException)
             {
-                this.logger.Log(1, "No (correct) path found in config file.");
+                this.logger.Log(Logger.Level.Warning, "No (correct) path found in config file.");
                 return false;
             }
 
@@ -171,7 +171,7 @@ namespace EPUBackoffice.BL
             }
             else
             {
-                this.logger.Log(1, "Given file path is wrong. File does not exist: " + path);
+                this.logger.Log(Logger.Level.Warning, "Given file path is wrong. File does not exist: " + path);
                 return false;
             }
         }

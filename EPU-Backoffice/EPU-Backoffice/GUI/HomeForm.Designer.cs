@@ -64,10 +64,6 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.changeKundeButton = new System.Windows.Forms.Button();
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -200,6 +196,10 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).BeginInit();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
@@ -620,36 +620,6 @@
             this.kundenSearchDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BindToKundenSearchLabels);
             this.kundenSearchDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
             this.kundenSearchDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 43;
-            // 
-            // Vorname
-            // 
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
-            this.Vorname.Width = 74;
-            // 
-            // Nachname
-            // 
-            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nachname.HeaderText = "Nachname / Firmenname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Visible = false;
-            this.Type.Width = 56;
             // 
             // changeKundeButton
             // 
@@ -1937,6 +1907,38 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 43;
+            // 
+            // Vorname
+            // 
+            this.Vorname.DataPropertyName = "Vorname";
+            this.Vorname.HeaderText = "Vorname";
+            this.Vorname.Name = "Vorname";
+            this.Vorname.ReadOnly = true;
+            this.Vorname.Width = 74;
+            // 
+            // Nachname
+            // 
+            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nachname.HeaderText = "Nachname / Firmenname";
+            this.Nachname.Name = "Nachname";
+            this.Nachname.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Visible = false;
+            this.Type.Width = 56;
             // 
             // HomeForm
             // 

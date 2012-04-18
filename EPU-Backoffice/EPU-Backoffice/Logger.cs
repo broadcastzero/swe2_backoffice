@@ -8,49 +8,86 @@
 namespace Logger
 {
     using System;
+    using System.Configuration;
     using System.Diagnostics;
     using System.Text;
     using System.IO;
+    using EPUBackoffice;
 
     /// <summary>
     /// This class serves as a logger, which writes out messages in a textfile
     /// </summary>
     public class Logger
     {
-        private static Logger _instance;
-        private static string logFilePath = "logs.txt";
+        private static Logger instance;
+
+        /// <summary>
+        /// The level that shall be logged (info, warning, error)
+        /// </summary>
+        public static int Loggerlevel { get; set; }
+
+        /// <summary>
+        /// The logging level
+        /// </summary>
+        public enum Level 
+        { 
+            /// <summary>
+            /// only info messages
+            /// </summary>
+            Info = 0,
+
+            /// <summary>
+            /// Infomessages and Warnings
+            /// </summary>
+            Warning = 1,
+
+            /// <summary>
+            /// Infomessages, Warnings and Errors
+            /// </summary>
+            Error = 2
+        }
 
         /// <summary>
         /// The instance of the singleton class Logger.
         /// </summary>
         public static Logger Instance
         {
-            get { return _instance; }
+            get { return instance; }
         }
 
         /// <summary>
-        /// Creates an instance of the Logger class.
+        /// Creates an instance of the Logger class if it does not exist yet.
         /// </summary>
         static Logger()
         {
-            _instance = new Logger();
+            if (Logger.instance == null)
+            {
+                instance = new Logger();
+            }
         }
 
         /// <summary>
-        /// Constructor of singleton class Logger.
+        /// Constructor of singleton class Logger
         /// </summary>
         protected Logger()
-        { 
-            // get path of logfile from config file or use standard filename
+        {
+            
         }
 
         /// <summary>
         /// Log the message.
         /// </summary>
-        /// <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
+        /// <param name="lev">The warning level: 0...info, 1...warning, 2...error (see enumeration)</param>
         /// <param name="msg">The message which has to be logged.</param>
-        public void Log(int level, string msg)
+        public void Log(Level lev, string msg)
         {
+            int level = (int)lev;
+            // ignore, if level is below minimum logging level
+            if (level < Logger.Loggerlevel)
+            {
+                return;
+            }
+
             StringBuilder sb = new StringBuilder();
             sb.Append(DateTime.Today.ToShortDateString());
             sb.Append(" - ");
@@ -70,25 +107,9 @@ namespace Logger
 
             sb.Append(msg);
 
-            // Write to file
-            try
-            {
-                using (StreamWriter sw = File.AppendText(Logger.logFilePath))
-                {
-                    sw.WriteLine(sb);
-                }
-            }
-            catch (IOException e)
-            {
-                Trace.WriteLine("Cannot write into logfile.");
-                Trace.WriteLine(e.Message);
-                Trace.WriteLine(e.StackTrace);
-            }
-            catch (UnauthorizedAccessException e)
-            {
-                Trace.WriteLine("Access to logfile denied.");
-                Trace.WriteLine(e.Message);
-            }
+            // send string to each appender in logfile
+            FileAppender filelog = new FileAppender();
+            filelog.Write(sb.ToString());
         }
     }
 }

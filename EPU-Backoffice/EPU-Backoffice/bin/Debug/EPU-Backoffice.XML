@@ -36,24 +36,49 @@
         </member>
         <member name="M:Logger.Logger.#cctor">
             <summary>
-            Creates an instance of the Logger class.
+            Creates an instance of the Logger class if it does not exist yet.
             </summary>
         </member>
         <member name="M:Logger.Logger.#ctor">
             <summary>
-            Constructor of singleton class Logger.
+            Constructor of singleton class Logger
             </summary>
         </member>
-        <member name="M:Logger.Logger.Log(System.Int32,System.String)">
+        <member name="M:Logger.Logger.Log(Logger.Logger.Level,System.String)">
             <summary>
             Log the message.
             </summary>
-            <param name="level">The warning level: 0...info, 1...warning, 2...error</param>
+            <param name="lev">The warning level: 0...info, 1...warning, 2...error (see enumeration)</param>
             <param name="msg">The message which has to be logged.</param>
+        </member>
+        <member name="P:Logger.Logger.Loggerlevel">
+            <summary>
+            The level that shall be logged (info, warning, error)
+            </summary>
         </member>
         <member name="P:Logger.Logger.Instance">
             <summary>
             The instance of the singleton class Logger.
+            </summary>
+        </member>
+        <member name="T:Logger.Logger.Level">
+            <summary>
+            The logging level
+            </summary>
+        </member>
+        <member name="F:Logger.Logger.Level.Info">
+            <summary>
+            only info messages
+            </summary>
+        </member>
+        <member name="F:Logger.Logger.Level.Warning">
+            <summary>
+            Infomessages and Warnings
+            </summary>
+        </member>
+        <member name="F:Logger.Logger.Level.Error">
+            <summary>
+            Infomessages, Warnings and Errors
             </summary>
         </member>
         <member name="T:EPUBackoffice.BL.KundenKontakteSaver">
@@ -516,16 +541,14 @@
             <summary>
             Changes data of an existing Kunde/Kontakt
             </summary>
-            <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
-            <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
-            <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="k">The to-be-changed Kunde/Kontakt</param>
+            <param name="errorlabel">The label in which errormessages may be written</param>
         </member>
         <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(EPUBackoffice.Dal.Tables.KundeKontaktTable,System.Boolean)">
             <summary>
             Deletes an existing Kunde/Kontakt
             </summary>
-            <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
+            <param name="k">The Kunde/Kontakt object that shall be deleted</param>
             <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         </member>
         <member name="T:EPUBackoffice.Dal.DataBaseManager">
@@ -555,10 +578,7 @@
             <summary>
             Saves a new Kunde or Kontakt to the database.
             </summary>
-            <param name="lastname">The last name of the Kunde/Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-            <param name="firstname">The first name of the Kunde/Kontakt</param>
-            <returns>The ID of the newly inserted Kunde/Kontakt</returns>
+            <param name="k">The Kunde/Kontakt object that shall be saved</param>
         </member>
         <member name="M:EPUBackoffice.Dal.IDAL.UpdateKundeKontakte(EPUBackoffice.Dal.Tables.KundeKontaktTable)">
             <summary>
@@ -620,9 +640,7 @@
             <summary>
             Saves a new Kunde or Kontakt to the database
             </summary>
-            <param name="firstname">The first name of the Kunde/Kontakt</param>
-            <param name="type">false...Kunde, true...Kontakt</param>
-            <param name="lastname">The last name of the Kunde/Kontakt</param>
+            <param name="k">The Kunde or Kontakt object that shall be saved</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.GetKundenKontakteSQL(EPUBackoffice.Dal.Tables.KundeKontaktTable)">
             <summary>
@@ -643,10 +661,7 @@
             <summary>
             Updates an existing Kunde or Kontakt in the SQLite database
             </summary>
-            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-            <param name="firstname">The new first name</param>
-            <param name="lastname">The new last name</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="k">The to be updated Kunde/Kontakt object</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
             <summary>
@@ -751,7 +766,8 @@
             <summary>
             Checks input string and returns an integer
             </summary>
-            <param name="sender">The sending TextBox</param>
+            <param name="input">The sending TextBox' value</param>
+            <param name="name">The name of the sending text box</param>
             <param name="label">The error/success label</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>integer (Format depending on rule)</returns>
@@ -760,7 +776,7 @@
             <summary>
             Checks input string and returns an integer
             </summary>
-            <param name="sender">The sending TextBox</param>
+            <param name="input">The sending TextBox' value</param>
             <param name="name">The description of the input field, as "Vorname" i.e. Needed for error label</param>
             <param name="label">The error/success label</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
@@ -770,7 +786,8 @@
             <summary>
             Checks input string and returns an integer
             </summary>
-            <param name="sender">The sending TextBox</param>
+            <param name="input">The sending TextBox' value</param>
+            <param name="name">The name of the sending text box</param>
             <param name="label">The error/success label</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>A double value</returns>
@@ -1173,6 +1190,43 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.IAppender">
+            <summary>
+            Appender of the Logfile
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.IAppender.Configure">
+            <summary>
+            Configures the Logfile Appender
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.IAppender.Write(System.String)">
+            <summary>
+            Writes the message to the logfile
+            </summary>
+            <param name="message">The message which shall be logged</param>
+        </member>
+        <member name="T:EPUBackoffice.FileAppender">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.FileAppender.Configure">
+            <summary>
+            get path of logfile from config file or use standard filename
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.FileAppender.Write(System.String)">
+            <summary>
+            Writes the logging message into the text logger.
+            </summary>
+            <param name="message">The logging message</param>
+        </member>
+        <member name="P:EPUBackoffice.FileAppender.LogFilePath">
+            <summary>
+            The path in which the textfile log shall be created
+            </summary>
         </member>
     </members>
 </doc>

@@ -23,7 +23,8 @@ namespace DatabindingFramework
         /// <summary>
         /// Checks input string and returns an integer
         /// </summary>
-        /// <param name="sender">The sending TextBox</param>
+        /// <param name="input">The sending TextBox' value</param>
+        /// <param name="name">The name of the sending text box</param>
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>integer (Format depending on rule)</returns>
@@ -67,7 +68,7 @@ namespace DatabindingFramework
         /// <summary>
         /// Checks input string and returns an integer
         /// </summary>
-        /// <param name="sender">The sending TextBox</param>
+        /// <param name="input">The sending TextBox' value</param>
         /// <param name="name">The description of the input field, as "Vorname" i.e. Needed for error label</param>
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
@@ -114,7 +115,8 @@ namespace DatabindingFramework
         /// <summary>
         /// Checks input string and returns an integer
         /// </summary>
-        /// <param name="sender">The sending TextBox</param>
+        /// <param name="input">The sending TextBox' value</param>
+        /// <param name="name">The name of the sending text box</param>
         /// <param name="label">The error/success label</param>
         /// <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
         /// <returns>A double value</returns>

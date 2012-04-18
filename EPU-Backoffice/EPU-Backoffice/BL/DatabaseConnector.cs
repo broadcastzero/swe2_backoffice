@@ -38,7 +38,7 @@ namespace EPUBackoffice.BL
             if (!path.EndsWith(".db"))
             {
                 path += ".db";
-                this.logger.Log(1, "No extension .db found. Added by application.");
+                this.logger.Log(0, "No extension .db found. Added by application.");
             }
 
             try
@@ -77,7 +77,7 @@ namespace EPUBackoffice.BL
 
             if (exists == false) 
             {
-                this.logger.Log(2, "Tried to open file " + path + " which does not exist or is not a a valid SQLite file!");
+                this.logger.Log(Logger.Level.Error, "Tried to open file " + path + " which does not exist or is not a a valid SQLite file!");
                 throw new InvalidFileException("Angegebene Datei existiert nicht oder ist kein gültiges SQLite-File!");
             }
             else

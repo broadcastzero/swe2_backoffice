@@ -33,10 +33,7 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database.
         /// </summary>
-        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
+        /// <param name="k">The Kunde/Kontakt object that shall be saved</param>
         int SaveNewKundeKontakt(KundeKontaktTable k);
 
         /// <summary>

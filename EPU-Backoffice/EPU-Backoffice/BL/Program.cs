@@ -9,6 +9,7 @@ namespace EPUBackoffice.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Diagnostics;
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
@@ -29,14 +30,21 @@ namespace EPUBackoffice.BL
             Application.SetCompatibleTextRenderingDefault(false);
 
             /***
-             * Inplements error logging.
-             * Debug.WriteLines will be stored in logfile only in Debug-Mode.
-             * Trace.WriteLines will be stored in logfile in Debug AND Release Mode.
-             * see http://support.microsoft.com/kb/815788 for further information.
+             * Implements error logging.
+             * Configure all appenders.
+             * Get logging level out of App.config.
              */
+            FileAppender filelogger = new FileAppender();
+            filelogger.Configure();
+
             Logger logger = Logger.Instance;
-            logger.Log(0, "-----------------------------------------------------------");
-            logger.Log(0, "Program is started.");
+            AppSettingsReader config = new AppSettingsReader();
+            Logger.Loggerlevel = (int)config.GetValue("LoggerLevel", typeof(int));
+
+            logger.Log(Logger.Level.Info, "-----------------------------------------------------------");
+            logger.Log(Logger.Level.Info, "Program is started.");
+
+            logger.Log(Logger.Level.Info, "Logging level: " + Logger.Loggerlevel);
 
             /***
              * Checks data base existance and creates if needed.

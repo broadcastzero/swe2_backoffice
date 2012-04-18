@@ -57,6 +57,8 @@
     <Compile Include="BL\AngebotManager.cs" />
     <Compile Include="BL\ConfigFileManager.cs" />
     <Compile Include="BL\DatabaseConnector.cs" />
+    <Compile Include="FileAppender.cs" />
+    <Compile Include="IAppender.cs" />
     <Compile Include="BL\KundenKontakteChanger.cs" />
     <Compile Include="BL\KundenKontakteLoader.cs" />
     <Compile Include="BL\KundenKontakteSaver.cs" />

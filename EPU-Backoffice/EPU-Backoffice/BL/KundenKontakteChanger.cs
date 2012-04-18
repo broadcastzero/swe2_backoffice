@@ -29,10 +29,8 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Changes data of an existing Kunde/Kontakt
         /// </summary>
-        /// <param name="id">The ID of the to-be-changed Kunde/Kontakt</param>
-        /// <param name="firstname">The firstname of the to-be-changed Kunde/Kontakt</param>
-        /// <param name="lastname">The last name of the to-be-changed Kunde/Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        /// <param name="k">The to-be-changed Kunde/Kontakt</param>
+        /// <param name="errorlabel">The label in which errormessages may be written</param>
         public void Change(KundeKontaktTable k, Label errorlabel)
         {
             DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
@@ -65,13 +63,13 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Deletes an existing Kunde/Kontakt
         /// </summary>
-        /// <param name="id">The ID of the to-be-deleted Kunde/Kontakt</param>
+        /// <param name="k">The Kunde/Kontakt object that shall be deleted</param>
         /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
         public void Delete(KundeKontaktTable k, bool type)
         {
             if (k.ID < 0)
             {
-                this.logger.Log(2, "No valid ID provided from GUI layer!");
+                this.logger.Log(Logger.Level.Error, "No valid ID provided from GUI layer!");
                 throw new InvalidInputException("Es wurde keine gültige ID übergeben!");
             }
 

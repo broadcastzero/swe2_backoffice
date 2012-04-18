@@ -104,12 +104,12 @@ namespace EPUBackoffice.BL
             // check parameter
             if (firstname != null && (firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false))
             {
-                this.logger.Log(2, "User tried to search Angebot with invalid first name!");
+                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid first name!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
             else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
             {
-                this.logger.Log(2, "User tried to search Angebot with invalid last name!");
+                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
             // call GetAngebote function, depending on what parameters have been provided by the GUI

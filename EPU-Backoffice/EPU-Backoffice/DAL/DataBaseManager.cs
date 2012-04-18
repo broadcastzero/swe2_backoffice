@@ -61,7 +61,7 @@ namespace EPUBackoffice.Dal
             }
             catch (SQLiteException e)
             {
-                this.logger.Log(2, e.Message + e.Source);
+                this.logger.Log(Logger.Level.Error, e.Message + e.Source);
                 throw; // pass exception to caller
             }
             finally
@@ -77,9 +77,7 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Saves a new Kunde or Kontakt to the database
         /// </summary>
-        /// <param name="firstname">The first name of the Kunde/Kontakt</param>
-        /// <param name="type">false...Kunde, true...Kontakt</param>
-        /// <param name="lastname">The last name of the Kunde/Kontakt</param>
+        /// <param name="k">The Kunde or Kontakt object that shall be saved</param>
         public int SaveNewKundeKontakt(KundeKontaktTable k)
         {
             int insertedID;
@@ -245,10 +243,7 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Updates an existing Kunde or Kontakt in the SQLite database
         /// </summary>
-        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-        /// <param name="firstname">The new first name</param>
-        /// <param name="lastname">The new last name</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+        /// <param name="k">The to be updated Kunde/Kontakt object</param>
         public void UpdateKundeKontakte(KundeKontaktTable k)
         {
             string s_type = k.Type == false ? "Kunde" : "Kontakt";
