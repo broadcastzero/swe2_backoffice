@@ -93,7 +93,7 @@ namespace EPUBackoffice.Dal
 
                 // save to list
                 MockDataBaseManager.SavedKunden.Add(k);
-                this.logger.Log(0, "A new Kunde has been saved in the mockDB.");
+                this.logger.Log(Logger.Level.Info, "A new Kunde has been saved in the mockDB.");
 
                 return k.ID;
             }
@@ -103,7 +103,7 @@ namespace EPUBackoffice.Dal
 
                 // save to list
                 MockDataBaseManager.SavedKontakte.Add(k);
-                this.logger.Log(0, "A new Kontakt has been saved in the mockDB.");
+                this.logger.Log(Logger.Level.Info, "A new Kontakt has been saved in the mockDB.");
 
                 return k.ID;
             }
@@ -122,7 +122,7 @@ namespace EPUBackoffice.Dal
             // get Kunden
             if (k.Type == false)
             {
-                this.logger.Log(0, "Starts getting Kunden out of database...");
+                this.logger.Log(Logger.Level.Info, "Starts getting Kunden out of database...");
 
                 foreach (KundeKontaktTable kunde in MockDataBaseManager.SavedKunden)
                 {
@@ -148,7 +148,7 @@ namespace EPUBackoffice.Dal
             // get Kontakt
             else if (k.Type == true)
             {
-                this.logger.Log(0, "Starts getting Kontakte out of database...");
+                this.logger.Log(Logger.Level.Info, "Starts getting Kontakte out of database...");
 
                 foreach (KundeKontaktTable kontakt in MockDataBaseManager.SavedKontakte)
                 {
@@ -202,7 +202,7 @@ namespace EPUBackoffice.Dal
                     {
                         MockDataBaseManager.savedKunden.Remove(k);
                         removed++;
-                        logger.Log(0, "Kunde has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        logger.Log(Logger.Level.Info, "Kunde has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
                         break;
                     }
                 }
@@ -216,7 +216,7 @@ namespace EPUBackoffice.Dal
                     {
                         MockDataBaseManager.savedKontakte.Remove(k);
                         removed++;
-                        logger.Log(0, "Kontakt has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        logger.Log(Logger.Level.Info, "Kontakt has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
                         break;
                     }
                 }

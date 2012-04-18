@@ -44,7 +44,7 @@ namespace EPUBackoffice.BL
             // else save new Kunde or Kontakt in database
             if (k.Vorname.Length == 0)
             {
-                this.logger.Log(0, "Es wird kein Vorname eingetragen.");
+                this.logger.Log(Logger.Level.Info, "Es wird kein Vorname eingetragen.");
             }
 
             // Update data
@@ -74,7 +74,7 @@ namespace EPUBackoffice.BL
             }
 
             string s_type = type == false ? "Kunde" : "Kontakt";
-            this.logger.Log(0, "User requested to delete " + s_type + " with ID " + k.ID);
+            this.logger.Log(Logger.Level.Info, "User requested to delete " + s_type + " with ID " + k.ID);
 
             try
             {

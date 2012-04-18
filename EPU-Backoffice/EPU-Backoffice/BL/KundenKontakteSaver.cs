@@ -45,7 +45,7 @@ namespace EPUBackoffice.BL
             // else save new Kunde or Kontakt in database
             if (k.Vorname.Length == 0)
             {
-                this.logger.Log(0, "Es wird kein Vorname eingetragen.");
+                this.logger.Log(Logger.Level.Info, "Es wird kein Vorname eingetragen.");
             }
 
             try

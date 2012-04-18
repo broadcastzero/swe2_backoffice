@@ -450,9 +450,9 @@
             this.kundeNeuMsgLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.kundeNeuMsgLabel.Location = new System.Drawing.Point(327, 100);
             this.kundeNeuMsgLabel.Name = "kundeNeuMsgLabel";
-            this.kundeNeuMsgLabel.Size = new System.Drawing.Size(33, 13);
+            this.kundeNeuMsgLabel.Size = new System.Drawing.Size(51, 13);
             this.kundeNeuMsgLabel.TabIndex = 11;
-            this.kundeNeuMsgLabel.Text = "Label";
+            this.kundeNeuMsgLabel.Text = "Errorlabel";
             this.kundeNeuMsgLabel.Visible = false;
             // 
             // label2
@@ -568,9 +568,9 @@
             this.searchKundeErrorLabel.ForeColor = System.Drawing.Color.Red;
             this.searchKundeErrorLabel.Location = new System.Drawing.Point(163, 80);
             this.searchKundeErrorLabel.Name = "searchKundeErrorLabel";
-            this.searchKundeErrorLabel.Size = new System.Drawing.Size(39, 13);
+            this.searchKundeErrorLabel.Size = new System.Drawing.Size(51, 13);
             this.searchKundeErrorLabel.TabIndex = 14;
-            this.searchKundeErrorLabel.Text = "Fehler:";
+            this.searchKundeErrorLabel.Text = "Errorlabel";
             this.searchKundeErrorLabel.Visible = false;
             // 
             // searchKontaktRadioButton
@@ -1928,12 +1928,14 @@
             // Nachname
             // 
             this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nachname.DataPropertyName = "NachnameFirmenname";
             this.Nachname.HeaderText = "Nachname / Firmenname";
             this.Nachname.Name = "Nachname";
             this.Nachname.ReadOnly = true;
             // 
             // Type
             // 
+            this.Type.DataPropertyName = "Type";
             this.Type.HeaderText = "Type";
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;

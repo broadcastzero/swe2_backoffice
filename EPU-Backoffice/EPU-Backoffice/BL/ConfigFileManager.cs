@@ -64,7 +64,7 @@ namespace EPUBackoffice.BL
                 config.ConnectionStrings.ConnectionStrings.Add(this.connectSettings);
                 config.Save();
 
-                this.logger.Log(0, "Connection string " + this.connectSettings.ConnectionString + " has been stored in config file.");
+                this.logger.Log(Logger.Level.Info, "Connection string " + this.connectSettings.ConnectionString + " has been stored in config file.");
 
                 // save connection string and database name in static var
                 ConfigFileManager.ConnectionString = this.connectSettings.ConnectionString;
@@ -140,7 +140,7 @@ namespace EPUBackoffice.BL
                 return false;
             }
 
-            this.logger.Log(0, "Saved path of database in config file: " + path);
+            this.logger.Log(Logger.Level.Info, "Saved path of database in config file: " + path);
 
             // check if path exists in file system
             bool exists = this.CheckDataBaseExistance(path);
@@ -166,7 +166,7 @@ namespace EPUBackoffice.BL
         {
             if (File.Exists(path) && path.EndsWith(".db"))
             {
-                this.logger.Log(0, "Database path set in config file: " + path);
+                this.logger.Log(Logger.Level.Info, "Database path set in config file: " + path);
                 return true;
             }
             else

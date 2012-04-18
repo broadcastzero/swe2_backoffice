@@ -71,7 +71,7 @@ namespace EPUBackoffice.Dal
                 connection.Dispose();
             }
 
-            this.logger.Log(0, "A new database has been created.");
+            this.logger.Log(Logger.Level.Info, "A new database has been created.");
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace EPUBackoffice.Dal
 
             // success logging
             string successmessage = "A new " + s_type + " has been saved to the database: " + insertedID + " " + k.Vorname + " " + k.NachnameFirmenname;
-            this.logger.Log(0, successmessage);
+            this.logger.Log(Logger.Level.Info, successmessage);
 
             // return ID of inserted item
             return insertedID;
@@ -219,8 +219,9 @@ namespace EPUBackoffice.Dal
                     result.Vorname = reader.GetString(1);
                     result.NachnameFirmenname = reader.GetString(2);
 
-                    if (k.Vorname == "<null>") // is this still needed? test!
-                    { k.Vorname = string.Empty; }
+                    // if nothing is stored within field "Vorname", just return empty string
+                    if (result.Vorname == "<null>")
+                    { result.Vorname = string.Empty; }
 
                     resultlist.Add(result);
                 }
@@ -260,7 +261,7 @@ namespace EPUBackoffice.Dal
 
             // success logging
             string successmessage = s_type + " has been updated in the SQLite database: ID: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname;
-            this.logger.Log(0, successmessage);
+            this.logger.Log(Logger.Level.Info, successmessage);
         }
 
         /// <summary>
@@ -284,7 +285,7 @@ namespace EPUBackoffice.Dal
 
             // success logging
             string successmessage = s_type + " has been dropped from the SQLite database. ID: " + id;
-            this.logger.Log(0, successmessage);
+            this.logger.Log(Logger.Level.Info, successmessage);
         }
 
         /// <summary>

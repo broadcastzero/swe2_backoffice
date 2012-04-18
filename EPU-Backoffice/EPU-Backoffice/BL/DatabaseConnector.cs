@@ -32,13 +32,13 @@ namespace EPUBackoffice.BL
         /// <param name="path">The name of the to-be-created database file.</param>
         public void Create(Form sender, string path)
         {
-            this.logger.Log(0, "User wants to create new database - filename from userinput: " + path);
+            this.logger.Log(Logger.Level.Info, "User wants to create new database - filename from userinput: " + path);
 
             // add .db, if not already done
             if (!path.EndsWith(".db"))
             {
                 path += ".db";
-                this.logger.Log(0, "No extension .db found. Added by application.");
+                this.logger.Log(Logger.Level.Info, "No extension .db found. Added by application.");
             }
 
             try
@@ -107,7 +107,7 @@ namespace EPUBackoffice.BL
         /// </summary>
         private void OpenHomeScreen()
         {
-            this.logger.Log(0, "Open HomeForm");
+            this.logger.Log(Logger.Level.Info, "Open HomeForm");
             HomeForm hf = new HomeForm();
             hf.Show();
         }

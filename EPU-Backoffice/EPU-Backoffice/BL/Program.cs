@@ -59,12 +59,12 @@ namespace EPUBackoffice.BL
 
                 // Save info in logfile
                 if (ConfigFileManager.MockDB == true)
-                { 
-                    logger.Log(0, "Using mock database."); 
+                {
+                    logger.Log(Logger.Level.Info, "Using mock database."); 
                 }
                 else 
-                { 
-                    logger.Log(0, "Using SQLite database."); 
+                {
+                    logger.Log(Logger.Level.Info, "Using SQLite database."); 
                 }
 
                 exists = cfm.CheckDataBaseExistance();

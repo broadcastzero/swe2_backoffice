@@ -454,7 +454,7 @@ namespace EPUBackoffice.Gui
 
             try
             {
-                this.logger.Log(0, "Start creating new Angebot...");
+                this.logger.Log(Logger.Level.Info, "Start creating new Angebot...");
                 AngebotManager manager = new AngebotManager();
                 manager.Create(kundenID, createKunde, firstname, lastname, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
             }
