@@ -34,10 +34,13 @@ namespace EPUBackoffice.BL
              * Configure all appenders.
              * Get logging level out of App.config.
              */
+            Logger logger = Logger.Instance;
+
             FileAppender filelogger = new FileAppender();
             filelogger.Configure();
+            Logger.Appenders.Add(filelogger);
 
-            Logger logger = Logger.Instance;
+            
             AppSettingsReader config = new AppSettingsReader();
             Logger.Loggerlevel = (int)config.GetValue("LoggerLevel", typeof(int));
 

@@ -56,6 +56,11 @@
             The level that shall be logged (info, warning, error)
             </summary>
         </member>
+        <member name="P:Logger.Logger.Appenders">
+            <summary>
+            A static list of all appenders of the logger.
+            </summary>
+        </member>
         <member name="P:Logger.Logger.Instance">
             <summary>
             The instance of the singleton class Logger.

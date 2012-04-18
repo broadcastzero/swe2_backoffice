@@ -8,6 +8,7 @@
 namespace Logger
 {
     using System;
+    using System.Collections.Generic;
     using System.Configuration;
     using System.Diagnostics;
     using System.Text;
@@ -25,6 +26,11 @@ namespace Logger
         /// The level that shall be logged (info, warning, error)
         /// </summary>
         public static int Loggerlevel { get; set; }
+
+        /// <summary>
+        /// A static list of all appenders of the logger.
+        /// </summary>
+        public static List<IAppender> Appenders { get; set; }
 
         /// <summary>
         /// The logging level
@@ -63,6 +69,12 @@ namespace Logger
             if (Logger.instance == null)
             {
                 instance = new Logger();
+            }
+
+            // create new List of appenders
+            if (Logger.Appenders == null)
+            {
+                Logger.Appenders = new List<IAppender>();
             }
         }
 
@@ -108,8 +120,12 @@ namespace Logger
             sb.Append(msg);
 
             // send string to each appender in logfile
-            FileAppender filelog = new FileAppender();
-            filelog.Write(sb.ToString());
+            foreach (IAppender appender in Logger.Appenders)
+            {
+                //FileAppender filelog = new FileAppender();
+                appender.Write(sb.ToString());
+                //filelog.Write(sb.ToString());
+            }
         }
     }
 }
