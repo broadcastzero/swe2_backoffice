@@ -39,6 +39,10 @@ namespace EPUBackoffice
         /// <param name="message">The logging message</param>
         public void Write(string message)
         {
+            // check if logfile is too big
+            // TODO: create new logfile and rename old to backup
+
+
             // Write to file
             try
             {

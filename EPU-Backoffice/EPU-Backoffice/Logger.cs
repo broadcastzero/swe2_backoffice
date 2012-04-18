@@ -94,6 +94,7 @@ namespace Logger
         public void Log(Level lev, string msg)
         {
             int level = (int)lev;
+
             // ignore, if level is below minimum logging level
             if (level < Logger.Loggerlevel)
             {
