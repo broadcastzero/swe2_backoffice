@@ -13,6 +13,7 @@ namespace EPUBackoffice.BL
     using System.Diagnostics;
     using System.Windows.Forms;
     using EPUBackoffice.Gui;
+    using EPUBackoffice.Properties;
     using Logger;
 
     /// <summary>
@@ -36,17 +37,20 @@ namespace EPUBackoffice.BL
              */
             Logger logger = Logger.Instance;
 
+            // Create file appender for logging
             FileAppender filelogger = new FileAppender();
             filelogger.Configure();
+
+            // Add all logger appenders to static list
             Logger.Appenders.Add(filelogger);
 
-            
-            AppSettingsReader config = new AppSettingsReader();
+            // Get logging level out of config file
+            AppSettingsReader config = new AppSettingsReader(); // Settings.Default.
             Logger.Loggerlevel = (int)config.GetValue("LoggerLevel", typeof(int));
 
+            // Program startup logging
             logger.Log(Logger.Level.Info, "-----------------------------------------------------------");
             logger.Log(Logger.Level.Info, "Program is started.");
-
             logger.Log(Logger.Level.Info, "Logging level: " + Logger.Loggerlevel);
 
             /***

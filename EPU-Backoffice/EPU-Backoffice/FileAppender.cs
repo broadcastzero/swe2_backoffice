@@ -19,6 +19,9 @@ namespace EPUBackoffice
     {
         private static string logFilePath;
 
+        // The maximum size of the logfile
+        private static int maxSize;
+
         /// <summary>
         /// The path in which the textfile log shall be created
         /// </summary>
@@ -31,6 +34,7 @@ namespace EPUBackoffice
         {
             AppSettingsReader config = new AppSettingsReader();
             FileAppender.logFilePath = config.GetValue("LogTextFilePath", typeof(string)).ToString();
+            FileAppender.maxSize = (int)config.GetValue("maxLogFileSize", typeof(int));
         }
 
         /// <summary>
@@ -39,8 +43,37 @@ namespace EPUBackoffice
         /// <param name="message">The logging message</param>
         public void Write(string message)
         {
-            // check if logfile is too big
-            // TODO: create new logfile and rename old to backup
+            // check if logfile is too big. if that's the case, rename and create new.
+            if(File.Exists(FileAppender.LogFilePath))
+            {
+                try
+                {
+                    FileInfo f = new FileInfo(FileAppender.LogFilePath);
+                    if (f.Length > FileAppender.maxSize)
+                    {
+                        // save old logfile name
+                        string oldname = Path.GetFileNameWithoutExtension(FileAppender.LogFilePath);
+                        string ext = Path.GetExtension(FileAppender.LogFilePath);
+
+                        // delete old backup file if there is one
+                        if (File.Exists(oldname + "_backup" + ext))
+                        {
+                            File.Delete(oldname + "_backup" + ext);
+                        }
+
+                        // rename current logfile in backup file
+                        File.Move(FileAppender.LogFilePath, oldname + "_backup" + ext);
+
+                        // create new, empty logfile with the old name
+                        File.Create(FileAppender.LogFilePath);
+                    }
+                }
+                catch (IOException e)
+                {
+                    Trace.WriteLine("Logfile too big! Moving and recreating failed!");
+                    Trace.WriteLine(e.Message);
+                }
+            }
 
 
             // Write to file

@@ -120,12 +120,10 @@ namespace Logger
 
             sb.Append(msg);
 
-            // send string to each appender in logfile
+            // send string to each appender in Appender List
             foreach (IAppender appender in Logger.Appenders)
             {
-                //FileAppender filelog = new FileAppender();
                 appender.Write(sb.ToString());
-                //filelog.Write(sb.ToString());
             }
         }
     }
