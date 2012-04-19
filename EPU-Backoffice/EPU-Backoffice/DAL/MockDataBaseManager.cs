@@ -181,7 +181,36 @@ namespace EPUBackoffice.Dal
         /// <param name="k">The to-be-changed Kunde or Kontakt</param>
         public void UpdateKundeKontakte(KundeKontaktTable k)
         {
-            throw new NotImplementedException();
+            // Kunde
+            if(k.Type == false)
+            {
+                int index = MockDataBaseManager.SavedKunden.IndexOf(k);
+
+                if (index < 0)
+                {
+                    this.logger.Log(Logger.Level.Error, "Kunde which shall be updated has not been found!");
+                }
+
+                MockDataBaseManager.SavedKunden[index].Vorname = k.Vorname;
+                MockDataBaseManager.SavedKunden[index].NachnameFirmenname = k.NachnameFirmenname;
+
+                this.logger.Log(Logger.Level.Info, "Kunde has been updated within mockDB.");
+            }
+            // Kontakt
+            else
+            {
+                int index = MockDataBaseManager.SavedKontakte.IndexOf(k);
+
+                if (index < 0)
+                {
+                    this.logger.Log(Logger.Level.Error, "Kontakt which shall be updated has not been found!");
+                }
+
+                MockDataBaseManager.SavedKontakte[index].Vorname = k.Vorname;
+                MockDataBaseManager.SavedKontakte[index].NachnameFirmenname = k.NachnameFirmenname;
+
+                this.logger.Log(Logger.Level.Info, "Kontakt has been updated within mockDB.");
+            }
         }
 
         /// <summary>
