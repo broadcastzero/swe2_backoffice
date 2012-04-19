@@ -45,9 +45,8 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the database
         /// </summary>
-        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        void DeleteKundeKontakt(int id, bool type);
+        /// <param name="k">The Kunde/Kontakt table object that shall be deleted</param>
+        void DeleteKundeKontakt(KundeKontaktTable k);
 
         /// <summary>
         /// Creates a new Angebot with the provided parameters

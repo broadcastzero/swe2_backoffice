@@ -276,7 +276,7 @@ namespace EPUBackoffice.Gui
             int selectedRowID = e == null ? 0 : e.RowIndex;
 
             // if there are results
-            if (this.kundenSuchenBindingSource.Count > 0)
+            if (this.kundenSuchenBindingSource.Count > 0 && selectedRowID >= 0)
             {
                 KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[selectedRowID];
 
@@ -326,16 +326,12 @@ namespace EPUBackoffice.Gui
             // if there are results
             if (this.kundenSuchenBindingSource.Count > 0)
             {
-                KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[this.kundenSearchDataGridView.SelectedRows[0].Index];
+                int selectedRow = this.kundenSearchDataGridView.SelectedCells[0].RowIndex;                //int selectedRow = kundenSearchDataGridView.SelectedCells[0].OwningRow.Index;
+                KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[selectedRow];//this.kundenSearchDataGridView.SelectedRows[0].Index];
 
-
-                bool type = this.searchKontaktRadioButton.Checked; ;
-
-                int id = k.ID;
-                string firstname = k.Vorname;
-                string lastname = k.NachnameFirmenname;
-
-                int selectedRow = kundenSearchDataGridView.SelectedCells[0].OwningRow.Index;
+                // get firstname and lastname from textbox
+                string firstname = this.searchKundeVornameTextBlock.Text;
+                string lastname = this.searchKundeNachnameTextBlock.Text;
 
                 KundenKontakteChanger changer = new KundenKontakteChanger();
 
@@ -349,11 +345,20 @@ namespace EPUBackoffice.Gui
                 {
                     if (buttonName == "changeKundeButton")
                     {
-                        changer.Change(k, this.searchKundeErrorLabel);
+                        // if there are no changes, do nothing
+                        if (firstname == k.Vorname && lastname == k.NachnameFirmenname)
+                        { return; }
+                        else
+                        {
+                            // Change Kunde/Kontakt
+                            k.Vorname = firstname;
+                            k.NachnameFirmenname = lastname;
+                            changer.Change(k, this.searchKundeErrorLabel);
+                        }
                     }
                     else if (buttonName == "deleteKundeButton")
                     {
-                        changer.Delete(k, type);
+                        changer.Delete(k, this.searchKundeErrorLabel);
                     }
                 }
                 catch (InvalidInputException ex)

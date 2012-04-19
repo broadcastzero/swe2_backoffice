@@ -64,21 +64,20 @@ namespace EPUBackoffice.BL
         /// Deletes an existing Kunde/Kontakt
         /// </summary>
         /// <param name="k">The Kunde/Kontakt object that shall be deleted</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void Delete(KundeKontaktTable k, bool type)
+        /// <param name="label">The label in which errormessages can be shown</param>
+        public void Delete(KundeKontaktTable k, Label label)
         {
-            if (k.ID < 0)
+            if (DataBindingFramework.BindFromInt(k.ID.ToString(), "ID", label, Rules.PositiveInt) < 0)
             {
                 this.logger.Log(Logger.Level.Error, "No valid ID provided from GUI layer!");
                 throw new InvalidInputException("Es wurde keine gültige ID übergeben!");
             }
 
-            string s_type = type == false ? "Kunde" : "Kontakt";
-            this.logger.Log(Logger.Level.Info, "User requested to delete " + s_type + " with ID " + k.ID);
+            this.logger.Log(Logger.Level.Info, "User requested to delete " + (k.Type == false ? "Kunde" : "Kontakt") + " with ID " + k.ID);
 
             try
             {
-                DALFactory.GetDAL().DeleteKundeKontakt(k.ID, type);
+                DALFactory.GetDAL().DeleteKundeKontakt(k);
             }
             catch (SQLiteException)
             {

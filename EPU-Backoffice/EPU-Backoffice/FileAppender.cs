@@ -75,7 +75,6 @@ namespace EPUBackoffice
                 }
             }
 
-
             // Write to file
             try
             {

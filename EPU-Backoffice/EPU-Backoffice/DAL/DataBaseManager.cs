@@ -267,16 +267,15 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the SQLite database
         /// </summary>
-        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void DeleteKundeKontakt(int id, bool type)
+        /// <param name="k">The Kunde/Kontakt object that shall be deleted from the SQLite database</param>
+        public void DeleteKundeKontakt(KundeKontaktTable k)
         {
-            string s_type = type == false ? "Kunde" : "Kontakt";
+            string s_type = k.Type == false ? "Kunde" : "Kontakt";
             string sql = "DELETE FROM " + s_type + " WHERE ID = ?";
 
             try
             {
-                this.SendStatementToDatabase(sql, id);
+                this.SendStatementToDatabase(sql, k.ID);
             }
             catch (SQLiteException)
             {
@@ -284,7 +283,7 @@ namespace EPUBackoffice.Dal
             }
 
             // success logging
-            string successmessage = s_type + " has been dropped from the SQLite database. ID: " + id;
+            string successmessage = s_type + " has been dropped from the SQLite database. ID: " + k.ID;
             this.logger.Log(Logger.Level.Info, successmessage);
         }
 

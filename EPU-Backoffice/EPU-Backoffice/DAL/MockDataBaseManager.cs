@@ -187,36 +187,35 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Deletes an existing Kunde or Kontakt out of the mock database
         /// </summary>
-        /// <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-        /// <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
-        public void DeleteKundeKontakt(int id, bool type)
+        /// <param name="k">The Kunde/Kontakt object that shall be deleted</param>
+        public void DeleteKundeKontakt(KundeKontaktTable k)
         {
             int removed = 0;
 
             // delete Kunde
-            if (type == false)
+            if (k.Type == false)
             {
-                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKunden)
+                foreach (KundeKontaktTable kunde in MockDataBaseManager.SavedKunden)
                 {
-                    if(k.ID == id)
+                    if(kunde.ID == k.ID)
                     {
-                        MockDataBaseManager.savedKunden.Remove(k);
+                        MockDataBaseManager.savedKunden.Remove(kunde);
                         removed++;
-                        logger.Log(Logger.Level.Info, "Kunde has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        logger.Log(Logger.Level.Info, "Kunde has been removed out of mockDB: " + kunde.ID + " " + kunde.Vorname + " " + kunde.NachnameFirmenname);
                         break;
                     }
                 }
             }
             // delete Kontakt
-            else if (type == true)
+            else if (k.Type == true)
             {
-                foreach (KundeKontaktTable k in MockDataBaseManager.SavedKontakte)
+                foreach (KundeKontaktTable kontakt in MockDataBaseManager.SavedKontakte)
                 {
-                    if (k.ID == id)
+                    if (kontakt.ID == k.ID)
                     {
-                        MockDataBaseManager.savedKontakte.Remove(k);
+                        MockDataBaseManager.savedKontakte.Remove(kontakt);
                         removed++;
-                        logger.Log(Logger.Level.Info, "Kontakt has been removed out of mockDB: " + k.ID + " " + k.Vorname + " " + k.NachnameFirmenname);
+                        logger.Log(Logger.Level.Info, "Kontakt has been removed out of mockDB: " + kontakt.ID + " " + kontakt.Vorname + " " + kontakt.NachnameFirmenname);
                         break;
                     }
                 }
@@ -225,8 +224,8 @@ namespace EPUBackoffice.Dal
             // no entry found
             if (removed != 1)
             {
-                this.logger.Log(Logger.Level.Error, "There is no entry in the mockDB with the ID " + id);
-                throw new EntryNotFoundException("There is no entry in the mockDB with the ID " + id);
+                this.logger.Log(Logger.Level.Error, "There is no entry in the mockDB with the ID " + k.ID);
+                throw new EntryNotFoundException("There is no entry in the mockDB with the ID " + k.ID);
             }
         }
 

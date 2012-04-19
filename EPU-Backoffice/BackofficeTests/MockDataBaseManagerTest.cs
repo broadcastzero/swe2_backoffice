@@ -153,9 +153,10 @@ namespace BackofficeTests
         [ExpectedException(typeof(EntryNotFoundException))]
         public void DeleteKundeKontaktTest()
         {
-            int id = -1;
-            bool type = false;
-            this.mdb.DeleteKundeKontakt(id, type);
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = -1;
+            k.Type = false;
+            this.mdb.DeleteKundeKontakt(k);
         }
 
         /*/// <summary>

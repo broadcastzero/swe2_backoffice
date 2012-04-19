@@ -549,12 +549,49 @@
             <param name="k">The to-be-changed Kunde/Kontakt</param>
             <param name="errorlabel">The label in which errormessages may be written</param>
         </member>
-        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(EPUBackoffice.Dal.Tables.KundeKontaktTable,System.Boolean)">
+        <member name="M:EPUBackoffice.BL.KundenKontakteChanger.Delete(EPUBackoffice.Dal.Tables.KundeKontaktTable,System.Windows.Forms.Label)">
             <summary>
             Deletes an existing Kunde/Kontakt
             </summary>
             <param name="k">The Kunde/Kontakt object that shall be deleted</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="label">The label in which errormessages can be shown</param>
+        </member>
+        <member name="T:EPUBackoffice.FileAppender">
+            <summary>
+            TODO: Update summary.
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.IAppender">
+            <summary>
+            Appender of the Logfile
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.IAppender.Configure">
+            <summary>
+            Configures the Logfile Appender
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.IAppender.Write(System.String)">
+            <summary>
+            Writes the message to the logfile
+            </summary>
+            <param name="message">The message which shall be logged</param>
+        </member>
+        <member name="M:EPUBackoffice.FileAppender.Configure">
+            <summary>
+            get path of logfile from config file or use standard filename
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.FileAppender.Write(System.String)">
+            <summary>
+            Writes the logging message into the text logger.
+            </summary>
+            <param name="message">The logging message</param>
+        </member>
+        <member name="P:EPUBackoffice.FileAppender.LogFilePath">
+            <summary>
+            The path in which the textfile log shall be created
+            </summary>
         </member>
         <member name="T:EPUBackoffice.Dal.DataBaseManager">
             <summary>
@@ -591,12 +628,11 @@
             </summary>
             <param name="k">The values of the to-be-changed Kunde</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.DeleteKundeKontakt(System.Int32,System.Boolean)">
+        <member name="M:EPUBackoffice.Dal.IDAL.DeleteKundeKontakt(EPUBackoffice.Dal.Tables.KundeKontaktTable)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the database
             </summary>
-            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="k">The Kunde/Kontakt table object that shall be deleted</param>
         </member>
         <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
             <summary>
@@ -668,12 +704,11 @@
             </summary>
             <param name="k">The to be updated Kunde/Kontakt object</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.DeleteKundeKontakt(EPUBackoffice.Dal.Tables.KundeKontaktTable)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the SQLite database
             </summary>
-            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="k">The Kunde/Kontakt object that shall be deleted from the SQLite database</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.String[])">
             <summary>
@@ -1110,12 +1145,11 @@
             </summary>
             <param name="k">The to-be-changed Kunde or Kontakt</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.DeleteKundeKontakt(System.Int32,System.Boolean)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.DeleteKundeKontakt(EPUBackoffice.Dal.Tables.KundeKontaktTable)">
             <summary>
             Deletes an existing Kunde or Kontakt out of the mock database
             </summary>
-            <param name="id">The ID of the to-be-deleted Kunde or Kontakt</param>
-            <param name="type">Is it a Kunde (false) or a Kontakt (true)?</param>
+            <param name="k">The Kunde/Kontakt object that shall be deleted</param>
         </member>
         <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
             <summary>
@@ -1195,43 +1229,6 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
-        </member>
-        <member name="T:EPUBackoffice.IAppender">
-            <summary>
-            Appender of the Logfile
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.IAppender.Configure">
-            <summary>
-            Configures the Logfile Appender
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.IAppender.Write(System.String)">
-            <summary>
-            Writes the message to the logfile
-            </summary>
-            <param name="message">The message which shall be logged</param>
-        </member>
-        <member name="T:EPUBackoffice.FileAppender">
-            <summary>
-            TODO: Update summary.
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.FileAppender.Configure">
-            <summary>
-            get path of logfile from config file or use standard filename
-            </summary>
-        </member>
-        <member name="M:EPUBackoffice.FileAppender.Write(System.String)">
-            <summary>
-            Writes the logging message into the text logger.
-            </summary>
-            <param name="message">The logging message</param>
-        </member>
-        <member name="P:EPUBackoffice.FileAppender.LogFilePath">
-            <summary>
-            The path in which the textfile log shall be created
-            </summary>
         </member>
     </members>
 </doc>
