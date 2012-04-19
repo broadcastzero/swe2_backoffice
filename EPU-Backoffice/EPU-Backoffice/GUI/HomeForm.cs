@@ -347,13 +347,19 @@ namespace EPUBackoffice.Gui
                     {
                         // if there are no changes, do nothing
                         if (firstname == k.Vorname && lastname == k.NachnameFirmenname)
-                        { return; }
+                        {
+                            this.logger.Log(Logger.Level.Warning, "User requested to change an item which does not need to be changed.");
+                            return; 
+                        }
                         else
                         {
                             // Change Kunde/Kontakt
                             k.Vorname = firstname;
                             k.NachnameFirmenname = lastname;
                             changer.Change(k, this.searchKundeErrorLabel);
+
+                            // success logging
+                            this.logger.Log(Logger.Level.Info, "Kunde/Kontakt with the ID " + k.ID + "has successfully been changed.");
                         }
                     }
                     else if (buttonName == "deleteKundeButton")
@@ -369,6 +375,7 @@ namespace EPUBackoffice.Gui
 
                 // update displayed rows
                 this.BindFromKundenSearchTextBlock(buttonName, selectedRow, firstname, lastname);
+                this.logger.Log(Logger.Level.Info, "Kunden search datagridview has been updated.");
 
                 this.searchKundeErrorLabel.ForeColor = Color.Green;
                 this.searchKundeErrorLabel.Text = "Success";

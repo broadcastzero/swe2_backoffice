@@ -44,8 +44,10 @@ namespace EPUBackoffice.BL
             // else save new Kunde or Kontakt in database
             if (k.Vorname.Length == 0)
             {
-                this.logger.Log(Logger.Level.Info, "Es wird kein Vorname eingetragen.");
+                this.logger.Log(Logger.Level.Info, "No first name will be stored.");
             }
+
+            this.logger.Log(Logger.Level.Info, "User requested to change " + (k.Type == false ? "Kunde" : "Kontakt") + " with ID " + k.ID);
 
             // Update data
             try
@@ -55,9 +57,7 @@ namespace EPUBackoffice.BL
             catch (SQLiteException)
             {
                 throw;
-            }
-
-            
+            }            
         }
 
         /// <summary>
