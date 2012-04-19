@@ -42,6 +42,8 @@ namespace EPUBackoffice.BL
                 throw new InvalidInputException();
             }
 
+            this.logger.Log(Logger.Level.Info, "User requested to insert " + (k.Type == false ? "Kunde" : "Kontakt") + " with values " + k.Vorname + " " + k.NachnameFirmenname);
+
             // else save new Kunde or Kontakt in database
             if (k.Vorname.Length == 0)
             {

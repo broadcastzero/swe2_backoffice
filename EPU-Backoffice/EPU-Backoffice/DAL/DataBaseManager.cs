@@ -218,6 +218,7 @@ namespace EPUBackoffice.Dal
                     result.ID = reader.GetInt32(0);
                     result.Vorname = reader.GetString(1);
                     result.NachnameFirmenname = reader.GetString(2);
+                    result.Type = k.Type;
 
                     // if nothing is stored within field "Vorname", just return empty string
                     if (result.Vorname == "<null>")

@@ -1,75 +1,120 @@
-18.04.2012 - 14:11 Info: -----------------------------------------------------------
-18.04.2012 - 14:11 Info: Program is started.
-18.04.2012 - 14:11 Info: Logging level: 0
-18.04.2012 - 14:11 Info: Using SQLite database.
-18.04.2012 - 14:11 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
-18.04.2012 - 14:11 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\test.db
-18.04.2012 - 14:11 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:11 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
-18.04.2012 - 14:11 Info: Open HomeForm
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: -----------------------------------------------------------
-18.04.2012 - 14:12 Info: Program is started.
-18.04.2012 - 14:12 Info: Logging level: 0
-18.04.2012 - 14:12 Info: Using SQLite database.
-18.04.2012 - 14:12 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:12 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: -----------------------------------------------------------
-18.04.2012 - 14:13 Info: Program is started.
-18.04.2012 - 14:13 Info: Logging level: 0
-18.04.2012 - 14:13 Info: Using SQLite database.
-18.04.2012 - 14:13 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: -----------------------------------------------------------
-18.04.2012 - 14:13 Info: Program is started.
-18.04.2012 - 14:13 Info: Logging level: 0
-18.04.2012 - 14:13 Info: Using SQLite database.
-18.04.2012 - 14:13 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: -----------------------------------------------------------
-18.04.2012 - 14:13 Info: Program is started.
-18.04.2012 - 14:13 Info: Logging level: 0
-18.04.2012 - 14:13 Info: Using SQLite database.
-18.04.2012 - 14:13 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:13 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:14 Info: -----------------------------------------------------------
-18.04.2012 - 14:14 Info: Program is started.
-18.04.2012 - 14:14 Info: Logging level: 0
-18.04.2012 - 14:14 Info: Using SQLite database.
-18.04.2012 - 14:14 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-18.04.2012 - 14:14 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:42 Info: A new Kontakt has been saved to the database: 10 Felix Wagner
+19.04.2012 - 11:42 Info: A new Kontakt has been saved to the database: 11 Marvin Vesely
+19.04.2012 - 11:43 Info: A new Kunde has been saved to the database: 51 Neuer Test
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:43 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:43 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:43 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:44 Info: User requested to delete Kunde with ID 47
+19.04.2012 - 11:44 Info: Kunde has been dropped from the SQLite database. ID: 47
+19.04.2012 - 11:44 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:44 Info: User requested to delete Kunde with ID 27
+19.04.2012 - 11:44 Info: Kunde has been dropped from the SQLite database. ID: 27
+19.04.2012 - 11:44 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:44 Info: User requested to delete Kunde with ID 51
+19.04.2012 - 11:44 Info: Kunde has been dropped from the SQLite database. ID: 51
+19.04.2012 - 11:44 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:44 Info: User requested to delete Kunde with ID 9
+19.04.2012 - 11:44 Info: Kunde has been dropped from the SQLite database. ID: 9
+19.04.2012 - 11:44 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:44 Info: User requested to delete Kunde with ID 10
+19.04.2012 - 11:44 Info: Kunde has been dropped from the SQLite database. ID: 10
+19.04.2012 - 11:44 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:46 Info: User requested to delete Kunde with ID 10
+19.04.2012 - 11:46 Info: Kunde has been dropped from the SQLite database. ID: 10
+19.04.2012 - 11:46 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:46 Info: User requested to delete Kunde with ID 10
+19.04.2012 - 11:46 Info: Kunde has been dropped from the SQLite database. ID: 10
+19.04.2012 - 11:46 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:46 Info: User requested to change Kunde with ID 10
+19.04.2012 - 11:46 Info: Kunde has been updated in the SQLite database: ID: 10 Herr Heinz
+19.04.2012 - 11:46 Info: Kunde/Kontakt with the ID 10has successfully been changed.
+19.04.2012 - 11:46 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:46 Info: User requested to change Kunde with ID 5
+19.04.2012 - 11:46 Info: Kunde has been updated in the SQLite database: ID: 5 Halt Tester
+19.04.2012 - 11:46 Info: Kunde/Kontakt with the ID 5has successfully been changed.
+19.04.2012 - 11:46 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:47 Info: User requested to delete Kunde with ID 1
+19.04.2012 - 11:47 Info: Kunde has been dropped from the SQLite database. ID: 1
+19.04.2012 - 11:47 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:48 Info: -----------------------------------------------------------
+19.04.2012 - 11:48 Info: Program is started.
+19.04.2012 - 11:48 Info: Logging level: 0
+19.04.2012 - 11:48 Info: Using SQLite database.
+19.04.2012 - 11:48 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:48 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: -----------------------------------------------------------
+19.04.2012 - 11:51 Info: Program is started.
+19.04.2012 - 11:51 Info: Logging level: 0
+19.04.2012 - 11:51 Info: Using SQLite database.
+19.04.2012 - 11:51 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: -----------------------------------------------------------
+19.04.2012 - 11:51 Info: Program is started.
+19.04.2012 - 11:51 Info: Logging level: 0
+19.04.2012 - 11:51 Info: Using SQLite database.
+19.04.2012 - 11:51 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: -----------------------------------------------------------
+19.04.2012 - 11:51 Info: Program is started.
+19.04.2012 - 11:51 Info: Logging level: 0
+19.04.2012 - 11:51 Info: Using SQLite database.
+19.04.2012 - 11:51 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:51 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:52 Info: -----------------------------------------------------------
+19.04.2012 - 11:52 Info: Program is started.
+19.04.2012 - 11:52 Info: Logging level: 0
+19.04.2012 - 11:52 Info: Using SQLite database.
+19.04.2012 - 11:52 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:52 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:52 Info: A new Kontakt has been saved to the database: 12 Tre Sor
+19.04.2012 - 11:54 Info: -----------------------------------------------------------
+19.04.2012 - 11:54 Info: Program is started.
+19.04.2012 - 11:54 Info: Logging level: 0
+19.04.2012 - 11:54 Info: Using SQLite database.
+19.04.2012 - 11:54 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:54 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:54 Info: User requested to insert Kontakt with values Test Zwei
+19.04.2012 - 11:54 Info: A new Kontakt has been saved to the database: 13 Test Zwei
+19.04.2012 - 11:54 Info: User requested to insert Kunde with values Test Drei
+19.04.2012 - 11:54 Info: A new Kunde has been saved to the database: 52 Test Drei
+19.04.2012 - 11:55 Info: User requested to delete Kunde with ID 5
+19.04.2012 - 11:55 Info: Kunde has been dropped from the SQLite database. ID: 5
+19.04.2012 - 11:55 Info: Kunden search datagridview has been updated.
+19.04.2012 - 11:56 Info: -----------------------------------------------------------
+19.04.2012 - 11:56 Info: Program is started.
+19.04.2012 - 11:56 Info: Logging level: 0
+19.04.2012 - 11:56 Info: Using SQLite database.
+19.04.2012 - 11:56 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:56 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:57 Info: -----------------------------------------------------------
+19.04.2012 - 11:57 Info: Program is started.
+19.04.2012 - 11:57 Info: Logging level: 0
+19.04.2012 - 11:57 Info: Using SQLite database.
+19.04.2012 - 11:57 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:57 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:58 Info: -----------------------------------------------------------
+19.04.2012 - 11:58 Info: Program is started.
+19.04.2012 - 11:58 Info: Logging level: 0
+19.04.2012 - 11:58 Info: Using SQLite database.
+19.04.2012 - 11:58 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:58 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+19.04.2012 - 11:59 Info: -----------------------------------------------------------
+19.04.2012 - 11:59 Info: Program is started.
