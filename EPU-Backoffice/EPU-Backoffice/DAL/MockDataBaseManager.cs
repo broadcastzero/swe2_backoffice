@@ -126,7 +126,13 @@ namespace EPUBackoffice.Dal
 
                 foreach (KundeKontaktTable kunde in MockDataBaseManager.SavedKunden)
                 {
-                    if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
+                    // if it shall be searched for ID, really only search for ID and ignore other field values
+                    if (k.ID == kunde.ID)
+                    {
+                        resultlist.Add(kunde);
+                        break; // Kunde found, there is no other for ID is unique
+                    }
+                    else if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
                     { resultlist.Add(kunde); }
                     else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
                     {
@@ -152,7 +158,13 @@ namespace EPUBackoffice.Dal
 
                 foreach (KundeKontaktTable kontakt in MockDataBaseManager.SavedKontakte)
                 {
-                    if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
+                    // if it shall be searched for ID, really only search for ID and ignore other field values
+                    if (k.ID == kontakt.ID)
+                    {
+                        resultlist.Add(kontakt);
+                        break; // Kontakt found, there is no other for ID is unique
+                    }
+                    else if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
                     { resultlist.Add(kontakt); }
                     else if (k.Vorname.Length != 0 && k.NachnameFirmenname.Length == 0)
                     {

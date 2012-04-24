@@ -35,12 +35,37 @@ namespace EPUBackoffice.BL
         public List<KundeKontaktTable> LoadKundenKontakte(KundeKontaktTable k, Label errorlabel)
         {
             DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            k.ID = -1; // indicates that we don't want to search for an ID
 
             if (errorlabel.Visible)
             {
                 throw new InvalidInputException();
             }
+
+            try
+            {
+                return DALFactory.GetDAL().GetKundenKontakte(k);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Gets an Kunden/Kontakt ID and type and loads requested data
+        /// </summary>
+        /// <param name="id">The requested ID</param>
+        /// <param name="type">Kunde (false) or Kontakt (true)?</param>
+        /// <returns></returns>
+        public List<KundeKontaktTable> LoadKundenKontakte(int id, bool type)
+        {
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = id;
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = string.Empty;
+            k.Type = type;
 
             try
             {

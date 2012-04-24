@@ -11,6 +11,7 @@ namespace EPUBackoffice.Gui
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Data;
+    using System.Data.SQLite;
     using System.Drawing;
     using System.Diagnostics;
     using System.Text;
@@ -61,7 +62,7 @@ namespace EPUBackoffice.Gui
         private void SelectAngeboteTab(object sender, EventArgs e)
         {
             this.ResetCreateAngebotFields(null, null);
-            this.ResetCreateAngebotLabels(null, null);
+            this.createAngebotMsgLabel.Hide();
             mainTab.SelectTab("angeboteTab");  
         }
 
@@ -146,6 +147,7 @@ namespace EPUBackoffice.Gui
         {
             // hide error label
             this.kundeNeuMsgLabel.Hide();
+            this.kundeNeuMsgLabel.Text = string.Empty;
 
             KundeKontaktTable k = new KundeKontaktTable();
             
@@ -246,6 +248,7 @@ namespace EPUBackoffice.Gui
         {
             // hide error message
             this.searchKundeErrorLabel.Hide();
+            this.searchKundeErrorLabel.Text = string.Empty;
 
             KundeKontaktTable k = new KundeKontaktTable();
             k.Vorname = DataBindingFramework.BindFromString(this.searchKundeVornameTextBlock.Text, "Vorname", this.searchKundeErrorLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
@@ -319,9 +322,10 @@ namespace EPUBackoffice.Gui
         /// </summary>
         /// <param name="sender">The sender</param>
         /// <param name="e">The params</param>
-        private void changeKundeOrKontakt(object sender, EventArgs e)
+        private void ChangeKundeOrKontakt(object sender, EventArgs e)
         {
             this.searchKundeErrorLabel.Hide();
+            this.searchKundeErrorLabel.Text = string.Empty;
 
             // if there are results
             if (this.kundenSuchenBindingSource.Count > 0)
@@ -330,8 +334,14 @@ namespace EPUBackoffice.Gui
                 KundeKontaktTable k = (KundeKontaktTable)this.kundenSuchenBindingSource.List[selectedRow];//this.kundenSearchDataGridView.SelectedRows[0].Index];
 
                 // get firstname and lastname from textbox
-                string firstname = this.searchKundeVornameTextBlock.Text;
-                string lastname = this.searchKundeNachnameTextBlock.Text;
+                string firstname = DataBindingFramework.BindFromString(this.searchKundeVornameTextBlock.Text, "Vorname", this.searchKundeErrorLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+                string lastname = DataBindingFramework.BindFromString(this.searchKundeNachnameTextBlock.Text, "Nachname", this.searchKundeErrorLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+
+                // in case of errors
+                if (this.searchKundeErrorLabel.Visible)
+                {
+                    return;
+                }
 
                 KundenKontakteChanger changer = new KundenKontakteChanger();
 
@@ -377,9 +387,8 @@ namespace EPUBackoffice.Gui
                 this.BindFromKundenSearchTextBlock(buttonName, selectedRow, firstname, lastname);
                 this.logger.Log(Logger.Level.Info, "Kunden search datagridview has been updated.");
 
-                this.searchKundeErrorLabel.ForeColor = Color.Green;
-                this.searchKundeErrorLabel.Text = "Success";
-                this.searchKundeErrorLabel.Show();
+                // show success messages
+                this.ShowSuccessLabel(this.searchKundeErrorLabel);
             }
         }
 
@@ -404,12 +413,14 @@ namespace EPUBackoffice.Gui
             List<string> listItems = new List<string>();
             KundenKontakteLoader loader = new KundenKontakteLoader();
 
+            // Create empty Kunden object with type "false"
             KundeKontaktTable k = new KundeKontaktTable();
             k.Vorname = string.Empty;
             k.NachnameFirmenname = string.Empty;
             k.Type = false;
 
-            results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel); // only get Kunden
+            // only get Kunden
+            results = loader.LoadKundenKontakte(k, this.searchKundeErrorLabel);
 
             if(results.Count != 0)
             {
@@ -421,7 +432,6 @@ namespace EPUBackoffice.Gui
             }
 
             (sender as ComboBox).DataSource = listItems;
-            //this.createAngebotExistingKundeComboBox.DataSource = listItems;
         }
 
         /// <summary>
@@ -432,11 +442,15 @@ namespace EPUBackoffice.Gui
         private void CreateNewAngebot(object sender, EventArgs e)
         {
             // reset error/success labels
-            this.ResetCreateAngebotLabels(null, null);
+            this.createAngebotMsgLabel.Hide();
+            this.createAngebotMsgLabel.Text = string.Empty;
 
             // existing or newly to-be-created
             bool createKunde = false;
             string kundenID = null;
+
+            // Table for the Kontakt
+            KundeKontaktTable k = new KundeKontaktTable();
 
             // new Kunde
             if (this.angebotErstellenSubTab.SelectedTab == this.angebotErstellenSubTab.TabPages[0])
@@ -446,40 +460,92 @@ namespace EPUBackoffice.Gui
             // existing Kunde
             else
             {
-                // no Kunde ausgewählt -> show error label
+                // no Kunde chosen -> show error label
                 if (this.createAngebotExistingKundeComboBox.SelectedIndex < 0)
                 {
-                    this.createAngebotErrorLabel.Text = "Error: kein Kunde ausgewählt";
-                    this.createAngebotErrorLabel.Show();
+                    this.createAngebotMsgLabel.Text = "Error: kein Kunde ausgewählt";
+                    this.createAngebotMsgLabel.ForeColor = Color.Red;
+                    this.createAngebotMsgLabel.Show();
                     return; // skip rest of function
                 }
-                // get ID out of ComboBox
+                // Kunde chosen - get ID out of ComboBox
                 else
                 { 
                     kundenID = this.createAngebotExistingKundeComboBox.SelectedItem.ToString();
                     kundenID = kundenID.Substring(0, kundenID.IndexOf(':'));
+                    k.ID = DataBindingFramework.BindFromInt(kundenID, "KundenID", this.createAngebotMsgLabel, Rules.PositiveInt);
+
+                    // get Kunde table out of Database
+                    KundenKontakteLoader loader = new KundenKontakteLoader();
+                    List<KundeKontaktTable> results = loader.LoadKundenKontakte(k.ID, false);
+                    
+                    // there must be exactly one result, for ID is unique!
+                    if (results.Count != 1)
+                    {
+                        this.logger.Log(Logger.Level.Error, "More than one Kunde returned - impossible, because ID is unique!");
+                        this.createAngebotMsgLabel.Text = "Error: Datenbank inkonsistent!";
+                        this.createAngebotMsgLabel.Visible = true;
+                        return; // skip rest of function
+                    }
+
+                    // everything went fine
+                    k = results[0];
                 }
             }
 
-            string firstname = this.createAngebotNewKundeVnTextBox.Text;
-            string lastname = this.createAngebotNewKundeNnTextBox.Text;
+            // Create new Kunde, if requested
+            if (createKunde)
+            {
+                k.Vorname = DataBindingFramework.BindFromString(this.createAngebotNewKundeVnTextBox.Text, "Vorname", this.createAngebotMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+                k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createAngebotNewKundeNnTextBox.Text, "Nachname", this.createAngebotMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+                k.Type = false; // Kunde
+                KundenKontakteSaver saver = new KundenKontakteSaver();
 
+                try
+                {
+                    saver.SaveNewKundeKontakt(k, this.createAngebotMsgLabel);
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
+                    this.createAngebotMsgLabel.Text = "Error: Kundenfelder enthalten ungültige Zeichen";
+                    this.createAngebotMsgLabel.Visible = true;
+                    return;
+                }
+                catch (SQLiteException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
+                    this.createAngebotMsgLabel.Text = "Error: Datenbankproblem!";
+                    this.createAngebotMsgLabel.Visible = true;
+                    return;
+                }
+
+                this.createAngebotMsgLabel.Text = "Kunde wurde gespeichert.";
+            }
+
+            // Create Angebot
             try
             {
                 this.logger.Log(Logger.Level.Info, "Start creating new Angebot...");
+
+                AngebotTable angebot = new AngebotTable();
+                angebot.Angebotssumme = DataBindingFramework.BindFromDouble(this.createAngebotAngebotssummeTextBox.Text, "Angebotssumme", this.createAngebotMsgLabel, Rules.PositiveDouble);
+
                 AngebotManager manager = new AngebotManager();
-                manager.Create(kundenID, createKunde, firstname, lastname, this.createAngebotAngebotssummeTextBox.Text, this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, this.angebotValidUntilDateTimePicker.Value, this.createAngebotDescriptionTextBox.Text);
+                //manager.Create(angebot);
             }
             catch (InvalidInputException ex)
             {
-                this.createAngebotErrorLabel.Text = "Error: " + ex.Message;
-                this.createAngebotErrorLabel.Show();
+                this.createAngebotMsgLabel.Text += "\nError: " + ex.Message;
+                this.createAngebotMsgLabel.Show();
             }
 
             // show success message, if no error has been thrown
-            if (!createAngebotErrorLabel.Visible)
+            if (!createAngebotMsgLabel.Visible)
             {
-                this.createAngebotSuccessLabel.Show();
+                this.createAngebotMsgLabel.Text += "\nAngebot wurde gespeichert.";
+                this.createAngebotMsgLabel.ForeColor = Color.Green;
+                this.createAngebotMsgLabel.Show();
             }
         }
 
@@ -496,18 +562,7 @@ namespace EPUBackoffice.Gui
             this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Clear();
             this.createAngebotDescriptionTextBox.Clear();
 
-            this.ResetCreateAngebotLabels(null, null);
-        }
-
-        /// <summary>
-        /// Clears error/success labels
-        /// </summary>
-        /// <param name="sender">The sender</param>
-        /// <param name="e">The event args</param>
-        private void ResetCreateAngebotLabels(object sender, EventArgs e)
-        {
-            this.createAngebotErrorLabel.Hide();
-            this.createAngebotSuccessLabel.Hide();
+            this.createAngebotMsgLabel.Hide();
         }
 
         /// <summary>

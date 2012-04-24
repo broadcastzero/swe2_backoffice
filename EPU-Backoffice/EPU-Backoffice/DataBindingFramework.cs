@@ -52,11 +52,11 @@ namespace DatabindingFramework
                 {
                     return 0;
                 }
-                else if (validInt < 0)
+                else if (validInt < 0 && label != null)
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }
@@ -99,11 +99,11 @@ namespace DatabindingFramework
                 {
                     return string.Empty;
                 }
-                else if (!valid)
+                else if (!valid && label != null)
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
                     label.Show();
                     return string.Empty;
                 }
@@ -145,11 +145,11 @@ namespace DatabindingFramework
                 {
                     return 0;
                 }
-                else if (validDouble < 0)
+                else if (validDouble < 0 && label != null)
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text = name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }

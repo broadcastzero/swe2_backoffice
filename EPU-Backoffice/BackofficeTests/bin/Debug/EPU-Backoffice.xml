@@ -210,7 +210,7 @@
             <param name="firstname">The new first name</param>
             <param name="lastname">The new last name</param>
         </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.changeKundeOrKontakt(System.Object,System.EventArgs)">
+        <member name="M:EPUBackoffice.Gui.HomeForm.ChangeKundeOrKontakt(System.Object,System.EventArgs)">
             <summary>
             Changes information of an existing Kunde
             </summary>
@@ -234,13 +234,6 @@
         <member name="M:EPUBackoffice.Gui.HomeForm.ResetCreateAngebotFields(System.Object,System.EventArgs)">
             <summary>
             Clears input fields in createAngebot
-            </summary>
-            <param name="sender">The sender</param>
-            <param name="e">The event args</param>
-        </member>
-        <member name="M:EPUBackoffice.Gui.HomeForm.ResetCreateAngebotLabels(System.Object,System.EventArgs)">
-            <summary>
-            Clears error/success labels
             </summary>
             <param name="sender">The sender</param>
             <param name="e">The event args</param>
@@ -930,6 +923,14 @@
             <param name="k">The Kunde/Kontakt object that shall be searched for</param>
             <param name="errorlabel">A label in the homeform in which errormessages can be displayed</param>
             <returns>List of matching Kontakt</returns>
+        </member>
+        <member name="M:EPUBackoffice.BL.KundenKontakteLoader.LoadKundenKontakte(System.Int32,System.Boolean)">
+            <summary>
+            Gets an Kunden/Kontakt ID and type and loads requested data
+            </summary>
+            <param name="id">The requested ID</param>
+            <param name="type">Kunde (false) or Kontakt (true)?</param>
+            <returns></returns>
         </member>
         <member name="T:EPUBackoffice.UserExceptions.EntryNotFoundException">
             <summary>

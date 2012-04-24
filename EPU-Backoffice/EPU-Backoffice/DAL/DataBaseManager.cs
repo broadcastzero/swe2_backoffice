@@ -150,7 +150,13 @@ namespace EPUBackoffice.Dal
         {
             string type = k.Type == false ? "Kunde" : "Kontakt";
 
-            if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
+            // if it shall be searched for ID, really only search for ID and ignore other fields
+            // ID will be -1 if it shall not be searched for ID (set in Business Layer)
+            if (k.ID >= 0)
+            {
+                return "SELECT * FROM " + type + " WHERE ID = ?";
+            }
+            else if (k.Vorname.Length == 0 && k.NachnameFirmenname.Length == 0)
             {
                 return "SELECT * FROM " + type;
             }
@@ -194,8 +200,16 @@ namespace EPUBackoffice.Dal
                 tra = con.BeginTransaction();
                 cmd = new SQLiteCommand(sql, con);
 
+                // if it shall be searched for ID, really only search for ID and ignore other fields
+                if (k.ID != -1)
+                {
+                    SQLiteParameter p_ID = new SQLiteParameter();
+                    p_ID.Value = k.ID;
+                    cmd.Parameters.Add(p_ID);
+                }
+
                 // bind first name
-                if (k.Vorname.Length != 0)
+                if (k.ID < 0 && k.Vorname.Length != 0)
                 {
                     SQLiteParameter p_firstname = new SQLiteParameter();
                     p_firstname.Value = k.Vorname;
@@ -203,7 +217,7 @@ namespace EPUBackoffice.Dal
                 }
                 
                 // bind last name
-                if (k.NachnameFirmenname.Length != 0)
+                if (k.ID < 0 && k.NachnameFirmenname.Length != 0)
                 {
                     SQLiteParameter p_lastname = new SQLiteParameter();
                     p_lastname.Value = k.NachnameFirmenname;

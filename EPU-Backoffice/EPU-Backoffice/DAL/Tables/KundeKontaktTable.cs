@@ -22,7 +22,7 @@ namespace EPUBackoffice.Dal.Tables
         public int ID
         {
             get { return id; }
-            set { if (value >= 0) { id = value; } }
+            set { id = value; }
         }
 
         private string vorname;

@@ -64,6 +64,10 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.changeKundeButton = new System.Windows.Forms.Button();
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -122,8 +126,7 @@
             this.angebotTab = new System.Windows.Forms.TabControl();
             this.angebotErstellenTab = new System.Windows.Forms.TabPage();
             this.createAngebotResetButton = new System.Windows.Forms.Button();
-            this.createAngebotErrorLabel = new System.Windows.Forms.Label();
-            this.createAngebotSuccessLabel = new System.Windows.Forms.Label();
+            this.createAngebotMsgLabel = new System.Windows.Forms.Label();
             this.createAngebotDescriptionLabel = new System.Windows.Forms.Label();
             this.createAngebotDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
@@ -196,10 +199,6 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).BeginInit();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
@@ -550,7 +549,7 @@
             this.kundenTabSearchChange.Size = new System.Drawing.Size(771, 233);
             this.kundenTabSearchChange.TabIndex = 1;
             this.kundenTabSearchChange.Text = "Suchen und Ändern";
-            this.kundenTabSearchChange.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            this.kundenTabSearchChange.Click += new System.EventHandler(this.ChangeKundeOrKontakt);
             // 
             // deleteKundeButton
             // 
@@ -560,7 +559,7 @@
             this.deleteKundeButton.TabIndex = 15;
             this.deleteKundeButton.Text = "Löschen";
             this.deleteKundeButton.UseVisualStyleBackColor = true;
-            this.deleteKundeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            this.deleteKundeButton.Click += new System.EventHandler(this.ChangeKundeOrKontakt);
             // 
             // searchKundeErrorLabel
             // 
@@ -621,6 +620,40 @@
             this.kundenSearchDataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
             this.kundenSearchDataGridView.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewHeaderClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 43;
+            // 
+            // Vorname
+            // 
+            this.Vorname.DataPropertyName = "Vorname";
+            this.Vorname.HeaderText = "Vorname";
+            this.Vorname.Name = "Vorname";
+            this.Vorname.ReadOnly = true;
+            this.Vorname.Width = 74;
+            // 
+            // Nachname
+            // 
+            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nachname.DataPropertyName = "NachnameFirmenname";
+            this.Nachname.HeaderText = "Nachname / Firmenname";
+            this.Nachname.Name = "Nachname";
+            this.Nachname.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "Type";
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Visible = false;
+            this.Type.Width = 56;
+            // 
             // changeKundeButton
             // 
             this.changeKundeButton.Location = new System.Drawing.Point(141, 112);
@@ -629,7 +662,7 @@
             this.changeKundeButton.TabIndex = 5;
             this.changeKundeButton.Text = "Ändern";
             this.changeKundeButton.UseVisualStyleBackColor = true;
-            this.changeKundeButton.Click += new System.EventHandler(this.changeKundeOrKontakt);
+            this.changeKundeButton.Click += new System.EventHandler(this.ChangeKundeOrKontakt);
             // 
             // kundenSearchButton
             // 
@@ -1165,8 +1198,7 @@
             // 
             this.angebotErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenTab.Controls.Add(this.createAngebotResetButton);
-            this.angebotErstellenTab.Controls.Add(this.createAngebotErrorLabel);
-            this.angebotErstellenTab.Controls.Add(this.createAngebotSuccessLabel);
+            this.angebotErstellenTab.Controls.Add(this.createAngebotMsgLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionTextBox);
             this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
@@ -1196,27 +1228,16 @@
             this.createAngebotResetButton.UseVisualStyleBackColor = true;
             this.createAngebotResetButton.Click += new System.EventHandler(this.ResetCreateAngebotFields);
             // 
-            // createAngebotErrorLabel
+            // createAngebotMsgLabel
             // 
-            this.createAngebotErrorLabel.AutoSize = true;
-            this.createAngebotErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.createAngebotErrorLabel.Location = new System.Drawing.Point(20, 61);
-            this.createAngebotErrorLabel.Name = "createAngebotErrorLabel";
-            this.createAngebotErrorLabel.Size = new System.Drawing.Size(39, 13);
-            this.createAngebotErrorLabel.TabIndex = 17;
-            this.createAngebotErrorLabel.Text = "Fehler:";
-            this.createAngebotErrorLabel.Visible = false;
-            // 
-            // createAngebotSuccessLabel
-            // 
-            this.createAngebotSuccessLabel.AutoSize = true;
-            this.createAngebotSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.createAngebotSuccessLabel.Location = new System.Drawing.Point(20, 61);
-            this.createAngebotSuccessLabel.Name = "createAngebotSuccessLabel";
-            this.createAngebotSuccessLabel.Size = new System.Drawing.Size(110, 13);
-            this.createAngebotSuccessLabel.TabIndex = 16;
-            this.createAngebotSuccessLabel.Text = "Eingabe erfolgreich! :)";
-            this.createAngebotSuccessLabel.Visible = false;
+            this.createAngebotMsgLabel.AutoSize = true;
+            this.createAngebotMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.createAngebotMsgLabel.Location = new System.Drawing.Point(20, 56);
+            this.createAngebotMsgLabel.Name = "createAngebotMsgLabel";
+            this.createAngebotMsgLabel.Size = new System.Drawing.Size(33, 13);
+            this.createAngebotMsgLabel.TabIndex = 17;
+            this.createAngebotMsgLabel.Text = "Label";
+            this.createAngebotMsgLabel.Visible = false;
             // 
             // createAngebotDescriptionLabel
             // 
@@ -1908,40 +1929,6 @@
             this.button8.Text = "Kontobewegungen";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 43;
-            // 
-            // Vorname
-            // 
-            this.Vorname.DataPropertyName = "Vorname";
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
-            this.Vorname.Width = 74;
-            // 
-            // Nachname
-            // 
-            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nachname.DataPropertyName = "NachnameFirmenname";
-            this.Nachname.HeaderText = "Nachname / Firmenname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
-            // 
-            // Type
-            // 
-            this.Type.DataPropertyName = "Type";
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Visible = false;
-            this.Type.Width = 56;
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2162,8 +2149,7 @@
         private System.Windows.Forms.Button createAngebotButton;
         private System.Windows.Forms.Label createAngebotDescriptionLabel;
         private System.Windows.Forms.TextBox createAngebotDescriptionTextBox;
-        private System.Windows.Forms.Label createAngebotErrorLabel;
-        private System.Windows.Forms.Label createAngebotSuccessLabel;
+        private System.Windows.Forms.Label createAngebotMsgLabel;
         private System.Windows.Forms.Button createAngebotResetButton;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label projektNeuErrorLabel;
