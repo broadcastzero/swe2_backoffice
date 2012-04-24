@@ -524,20 +524,29 @@ namespace EPUBackoffice.Gui
             }
 
             // Create Angebot
+            this.logger.Log(Logger.Level.Info, "Start creating new Angebot...");
+
+            AngebotTable angebot = new AngebotTable();
+            angebot.Angebotssumme = DataBindingFramework.BindFromDouble(this.createAngebotAngebotssummeTextBox.Text, "Angebotssumme", this.createAngebotMsgLabel, Rules.PositiveDouble);
+            angebot.Umsetzungschance = DataBindingFramework.BindFromInt(this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, "Umsetzungschance", this.createAngebotMsgLabel, Rules.PerCent);
+            angebot.Angebotsdauer = DataBindingFramework.BindFromString(this.angebotValidUntilDateTimePicker.Value.ToShortDateString(), "GültigBis", this.createAngebotMsgLabel, Rules.Date);
+            angebot.Beschreibung = DataBindingFramework.BindFromString(this.createAngebotDescriptionTextBox.Text, "Beschreibung", this.createAngebotMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+
             try
             {
-                this.logger.Log(Logger.Level.Info, "Start creating new Angebot...");
-
-                AngebotTable angebot = new AngebotTable();
-                angebot.Angebotssumme = DataBindingFramework.BindFromDouble(this.createAngebotAngebotssummeTextBox.Text, "Angebotssumme", this.createAngebotMsgLabel, Rules.PositiveDouble);
-
                 AngebotManager manager = new AngebotManager();
-                //manager.Create(angebot);
+                manager.Create(angebot);
             }
             catch (InvalidInputException ex)
             {
+                this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
                 this.createAngebotMsgLabel.Text += "\nError: " + ex.Message;
                 this.createAngebotMsgLabel.Show();
+            }
+            catch (SQLiteException ex)
+            {
+                this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
+                this.createAngebotMsgLabel.Text += "\nError: " + ex.Message;
             }
 
             // show success message, if no error has been thrown

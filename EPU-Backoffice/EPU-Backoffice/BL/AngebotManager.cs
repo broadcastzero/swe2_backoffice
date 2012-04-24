@@ -28,7 +28,7 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
         /// </summary>
-        public void Create(string kundenID, bool createKunde, string firstname, string lastname, string angebotssumme, string umsetzungswahrscheinlichkeit, DateTime validUntil, string description)
+        public void Create(AngebotTable angebot)
         {
             /*// parse strings
             double angebotssum = RuleManager.ValidatePositiveDouble(angebotssumme);

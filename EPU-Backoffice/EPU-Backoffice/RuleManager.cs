@@ -44,6 +44,10 @@ namespace Rulemanager
         /// An integer between 0-100 is requested (%)
         /// </summary>
         PerCent = 6,
+        /// <summary>
+        /// A date string in the format 17/07/1987
+        /// </summary>
+        Date = 7
     };
 
     /// <summary>
@@ -160,6 +164,19 @@ namespace Rulemanager
         public static bool IsAndCanBeNull(string input)
         {
             return input.Length == 0 ? true : false;
+        }
+
+        /// <summary>
+        /// Checks if string is a valid date string with the format 17/07/1987
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool ValidateDateString(string input)
+        {
+            DateTime result;
+            bool couldParse = DateTime.TryParse(input, out result);
+
+            return couldParse;
         }
     }
 }

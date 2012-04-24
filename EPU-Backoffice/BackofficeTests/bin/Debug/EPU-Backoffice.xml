@@ -385,6 +385,11 @@
             An integer between 0-100 is requested (%)
             </summary>
         </member>
+        <member name="F:Rulemanager.Rules.Date">
+            <summary>
+            A date string in the format 17/07/1987
+            </summary>
+        </member>
         <member name="T:Rulemanager.RuleManager">
             <summary>
             This class checks the user input for invalid characters
@@ -438,6 +443,13 @@
             </summary>
             <param name="input">The input string</param>
             <returns>false, if empty</returns>
+        </member>
+        <member name="M:Rulemanager.RuleManager.ValidateDateString(System.String)">
+            <summary>
+            Checks if string is a valid date string with the format 17/07/1987
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
         </member>
         <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
             <summary>
@@ -754,7 +766,7 @@
             Contains methods to manipulate, save or load Angebote
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.AngebotManager.Create(System.String,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime,System.String)">
+        <member name="M:EPUBackoffice.BL.AngebotManager.Create(EPUBackoffice.Dal.Tables.AngebotTable)">
             <summary>
             Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
             </summary>

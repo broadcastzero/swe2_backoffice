@@ -91,6 +91,8 @@ namespace DatabindingFramework
                         break;
                     case 5: valid = RuleManager.ValidateStringLength150(input);
                         break;
+                    case 7: valid = RuleManager.ValidateDateString(input);
+                        break;
                     default: valid = false;// no rule
                         break;
                 }

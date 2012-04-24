@@ -1232,7 +1232,7 @@
             // 
             this.createAngebotMsgLabel.AutoSize = true;
             this.createAngebotMsgLabel.ForeColor = System.Drawing.Color.Red;
-            this.createAngebotMsgLabel.Location = new System.Drawing.Point(20, 56);
+            this.createAngebotMsgLabel.Location = new System.Drawing.Point(20, 53);
             this.createAngebotMsgLabel.Name = "createAngebotMsgLabel";
             this.createAngebotMsgLabel.Size = new System.Drawing.Size(33, 13);
             this.createAngebotMsgLabel.TabIndex = 17;
