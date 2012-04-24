@@ -271,24 +271,14 @@ namespace EPUBackoffice.Dal
         }
 
         /// <summary>
-        /// Creates a new Angebot with the provided parameters and saves it in the mockDB
+        /// Gets an Angebot table with the needed parameters and saves it in the mockDB
         /// </summary>
-        /// <param name="kundenID">The foreign key to Kunde</param>
-        /// <param name="angebotssumme">The amount of money the costumer will have to pay</param>
-        /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
-        /// <param name="validUntil">Deadline date</param>
-        /// <param name="description">A short description of the Angebot</param>
-        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, string validUntil, string description)
+        /// <param name="angebot">The business object</param>
+        public void CreateAngebot(AngebotTable angebot)
         {
-            AngebotTable angebot = new AngebotTable();
             angebot.ID = MockDataBaseManager.AngebotID;
-            angebot.KundenID = kundenID;
-            angebot.Angebotssumme = angebotssumme;
-            angebot.Umsetzungschance = umsetzungswahrscheinlichkeit;
-            angebot.Angebotsdauer = validUntil;
-            angebot.Beschreibung = description;
-
             MockDataBaseManager.savedAngebote.Add(angebot);
+            this.logger.Log(Logger.Level.Info, "Angebot saved to the mockDB");
         }
 
         /// <summary>

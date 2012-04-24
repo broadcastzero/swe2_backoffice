@@ -306,7 +306,7 @@ namespace EPUBackoffice.Dal
         /// Gets an sql statement and an ID and commits statement
         /// </summary>
         /// <param name="sql">The sql statement</param>
-        /// <param name="id">The ID - used for binding</param>
+        /// <param name="id">The ID of the table. Is -1, if not needed. Is >=0, if it shall be used (i.e. for WHERE kundenID = ?)</param>
         /// <param name="parameter">A string array of provided optional paramter</param>
         private void SendStatementToDatabase(string sql, int id, params string[] parameter)
         {
@@ -332,9 +332,12 @@ namespace EPUBackoffice.Dal
                 }
 
                 // initialise and bind ID - at the end of the string, mostly in WHERE needed!
-                SQLiteParameter p_ID = new SQLiteParameter();
-                p_ID.Value = id;
-                cmd.Parameters.Add(p_ID);
+                if (id >= 0)
+                {
+                    SQLiteParameter p_ID = new SQLiteParameter();
+                    p_ID.Value = id;
+                    cmd.Parameters.Add(p_ID);
+                }
 
                 // execute and commit
                 cmd.ExecuteNonQuery();
@@ -355,12 +358,8 @@ namespace EPUBackoffice.Dal
         /// <summary>
         /// Creates a new Angebot with the provided parameters and saves it in the SQLite-DB
         /// </summary>
-        /// <param name="kundenID">The foreign key to Kunde</param>
-        /// <param name="angebotssumme">The amount of money the costumer will have to pay</param>
-        /// <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
-        /// <param name="validUntil">Deadline date</param>
-        /// <param name="description">A short description of the Angebot</param>
-        public void CreateAngebot(int kundenID, double angebotssumme, int umsetzungswahrscheinlichkeit, string validUntil, string description)
+        /// <param name="angebot">The business object with all needed data</param>
+        public void CreateAngebot(AngebotTable angebot)
         {
             throw new NotImplementedException();
         }

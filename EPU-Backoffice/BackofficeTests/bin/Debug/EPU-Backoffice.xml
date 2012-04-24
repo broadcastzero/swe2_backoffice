@@ -639,15 +639,11 @@
             </summary>
             <param name="k">The Kunde/Kontakt table object that shall be deleted</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.IDAL.CreateAngebot(EPUBackoffice.Dal.Tables.AngebotTable)">
             <summary>
             Creates a new Angebot with the provided parameters
             </summary>
-            <param name="kundenID">The foreign key to Kunde</param>
-            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
-            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
-            <param name="validUntil">Deadline date</param>
-            <param name="description">A short description of the Angebot</param>
+            <param name="angebot">The business object</param>
         </member>
         <member name="M:EPUBackoffice.Dal.IDAL.LoadAngebote(System.String,System.String,System.String,System.String)">
             <summary>
@@ -720,18 +716,14 @@
             Gets an sql statement and an ID and commits statement
             </summary>
             <param name="sql">The sql statement</param>
-            <param name="id">The ID - used for binding</param>
+            <param name="id">The ID of the table. Is -1, if not needed. Is >=0, if it shall be used (i.e. for WHERE kundenID = ?)</param>
             <param name="parameter">A string array of provided optional paramter</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.CreateAngebot(EPUBackoffice.Dal.Tables.AngebotTable)">
             <summary>
             Creates a new Angebot with the provided parameters and saves it in the SQLite-DB
             </summary>
-            <param name="kundenID">The foreign key to Kunde</param>
-            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
-            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
-            <param name="validUntil">Deadline date</param>
-            <param name="description">A short description of the Angebot</param>
+            <param name="angebot">The business object with all needed data</param>
         </member>
         <member name="M:EPUBackoffice.Dal.DataBaseManager.LoadAngebote(System.String,System.String,System.String,System.String)">
             <summary>
@@ -766,7 +758,7 @@
             Contains methods to manipulate, save or load Angebote
             </summary>
         </member>
-        <member name="M:EPUBackoffice.BL.AngebotManager.Create(EPUBackoffice.Dal.Tables.AngebotTable)">
+        <member name="M:EPUBackoffice.BL.AngebotManager.Create(EPUBackoffice.Dal.Tables.AngebotTable,System.Windows.Forms.Label)">
             <summary>
             Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
             </summary>
@@ -1164,15 +1156,11 @@
             </summary>
             <param name="k">The Kunde/Kontakt object that shall be deleted</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(System.Int32,System.Double,System.Int32,System.String,System.String)">
+        <member name="M:EPUBackoffice.Dal.MockDataBaseManager.CreateAngebot(EPUBackoffice.Dal.Tables.AngebotTable)">
             <summary>
-            Creates a new Angebot with the provided parameters and saves it in the mockDB
+            Gets an Angebot table with the needed parameters and saves it in the mockDB
             </summary>
-            <param name="kundenID">The foreign key to Kunde</param>
-            <param name="angebotssumme">The amount of money the costumer will have to pay</param>
-            <param name="umsetzungswahrscheinlichkeit">Chance of realisation (0-100%)</param>
-            <param name="validUntil">Deadline date</param>
-            <param name="description">A short description of the Angebot</param>
+            <param name="angebot">The business object</param>
         </member>
         <member name="M:EPUBackoffice.Dal.MockDataBaseManager.LoadAngebote(System.String,System.String,System.String,System.String)">
             <summary>

@@ -532,10 +532,19 @@ namespace EPUBackoffice.Gui
             angebot.Angebotsdauer = DataBindingFramework.BindFromString(this.angebotValidUntilDateTimePicker.Value.ToShortDateString(), "GültigBis", this.createAngebotMsgLabel, Rules.Date);
             angebot.Beschreibung = DataBindingFramework.BindFromString(this.createAngebotDescriptionTextBox.Text, "Beschreibung", this.createAngebotMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
 
+            // in case of errors
+            if (createAngebotMsgLabel.Visible)
+            {
+                this.logger.Log(Logger.Level.Error, "No angebot has been saved because of invalid inputs.");
+                createAngebotMsgLabel.ForeColor = Color.Red;
+                createAngebotMsgLabel.Show();
+                return;
+            }
+
             try
             {
                 AngebotManager manager = new AngebotManager();
-                manager.Create(angebot);
+                manager.Create(angebot, createAngebotMsgLabel);
             }
             catch (InvalidInputException ex)
             {

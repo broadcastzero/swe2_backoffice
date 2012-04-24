@@ -12,9 +12,11 @@ namespace EPUBackoffice.BL
     using System.Data.SQLite;
     using System.Diagnostics;
     using System.Text;
+    using System.Windows.Forms;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
     using EPUBackoffice.UserExceptions;
+    using DatabindingFramework;
     using Logger;
     using Rulemanager;
 
@@ -28,72 +30,30 @@ namespace EPUBackoffice.BL
         /// <summary>
         /// Gets values from the GUI, validates them and then sends them to the database to create a new Angebot
         /// </summary>
-        public void Create(AngebotTable angebot)
+        public void Create(AngebotTable angebot, Label errorlabel)
         {
-            /*// parse strings
-            double angebotssum = RuleManager.ValidatePositiveDouble(angebotssumme);
-            int umsetzungswsk = RuleManager.ValidatePerCent(umsetzungswahrscheinlichkeit);
-            bool validDescr = RuleManager.ValidateLettersNumbersHyphenSpace(description);
+            DataBindingFramework.BindFromDouble(angebot.Angebotssumme.ToString(), "Angebotssumme", errorlabel, Rules.PositiveDouble);
+            DataBindingFramework.BindFromInt(angebot.Umsetzungschance.ToString(), "Umsetzungschance", errorlabel, Rules.PerCent);
+            DataBindingFramework.BindFromString(angebot.Angebotsdauer, "GültigBis", errorlabel, Rules.Date);
+            DataBindingFramework.BindFromString(angebot.Beschreibung, "Beschreibung", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
 
-            // additionally check stringlength of description, if first test passed
-            if (validDescr)
+            if (errorlabel.Visible)
             {
-                validDescr = RuleManager.ValidateStringLength150(description);
-            }
-
-            // if no KundenID has been passed, create new Kunde with provided values
-            if (createKunde)
-            {
-                if (firstname != null && firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false)
-                {
-                    this.logger.Log(2, "User tried to create an Angebot with invalid firstname of the newly to be created Kunde.");
-                    throw new InvalidInputException("Ungültiger Kunden-Vorname");
-                }
-                else if (lastname == null || lastname.Length == 0 || RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false || RuleManager.ValidateStringLength150(lastname) == false)
-                {
-                    this.logger.Log(2, "User tried to create an Angebot with invalid lastname of the newly to be created Kunde.");
-                    throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
-                }
+                throw new InvalidInputException();
             }
 
-            // check RuleManager return values (returns -1 in case of error)
-            if (angebotssum == -1)
-            {
-                this.logger.Log(2, "User tried to create an Angebot with an invalid Angebotssumme: " + angebotssumme);
-                throw new InvalidInputException("Ungültige Angebotssumme");
-            }
-            else if (umsetzungswsk == -1)
-            {
-                this.logger.Log(2, "User tried to create an Angebot with an invalid Umsetzungswahrscheinlichkeit: " + umsetzungswahrscheinlichkeit);
-                throw new InvalidInputException("Ungültige Angebotswahrscheinlichkeit");
-            }
-            else if (validDescr == false)
-            {
-                this.logger.Log(2, "User tried to create an Angebot with an invalid Beschreibung: " + description);
-                throw new InvalidInputException("Ungültige Beschreibung");
-            }
-            else if (validUntil == null)
-            {
-                this.logger.Log(2, "User tried to create an Angebot with an invalid deadline.");
-                throw new InvalidInputException("Ungültige Deadline");
-            }
-
-            // save Kunde, if requested
-            int kID;
-            if (createKunde)
-            {
-                KundenKontakteSaver saver = new KundenKontakteSaver();
-                bool type = false;
-                kID = saver.SaveNewKundeKontakt(k);
-            }
-            else
-            {
-                kID = RuleManager.ValidatePositiveInt(kundenID);
-            }
+            this.logger.Log(Logger.Level.Info, "A new Angebot will be created");
 
             // create Angebot
-            DALFactory.GetDAL().CreateAngebot(kID, angebotssum, umsetzungswsk, validUntil.ToShortDateString(), description);
-        */}
+            try
+            {
+                DALFactory.GetDAL().CreateAngebot(angebot);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+        }
 
         /// <summary>
         /// Load an existing Angebot out of the database
