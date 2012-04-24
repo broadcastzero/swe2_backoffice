@@ -27,3 +27,47 @@
 24.04.2012 - 14:15 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 24.04.2012 - 14:15 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 24.04.2012 - 14:15 Info: Start creating new Angebot...
+24.04.2012 - 14:19 Info: -----------------------------------------------------------
+24.04.2012 - 14:19 Info: Program is started.
+24.04.2012 - 14:19 Info: Logging level: 0
+24.04.2012 - 14:19 Info: Using SQLite database.
+24.04.2012 - 14:19 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:19 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:19 Error: Exception of type 'EPUBackoffice.UserExceptions.InvalidInputException' was thrown.   at EPUBackoffice.BL.KundenKontakteSaver.SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\BL\KundenKontakteSaver.cs:line 42
+   at EPUBackoffice.Gui.HomeForm.CreateNewAngebot(Object sender, EventArgs e) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\Gui\HomeForm.cs:line 506
+24.04.2012 - 14:19 Info: Start creating new Angebot...
+24.04.2012 - 14:20 Info: Start creating new Angebot...
+24.04.2012 - 14:20 Info: -----------------------------------------------------------
+24.04.2012 - 14:20 Info: Program is started.
+24.04.2012 - 14:20 Info: Logging level: 0
+24.04.2012 - 14:20 Info: Using SQLite database.
+24.04.2012 - 14:20 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:20 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:21 Info: Start creating new Angebot...
+24.04.2012 - 14:21 Info: Start creating new Angebot...
+24.04.2012 - 14:22 Info: -----------------------------------------------------------
+24.04.2012 - 14:22 Info: Program is started.
+24.04.2012 - 14:22 Info: Logging level: 0
+24.04.2012 - 14:22 Info: Using SQLite database.
+24.04.2012 - 14:22 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:22 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:22 Error: Exception of type 'EPUBackoffice.UserExceptions.InvalidInputException' was thrown.   at EPUBackoffice.BL.KundenKontakteSaver.SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\BL\KundenKontakteSaver.cs:line 42
+   at EPUBackoffice.Gui.HomeForm.CreateNewAngebot(Object sender, EventArgs e) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\Gui\HomeForm.cs:line 506
+24.04.2012 - 14:22 Info: User requested to insert Kunde with values  adsf
+24.04.2012 - 14:22 Info: Es wird kein Vorname eingetragen.
+24.04.2012 - 14:22 Info: A new Kunde has been saved to the database: 67  adsf
+24.04.2012 - 14:22 Info: Start creating new Angebot...
+24.04.2012 - 14:23 Info: -----------------------------------------------------------
+24.04.2012 - 14:23 Info: Program is started.
+24.04.2012 - 14:23 Info: Logging level: 0
+24.04.2012 - 14:23 Info: Using SQLite database.
+24.04.2012 - 14:23 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:23 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:23 Info: Start creating new Angebot...
+24.04.2012 - 14:23 Info: -----------------------------------------------------------
+24.04.2012 - 14:23 Info: Program is started.
+24.04.2012 - 14:23 Info: Logging level: 0
+24.04.2012 - 14:23 Info: Using SQLite database.
+24.04.2012 - 14:23 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:23 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+24.04.2012 - 14:23 Info: Start creating new Angebot...

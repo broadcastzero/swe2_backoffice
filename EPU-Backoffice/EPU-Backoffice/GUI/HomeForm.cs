@@ -508,7 +508,7 @@ namespace EPUBackoffice.Gui
                 catch (InvalidInputException ex)
                 {
                     this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
-                    this.createAngebotMsgLabel.Text = "Error: Kundenfelder enthalten ungültige Zeichen";
+                    this.createAngebotMsgLabel.Text = "Error: Kundenfelder ungültig!";
                     this.createAngebotMsgLabel.Visible = true;
                     return;
                 }

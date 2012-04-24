@@ -56,7 +56,7 @@ namespace DatabindingFramework
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " ungültig!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }
@@ -105,7 +105,7 @@ namespace DatabindingFramework
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " ungültig!";
                     label.Show();
                     return string.Empty;
                 }
@@ -151,7 +151,7 @@ namespace DatabindingFramework
                 {
                     // show error label
                     label.ForeColor = Color.Red;
-                    label.Text += "\n" + name + " enthält ungültige Zeichen!";
+                    label.Text += "\n" + name + " ungültig!";
                     label.Show(); // do this in home form maybe?
                     return -1;
                 }
