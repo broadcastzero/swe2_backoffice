@@ -1,38 +1,33 @@
-24.04.2012 - 17:34 Info: -----------------------------------------------------------
-24.04.2012 - 17:34 Info: Program is started.
-24.04.2012 - 17:34 Info: Logging level: 0
-24.04.2012 - 17:34 Info: Using SQLite database.
-24.04.2012 - 17:34 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-24.04.2012 - 17:34 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-24.04.2012 - 17:34 Warning: User requested to change an item which does not need to be changed.
-24.04.2012 - 17:34 Warning: User requested to change an item which does not need to be changed.
-25.04.2012 - 08:24 Info: -----------------------------------------------------------
-25.04.2012 - 08:24 Info: Program is started.
-25.04.2012 - 08:24 Info: Logging level: 0
-25.04.2012 - 08:24 Info: Using SQLite database.
-25.04.2012 - 08:24 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-25.04.2012 - 08:24 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-25.04.2012 - 08:24 Info: User requested to insert Kunde with values  NewKunde
-25.04.2012 - 08:24 Info: No first name will be saved.
-25.04.2012 - 08:24 Info: A new Kunde has been saved to the database: 69  NewKunde
-25.04.2012 - 08:24 Info: Start creating new Angebot...
-25.04.2012 - 08:36 Info: -----------------------------------------------------------
-25.04.2012 - 08:36 Info: Program is started.
-25.04.2012 - 08:36 Info: Logging level: 0
-25.04.2012 - 08:36 Info: Using SQLite database.
-25.04.2012 - 08:36 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-25.04.2012 - 08:36 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-25.04.2012 - 08:36 Info: User wants to create new database - filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
-25.04.2012 - 08:36 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
-25.04.2012 - 08:36 Error: SQLite error
-near ";": syntax errorSystem.Data.SQLite
-25.04.2012 - 08:37 Info: -----------------------------------------------------------
-25.04.2012 - 08:37 Info: Program is started.
-25.04.2012 - 08:37 Info: Logging level: 0
-25.04.2012 - 08:37 Info: Using SQLite database.
-25.04.2012 - 08:37 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
-25.04.2012 - 08:37 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
-25.04.2012 - 08:37 Info: User wants to create new database - filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
-25.04.2012 - 08:37 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
-25.04.2012 - 08:37 Info: A new database has been created.
-25.04.2012 - 08:37 Info: Open HomeForm
+25.04.2012 - 08:56 Info: -----------------------------------------------------------
+25.04.2012 - 08:56 Info: Program is started.
+25.04.2012 - 08:56 Info: Logging level: 0
+25.04.2012 - 08:56 Info: Using mock database.
+25.04.2012 - 08:56 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 08:56 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 08:56 Error: Exception of type 'EPUBackoffice.UserExceptions.InvalidInputException' was thrown.   at EPUBackoffice.BL.KundenKontakteSaver.SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\BL\KundenKontakteSaver.cs:line 42
+   at EPUBackoffice.Gui.HomeForm.CreateNewAngebot(Object sender, EventArgs e) in C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\Gui\HomeForm.cs:line 507
+25.04.2012 - 08:56 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:56 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:56 Info: User requested to insert Kunde with values Neuer Kunde
+25.04.2012 - 08:56 Info: A new Kunde has been saved in the mockDB.
+25.04.2012 - 08:56 Info: Start creating new Angebot...
+25.04.2012 - 08:56 Info: A new Angebot will be created
+25.04.2012 - 08:56 Info: Angebot saved to the mockDB
+25.04.2012 - 08:56 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:56 Info: User requested to change Kunde with ID 0
+25.04.2012 - 08:56 Info: Kunde has been updated within mockDB.
+25.04.2012 - 08:56 Info: Kunde/Kontakt with the ID 0has successfully been changed.
+25.04.2012 - 08:56 Info: Kunden search datagridview has been updated.
+25.04.2012 - 08:56 Info: User requested to change Kunde with ID 0
+25.04.2012 - 08:56 Info: Kunde has been updated within mockDB.
+25.04.2012 - 08:56 Info: Kunde/Kontakt with the ID 0has successfully been changed.
+25.04.2012 - 08:56 Info: Kunden search datagridview has been updated.
+25.04.2012 - 08:56 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:57 Info: User requested to change Kunde with ID 0
+25.04.2012 - 08:57 Info: Kunde has been updated within mockDB.
+25.04.2012 - 08:57 Info: Kunde/Kontakt with the ID 0has successfully been changed.
+25.04.2012 - 08:57 Info: Kunden search datagridview has been updated.
+25.04.2012 - 08:57 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:57 Info: Starts getting Kunden out of database...
+25.04.2012 - 08:57 Info: Start creating new Angebot...
+25.04.2012 - 08:57 Error: No angebot has been saved because of invalid inputs.

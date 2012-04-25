@@ -308,7 +308,7 @@ namespace EPUBackoffice.Dal
         /// <param name="sql">The sql statement</param>
         /// <param name="id">The ID of the table. Is -1, if not needed. Is >=0, if it shall be used (i.e. for WHERE kundenID = ?)</param>
         /// <param name="parameter">A string array of provided optional paramter</param>
-        private void SendStatementToDatabase(string sql, int id, params string[] parameter)
+        private void SendStatementToDatabase(string sql, int id, params object[] parameter)
         {
             SQLiteConnection con = null;
             SQLiteTransaction tra = null;
@@ -324,7 +324,7 @@ namespace EPUBackoffice.Dal
                 cmd = new SQLiteCommand(sql, con);
 
                 // set optional string parameters
-                foreach (string p in parameter)
+                foreach (object p in parameter)
                 {
                     SQLiteParameter param = new SQLiteParameter();
                     param.Value = p;
@@ -361,8 +361,18 @@ namespace EPUBackoffice.Dal
         /// <param name="angebot">The business object with all needed data</param>
         public void CreateAngebot(AngebotTable angebot)
         {
-            string sql = "INSERT INTO Angebot (kundenID, Angebotssumme, Angebotsdauer, Erstellungsdatum, Umsetzung, Beschreibung) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            //this.SendStatementToDatabase(sql, -1, angebot.KundenID, angebot.Angebotssumme, angebot.Angebotsdauer, angebot.Erstellungsdatum, angebot.Umsetzungschance, angebot.Beschreibung);
+            string sql = "INSERT INTO Angebot (kundenID, Angebotssumme, Angebotsdauer, Erstellungsdatum, Umsetzung, Beschreibung) VALUES (?, ?, ?, ?, ?, ?)";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, -1, angebot.KundenID, angebot.Angebotssumme, angebot.Angebotsdauer, angebot.Erstellungsdatum, angebot.Umsetzungschance, angebot.Beschreibung);
+            }
+            catch (SQLiteException)
+            {
+                this.logger.Log(Logger.Level.Error, "An SQLite exception occured while saving a new Angebot within the SQLite database.");
+                throw;
+            }
+            this.logger.Log(Logger.Level.Info, "New Angebot has been stored within the SQLite database.");
         }
 
         /// <summary>

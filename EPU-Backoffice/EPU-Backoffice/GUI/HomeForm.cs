@@ -559,6 +559,7 @@ namespace EPUBackoffice.Gui
             {
                 this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
                 this.createAngebotMsgLabel.Text += "\nError: " + ex.Message;
+                this.createAngebotMsgLabel.Show();
             }
 
             // show success message, if no error has been thrown

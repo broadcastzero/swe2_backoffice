@@ -711,7 +711,7 @@
             </summary>
             <param name="k">The Kunde/Kontakt object that shall be deleted from the SQLite database</param>
         </member>
-        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.String[])">
+        <member name="M:EPUBackoffice.Dal.DataBaseManager.SendStatementToDatabase(System.String,System.Int32,System.Object[])">
             <summary>
             Gets an sql statement and an ID and commits statement
             </summary>
