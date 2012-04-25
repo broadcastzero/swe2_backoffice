@@ -39,6 +39,7 @@
             this.beendenButton = new System.Windows.Forms.Button();
             this.projektverwaltungButton = new System.Windows.Forms.Button();
             this.kundenSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.angebotSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTab = new TablessControl();
             this.homeTab = new System.Windows.Forms.TabPage();
             this.currentlyOpenedDbPanel = new System.Windows.Forms.Panel();
@@ -148,17 +149,23 @@
             this.label32 = new System.Windows.Forms.Label();
             this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.angebotSuchenTab = new System.Windows.Forms.TabPage();
+            this.angebotSuchenMsgLabel = new System.Windows.Forms.Label();
+            this.angebotSuchenKundeComboBox = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.AngeboteSuchenDataGridView = new System.Windows.Forms.DataGridView();
+            this.AngebotID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundenID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebotssumme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebotsdauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.erstellungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.umsetzungschance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.angebotSuchenDruckenButton = new System.Windows.Forms.Button();
             this.angebotSuchenButton = new System.Windows.Forms.Button();
             this.angebotSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
-            this.angebotSuchenNachnameTextbox = new System.Windows.Forms.TextBox();
-            this.angebotSuchenVornameTextbox = new System.Windows.Forms.TextBox();
+            this.angebotSuchenKundeLabel = new System.Windows.Forms.Label();
             this.projektTab = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.projektErstellenTab = new System.Windows.Forms.TabPage();
@@ -200,6 +207,7 @@
             this.reportTab = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).BeginInit();
             this.mainTab.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.currentlyOpenedDbPanel.SuspendLayout();
@@ -1420,21 +1428,21 @@
             this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(200, 21);
             this.createAngebotExistingKundeComboBox.TabIndex = 8;
             this.createAngebotExistingKundeComboBox.DropDown += new System.EventHandler(this.BindFromExistingKunden);
+            this.createAngebotExistingKundeComboBox.Click += new System.EventHandler(this.BindFromExistingKunden);
             // 
             // angebotSuchenTab
             // 
             this.angebotSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.angebotSuchenTab.Controls.Add(this.angebotSuchenMsgLabel);
+            this.angebotSuchenTab.Controls.Add(this.angebotSuchenKundeComboBox);
             this.angebotSuchenTab.Controls.Add(this.label24);
             this.angebotSuchenTab.Controls.Add(this.label23);
-            this.angebotSuchenTab.Controls.Add(this.label21);
-            this.angebotSuchenTab.Controls.Add(this.label36);
             this.angebotSuchenTab.Controls.Add(this.AngeboteSuchenDataGridView);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenDruckenButton);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenButton);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenBisDatepicker);
             this.angebotSuchenTab.Controls.Add(this.angebotSuchenVonDatepicker);
-            this.angebotSuchenTab.Controls.Add(this.angebotSuchenNachnameTextbox);
-            this.angebotSuchenTab.Controls.Add(this.angebotSuchenVornameTextbox);
+            this.angebotSuchenTab.Controls.Add(this.angebotSuchenKundeLabel);
             this.angebotSuchenTab.Location = new System.Drawing.Point(4, 22);
             this.angebotSuchenTab.Name = "angebotSuchenTab";
             this.angebotSuchenTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1442,10 +1450,29 @@
             this.angebotSuchenTab.TabIndex = 1;
             this.angebotSuchenTab.Text = "Suchen";
             // 
+            // angebotSuchenMsgLabel
+            // 
+            this.angebotSuchenMsgLabel.AutoSize = true;
+            this.angebotSuchenMsgLabel.Location = new System.Drawing.Point(24, 190);
+            this.angebotSuchenMsgLabel.Name = "angebotSuchenMsgLabel";
+            this.angebotSuchenMsgLabel.Size = new System.Drawing.Size(55, 13);
+            this.angebotSuchenMsgLabel.TabIndex = 14;
+            this.angebotSuchenMsgLabel.Text = "Messages";
+            // 
+            // angebotSuchenKundeComboBox
+            // 
+            this.angebotSuchenKundeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.angebotSuchenKundeComboBox.FormattingEnabled = true;
+            this.angebotSuchenKundeComboBox.Location = new System.Drawing.Point(27, 20);
+            this.angebotSuchenKundeComboBox.Name = "angebotSuchenKundeComboBox";
+            this.angebotSuchenKundeComboBox.Size = new System.Drawing.Size(200, 21);
+            this.angebotSuchenKundeComboBox.TabIndex = 13;
+            this.angebotSuchenKundeComboBox.DropDown += new System.EventHandler(this.BindFromExistingKunden);
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(240, 111);
+            this.label24.Location = new System.Drawing.Point(240, 83);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(21, 13);
             this.label24.TabIndex = 12;
@@ -1454,44 +1481,94 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(240, 83);
+            this.label23.Location = new System.Drawing.Point(240, 57);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(26, 13);
             this.label23.TabIndex = 11;
             this.label23.Text = "Von";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(240, 54);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(134, 13);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "Nachname / Firmenname *";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(240, 28);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(49, 13);
-            this.label36.TabIndex = 8;
-            this.label36.Text = "Vorname";
-            // 
             // AngeboteSuchenDataGridView
             // 
             this.AngeboteSuchenDataGridView.AllowUserToAddRows = false;
             this.AngeboteSuchenDataGridView.AllowUserToDeleteRows = false;
+            this.AngeboteSuchenDataGridView.AutoGenerateColumns = false;
+            this.AngeboteSuchenDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.AngeboteSuchenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AngeboteSuchenDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AngebotID,
+            this.kundenID,
+            this.angebotssumme,
+            this.angebotsdauer,
+            this.erstellungsdatum,
+            this.umsetzungschance,
+            this.beschreibung});
+            this.AngeboteSuchenDataGridView.DataSource = this.angebotSuchenBindingSource;
             this.AngeboteSuchenDataGridView.Location = new System.Drawing.Point(383, 25);
+            this.AngeboteSuchenDataGridView.MultiSelect = false;
             this.AngeboteSuchenDataGridView.Name = "AngeboteSuchenDataGridView";
             this.AngeboteSuchenDataGridView.ReadOnly = true;
             this.AngeboteSuchenDataGridView.Size = new System.Drawing.Size(346, 183);
             this.AngeboteSuchenDataGridView.TabIndex = 7;
             // 
+            // AngebotID
+            // 
+            this.AngebotID.DataPropertyName = "ID";
+            this.AngebotID.HeaderText = "ID";
+            this.AngebotID.Name = "AngebotID";
+            this.AngebotID.ReadOnly = true;
+            this.AngebotID.Width = 43;
+            // 
+            // kundenID
+            // 
+            this.kundenID.DataPropertyName = "KundenID";
+            this.kundenID.HeaderText = "Kunden-ID";
+            this.kundenID.Name = "kundenID";
+            this.kundenID.ReadOnly = true;
+            this.kundenID.Width = 83;
+            // 
+            // angebotssumme
+            // 
+            this.angebotssumme.DataPropertyName = "Angebotssumme";
+            this.angebotssumme.HeaderText = "Summe";
+            this.angebotssumme.Name = "angebotssumme";
+            this.angebotssumme.ReadOnly = true;
+            this.angebotssumme.Width = 67;
+            // 
+            // angebotsdauer
+            // 
+            this.angebotsdauer.DataPropertyName = "Angebotsdauer";
+            this.angebotsdauer.HeaderText = "Angebotsdauer";
+            this.angebotsdauer.Name = "angebotsdauer";
+            this.angebotsdauer.ReadOnly = true;
+            this.angebotsdauer.Width = 104;
+            // 
+            // erstellungsdatum
+            // 
+            this.erstellungsdatum.DataPropertyName = "Erstellungsdatum";
+            this.erstellungsdatum.HeaderText = "Erstellungsdatum";
+            this.erstellungsdatum.Name = "erstellungsdatum";
+            this.erstellungsdatum.ReadOnly = true;
+            this.erstellungsdatum.Width = 112;
+            // 
+            // umsetzungschance
+            // 
+            this.umsetzungschance.DataPropertyName = "Umsetzungschance";
+            this.umsetzungschance.HeaderText = "Umsetzungschance";
+            this.umsetzungschance.Name = "umsetzungschance";
+            this.umsetzungschance.ReadOnly = true;
+            this.umsetzungschance.Width = 126;
+            // 
+            // beschreibung
+            // 
+            this.beschreibung.DataPropertyName = "Beschreibung";
+            this.beschreibung.HeaderText = "Beschreibung";
+            this.beschreibung.Name = "beschreibung";
+            this.beschreibung.ReadOnly = true;
+            this.beschreibung.Width = 97;
+            // 
             // angebotSuchenDruckenButton
             // 
-            this.angebotSuchenDruckenButton.Location = new System.Drawing.Point(27, 160);
+            this.angebotSuchenDruckenButton.Location = new System.Drawing.Point(27, 146);
             this.angebotSuchenDruckenButton.Name = "angebotSuchenDruckenButton";
             this.angebotSuchenDruckenButton.Size = new System.Drawing.Size(200, 23);
             this.angebotSuchenDruckenButton.TabIndex = 6;
@@ -1500,7 +1577,7 @@
             // 
             // angebotSuchenButton
             // 
-            this.angebotSuchenButton.Location = new System.Drawing.Point(27, 131);
+            this.angebotSuchenButton.Location = new System.Drawing.Point(27, 117);
             this.angebotSuchenButton.Name = "angebotSuchenButton";
             this.angebotSuchenButton.Size = new System.Drawing.Size(200, 23);
             this.angebotSuchenButton.TabIndex = 5;
@@ -1510,31 +1587,26 @@
             // 
             // angebotSuchenBisDatepicker
             // 
-            this.angebotSuchenBisDatepicker.Location = new System.Drawing.Point(27, 105);
+            this.angebotSuchenBisDatepicker.Location = new System.Drawing.Point(27, 83);
             this.angebotSuchenBisDatepicker.Name = "angebotSuchenBisDatepicker";
             this.angebotSuchenBisDatepicker.Size = new System.Drawing.Size(200, 20);
             this.angebotSuchenBisDatepicker.TabIndex = 4;
             // 
             // angebotSuchenVonDatepicker
             // 
-            this.angebotSuchenVonDatepicker.Location = new System.Drawing.Point(27, 77);
+            this.angebotSuchenVonDatepicker.Location = new System.Drawing.Point(27, 56);
             this.angebotSuchenVonDatepicker.Name = "angebotSuchenVonDatepicker";
             this.angebotSuchenVonDatepicker.Size = new System.Drawing.Size(200, 20);
             this.angebotSuchenVonDatepicker.TabIndex = 3;
             // 
-            // angebotSuchenNachnameTextbox
+            // angebotSuchenKundeLabel
             // 
-            this.angebotSuchenNachnameTextbox.Location = new System.Drawing.Point(27, 51);
-            this.angebotSuchenNachnameTextbox.Name = "angebotSuchenNachnameTextbox";
-            this.angebotSuchenNachnameTextbox.Size = new System.Drawing.Size(200, 20);
-            this.angebotSuchenNachnameTextbox.TabIndex = 1;
-            // 
-            // angebotSuchenVornameTextbox
-            // 
-            this.angebotSuchenVornameTextbox.Location = new System.Drawing.Point(27, 25);
-            this.angebotSuchenVornameTextbox.Name = "angebotSuchenVornameTextbox";
-            this.angebotSuchenVornameTextbox.Size = new System.Drawing.Size(200, 20);
-            this.angebotSuchenVornameTextbox.TabIndex = 0;
+            this.angebotSuchenKundeLabel.AutoSize = true;
+            this.angebotSuchenKundeLabel.Location = new System.Drawing.Point(240, 28);
+            this.angebotSuchenKundeLabel.Name = "angebotSuchenKundeLabel";
+            this.angebotSuchenKundeLabel.Size = new System.Drawing.Size(38, 13);
+            this.angebotSuchenKundeLabel.TabIndex = 8;
+            this.angebotSuchenKundeLabel.Text = "Kunde";
             // 
             // projektTab
             // 
@@ -1948,6 +2020,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KillProcess);
             this.Load += new System.EventHandler(this.LoadHomeForm);
             ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).EndInit();
             this.mainTab.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
             this.homeTab.PerformLayout();
@@ -2100,18 +2173,6 @@
         private System.Windows.Forms.TabPage angebotErstellenBKTab;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ComboBox createAngebotExistingKundeComboBox;
-        private System.Windows.Forms.TabPage angebotSuchenTab;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.DataGridView AngeboteSuchenDataGridView;
-        private System.Windows.Forms.Button angebotSuchenDruckenButton;
-        private System.Windows.Forms.Button angebotSuchenButton;
-        private System.Windows.Forms.DateTimePicker angebotSuchenBisDatepicker;
-        private System.Windows.Forms.DateTimePicker angebotSuchenVonDatepicker;
-        private System.Windows.Forms.TextBox angebotSuchenNachnameTextbox;
-        private System.Windows.Forms.TextBox angebotSuchenVornameTextbox;
         private TablessControl angebotErstellenSubTab;
         private System.Windows.Forms.Button angebotErstellenBKundeButton;
         private System.Windows.Forms.Button angebotErstellenNKundeButton;
@@ -2174,6 +2235,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.BindingSource angebotSuchenBindingSource;
+        private System.Windows.Forms.TabPage angebotSuchenTab;
+        private System.Windows.Forms.Label angebotSuchenMsgLabel;
+        private System.Windows.Forms.ComboBox angebotSuchenKundeComboBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridView AngeboteSuchenDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AngebotID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundenID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angebotssumme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angebotsdauer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn erstellungsdatum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn umsetzungschance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beschreibung;
+        private System.Windows.Forms.Button angebotSuchenDruckenButton;
+        private System.Windows.Forms.Button angebotSuchenButton;
+        private System.Windows.Forms.DateTimePicker angebotSuchenBisDatepicker;
+        private System.Windows.Forms.DateTimePicker angebotSuchenVonDatepicker;
+        private System.Windows.Forms.Label angebotSuchenKundeLabel;
 
 
 

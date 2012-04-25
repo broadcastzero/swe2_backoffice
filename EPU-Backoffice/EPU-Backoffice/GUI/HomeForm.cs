@@ -410,11 +410,16 @@ namespace EPUBackoffice.Gui
         private void BindFromExistingKunden(object sender, EventArgs e)
         {
             List<KundeKontaktTable> results;
+                        
+            // add empty element to make empty choices possible
             List<string> listItems = new List<string>();
+            listItems.Add("");
+
             KundenKontakteLoader loader = new KundenKontakteLoader();
 
             // Create empty Kunden object with type "false"
             KundeKontaktTable k = new KundeKontaktTable();
+
             k.Vorname = string.Empty;
             k.NachnameFirmenname = string.Empty;
             k.Type = false;
@@ -460,8 +465,8 @@ namespace EPUBackoffice.Gui
             // existing Kunde
             else
             {
-                // no Kunde chosen -> show error label
-                if (this.createAngebotExistingKundeComboBox.SelectedIndex < 0)
+                // no Kunde chosen or first element chosen (which is empty) -> show error label
+                if (this.createAngebotExistingKundeComboBox.SelectedIndex <= 0)
                 {
                     this.createAngebotMsgLabel.Text = "Error: kein Kunde ausgewählt";
                     this.createAngebotMsgLabel.ForeColor = Color.Red;
@@ -594,12 +599,15 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void SearchAngebote(object sender, EventArgs e)
         {
+            // hide Messagelabel
+            this.angebotSuchenMsgLabel.Hide();
+
             AngebotManager manager = new AngebotManager();
             List<AngebotTable> results;
-            results = manager.Load(this.angebotSuchenVornameTextbox.Text, this.angebotSuchenNachnameTextbox.Text, this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
+            //results = manager.Load( this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
             // TODO: catch InvalidInputException & maybe SQLite-exception
 
-            this.AngeboteSuchenDataGridView.DataSource = results;
+            //this.AngeboteSuchenDataGridView.DataSource = results;
         }
 
         /// <summary>
