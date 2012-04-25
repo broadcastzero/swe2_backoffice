@@ -603,6 +603,25 @@ namespace EPUBackoffice.Gui
             // hide Messagelabel
             this.angebotSuchenMsgLabel.Hide();
 
+            // get selected KundenID
+            // force searching for existing Kunden, if Kunde has not dropped down the ComboBox (would throw Exception otherwise)
+            if (this.angebotSuchenKundeComboBox.SelectedIndex < 0)
+            {
+                this.BindFromExistingKunden(this.angebotSuchenKundeComboBox, null);
+            }
+
+            // get kundenID out of ComboBox
+            string kundenID = this.angebotSuchenKundeComboBox.SelectedItem.ToString();
+            int id = -1;
+
+            // if no Kunde has been chosen, set kundenID to -1, which indicates, that it shall not be searched for a certain Kunde
+            if (kundenID != string.Empty)
+            {
+                kundenID = kundenID.Substring(0, kundenID.IndexOf(':'));
+                id = DataBindingFramework.BindFromInt(kundenID, "Kunden ID", this.angebotSuchenMsgLabel, Rules.PositiveInt);
+            }
+
+            // get Angebot
             AngebotManager manager = new AngebotManager();
             List<AngebotTable> results;
             //results = manager.Load( this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
