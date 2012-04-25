@@ -86,13 +86,12 @@ namespace EPUBackoffice
             catch (IOException e)
             {
                 Trace.WriteLine("Cannot write into logfile.");
-                Trace.WriteLine(e.Message);
-                Trace.WriteLine(e.StackTrace);
+                Trace.WriteLine(e.Message + e.StackTrace);
             }
             catch (UnauthorizedAccessException e)
             {
                 Trace.WriteLine("Access to logfile denied.");
-                Trace.WriteLine(e.Message);
+                Trace.WriteLine(e.Message + e.StackTrace);
             }
         }
     }

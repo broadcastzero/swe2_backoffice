@@ -133,12 +133,9 @@ namespace Rulemanager
         /// <returns>The parsed Int, -1 in case of error</returns>
         public static int ValidatePerCent(string input)
         {
-            int output;
-            bool success = Int32.TryParse(input, out output);
+            int val = RuleManager.ValidatePositiveInt(input);
 
-            if (success && output >= 0 && output <= 100)
-            { return output; }
-            else { return -1; }
+            return val >= 0 && val <= 100 ? val : -1;
         }
 
         /// <summary>

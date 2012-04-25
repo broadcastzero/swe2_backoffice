@@ -529,7 +529,7 @@ namespace EPUBackoffice.Gui
                 this.createAngebotMsgLabel.Text = "Kunde wurde gespeichert.";
             }
 
-            // Create Angebot
+            // Create Angebot business object
             this.logger.Log(Logger.Level.Info, "Start creating new Angebot...");
 
             AngebotTable angebot = new AngebotTable();
@@ -540,7 +540,7 @@ namespace EPUBackoffice.Gui
             angebot.KundenID = DataBindingFramework.BindFromInt(k.ID.ToString(), "kundenID", this.createAngebotMsgLabel, Rules.PositiveInt);
             angebot.Erstellungsdatum = DateTime.Now.ToShortDateString();
 
-            // in case of errors
+            // in case of errors in Databinding
             if (createAngebotMsgLabel.Visible)
             {
                 this.logger.Log(Logger.Level.Error, "No angebot has been saved because of invalid inputs.");
@@ -549,6 +549,7 @@ namespace EPUBackoffice.Gui
                 return;
             }
 
+            // send Angebot object to database
             try
             {
                 AngebotManager manager = new AngebotManager();
