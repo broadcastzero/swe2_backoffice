@@ -82,3 +82,21 @@
 25.04.2012 - 17:59 Info: Using SQLite database.
 25.04.2012 - 17:59 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 25.04.2012 - 17:59 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:30 Info: -----------------------------------------------------------
+25.04.2012 - 18:30 Info: Program is started.
+25.04.2012 - 18:30 Info: Logging level: 0
+25.04.2012 - 18:30 Info: Using SQLite database.
+25.04.2012 - 18:30 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:30 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:33 Info: -----------------------------------------------------------
+25.04.2012 - 18:33 Info: Program is started.
+25.04.2012 - 18:33 Info: Logging level: 0
+25.04.2012 - 18:33 Info: Using SQLite database.
+25.04.2012 - 18:33 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:33 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:34 Info: -----------------------------------------------------------
+25.04.2012 - 18:34 Info: Program is started.
+25.04.2012 - 18:34 Info: Logging level: 0
+25.04.2012 - 18:34 Info: Using SQLite database.
+25.04.2012 - 18:34 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+25.04.2012 - 18:34 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

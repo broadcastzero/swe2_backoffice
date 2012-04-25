@@ -34,8 +34,12 @@ namespace EPUBackoffice.BL
         /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
         public int SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel)
         {
-            //DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            //DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule lhv = new LettersHyphenValidator();
+            IRule lengthv = new StringLength150Validator();
+
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, true, lhv, lengthv);
+            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, false, lnhsv, lengthv);
 
             if (errorlabel.Visible)
             {

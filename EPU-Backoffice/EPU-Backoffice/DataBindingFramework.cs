@@ -14,6 +14,7 @@ namespace DatabindingFramework
     using System.Windows.Forms;
     using EPUBackoffice.Rules;
     using Logger;
+    using EPUBackoffice.UserExceptions;
 
     /// <summary>
     /// Validates user input and binds data
@@ -63,6 +64,12 @@ namespace DatabindingFramework
         /// <returns>integer (Format depending on rule)</returns>
         public static int BindFromInt(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
+            // check provided values for null
+            if (input == null || name == null || label == null)
+            {
+                throw new InvalidInputException("User passed null values to DataBindingFramework");
+            }
+
             // check if field can be empty
             if (canBeNull && input.Length == 0)
             {
@@ -103,6 +110,12 @@ namespace DatabindingFramework
         /// <returns>String</returns>
         public static string BindFromString(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
+            // check provided values for null
+            if (input == null || name == null || label == null)
+            {
+                throw new InvalidInputException("User passed null values to DataBindingFramework");
+            }
+
             // check if field can be empty
             if (canBeNull && input.Length == 0)
             {
@@ -133,6 +146,12 @@ namespace DatabindingFramework
         /// <returns>A double value</returns>
         public static double BindFromDouble(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
+            // check provided values for null
+            if (input == null || name == null || label == null)
+            {
+                throw new InvalidInputException("User passed null values to DataBindingFramework");
+            }
+
             // check if field can be empty
             if (canBeNull && input.Length == 0)
             {

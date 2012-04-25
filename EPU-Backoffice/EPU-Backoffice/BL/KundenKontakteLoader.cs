@@ -34,8 +34,16 @@ namespace EPUBackoffice.BL
         /// <returns>List of matching Kontakt</returns>
         public List<KundeKontaktTable> LoadKundenKontakte(KundeKontaktTable k, Label errorlabel)
         {
-            //DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            //DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            IRule doubv = new PositiveDoubleValidator();
+            IRule intv = new PositiveIntValidator();
+            IRule datev = new DateValidator();
+            IRule lengthv = new StringLength150Validator();
+            IRule percv = new PercentValidator();
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule lhv = new LettersHyphenValidator();
+
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, true, lhv, lengthv);
+            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, true, lnhsv, lengthv);
             k.ID = -1; // indicates that we don't want to search for an ID
 
             if (errorlabel.Visible)

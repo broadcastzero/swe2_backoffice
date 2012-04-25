@@ -33,8 +33,12 @@ namespace EPUBackoffice.BL
         /// <param name="errorlabel">The label in which errormessages may be written</param>
         public void Change(KundeKontaktTable k, Label errorlabel)
         {
-            //DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            //DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule lhv = new LettersHyphenValidator();
+            IRule lengthv = new StringLength150Validator();
+
+            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, true, lhv, lengthv);
+            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, false, lnhsv, lengthv);
 
             if (errorlabel.Visible)
             {
@@ -67,7 +71,10 @@ namespace EPUBackoffice.BL
         /// <param name="label">The label in which errormessages can be shown</param>
         public void Delete(KundeKontaktTable k, Label label)
         {
-            //if (DataBindingFramework.BindFromInt(k.ID.ToString(), "ID", label, Rules.PositiveInt) < 0)
+            PositiveIntValidator checkkundenid = new PositiveIntValidator();
+            checkkundenid.Eval(k.ID);
+
+            if (checkkundenid.HasErrors)
             {
                 this.logger.Log(Logger.Level.Error, "No valid ID provided from GUI layer!");
                 throw new InvalidInputException("Es wurde keine gültige ID übergeben!");
