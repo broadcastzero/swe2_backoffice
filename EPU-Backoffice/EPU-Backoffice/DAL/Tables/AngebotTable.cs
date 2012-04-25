@@ -56,11 +56,11 @@ namespace EPUBackoffice.Dal.Tables
             set { angebotsdauer = value; }
         }
 
-        private DateTime erstellungsdatum;
+        private string erstellungsdatum;
         /// <summary>
-        /// Datum of creation of an Angebot
+        /// Datum of creation of an Angebot - in shortDateString-Format
         /// </summary>
-        public DateTime Erstellungsdatum
+        public string Erstellungsdatum
         {
             get { return erstellungsdatum; }
             set { erstellungsdatum = value; }
@@ -75,16 +75,6 @@ namespace EPUBackoffice.Dal.Tables
         {
             get { return umsetzungschance; }
             set { if (value <= 100 && value >= 0) { umsetzungschance = value; } }
-        }
-
-        private bool akzeptiert;
-        /// <summary>
-        /// bool-value, which shows if Angebot has been accepted
-        /// </summary>
-        public bool Akzeptiert
-        {
-            get { return akzeptiert; }
-            set { akzeptiert = value; }
         }
 
         private string beschreibung;

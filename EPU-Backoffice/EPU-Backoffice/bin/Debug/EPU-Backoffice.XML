@@ -872,17 +872,12 @@
         </member>
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Erstellungsdatum">
             <summary>
-            Datum of creation of an Angebot
+            Datum of creation of an Angebot - in shortDateString-Format
             </summary>
         </member>
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Umsetzungschance">
             <summary>
             Chance in % of Umsetzung
-            </summary>
-        </member>
-        <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Akzeptiert">
-            <summary>
-            bool-value, which shows if Angebot has been accepted
             </summary>
         </member>
         <member name="P:EPUBackoffice.Dal.Tables.AngebotTable.Beschreibung">

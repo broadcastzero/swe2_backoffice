@@ -499,11 +499,12 @@ namespace EPUBackoffice.Gui
                 k.Vorname = DataBindingFramework.BindFromString(this.createAngebotNewKundeVnTextBox.Text, "Vorname", this.createAngebotMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
                 k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createAngebotNewKundeNnTextBox.Text, "Nachname", this.createAngebotMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
                 k.Type = false; // Kunde
+
                 KundenKontakteSaver saver = new KundenKontakteSaver();
 
                 try
                 {
-                    saver.SaveNewKundeKontakt(k, this.createAngebotMsgLabel);
+                    k.ID = saver.SaveNewKundeKontakt(k, this.createAngebotMsgLabel);
                 }
                 catch (InvalidInputException ex)
                 {
@@ -531,6 +532,8 @@ namespace EPUBackoffice.Gui
             angebot.Umsetzungschance = DataBindingFramework.BindFromInt(this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Text, "Umsetzungschance", this.createAngebotMsgLabel, Rules.PerCent);
             angebot.Angebotsdauer = DataBindingFramework.BindFromString(this.angebotValidUntilDateTimePicker.Value.ToShortDateString(), "GültigBis", this.createAngebotMsgLabel, Rules.Date);
             angebot.Beschreibung = DataBindingFramework.BindFromString(this.createAngebotDescriptionTextBox.Text, "Beschreibung", this.createAngebotMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            angebot.KundenID = DataBindingFramework.BindFromInt(k.ID.ToString(), "kundenID", this.createAngebotMsgLabel, Rules.PositiveInt);
+            angebot.Erstellungsdatum = DateTime.Now.ToShortDateString();
 
             // in case of errors
             if (createAngebotMsgLabel.Visible)

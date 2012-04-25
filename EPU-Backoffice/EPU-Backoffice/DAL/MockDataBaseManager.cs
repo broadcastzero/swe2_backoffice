@@ -276,7 +276,6 @@ namespace EPUBackoffice.Dal
         /// <param name="angebot">The business object</param>
         public void CreateAngebot(AngebotTable angebot)
         {
-            angebot.ID = MockDataBaseManager.AngebotID;
             MockDataBaseManager.savedAngebote.Add(angebot);
             this.logger.Log(Logger.Level.Info, "Angebot saved to the mockDB");
         }

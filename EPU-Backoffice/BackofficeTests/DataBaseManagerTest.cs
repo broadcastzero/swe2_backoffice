@@ -71,6 +71,7 @@
             DataBaseManager target = new DataBaseManager();
 
             KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = -1; // indicates that it shall not be searched for ID
             k.Type = false;
             k.Vorname = string.Empty;
             k.NachnameFirmenname = "Huber";
@@ -90,6 +91,7 @@
             DataBaseManager target = new DataBaseManager();
 
             KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = -1; // indicates that it shall not be searched for ID
             k.Type = false;
             k.Vorname = "Franz";
             k.NachnameFirmenname = string.Empty;
@@ -109,6 +111,7 @@
             DataBaseManager target = new DataBaseManager();
 
             KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = -1; // indicates that it shall not be searched for ID
             k.Type = false;
             k.Vorname = string.Empty;
             k.NachnameFirmenname = string.Empty;
@@ -127,6 +130,7 @@
         {
             DataBaseManager target = new DataBaseManager();
             KundeKontaktTable k = new KundeKontaktTable();
+            k.ID = -1; // don't search for ID
             k.Type = true;
             k.Vorname = "Hans";
             k.NachnameFirmenname = "Huber";

@@ -36,6 +36,8 @@ namespace EPUBackoffice.BL
             DataBindingFramework.BindFromInt(angebot.Umsetzungschance.ToString(), "Umsetzungschance", errorlabel, Rules.PerCent);
             DataBindingFramework.BindFromString(angebot.Angebotsdauer, "GültigBis", errorlabel, Rules.Date);
             DataBindingFramework.BindFromString(angebot.Beschreibung, "Beschreibung", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            DataBindingFramework.BindFromInt(angebot.KundenID.ToString(), "kundenID", errorlabel, Rules.PositiveInt);
+            DataBindingFramework.BindFromString(angebot.Erstellungsdatum, "Erstellungsdatum", errorlabel, Rules.Date);
 
             if (errorlabel.Visible)
             {
