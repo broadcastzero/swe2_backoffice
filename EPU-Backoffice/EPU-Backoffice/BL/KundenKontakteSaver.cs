@@ -15,9 +15,9 @@ namespace EPUBackoffice.BL
     using DatabindingFramework;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.Rules;
     using Logger;
     using UserExceptions;
-    using Rulemanager;
     
     /// <summary>
     /// Checks data from the GUI and forwards it to the database where it is saved.
@@ -34,8 +34,8 @@ namespace EPUBackoffice.BL
         /// <returns>The ID of the newly inserted Kunde/Kontakt</returns>
         public int SaveNewKundeKontakt(KundeKontaktTable k, Label errorlabel)
         {
-            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            //DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            //DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
 
             if (errorlabel.Visible)
             {

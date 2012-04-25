@@ -15,9 +15,9 @@ namespace EPUBackoffice.BL
     using DatabindingFramework;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.Rules;
     using EPUBackoffice.UserExceptions;
     using Logger;
-    using Rulemanager;
 
     /// <summary>
     /// This class' methods load data out of the database and returns a list of requested data.
@@ -34,8 +34,8 @@ namespace EPUBackoffice.BL
         /// <returns>List of matching Kontakt</returns>
         public List<KundeKontaktTable> LoadKundenKontakte(KundeKontaktTable k, Label errorlabel)
         {
-            DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            //DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            //DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, Rules.IsAndCanBeNull, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
             k.ID = -1; // indicates that we don't want to search for an ID
 
             if (errorlabel.Visible)

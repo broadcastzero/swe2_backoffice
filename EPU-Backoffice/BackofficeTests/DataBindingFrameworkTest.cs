@@ -4,7 +4,7 @@ using System;
 using System.Windows.Forms;
 using DatabindingFramework;
 using EPUBackoffice.Dal.Tables;
-using Rulemanager;
+using EPUBackoffice.Rules;
 
 namespace BackofficeTests
 {    
@@ -75,7 +75,10 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = 42;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
+
+            IRule posval = new PositiveIntValidator();
+
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, false, posval);
             Assert.AreEqual(expected, actual);
         }
 
@@ -90,7 +93,10 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
+
+            IRule posval = new PositiveIntValidator();
+
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, false, posval);
             Assert.AreEqual(expected, actual);
         }
 
@@ -105,7 +111,10 @@ namespace BackofficeTests
             Label label = new Label();
             int expected = -1;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
+
+            IRule posval = new PositiveIntValidator();
+
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, false, posval);
             Assert.AreEqual(expected, actual);
         }
 
@@ -116,11 +125,14 @@ namespace BackofficeTests
         public void BindFromIntTest3()
         {
             TextBox sender = new TextBox();
-            sender.Text = "41";
+            sender.Text = "0";
             Label label = new Label();
-            int expected = 41;
+            int expected = 0;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rulemanager.Rules.PositiveInt);
+
+            IRule posval = new PositiveIntValidator();
+
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, false, posval);
             Assert.AreEqual(expected, actual);
         }
 
@@ -133,24 +145,12 @@ namespace BackofficeTests
             TextBox sender = new TextBox();
             sender.Text = "101";
             Label label = new Label();
-            int expected = -1;
+            int expected = 101;
             int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rules.PositiveInt, Rules.PerCent);
-            Assert.AreEqual(expected, actual);
-        }
 
-        /// <summary>
-        ///A fourth test for BindFromInt
-        ///</summary>
-        [TestMethod()]
-        public void BindFromIntTest5()
-        {
-            TextBox sender = new TextBox();
-            sender.Text = string.Empty;
-            Label label = new Label();
-            int expected = 0;
-            int actual;
-            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, Rules.IsAndCanBeNull, Rules.PositiveInt, Rules.PerCent);
+            IRule posval = new PositiveIntValidator();
+
+            actual = DataBindingFramework.BindFromInt(sender.Text, "Integer", label, false, posval);
             Assert.AreEqual(expected, actual);
         }
 
@@ -162,10 +162,10 @@ namespace BackofficeTests
         {
             TextBox sender = new TextBox();
             sender.Text = string.Empty;
-            Label label = new Label(); // TODO: Initialize to an appropriate value
-            Rules rule = Rules.LettersHyphen;
+            Label label = new Label();
             string actual;
-            actual = DataBindingFramework.BindFromString(sender.Text, "anyname", label, rule);
+
+            actual = DataBindingFramework.BindFromString(sender.Text, "anyname", label, false);
 
             Assert.IsTrue(label.Visible);
         }
@@ -179,10 +179,12 @@ namespace BackofficeTests
             TextBox sender = new TextBox();
             sender.Text = "4,33";
             Label label = new Label();
-            Rules[] rules = {Rules.PositiveDouble};
             double expected = 4.33;
             double actual;
-            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, rules);
+
+            IRule val = new PositiveDoubleValidator();
+
+            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, false, val);
             Assert.AreEqual(expected, actual);
         }
 
@@ -195,10 +197,13 @@ namespace BackofficeTests
             TextBox sender = new TextBox();
             sender.Text = string.Empty;
             Label label = new Label();
-            Rules[] rules = { Rules.IsAndCanBeNull, Rules.PositiveDouble };
+            
             double expected = 0;
             double actual;
-            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, rules);
+
+            IRule doubleval = new PositiveDoubleValidator();
+
+            actual = DataBindingFramework.BindFromDouble(sender.Text, "Double", label, true, doubleval);
             Assert.AreEqual(expected, actual);
         }
     }

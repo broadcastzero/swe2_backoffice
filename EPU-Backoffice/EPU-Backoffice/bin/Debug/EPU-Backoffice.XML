@@ -345,112 +345,6 @@
             Foreign key to table Kunde
             </summary>
         </member>
-        <member name="T:Rulemanager.Rules">
-            <summary>
-            An enum for rules
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.IsAndCanBeNull">
-            <summary>
-            Checks if string contains chars (MUST BE THE FIRST RULE TO CHECK!! WILL BE IGNORED OTHERWISE!) 
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.PositiveInt">
-            <summary>
-            A positive integer value is requested.
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.PositiveDouble">
-            <summary>
-            A positive double value is requested.
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.LettersHyphen">
-            <summary>
-            A string only containing letters and hyphens is requested.
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.LettersNumbersHyphenSpace">
-            <summary>
-            A string only containing letters, numbers, hyphens and spaces is requested.
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.StringLength150">
-            <summary>
-            A string only containing less or = 150 signs is requested.
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.PerCent">
-            <summary>
-            An integer between 0-100 is requested (%)
-            </summary>
-        </member>
-        <member name="F:Rulemanager.Rules.Date">
-            <summary>
-            A date string in the format 17/07/1987
-            </summary>
-        </member>
-        <member name="T:Rulemanager.RuleManager">
-            <summary>
-            This class checks the user input for invalid characters
-            </summary>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidateLettersHyphen(System.String)">
-            <summary>
-            Checks if input string contains only letters and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string valid</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidateLettersNumbersHyphenSpace(System.String)">
-            <summary>
-            Checks if input string contains only letters, numbers and hyphens
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidateStringLength150(System.String)">
-            <summary>
-            Check if string does not have more than 150 chars
-            </summary>
-            <param name="input">The string that shall be checked</param>
-            <returns>True, if string is valid</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidatePositiveInt(System.String)">
-            <summary>
-            Checks if string is a positive integer
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The converted integer, -1 in case of error</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidatePerCent(System.String)">
-            <summary>
-            Checks if given string is an integer between 0 and 100 (%)
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The parsed Int, -1 in case of error</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidatePositiveDouble(System.String)">
-            <summary>
-            Checks if given string is a positive double
-            </summary>
-            <param name="input">The input string</param>
-            <returns>The parsed double, -1 in case of error</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.IsAndCanBeNull(System.String)">
-            <summary>
-            Checks if given string does contain chars - if not, then string is valid (ignore errors of other checks which occure because of string being empty)
-            </summary>
-            <param name="input">The input string</param>
-            <returns>false, if empty</returns>
-        </member>
-        <member name="M:Rulemanager.RuleManager.ValidateDateString(System.String)">
-            <summary>
-            Checks if string is a valid date string with the format 17/07/1987
-            </summary>
-            <param name="input"></param>
-            <returns></returns>
-        </member>
         <member name="T:EPUBackoffice.UserExceptions.InvalidFileException">
             <summary>
             This Exception is thrown if the user tries to open or save an invalid file.
@@ -799,33 +693,43 @@
             Validates user input and binds data
             </summary>
         </member>
-        <member name="M:DatabindingFramework.DataBindingFramework.BindFromInt(System.String,System.String,System.Windows.Forms.Label,Rulemanager.Rules[])">
+        <member name="M:DatabindingFramework.DataBindingFramework.ShowError(System.String,System.Windows.Forms.Label)">
+            <summary>
+            Shows a GUI error label
+            </summary>
+            <param name="element">The name of the element which has errors</param>
+            <param name="label">The errorlabel in which errors will be displayed</param>
+        </member>
+        <member name="M:DatabindingFramework.DataBindingFramework.BindFromInt(System.String,System.String,System.Windows.Forms.Label,System.Boolean,EPUBackoffice.Rules.IRule[])">
             <summary>
             Checks input string and returns an integer
             </summary>
             <param name="input">The sending TextBox' value</param>
             <param name="name">The name of the sending text box</param>
             <param name="label">The error/success label</param>
+            <param name="canBeNull">Indicates if field can be empty</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>integer (Format depending on rule)</returns>
         </member>
-        <member name="M:DatabindingFramework.DataBindingFramework.BindFromString(System.String,System.String,System.Windows.Forms.Label,Rulemanager.Rules[])">
+        <member name="M:DatabindingFramework.DataBindingFramework.BindFromString(System.String,System.String,System.Windows.Forms.Label,System.Boolean,EPUBackoffice.Rules.IRule[])">
             <summary>
             Checks input string and returns an integer
             </summary>
             <param name="input">The sending TextBox' value</param>
             <param name="name">The description of the input field, as "Vorname" i.e. Needed for error label</param>
             <param name="label">The error/success label</param>
+            <param name="canBeNull">Indicates if field can be empty</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>String</returns>
         </member>
-        <member name="M:DatabindingFramework.DataBindingFramework.BindFromDouble(System.String,System.String,System.Windows.Forms.Label,Rulemanager.Rules[])">
+        <member name="M:DatabindingFramework.DataBindingFramework.BindFromDouble(System.String,System.String,System.Windows.Forms.Label,System.Boolean,EPUBackoffice.Rules.IRule[])">
             <summary>
             Checks input string and returns an integer
             </summary>
             <param name="input">The sending TextBox' value</param>
             <param name="name">The name of the sending text box</param>
             <param name="label">The error/success label</param>
+            <param name="canBeNull">Indicates if field can be empty</param>
             <param name="rules">An array of enum rules which indicates what the string shall checked for.</param>
             <returns>A double value</returns>
         </member>
@@ -1225,6 +1129,138 @@
             This class gets an instance of the database class or mock-database class, depending on the information stored in the config file.
             </summary>
             <returns>An object of the database type that shall be used</returns>
+        </member>
+        <member name="T:EPUBackoffice.Rules.IRule">
+            <summary>
+            An Interfaces for a validating class
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.IRule.Eval(System.Object)">
+            <summary>
+            the validating method
+            </summary>
+            <param name="input">The object (string, int, double) that shall be checked</param>
+        </member>
+        <member name="P:EPUBackoffice.Rules.IRule.HasErrors">
+            <summary>
+            Indicates if validating failed
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.PercentValidator">
+            <summary>
+            A class which checks for percent (0-100)
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.PercentValidator.Eval(System.Object)">
+            <summary>
+            Checks if given string is an integer between 0 and 100 (%)
+            </summary>
+            <param name="input">The input string</param>
+        </member>
+        <member name="P:EPUBackoffice.Rules.PercentValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.StringLength150Validator">
+            <summary>
+            A class which checks for percent (0-100)
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.StringLength150Validator.Eval(System.Object)">
+            <summary>
+            Check if string does not have more than 150 chars
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="P:EPUBackoffice.Rules.StringLength150Validator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.LettersHyphenValidator">
+            <summary>
+            A class which checks for letters and hyphen within the string
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.LettersHyphenValidator.Eval(System.Object)">
+            <summary>
+            Checks if input string contains only letters and hyphens
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string valid</returns>
+        </member>
+        <member name="P:EPUBackoffice.Rules.LettersHyphenValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.LettersNumbersHyphenSpaceValidator">
+            <summary>
+            A class which checks for letters and hyphen within the string
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.LettersNumbersHyphenSpaceValidator.Eval(System.Object)">
+            <summary>
+            Checks if input string contains only letters, numbers, hyphens and spaces
+            </summary>
+            <param name="input">The string that shall be checked</param>
+            <returns>True, if string is valid</returns>
+        </member>
+        <member name="P:EPUBackoffice.Rules.LettersNumbersHyphenSpaceValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.DateValidator">
+            <summary>
+            A class which checks for percent (0-100)
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.DateValidator.Eval(System.Object)">
+            <summary>
+            Checks if string is a valid date string with the format 17/07/1987
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EPUBackoffice.Rules.DateValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.PositiveIntValidator">
+            <summary>
+            A class which checks for positive integer
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.PositiveIntValidator.Eval(System.Object)">
+            <summary>
+            Checks if given string is a positive integer
+            </summary>
+            <param name="input">The input object</param>
+        </member>
+        <member name="P:EPUBackoffice.Rules.PositiveIntValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
+        </member>
+        <member name="T:EPUBackoffice.Rules.PositiveDoubleValidator">
+            <summary>
+            A class which checks for positive integer
+            </summary>
+        </member>
+        <member name="M:EPUBackoffice.Rules.PositiveDoubleValidator.Eval(System.Object)">
+            <summary>
+            Checks if given string is a positive double
+            </summary>
+            <param name="input">The input object</param>
+        </member>
+        <member name="P:EPUBackoffice.Rules.PositiveDoubleValidator.HasErrors">
+            <summary>
+            Indicates if the validation has been successful
+            </summary>
         </member>
     </members>
 </doc>

@@ -19,9 +19,9 @@ namespace EPUBackoffice.Gui
     using DatabindingFramework;
     using EPUBackoffice.BL;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.Rules;
     using EPUBackoffice.UserExceptions;
     using Logger;
-    using Rulemanager;
 
     /// <summary>
     /// The standard home screen of the application.
@@ -152,9 +152,9 @@ namespace EPUBackoffice.Gui
             KundeKontaktTable k = new KundeKontaktTable();
             
             // Bind data
-            k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock.Text, "Vorname", this.kundeNeuMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
-            k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock.Text, "Nachname/Firmenname", this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
-            k.Type = this.createKontaktRadioButton.Checked; // false - Kunde, true - Kontakt
+            //k.Vorname = DataBindingFramework.BindFromString(this.createKundeVornameTextBlock.Text, "Vorname", this.kundeNeuMsgLabel, Rules.IsAndCanBeNull, Rules.LettersHyphen, Rules.StringLength150);
+            //k.NachnameFirmenname = DataBindingFramework.BindFromString(this.createKundeNachnameTextBlock.Text, "Nachname/Firmenname", this.kundeNeuMsgLabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            //k.Type = this.createKontaktRadioButton.Checked; // false - Kunde, true - Kontakt
 
             // if no errors, send to business layer and show success message
             if (!this.kundeNeuMsgLabel.Visible)
@@ -238,7 +238,7 @@ namespace EPUBackoffice.Gui
         {
 
         }
-
+        
         /// <summary>
         /// Gets Kunden or Kontakte out of the database (over the business layer, which checks for valid input)
         /// </summary>
@@ -246,7 +246,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e"></param>
         private void SearchKundenOrKontakte(object sender, EventArgs e)
         {
-            // hide error message
+            /*// hide error message
             this.searchKundeErrorLabel.Hide();
             this.searchKundeErrorLabel.Text = string.Empty;
 
@@ -266,7 +266,7 @@ namespace EPUBackoffice.Gui
                 this.kundenSuchenBindingSource.DataSource = results;
             }
 
-            this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);
+            this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);*/
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The DataGridViewCellEventArgs</param> 
         private void BindToKundenSearchLabels(object sender, DataGridViewCellEventArgs e)
         {
-            int selectedRowID = e == null ? 0 : e.RowIndex;
+            /*int selectedRowID = e == null ? 0 : e.RowIndex;
 
             // if there are results
             if (this.kundenSuchenBindingSource.Count > 0 && selectedRowID >= 0)
@@ -291,7 +291,7 @@ namespace EPUBackoffice.Gui
             { 
                 this.searchKundeVornameTextBlock.Text = string.Empty;
                 this.searchKundeNachnameTextBlock.Text = string.Empty;
-            }
+            }*/
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace EPUBackoffice.Gui
         /// <param name="lastname">The new last name</param>
         private void BindFromKundenSearchTextBlock(string action, int row, string firstname, string lastname)
         {
-            if (action == "changeKundeButton")
+            /*if (action == "changeKundeButton")
             {
                 this.kundenSearchDataGridView.Rows[row].Cells[1].Value = firstname;
                 this.kundenSearchDataGridView.Rows[row].Cells[2].Value = lastname;
@@ -314,7 +314,7 @@ namespace EPUBackoffice.Gui
                 this.searchKundeVornameTextBlock.Clear();
                 this.searchKundeNachnameTextBlock.Clear();
                 this.SearchKundenOrKontakte(null, null);
-            }
+            }*/
         }
 
         /// <summary>
@@ -324,7 +324,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void ChangeKundeOrKontakt(object sender, EventArgs e)
         {
-            this.searchKundeErrorLabel.Hide();
+            /*this.searchKundeErrorLabel.Hide();
             this.searchKundeErrorLabel.Text = string.Empty;
 
             // if there are results
@@ -389,7 +389,7 @@ namespace EPUBackoffice.Gui
 
                 // show success messages
                 this.ShowSuccessLabel(this.searchKundeErrorLabel);
-            }
+            }*/
         }
 
         // reset everything within Kunden/Kontakte search
@@ -410,7 +410,6 @@ namespace EPUBackoffice.Gui
         private void BindFromExistingKunden(object sender, EventArgs e)
         {
             List<KundeKontaktTable> results;
-                        
             // add empty element to make empty choices possible
             List<string> listItems = new List<string>();
             listItems.Add("");
@@ -446,7 +445,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The event params</param>
         private void CreateNewAngebot(object sender, EventArgs e)
         {
-            // reset error/success labels
+            /*// reset error/success labels
             this.createAngebotMsgLabel.Hide();
             this.createAngebotMsgLabel.Text = string.Empty;
 
@@ -574,7 +573,7 @@ namespace EPUBackoffice.Gui
                 this.createAngebotMsgLabel.Text += "\nAngebot wurde gespeichert.";
                 this.createAngebotMsgLabel.ForeColor = Color.Green;
                 this.createAngebotMsgLabel.Show();
-            }
+            }*/
         }
 
         /// <summary>
@@ -600,7 +599,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void SearchAngebote(object sender, EventArgs e)
         {
-            // hide Messagelabel
+            /*// hide Messagelabel
             this.angebotSuchenMsgLabel.Hide();
 
             // get selected KundenID
@@ -627,7 +626,7 @@ namespace EPUBackoffice.Gui
             //results = manager.Load( this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
             // TODO: catch InvalidInputException & maybe SQLite-exception
 
-            //this.AngeboteSuchenDataGridView.DataSource = results;
+            //this.AngeboteSuchenDataGridView.DataSource = results;*/
         }
 
         /// <summary>

@@ -1,7 +1,7 @@
 ﻿using EPUBackoffice.BL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Rulemanager;
+using EPUBackoffice.Rules;
 
 namespace BackofficeTests
 {   
@@ -66,11 +66,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePerCentTest()
         {
+            PercentValidator val = new PercentValidator();
             string input = "100";
-            int expected = 100;
-            int actual;
-            actual = RuleManager.ValidatePerCent(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -79,11 +78,11 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePerCentTest1()
         {
+            PercentValidator val = new PercentValidator();
             string input = "100x";
-            int expected = -1;
-            int actual;
-            actual = RuleManager.ValidatePerCent(input);
-            Assert.AreEqual(expected, actual);
+
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -92,11 +91,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePerCentTest2()
         {
+            PercentValidator val = new PercentValidator();
             string input = "101";
-            int expected = -1;
-            int actual;
-            actual = RuleManager.ValidatePerCent(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -105,11 +103,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePerCentTest3()
         {
+            PercentValidator val = new PercentValidator();
             string input = "-1";
-            int expected = -1;
-            int actual;
-            actual = RuleManager.ValidatePerCent(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -118,11 +115,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateLettersHyphenTest()
         {
+            LettersHyphenValidator val = new LettersHyphenValidator();
             string input = "Franz-Karl-Stephan";
-            bool expected = true;
-            bool actual;
-            actual = RuleManager.ValidateLettersHyphen(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -131,11 +127,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateLettersHyphenTest1()
         {
+            LettersHyphenValidator val = new LettersHyphenValidator();
             string input = "Franz Karl Stephan";
-            bool expected = false;
-            bool actual;
-            actual = RuleManager.ValidateLettersHyphen(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -144,11 +139,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateLettersHyphenTest2()
         {
+            LettersHyphenValidator val = new LettersHyphenValidator();
             string input = "Franz";
-            bool expected = true;
-            bool actual;
-            actual = RuleManager.ValidateLettersHyphen(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -157,11 +151,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateLettersNumbersHyphenSpaceTest()
         {
+            LettersNumbersHyphenSpaceValidator val = new LettersNumbersHyphenSpaceValidator();
             string input = "No-Responsibility Company 05";
-            bool expected = true;
-            bool actual;
-            actual = RuleManager.ValidateLettersNumbersHyphenSpace(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -170,11 +163,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePositiveIntTest()
         {
+            PositiveIntValidator val = new PositiveIntValidator();
             string input = "32x";
-            int expected = -1;
-            int actual;
-            actual = RuleManager.ValidatePositiveInt(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -183,11 +175,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidatePositiveIntTest1()
         {
+            PositiveIntValidator val = new PositiveIntValidator();
             string input = "32";
-            int expected = 32;
-            int actual;
-            actual = RuleManager.ValidatePositiveInt(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -196,11 +187,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateStringLength150Test()
         {
+            StringLength150Validator val = new StringLength150Validator();
             string input = "Franz";
-            bool expected = true;
-            bool actual;
-            actual = RuleManager.ValidateStringLength150(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
 
         /// <summary>
@@ -209,11 +199,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateStringLength150Test1()
         {
+            StringLength150Validator val = new StringLength150Validator();
             string input = "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"; //151
-            bool expected = false;
-            bool actual;
-            actual = RuleManager.ValidateStringLength150(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(true, val.HasErrors);
         }
 
         /// <summary>
@@ -222,11 +211,10 @@ namespace BackofficeTests
         [TestMethod()]
         public void ValidateStringLength150Test2()
         {
+            StringLength150Validator val = new StringLength150Validator();
             string input = "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"; //150
-            bool expected = true;
-            bool actual;
-            actual = RuleManager.ValidateStringLength150(input);
-            Assert.AreEqual(expected, actual);
+            val.Eval(input);
+            Assert.AreEqual(false, val.HasErrors);
         }
     }
 }

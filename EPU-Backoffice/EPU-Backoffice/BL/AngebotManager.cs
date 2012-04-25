@@ -15,10 +15,10 @@ namespace EPUBackoffice.BL
     using System.Windows.Forms;
     using EPUBackoffice.Dal;
     using EPUBackoffice.Dal.Tables;
+    using EPUBackoffice.Rules;
     using EPUBackoffice.UserExceptions;
     using DatabindingFramework;
     using Logger;
-    using Rulemanager;
 
     /// <summary>
     /// Contains methods to manipulate, save or load Angebote
@@ -32,12 +32,12 @@ namespace EPUBackoffice.BL
         /// </summary>
         public void Create(AngebotTable angebot, Label errorlabel)
         {
-            DataBindingFramework.BindFromDouble(angebot.Angebotssumme.ToString(), "Angebotssumme", errorlabel, Rules.PositiveDouble);
-            DataBindingFramework.BindFromInt(angebot.Umsetzungschance.ToString(), "Umsetzungschance", errorlabel, Rules.PerCent);
-            DataBindingFramework.BindFromString(angebot.Angebotsdauer, "GültigBis", errorlabel, Rules.Date);
-            DataBindingFramework.BindFromString(angebot.Beschreibung, "Beschreibung", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
-            DataBindingFramework.BindFromInt(angebot.KundenID.ToString(), "kundenID", errorlabel, Rules.PositiveInt);
-            DataBindingFramework.BindFromString(angebot.Erstellungsdatum, "Erstellungsdatum", errorlabel, Rules.Date);
+            //DataBindingFramework.BindFromDouble(angebot.Angebotssumme.ToString(), "Angebotssumme", errorlabel, Rules.PositiveDouble);
+            //DataBindingFramework.BindFromInt(angebot.Umsetzungschance.ToString(), "Umsetzungschance", errorlabel, Rules.PerCent);
+            //DataBindingFramework.BindFromString(angebot.Angebotsdauer, "GültigBis", errorlabel, Rules.Date);
+            //DataBindingFramework.BindFromString(angebot.Beschreibung, "Beschreibung", errorlabel, Rules.LettersNumbersHyphenSpace, Rules.StringLength150);
+            //DataBindingFramework.BindFromInt(angebot.KundenID.ToString(), "kundenID", errorlabel, Rules.PositiveInt);
+            //DataBindingFramework.BindFromString(angebot.Erstellungsdatum, "Erstellungsdatum", errorlabel, Rules.Date);
 
             if (errorlabel.Visible)
             {
@@ -64,18 +64,18 @@ namespace EPUBackoffice.BL
         public List<AngebotTable> Load(string firstname, string lastname, DateTime from, DateTime until)
         {
             // check parameter
-            if (firstname != null && (firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false))
+            //if (firstname != null && (firstname.Length != 0 && RuleManager.ValidateLettersHyphen(firstname) == false))
             {
                 this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid first name!");
                 throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
             }
-            else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
+            //else if (lastname != null && (lastname.Length != 0 && RuleManager.ValidateLettersNumbersHyphenSpace(lastname) == false))
             {
                 this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid last name!");
                 throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
             }
             // call GetAngebote function, depending on what parameters have been provided by the GUI
-            else if ((firstname == null || firstname.Length == 0) && (lastname == null || lastname.Length == 0))
+            //else if ((firstname == null || firstname.Length == 0) && (lastname == null || lastname.Length == 0))
             {
                 try
                 {
@@ -86,7 +86,7 @@ namespace EPUBackoffice.BL
                     throw;
                 }
             }
-            else if ((firstname != null && firstname.Length != 0) && (lastname == null || lastname.Length == 0))
+            //else if ((firstname != null && firstname.Length != 0) && (lastname == null || lastname.Length == 0))
             {
                 try
                 {
@@ -97,7 +97,7 @@ namespace EPUBackoffice.BL
                     throw;
                 }
             }
-            else if ((firstname == null || firstname.Length == 0) && (lastname != null && lastname.Length != 0))
+            //else if ((firstname == null || firstname.Length == 0) && (lastname != null && lastname.Length != 0))
             {
                 try
                 {
@@ -108,7 +108,7 @@ namespace EPUBackoffice.BL
                     throw;
                 }
             }
-            else
+            //else
             {
                 try
                 {
