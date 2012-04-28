@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B1389B9E-E265-4C1E-9838-6CF8E08BA40C}</ProjectGuid>
+    <ProjectGuid>{E5C20461-2DAF-4980-8B05-5CD7F1E2AE6B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EPUBackoffice</RootNamespace>
+    <RootNamespace>EPU_Backoffice</RootNamespace>
     <AssemblyName>EPU-Backoffice</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -23,7 +23,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\EPU-Backoffice.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -34,16 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>EPUBackoffice.BL.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\System.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,66 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\AngebotManager.cs" />
-    <Compile Include="BL\ConfigFileManager.cs" />
-    <Compile Include="BL\DatabaseConnector.cs" />
-    <Compile Include="FileAppender.cs" />
-    <Compile Include="IAppender.cs" />
-    <Compile Include="BL\KundenKontakteChanger.cs" />
-    <Compile Include="BL\KundenKontakteLoader.cs" />
-    <Compile Include="BL\KundenKontakteSaver.cs" />
-    <Compile Include="BL\ProjektManager.cs" />
-    <Compile Include="DataBindingFramework.cs" />
-    <Compile Include="Rules\PositiveDoubleValidator.cs" />
-    <Compile Include="Rules\DateValidator.cs" />
-    <Compile Include="Rules\LettersNumbersHyphenSpaceValidator.cs" />
-    <Compile Include="Rules\LettersHyphenValidator.cs" />
-    <Compile Include="Rules\StringLength150Validator.cs" />
-    <Compile Include="Rules\PositiveIntValidator.cs" />
-    <Compile Include="Rules\PercentValidator.cs" />
-    <Compile Include="Rules\IRule.cs" />
-    <Compile Include="Dal\DALFactory.cs" />
-    <Compile Include="Dal\IDAL.cs" />
-    <Compile Include="Dal\MockDataBaseManager.cs" />
-    <Compile Include="Dal\Tables\AngebotTable.cs" />
-    <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
-    <Compile Include="Dal\Tables\BankkontoTable.cs" />
-    <Compile Include="Dal\Tables\BuchungszeilenTable.cs" />
-    <Compile Include="Dal\Tables\EingangsrechnungTable.cs" />
-    <Compile Include="Dal\Tables\KategorienTable.cs" />
-    <Compile Include="Dal\Tables\KundeKontaktTable.cs" />
-    <Compile Include="Dal\Tables\ProjektTable.cs" />
-    <Compile Include="Dal\DataBaseManager.cs" />
-    <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
-    <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
-    <Compile Include="Gui\DataBaseOpener.cs" />
-    <Compile Include="Gui\TableControl.cs">
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Gui\DBNotFoundForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\DBNotFoundForm.Designer.cs">
-      <DependentUpon>DBNotFoundForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BL\Program.cs" />
-    <Compile Include="Gui\HomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\HomeForm.Designer.cs">
+    <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Logger.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserExceptions\EntryNotFoundException.cs" />
-    <Compile Include="UserExceptions\InvalidFileException.cs" />
-    <Compile Include="UserExceptions\InvalidValueException.cs" />
-    <EmbeddedResource Include="Gui\DBNotFoundForm.resx">
-      <DependentUpon>DBNotFoundForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,13 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="EPUBackoffice.Dal.Tables.KundeTable.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,7 +79,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EPU-Backoffice Panels\EPU-Backoffice Panels.csproj">
+      <Project>{82FABF31-AECC-4BB2-901D-261D3D8A2D86}</Project>
+      <Name>EPU-Backoffice Panels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

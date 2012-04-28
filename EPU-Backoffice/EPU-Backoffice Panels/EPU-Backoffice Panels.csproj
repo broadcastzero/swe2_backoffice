@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82FABF31-AECC-4BB2-901D-261D3D8A2D86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPU_Backoffice_Panels</RootNamespace>
+    <AssemblyName>EPU-Backoffice Panels</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="angeboteTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="angeboteTab.Designer.cs">
+      <DependentUpon>angeboteTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="homeTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homeTab.Designer.cs">
+      <DependentUpon>homeTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kundenKontakteTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="kundenKontakteTab.Designer.cs">
+      <DependentUpon>kundenKontakteTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projektTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="projektTab.Designer.cs">
+      <DependentUpon>projektTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rechnungsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="rechnungsTab.Designer.cs">
+      <DependentUpon>rechnungsTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="reportTab.Designer.cs">
+      <DependentUpon>reportTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableControlPanels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="zeitTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="zeitTab.Designer.cs">
+      <DependentUpon>zeitTab.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="angeboteTab.resx">
+      <DependentUpon>angeboteTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeTab.resx">
+      <DependentUpon>homeTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kundenKontakteTab.resx">
+      <DependentUpon>kundenKontakteTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projektTab.resx">
+      <DependentUpon>projektTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rechnungsTab.resx">
+      <DependentUpon>rechnungsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportTab.resx">
+      <DependentUpon>reportTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zeitTab.resx">
+      <DependentUpon>zeitTab.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

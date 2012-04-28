@@ -1,0 +1,10 @@
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.AngeboteTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.HomeTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.KundenKontakteTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.Projekttab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.RechnungsTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.ReportTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.ZeitTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.write.1.tlog

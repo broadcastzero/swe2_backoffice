@@ -1,0 +1,14 @@
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\bin\Debug\EPU-Backoffice Panels.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\bin\Debug\EPU-Backoffice Panels.pdb
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU-Backoffice Panels.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU-Backoffice Panels.pdb
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.angeboteTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.homeTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.kundenKontakteTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.projektTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.rechnungsTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.reportTab.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU_Backoffice_Panels.zeitTab.resources

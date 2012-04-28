@@ -1,0 +1,6 @@
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\EPUBackoffice.Gui.DBNotFoundForm.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\EPUBackoffice.Gui.HomeForm.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\EPUBackoffice.Properties.Resources.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\obj\x86\Debug\GenerateResource.write.1.tlog
