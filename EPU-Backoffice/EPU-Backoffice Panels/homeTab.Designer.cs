@@ -74,6 +74,7 @@
             this.homeOpenNewDbButton.TabIndex = 11;
             this.homeOpenNewDbButton.Text = "Datenbank auswählen";
             this.homeOpenNewDbButton.UseVisualStyleBackColor = true;
+            this.homeOpenNewDbButton.Click += new System.EventHandler(this.ShowOpenNewDbDialogue);
             // 
             // la_homeTextCurrent
             // 

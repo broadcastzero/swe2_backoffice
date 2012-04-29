@@ -38,18 +38,18 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.TableControl = new EPU_Backoffice.TablessControl();
             this.homeTab = new System.Windows.Forms.TabPage();
+            this.homeTabInner = new EPU_Backoffice_Panels.homeTab();
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
-            this.rechnungsTab = new System.Windows.Forms.TabPage();
-            this.angeboteTab = new System.Windows.Forms.TabPage();
-            this.projektTab = new System.Windows.Forms.TabPage();
-            this.zeitTab = new System.Windows.Forms.TabPage();
-            this.reportTab = new System.Windows.Forms.TabPage();
-            this.homeTab1 = new EPU_Backoffice_Panels.homeTab();
             this.kundenKontakteTab1 = new EPU_Backoffice_Panels.kundenKontakteTab();
+            this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.rechnungsTab1 = new EPU_Backoffice_Panels.rechnungsTab();
+            this.angeboteTab = new System.Windows.Forms.TabPage();
             this.angeboteTab1 = new EPU_Backoffice_Panels.angeboteTab();
+            this.projektTab = new System.Windows.Forms.TabPage();
             this.projektTab1 = new EPU_Backoffice_Panels.projektTab();
+            this.zeitTab = new System.Windows.Forms.TabPage();
             this.zeitTab1 = new EPU_Backoffice_Panels.zeitTab();
+            this.reportTab = new System.Windows.Forms.TabPage();
             this.reportTab1 = new EPU_Backoffice_Panels.reportTab();
             this.TableControl.SuspendLayout();
             this.homeTab.SuspendLayout();
@@ -69,6 +69,7 @@
             this.beendenButton.TabIndex = 23;
             this.beendenButton.Text = "Beenden";
             this.beendenButton.UseVisualStyleBackColor = true;
+            this.beendenButton.Click += new System.EventHandler(this.ShowExitMessageBox);
             // 
             // reportsButton
             // 
@@ -154,7 +155,7 @@
             // 
             // homeTab
             // 
-            this.homeTab.Controls.Add(this.homeTab1);
+            this.homeTab.Controls.Add(this.homeTabInner);
             this.homeTab.Location = new System.Drawing.Point(42, 4);
             this.homeTab.Name = "homeTab";
             this.homeTab.Padding = new System.Windows.Forms.Padding(3);
@@ -162,6 +163,13 @@
             this.homeTab.TabIndex = 0;
             this.homeTab.Text = "Home";
             this.homeTab.UseVisualStyleBackColor = true;
+            // 
+            // homeTabInner
+            // 
+            this.homeTabInner.Location = new System.Drawing.Point(-2, -7);
+            this.homeTabInner.Name = "homeTabInner";
+            this.homeTabInner.Size = new System.Drawing.Size(755, 269);
+            this.homeTabInner.TabIndex = 0;
             // 
             // kundenKontakteTab
             // 
@@ -174,6 +182,13 @@
             this.kundenKontakteTab.Text = "Kunden";
             this.kundenKontakteTab.UseVisualStyleBackColor = true;
             // 
+            // kundenKontakteTab1
+            // 
+            this.kundenKontakteTab1.Location = new System.Drawing.Point(-2, -1);
+            this.kundenKontakteTab1.Name = "kundenKontakteTab1";
+            this.kundenKontakteTab1.Size = new System.Drawing.Size(755, 259);
+            this.kundenKontakteTab1.TabIndex = 0;
+            // 
             // rechnungsTab
             // 
             this.rechnungsTab.Controls.Add(this.rechnungsTab1);
@@ -183,6 +198,13 @@
             this.rechnungsTab.TabIndex = 2;
             this.rechnungsTab.Text = "Rechnung";
             this.rechnungsTab.UseVisualStyleBackColor = true;
+            // 
+            // rechnungsTab1
+            // 
+            this.rechnungsTab1.Location = new System.Drawing.Point(-3, 1);
+            this.rechnungsTab1.Name = "rechnungsTab1";
+            this.rechnungsTab1.Size = new System.Drawing.Size(755, 259);
+            this.rechnungsTab1.TabIndex = 0;
             // 
             // angeboteTab
             // 
@@ -194,6 +216,13 @@
             this.angeboteTab.Text = "Angebote";
             this.angeboteTab.UseVisualStyleBackColor = true;
             // 
+            // angeboteTab1
+            // 
+            this.angeboteTab1.Location = new System.Drawing.Point(-3, 0);
+            this.angeboteTab1.Name = "angeboteTab1";
+            this.angeboteTab1.Size = new System.Drawing.Size(755, 259);
+            this.angeboteTab1.TabIndex = 0;
+            // 
             // projektTab
             // 
             this.projektTab.Controls.Add(this.projektTab1);
@@ -203,6 +232,13 @@
             this.projektTab.TabIndex = 4;
             this.projektTab.Text = "Projekt";
             this.projektTab.UseVisualStyleBackColor = true;
+            // 
+            // projektTab1
+            // 
+            this.projektTab1.Location = new System.Drawing.Point(0, -3);
+            this.projektTab1.Name = "projektTab1";
+            this.projektTab1.Size = new System.Drawing.Size(755, 259);
+            this.projektTab1.TabIndex = 0;
             // 
             // zeitTab
             // 
@@ -214,6 +250,13 @@
             this.zeitTab.Text = "Zeit";
             this.zeitTab.UseVisualStyleBackColor = true;
             // 
+            // zeitTab1
+            // 
+            this.zeitTab1.Location = new System.Drawing.Point(3, -3);
+            this.zeitTab1.Name = "zeitTab1";
+            this.zeitTab1.Size = new System.Drawing.Size(755, 259);
+            this.zeitTab1.TabIndex = 0;
+            // 
             // reportTab
             // 
             this.reportTab.Controls.Add(this.reportTab1);
@@ -223,48 +266,6 @@
             this.reportTab.TabIndex = 6;
             this.reportTab.Text = "Report";
             this.reportTab.UseVisualStyleBackColor = true;
-            // 
-            // homeTab1
-            // 
-            this.homeTab1.Location = new System.Drawing.Point(-2, -7);
-            this.homeTab1.Name = "homeTab1";
-            this.homeTab1.Size = new System.Drawing.Size(755, 269);
-            this.homeTab1.TabIndex = 0;
-            // 
-            // kundenKontakteTab1
-            // 
-            this.kundenKontakteTab1.Location = new System.Drawing.Point(-2, -1);
-            this.kundenKontakteTab1.Name = "kundenKontakteTab1";
-            this.kundenKontakteTab1.Size = new System.Drawing.Size(755, 259);
-            this.kundenKontakteTab1.TabIndex = 0;
-            // 
-            // rechnungsTab1
-            // 
-            this.rechnungsTab1.Location = new System.Drawing.Point(-3, 1);
-            this.rechnungsTab1.Name = "rechnungsTab1";
-            this.rechnungsTab1.Size = new System.Drawing.Size(755, 259);
-            this.rechnungsTab1.TabIndex = 0;
-            // 
-            // angeboteTab1
-            // 
-            this.angeboteTab1.Location = new System.Drawing.Point(-3, 0);
-            this.angeboteTab1.Name = "angeboteTab1";
-            this.angeboteTab1.Size = new System.Drawing.Size(755, 259);
-            this.angeboteTab1.TabIndex = 0;
-            // 
-            // projektTab1
-            // 
-            this.projektTab1.Location = new System.Drawing.Point(0, -3);
-            this.projektTab1.Name = "projektTab1";
-            this.projektTab1.Size = new System.Drawing.Size(755, 259);
-            this.projektTab1.TabIndex = 0;
-            // 
-            // zeitTab1
-            // 
-            this.zeitTab1.Location = new System.Drawing.Point(3, -3);
-            this.zeitTab1.Name = "zeitTab1";
-            this.zeitTab1.Size = new System.Drawing.Size(755, 259);
-            this.zeitTab1.TabIndex = 0;
             // 
             // reportTab1
             // 
@@ -319,7 +320,7 @@
         private System.Windows.Forms.TabPage projektTab;
         private System.Windows.Forms.TabPage zeitTab;
         private System.Windows.Forms.TabPage reportTab;
-        private EPU_Backoffice_Panels.homeTab homeTab1;
+        private EPU_Backoffice_Panels.homeTab homeTabInner;
         private EPU_Backoffice_Panels.kundenKontakteTab kundenKontakteTab1;
         private EPU_Backoffice_Panels.rechnungsTab rechnungsTab1;
         private EPU_Backoffice_Panels.angeboteTab angeboteTab1;

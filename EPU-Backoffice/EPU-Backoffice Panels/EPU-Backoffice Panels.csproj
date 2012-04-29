@@ -33,7 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,18 +53,45 @@
     <Compile Include="angeboteTab.Designer.cs">
       <DependentUpon>angeboteTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\AngebotManager.cs" />
+    <Compile Include="BL\ConfigFileManager.cs" />
+    <Compile Include="BL\DatabaseConnector.cs" />
+    <Compile Include="BL\KundenKontakteChanger.cs" />
+    <Compile Include="BL\KundenKontakteLoader.cs" />
+    <Compile Include="BL\KundenKontakteSaver.cs" />
+    <Compile Include="BL\Offermanagement.cs" />
+    <Compile Include="BL\ProjektManager.cs" />
+    <Compile Include="Dal\DALFactory.cs" />
+    <Compile Include="Dal\DataBaseManager.cs" />
+    <Compile Include="Dal\Tables\AngebotTable.cs" />
+    <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
+    <Compile Include="Dal\Tables\BankkontoTable.cs" />
+    <Compile Include="Dal\Tables\BuchungszeilenTable.cs" />
+    <Compile Include="Dal\Tables\EingangsrechnungTable.cs" />
+    <Compile Include="Dal\Tables\KategorienTable.cs" />
+    <Compile Include="Dal\Tables\KundeKontaktTable.cs" />
+    <Compile Include="Dal\Tables\ProjektTable.cs" />
+    <Compile Include="Dal\Tables\RechnungszeileTable.cs" />
+    <Compile Include="Dal\Tables\ZeitaufzeichnungTable.cs" />
+    <Compile Include="DataBaseOpener.cs" />
+    <Compile Include="DataBindingFramework.cs" />
+    <Compile Include="FileAppender.cs" />
     <Compile Include="homeTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="homeTab.Designer.cs">
       <DependentUpon>homeTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dal\IDAL.cs" />
+    <Compile Include="IAppender.cs" />
     <Compile Include="kundenKontakteTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="kundenKontakteTab.Designer.cs">
       <DependentUpon>kundenKontakteTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dal\MockDataBaseManager.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="projektTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,10 +110,21 @@
     <Compile Include="reportTab.Designer.cs">
       <DependentUpon>reportTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rules\DateValidator.cs" />
+    <Compile Include="Rules\IRule.cs" />
+    <Compile Include="Rules\LettersHyphenValidator.cs" />
+    <Compile Include="Rules\LettersNumbersHyphenSpaceValidator.cs" />
+    <Compile Include="Rules\PercentValidator.cs" />
+    <Compile Include="Rules\PositiveDoubleValidator.cs" />
+    <Compile Include="Rules\PositiveIntValidator.cs" />
+    <Compile Include="Rules\StringLength150Validator.cs" />
     <Compile Include="TableControlPanels.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserExceptions\EntryNotFoundException.cs" />
+    <Compile Include="UserExceptions\InvalidFileException.cs" />
+    <Compile Include="UserExceptions\InvalidValueException.cs" />
     <Compile Include="zeitTab.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +155,9 @@
     <EmbeddedResource Include="zeitTab.resx">
       <DependentUpon>zeitTab.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
