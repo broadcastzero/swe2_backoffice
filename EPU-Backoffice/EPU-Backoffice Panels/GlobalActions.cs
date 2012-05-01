@@ -74,5 +74,33 @@ namespace EPU_Backoffice_Panels
             // set data source
             (sender as ComboBox).DataSource = listItems;
         }
+
+        /// <summary>
+        /// Parses a date string to a SQLite date string (YYYY-MM-DD)
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ParseToSQLiteDateString(string input)
+        {
+            DateTime date = new DateTime();
+            string month;
+            string day;
+
+            if (!DateTime.TryParse(input, out date))
+            { return string.Empty; }
+
+            string output = date.Year + "-";
+
+            // add zeros at the beginning if necessary (i.e. 03 instead of 3)
+            month = date.Month.ToString();
+            if (month.Length == 1)
+            { month = "0" + month; }
+
+            day = date.Day.ToString();
+            if (day.Length == 1)
+            { day = "0" + day; }
+      
+            return date.Year + "-" + month + "-" + day + " 00:00:00";
+        }
     }
 }

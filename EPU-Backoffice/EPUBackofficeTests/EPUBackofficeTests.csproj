@@ -59,6 +59,7 @@
     <Compile Include="ConfigFileManagerTest.cs" />
     <Compile Include="DataBaseManagerTest.cs" />
     <Compile Include="DataBindingFrameworkTest.cs" />
+    <Compile Include="GlobalActionsTest.cs" />
     <Compile Include="KundenKontakteSaverTest.cs" />
     <Compile Include="MockDataBaseManagerTest.cs" />
     <Compile Include="RulesTests.cs" />

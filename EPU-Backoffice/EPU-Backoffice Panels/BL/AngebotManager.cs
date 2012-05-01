@@ -47,6 +47,9 @@ namespace EPU_Backoffice_Panels.BL
             DataBindingFramework.BindFromInt(angebot.KundenID.ToString(), "kundenID", errorlabel, false, intv);
             DataBindingFramework.BindFromString(angebot.Erstellungsdatum, "Erstellungsdatum", errorlabel, false, datev);
 
+            // change date formats
+            angebot.Angebotsdauer = GlobalActions.ParseToSQLiteDateString(angebot.Angebotsdauer);
+
             if (errorlabel.Visible)
             {
                 throw new InvalidInputException();
@@ -83,6 +86,10 @@ namespace EPU_Backoffice_Panels.BL
 
             string from_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Von", msglabel, false, date1);
             string until_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Bis", msglabel, false, date2);
+
+            // parse to date strings
+            from_sds = GlobalActions.ParseToSQLiteDateString(from_sds);
+            until_sds = GlobalActions.ParseToSQLiteDateString(until_sds);
 
             if (posintormin1val.HasErrors)
             {
