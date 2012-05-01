@@ -111,6 +111,7 @@
     <Compile Include="reportTab.Designer.cs">
       <DependentUpon>reportTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rules\Copy of PositiveIntValidator.cs" />
     <Compile Include="Rules\DateValidator.cs" />
     <Compile Include="Rules\IRule.cs" />
     <Compile Include="Rules\LettersHyphenValidator.cs" />
@@ -123,9 +124,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserExceptions\DataBaseException.cs" />
     <Compile Include="UserExceptions\EntryNotFoundException.cs" />
     <Compile Include="UserExceptions\InvalidFileException.cs" />
-    <Compile Include="UserExceptions\InvalidValueException.cs" />
+    <Compile Include="UserExceptions\InvalidInputException.cs" />
     <Compile Include="zeitTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

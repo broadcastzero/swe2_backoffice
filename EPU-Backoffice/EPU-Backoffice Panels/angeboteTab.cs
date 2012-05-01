@@ -238,5 +238,61 @@ namespace EPU_Backoffice_Panels
                 this.createAngebotMsgLabel.Show();
             }
         }
+
+        /// <summary>
+        /// Start searching for Angebote and pass arguments to business layer
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The params</param>
+        private void SearchAngebote(object sender, EventArgs e)
+        {
+            // hide Messagelabel
+            this.angebotSuchenMsgLabel.Hide();
+
+            // get selected KundenID
+            // force searching for existing Kunden, if Kunde has not dropped down the ComboBox (would throw Exception otherwise)
+            if (this.angebotSuchenKundeComboBox.SelectedIndex < 0)
+            {
+                GlobalActions.BindFromExistingKundenToComboBox(this.angebotSuchenKundeComboBox, null);
+            }
+
+            // get kundenID out of ComboBox
+            string kundenID = this.angebotSuchenKundeComboBox.SelectedItem.ToString();
+            int id = -1;
+
+            // if no Kunde has been chosen, set kundenID to -1, which indicates, that it shall not be searched for a certain Kunde
+            if (kundenID != string.Empty)
+            {
+                kundenID = kundenID.Substring(0, kundenID.IndexOf(':'));
+
+                IRule posintval = new PositiveIntValidator();
+                id = DataBindingFramework.BindFromInt(kundenID, "Kunden ID", this.angebotSuchenMsgLabel, false, posintval);
+
+                if (posintval.HasErrors)
+                {
+                    throw new InvalidInputException("Problem with getting KundenID. Unknown hard error.");
+                }
+            }
+
+            // get Angebot in SDS format: 6/1/2009
+            DateTime from = this.angebotSuchenVonDatepicker.Value;
+            DateTime until = this.angebotSuchenBisDatepicker.Value;
+
+            AngebotManager manager = new AngebotManager();
+            List<AngebotTable> results = new List<AngebotTable>();
+            
+            try
+            {
+                 results = manager.Load(id, from, until, this.angebotSuchenMsgLabel);
+            }
+            catch (DataBaseException ex)
+            {
+                this.logger.Log(Logger.Level.Error, "A serious problem with the database occured. Program will be exited. " + ex.Message + ex.StackTrace);
+                Application.Exit();
+            }
+
+            // add results to binding source
+            this.angebotSuchenBindingSource.DataSource = results;
+        }
     }
 }

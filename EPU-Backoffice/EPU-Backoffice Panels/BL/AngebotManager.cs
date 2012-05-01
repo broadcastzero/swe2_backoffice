@@ -68,69 +68,37 @@ namespace EPU_Backoffice_Panels.BL
         /// <summary>
         /// Load an existing Angebot out of the database
         /// </summary>
+        /// <param name="kid">The referenced kundenID</param>
+        /// <param name="from">From which date shall be searched from</param>
+        /// <param name="until">Until which date shall be searched</param>
+        /// <param name="msglabel">The label in which error messages can be written</param>
         /// <returns>The requested Angebote</returns>
-        public List<AngebotTable> Load(string firstname, string lastname, DateTime from, DateTime until)
+        public List<AngebotTable> Load(int kid, DateTime from, DateTime until, Label msglabel)
         {
-            // check parameter
-            LettersHyphenValidator checkfirstname = new LettersHyphenValidator();
-            checkfirstname.Eval(firstname);
+            IRule posintormin1val = new PositiveIntOrMinusOneValidator();
+            IRule date1 = new DateValidator();
+            IRule date2 = new DateValidator();
 
-            LettersNumbersHyphenSpaceValidator checklastname = new LettersNumbersHyphenSpaceValidator();
-            checklastname.Eval(lastname);
+            DataBindingFramework.BindFromInt(kid.ToString(), "KundenID", msglabel, false, posintormin1val);
 
-            if (firstname != null && (firstname.Length != 0 && checkfirstname.HasErrors))
+            string from_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Von", msglabel, false, date1);
+            string until_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Bis", msglabel, false, date2);
+
+            if (posintormin1val.HasErrors)
             {
-                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid first name!");
-                throw new InvalidInputException("Feld 'Vorname' ist ungültig!");
-            }
-            else if (lastname != null && (lastname.Length != 0 && checklastname.HasErrors))
-            {
-                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid last name!");
-                throw new InvalidInputException("Feld 'Nachname/Firma' ist ungültig!");
-            }
-            // call GetAngebote function, depending on what parameters have been provided by the GUI
-            else if ((firstname == null || firstname.Length == 0) && (lastname == null || lastname.Length == 0))
-            {
-                try
-                {
-                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString());
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if ((firstname != null && firstname.Length != 0) && (lastname == null || lastname.Length == 0))
-            {
-                try
-                {
-                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), firstname: firstname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
-            }
-            else if ((firstname == null || firstname.Length == 0) && (lastname != null && lastname.Length != 0))
-            {
-                try
-                {
-                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), lastname: lastname);
-                }
-                catch (SQLiteException)
-                {
-                    throw;
-                }
+                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid KundenID!");
+                throw new InvalidInputException("Feld 'KundenID' ist ungültig!");
             }
             else
             {
                 try
                 {
-                    return DALFactory.GetDAL().LoadAngebote(from.ToShortDateString(), until.ToShortDateString(), firstname: firstname, lastname: lastname);
+                    return DALFactory.GetDAL().LoadAngebote(kid, from_sds, until_sds);
                 }
-                catch (SQLiteException)
+                catch (SQLiteException ex)
                 {
-                    throw;
+                    this.logger.Log(Logger.Level.Error, "Serious problem with database! " + ex.StackTrace + ex.Message);
+                    throw new DataBaseException(ex.Message);
                 }
             }
         }

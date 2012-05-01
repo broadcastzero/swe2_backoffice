@@ -281,14 +281,13 @@ namespace EPU_Backoffice_Panels.Dal
         }
 
         /// <summary>
-        /// Receive params and load fitting existing Angebote from the mock database
+        /// Receive params and load fitting existing Angebote from the mockDB
         /// </summary>
+        /// <param name="kid">The ID of the Kunde</param>
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
-        /// <param name="firstname">The first name of the Kunde</param>
-        /// <param name="lastname">The last name of the Kunde</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        public List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null)
+        public List<AngebotTable> LoadAngebote(int id, string from, string until)
         {
             // TODO: Add selective logic
             return MockDataBaseManager.SavedAngebote;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.angebotTab = new System.Windows.Forms.TabControl();
             this.angebotErstellenTab = new System.Windows.Forms.TabPage();
             this.createAngebotResetButton = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.angebotSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenKundeLabel = new System.Windows.Forms.Label();
+            this.angebotSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.angebotErstellenSubTab = new EPU_Backoffice_Panels.TablessControlPanels();
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,6 +75,7 @@
             this.angebotErstellenTab.SuspendLayout();
             this.angebotSuchenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).BeginInit();
             this.angebotErstellenSubTab.SuspendLayout();
             this.angebotErstellenNKTab.SuspendLayout();
             this.angebotErstellenBKTab.SuspendLayout();
@@ -278,6 +281,7 @@
             // 
             this.AngeboteSuchenDataGridView.AllowUserToAddRows = false;
             this.AngeboteSuchenDataGridView.AllowUserToDeleteRows = false;
+            this.AngeboteSuchenDataGridView.AutoGenerateColumns = false;
             this.AngeboteSuchenDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.AngeboteSuchenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AngeboteSuchenDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -288,6 +292,7 @@
             this.erstellungsdatum,
             this.umsetzungschance,
             this.beschreibung});
+            this.AngeboteSuchenDataGridView.DataSource = this.angebotSuchenBindingSource;
             this.AngeboteSuchenDataGridView.Location = new System.Drawing.Point(383, 25);
             this.AngeboteSuchenDataGridView.MultiSelect = false;
             this.AngeboteSuchenDataGridView.Name = "AngeboteSuchenDataGridView";
@@ -368,6 +373,7 @@
             this.angebotSuchenButton.TabIndex = 5;
             this.angebotSuchenButton.Text = "Suchen";
             this.angebotSuchenButton.UseVisualStyleBackColor = true;
+            this.angebotSuchenButton.Click += new System.EventHandler(this.SearchAngebote);
             // 
             // angebotSuchenBisDatepicker
             // 
@@ -491,6 +497,7 @@
             this.angebotSuchenTab.ResumeLayout(false);
             this.angebotSuchenTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).EndInit();
             this.angebotErstellenSubTab.ResumeLayout(false);
             this.angebotErstellenNKTab.ResumeLayout(false);
             this.angebotErstellenNKTab.PerformLayout();
@@ -543,5 +550,6 @@
         private System.Windows.Forms.TabPage angebotErstellenBKTab;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox createAngebotExistingKundeComboBox;
+        private System.Windows.Forms.BindingSource angebotSuchenBindingSource;
     }
 }

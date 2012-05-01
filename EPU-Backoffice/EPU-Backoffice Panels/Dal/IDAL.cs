@@ -57,12 +57,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Receive params and load fitting existing Angebote
         /// </summary>
+        /// <param name="kid">The ID of the Kunde</param>
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
-        /// <param name="firstname">The first name of the Kunde</param>
-        /// <param name="lastname">The last name of the Kunde</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        List<AngebotTable> LoadAngebote(string from, string until, string firstname = null, string lastname = null);
+        List<AngebotTable> LoadAngebote(int kid, string from, string until);
 
         /// <summary>
         /// Creates a new Projekt with the provided parameters and stores it in the SQLite database

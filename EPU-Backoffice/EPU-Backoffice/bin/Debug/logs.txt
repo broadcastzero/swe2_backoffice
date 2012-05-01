@@ -3,3 +3,22 @@
 01.05.2012 - 10:33 Info: Start creating new Angebot...
 01.05.2012 - 10:33 Info: A new Angebot will be created
 01.05.2012 - 10:33 Info: New Angebot has been stored within the SQLite database.
+01.05.2012 - 11:13 Info: -----------------------------------------------------------
+01.05.2012 - 11:13 Info: Program is started.
+01.05.2012 - 11:13 Info: Logging level: 0
+01.05.2012 - 11:13 Info: Using SQLite database.
+01.05.2012 - 11:13 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 11:13 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 11:15 Info: -----------------------------------------------------------
+01.05.2012 - 11:15 Info: Program is started.
+01.05.2012 - 11:15 Info: Logging level: 0
+01.05.2012 - 11:15 Info: Using SQLite database.
+01.05.2012 - 11:15 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 11:15 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 11:15 Error: User tried to search Angebot with invalid KundenID!
+01.05.2012 - 11:20 Info: -----------------------------------------------------------
+01.05.2012 - 11:20 Info: Program is started.
+01.05.2012 - 11:20 Info: Logging level: 0
+01.05.2012 - 11:20 Info: Using SQLite database.
+01.05.2012 - 11:20 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 11:20 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
