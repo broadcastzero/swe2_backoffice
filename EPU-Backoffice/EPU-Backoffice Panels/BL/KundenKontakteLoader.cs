@@ -46,11 +46,13 @@ namespace EPU_Backoffice_Panels.BL
             DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, true, lnhsv, lengthv);
             k.ID = -1; // indicates that we don't want to search for an ID
 
-            if (errorlabel.Visible)
+            // if validation failed
+            if (doubv.HasErrors || intv.HasErrors || datev.HasErrors || lengthv.HasErrors || percv.HasErrors || lnhsv.HasErrors || lhv.HasErrors)
             {
                 throw new InvalidInputException();
             }
 
+            // load elements
             try
             {
                 return DALFactory.GetDAL().GetKundenKontakte(k);

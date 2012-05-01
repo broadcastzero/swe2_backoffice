@@ -15,5 +15,32 @@ namespace EPU_Backoffice_Panels
         {
             InitializeComponent();
         }
+
+        // Bind to drop down combobox
+        private void createAngebotExistingKundeComboBox_DropDown(object sender, EventArgs e)
+        {
+            GlobalActions.BindFromExistingKundenToComboBox(sender, e);
+        }
+
+        /// <summary>
+        /// Switch between new Kunde and existing Kunde within create Angebot
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
+        private void angebotErstellenNKundeButton_Click(object sender, EventArgs e)
+        {
+            if (this.angebotErstellenSubTab.SelectedTab == this.angebotErstellenNKTab)
+            {
+                this.angebotErstellenSwitchKundeButton.Text = "Bestehender Kunde";
+                this.angebotErstellenSubTab.SelectedTab = this.angebotErstellenBKTab;
+            }
+            else
+            {
+                this.angebotErstellenSwitchKundeButton.Text = "Neuer Kunde";
+                this.angebotErstellenSubTab.SelectedTab = this.angebotErstellenNKTab;
+            }
+        }
+
+
     }
 }

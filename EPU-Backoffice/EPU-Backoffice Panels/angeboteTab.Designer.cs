@@ -34,12 +34,11 @@
             this.createAngebotMsgLabel = new System.Windows.Forms.Label();
             this.createAngebotDescriptionLabel = new System.Windows.Forms.Label();
             this.createAngebotDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.angebotErstellenNKundeButton = new System.Windows.Forms.Button();
+            this.angebotErstellenSwitchKundeButton = new System.Windows.Forms.Button();
             this.createAngebotButton = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.createAngebotAngebotssummeTextBox = new System.Windows.Forms.TextBox();
             this.angebotValidUntilDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.angebotErstellenBKundeButton = new System.Windows.Forms.Button();
             this.umsetzungswahrscheinlichkeitLabel = new System.Windows.Forms.Label();
             this.angebotValidUntilLabel = new System.Windows.Forms.Label();
             this.createAngebotUmsetzungswahrscheinlichkeitTextBox = new System.Windows.Forms.TextBox();
@@ -63,13 +62,13 @@
             this.angebotSuchenKundeLabel = new System.Windows.Forms.Label();
             this.angebotErstellenSubTab = new EPU_Backoffice_Panels.TablessControlPanels();
             this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
-            this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
-            this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
-            this.createAngebotNewKundeNnTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.createAngebotNewKundeNnTextBox = new System.Windows.Forms.TextBox();
+            this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
+            this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
+            this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.angebotTab.SuspendLayout();
             this.angebotErstellenTab.SuspendLayout();
             this.angebotSuchenTab.SuspendLayout();
@@ -97,12 +96,11 @@
             this.angebotErstellenTab.Controls.Add(this.createAngebotMsgLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotDescriptionTextBox);
-            this.angebotErstellenTab.Controls.Add(this.angebotErstellenNKundeButton);
+            this.angebotErstellenTab.Controls.Add(this.angebotErstellenSwitchKundeButton);
             this.angebotErstellenTab.Controls.Add(this.createAngebotButton);
             this.angebotErstellenTab.Controls.Add(this.label33);
             this.angebotErstellenTab.Controls.Add(this.createAngebotAngebotssummeTextBox);
             this.angebotErstellenTab.Controls.Add(this.angebotValidUntilDateTimePicker);
-            this.angebotErstellenTab.Controls.Add(this.angebotErstellenBKundeButton);
             this.angebotErstellenTab.Controls.Add(this.umsetzungswahrscheinlichkeitLabel);
             this.angebotErstellenTab.Controls.Add(this.angebotValidUntilLabel);
             this.angebotErstellenTab.Controls.Add(this.createAngebotUmsetzungswahrscheinlichkeitTextBox);
@@ -149,14 +147,15 @@
             this.createAngebotDescriptionTextBox.Size = new System.Drawing.Size(200, 20);
             this.createAngebotDescriptionTextBox.TabIndex = 14;
             // 
-            // angebotErstellenNKundeButton
+            // angebotErstellenSwitchKundeButton
             // 
-            this.angebotErstellenNKundeButton.Location = new System.Drawing.Point(23, 30);
-            this.angebotErstellenNKundeButton.Name = "angebotErstellenNKundeButton";
-            this.angebotErstellenNKundeButton.Size = new System.Drawing.Size(131, 23);
-            this.angebotErstellenNKundeButton.TabIndex = 12;
-            this.angebotErstellenNKundeButton.Text = "Neuer Kunde";
-            this.angebotErstellenNKundeButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenSwitchKundeButton.Location = new System.Drawing.Point(15, 22);
+            this.angebotErstellenSwitchKundeButton.Name = "angebotErstellenSwitchKundeButton";
+            this.angebotErstellenSwitchKundeButton.Size = new System.Drawing.Size(131, 23);
+            this.angebotErstellenSwitchKundeButton.TabIndex = 12;
+            this.angebotErstellenSwitchKundeButton.Text = "Neuer Kunde";
+            this.angebotErstellenSwitchKundeButton.UseVisualStyleBackColor = true;
+            this.angebotErstellenSwitchKundeButton.Click += new System.EventHandler(this.angebotErstellenNKundeButton_Click);
             // 
             // createAngebotButton
             // 
@@ -189,16 +188,6 @@
             this.angebotValidUntilDateTimePicker.Name = "angebotValidUntilDateTimePicker";
             this.angebotValidUntilDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.angebotValidUntilDateTimePicker.TabIndex = 5;
-            // 
-            // angebotErstellenBKundeButton
-            // 
-            this.angebotErstellenBKundeButton.Location = new System.Drawing.Point(23, 30);
-            this.angebotErstellenBKundeButton.Name = "angebotErstellenBKundeButton";
-            this.angebotErstellenBKundeButton.Size = new System.Drawing.Size(131, 23);
-            this.angebotErstellenBKundeButton.TabIndex = 11;
-            this.angebotErstellenBKundeButton.Text = "Bestehender Kunde";
-            this.angebotErstellenBKundeButton.UseVisualStyleBackColor = true;
-            this.angebotErstellenBKundeButton.Visible = false;
             // 
             // umsetzungswahrscheinlichkeitLabel
             // 
@@ -423,6 +412,38 @@
             this.angebotErstellenNKTab.Text = "NK";
             this.angebotErstellenNKTab.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(206, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nachname / Firma*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(206, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Vorname";
+            // 
+            // createAngebotNewKundeNnTextBox
+            // 
+            this.createAngebotNewKundeNnTextBox.Location = new System.Drawing.Point(6, 32);
+            this.createAngebotNewKundeNnTextBox.Name = "createAngebotNewKundeNnTextBox";
+            this.createAngebotNewKundeNnTextBox.Size = new System.Drawing.Size(194, 20);
+            this.createAngebotNewKundeNnTextBox.TabIndex = 1;
+            // 
+            // createAngebotNewKundeVnTextBox
+            // 
+            this.createAngebotNewKundeVnTextBox.Location = new System.Drawing.Point(6, 6);
+            this.createAngebotNewKundeVnTextBox.Name = "createAngebotNewKundeVnTextBox";
+            this.createAngebotNewKundeVnTextBox.Size = new System.Drawing.Size(194, 20);
+            this.createAngebotNewKundeVnTextBox.TabIndex = 0;
+            // 
             // angebotErstellenBKTab
             // 
             this.angebotErstellenBKTab.Controls.Add(this.label3);
@@ -435,46 +456,6 @@
             this.angebotErstellenBKTab.Text = "BK";
             this.angebotErstellenBKTab.UseVisualStyleBackColor = true;
             // 
-            // createAngebotNewKundeVnTextBox
-            // 
-            this.createAngebotNewKundeVnTextBox.Location = new System.Drawing.Point(6, 6);
-            this.createAngebotNewKundeVnTextBox.Name = "createAngebotNewKundeVnTextBox";
-            this.createAngebotNewKundeVnTextBox.Size = new System.Drawing.Size(194, 20);
-            this.createAngebotNewKundeVnTextBox.TabIndex = 0;
-            // 
-            // createAngebotNewKundeNnTextBox
-            // 
-            this.createAngebotNewKundeNnTextBox.Location = new System.Drawing.Point(6, 32);
-            this.createAngebotNewKundeNnTextBox.Name = "createAngebotNewKundeNnTextBox";
-            this.createAngebotNewKundeNnTextBox.Size = new System.Drawing.Size(194, 20);
-            this.createAngebotNewKundeNnTextBox.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Vorname";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nachname / Firma*";
-            // 
-            // createAngebotExistingKundeComboBox
-            // 
-            this.createAngebotExistingKundeComboBox.FormattingEnabled = true;
-            this.createAngebotExistingKundeComboBox.Location = new System.Drawing.Point(3, 6);
-            this.createAngebotExistingKundeComboBox.Name = "createAngebotExistingKundeComboBox";
-            this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(197, 21);
-            this.createAngebotExistingKundeComboBox.TabIndex = 0;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -483,6 +464,15 @@
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Kunde*";
+            // 
+            // createAngebotExistingKundeComboBox
+            // 
+            this.createAngebotExistingKundeComboBox.FormattingEnabled = true;
+            this.createAngebotExistingKundeComboBox.Location = new System.Drawing.Point(3, 6);
+            this.createAngebotExistingKundeComboBox.Name = "createAngebotExistingKundeComboBox";
+            this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(197, 21);
+            this.createAngebotExistingKundeComboBox.TabIndex = 0;
+            this.createAngebotExistingKundeComboBox.DropDown += new System.EventHandler(this.createAngebotExistingKundeComboBox_DropDown);
             // 
             // angeboteTab
             // 
@@ -514,12 +504,11 @@
         private System.Windows.Forms.Label createAngebotMsgLabel;
         private System.Windows.Forms.Label createAngebotDescriptionLabel;
         private System.Windows.Forms.TextBox createAngebotDescriptionTextBox;
-        private System.Windows.Forms.Button angebotErstellenNKundeButton;
+        private System.Windows.Forms.Button angebotErstellenSwitchKundeButton;
         private System.Windows.Forms.Button createAngebotButton;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox createAngebotAngebotssummeTextBox;
         private System.Windows.Forms.DateTimePicker angebotValidUntilDateTimePicker;
-        private System.Windows.Forms.Button angebotErstellenBKundeButton;
         private System.Windows.Forms.Label umsetzungswahrscheinlichkeitLabel;
         private System.Windows.Forms.Label angebotValidUntilLabel;
         private System.Windows.Forms.TextBox createAngebotUmsetzungswahrscheinlichkeitTextBox;

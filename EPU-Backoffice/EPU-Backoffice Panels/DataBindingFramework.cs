@@ -28,6 +28,9 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
         /// <param name="label">The errorlabel in which errors will be displayed</param>
         private static void ShowError(string element, Label label)
         {
+            if (label == null)
+            { return; }
+
             // show error label
             label.ForeColor = Color.Red;
             label.Text += "\n" + element + " ungültig!";
@@ -64,7 +67,7 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
         public static int BindFromInt(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
             // check provided values for null
-            if (input == null || name == null || label == null)
+            if (input == null || name == null)
             {
                 throw new InvalidInputException("User passed null values to DataBindingFramework");
             }
@@ -110,8 +113,8 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
         public static string BindFromString(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
             // check provided values for null
-            if (input == null || name == null || label == null)
-            {
+            if (input == null || name == null)
+            {                
                 throw new InvalidInputException("User passed null values to DataBindingFramework");
             }
 
@@ -146,7 +149,7 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
         public static double BindFromDouble(string input, string name, Label label, bool canBeNull, params IRule[] rules)
         {
             // check provided values for null
-            if (input == null || name == null || label == null)
+            if (input == null || name == null)
             {
                 throw new InvalidInputException("User passed null values to DataBindingFramework");
             }
