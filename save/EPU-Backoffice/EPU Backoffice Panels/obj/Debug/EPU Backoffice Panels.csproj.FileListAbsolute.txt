@@ -8,3 +8,13 @@ C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice
 C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.ZeitTab.resources
 C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.read.1.tlog
 C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.AngeboteTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.HomeTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.KundenKontakteTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.Projekttab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.RechnungsTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.ReportTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\EPUBackofficePanels.Gui.Panel.ZeitTab.resources
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\save\EPU-Backoffice\EPU Backoffice Panels\obj\Debug\GenerateResource.write.1.tlog

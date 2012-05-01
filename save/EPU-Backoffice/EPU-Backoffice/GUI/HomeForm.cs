@@ -282,7 +282,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void ChangeKundeOrKontakt(object sender, EventArgs e)
         {
-            /*this.searchKundeErrorLabel.Hide();
+            this.searchKundeErrorLabel.Hide();
             this.searchKundeErrorLabel.Text = string.Empty;
 
             // if there are results
@@ -347,7 +347,7 @@ namespace EPUBackoffice.Gui
 
                 // show success messages
                 this.ShowSuccessLabel(this.searchKundeErrorLabel);
-            }*/
+            }
         }
 
         // reset everything within Kunden/Kontakte search

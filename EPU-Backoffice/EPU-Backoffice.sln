@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPU-Backoffice", "EPU-Backo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPU-Backoffice Panels", "EPU-Backoffice Panels\EPU-Backoffice Panels.csproj", "{82FABF31-AECC-4BB2-901D-261D3D8A2D86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPUBackofficeTests", "EPUBackofficeTests\EPUBackofficeTests.csproj", "{BDF9AB25-8463-46A8-92AE-7016BB5CC793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C84C474-669B-4000-812D-C523BD08A9C2}"
+	ProjectSection(SolutionItems) = preProject
+		EPU-Backoffice3.vsmdi = EPU-Backoffice3.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EPU-Backoffice3.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -35,6 +47,16 @@ Global
 		{82FABF31-AECC-4BB2-901D-261D3D8A2D86}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{82FABF31-AECC-4BB2-901D-261D3D8A2D86}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{82FABF31-AECC-4BB2-901D-261D3D8A2D86}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BDF9AB25-8463-46A8-92AE-7016BB5CC793}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
