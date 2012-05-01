@@ -111,7 +111,7 @@
     <Compile Include="reportTab.Designer.cs">
       <DependentUpon>reportTab.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rules\Copy of PositiveIntValidator.cs" />
+    <Compile Include="Rules\PositiveIntOrMinusOneValidator.cs" />
     <Compile Include="Rules\DateValidator.cs" />
     <Compile Include="Rules\IRule.cs" />
     <Compile Include="Rules\LettersHyphenValidator.cs" />

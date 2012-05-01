@@ -85,7 +85,7 @@ namespace EPU_Backoffice_Panels.BL
             DataBindingFramework.BindFromInt(kid.ToString(), "KundenID", msglabel, false, posintormin1val);
 
             string from_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Von", msglabel, false, date1);
-            string until_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Bis", msglabel, false, date2);
+            string until_sds = DataBindingFramework.BindFromString(until.ToShortDateString(), "Bis", msglabel, false, date2);
 
             // parse to date strings
             from_sds = GlobalActions.ParseToSQLiteDateString(from_sds);
