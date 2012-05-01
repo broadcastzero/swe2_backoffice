@@ -266,6 +266,7 @@
             this.projektSuchenKundeCombobox.Name = "projektSuchenKundeCombobox";
             this.projektSuchenKundeCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektSuchenKundeCombobox.TabIndex = 5;
+            this.projektSuchenKundeCombobox.DropDown += new System.EventHandler(this.projektSuchenKundeCombobox_DropDown);
             // 
             // projektSuchenProjekttitelcombobox
             // 

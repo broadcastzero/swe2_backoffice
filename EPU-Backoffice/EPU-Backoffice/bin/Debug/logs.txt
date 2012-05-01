@@ -102,3 +102,9 @@
 01.05.2012 - 10:05 Info: A new Kontakt has been saved to the database: 3 Neuer Kontakt
 01.05.2012 - 10:05 Info: User requested to insert Kunde with values Neuer Kunde3
 01.05.2012 - 10:05 Info: A new Kunde has been saved to the database: 6 Neuer Kunde3
+01.05.2012 - 10:08 Info: -----------------------------------------------------------
+01.05.2012 - 10:08 Info: Program is started.
+01.05.2012 - 10:08 Info: Logging level: 0
+01.05.2012 - 10:08 Info: Using SQLite database.
+01.05.2012 - 10:08 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 10:08 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

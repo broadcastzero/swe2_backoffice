@@ -15,5 +15,15 @@ namespace EPU_Backoffice_Panels
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Add existing Kunden to ComboBox
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
+        private void projektSuchenKundeCombobox_DropDown(object sender, EventArgs e)
+        {
+            GlobalActions.BindFromExistingKundenToComboBox(sender, e);
+        }
     }
 }
