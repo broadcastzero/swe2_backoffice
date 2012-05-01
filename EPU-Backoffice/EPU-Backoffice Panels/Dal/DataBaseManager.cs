@@ -37,7 +37,7 @@ namespace EPU_Backoffice_Panels.Dal
             sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(150), Nachname_Firmenname VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotID INTEGER NOT NULL, Projektname VARCHAR(150) NOT NULL, Projektstart TIMESTAMP); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(150) NOT NULL); ");
-            sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer VARCHAR(150) NOT NULL, Erstellungsdatum VARCHAR(150) NOT NULL, Umsetzung INTEGER NOT NULL, Beschreibung VARCHAR(150) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer DATETIME NOT NULL, Erstellungsdatum VARCHAR(150) NOT NULL, Umsetzung INTEGER NOT NULL, Beschreibung VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL,BEzeichnung Varchar(150), Stunden INTEGER NOT NULL, Stundensatz FLOAT NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KundenID INTEGER NOT NULL, Rechnungsdatum TIMESTAMP NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsbuchung (BuchungszeilenID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL, PRIMARY KEY (BuchungszeilenID, AusgangsrechnungsID)); ");
@@ -384,7 +384,74 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>A resultlist of all fitting Angebote</returns>
         public List<AngebotTable> LoadAngebote(int kid, string from, string until)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT * FROM Angebot WHERE ";
+            sql += kid >= 0 ? "kundenID = ? AND angebotsdauer BETWEEN ? AND ?;" : "angebotsdauer BETWEEN ? AND ?;";
+
+            List<AngebotTable> results = new List<AngebotTable>();
+
+            // open connection and get requested Kontakt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // if it shall be searched for ID, really only search for ID and ignore other fields
+                if (kid != -1)
+                {
+                    SQLiteParameter p_ID = new SQLiteParameter();
+                    p_ID.Value = kid;
+                    cmd.Parameters.Add(p_ID);
+                }
+
+                // bind from
+                SQLiteParameter p_from = new SQLiteParameter();
+                p_from.Value = from;
+                cmd.Parameters.Add(p_from);
+
+                // bind to
+                SQLiteParameter p_until = new SQLiteParameter();
+                p_until.Value = until;
+                cmd.Parameters.Add(p_until);                
+
+                // execute and get results
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    AngebotTable result = new AngebotTable();
+                    result.ID = reader.GetInt32(0);
+                    result.KundenID = reader.GetInt32(1);
+                    result.Angebotssumme = reader.GetFloat(2);
+                    result.Angebotsdauer = reader.GetString(3);
+                    result.Erstellungsdatum = reader.GetString(4);
+                    result.Umsetzungschance = reader.GetInt32(5);
+                    result.Beschreibung = reader.GetString(6);
+
+                    results.Add(result);
+                }
+
+                return results;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
 
         /// <summary>
