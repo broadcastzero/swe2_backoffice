@@ -15,5 +15,11 @@ namespace EPU_Backoffice_Panels
         {
             InitializeComponent();
         }
+
+        public void HideMsgLabels()
+        {
+            this.kundeNeuMsgLabel.Hide();
+            this.searchKundeMsgLabel.Hide();
+        }
     }
 }

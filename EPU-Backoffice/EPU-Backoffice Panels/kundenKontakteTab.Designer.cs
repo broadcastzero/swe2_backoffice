@@ -41,7 +41,7 @@
             this.createKundeVornameTextBlock = new System.Windows.Forms.TextBox();
             this.kundenTabSearchChange = new System.Windows.Forms.TabPage();
             this.deleteKundeButton = new System.Windows.Forms.Button();
-            this.searchKundeErrorLabel = new System.Windows.Forms.Label();
+            this.searchKundeMsgLabel = new System.Windows.Forms.Label();
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
@@ -178,7 +178,7 @@
             // 
             this.kundenTabSearchChange.BackColor = System.Drawing.Color.WhiteSmoke;
             this.kundenTabSearchChange.Controls.Add(this.deleteKundeButton);
-            this.kundenTabSearchChange.Controls.Add(this.searchKundeErrorLabel);
+            this.kundenTabSearchChange.Controls.Add(this.searchKundeMsgLabel);
             this.kundenTabSearchChange.Controls.Add(this.searchKontaktRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.searchKundeRadioButton);
             this.kundenTabSearchChange.Controls.Add(this.kundenSearchDataGridView);
@@ -206,14 +206,14 @@
             // 
             // searchKundeErrorLabel
             // 
-            this.searchKundeErrorLabel.AutoSize = true;
-            this.searchKundeErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.searchKundeErrorLabel.Location = new System.Drawing.Point(163, 80);
-            this.searchKundeErrorLabel.Name = "searchKundeErrorLabel";
-            this.searchKundeErrorLabel.Size = new System.Drawing.Size(51, 13);
-            this.searchKundeErrorLabel.TabIndex = 14;
-            this.searchKundeErrorLabel.Text = "Errorlabel";
-            this.searchKundeErrorLabel.Visible = false;
+            this.searchKundeMsgLabel.AutoSize = true;
+            this.searchKundeMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.searchKundeMsgLabel.Location = new System.Drawing.Point(163, 80);
+            this.searchKundeMsgLabel.Name = "searchKundeErrorLabel";
+            this.searchKundeMsgLabel.Size = new System.Drawing.Size(51, 13);
+            this.searchKundeMsgLabel.TabIndex = 14;
+            this.searchKundeMsgLabel.Text = "Errorlabel";
+            this.searchKundeMsgLabel.Visible = false;
             // 
             // searchKontaktRadioButton
             // 
@@ -373,7 +373,7 @@
         private System.Windows.Forms.TextBox createKundeVornameTextBlock;
         private System.Windows.Forms.TabPage kundenTabSearchChange;
         private System.Windows.Forms.Button deleteKundeButton;
-        private System.Windows.Forms.Label searchKundeErrorLabel;
+        private System.Windows.Forms.Label searchKundeMsgLabel;
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.DataGridView kundenSearchDataGridView;

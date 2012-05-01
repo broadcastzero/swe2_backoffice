@@ -23,11 +23,60 @@ namespace EPU_Backoffice
     {
         private Logger logger = Logger.Instance;
 
+        /// <summary>
+        /// Remember last active control so that we can switch
+        /// </summary>
+        private UserControl activeControl;
+
         public HomeForm()
         {
             InitializeComponent();
             this.FormClosing += this.HomeForm_FormClosing;
             this.Text = "EPU Backoffice 1.0";
+
+            this.activeControl = this.homeTabInner;
+        }
+
+        /* Event handling for buttons */
+        private void SelectHomeTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("homeTab");
+        }
+
+        private void SelectKundenKontakteTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("kundenKontakteTab");
+
+            this.kundenKontakteTabInner.HideMsgLabels();
+        }
+
+        private void SelectRechnungsverwaltungTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("rechnungsTab");
+        }
+
+        private void SelectAngeboteTab(object sender, EventArgs e)
+        {
+            //this.ResetCreateAngebotFields(null, null);
+            //this.createAngebotMsgLabel.Hide();
+            this.TableControl.SelectTab("angeboteTab");
+        }
+
+        private void SelectProjektverwaltungTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("projektTab");
+
+            //this.projektTabInner.ResetAllWithinProjects(sender, e);
+        }
+
+        private void SelectZeiterfassungTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("zeitTab");
+        }
+        
+        private void SelectReportsTab(object sender, EventArgs e)
+        {
+            this.TableControl.SelectTab("reportTab");
         }
 
         private void ShowDatabaseInfo(object sender, EventArgs e)

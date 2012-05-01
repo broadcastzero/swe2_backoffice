@@ -30,8 +30,7 @@
         {
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.projektErstellenTab = new System.Windows.Forms.TabPage();
-            this.projektNeuErrorLabel = new System.Windows.Forms.Label();
-            this.projektNeuSuccessLabel = new System.Windows.Forms.Label();
+            this.projektNeuMsgLabel = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.projektErstellenAngebotCombobox = new System.Windows.Forms.ComboBox();
             this.projektNeuResetButton = new System.Windows.Forms.Button();
@@ -73,8 +72,7 @@
             // projektErstellenTab
             // 
             this.projektErstellenTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.projektErstellenTab.Controls.Add(this.projektNeuErrorLabel);
-            this.projektErstellenTab.Controls.Add(this.projektNeuSuccessLabel);
+            this.projektErstellenTab.Controls.Add(this.projektNeuMsgLabel);
             this.projektErstellenTab.Controls.Add(this.label25);
             this.projektErstellenTab.Controls.Add(this.projektErstellenAngebotCombobox);
             this.projektErstellenTab.Controls.Add(this.projektNeuResetButton);
@@ -90,27 +88,16 @@
             this.projektErstellenTab.TabIndex = 0;
             this.projektErstellenTab.Text = "Erstellen";
             // 
-            // projektNeuErrorLabel
+            // projektNeuMsgLabel
             // 
-            this.projektNeuErrorLabel.AutoSize = true;
-            this.projektNeuErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.projektNeuErrorLabel.Location = new System.Drawing.Point(13, 149);
-            this.projektNeuErrorLabel.Name = "projektNeuErrorLabel";
-            this.projektNeuErrorLabel.Size = new System.Drawing.Size(39, 13);
-            this.projektNeuErrorLabel.TabIndex = 15;
-            this.projektNeuErrorLabel.Text = "Fehler:";
-            this.projektNeuErrorLabel.Visible = false;
-            // 
-            // projektNeuSuccessLabel
-            // 
-            this.projektNeuSuccessLabel.AutoSize = true;
-            this.projektNeuSuccessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.projektNeuSuccessLabel.Location = new System.Drawing.Point(13, 149);
-            this.projektNeuSuccessLabel.Name = "projektNeuSuccessLabel";
-            this.projektNeuSuccessLabel.Size = new System.Drawing.Size(110, 13);
-            this.projektNeuSuccessLabel.TabIndex = 14;
-            this.projektNeuSuccessLabel.Text = "Eingabe erfolgreich! :)";
-            this.projektNeuSuccessLabel.Visible = false;
+            this.projektNeuMsgLabel.AutoSize = true;
+            this.projektNeuMsgLabel.ForeColor = System.Drawing.Color.Red;
+            this.projektNeuMsgLabel.Location = new System.Drawing.Point(13, 149);
+            this.projektNeuMsgLabel.Name = "projektNeuMsgLabel";
+            this.projektNeuMsgLabel.Size = new System.Drawing.Size(27, 13);
+            this.projektNeuMsgLabel.TabIndex = 15;
+            this.projektNeuMsgLabel.Text = "Msg";
+            this.projektNeuMsgLabel.Visible = false;
             // 
             // label25
             // 
@@ -336,8 +323,7 @@
 
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage projektErstellenTab;
-        private System.Windows.Forms.Label projektNeuErrorLabel;
-        private System.Windows.Forms.Label projektNeuSuccessLabel;
+        private System.Windows.Forms.Label projektNeuMsgLabel;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox projektErstellenAngebotCombobox;
         private System.Windows.Forms.Button projektNeuResetButton;

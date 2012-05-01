@@ -40,15 +40,15 @@
             this.homeTab = new System.Windows.Forms.TabPage();
             this.homeTabInner = new EPU_Backoffice_Panels.homeTab();
             this.kundenKontakteTab = new System.Windows.Forms.TabPage();
-            this.kundenKontakteTab1 = new EPU_Backoffice_Panels.kundenKontakteTab();
+            this.kundenKontakteTabInner = new EPU_Backoffice_Panels.kundenKontakteTab();
             this.rechnungsTab = new System.Windows.Forms.TabPage();
             this.rechnungsTab1 = new EPU_Backoffice_Panels.rechnungsTab();
             this.angeboteTab = new System.Windows.Forms.TabPage();
             this.angeboteTab1 = new EPU_Backoffice_Panels.angeboteTab();
             this.projektTab = new System.Windows.Forms.TabPage();
-            this.projektTab1 = new EPU_Backoffice_Panels.projektTab();
+            this.projektTabInner = new EPU_Backoffice_Panels.projektTab();
             this.zeitTab = new System.Windows.Forms.TabPage();
-            this.zeitTab1 = new EPU_Backoffice_Panels.zeitTab();
+            this.zeitTabInner = new EPU_Backoffice_Panels.zeitTab();
             this.reportTab = new System.Windows.Forms.TabPage();
             this.reportTab1 = new EPU_Backoffice_Panels.reportTab();
             this.TableControl.SuspendLayout();
@@ -80,6 +80,7 @@
             this.reportsButton.Text = "Reports";
             this.reportsButton.UseVisualStyleBackColor = true;
             this.reportsButton.Visible = false;
+            this.reportsButton.Click += new System.EventHandler(this.SelectReportsTab);
             // 
             // zeiterfassungButton
             // 
@@ -89,6 +90,7 @@
             this.zeiterfassungButton.TabIndex = 21;
             this.zeiterfassungButton.Text = "Zeiterfassung";
             this.zeiterfassungButton.UseVisualStyleBackColor = true;
+            this.zeiterfassungButton.Click += new System.EventHandler(this.SelectZeiterfassungTab);
             // 
             // projektverwaltungButton
             // 
@@ -98,6 +100,7 @@
             this.projektverwaltungButton.TabIndex = 20;
             this.projektverwaltungButton.Text = "Projektverwaltung";
             this.projektverwaltungButton.UseVisualStyleBackColor = true;
+            this.projektverwaltungButton.Click += new System.EventHandler(this.SelectProjektverwaltungTab);
             // 
             // angeboteButton
             // 
@@ -107,6 +110,7 @@
             this.angeboteButton.TabIndex = 19;
             this.angeboteButton.Text = "Angebote";
             this.angeboteButton.UseVisualStyleBackColor = true;
+            this.angeboteButton.Click += new System.EventHandler(this.SelectAngeboteTab);
             // 
             // rechnungsverwaltungButton
             // 
@@ -116,6 +120,7 @@
             this.rechnungsverwaltungButton.TabIndex = 18;
             this.rechnungsverwaltungButton.Text = "Rechnungsverwaltung";
             this.rechnungsverwaltungButton.UseVisualStyleBackColor = true;
+            this.rechnungsverwaltungButton.Click += new System.EventHandler(this.SelectRechnungsverwaltungTab);
             // 
             // kundenKontakteButton
             // 
@@ -126,6 +131,7 @@
             this.kundenKontakteButton.TabIndex = 17;
             this.kundenKontakteButton.Text = "Kunden und Kontakte";
             this.kundenKontakteButton.UseVisualStyleBackColor = true;
+            this.kundenKontakteButton.Click += new System.EventHandler(this.SelectKundenKontakteTab);
             // 
             // homeButton
             // 
@@ -135,6 +141,7 @@
             this.homeButton.TabIndex = 16;
             this.homeButton.Text = "Home";
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.SelectHomeTab);
             // 
             // TableControl
             // 
@@ -173,7 +180,7 @@
             // 
             // kundenKontakteTab
             // 
-            this.kundenKontakteTab.Controls.Add(this.kundenKontakteTab1);
+            this.kundenKontakteTab.Controls.Add(this.kundenKontakteTabInner);
             this.kundenKontakteTab.Location = new System.Drawing.Point(42, 4);
             this.kundenKontakteTab.Name = "kundenKontakteTab";
             this.kundenKontakteTab.Padding = new System.Windows.Forms.Padding(3);
@@ -182,12 +189,12 @@
             this.kundenKontakteTab.Text = "Kunden";
             this.kundenKontakteTab.UseVisualStyleBackColor = true;
             // 
-            // kundenKontakteTab1
+            // kundenKontakteTabInner
             // 
-            this.kundenKontakteTab1.Location = new System.Drawing.Point(-2, -1);
-            this.kundenKontakteTab1.Name = "kundenKontakteTab1";
-            this.kundenKontakteTab1.Size = new System.Drawing.Size(755, 259);
-            this.kundenKontakteTab1.TabIndex = 0;
+            this.kundenKontakteTabInner.Location = new System.Drawing.Point(-2, -1);
+            this.kundenKontakteTabInner.Name = "kundenKontakteTabInner";
+            this.kundenKontakteTabInner.Size = new System.Drawing.Size(755, 259);
+            this.kundenKontakteTabInner.TabIndex = 0;
             // 
             // rechnungsTab
             // 
@@ -225,7 +232,7 @@
             // 
             // projektTab
             // 
-            this.projektTab.Controls.Add(this.projektTab1);
+            this.projektTab.Controls.Add(this.projektTabInner);
             this.projektTab.Location = new System.Drawing.Point(42, 4);
             this.projektTab.Name = "projektTab";
             this.projektTab.Size = new System.Drawing.Size(748, 256);
@@ -233,16 +240,16 @@
             this.projektTab.Text = "Projekt";
             this.projektTab.UseVisualStyleBackColor = true;
             // 
-            // projektTab1
+            // projektTabInner
             // 
-            this.projektTab1.Location = new System.Drawing.Point(0, -3);
-            this.projektTab1.Name = "projektTab1";
-            this.projektTab1.Size = new System.Drawing.Size(755, 259);
-            this.projektTab1.TabIndex = 0;
+            this.projektTabInner.Location = new System.Drawing.Point(0, -3);
+            this.projektTabInner.Name = "projektTabInner";
+            this.projektTabInner.Size = new System.Drawing.Size(755, 259);
+            this.projektTabInner.TabIndex = 0;
             // 
             // zeitTab
             // 
-            this.zeitTab.Controls.Add(this.zeitTab1);
+            this.zeitTab.Controls.Add(this.zeitTabInner);
             this.zeitTab.Location = new System.Drawing.Point(42, 4);
             this.zeitTab.Name = "zeitTab";
             this.zeitTab.Size = new System.Drawing.Size(748, 256);
@@ -250,12 +257,12 @@
             this.zeitTab.Text = "Zeit";
             this.zeitTab.UseVisualStyleBackColor = true;
             // 
-            // zeitTab1
+            // zeitTabInner
             // 
-            this.zeitTab1.Location = new System.Drawing.Point(3, -3);
-            this.zeitTab1.Name = "zeitTab1";
-            this.zeitTab1.Size = new System.Drawing.Size(755, 259);
-            this.zeitTab1.TabIndex = 0;
+            this.zeitTabInner.Location = new System.Drawing.Point(3, -3);
+            this.zeitTabInner.Name = "zeitTabInner";
+            this.zeitTabInner.Size = new System.Drawing.Size(755, 259);
+            this.zeitTabInner.TabIndex = 0;
             // 
             // reportTab
             // 
@@ -322,11 +329,11 @@
         private System.Windows.Forms.TabPage zeitTab;
         private System.Windows.Forms.TabPage reportTab;
         private EPU_Backoffice_Panels.homeTab homeTabInner;
-        private EPU_Backoffice_Panels.kundenKontakteTab kundenKontakteTab1;
+        private EPU_Backoffice_Panels.kundenKontakteTab kundenKontakteTabInner;
         private EPU_Backoffice_Panels.rechnungsTab rechnungsTab1;
         private EPU_Backoffice_Panels.angeboteTab angeboteTab1;
-        private EPU_Backoffice_Panels.projektTab projektTab1;
-        private EPU_Backoffice_Panels.zeitTab zeitTab1;
+        private EPU_Backoffice_Panels.projektTab projektTabInner;
+        private EPU_Backoffice_Panels.zeitTab zeitTabInner;
         private EPU_Backoffice_Panels.reportTab reportTab1;
     }
 }
