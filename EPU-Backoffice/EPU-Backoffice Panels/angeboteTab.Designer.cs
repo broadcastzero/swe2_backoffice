@@ -119,6 +119,7 @@
             this.createAngebotResetButton.TabIndex = 18;
             this.createAngebotResetButton.Text = "Reset";
             this.createAngebotResetButton.UseVisualStyleBackColor = true;
+            this.createAngebotResetButton.Click += new System.EventHandler(this.ResetCreateAngebotFields);
             // 
             // createAngebotMsgLabel
             // 
@@ -155,7 +156,7 @@
             this.angebotErstellenSwitchKundeButton.TabIndex = 12;
             this.angebotErstellenSwitchKundeButton.Text = "Neuer Kunde";
             this.angebotErstellenSwitchKundeButton.UseVisualStyleBackColor = true;
-            this.angebotErstellenSwitchKundeButton.Click += new System.EventHandler(this.angebotErstellenNKundeButton_Click);
+            this.angebotErstellenSwitchKundeButton.Click += new System.EventHandler(this.SwitchSelectKundenTabs);
             // 
             // createAngebotButton
             // 
@@ -165,6 +166,7 @@
             this.createAngebotButton.TabIndex = 13;
             this.createAngebotButton.Text = "Angebot erstellen";
             this.createAngebotButton.UseVisualStyleBackColor = true;
+            this.createAngebotButton.Click += new System.EventHandler(this.CreateNewAngebot);
             // 
             // label33
             // 
@@ -237,11 +239,13 @@
             // angebotSuchenMsgLabel
             // 
             this.angebotSuchenMsgLabel.AutoSize = true;
+            this.angebotSuchenMsgLabel.ForeColor = System.Drawing.Color.Red;
             this.angebotSuchenMsgLabel.Location = new System.Drawing.Point(24, 190);
             this.angebotSuchenMsgLabel.Name = "angebotSuchenMsgLabel";
             this.angebotSuchenMsgLabel.Size = new System.Drawing.Size(55, 13);
             this.angebotSuchenMsgLabel.TabIndex = 14;
             this.angebotSuchenMsgLabel.Text = "Messages";
+            this.angebotSuchenMsgLabel.Visible = false;
             // 
             // angebotSuchenKundeComboBox
             // 
