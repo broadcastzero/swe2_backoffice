@@ -76,6 +76,7 @@
     <Compile Include="DataBaseOpener.cs" />
     <Compile Include="DataBindingFramework.cs" />
     <Compile Include="FileAppender.cs" />
+    <Compile Include="GlobalActions.cs" />
     <Compile Include="homeTab.cs">
       <SubType>UserControl</SubType>
     </Compile>

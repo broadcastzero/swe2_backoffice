@@ -17,8 +17,8 @@ namespace EPU_Backoffice_Panels.BL
     using EPU_Backoffice_Panels.Dal.Tables;
     using EPU_Backoffice_Panels.Rules;
     using EPU_Backoffice_Panels.UserExceptions;
-    using DatabindingFramework;
-    using Logger;
+    using EPU_Backoffice_Panels.DatabindingFramework;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     /// <summary>
     /// Contains methods to manipulate, save or load Angebote

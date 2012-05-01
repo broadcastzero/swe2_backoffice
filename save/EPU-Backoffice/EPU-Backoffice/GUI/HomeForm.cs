@@ -204,7 +204,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e"></param>
         private void SearchKundenOrKontakte(object sender, EventArgs e)
         {
-            /*// hide error message
+            // hide error message
             this.searchKundeErrorLabel.Hide();
             this.searchKundeErrorLabel.Text = string.Empty;
 
@@ -224,7 +224,7 @@ namespace EPUBackoffice.Gui
                 this.kundenSuchenBindingSource.DataSource = results;
             }
 
-            this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);*/
+            this.BindToKundenSearchLabels(this.kundenSearchDataGridView, null);
         }
 
         /// <summary>
@@ -234,7 +234,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The DataGridViewCellEventArgs</param> 
         private void BindToKundenSearchLabels(object sender, DataGridViewCellEventArgs e)
         {
-            /*int selectedRowID = e == null ? 0 : e.RowIndex;
+            int selectedRowID = e == null ? 0 : e.RowIndex;
 
             // if there are results
             if (this.kundenSuchenBindingSource.Count > 0 && selectedRowID >= 0)
@@ -249,7 +249,7 @@ namespace EPUBackoffice.Gui
             { 
                 this.searchKundeVornameTextBlock.Text = string.Empty;
                 this.searchKundeNachnameTextBlock.Text = string.Empty;
-            }*/
+            }
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace EPUBackoffice.Gui
         /// <param name="lastname">The new last name</param>
         private void BindFromKundenSearchTextBlock(string action, int row, string firstname, string lastname)
         {
-            /*if (action == "changeKundeButton")
+            if (action == "changeKundeButton")
             {
                 this.kundenSearchDataGridView.Rows[row].Cells[1].Value = firstname;
                 this.kundenSearchDataGridView.Rows[row].Cells[2].Value = lastname;
@@ -272,7 +272,7 @@ namespace EPUBackoffice.Gui
                 this.searchKundeVornameTextBlock.Clear();
                 this.searchKundeNachnameTextBlock.Clear();
                 this.SearchKundenOrKontakte(null, null);
-            }*/
+            }
         }
 
         /// <summary>

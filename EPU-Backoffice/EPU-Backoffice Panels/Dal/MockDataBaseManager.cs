@@ -12,7 +12,7 @@ namespace EPU_Backoffice_Panels.Dal
     using System.Text;
     using EPU_Backoffice_Panels.Dal.Tables;
     using EPU_Backoffice_Panels.UserExceptions;
-    using Logger;
+    using LoggingFramework;
 
     /// <summary>
     /// This class manages the mock database.

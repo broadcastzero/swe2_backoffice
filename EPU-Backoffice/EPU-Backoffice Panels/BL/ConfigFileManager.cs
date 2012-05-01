@@ -13,7 +13,7 @@ namespace EPU_Backoffice_Panels.BL
     using System.IO;
     using System.Text;
     using EPU_Backoffice_Panels.Dal;
-    using Logger;
+    using LoggingFramework;
 
     /// <summary>
     /// This class reads or writes the config file.

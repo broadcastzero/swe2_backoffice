@@ -14,7 +14,7 @@ namespace EPU_Backoffice_Panels.Dal
     using System.Text;
     using EPU_Backoffice_Panels.BL;
     using EPU_Backoffice_Panels.Dal.Tables;
-    using Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     /// <summary>
     /// This class provides a connection to the SQLite database-file. Its methods get or save files from/to the DB.

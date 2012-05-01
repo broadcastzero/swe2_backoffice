@@ -13,7 +13,7 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
     using System.Text;
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.Rules;
-    using Logger;
+    using LoggingFramework;
     using EPU_Backoffice_Panels.UserExceptions;
 
     /// <summary>
@@ -44,7 +44,6 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
                 // if rule must not be null and validating failed, show error label
                 if (rule.HasErrors)
                 {
-                    DataBindingFramework.ShowError(element, label);
                     return false;
                 }
             }

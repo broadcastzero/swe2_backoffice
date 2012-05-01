@@ -16,7 +16,7 @@ namespace EPU_Backoffice_Panels.BL
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.Dal;
     using EPU_Backoffice_Panels.UserExceptions;
-    using Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     /// <summary>
     /// Creates a new SQLite ".db" file with its needed tables.

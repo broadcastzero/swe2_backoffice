@@ -5,7 +5,7 @@
 // </copyright>
 // -----------------------------------------------------------------------
 
-namespace EPU_Backoffice_Panels.Logger
+namespace EPU_Backoffice_Panels.LoggingFramework
 {
     using System;
     using System.Collections.Generic;

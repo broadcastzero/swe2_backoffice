@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kundenTabControl = new System.Windows.Forms.TabControl();
             this.kundenTabCreate = new System.Windows.Forms.TabPage();
             this.kundeNeuMsgLabel = new System.Windows.Forms.Label();
@@ -55,10 +56,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.searchKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.searchKundeVornameTextBlock = new System.Windows.Forms.TextBox();
+            this.kundenSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kundenTabControl.SuspendLayout();
             this.kundenTabCreate.SuspendLayout();
             this.kundenTabSearchChange.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSearchDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kundenTabControl
@@ -127,6 +130,7 @@
             this.newKundeResetButton.TabIndex = 5;
             this.newKundeResetButton.Text = "Felder zurücksetzen";
             this.newKundeResetButton.UseVisualStyleBackColor = true;
+            this.newKundeResetButton.Click += new System.EventHandler(this.ResetCreateNewKunde);
             // 
             // createKundeButton
             // 
@@ -136,6 +140,7 @@
             this.createKundeButton.TabIndex = 4;
             this.createKundeButton.Text = "Speichern";
             this.createKundeButton.UseVisualStyleBackColor = true;
+            this.createKundeButton.Click += new System.EventHandler(this.CreateKundeOrKontakt);
             // 
             // createKontaktRadioButton
             // 
@@ -203,16 +208,17 @@
             this.deleteKundeButton.TabIndex = 15;
             this.deleteKundeButton.Text = "Löschen";
             this.deleteKundeButton.UseVisualStyleBackColor = true;
+            this.deleteKundeButton.Click += new System.EventHandler(this.ChangeKundeOrKontakt);
             // 
-            // searchKundeErrorLabel
+            // searchKundeMsgLabel
             // 
             this.searchKundeMsgLabel.AutoSize = true;
             this.searchKundeMsgLabel.ForeColor = System.Drawing.Color.Red;
-            this.searchKundeMsgLabel.Location = new System.Drawing.Point(163, 80);
-            this.searchKundeMsgLabel.Name = "searchKundeErrorLabel";
-            this.searchKundeMsgLabel.Size = new System.Drawing.Size(51, 13);
+            this.searchKundeMsgLabel.Location = new System.Drawing.Point(163, 74);
+            this.searchKundeMsgLabel.Name = "searchKundeMsgLabel";
+            this.searchKundeMsgLabel.Size = new System.Drawing.Size(50, 13);
             this.searchKundeMsgLabel.TabIndex = 14;
-            this.searchKundeMsgLabel.Text = "Errorlabel";
+            this.searchKundeMsgLabel.Text = "Message";
             this.searchKundeMsgLabel.Visible = false;
             // 
             // searchKontaktRadioButton
@@ -225,6 +231,7 @@
             this.searchKontaktRadioButton.TabStop = true;
             this.searchKontaktRadioButton.Text = "Kontakt";
             this.searchKontaktRadioButton.UseVisualStyleBackColor = true;
+            this.searchKontaktRadioButton.Click += new System.EventHandler(this.SearchKundenOrKontakte);
             // 
             // searchKundeRadioButton
             // 
@@ -237,12 +244,14 @@
             this.searchKundeRadioButton.TabStop = true;
             this.searchKundeRadioButton.Text = "Kunde";
             this.searchKundeRadioButton.UseVisualStyleBackColor = true;
+            this.searchKundeRadioButton.Click += new System.EventHandler(this.SearchKundenOrKontakte);
             // 
             // kundenSearchDataGridView
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
             this.kundenSearchDataGridView.AllowUserToDeleteRows = false;
             this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.kundenSearchDataGridView.AutoGenerateColumns = false;
             this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kundenSearchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -250,6 +259,7 @@
             this.Vorname,
             this.Nachname,
             this.Type});
+            this.kundenSearchDataGridView.DataSource = this.kundenSuchenBindingSource;
             this.kundenSearchDataGridView.Location = new System.Drawing.Point(366, 25);
             this.kundenSearchDataGridView.MultiSelect = false;
             this.kundenSearchDataGridView.Name = "kundenSearchDataGridView";
@@ -299,6 +309,7 @@
             this.changeKundeButton.TabIndex = 5;
             this.changeKundeButton.Text = "Ändern";
             this.changeKundeButton.UseVisualStyleBackColor = true;
+            this.changeKundeButton.Click += new System.EventHandler(this.ChangeKundeOrKontakt);
             // 
             // kundenSearchButton
             // 
@@ -308,6 +319,7 @@
             this.kundenSearchButton.TabIndex = 4;
             this.kundenSearchButton.Text = "Suchen";
             this.kundenSearchButton.UseVisualStyleBackColor = true;
+            this.kundenSearchButton.Click += new System.EventHandler(this.SearchKundenOrKontakte);
             // 
             // label4
             // 
@@ -354,6 +366,7 @@
             this.kundenTabSearchChange.ResumeLayout(false);
             this.kundenTabSearchChange.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kundenSearchDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundenSuchenBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,5 +400,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox searchKundeNachnameTextBlock;
         private System.Windows.Forms.TextBox searchKundeVornameTextBlock;
+        private System.Windows.Forms.BindingSource kundenSuchenBindingSource;
     }
 }

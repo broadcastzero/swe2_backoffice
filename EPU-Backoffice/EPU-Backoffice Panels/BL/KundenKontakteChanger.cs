@@ -17,7 +17,7 @@ namespace EPU_Backoffice_Panels.BL
     using EPU_Backoffice_Panels.Dal.Tables;
     using EPU_Backoffice_Panels.Rules;
     using EPU_Backoffice_Panels.UserExceptions;
-    using Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     /// <summary>
     /// Changes or deletes a existing Kunde/Kontakt
@@ -33,12 +33,14 @@ namespace EPU_Backoffice_Panels.BL
         /// <param name="errorlabel">The label in which errormessages may be written</param>
         public void Change(KundeKontaktTable k, Label errorlabel)
         {
+            errorlabel.Hide();
+
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
             IRule lhv = new LettersHyphenValidator();
             IRule lengthv = new StringLength150Validator();
 
             DataBindingFramework.BindFromString(k.Vorname, "Vorname", errorlabel, true, lhv, lengthv);
-            DataBindingFramework.BindFromString(k.Vorname, "Nachname", errorlabel, false, lnhsv, lengthv);
+            DataBindingFramework.BindFromString(k.NachnameFirmenname, "Nachname", errorlabel, false, lnhsv, lengthv);
 
             if (errorlabel.Visible)
             {

@@ -17,7 +17,7 @@ namespace EPU_Backoffice_Panels.BL
     using EPU_Backoffice_Panels.Dal.Tables;
     using EPU_Backoffice_Panels.Rules;
     using EPU_Backoffice_Panels.UserExceptions;
-    using Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     /// <summary>
     /// This class' methods load data out of the database and returns a list of requested data.

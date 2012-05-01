@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Windows.Forms;
 using EPU_Backoffice_Panels;
 using EPU_Backoffice_Panels.BL;
-using EPU_Backoffice_Panels.Logger;
+using EPU_Backoffice_Panels.LoggingFramework;
 using EPU_Backoffice_Panels.UserExceptions;
 
 namespace EPU_Backoffice

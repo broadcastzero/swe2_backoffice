@@ -16,7 +16,7 @@ namespace EPU_Backoffice_Panels.BL
     using EPU_Backoffice_Panels.Dal;
     using EPU_Backoffice_Panels.Dal.Tables;
     using EPU_Backoffice_Panels.Rules;
-    using Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
     using UserExceptions;
     
     /// <summary>

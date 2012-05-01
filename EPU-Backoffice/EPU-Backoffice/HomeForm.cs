@@ -17,7 +17,7 @@ namespace EPU_Backoffice
     using System.Windows.Forms;
     using EPU_Backoffice_Panels;
     using EPU_Backoffice_Panels.BL;
-    using EPU_Backoffice_Panels.Logger;
+    using EPU_Backoffice_Panels.LoggingFramework;
 
     public partial class HomeForm : Form
     {
