@@ -6,3 +6,5 @@ C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Deb
 C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\EPUBackofficeTests.dll
 C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\EPUBackofficeTests.pdb
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels_Accessor.dll
+C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels_Accessor.pdb

@@ -56,6 +56,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigFileManagerTest.cs" />
+    <Compile Include="DataBaseManagerTest.cs" />
     <Compile Include="RulesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,6 +66,9 @@
       <Project>{82FABF31-AECC-4BB2-901D-261D3D8A2D86}</Project>
       <Name>EPU-Backoffice Panels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\EPU-Backoffice Panels.accessor" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
