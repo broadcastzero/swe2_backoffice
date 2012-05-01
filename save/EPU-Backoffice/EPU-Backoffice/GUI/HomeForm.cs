@@ -403,7 +403,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The event params</param>
         private void CreateNewAngebot(object sender, EventArgs e)
         {
-            /*// reset error/success labels
+            // reset error/success labels
             this.createAngebotMsgLabel.Hide();
             this.createAngebotMsgLabel.Text = string.Empty;
 
@@ -531,7 +531,7 @@ namespace EPUBackoffice.Gui
                 this.createAngebotMsgLabel.Text += "\nAngebot wurde gespeichert.";
                 this.createAngebotMsgLabel.ForeColor = Color.Green;
                 this.createAngebotMsgLabel.Show();
-            }*/
+            }
         }
 
         /// <summary>
@@ -557,7 +557,7 @@ namespace EPUBackoffice.Gui
         /// <param name="e">The params</param>
         private void SearchAngebote(object sender, EventArgs e)
         {
-            /*// hide Messagelabel
+            // hide Messagelabel
             this.angebotSuchenMsgLabel.Hide();
 
             // get selected KundenID
@@ -584,7 +584,7 @@ namespace EPUBackoffice.Gui
             //results = manager.Load( this.angebotSuchenVonDatepicker.Value, this.angebotSuchenBisDatepicker.Value);
             // TODO: catch InvalidInputException & maybe SQLite-exception
 
-            //this.AngeboteSuchenDataGridView.DataSource = results;*/
+            //this.AngeboteSuchenDataGridView.DataSource = results;
         }
 
         /// <summary>
