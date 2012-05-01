@@ -85,9 +85,9 @@ namespace EPU_Backoffice_Panels.BL
                 cfm.SetDatabasePath(path);
 
                 // only when sender was DBNotFoundForm, not when sender is HomeForm!
-
                 if (sendingForm != null && sendingForm.Name == "DBNotFoundForm")
                 {
+                    // set database description values
                     this.ChangeToHomeScreen(sendingForm, newForm);
                 }
             }

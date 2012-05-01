@@ -23,9 +23,8 @@ namespace EPU_Backoffice_Panels
         /// </summary>
         public void SetOpenedDbText()
         {
+            ConfigFileManager cfm = new ConfigFileManager();
             this.homeCurrentDBLabel.Text = ConfigFileManager.DbName;
-            this.Text += " - ";
-            this.Text += ConfigFileManager.DbName;
         }
 
         /// <summary>

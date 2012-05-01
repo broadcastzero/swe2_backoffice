@@ -16,6 +16,7 @@ namespace EPU_Backoffice
     using System.Text;
     using System.Windows.Forms;
     using EPU_Backoffice_Panels;
+    using EPU_Backoffice_Panels.BL;
     using EPU_Backoffice_Panels.Logger;
 
     public partial class HomeForm : Form
@@ -26,6 +27,11 @@ namespace EPU_Backoffice
         {
             InitializeComponent();
             this.FormClosing += this.HomeForm_FormClosing;
+            this.Text = "EPU Backoffice 1.0";
+        }
+
+        private void ShowDatabaseInfo(object sender, EventArgs e)
+        {
             this.homeTabInner.SetOpenedDbText();
         }
 

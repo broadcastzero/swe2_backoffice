@@ -290,6 +290,7 @@
             this.Controls.Add(this.homeButton);
             this.Name = "HomeForm";
             this.Text = "Form1";
+            this.VisibleChanged += new System.EventHandler(this.ShowDatabaseInfo);
             this.TableControl.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
             this.kundenKontakteTab.ResumeLayout(false);
