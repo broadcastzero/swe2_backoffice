@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="EingangsrechnungTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="EingangsrechnungTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -28,7 +29,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int kontaktID;
         /// <summary>
-        /// Foreign key to table Kontakte
+        /// Gets or sets foreign key to table Kontakte
         /// </summary>
         public int KontaktID
         {
@@ -38,7 +39,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string archivierungspfad;
         /// <summary>
-        /// The filepath where this Eingangsrechnung is stored
+        /// Gets or sets the filepath where this Eingangsrechnung is stored
         /// </summary>
         public string Archivierungspfad
         {
@@ -48,7 +49,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private DateTime rechnungsdatum;
         /// <summary>
-        /// Datum of creation of an Rechnung
+        /// Gets or sets Datum of creation of an Rechnung
         /// </summary>
         public DateTime Rechnungsdatum
         {

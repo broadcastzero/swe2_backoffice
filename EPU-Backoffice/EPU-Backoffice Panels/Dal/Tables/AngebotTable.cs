@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="AngebotTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="AngebotTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         { 
@@ -27,7 +28,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int kundenID;
         /// <summary>
-        /// Foreign key to table Kunde
+        /// Gets or sets foreign key to table Kunde
         /// </summary>
         public int KundenID
         {
@@ -37,7 +38,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private double angebotssumme;
         /// <summary>
-        /// Sum of an Angebot
+        /// Gets or sets sum of an Angebot
         /// </summary>
         public double Angebotssumme
         {
@@ -48,7 +49,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
         // in Date (format: 20.12.2012)
         private string angebotsdauer;
         /// <summary>
-        /// Dauer of an Angebot
+        /// Gets or sets Dauer of an Angebot
         /// </summary>
         public string Angebotsdauer
         {
@@ -58,7 +59,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string erstellungsdatum;
         /// <summary>
-        /// Datum of creation of an Angebot - in shortDateString-Format
+        /// Gets or sets Datum of creation of an Angebot - in shortDateString-Format
         /// </summary>
         public string Erstellungsdatum
         {
@@ -69,7 +70,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
         // between 0-100 (in %)
         private int umsetzungschance;
         /// <summary>
-        /// Chance in % of Umsetzung
+        /// Gets or sets Chance in % of Umsetzung
         /// </summary>
         public int Umsetzungschance
         {
@@ -79,7 +80,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string beschreibung;
         /// <summary>
-        /// A description of the Angebot
+        /// Gets or sets a description of the Angebot
         /// </summary>
         public string Beschreibung
         {

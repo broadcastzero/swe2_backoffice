@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Ausgangsrechnung.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="AusgangsrechnungTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -11,13 +12,13 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     using System.Text;
 
     /// <summary>
-    /// A class for the database table "Ausgangsrechnung" with its attributes
+    /// A class for the database table "Ausgangsrechnung" with its attributes.
     /// </summary>
     public class AusgangsrechnungTable
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -27,7 +28,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int kundenID;
         /// <summary>
-        /// Foreign key to table Kunde
+        /// Gets or sets foreign key to table Kunde
         /// </summary>
         public int KundenID
         {
@@ -37,7 +38,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private DateTime rechnungsdatum;
         /// <summary>
-        /// Datum of creation of an Rechnung
+        /// Gets or sets Datum of creation of an Rechnung
         /// </summary>
         public DateTime Rechnungsdatum
         {

@@ -37,12 +37,21 @@ namespace EPU_Backoffice
             this.activeControl = this.homeTabInner;
         }
 
-        /* Event handling for buttons */
+        /// <summary>
+        /// Selects the home tab
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
         private void SelectHomeTab(object sender, EventArgs e)
         {
             this.TableControl.SelectTab("homeTab");
         }
 
+        /// <summary>
+        /// Selects the kundenKontakte tab
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
         private void SelectKundenKontakteTab(object sender, EventArgs e)
         {
             this.TableControl.SelectTab("kundenKontakteTab");

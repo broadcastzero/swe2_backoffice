@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="RechnungszeileTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="RechnungszeileTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -27,7 +28,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int projektID;
         /// <summary>
-        /// Foreign key to table Angebot
+        /// Gets or sets foreign key to table Projekt
         /// </summary>
         public int ProjektID
         {
@@ -37,7 +38,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int ausgangsrechnungsID;
         /// <summary>
-        /// Foreign key to table Ausgangsrechnung
+        /// Gets or sets foreign key to table Ausgangsrechnung
         /// </summary>
         public int AusgangsrechnungsID
         {
@@ -47,7 +48,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int stunden;
         /// <summary>
-        /// The number of hours that shall be booked
+        /// Gets or sets the number of hours that shall be booked
         /// </summary>
         public int Stunden
         {
@@ -57,7 +58,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private double stundenSatz;
         /// <summary>
-        /// The number of hours that shall be booked
+        /// Gets or sets the number of hours that shall be booked
         /// </summary>
         public double Stundensatz
         {

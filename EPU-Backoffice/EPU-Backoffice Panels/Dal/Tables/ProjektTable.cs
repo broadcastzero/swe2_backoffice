@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ProjektTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="ProjektTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -28,7 +29,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int angebotID;
         /// <summary>
-        /// Unique ID for the related Angebot
+        /// Gets or sets unique ID for the related Angebot
         /// </summary>
         public int AngebotID
         {
@@ -38,7 +39,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string projektname;
         /// <summary>
-        /// The name of the project
+        /// Gets or sets the name of the project
         /// </summary>
         public string Projektname
         {
@@ -48,7 +49,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string projektstart;
         /// <summary>
-        /// Datum of creation of an Angebot in ShortDateString format (16/12/1989)
+        /// Gets or sets Datum of creation of an Angebot in ShortDateString format (16/12/1989)
         /// </summary>
         public string Projektstart
         {

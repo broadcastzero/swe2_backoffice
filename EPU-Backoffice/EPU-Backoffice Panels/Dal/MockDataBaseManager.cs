@@ -32,52 +32,52 @@ namespace EPU_Backoffice_Panels.Dal
         private static int projektID = 0;
 
         /// <summary>
-        /// A continuing, unique ID for the table "Kunden"
+        /// Gets or sets a continuing, unique ID for the table "Kunden"
         /// </summary>
         public static int KundenID { get { return kundenID++; } }
 
         /// <summary>
-        /// A continuing, unique ID for the table "Kontakte"
+        /// Gets or sets a continuing, unique ID for the table "Kontakte"
         /// </summary>
         public static int KontaktID { get { return kontaktID++; } }
 
         /// <summary>
-        /// A continuing, unique ID for the table "Angebote"
+        /// Gets or sets a continuing, unique ID for the table "Angebote"
         /// </summary>
         public static int AngebotID { get { return angebotID++; } }
 
         /// <summary>
-        /// A continuing, unique ID for the table "Projekte"
+        /// Gets or sets a continuing, unique ID for the table "Projekte"
         /// </summary>
         public static int ProjektID { get { return projektID++; } }
 
-        // Private fields for saved Kunden/Kontakte (ILists)
+        // Gets or sets private fields for saved Kunden/Kontakte (ILists)
         private static List<KundeKontaktTable> savedKunden;
         private static List<KundeKontaktTable> savedKontakte;
 
-        // Private fields for saved Angebote (ILists)
+        // Gets or sets private fields for saved Angebote (ILists)
         private static List<AngebotTable> savedAngebote;
 
-        // Private fields for saved Projekte (ILists)
+        // Gets or sets private fields for saved Projekte (ILists)
         private static List<ProjektTable> savedProjekte;
 
         /// <summary>
-        /// Static list in which created Kunden are stored
+        /// Gets or sets static list in which created Kunden are stored
         /// </summary>
         public static List<KundeKontaktTable> SavedKunden { get { return savedKunden; } }
 
         /// <summary>
-        /// Static list in which created Kontakt are stored
+        /// Gets or sets static list in which created Kontakt are stored
         /// </summary>
         public static List<KundeKontaktTable> SavedKontakte { get { return savedKontakte; } }
 
         /// <summary>
-        /// Static list in which created Angebot is stored
+        /// Gets or sets static list in which created Angebot is stored
         /// </summary>
         public static List<AngebotTable> SavedAngebote { get { return savedAngebote; } }
 
         /// <summary>
-        /// Static list in which created Angebot is stored
+        /// Gets or sets static list in which created Angebot is stored
         /// </summary>
         public static List<ProjektTable> SavedProjekte { get { return savedProjekte; } }
 

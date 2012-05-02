@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="BuchungszeilenTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="BuchungszeilenTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -18,7 +19,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -28,7 +29,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int kategorieID;
         /// <summary>
-        /// Foreign key to table Kategorien
+        /// Gets or sets foreign key to table Kategorien
         /// </summary>
         public int KategorieID
         {
@@ -38,7 +39,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private int bankkontoID;
         /// <summary>
-        /// Foreign key to table Bankkonto
+        /// Gets or sets foreign key to table Bankkonto
         /// </summary>
         public int BankkontoID
         {
@@ -48,7 +49,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private double betragUST;
         /// <summary>
-        /// The taxes that have to be paid
+        /// Gets or sets the taxes that have to be paid
         /// </summary>
         public double BetragUST
         {
@@ -58,7 +59,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private double betragNetto;
         /// <summary>
-        /// The (after taxes) amount of money that shall be booked
+        /// Gets or sets the (after taxes) amount of money that shall be booked
         /// </summary>
         public double BetragNetto
         {
@@ -68,7 +69,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private DateTime buchungsdatum;
         /// <summary>
-        /// Datum of booking
+        /// Gets or sets Datum of booking
         /// </summary>
         public DateTime Buchungsdatum
         {

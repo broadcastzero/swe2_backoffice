@@ -1,6 +1,7 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="KontaktTable.cs" company="">
-// TODO: Update copyright text.
+// <copyright file="KundeKontaktTable.cs" company="Marvin&Felix">
+// You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
+// if you also have to submit this homework.
 // </copyright>
 // -----------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     {
         private int id;
         /// <summary>
-        /// Unique ID for the table
+        /// Gets or sets unique ID for the table
         /// </summary>
         public int ID
         {
@@ -27,7 +28,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string vorname;
         /// <summary>
-        /// Foreign key to table Kunde
+        /// Gets or sets foreign key to table Kunde
         /// </summary>
         public string Vorname
         {
@@ -37,7 +38,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
 
         private string nachnameFirmenname;
         /// <summary>
-        /// Foreign key to table Kunde
+        /// Gets or sets foreign key to table Kunde
         /// </summary>
         public string NachnameFirmenname
         {

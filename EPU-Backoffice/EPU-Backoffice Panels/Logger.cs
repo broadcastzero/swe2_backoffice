@@ -22,12 +22,12 @@ namespace EPU_Backoffice_Panels.LoggingFramework
         private static Logger instance;
 
         /// <summary>
-        /// The level that shall be logged (info, warning, error)
+        /// Gets or sets the level that shall be logged (info, warning, error)
         /// </summary>
         public static int Loggerlevel { get; set; }
 
         /// <summary>
-        /// A static list of all appenders of the logger.
+        /// Gets or sets a static list of all appenders of the logger.
         /// </summary>
         public static List<IAppender> Appenders { get; set; }
 
@@ -61,7 +61,7 @@ namespace EPU_Backoffice_Panels.LoggingFramework
         }
 
         /// <summary>
-        /// Creates an instance of the Logger class if it does not exist yet.
+        /// Initializes static members of the Logger class.
         /// </summary>
         static Logger()
         {
@@ -78,7 +78,7 @@ namespace EPU_Backoffice_Panels.LoggingFramework
         }
 
         /// <summary>
-        /// Constructor of singleton class Logger
+        /// Initializes a new instance of the Logger class.
         /// </summary>
         protected Logger()
         {
