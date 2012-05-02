@@ -16,9 +16,15 @@ namespace EPU_Backoffice_Panels
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.BL;
     using EPU_Backoffice_Panels.Dal.Tables;
+    using EPU_Backoffice_Panels.DatabindingFramework;
+    using EPU_Backoffice_Panels.LoggingFramework;
+    using EPU_Backoffice_Panels.Rules;
+    using EPU_Backoffice_Panels.UserExceptions;
 
     public partial class projektTab : UserControl
     {
+        private Logger logger = Logger.Instance;
+
         public projektTab()
         {
             InitializeComponent();
@@ -57,6 +63,68 @@ namespace EPU_Backoffice_Panels
 
             // set data source
             (sender as ComboBox).DataSource = listItems;
+        }
+
+        /// <summary>
+        /// Creates a new Projekt
+        /// </summary>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event args</param>
+        private void CreateProjekt(object sender, EventArgs e)
+        {
+            // hide label
+            this.projektNeuMsgLabel.Text = string.Empty;
+            this.projektNeuMsgLabel.Hide();
+
+            // define Rules
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule slv = new StringLength150Validator();
+
+            int angebotID;
+
+            // bind values
+            string titel = DataBindingFramework.BindFromString(this.projektNeuProjekttitelTextbox.Text, "Projekttitel", this.projektNeuMsgLabel, false, lnhsv, slv);
+
+            // no Angebot chosen or first element chosen (which is empty) -> show error label
+            if (this.projektErstellenAngebotCombobox.SelectedIndex <= 0)
+            {
+                this.projektNeuMsgLabel.Text += "\nError: kein Kunde ausgewählt";
+                this.projektNeuMsgLabel.ForeColor = Color.Red;
+                this.projektNeuMsgLabel.Show();
+                return;
+            }
+            // Angebot chosen - get ID out of ComboBox
+            else
+            {
+                string s_angebotID = this.projektErstellenAngebotCombobox.SelectedItem.ToString();
+                s_angebotID = s_angebotID.Substring(0, s_angebotID.IndexOf(':'));
+
+                IRule posint = new PositiveIntValidator();
+                angebotID = DataBindingFramework.BindFromInt(s_angebotID, "AngebotID", this.projektNeuMsgLabel, false, posint);
+
+                // Check for errors while databinding
+                if (posint.HasErrors)
+                {
+                    this.logger.Log(Logger.Level.Error, angebotID + " is an invalid Angebot ID");
+                    return;
+                }
+
+                // get Kunde table out of Database
+                AngebotManager loader = new AngebotManager();
+                List<AngebotTable> results = loader.Load(angebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
+
+                // there must be exactly one result, for ID is unique!
+                if (results.Count != 1)
+                {
+                    this.logger.Log(Logger.Level.Error, "More than one Angebot returned - impossible, because ID is unique!");
+                    this.projektNeuMsgLabel.Text = "Error: Datenbank inkonsistent!";
+                    this.projektNeuMsgLabel.Visible = true;
+                    return;
+                }
+
+                // everything went fine
+                // TODO: save!
+            }
         }
     }
 }

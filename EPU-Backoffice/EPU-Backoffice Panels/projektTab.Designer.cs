@@ -124,6 +124,7 @@
             this.projektNeuSpeichernButton.TabIndex = 4;
             this.projektNeuSpeichernButton.Text = "Speichern";
             this.projektNeuSpeichernButton.UseVisualStyleBackColor = true;
+            this.projektNeuSpeichernButton.Click += new System.EventHandler(this.CreateProjekt);
             // 
             // projektNeuProjekttitelTextbox
             // 
