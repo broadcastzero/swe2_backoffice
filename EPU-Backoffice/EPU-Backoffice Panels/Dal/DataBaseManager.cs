@@ -35,7 +35,7 @@ namespace EPU_Backoffice_Panels.Dal
             StringBuilder sb = new StringBuilder();
             sb.Append("CREATE TABLE IF NOT EXISTS Kontakt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(150), Nachname_Firmenname VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Kunde (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Vorname VARCHAR(150), Nachname_Firmenname VARCHAR(150) NOT NULL); ");
-            sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotID INTEGER NOT NULL, Projektname VARCHAR(150) NOT NULL, Projektstart TIMESTAMP); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Projekt (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, AngebotID INTEGER NOT NULL, Projektname VARCHAR(150) NOT NULL, Projektstart DATETIME NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Zeitaufzeichnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Stunden INTEGER NOT NULL, Bezeichnung VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer DATETIME NOT NULL, Erstellungsdatum VARCHAR(150) NOT NULL, Umsetzung INTEGER NOT NULL, Beschreibung VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL,BEzeichnung Varchar(150), Stunden INTEGER NOT NULL, Stundensatz FLOAT NOT NULL); ");
@@ -460,7 +460,19 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="projektname">The projekt which shall be saved</param>
         public void CreateProjekt(ProjektTable pj)
         {
-            throw new NotImplementedException();
+            string sql = "INSERT INTO Projekt (AngebotID, Projektname, Projektstart) VALUES (?, ?, ?)";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, -1);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            // success logging
+            this.logger.Log(Logger.Level.Info, "New Projekt has been stored in the SQLite database.");
         }
 
         /// <summary>

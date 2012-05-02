@@ -8,10 +8,12 @@ namespace EPU_Backoffice_Panels.BL
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SQLite;
     using System.Text;
     using EPU_Backoffice_Panels;
     using EPU_Backoffice_Panels.Dal;
     using EPU_Backoffice_Panels.Dal.Tables;
+    using EPU_Backoffice_Panels.LoggingFramework;
     using EPU_Backoffice_Panels.Rules;
     using EPU_Backoffice_Panels.UserExceptions;
 
@@ -20,6 +22,8 @@ namespace EPU_Backoffice_Panels.BL
     /// </summary>
     public class ProjektManager
     {
+        private Logger logger = Logger.Instance;
+
         /// <summary>
         /// Checks parameters provided by the GUI and delegates values to database which saves them.
         /// </summary>
@@ -44,7 +48,15 @@ namespace EPU_Backoffice_Panels.BL
             }
             
             // send values to database
-            DALFactory.GetDAL().CreateProjekt(pj);
+            try
+            {
+                DALFactory.GetDAL().CreateProjekt(pj);
+            }
+            catch (SQLiteException ex)
+            {
+                this.logger.Log(Logger.Level.Error, ex.Message + ex.StackTrace);
+                throw new DataBaseException(ex.Message);
+            }
         }
 
         /// <summary>

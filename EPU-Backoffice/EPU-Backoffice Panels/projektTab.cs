@@ -85,10 +85,13 @@ namespace EPU_Backoffice_Panels
             // bind values
             projekt.Projektname = DataBindingFramework.BindFromString(this.projektNeuProjekttitelTextbox.Text, "Projekttitel", this.projektNeuMsgLabel, false, lnhsv, slv);
 
+            if (lnhsv.HasErrors || slv.HasErrors)
+            { this.projektNeuMsgLabel.Text = "Projektname ungültig!"; }
+
             // no Angebot chosen or first element chosen (which is empty) -> show error label
             if (this.projektErstellenAngebotCombobox.SelectedIndex <= 0)
             {
-                this.projektNeuMsgLabel.Text += "\nError: kein Angebot ausgewählt";
+                this.projektNeuMsgLabel.Text += "\nKein Angebot ausgewählt";
                 this.projektNeuMsgLabel.ForeColor = Color.Red;
                 this.projektNeuMsgLabel.Show();
                 return;
@@ -106,9 +109,9 @@ namespace EPU_Backoffice_Panels
                 projekt.Projektstart = DataBindingFramework.BindFromString(this.projektNeuStartdatumDatepicker.Value.ToShortDateString(), "Startdatum", projektNeuMsgLabel, false, datev);
 
                 // Check for errors while databinding
-                if (posint.HasErrors || datev.HasErrors)
+                if (this.projektNeuMsgLabel.Visible)
                 {
-                    this.logger.Log(Logger.Level.Error, projekt.AngebotID + " is an invalid Angebot ID or invalid date chosen");
+                    this.logger.Log(Logger.Level.Error, projekt.AngebotID + " is an invalid Angebot ID or invalid date chosen or invalid project name.");
                     return;
                 }
 
