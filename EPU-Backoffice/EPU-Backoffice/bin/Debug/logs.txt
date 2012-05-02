@@ -19,3 +19,27 @@
 02.05.2012 - 14:24 Info: Start creating new Angebot...
 02.05.2012 - 14:24 Info: A new Angebot will be created
 02.05.2012 - 14:24 Info: Angebot saved to the mockDB
+02.05.2012 - 14:39 Info: -----------------------------------------------------------
+02.05.2012 - 14:39 Info: Program is started.
+02.05.2012 - 14:39 Info: Logging level: 0
+02.05.2012 - 14:39 Info: Using SQLite database.
+02.05.2012 - 14:39 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:39 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:59 Info: -----------------------------------------------------------
+02.05.2012 - 14:59 Info: Program is started.
+02.05.2012 - 14:59 Info: Logging level: 0
+02.05.2012 - 14:59 Info: Using SQLite database.
+02.05.2012 - 14:59 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:59 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:59 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:59 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.05.2012 - 14:59 Info: Open HomeForm
+02.05.2012 - 15:07 Info: -----------------------------------------------------------
+02.05.2012 - 15:07 Info: Program is started.
+02.05.2012 - 15:07 Info: Logging level: 0
+02.05.2012 - 15:07 Info: Using SQLite database.
+02.05.2012 - 15:07 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 15:07 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 15:07 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 15:07 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.05.2012 - 15:07 Info: Open HomeForm

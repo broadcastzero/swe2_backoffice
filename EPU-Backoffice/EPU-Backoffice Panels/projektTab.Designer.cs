@@ -116,6 +116,7 @@
             this.projektErstellenAngebotCombobox.Name = "projektErstellenAngebotCombobox";
             this.projektErstellenAngebotCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektErstellenAngebotCombobox.TabIndex = 6;
+            this.projektErstellenAngebotCombobox.DropDown += new System.EventHandler(this.BindFromExistingAngeboteToComboBox);
             // 
             // projektNeuResetButton
             // 
