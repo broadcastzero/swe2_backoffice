@@ -80,15 +80,15 @@ namespace EPU_Backoffice_Panels
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
             IRule slv = new StringLength150Validator();
 
-            ProjektTable pjm = new ProjektTable();
+            ProjektTable projekt = new ProjektTable();
 
             // bind values
-            string titel = DataBindingFramework.BindFromString(this.projektNeuProjekttitelTextbox.Text, "Projekttitel", this.projektNeuMsgLabel, false, lnhsv, slv);
+            projekt.Projektname = DataBindingFramework.BindFromString(this.projektNeuProjekttitelTextbox.Text, "Projekttitel", this.projektNeuMsgLabel, false, lnhsv, slv);
 
             // no Angebot chosen or first element chosen (which is empty) -> show error label
             if (this.projektErstellenAngebotCombobox.SelectedIndex <= 0)
             {
-                this.projektNeuMsgLabel.Text += "\nError: kein Kunde ausgewählt";
+                this.projektNeuMsgLabel.Text += "\nError: kein Angebot ausgewählt";
                 this.projektNeuMsgLabel.ForeColor = Color.Red;
                 this.projektNeuMsgLabel.Show();
                 return;
@@ -102,19 +102,19 @@ namespace EPU_Backoffice_Panels
                 IRule posint = new PositiveIntValidator();
                 IRule datev = new DateValidator();
 
-                pjm.AngebotID = DataBindingFramework.BindFromInt(s_angebotID, "AngebotID", this.projektNeuMsgLabel, false, posint);
-                pjm.Projektstart = DataBindingFramework.BindFromString(this.projektNeuStartdatumDatepicker.Value.ToShortDateString(), "Startdatum", projektNeuMsgLabel, false, datev);
+                projekt.AngebotID = DataBindingFramework.BindFromInt(s_angebotID, "AngebotID", this.projektNeuMsgLabel, false, posint);
+                projekt.Projektstart = DataBindingFramework.BindFromString(this.projektNeuStartdatumDatepicker.Value.ToShortDateString(), "Startdatum", projektNeuMsgLabel, false, datev);
 
                 // Check for errors while databinding
                 if (posint.HasErrors || datev.HasErrors)
                 {
-                    this.logger.Log(Logger.Level.Error, pjm.AngebotID + " is an invalid Angebot ID or invalid date chosen");
+                    this.logger.Log(Logger.Level.Error, projekt.AngebotID + " is an invalid Angebot ID or invalid date chosen");
                     return;
                 }
 
                 // get Kunde table out of Database
                 AngebotManager loader = new AngebotManager();
-                List<AngebotTable> results = loader.Load(pjm.AngebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
+                List<AngebotTable> results = loader.Load(projekt.AngebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
 
                 // there must be exactly one result, for ID is unique!
                 if (results.Count != 1)
@@ -127,7 +127,21 @@ namespace EPU_Backoffice_Panels
 
                 // everything went fine
                 ProjektManager saver = new ProjektManager();
-                saver.Create(pjm);
+
+                try
+                {
+                    saver.Create(projekt);
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, "Input was invalid, although checked.");
+                }
+                catch (DataBaseException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, "Some serious problem with the database occured!" + ex.Message);
+                }
+
+                GlobalActions.ShowSuccessLabel(this.projektNeuMsgLabel);
             }
         }
     }

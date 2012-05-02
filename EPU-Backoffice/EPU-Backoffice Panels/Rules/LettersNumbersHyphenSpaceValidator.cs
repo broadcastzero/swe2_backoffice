@@ -12,7 +12,7 @@ namespace EPU_Backoffice_Panels.Rules
     using System.Text.RegularExpressions;
 
     /// <summary>
-    /// A class which checks for letters and hyphen within the string
+    /// A class which checks for letters, numbers, hyphen and spaces within the string
     /// </summary>
     public class LettersNumbersHyphenSpaceValidator : IRule
     {

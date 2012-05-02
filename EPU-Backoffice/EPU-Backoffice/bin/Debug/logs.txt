@@ -43,3 +43,58 @@
 02.05.2012 - 15:07 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
 02.05.2012 - 15:07 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
 02.05.2012 - 15:07 Info: Open HomeForm
+02.05.2012 - 22:59 Info: -----------------------------------------------------------
+02.05.2012 - 22:59 Info: Program is started.
+02.05.2012 - 22:59 Info: Logging level: 0
+02.05.2012 - 22:59 Info: Using mock database.
+02.05.2012 - 22:59 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 22:59 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 22:59 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 22:59 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.05.2012 - 22:59 Info: Open HomeForm
+02.05.2012 - 22:59 Info: Starts getting Kunden out of database...
+02.05.2012 - 22:59 Info: User requested to insert Kunde with values  asdf
+02.05.2012 - 22:59 Info: No first name will be saved.
+02.05.2012 - 22:59 Info: A new Kunde has been saved in the mockDB.
+02.05.2012 - 22:59 Info: Start creating new Angebot...
+02.05.2012 - 22:59 Info: A new Angebot will be created
+02.05.2012 - 22:59 Info: Angebot saved to the mockDB
+02.05.2012 - 23:00 Info: -----------------------------------------------------------
+02.05.2012 - 23:00 Info: Program is started.
+02.05.2012 - 23:00 Info: Logging level: 0
+02.05.2012 - 23:00 Info: Using mock database.
+02.05.2012 - 23:00 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:00 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:01 Info: Starts getting Kunden out of database...
+02.05.2012 - 23:01 Info: User requested to insert Kunde with values  asdf
+02.05.2012 - 23:01 Info: No first name will be saved.
+02.05.2012 - 23:01 Info: A new Kunde has been saved in the mockDB.
+02.05.2012 - 23:01 Info: Start creating new Angebot...
+02.05.2012 - 23:01 Info: A new Angebot will be created
+02.05.2012 - 23:01 Info: Angebot saved to the mockDB
+02.05.2012 - 23:03 Info: -----------------------------------------------------------
+02.05.2012 - 23:03 Info: Program is started.
+02.05.2012 - 23:03 Info: Logging level: 0
+02.05.2012 - 23:03 Info: Using mock database.
+02.05.2012 - 23:03 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:03 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:03 Info: User requested to insert Kunde with values  asdf
+02.05.2012 - 23:03 Info: No first name will be saved.
+02.05.2012 - 23:03 Info: A new Kunde has been saved in the mockDB.
+02.05.2012 - 23:03 Info: Start creating new Angebot...
+02.05.2012 - 23:03 Info: A new Angebot will be created
+02.05.2012 - 23:03 Info: Angebot saved to the mockDB
+02.05.2012 - 23:07 Info: -----------------------------------------------------------
+02.05.2012 - 23:07 Info: Program is started.
+02.05.2012 - 23:07 Info: Logging level: 0
+02.05.2012 - 23:07 Info: Using mock database.
+02.05.2012 - 23:07 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:07 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:07 Info: Starts getting Kunden out of database...
+02.05.2012 - 23:07 Info: User requested to insert Kunde with values  ycxv
+02.05.2012 - 23:07 Info: No first name will be saved.
+02.05.2012 - 23:07 Info: A new Kunde has been saved in the mockDB.
+02.05.2012 - 23:07 Info: Start creating new Angebot...
+02.05.2012 - 23:07 Info: A new Angebot will be created
+02.05.2012 - 23:07 Info: Angebot saved to the mockDB
+02.05.2012 - 23:07 Info: A new Projekt has been stored within the SQLite database

@@ -28,12 +28,8 @@ namespace EPU_Backoffice_Panels.Dal
         // Private fields for Angebot-IDs
         private static int angebotID = 0;
 
-        // Private fields for saved Kunden/Kontakte (ILists)
-        private static List<KundeKontaktTable> savedKunden;
-        private static List<KundeKontaktTable> savedKontakte;
-
-        // Private fields for saved Angebote (ILists)
-        private static List<AngebotTable> savedAngebote;
+        // Private fields for Projekt-IDs
+        private static int projektID = 0;
 
         /// <summary>
         /// A continuing, unique ID for the table "Kunden"
@@ -51,6 +47,21 @@ namespace EPU_Backoffice_Panels.Dal
         public static int AngebotID { get { return angebotID++; } }
 
         /// <summary>
+        /// A continuing, unique ID for the table "Projekte"
+        /// </summary>
+        public static int ProjektID { get { return projektID++; } }
+
+        // Private fields for saved Kunden/Kontakte (ILists)
+        private static List<KundeKontaktTable> savedKunden;
+        private static List<KundeKontaktTable> savedKontakte;
+
+        // Private fields for saved Angebote (ILists)
+        private static List<AngebotTable> savedAngebote;
+
+        // Private fields for saved Projekte (ILists)
+        private static List<ProjektTable> savedProjekte;
+
+        /// <summary>
         /// Static list in which created Kunden are stored
         /// </summary>
         public static List<KundeKontaktTable> SavedKunden { get { return savedKunden; } }
@@ -65,6 +76,12 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         public static List<AngebotTable> SavedAngebote { get { return savedAngebote; } }
 
+        /// <summary>
+        /// Static list in which created Angebot is stored
+        /// </summary>
+        public static List<ProjektTable> SavedProjekte { get { return savedProjekte; } }
+
+        // A threading lock object
         private static Object lockObject = new Object();
 
         /// <summary>
@@ -77,6 +94,7 @@ namespace EPU_Backoffice_Panels.Dal
                 MockDataBaseManager.savedKunden = new List<KundeKontaktTable>();
                 MockDataBaseManager.savedKontakte = new List<KundeKontaktTable>();
                 MockDataBaseManager.savedAngebote = new List<AngebotTable>();
+                MockDataBaseManager.savedProjekte = new List<ProjektTable>();
             }
         }
 
@@ -352,7 +370,10 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="projektname">The projekt which shall be saved</param>
         public void CreateProjekt(ProjektTable pj)
         {
-            throw new NotImplementedException();
+            pj.ID = MockDataBaseManager.ProjektID;
+            MockDataBaseManager.savedProjekte.Add(pj);
+
+            this.logger.Log(Logger.Level.Info, "A new Projekt has been stored within the SQLite database");
         }
 
         /// <summary>

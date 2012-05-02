@@ -26,10 +26,10 @@ namespace EPU_Backoffice_Panels.BL
         public void Create(ProjektTable pj)
         {
             // check data once again
-            LettersNumbersHyphenSpaceValidator lnhsv = new LettersNumbersHyphenSpaceValidator();
-            PositiveIntValidator posintv = new PositiveIntValidator();
-            StringLength150Validator slv = new StringLength150Validator();
-            DateValidator dv = new DateValidator();
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule posintv = new PositiveIntValidator();
+            IRule slv = new StringLength150Validator();
+            IRule dv = new DateValidator();
             
             // call eval methods
             lnhsv.Eval(pj.Projektname);
