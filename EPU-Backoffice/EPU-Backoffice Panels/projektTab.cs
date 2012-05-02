@@ -137,7 +137,7 @@ namespace EPU_Backoffice_Panels
                 }
                 catch (InvalidInputException ex)
                 {
-                    this.logger.Log(Logger.Level.Error, "Input was invalid, although checked.");
+                    this.logger.Log(Logger.Level.Error, "Input was invalid, although checked." + ex.Message);
                 }
                 catch (DataBaseException ex)
                 {
