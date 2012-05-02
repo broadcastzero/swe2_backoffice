@@ -33,7 +33,6 @@
             this.projektNeuMsgLabel = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.projektErstellenAngebotCombobox = new System.Windows.Forms.ComboBox();
-            this.projektNeuResetButton = new System.Windows.Forms.Button();
             this.projektNeuSpeichernButton = new System.Windows.Forms.Button();
             this.projektNeuProjekttitelTextbox = new System.Windows.Forms.TextBox();
             this.projektNeuStartdatumDatepicker = new System.Windows.Forms.DateTimePicker();
@@ -75,7 +74,6 @@
             this.projektErstellenTab.Controls.Add(this.projektNeuMsgLabel);
             this.projektErstellenTab.Controls.Add(this.label25);
             this.projektErstellenTab.Controls.Add(this.projektErstellenAngebotCombobox);
-            this.projektErstellenTab.Controls.Add(this.projektNeuResetButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuSpeichernButton);
             this.projektErstellenTab.Controls.Add(this.projektNeuProjekttitelTextbox);
             this.projektErstellenTab.Controls.Add(this.projektNeuStartdatumDatepicker);
@@ -92,7 +90,7 @@
             // 
             this.projektNeuMsgLabel.AutoSize = true;
             this.projektNeuMsgLabel.ForeColor = System.Drawing.Color.Red;
-            this.projektNeuMsgLabel.Location = new System.Drawing.Point(13, 149);
+            this.projektNeuMsgLabel.Location = new System.Drawing.Point(13, 120);
             this.projektNeuMsgLabel.Name = "projektNeuMsgLabel";
             this.projektNeuMsgLabel.Size = new System.Drawing.Size(27, 13);
             this.projektNeuMsgLabel.TabIndex = 15;
@@ -117,15 +115,6 @@
             this.projektErstellenAngebotCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektErstellenAngebotCombobox.TabIndex = 6;
             this.projektErstellenAngebotCombobox.DropDown += new System.EventHandler(this.BindFromExistingAngeboteToComboBox);
-            // 
-            // projektNeuResetButton
-            // 
-            this.projektNeuResetButton.Location = new System.Drawing.Point(16, 123);
-            this.projektNeuResetButton.Name = "projektNeuResetButton";
-            this.projektNeuResetButton.Size = new System.Drawing.Size(200, 23);
-            this.projektNeuResetButton.TabIndex = 5;
-            this.projektNeuResetButton.Text = "Felder zurücksetzen";
-            this.projektNeuResetButton.UseVisualStyleBackColor = true;
             // 
             // projektNeuSpeichernButton
             // 
@@ -328,7 +317,6 @@
         private System.Windows.Forms.Label projektNeuMsgLabel;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox projektErstellenAngebotCombobox;
-        private System.Windows.Forms.Button projektNeuResetButton;
         private System.Windows.Forms.Button projektNeuSpeichernButton;
         private System.Windows.Forms.TextBox projektNeuProjekttitelTextbox;
         private System.Windows.Forms.DateTimePicker projektNeuStartdatumDatepicker;
