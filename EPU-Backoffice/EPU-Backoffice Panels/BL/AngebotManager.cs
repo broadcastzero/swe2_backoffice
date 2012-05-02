@@ -107,6 +107,11 @@ namespace EPU_Backoffice_Panels.BL
                     this.logger.Log(Logger.Level.Error, "Serious problem with database! " + ex.StackTrace + ex.Message);
                     throw new DataBaseException(ex.Message);
                 }
+                catch (InvalidInputException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, "Some problem with the date strings occured. Search aborted.");
+                    throw new InvalidInputException(ex.Message);
+                }
             }
         }
     }

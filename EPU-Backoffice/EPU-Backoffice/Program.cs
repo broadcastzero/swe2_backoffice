@@ -62,6 +62,7 @@ namespace EPU_Backoffice
                 else
                 {
                     logger.Log(Logger.Level.Info, "Using SQLite database.");
+                    
                 }
 
                 exists = cfm.CheckDataBaseExistance();

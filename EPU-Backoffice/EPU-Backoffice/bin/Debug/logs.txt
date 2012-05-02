@@ -1,0 +1,21 @@
+02.05.2012 - 14:22 Info: -----------------------------------------------------------
+02.05.2012 - 14:22 Info: Program is started.
+02.05.2012 - 14:22 Info: Logging level: 0
+02.05.2012 - 14:22 Info: Using mock database.
+02.05.2012 - 14:22 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:22 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:24 Info: -----------------------------------------------------------
+02.05.2012 - 14:24 Info: Program is started.
+02.05.2012 - 14:24 Info: Logging level: 0
+02.05.2012 - 14:24 Info: Using mock database.
+02.05.2012 - 14:24 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:24 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:24 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db
+02.05.2012 - 14:24 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\backoffice_database.db has been stored in config file.
+02.05.2012 - 14:24 Info: Open HomeForm
+02.05.2012 - 14:24 Info: Starts getting Kunden out of database...
+02.05.2012 - 14:24 Info: User requested to insert Kunde with values Neuer Kunde
+02.05.2012 - 14:24 Info: A new Kunde has been saved in the mockDB.
+02.05.2012 - 14:24 Info: Start creating new Angebot...
+02.05.2012 - 14:24 Info: A new Angebot will be created
+02.05.2012 - 14:24 Info: Angebot saved to the mockDB

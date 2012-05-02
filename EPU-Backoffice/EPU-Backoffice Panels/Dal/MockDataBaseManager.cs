@@ -287,10 +287,63 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        public List<AngebotTable> LoadAngebote(int id, string from, string until)
+        public List<AngebotTable> LoadAngebote(int kid, string from, string until)
         {
-            // TODO: Add selective logic
-            return MockDataBaseManager.SavedAngebote;
+            List<AngebotTable> results = new List<AngebotTable>();
+            bool couldparse;
+
+            DateTime dfrom = new DateTime();
+            DateTime duntil = new DateTime();
+
+            try
+            {
+                couldparse = DateTime.TryParse(from, out dfrom);
+                this.checkBoolInvalidInput(couldparse);
+
+                couldparse = DateTime.TryParse(until, out duntil);
+                this.checkBoolInvalidInput(couldparse);
+            }
+            catch(InvalidInputException)
+            {
+                throw;
+            }
+
+            // run through the list
+            foreach (AngebotTable angebot in MockDataBaseManager.SavedAngebote)
+            { 
+                DateTime storedValue = new DateTime();
+                couldparse = DateTime.TryParse(angebot.Angebotsdauer, out storedValue);
+
+                try
+                {
+                    this.checkBoolInvalidInput(couldparse);
+                }
+                catch(InvalidInputException)
+                {
+                    throw;
+                }
+
+                // if KundenID is the same as stored or it is -1 (which means that we don't want to search for Kunde and the saved date is between the requested
+                if ((angebot.KundenID == kid || kid == -1) && storedValue >= dfrom && storedValue <= duntil)
+                {
+                    results.Add(angebot);
+                }
+            }
+
+            return results;
+        }
+
+        /// <summary>
+        /// Checks a provided bool value. If false, throws InvalidInputException.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <exception cref="InvalidInputException">Throws InvalidInputException</exception>
+        private void checkBoolInvalidInput(bool couldparse)
+        {
+            if (couldparse == false)
+            {
+                throw new InvalidInputException("Date string provided is invalid!");
+            }
         }
 
         /// <summary>
