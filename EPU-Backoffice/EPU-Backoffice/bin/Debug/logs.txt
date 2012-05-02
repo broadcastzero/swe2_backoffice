@@ -21,3 +21,9 @@ Insufficient parameters supplied to the command   at System.Data.SQLite.SQLiteSt
    at EPU_Backoffice_Panels.BL.ProjektManager.Create(ProjektTable pj) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\ProjektManager.cs:line 53
 02.05.2012 - 23:32 Error: Some serious problem with the database occured!SQLite error
 Insufficient parameters supplied to the command
+02.05.2012 - 23:33 Info: -----------------------------------------------------------
+02.05.2012 - 23:33 Info: Program is started.
+02.05.2012 - 23:33 Info: Logging level: 0
+02.05.2012 - 23:33 Info: Using SQLite database.
+02.05.2012 - 23:33 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 23:33 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

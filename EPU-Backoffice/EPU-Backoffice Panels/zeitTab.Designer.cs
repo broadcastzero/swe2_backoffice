@@ -30,13 +30,13 @@
         {
             this.zeitaufzeichnungDataGridView = new System.Windows.Forms.DataGridView();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.zeiterfassungStundensatzTextBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.zeiterfassungdescriptionTextbox = new System.Windows.Forms.TextBox();
+            this.zeiterfassungDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.zeiterfassungCombobox = new System.Windows.Forms.ComboBox();
-            this.zeiterfassungAddButton = new System.Windows.Forms.Button();
+            this.zeiterfassungSubmitButton = new System.Windows.Forms.Button();
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -54,50 +54,50 @@
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(237, 118);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(66, 13);
+            this.label39.Size = new System.Drawing.Size(73, 13);
             this.label39.TabIndex = 28;
-            this.label39.Text = "Stundensatz";
+            this.label39.Text = "Stundensatz *";
             // 
-            // textBox1
+            // zeiterfassungStundensatzTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 27;
+            this.zeiterfassungStundensatzTextBox.Location = new System.Drawing.Point(31, 115);
+            this.zeiterfassungStundensatzTextBox.Name = "zeiterfassungStundensatzTextBox";
+            this.zeiterfassungStundensatzTextBox.Size = new System.Drawing.Size(200, 20);
+            this.zeiterfassungStundensatzTextBox.TabIndex = 27;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(237, 92);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(72, 13);
+            this.label31.Size = new System.Drawing.Size(79, 13);
             this.label31.TabIndex = 26;
-            this.label31.Text = "Beschreibung";
+            this.label31.Text = "Beschreibung *";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(237, 66);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 13);
+            this.label30.Size = new System.Drawing.Size(43, 13);
             this.label30.TabIndex = 25;
-            this.label30.Text = "Dauer";
+            this.label30.Text = "Dauer *";
             // 
-            // zeiterfassungdescriptionTextbox
+            // zeiterfassungDescriptionTextBox
             // 
-            this.zeiterfassungdescriptionTextbox.Location = new System.Drawing.Point(31, 89);
-            this.zeiterfassungdescriptionTextbox.Name = "zeiterfassungdescriptionTextbox";
-            this.zeiterfassungdescriptionTextbox.Size = new System.Drawing.Size(200, 20);
-            this.zeiterfassungdescriptionTextbox.TabIndex = 22;
+            this.zeiterfassungDescriptionTextBox.Location = new System.Drawing.Point(31, 89);
+            this.zeiterfassungDescriptionTextBox.Name = "zeiterfassungDescriptionTextBox";
+            this.zeiterfassungDescriptionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.zeiterfassungDescriptionTextBox.TabIndex = 22;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(237, 39);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(56, 13);
+            this.label29.Size = new System.Drawing.Size(63, 13);
             this.label29.TabIndex = 24;
-            this.label29.Text = "Projekttitel";
+            this.label29.Text = "Projekttitel *";
             // 
             // zeiterfassungCombobox
             // 
@@ -108,14 +108,14 @@
             this.zeiterfassungCombobox.Size = new System.Drawing.Size(200, 21);
             this.zeiterfassungCombobox.TabIndex = 20;
             // 
-            // zeiterfassungAddButton
+            // zeiterfassungSubmitButton
             // 
-            this.zeiterfassungAddButton.Location = new System.Drawing.Point(31, 141);
-            this.zeiterfassungAddButton.Name = "zeiterfassungAddButton";
-            this.zeiterfassungAddButton.Size = new System.Drawing.Size(200, 23);
-            this.zeiterfassungAddButton.TabIndex = 23;
-            this.zeiterfassungAddButton.Text = "Hinzufügen";
-            this.zeiterfassungAddButton.UseVisualStyleBackColor = true;
+            this.zeiterfassungSubmitButton.Location = new System.Drawing.Point(31, 141);
+            this.zeiterfassungSubmitButton.Name = "zeiterfassungSubmitButton";
+            this.zeiterfassungSubmitButton.Size = new System.Drawing.Size(200, 23);
+            this.zeiterfassungSubmitButton.TabIndex = 23;
+            this.zeiterfassungSubmitButton.Text = "Hinzufügen";
+            this.zeiterfassungSubmitButton.UseVisualStyleBackColor = true;
             // 
             // zeiterfassungHoursTextbox
             // 
@@ -130,13 +130,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.zeitaufzeichnungDataGridView);
             this.Controls.Add(this.label39);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.zeiterfassungStundensatzTextBox);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.zeiterfassungdescriptionTextbox);
+            this.Controls.Add(this.zeiterfassungDescriptionTextBox);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.zeiterfassungCombobox);
-            this.Controls.Add(this.zeiterfassungAddButton);
+            this.Controls.Add(this.zeiterfassungSubmitButton);
             this.Controls.Add(this.zeiterfassungHoursTextbox);
             this.Name = "zeitTab";
             this.Size = new System.Drawing.Size(755, 259);
@@ -150,13 +150,13 @@
 
         private System.Windows.Forms.DataGridView zeitaufzeichnungDataGridView;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox zeiterfassungStundensatzTextBox;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox zeiterfassungdescriptionTextbox;
+        private System.Windows.Forms.TextBox zeiterfassungDescriptionTextBox;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ComboBox zeiterfassungCombobox;
-        private System.Windows.Forms.Button zeiterfassungAddButton;
+        private System.Windows.Forms.Button zeiterfassungSubmitButton;
         private System.Windows.Forms.TextBox zeiterfassungHoursTextbox;
     }
 }
