@@ -1,109 +1,110 @@
-01.05.2012 - 12:05 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:05 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:05 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\RERE.db
-01.05.2012 - 12:05 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\RERE.db has been stored in config file.
-01.05.2012 - 12:05 Info: A new database has been created.
-01.05.2012 - 12:05 Info: Open HomeForm
-01.05.2012 - 12:05 Info: User requested to insert Kunde with values  ds
-01.05.2012 - 12:05 Info: No first name will be saved.
-01.05.2012 - 12:05 Info: A new Kunde has been saved to the database: 1  ds
-01.05.2012 - 12:05 Info: Start creating new Angebot...
-01.05.2012 - 12:05 Error: No angebot has been saved because of invalid inputs.
-01.05.2012 - 12:05 Info: Start creating new Angebot...
-01.05.2012 - 12:05 Info: A new Angebot will be created
-01.05.2012 - 12:05 Error: An SQLite exception occured while saving a new Angebot within the SQLite database.
-01.05.2012 - 12:05 Error: Abort due to constraint violation
-Angebot.Angebotsdauer may not be NULL   at System.Data.SQLite.SQLite3.Reset(SQLiteStatement stmt)
-   at System.Data.SQLite.SQLite3.Step(SQLiteStatement stmt)
-   at System.Data.SQLite.SQLiteDataReader.NextResult()
-   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
-   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
-   at EPU_Backoffice_Panels.Dal.DataBaseManager.SendStatementToDatabase(String sql, Int32 id, Object[] parameter) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:line 348
-   at EPU_Backoffice_Panels.Dal.DataBaseManager.CreateAngebot(AngebotTable angebot) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:line 373
-   at EPU_Backoffice_Panels.BL.AngebotManager.Create(AngebotTable angebot, Label errorlabel) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\AngebotManager.cs:line 64
-   at EPU_Backoffice_Panels.angeboteTab.CreateNewAngebot(Object sender, EventArgs e) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\angeboteTab.cs:line 218
-01.05.2012 - 12:08 Info: -----------------------------------------------------------
-01.05.2012 - 12:08 Info: Program is started.
-01.05.2012 - 12:08 Info: Logging level: 0
-01.05.2012 - 12:08 Info: Using SQLite database.
-01.05.2012 - 12:08 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:08 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:08 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfa.db
-01.05.2012 - 12:08 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsfa.db has been stored in config file.
-01.05.2012 - 12:08 Info: A new database has been created.
-01.05.2012 - 12:08 Info: Open HomeForm
-01.05.2012 - 12:08 Info: User requested to insert Kunde with values  asdf
-01.05.2012 - 12:08 Info: No first name will be saved.
-01.05.2012 - 12:08 Info: A new Kunde has been saved to the database: 1  asdf
-01.05.2012 - 12:08 Info: Start creating new Angebot...
-01.05.2012 - 12:08 Info: A new Angebot will be created
-01.05.2012 - 12:08 Info: New Angebot has been stored within the SQLite database.
-01.05.2012 - 12:09 Info: User requested to insert Kunde with values  fef
-01.05.2012 - 12:09 Info: No first name will be saved.
-01.05.2012 - 12:09 Info: A new Kunde has been saved to the database: 2  fef
-01.05.2012 - 12:09 Info: Start creating new Angebot...
-01.05.2012 - 12:09 Info: A new Angebot will be created
-01.05.2012 - 12:09 Info: New Angebot has been stored within the SQLite database.
-01.05.2012 - 12:09 Error: Serious problem with database!    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
-   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
-   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
-   at System.Data.SQLite.SQLiteDataReader.NextResult()
-   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
-   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   at EPU_Backoffice_Panels.Dal.DataBaseManager.LoadAngebote(Int32 kid, String from, String until) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:line 446
-   at EPU_Backoffice_Panels.BL.AngebotManager.Load(Int32 kid, DateTime from, DateTime until, Label msglabel) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\AngebotManager.cs:line 96SQLite error
-near ",": syntax error
-01.05.2012 - 12:09 Error: A serious problem with the database occured. Program will be exited. SQLite error
-near ",": syntax error   at EPU_Backoffice_Panels.BL.AngebotManager.Load(Int32 kid, DateTime from, DateTime until, Label msglabel) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\AngebotManager.cs:line 101
-   at EPU_Backoffice_Panels.angeboteTab.SearchAngebote(Object sender, EventArgs e) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\angeboteTab.cs:line 286
-01.05.2012 - 12:28 Info: -----------------------------------------------------------
-01.05.2012 - 12:28 Info: Program is started.
-01.05.2012 - 12:28 Info: Logging level: 0
-01.05.2012 - 12:28 Info: Using SQLite database.
-01.05.2012 - 12:28 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:28 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:30 Info: -----------------------------------------------------------
-01.05.2012 - 12:30 Info: Program is started.
-01.05.2012 - 12:30 Info: Logging level: 0
-01.05.2012 - 12:30 Info: Using SQLite database.
-01.05.2012 - 12:30 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:30 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:30 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newest.db
-01.05.2012 - 12:30 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\newest.db has been stored in config file.
-01.05.2012 - 12:30 Info: A new database has been created.
-01.05.2012 - 12:30 Info: Open HomeForm
-01.05.2012 - 12:31 Info: User requested to insert Kunde with values  aadf
-01.05.2012 - 12:31 Info: No first name will be saved.
-01.05.2012 - 12:31 Info: A new Kunde has been saved to the database: 1  aadf
-01.05.2012 - 12:31 Info: Start creating new Angebot...
-01.05.2012 - 12:31 Error: No angebot has been saved because of invalid inputs.
-01.05.2012 - 12:31 Info: Start creating new Angebot...
-01.05.2012 - 12:31 Info: A new Angebot will be created
-01.05.2012 - 12:31 Info: New Angebot has been stored within the SQLite database.
-01.05.2012 - 12:33 Info: -----------------------------------------------------------
-01.05.2012 - 12:33 Info: Program is started.
-01.05.2012 - 12:33 Info: Logging level: 0
-01.05.2012 - 12:33 Info: Using SQLite database.
-01.05.2012 - 12:33 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:33 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-01.05.2012 - 12:33 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsa.db
-01.05.2012 - 12:33 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\adsa.db has been stored in config file.
-01.05.2012 - 12:33 Info: A new database has been created.
-01.05.2012 - 12:33 Info: Open HomeForm
-01.05.2012 - 12:33 Info: User requested to insert Kunde with values  adsf
-01.05.2012 - 12:33 Info: No first name will be saved.
-01.05.2012 - 12:33 Info: A new Kunde has been saved to the database: 1  adsf
-01.05.2012 - 12:33 Info: Start creating new Angebot...
-01.05.2012 - 12:33 Info: A new Angebot will be created
-01.05.2012 - 12:33 Info: New Angebot has been stored within the SQLite database.
-01.05.2012 - 12:33 Info: User requested to insert Kunde with values  ter
-01.05.2012 - 12:33 Info: No first name will be saved.
-01.05.2012 - 12:33 Info: A new Kunde has been saved to the database: 2  ter
-01.05.2012 - 12:33 Info: Start creating new Angebot...
-01.05.2012 - 12:33 Info: A new Angebot will be created
-01.05.2012 - 12:33 Info: New Angebot has been stored within the SQLite database.
-01.05.2012 - 12:35 Info: -----------------------------------------------------------
-01.05.2012 - 12:35 Info: Program is started.
-01.05.2012 - 12:35 Info: Logging level: 0
+01.05.2012 - 12:35 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:35 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:35 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db
+01.05.2012 - 12:35 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db has been stored in config file.
+01.05.2012 - 12:35 Info: A new database has been created.
+01.05.2012 - 12:35 Info: Open HomeForm
+01.05.2012 - 12:35 Info: User requested to insert Kunde with values  trer
+01.05.2012 - 12:35 Info: No first name will be saved.
+01.05.2012 - 12:35 Info: A new Kunde has been saved to the database: 1  trer
+01.05.2012 - 12:35 Info: Start creating new Angebot...
+01.05.2012 - 12:35 Info: A new Angebot will be created
+01.05.2012 - 12:35 Info: New Angebot has been stored within the SQLite database.
+01.05.2012 - 12:35 Info: User requested to insert Kunde with values  trer
+01.05.2012 - 12:35 Info: No first name will be saved.
+01.05.2012 - 12:35 Info: A new Kunde has been saved to the database: 2  trer
+01.05.2012 - 12:35 Info: Start creating new Angebot...
+01.05.2012 - 12:35 Info: A new Angebot will be created
+01.05.2012 - 12:35 Info: New Angebot has been stored within the SQLite database.
+01.05.2012 - 12:36 Info: -----------------------------------------------------------
+01.05.2012 - 12:36 Info: Program is started.
+01.05.2012 - 12:36 Info: Logging level: 0
+01.05.2012 - 12:36 Info: Using SQLite database.
+01.05.2012 - 12:36 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:36 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:37 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db
+01.05.2012 - 12:37 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db has been stored in config file.
+01.05.2012 - 12:37 Info: Open HomeForm
+01.05.2012 - 12:37 Info: -----------------------------------------------------------
+01.05.2012 - 12:37 Info: Program is started.
+01.05.2012 - 12:37 Info: Logging level: 0
+01.05.2012 - 12:37 Info: Using SQLite database.
+01.05.2012 - 12:37 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:37 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:37 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db
+01.05.2012 - 12:37 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db has been stored in config file.
+01.05.2012 - 12:37 Info: Open HomeForm
+01.05.2012 - 12:38 Info: -----------------------------------------------------------
+01.05.2012 - 12:38 Info: Program is started.
+01.05.2012 - 12:38 Info: Logging level: 0
+01.05.2012 - 12:38 Info: Using SQLite database.
+01.05.2012 - 12:38 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:38 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:38 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db
+01.05.2012 - 12:38 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\zzz.db has been stored in config file.
+01.05.2012 - 12:38 Info: Open HomeForm
+01.05.2012 - 12:40 Info: -----------------------------------------------------------
+01.05.2012 - 12:40 Info: Program is started.
+01.05.2012 - 12:40 Info: Logging level: 0
+01.05.2012 - 12:40 Info: Using SQLite database.
+01.05.2012 - 12:40 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:40 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:41 Info: -----------------------------------------------------------
+01.05.2012 - 12:41 Info: Program is started.
+01.05.2012 - 12:41 Info: Logging level: 0
+01.05.2012 - 12:41 Info: Using SQLite database.
+01.05.2012 - 12:41 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:41 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+01.05.2012 - 12:41 Info: User wants to create new database - filename from userinput: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\yyy.db
+01.05.2012 - 12:41 Info: Connection string Data Source=C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\yyy.db has been stored in config file.
+01.05.2012 - 12:41 Info: A new database has been created.
+01.05.2012 - 12:41 Info: Open HomeForm
+01.05.2012 - 12:41 Info: User requested to insert Kunde with values  ttt
+01.05.2012 - 12:41 Info: No first name will be saved.
+01.05.2012 - 12:41 Info: A new Kunde has been saved to the database: 1  ttt
+01.05.2012 - 12:41 Info: Start creating new Angebot...
+01.05.2012 - 12:41 Error: No angebot has been saved because of invalid inputs.
+01.05.2012 - 12:41 Info: Start creating new Angebot...
+01.05.2012 - 12:41 Info: A new Angebot will be created
+01.05.2012 - 12:41 Info: New Angebot has been stored within the SQLite database.
+01.05.2012 - 12:42 Info: Start creating new Angebot...
+01.05.2012 - 12:42 Info: A new Angebot will be created
+01.05.2012 - 12:42 Info: New Angebot has been stored within the SQLite database.
+02.05.2012 - 14:03 Info: -----------------------------------------------------------
+02.05.2012 - 14:03 Info: Program is started.
+02.05.2012 - 14:03 Info: Logging level: 0
+02.05.2012 - 14:03 Info: Using SQLite database.
+02.05.2012 - 14:03 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:03 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:03 Info: User wants to create new database - filename from userinput: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:03 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.05.2012 - 14:03 Info: A new database has been created.
+02.05.2012 - 14:03 Info: Open HomeForm
+02.05.2012 - 14:04 Error: Invalid signs within create Angebot / create Kunde
+02.05.2012 - 14:04 Info: User requested to insert Kunde with values Neuer Kunde
+02.05.2012 - 14:04 Info: A new Kunde has been saved to the database: 1 Neuer Kunde
+02.05.2012 - 14:04 Info: Start creating new Angebot...
+02.05.2012 - 14:04 Error: No angebot has been saved because of invalid inputs.
+02.05.2012 - 14:04 Info: Start creating new Angebot...
+02.05.2012 - 14:04 Error: No angebot has been saved because of invalid inputs.
+02.05.2012 - 14:04 Info: Start creating new Angebot...
+02.05.2012 - 14:04 Info: A new Angebot will be created
+02.05.2012 - 14:04 Info: New Angebot has been stored within the SQLite database.
+02.05.2012 - 14:06 Info: -----------------------------------------------------------
+02.05.2012 - 14:06 Info: Program is started.
+02.05.2012 - 14:06 Info: Logging level: 0
+02.05.2012 - 14:06 Info: Using SQLite database.
+02.05.2012 - 14:06 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.
+02.05.2012 - 14:06 Info: Open HomeForm
+02.05.2012 - 14:06 Info: Start creating new Angebot...
+02.05.2012 - 14:06 Info: -----------------------------------------------------------
+02.05.2012 - 14:06 Info: Program is started.
+02.05.2012 - 14:06 Info: Logging level: 0
+02.05.2012 - 14:06 Info: Using SQLite database.
+02.05.2012 - 14:06 Info: Saved path of database in config file: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Warning: Given file path is wrong. File does not exist: s\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Info: Database path set in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+02.05.2012 - 14:06 Info: Connection string Data Source=C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db has been stored in config file.

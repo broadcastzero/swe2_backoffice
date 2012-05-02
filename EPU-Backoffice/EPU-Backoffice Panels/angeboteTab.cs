@@ -190,7 +190,7 @@ namespace EPU_Backoffice_Panels
             IRule pdv2 = new PositiveDoubleValidator();
             IRule pcv2 = new PercentValidator();
             IRule dv2 = new DateValidator();
-            IRule lnhsv2 = new LettersHyphenValidator();
+            IRule lnhsv2 = new LettersNumbersHyphenSpaceValidator();
             IRule slv2 = new StringLength150Validator();
             IRule piv2 = new PositiveIntValidator();
 
