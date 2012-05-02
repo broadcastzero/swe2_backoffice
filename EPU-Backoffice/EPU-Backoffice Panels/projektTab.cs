@@ -80,7 +80,7 @@ namespace EPU_Backoffice_Panels
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
             IRule slv = new StringLength150Validator();
 
-            int angebotID;
+            ProjektTable pjm = new ProjektTable();
 
             // bind values
             string titel = DataBindingFramework.BindFromString(this.projektNeuProjekttitelTextbox.Text, "Projekttitel", this.projektNeuMsgLabel, false, lnhsv, slv);
@@ -100,18 +100,21 @@ namespace EPU_Backoffice_Panels
                 s_angebotID = s_angebotID.Substring(0, s_angebotID.IndexOf(':'));
 
                 IRule posint = new PositiveIntValidator();
-                angebotID = DataBindingFramework.BindFromInt(s_angebotID, "AngebotID", this.projektNeuMsgLabel, false, posint);
+                IRule datev = new DateValidator();
+
+                pjm.AngebotID = DataBindingFramework.BindFromInt(s_angebotID, "AngebotID", this.projektNeuMsgLabel, false, posint);
+                pjm.Projektstart = DataBindingFramework.BindFromString(this.projektNeuStartdatumDatepicker.Value.ToShortDateString(), "Startdatum", projektNeuMsgLabel, false, datev);
 
                 // Check for errors while databinding
-                if (posint.HasErrors)
+                if (posint.HasErrors || datev.HasErrors)
                 {
-                    this.logger.Log(Logger.Level.Error, angebotID + " is an invalid Angebot ID");
+                    this.logger.Log(Logger.Level.Error, pjm.AngebotID + " is an invalid Angebot ID or invalid date chosen");
                     return;
                 }
 
                 // get Kunde table out of Database
                 AngebotManager loader = new AngebotManager();
-                List<AngebotTable> results = loader.Load(angebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
+                List<AngebotTable> results = loader.Load(pjm.AngebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
 
                 // there must be exactly one result, for ID is unique!
                 if (results.Count != 1)
@@ -123,7 +126,8 @@ namespace EPU_Backoffice_Panels
                 }
 
                 // everything went fine
-                // TODO: save!
+                ProjektManager saver = new ProjektManager();
+                saver.Create(pjm);
             }
         }
     }

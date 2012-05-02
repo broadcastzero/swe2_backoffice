@@ -9,9 +9,11 @@ namespace EPU_Backoffice_Panels.BL
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using EPU_Backoffice_Panels;
     using EPU_Backoffice_Panels.Dal;
     using EPU_Backoffice_Panels.Dal.Tables;
-    using EPU_Backoffice_Panels;
+    using EPU_Backoffice_Panels.Rules;
+    using EPU_Backoffice_Panels.UserExceptions;
 
     /// <summary>
     /// This class is responsible for checking values provided by the GUI and creating or loading a project into/from the database
@@ -21,10 +23,28 @@ namespace EPU_Backoffice_Panels.BL
         /// <summary>
         /// Checks parameters provided by the GUI and delegates values to database which saves them.
         /// </summary>
-        public void Create(string projekttitel, string angebotID, DateTime startdate)
+        public void Create(ProjektTable pj)
         {
-            throw new NotImplementedException();
-            // after creating the angebot, set "angenommen"-attribute in AngebotTable true!
+            // check data once again
+            LettersNumbersHyphenSpaceValidator lnhsv = new LettersNumbersHyphenSpaceValidator();
+            PositiveIntValidator posintv = new PositiveIntValidator();
+            StringLength150Validator slv = new StringLength150Validator();
+            DateValidator dv = new DateValidator();
+            
+            // call eval methods
+            lnhsv.Eval(pj.Projektname);
+            slv.Eval(pj.Projektname);
+            posintv.Eval(pj.AngebotID);
+            dv.Eval(pj.Projektstart);
+
+            // check for errors
+            if (lnhsv.HasErrors || slv.HasErrors || posintv.HasErrors || dv.HasErrors)
+            { 
+                throw new InvalidInputException("Invalid values provided by GUI");
+            }
+            
+            // send values to database
+            DALFactory.GetDAL().CreateProjekt(pj);
         }
 
         /// <summary>

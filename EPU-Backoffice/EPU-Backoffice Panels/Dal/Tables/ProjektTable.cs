@@ -46,11 +46,11 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { { projektname = value; } }
         }
 
-        private DateTime projektstart;
+        private string projektstart;
         /// <summary>
-        /// Datum of creation of an Angebot
+        /// Datum of creation of an Angebot in ShortDateString format (16/12/1989)
         /// </summary>
-        public DateTime Projektstart
+        public string Projektstart
         {
             get { return projektstart; }
             set { projektstart = value; }

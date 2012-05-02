@@ -66,10 +66,8 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Creates a new Projekt with the provided parameters and stores it in the SQLite database
         /// </summary>
-        /// <param name="projektname">The name of the Projekt</param>
-        /// <param name="angebotID">The ID of the existing Angebot</param>
-        /// <param name="startdate">The start date of the Projekt</param>
-        void CreateProjekt(string projektname, int angebotID, string startdate);
+        /// <param name="´pj">The Projekt which shall be saved</param>
+        void CreateProjekt(ProjektTable pj);
 
         /// <summary>
         /// Loads existing Projekte out of the SQLite database

@@ -457,10 +457,8 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Creates a new Projekt with the provided parameters and stores it in the SQLite database
         /// </summary>
-        /// <param name="projektname">The name of the Projekt</param>
-        /// <param name="angebotID">The ID of the existing Angebot</param>
-        /// <param name="startdate">The start date of the Projekt</param>
-        public void CreateProjekt(string projektname, int angebotID, string startdate)
+        /// <param name="projektname">The projekt which shall be saved</param>
+        public void CreateProjekt(ProjektTable pj)
         {
             throw new NotImplementedException();
         }
