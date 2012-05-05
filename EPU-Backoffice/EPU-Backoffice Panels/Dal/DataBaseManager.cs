@@ -454,6 +454,8 @@ namespace EPU_Backoffice_Panels.Dal
             }
         }
 
+
+
         /// <summary>
         /// Creates a new Projekt with the provided parameters and stores it in the SQLite database
         /// </summary>
@@ -480,12 +482,86 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <param name="from">Start searching date in format DD.MM.YYYY</param>
         /// <param name="until">End searching date in format DD.MM.YYYY</param>
-        /// <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
         /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
         /// <returns>A resultlist of the found matching Projekte</returns>
-        public List<ProjektTable> LoadProjekte(string from, string until, int projektID = -1, int kundenID = -1)
-        {
-            throw new NotImplementedException();
+        /// Select t0.ID, t0.AngebotID, t0.Projektname, t0.Projektstart from Projekt t0 
+        /// join Angebot t1 on t0.AngebotID = t1.ID
+        /// join Kunde t2 on t1.KundenID = t2.ID
+        /// Where KundenID = ? and t0.Projektstart BETWEEN ? AND ?
+        public List<ProjektTable> LoadProjekte(string from, string until, int kundenID = -1)
+        {   
+            string sql;
+            if (kundenID >= 0)
+            {
+                sql = "SELECT t0.ID, t0.AngebotID, t0.Projektname, t0.Projektstart FROM Projekt t0 JOIN Angebot t1 on t0.AngebotID = t1.ID JOIN Kunde t2 on t1.KundenID = t2.ID WHERE KundenID = ? AND t0.Projektstart BETWEEN ? AND ?";
+            }
+            else
+            {
+                sql = "SELECT * FROM Projekt WHERE Projektstart BETWEEN ? AND ?";
+            }
+            
+
+            List<ProjektTable> results = new List<ProjektTable>();
+
+            // open connection and get requested Projekt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                if (kundenID != -1)
+                {
+                    SQLiteParameter p_ID = new SQLiteParameter();
+                    p_ID.Value = kundenID;
+                    cmd.Parameters.Add(p_ID);
+                }
+
+                // bind from
+                SQLiteParameter p_from = new SQLiteParameter();
+                p_from.Value = from;
+                cmd.Parameters.Add(p_from);
+
+                // bind to
+                SQLiteParameter p_until = new SQLiteParameter();
+                p_until.Value = until;
+                cmd.Parameters.Add(p_until);                
+
+                // execute and get results
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    ProjektTable result = new ProjektTable();
+                    result.ID = reader.GetInt32(0);
+                    result.AngebotID = reader.GetInt32(1);
+                    result.Projektname = reader.GetString(2);
+                    result.Projektstart = reader.GetString(3);
+                    results.Add(result);
+                }
+
+                return results;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
+        
         }
     }
 }

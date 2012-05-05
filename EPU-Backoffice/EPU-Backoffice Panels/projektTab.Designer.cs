@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.projektErstellenTab = new System.Windows.Forms.TabPage();
             this.projektNeuMsgLabel = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.projektSuchenTab = new System.Windows.Forms.TabPage();
+            this.projektSuchenMessageLabel = new System.Windows.Forms.Label();
             this.projektSuchenDeleteButton = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.projektSuchenPrintButton = new System.Windows.Forms.Button();
@@ -46,16 +48,20 @@
             this.label27 = new System.Windows.Forms.Label();
             this.projektSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.projektSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
-            this.label26 = new System.Windows.Forms.Label();
             this.projektSuchenKundeCombobox = new System.Windows.Forms.ComboBox();
-            this.projektSuchenProjekttitelcombobox = new System.Windows.Forms.ComboBox();
             this.projektSuchenChangeButton = new System.Windows.Forms.Button();
             this.projektSuchenSearchButton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.projektSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AngebotID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Projektname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Projektstart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl4.SuspendLayout();
             this.projektErstellenTab.SuspendLayout();
             this.projektSuchenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projektSearchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl4
@@ -161,6 +167,7 @@
             // projektSuchenTab
             // 
             this.projektSuchenTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.projektSuchenTab.Controls.Add(this.projektSuchenMessageLabel);
             this.projektSuchenTab.Controls.Add(this.projektSuchenDeleteButton);
             this.projektSuchenTab.Controls.Add(this.label34);
             this.projektSuchenTab.Controls.Add(this.projektSuchenPrintButton);
@@ -168,9 +175,7 @@
             this.projektSuchenTab.Controls.Add(this.label27);
             this.projektSuchenTab.Controls.Add(this.projektSuchenBisDatepicker);
             this.projektSuchenTab.Controls.Add(this.projektSuchenVonDatepicker);
-            this.projektSuchenTab.Controls.Add(this.label26);
             this.projektSuchenTab.Controls.Add(this.projektSuchenKundeCombobox);
-            this.projektSuchenTab.Controls.Add(this.projektSuchenProjekttitelcombobox);
             this.projektSuchenTab.Controls.Add(this.projektSuchenChangeButton);
             this.projektSuchenTab.Controls.Add(this.projektSuchenSearchButton);
             this.projektSuchenTab.Controls.Add(this.dataGridView4);
@@ -180,6 +185,15 @@
             this.projektSuchenTab.Size = new System.Drawing.Size(747, 233);
             this.projektSuchenTab.TabIndex = 1;
             this.projektSuchenTab.Text = "Suchen";
+            // 
+            // projektSuchenMessageLabel
+            // 
+            this.projektSuchenMessageLabel.AutoSize = true;
+            this.projektSuchenMessageLabel.Location = new System.Drawing.Point(225, 125);
+            this.projektSuchenMessageLabel.Name = "projektSuchenMessageLabel";
+            this.projektSuchenMessageLabel.Size = new System.Drawing.Size(76, 13);
+            this.projektSuchenMessageLabel.TabIndex = 16;
+            this.projektSuchenMessageLabel.Text = "MessageLabel";
             // 
             // projektSuchenDeleteButton
             // 
@@ -240,15 +254,6 @@
             this.projektSuchenVonDatepicker.Size = new System.Drawing.Size(200, 20);
             this.projektSuchenVonDatepicker.TabIndex = 9;
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(225, 46);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 13);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "Projekttitel";
-            // 
             // projektSuchenKundeCombobox
             // 
             this.projektSuchenKundeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -258,15 +263,6 @@
             this.projektSuchenKundeCombobox.Size = new System.Drawing.Size(200, 21);
             this.projektSuchenKundeCombobox.TabIndex = 5;
             this.projektSuchenKundeCombobox.DropDown += new System.EventHandler(this.projektSuchenKundeCombobox_DropDown);
-            // 
-            // projektSuchenProjekttitelcombobox
-            // 
-            this.projektSuchenProjekttitelcombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.projektSuchenProjekttitelcombobox.FormattingEnabled = true;
-            this.projektSuchenProjekttitelcombobox.Location = new System.Drawing.Point(15, 43);
-            this.projektSuchenProjekttitelcombobox.Name = "projektSuchenProjekttitelcombobox";
-            this.projektSuchenProjekttitelcombobox.Size = new System.Drawing.Size(200, 21);
-            this.projektSuchenProjekttitelcombobox.TabIndex = 3;
             // 
             // projektSuchenChangeButton
             // 
@@ -285,14 +281,47 @@
             this.projektSuchenSearchButton.TabIndex = 1;
             this.projektSuchenSearchButton.Text = "Suchen";
             this.projektSuchenSearchButton.UseVisualStyleBackColor = true;
+            this.projektSuchenSearchButton.Click += new System.EventHandler(this.projektSuchenSearchButton_Click);
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.AngebotID,
+            this.Projektname,
+            this.Projektstart});
+            this.dataGridView4.DataSource = this.projektSearchBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(366, 25);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(363, 183);
             this.dataGridView4.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // AngebotID
+            // 
+            this.AngebotID.DataPropertyName = "AngebotID";
+            this.AngebotID.HeaderText = "Angebot";
+            this.AngebotID.Name = "AngebotID";
+            this.AngebotID.Visible = false;
+            // 
+            // Projektname
+            // 
+            this.Projektname.DataPropertyName = "Projektname";
+            this.Projektname.HeaderText = "Name";
+            this.Projektname.Name = "Projektname";
+            // 
+            // Projektstart
+            // 
+            this.Projektstart.DataPropertyName = "Projektstart";
+            this.Projektstart.HeaderText = "Startdatum";
+            this.Projektstart.Name = "Projektstart";
             // 
             // projektTab
             // 
@@ -307,6 +336,7 @@
             this.projektSuchenTab.ResumeLayout(false);
             this.projektSuchenTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projektSearchBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,11 +361,15 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.DateTimePicker projektSuchenBisDatepicker;
         private System.Windows.Forms.DateTimePicker projektSuchenVonDatepicker;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox projektSuchenKundeCombobox;
-        private System.Windows.Forms.ComboBox projektSuchenProjekttitelcombobox;
         private System.Windows.Forms.Button projektSuchenChangeButton;
         private System.Windows.Forms.Button projektSuchenSearchButton;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label projektSuchenMessageLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AngebotID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Projektname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Projektstart;
+        private System.Windows.Forms.BindingSource projektSearchBindingSource;
     }
 }

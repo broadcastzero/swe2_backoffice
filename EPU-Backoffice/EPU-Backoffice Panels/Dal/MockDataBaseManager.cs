@@ -381,10 +381,10 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <param name="from">Start searching date in format DD.MM.YYYY</param>
         /// <param name="until">End searching date in format DD.MM.YYYY</param>
-        /// <param name="projektID">The ID of the to-be-searched projekt. -1, if any.</param>
+
         /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
         /// <returns>A resultlist of the found matching Projekte</returns>
-        public List<ProjektTable> LoadProjekte(string from, string until, int projektID = -1, int kundenID = -1)
+        public List<ProjektTable> LoadProjekte(string from, string until, int kundenID = -1)
         {
             throw new NotImplementedException();
         }

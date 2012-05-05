@@ -14,6 +14,10 @@ namespace EPU_Backoffice_Panels
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.BL;
     using EPU_Backoffice_Panels.Dal.Tables;
+    using EPU_Backoffice_Panels.DatabindingFramework;
+    using EPU_Backoffice_Panels.Rules;
+    using EPU_Backoffice_Panels.UserExceptions;
+
 
     /// <summary>
     /// This class contains static global methods, which can be used by any label
@@ -73,6 +77,78 @@ namespace EPU_Backoffice_Panels
 
             // set data source
             (sender as ComboBox).DataSource = listItems;
+        }
+
+        /// <summary>
+        /// Gets all existing Projekte from the Database and adds them to the existingProjekteComboBox
+        /// </summary>
+        /// <param name="sender">The sender</param>
+        /// <param name="e">The event args</param>
+        /*public static void BindFromExistingProjekteToComboBox(object sender, EventArgs e)
+        {
+            // check sender for null
+            if (sender == null)
+            {
+                return;
+            }
+
+            List<ProjektTable> results;
+
+            // add empty element to make empty choices possible
+            List<string> listItems = new List<string>();
+            listItems.Add("");
+
+            ProjektManager loader = new ProjektManager();
+
+            // Create empty Projekt object with type "false"
+            KundeKontaktTable k = new KundeKontaktTable();
+            k.Vorname = string.Empty;
+            k.NachnameFirmenname = string.Empty;
+            k.Type = false; // only get Kunden
+
+            // Load all existing Kunden to object result list
+            results = loader.LoadKundenKontakte(k, null);
+
+            // if there are results, add them to string result list
+            if (results.Count != 0)
+            {
+                foreach (KundeKontaktTable kunde in results)
+                {
+                    string entry = kunde.ID + ": " + kunde.Vorname + " - " + kunde.NachnameFirmenname;
+                    listItems.Add(entry);
+                }
+            }
+
+            // set data source
+            (sender as ComboBox).DataSource = listItems;
+        }*/
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static int getIdFromCombobox(string data, Label messages)
+        {
+            int id;   
+            // if no Kunde has been chosen, set kundenID to -1, which indicates, that it shall not be searched for a certain Kunde
+            if (data != string.Empty)
+            {
+                data = data.Substring(0, data.IndexOf(':'));
+
+                IRule posintval = new PositiveIntValidator();
+                id = DataBindingFramework.BindFromInt(data, "Kunden ID", messages, false, posintval);
+
+                if (posintval.HasErrors)
+                {
+                    throw new InvalidInputException("Problem with getting KundenID. Unknown hard error.");
+                }
+            }
+            else
+            {
+                id = -1;
+            }
+        return id;
+           
         }
 
         /// <summary>

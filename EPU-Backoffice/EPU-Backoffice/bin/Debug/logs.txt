@@ -1,35 +1,57 @@
-02.05.2012 - 23:29 Error: Input was invalid, although checked.
-02.05.2012 - 23:32 Info: -----------------------------------------------------------
-02.05.2012 - 23:32 Info: Program is started.
-02.05.2012 - 23:32 Info: Logging level: 0
-02.05.2012 - 23:32 Info: Using SQLite database.
-02.05.2012 - 23:32 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-02.05.2012 - 23:32 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-02.05.2012 - 23:32 Error: 1 is an invalid Angebot ID or invalid date chosen or invalid project name.
-02.05.2012 - 23:32 Error: 1 is an invalid Angebot ID or invalid date chosen or invalid project name.
-02.05.2012 - 23:32 Error: SQLite error
-Insufficient parameters supplied to the command   at System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
-   at System.Data.SQLite.SQLiteStatement.BindParameters()
-   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
-   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
-   at System.Data.SQLite.SQLiteDataReader.NextResult()
-   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
-   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
-   at EPU_Backoffice_Panels.Dal.DataBaseManager.SendStatementToDatabase(String sql, Int32 id, Object[] parameter) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:line 348
-   at EPU_Backoffice_Panels.Dal.DataBaseManager.CreateProjekt(ProjektTable pj) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:line 471
-   at EPU_Backoffice_Panels.BL.ProjektManager.Create(ProjektTable pj) in C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\ProjektManager.cs:line 53
-02.05.2012 - 23:32 Error: Some serious problem with the database occured!SQLite error
+05.05.2012 - 13:22 Info: -----------------------------------------------------------
+05.05.2012 - 13:22 Info: Program is started.
+05.05.2012 - 13:22 Info: Logging level: 0
+05.05.2012 - 13:22 Info: Using SQLite database.
+05.05.2012 - 13:22 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:22 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:22 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db
+05.05.2012 - 13:22 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db has been stored in config file.
+05.05.2012 - 13:22 Info: Open HomeForm
+05.05.2012 - 13:23 Error: SQLite error
+Insufficient parameters supplied to the command   bei System.Data.SQLite.SQLiteStatement.BindParameter(Int32 index, SQLiteParameter param)
+   bei System.Data.SQLite.SQLiteStatement.BindParameters()
+   bei System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   bei System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   bei System.Data.SQLite.SQLiteDataReader.NextResult()
+   bei System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   bei System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   bei EPU_Backoffice_Panels.Dal.DataBaseManager.SendStatementToDatabase(String sql, Int32 id, Object[] parameter) in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:Zeile 348.
+   bei EPU_Backoffice_Panels.Dal.DataBaseManager.CreateProjekt(ProjektTable pj) in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\Dal\DataBaseManager.cs:Zeile 473.
+   bei EPU_Backoffice_Panels.BL.ProjektManager.Create(ProjektTable pj) in C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\BL\ProjektManager.cs:Zeile 56.
+05.05.2012 - 13:23 Error: Some serious problem with the database occured!SQLite error
 Insufficient parameters supplied to the command
-02.05.2012 - 23:33 Info: -----------------------------------------------------------
-02.05.2012 - 23:33 Info: Program is started.
-02.05.2012 - 23:33 Info: Logging level: 0
-02.05.2012 - 23:33 Info: Using SQLite database.
-02.05.2012 - 23:33 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-02.05.2012 - 23:33 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-02.05.2012 - 23:48 Info: -----------------------------------------------------------
-02.05.2012 - 23:48 Info: Program is started.
-02.05.2012 - 23:48 Info: Logging level: 0
-02.05.2012 - 23:48 Info: Using SQLite database.
-02.05.2012 - 23:48 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-02.05.2012 - 23:48 Info: Database path set in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:27 Info: -----------------------------------------------------------
+05.05.2012 - 13:27 Info: Program is started.
+05.05.2012 - 13:27 Info: Logging level: 0
+05.05.2012 - 13:27 Info: Using SQLite database.
+05.05.2012 - 13:27 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:27 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:27 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db
+05.05.2012 - 13:27 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db has been stored in config file.
+05.05.2012 - 13:27 Info: Open HomeForm
+05.05.2012 - 13:27 Info: projekt search button pressed
+05.05.2012 - 13:27 Info: kundenid in projekt search: -1
+05.05.2012 - 13:27 Info: resultslength: 0
+05.05.2012 - 13:29 Info: -----------------------------------------------------------
+05.05.2012 - 13:29 Info: Program is started.
+05.05.2012 - 13:29 Info: Logging level: 0
+05.05.2012 - 13:29 Info: Using SQLite database.
+05.05.2012 - 13:29 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:29 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:29 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db
+05.05.2012 - 13:29 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db has been stored in config file.
+05.05.2012 - 13:29 Info: Open HomeForm
+05.05.2012 - 13:29 Info: projekt search button pressed
+05.05.2012 - 13:29 Info: kundenid in projekt search: -1
+05.05.2012 - 13:30 Info: -----------------------------------------------------------
+05.05.2012 - 13:30 Info: Program is started.
+05.05.2012 - 13:30 Info: Logging level: 0
+05.05.2012 - 13:30 Info: Using SQLite database.
+05.05.2012 - 13:30 Info: Saved path of database in config file: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:30 Warning: Given file path is wrong. File does not exist: C:\Users\bz\0 FH\SWE 2\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
+05.05.2012 - 13:30 Info: Database path set in config file: C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db
+05.05.2012 - 13:30 Info: Connection string Data Source=C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\Projekttest.db has been stored in config file.
+05.05.2012 - 13:30 Info: Open HomeForm
+05.05.2012 - 13:30 Info: projekt search button pressed
+05.05.2012 - 13:30 Info: kundenid in projekt search: 1

@@ -147,5 +147,55 @@ namespace EPU_Backoffice_Panels
                 GlobalActions.ShowSuccessLabel(this.projektNeuMsgLabel);
             }
         }
+
+        private void projektSuchenSearchButton_Click(object sender, EventArgs e)
+        {
+            logger.Log(Logger.Level.Info, "projekt search button pressed");
+
+            // get selected KundenID
+            // force searching for existing Kunden, if Kunde has not dropped down the ComboBox (would throw Exception otherwise)
+            if (this.projektSuchenKundeCombobox.SelectedIndex < 0)
+            {
+                GlobalActions.BindFromExistingKundenToComboBox(this.projektSuchenKundeCombobox, null);
+            }
+
+            this.projektSuchenMessageLabel.Hide();
+
+            string kundenID = this.projektSuchenKundeCombobox.SelectedItem.ToString();
+            int id = -1;
+            try
+            {
+                id = GlobalActions.getIdFromCombobox(kundenID, projektSuchenMessageLabel);
+                logger.Log(Logger.Level.Info, "kundenid in projekt search: " + id);
+            }
+            catch
+            (
+                InvalidInputException
+            )
+            {
+                logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
+            }
+            //logger.Log(Logger.Level.Info, "KundenID:" +id);
+
+            // get Angebot in SDS format: 6/1/2009
+            DateTime from = this.projektSuchenVonDatepicker.Value;
+            DateTime until = this.projektSuchenBisDatepicker.Value;
+
+            ProjektManager manager = new ProjektManager();
+            List<ProjektTable> results = new List<ProjektTable>();
+
+            try
+            {
+                results = manager.Load(id, from, until, this.projektSuchenMessageLabel);
+                logger.Log(Logger.Level.Info,"resultslength: "+results.Count);
+            }
+            catch (DataBaseException ex)
+            {
+                this.logger.Log(Logger.Level.Error, "A serious problem with the database has occured. Program will be exited. " + ex.Message + ex.StackTrace);
+                Application.Exit();
+            }
+
+            this.projektSearchBindingSource.DataSource = results;
+        }
     }
 }

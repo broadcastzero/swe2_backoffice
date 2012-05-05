@@ -44,3 +44,5 @@ C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Bac
 C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU-Backoffice Panels.dll
 C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice Panels\obj\Debug\EPU-Backoffice Panels.pdb
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\bin\Debug\EPU-Backoffice Panels.dll.config
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\EPU-Backoffice\EPU-Backoffice Panels\bin\Debug\System.Data.SQLite.dll

@@ -258,22 +258,19 @@ namespace EPU_Backoffice_Panels
 
             // get kundenID out of ComboBox
             string kundenID = this.angebotSuchenKundeComboBox.SelectedItem.ToString();
-            int id = -1;
+            int id=-1;
 
-            // if no Kunde has been chosen, set kundenID to -1, which indicates, that it shall not be searched for a certain Kunde
-            if (kundenID != string.Empty)
+            try
             {
-                kundenID = kundenID.Substring(0, kundenID.IndexOf(':'));
-
-                IRule posintval = new PositiveIntValidator();
-                id = DataBindingFramework.BindFromInt(kundenID, "Kunden ID", this.angebotSuchenMsgLabel, false, posintval);
-
-                if (posintval.HasErrors)
-                {
-                    throw new InvalidInputException("Problem with getting KundenID. Unknown hard error.");
-                }
+                id = GlobalActions.getIdFromCombobox(kundenID, angebotSuchenMsgLabel);
             }
-
+            catch
+            (
+                InvalidInputException
+            ) 
+            {
+                logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
+            }
             // get Angebot in SDS format: 6/1/2009
             DateTime from = this.angebotSuchenVonDatepicker.Value;
             DateTime until = this.angebotSuchenBisDatepicker.Value;
@@ -287,7 +284,7 @@ namespace EPU_Backoffice_Panels
             }
             catch (DataBaseException ex)
             {
-                this.logger.Log(Logger.Level.Error, "A serious problem with the database occured. Program will be exited. " + ex.Message + ex.StackTrace);
+                this.logger.Log(Logger.Level.Error, "A serious problem with the database has occured. Program will be exited. " + ex.Message + ex.StackTrace);
                 Application.Exit();
             }
 
