@@ -134,6 +134,7 @@ namespace EPU_Backoffice_Panels
                 try
                 {
                     saver.Create(projekt);
+                    //logger.Log(Logger.Level.Info, "uebergabe von projekttab: " + projekt.AngebotID+ " " + projekt.Projektstart);
                 }
                 catch (InvalidInputException ex)
                 {

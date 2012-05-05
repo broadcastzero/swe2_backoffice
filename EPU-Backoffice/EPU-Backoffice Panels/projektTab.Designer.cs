@@ -52,11 +52,11 @@
             this.projektSuchenChangeButton = new System.Windows.Forms.Button();
             this.projektSuchenSearchButton = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.projektSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AngebotID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Projektname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Projektstart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projektSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl4.SuspendLayout();
             this.projektErstellenTab.SuspendLayout();
             this.projektSuchenTab.SuspendLayout();
@@ -285,6 +285,10 @@
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AllowUserToResizeColumns = false;
+            this.dataGridView4.AllowUserToResizeRows = false;
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

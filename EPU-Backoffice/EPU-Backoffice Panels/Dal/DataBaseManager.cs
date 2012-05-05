@@ -466,7 +466,8 @@ namespace EPU_Backoffice_Panels.Dal
 
             try
             {
-                this.SendStatementToDatabase(sql, -1);
+                this.SendStatementToDatabase(sql, -1, pj.AngebotID, pj.Projektname, pj.Projektstart);
+                logger.Log(Logger.Level.Info, pj.AngebotID + " " + pj.Projektname + " " + pj.Projektstart);
             }
             catch (SQLiteException)
             {
@@ -474,7 +475,7 @@ namespace EPU_Backoffice_Panels.Dal
             }
 
             // success logging
-            this.logger.Log(Logger.Level.Info, "New Projekt has been stored in the SQLite database.");
+            this.logger.Log(Logger.Level.Info, "New Projekt " +pj.Projektname+ " has been stored in the SQLite database.");
         }
 
         /// <summary>
@@ -497,7 +498,7 @@ namespace EPU_Backoffice_Panels.Dal
             }
             else
             {
-                sql = "SELECT * FROM Projekt WHERE Projektstart BETWEEN ? AND ?";
+                sql = "SELECT * FROM Projekt";// WHERE Projektstart BETWEEN ? AND ?";
             }
             
 
@@ -538,6 +539,7 @@ namespace EPU_Backoffice_Panels.Dal
 
                 // execute and get results
                 reader = cmd.ExecuteReader();
+                
                 while (reader.Read())
                 {
                     ProjektTable result = new ProjektTable();
