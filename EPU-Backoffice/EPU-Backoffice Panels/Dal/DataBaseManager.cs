@@ -485,20 +485,16 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="until">End searching date in format DD.MM.YYYY</param>
         /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
         /// <returns>A resultlist of the found matching Projekte</returns>
-        /// Select t0.ID, t0.AngebotID, t0.Projektname, t0.Projektstart from Projekt t0 
-        /// join Angebot t1 on t0.AngebotID = t1.ID
-        /// join Kunde t2 on t1.KundenID = t2.ID
-        /// Where KundenID = ? and t0.Projektstart BETWEEN ? AND ?
-        public List<ProjektTable> LoadProjekte(string from, string until, int kundenID = -1)
+        public List<ProjektTable> LoadProjekte(string from, string until, int kundenID)
         {   
             string sql;
             if (kundenID >= 0)
             {
-                sql = "SELECT t0.ID, t0.AngebotID, t0.Projektname, t0.Projektstart FROM Projekt t0 JOIN Angebot t1 on t0.AngebotID = t1.ID JOIN Kunde t2 on t1.KundenID = t2.ID WHERE KundenID = ? AND t0.Projektstart BETWEEN ? AND ?";
+                sql = "SELECT t0.ID, t0.AngebotID, t0.Projektname, t0.Projektstart FROM Projekt t0 JOIN Angebot t1 on t0.AngebotID = t1.ID WHERE t1.KundenID = ? AND t0.Projektstart BETWEEN ? AND ?";
             }
             else
             {
-                sql = "SELECT * FROM Projekt";// WHERE Projektstart BETWEEN ? AND ?";
+                sql = "SELECT * FROM Projekt WHERE Projektstart BETWEEN ? AND ?";
             }
             
 

@@ -49,6 +49,9 @@ namespace EPU_Backoffice_Panels.BL
             { 
                 throw new InvalidInputException("Invalid values provided by GUI");
             }
+
+            // reformat data string
+            pj.Projektstart = GlobalActions.ParseToSQLiteDateString(pj.Projektstart);
             
             // send values to database
             try
@@ -87,7 +90,6 @@ namespace EPU_Backoffice_Panels.BL
             // parse to date strings
             dateFrom = GlobalActions.ParseToSQLiteDateString(dateFrom);
             dateUntil = GlobalActions.ParseToSQLiteDateString(dateUntil);
-
 
             try
             {
