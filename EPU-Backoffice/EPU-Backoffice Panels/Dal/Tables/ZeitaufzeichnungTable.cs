@@ -55,5 +55,15 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             get { return bezeichnung; }
             set { { bezeichnung = value; } }
         }
+
+        private int stundensatz;
+        /// <summary>
+        /// Gets or sets the costs per hour
+        /// </summary>
+        public int Stundensatz
+        {
+            get { return stundensatz; }
+            set { { stundensatz = value; } }
+        }
     }
 }

@@ -69,7 +69,7 @@ namespace EPU_Backoffice_Panels
             z.Stunden = DataBindingFramework.BindFromInt(zeiterfassungHoursTextbox.Text, "Stunden", this.zeiterfassungMsgLabel, false, piv);
             z.Bezeichnung = DataBindingFramework.BindFromString(zeiterfassungDescriptionTextBox.Text, "Bezeichnung", this.zeiterfassungMsgLabel, false, lnhsv, sl150v);
             // missing stundensatz in database, databasemanager and zeitaufzeichnungtabel
-            //z.Stundensatz = DataBindingFramework.BindFromInt(zeiterfassungStundensatzTextBox.Text, "Stundensatz" this.zeiterfassungMsgLabel, false, pdv);
+            z.Stundensatz = DataBindingFramework.BindFromInt(zeiterfassungStundensatzTextBox.Text, "Stundensatz", this.zeiterfassungMsgLabel, false, pdv);
 
             Zeiterfassungsloader loader = new Zeiterfassungsloader();
             
