@@ -7,5 +7,6 @@ EPU-Backoffice/EPU-BackofficeTests/bin
 EPU-Backoffice/EPU-BackofficeTests/obj
 EPU-Backoffice/EPU-Backoffice Panels/obj
 EPU-Backoffice/EPU-Backoffice Panels/bin
+*.db
 *.suo
 *.sln
