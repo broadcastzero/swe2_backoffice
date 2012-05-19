@@ -3,8 +3,8 @@ desktop.ini
 EPU-Backoffice/EPU-Backoffice/obj
 EPU-Backoffice/TestResults
 EPU-Backoffice/EPU-Backoffice/bin
-EPU-Backoffice/EPU-BackofficeTests/bin
-EPU-Backoffice/EPU-BackofficeTests/obj
+EPU-Backoffice/EPUBackofficeTests/bin
+EPU-Backoffice/EPUBackofficeTests/obj
 EPU-Backoffice/EPU-Backoffice Panels/obj
 EPU-Backoffice/EPU-Backoffice Panels/bin
 *.db
