@@ -1,0 +1,10 @@
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPUBackofficeTests.dll
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPUBackofficeTests.pdb
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels.dll
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\System.Data.SQLite.dll
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels.pdb
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels_Accessor.dll
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\bin\Debug\EPU-Backoffice Panels_Accessor.pdb
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\EPUBackofficeTests.dll
+C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPUBackofficeTests\obj\Debug\EPUBackofficeTests.pdb

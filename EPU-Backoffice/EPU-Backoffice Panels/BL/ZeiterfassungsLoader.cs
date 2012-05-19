@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Offermanagement.cs" company="Marvin&Felix">
+// <copyright file="ZeiterfassungsLoader.cs" company="Marvin&Felix">
 // You can use the source code just as you wish. Exception: do not copy the whole or parts of this file, 
 // if you also have to submit this homework.
 // </copyright>
@@ -20,15 +20,12 @@ namespace EPU_Backoffice_Panels.BL
     using EPU_Backoffice_Panels.UserExceptions;
     using EPU_Backoffice_Panels.Rules;
 
-
     /// <summary>
     /// This class' methods load data out of the database and returns a list of requested data.
     /// </summary>
     public class Zeiterfassungsloader
     {
-
         private Logger logger = Logger.Instance;
-
 
         public List <ZeitaufzeichnungTable> LoadZeiterfassung(ZeitaufzeichnungTable z, Label label)
         {
@@ -40,8 +37,6 @@ namespace EPU_Backoffice_Panels.BL
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
             IRule lhv = new LettersHyphenValidator();
 
-
-
             // load elements
             try
             {
@@ -51,11 +46,9 @@ namespace EPU_Backoffice_Panels.BL
             {
                 throw;
             }
-        
+
+            return new List<ZeitaufzeichnungTable>();        
         }
-
-
-
         
     }
 }
