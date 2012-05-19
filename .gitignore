@@ -2,3 +2,10 @@ desktop.ini
 .git
 EPU-Backoffice/EPU-Backoffice/obj
 EPU-Backoffice/TestResults
+EPU-Backoffice/EPU-Backoffice/bin
+EPU-Backoffice/EPU-BackofficeTests/bin
+EPU-Backoffice/EPU-BackofficeTests/obj
+EPU-Backoffice/EPU-Backoffice Panels/obj
+EPU-Backoffice/EPU-Backoffice Panels/bin
+*.suo
+*.sln

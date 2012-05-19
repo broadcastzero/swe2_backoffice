@@ -20,5 +20,17 @@ namespace EPU_Backoffice_Panels
         {
             GlobalActions.BindFromExistingProjekteToComboBox(sender, e);
         }
+
+        private void BindFromExistingKontakte(object sender, EventArgs e)
+        {
+            // set additional param to true, so that it is searched for Kontakte instead of Kunden
+            GlobalActions.BindFromExistingKundenToComboBox(sender, e, true);
+        }
+
+        private void AddBuchungszeile(object sender, EventArgs e)
+        {
+            // force Kontakte-Combobox to scroll down, in case that user didn't do this
+
+        }
     }
 }

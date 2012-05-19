@@ -169,10 +169,7 @@ namespace EPU_Backoffice_Panels
                 id = GlobalActions.getIdFromCombobox(kundenID, projektSuchenMessageLabel);
                 logger.Log(Logger.Level.Info, "kundenid in projekt search: " + id);
             }
-            catch
-            (
-                InvalidInputException
-            )
+            catch(InvalidInputException)
             {
                 logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
             }

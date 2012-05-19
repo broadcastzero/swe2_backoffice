@@ -40,7 +40,8 @@ namespace EPU_Backoffice_Panels
         /// </summary>
         /// <param name="sender">The sender</param>
         /// <param name="e">The event args</param>
-        public static void BindFromExistingKundenToComboBox(object sender, EventArgs e)
+        /// <param name="type">Is false in case of Kunde, is true in case of Kontakt</param>
+        public static void BindFromExistingKundenToComboBox(object sender, EventArgs e, bool type = false)
         {
             // check sender for null
             if (sender == null)
@@ -60,7 +61,7 @@ namespace EPU_Backoffice_Panels
             KundeKontaktTable k = new KundeKontaktTable();
             k.Vorname = string.Empty;
             k.NachnameFirmenname = string.Empty;
-            k.Type = false; // only get Kunden
+            k.Type = type; // only get Kunden or Kontakte
             
             // Load all existing Kunden to object result list
             results = loader.LoadKundenKontakte(k, null);
