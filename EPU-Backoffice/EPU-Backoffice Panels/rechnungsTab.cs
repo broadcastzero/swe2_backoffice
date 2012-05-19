@@ -37,5 +37,22 @@ namespace EPU_Backoffice_Panels
         {
             GlobalActions.BindFromExistingKundenToComboBox(sender, e);
         }
+
+        private void createAngebotExistingKundeComboBox_DropDown(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addToEingangsrechnungCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.addToEingangsrechnungCheckBox.Checked)
+            {
+                this.eingangsrechnungErstellenSubTab.SelectedTab = this.eingangsrechnungErstellenBETab;                
+            }
+            else
+            {
+                this.eingangsrechnungErstellenSubTab.SelectedTab = this.eingangsrechnungErstellenNETab;
+            }
+        }
     }
 }
