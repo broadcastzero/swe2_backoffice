@@ -55,8 +55,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.druckenTabFromLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -74,6 +73,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.druckenTabFromDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.druckenTabUntilDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.druckenTabUntilLabel = new System.Windows.Forms.Label();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -340,8 +342,10 @@
             // rechnungDruckenTab
             // 
             this.rechnungDruckenTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rechnungDruckenTab.Controls.Add(this.label15);
-            this.rechnungDruckenTab.Controls.Add(this.comboBox3);
+            this.rechnungDruckenTab.Controls.Add(this.druckenTabUntilLabel);
+            this.rechnungDruckenTab.Controls.Add(this.druckenTabUntilDatePicker);
+            this.rechnungDruckenTab.Controls.Add(this.druckenTabFromDatePicker);
+            this.rechnungDruckenTab.Controls.Add(this.druckenTabFromLabel);
             this.rechnungDruckenTab.Controls.Add(this.button1);
             this.rechnungDruckenTab.Controls.Add(this.radioButton2);
             this.rechnungDruckenTab.Controls.Add(this.radioButton1);
@@ -357,26 +361,18 @@
             this.rechnungDruckenTab.TabIndex = 2;
             this.rechnungDruckenTab.Text = "Drucken";
             // 
-            // label15
+            // druckenTabFromLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(146, 55);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "Zeitraum";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(19, 52);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 21;
+            this.druckenTabFromLabel.AutoSize = true;
+            this.druckenTabFromLabel.Location = new System.Drawing.Point(225, 59);
+            this.druckenTabFromLabel.Name = "druckenTabFromLabel";
+            this.druckenTabFromLabel.Size = new System.Drawing.Size(26, 13);
+            this.druckenTabFromLabel.TabIndex = 22;
+            this.druckenTabFromLabel.Text = "Von";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 79);
+            this.button1.Location = new System.Drawing.Point(12, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 23);
             this.button1.TabIndex = 20;
@@ -386,18 +382,18 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(215, 51);
+            this.radioButton2.Location = new System.Drawing.Point(19, 133);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(117, 17);
             this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Ausgangsrechnung";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(215, 28);
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(19, 110);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(114, 17);
             this.radioButton1.TabIndex = 13;
@@ -425,7 +421,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(75, 159);
+            this.button5.Location = new System.Drawing.Point(177, 185);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 23);
             this.button5.TabIndex = 8;
@@ -434,7 +430,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(75, 130);
+            this.button4.Location = new System.Drawing.Point(177, 156);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 23);
             this.button4.TabIndex = 7;
@@ -539,6 +535,29 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
+            // druckenTabFromDatePicker
+            // 
+            this.druckenTabFromDatePicker.Location = new System.Drawing.Point(19, 52);
+            this.druckenTabFromDatePicker.Name = "druckenTabFromDatePicker";
+            this.druckenTabFromDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.druckenTabFromDatePicker.TabIndex = 23;
+            // 
+            // druckenTabUntilDatePicker
+            // 
+            this.druckenTabUntilDatePicker.Location = new System.Drawing.Point(19, 78);
+            this.druckenTabUntilDatePicker.Name = "druckenTabUntilDatePicker";
+            this.druckenTabUntilDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.druckenTabUntilDatePicker.TabIndex = 24;
+            // 
+            // druckenTabUntilLabel
+            // 
+            this.druckenTabUntilLabel.AutoSize = true;
+            this.druckenTabUntilLabel.Location = new System.Drawing.Point(225, 85);
+            this.druckenTabUntilLabel.Name = "druckenTabUntilLabel";
+            this.druckenTabUntilLabel.Size = new System.Drawing.Size(21, 13);
+            this.druckenTabUntilLabel.TabIndex = 25;
+            this.druckenTabUntilLabel.Text = "Bis";
+            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,8 +597,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage rechnungDruckenTab;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label druckenTabFromLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -612,5 +630,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label druckenTabUntilLabel;
+        private System.Windows.Forms.DateTimePicker druckenTabUntilDatePicker;
+        private System.Windows.Forms.DateTimePicker druckenTabFromDatePicker;
     }
 }
