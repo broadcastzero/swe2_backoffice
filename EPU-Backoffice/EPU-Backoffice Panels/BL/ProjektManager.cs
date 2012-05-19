@@ -91,7 +91,7 @@ namespace EPU_Backoffice_Panels.BL
 
             try
             {
-                return DALFactory.GetDAL().LoadProjekte(dateFrom, dateUntil,id);
+                return DALFactory.GetDAL().LoadProjekte(dateFrom, dateUntil, id);
             }
             catch (SQLiteException)
             {

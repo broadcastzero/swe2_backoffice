@@ -132,6 +132,7 @@
             this.ausgangsrechnungComboBox.Name = "ausgangsrechnungComboBox";
             this.ausgangsrechnungComboBox.Size = new System.Drawing.Size(121, 21);
             this.ausgangsrechnungComboBox.TabIndex = 7;
+            this.ausgangsrechnungComboBox.DropDown += new System.EventHandler(this.ausgangsrechnungComboBox_DropDown);
             // 
             // ausgangsrechnungDataGridView
             // 

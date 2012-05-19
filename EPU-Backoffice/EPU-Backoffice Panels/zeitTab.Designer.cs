@@ -107,6 +107,7 @@
             this.zeiterfassungCombobox.Name = "zeiterfassungCombobox";
             this.zeiterfassungCombobox.Size = new System.Drawing.Size(200, 21);
             this.zeiterfassungCombobox.TabIndex = 20;
+            this.zeiterfassungCombobox.DropDown += new System.EventHandler(this.zeiterfassungCombobox_DropDown);
             // 
             // zeiterfassungSubmitButton
             // 

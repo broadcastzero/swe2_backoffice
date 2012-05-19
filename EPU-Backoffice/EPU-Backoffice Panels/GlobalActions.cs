@@ -84,7 +84,7 @@ namespace EPU_Backoffice_Panels
         /// </summary>
         /// <param name="sender">The sender</param>
         /// <param name="e">The event args</param>
-        /*public static void BindFromExistingProjekteToComboBox(object sender, EventArgs e)
+        public static void BindFromExistingProjekteToComboBox(object sender, EventArgs e)
         {
             // check sender for null
             if (sender == null)
@@ -100,28 +100,22 @@ namespace EPU_Backoffice_Panels
 
             ProjektManager loader = new ProjektManager();
 
-            // Create empty Projekt object with type "false"
-            KundeKontaktTable k = new KundeKontaktTable();
-            k.Vorname = string.Empty;
-            k.NachnameFirmenname = string.Empty;
-            k.Type = false; // only get Kunden
-
-            // Load all existing Kunden to object result list
-            results = loader.LoadKundenKontakte(k, null);
+            // Load all existing Projekte to object result list
+            results = loader.Load(-1, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), null);
 
             // if there are results, add them to string result list
             if (results.Count != 0)
             {
-                foreach (KundeKontaktTable kunde in results)
+                foreach (ProjektTable projekt in results)
                 {
-                    string entry = kunde.ID + ": " + kunde.Vorname + " - " + kunde.NachnameFirmenname;
+                    string entry = projekt.ID + ": " + projekt.Projektname;
                     listItems.Add(entry);
                 }
             }
 
             // set data source
             (sender as ComboBox).DataSource = listItems;
-        }*/
+        }
 
         /// <summary>
         /// 

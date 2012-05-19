@@ -22,5 +22,10 @@ namespace EPU_Backoffice_Panels
         {
             InitializeComponent();
         }
+
+        private void zeiterfassungCombobox_DropDown(object sender, EventArgs e)
+        {
+            GlobalActions.BindFromExistingProjekteToComboBox(sender, e);
+        }
     }
 }
