@@ -32,5 +32,10 @@ namespace EPU_Backoffice_Panels
             // force Kontakte-Combobox to scroll down, in case that user didn't do this
 
         }
+
+        private void BindToExistingKundenComboBox(object sender, EventArgs e)
+        {
+            GlobalActions.BindFromExistingKundenToComboBox(sender, e);
+        }
     }
 }

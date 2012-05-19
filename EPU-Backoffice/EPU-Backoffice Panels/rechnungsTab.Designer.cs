@@ -61,7 +61,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.existingKundenComboBox = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -346,7 +346,7 @@
             this.rechnungDruckenTab.Controls.Add(this.radioButton2);
             this.rechnungDruckenTab.Controls.Add(this.radioButton1);
             this.rechnungDruckenTab.Controls.Add(this.label14);
-            this.rechnungDruckenTab.Controls.Add(this.comboBox1);
+            this.rechnungDruckenTab.Controls.Add(this.existingKundenComboBox);
             this.rechnungDruckenTab.Controls.Add(this.button5);
             this.rechnungDruckenTab.Controls.Add(this.button4);
             this.rechnungDruckenTab.Controls.Add(this.dataGridView3);
@@ -414,13 +414,14 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Kunde";
             // 
-            // comboBox1
+            // existingKundenComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
+            this.existingKundenComboBox.FormattingEnabled = true;
+            this.existingKundenComboBox.Location = new System.Drawing.Point(19, 25);
+            this.existingKundenComboBox.Name = "existingKundenComboBox";
+            this.existingKundenComboBox.Size = new System.Drawing.Size(121, 21);
+            this.existingKundenComboBox.TabIndex = 9;
+            this.existingKundenComboBox.DropDown += new System.EventHandler(this.BindToExistingKundenComboBox);
             // 
             // button5
             // 
@@ -583,7 +584,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox existingKundenComboBox;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView3;
