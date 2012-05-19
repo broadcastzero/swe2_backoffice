@@ -31,6 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.angebotTab = new System.Windows.Forms.TabControl();
             this.angebotErstellenTab = new System.Windows.Forms.TabPage();
+            this.angebotErstellenSubTab = new EPU_Backoffice_Panels.TablessControlPanels();
+            this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.createAngebotNewKundeNnTextBox = new System.Windows.Forms.TextBox();
+            this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
+            this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.createAngebotResetButton = new System.Windows.Forms.Button();
             this.createAngebotMsgLabel = new System.Windows.Forms.Label();
             this.createAngebotDescriptionLabel = new System.Windows.Forms.Label();
@@ -56,29 +65,20 @@
             this.erstellungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.umsetzungschance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angebotSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.angebotSuchenDruckenButton = new System.Windows.Forms.Button();
             this.angebotSuchenButton = new System.Windows.Forms.Button();
             this.angebotSuchenBisDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenVonDatepicker = new System.Windows.Forms.DateTimePicker();
             this.angebotSuchenKundeLabel = new System.Windows.Forms.Label();
-            this.angebotSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.angebotErstellenSubTab = new EPU_Backoffice_Panels.TablessControlPanels();
-            this.angebotErstellenNKTab = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.createAngebotNewKundeNnTextBox = new System.Windows.Forms.TextBox();
-            this.createAngebotNewKundeVnTextBox = new System.Windows.Forms.TextBox();
-            this.angebotErstellenBKTab = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.createAngebotExistingKundeComboBox = new System.Windows.Forms.ComboBox();
             this.angebotTab.SuspendLayout();
             this.angebotErstellenTab.SuspendLayout();
-            this.angebotSuchenTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).BeginInit();
             this.angebotErstellenSubTab.SuspendLayout();
             this.angebotErstellenNKTab.SuspendLayout();
             this.angebotErstellenBKTab.SuspendLayout();
+            this.angebotSuchenTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // angebotTab
@@ -113,6 +113,92 @@
             this.angebotErstellenTab.Size = new System.Drawing.Size(747, 233);
             this.angebotErstellenTab.TabIndex = 0;
             this.angebotErstellenTab.Text = "Erstellen";
+            // 
+            // angebotErstellenSubTab
+            // 
+            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenNKTab);
+            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKTab);
+            this.angebotErstellenSubTab.Location = new System.Drawing.Point(166, 0);
+            this.angebotErstellenSubTab.Name = "angebotErstellenSubTab";
+            this.angebotErstellenSubTab.SelectedIndex = 0;
+            this.angebotErstellenSubTab.Size = new System.Drawing.Size(317, 85);
+            this.angebotErstellenSubTab.TabIndex = 19;
+            // 
+            // angebotErstellenNKTab
+            // 
+            this.angebotErstellenNKTab.Controls.Add(this.label2);
+            this.angebotErstellenNKTab.Controls.Add(this.label1);
+            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeNnTextBox);
+            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeVnTextBox);
+            this.angebotErstellenNKTab.Location = new System.Drawing.Point(4, 22);
+            this.angebotErstellenNKTab.Name = "angebotErstellenNKTab";
+            this.angebotErstellenNKTab.Padding = new System.Windows.Forms.Padding(3);
+            this.angebotErstellenNKTab.Size = new System.Drawing.Size(309, 59);
+            this.angebotErstellenNKTab.TabIndex = 0;
+            this.angebotErstellenNKTab.Text = "NK";
+            this.angebotErstellenNKTab.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(206, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nachname / Firma*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(206, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Vorname";
+            // 
+            // createAngebotNewKundeNnTextBox
+            // 
+            this.createAngebotNewKundeNnTextBox.Location = new System.Drawing.Point(6, 32);
+            this.createAngebotNewKundeNnTextBox.Name = "createAngebotNewKundeNnTextBox";
+            this.createAngebotNewKundeNnTextBox.Size = new System.Drawing.Size(194, 20);
+            this.createAngebotNewKundeNnTextBox.TabIndex = 1;
+            // 
+            // createAngebotNewKundeVnTextBox
+            // 
+            this.createAngebotNewKundeVnTextBox.Location = new System.Drawing.Point(6, 6);
+            this.createAngebotNewKundeVnTextBox.Name = "createAngebotNewKundeVnTextBox";
+            this.createAngebotNewKundeVnTextBox.Size = new System.Drawing.Size(194, 20);
+            this.createAngebotNewKundeVnTextBox.TabIndex = 0;
+            // 
+            // angebotErstellenBKTab
+            // 
+            this.angebotErstellenBKTab.Controls.Add(this.label3);
+            this.angebotErstellenBKTab.Controls.Add(this.createAngebotExistingKundeComboBox);
+            this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
+            this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
+            this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
+            this.angebotErstellenBKTab.Size = new System.Drawing.Size(309, 59);
+            this.angebotErstellenBKTab.TabIndex = 1;
+            this.angebotErstellenBKTab.Text = "BK";
+            this.angebotErstellenBKTab.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(202, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Kunde*";
+            // 
+            // createAngebotExistingKundeComboBox
+            // 
+            this.createAngebotExistingKundeComboBox.FormattingEnabled = true;
+            this.createAngebotExistingKundeComboBox.Location = new System.Drawing.Point(3, 6);
+            this.createAngebotExistingKundeComboBox.Name = "createAngebotExistingKundeComboBox";
+            this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(197, 21);
+            this.createAngebotExistingKundeComboBox.TabIndex = 0;
+            this.createAngebotExistingKundeComboBox.DropDown += new System.EventHandler(this.createAngebotExistingKundeComboBox_DropDown);
             // 
             // createAngebotResetButton
             // 
@@ -258,6 +344,7 @@
             this.angebotSuchenKundeComboBox.Name = "angebotSuchenKundeComboBox";
             this.angebotSuchenKundeComboBox.Size = new System.Drawing.Size(200, 21);
             this.angebotSuchenKundeComboBox.TabIndex = 13;
+            this.angebotSuchenKundeComboBox.DropDown += new System.EventHandler(this.createAngebotExistingKundeComboBox_DropDown);
             // 
             // label24
             // 
@@ -398,92 +485,6 @@
             this.angebotSuchenKundeLabel.TabIndex = 8;
             this.angebotSuchenKundeLabel.Text = "Kunde";
             // 
-            // angebotErstellenSubTab
-            // 
-            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenNKTab);
-            this.angebotErstellenSubTab.Controls.Add(this.angebotErstellenBKTab);
-            this.angebotErstellenSubTab.Location = new System.Drawing.Point(166, 0);
-            this.angebotErstellenSubTab.Name = "angebotErstellenSubTab";
-            this.angebotErstellenSubTab.SelectedIndex = 0;
-            this.angebotErstellenSubTab.Size = new System.Drawing.Size(317, 85);
-            this.angebotErstellenSubTab.TabIndex = 19;
-            // 
-            // angebotErstellenNKTab
-            // 
-            this.angebotErstellenNKTab.Controls.Add(this.label2);
-            this.angebotErstellenNKTab.Controls.Add(this.label1);
-            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeNnTextBox);
-            this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeVnTextBox);
-            this.angebotErstellenNKTab.Location = new System.Drawing.Point(4, 22);
-            this.angebotErstellenNKTab.Name = "angebotErstellenNKTab";
-            this.angebotErstellenNKTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenNKTab.Size = new System.Drawing.Size(309, 59);
-            this.angebotErstellenNKTab.TabIndex = 0;
-            this.angebotErstellenNKTab.Text = "NK";
-            this.angebotErstellenNKTab.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nachname / Firma*";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Vorname";
-            // 
-            // createAngebotNewKundeNnTextBox
-            // 
-            this.createAngebotNewKundeNnTextBox.Location = new System.Drawing.Point(6, 32);
-            this.createAngebotNewKundeNnTextBox.Name = "createAngebotNewKundeNnTextBox";
-            this.createAngebotNewKundeNnTextBox.Size = new System.Drawing.Size(194, 20);
-            this.createAngebotNewKundeNnTextBox.TabIndex = 1;
-            // 
-            // createAngebotNewKundeVnTextBox
-            // 
-            this.createAngebotNewKundeVnTextBox.Location = new System.Drawing.Point(6, 6);
-            this.createAngebotNewKundeVnTextBox.Name = "createAngebotNewKundeVnTextBox";
-            this.createAngebotNewKundeVnTextBox.Size = new System.Drawing.Size(194, 20);
-            this.createAngebotNewKundeVnTextBox.TabIndex = 0;
-            // 
-            // angebotErstellenBKTab
-            // 
-            this.angebotErstellenBKTab.Controls.Add(this.label3);
-            this.angebotErstellenBKTab.Controls.Add(this.createAngebotExistingKundeComboBox);
-            this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
-            this.angebotErstellenBKTab.Name = "angebotErstellenBKTab";
-            this.angebotErstellenBKTab.Padding = new System.Windows.Forms.Padding(3);
-            this.angebotErstellenBKTab.Size = new System.Drawing.Size(309, 59);
-            this.angebotErstellenBKTab.TabIndex = 1;
-            this.angebotErstellenBKTab.Text = "BK";
-            this.angebotErstellenBKTab.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(202, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Kunde*";
-            // 
-            // createAngebotExistingKundeComboBox
-            // 
-            this.createAngebotExistingKundeComboBox.FormattingEnabled = true;
-            this.createAngebotExistingKundeComboBox.Location = new System.Drawing.Point(3, 6);
-            this.createAngebotExistingKundeComboBox.Name = "createAngebotExistingKundeComboBox";
-            this.createAngebotExistingKundeComboBox.Size = new System.Drawing.Size(197, 21);
-            this.createAngebotExistingKundeComboBox.TabIndex = 0;
-            this.createAngebotExistingKundeComboBox.DropDown += new System.EventHandler(this.createAngebotExistingKundeComboBox_DropDown);
-            // 
             // angeboteTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,15 +495,15 @@
             this.angebotTab.ResumeLayout(false);
             this.angebotErstellenTab.ResumeLayout(false);
             this.angebotErstellenTab.PerformLayout();
-            this.angebotSuchenTab.ResumeLayout(false);
-            this.angebotSuchenTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).EndInit();
             this.angebotErstellenSubTab.ResumeLayout(false);
             this.angebotErstellenNKTab.ResumeLayout(false);
             this.angebotErstellenNKTab.PerformLayout();
             this.angebotErstellenBKTab.ResumeLayout(false);
             this.angebotErstellenBKTab.PerformLayout();
+            this.angebotSuchenTab.ResumeLayout(false);
+            this.angebotSuchenTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AngeboteSuchenDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angebotSuchenBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
