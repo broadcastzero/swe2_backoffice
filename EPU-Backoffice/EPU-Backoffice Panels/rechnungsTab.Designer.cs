@@ -40,20 +40,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rechnungEingangTab = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.existingKontakteComboBox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.finishAccountButton = new System.Windows.Forms.Button();
+            this.addBuchungszeileButton = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -156,9 +155,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(13, 13);
             this.label6.TabIndex = 1;
-            this.label6.Text = "*null*";
+            this.label6.Text = "0";
             // 
             // rechnungstitelTextBox
             // 
@@ -197,20 +196,19 @@
             // rechnungEingangTab
             // 
             this.rechnungEingangTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungEingangTab.Controls.Add(this.label2);
+            this.rechnungEingangTab.Controls.Add(this.label1);
+            this.rechnungEingangTab.Controls.Add(this.existingKontakteComboBox);
             this.rechnungEingangTab.Controls.Add(this.label13);
             this.rechnungEingangTab.Controls.Add(this.label12);
             this.rechnungEingangTab.Controls.Add(this.label11);
             this.rechnungEingangTab.Controls.Add(this.label10);
-            this.rechnungEingangTab.Controls.Add(this.label9);
-            this.rechnungEingangTab.Controls.Add(this.label8);
-            this.rechnungEingangTab.Controls.Add(this.button3);
-            this.rechnungEingangTab.Controls.Add(this.button2);
+            this.rechnungEingangTab.Controls.Add(this.finishAccountButton);
+            this.rechnungEingangTab.Controls.Add(this.addBuchungszeileButton);
             this.rechnungEingangTab.Controls.Add(this.comboBox2);
             this.rechnungEingangTab.Controls.Add(this.dateTimePicker1);
             this.rechnungEingangTab.Controls.Add(this.textBox5);
-            this.rechnungEingangTab.Controls.Add(this.textBox4);
             this.rechnungEingangTab.Controls.Add(this.textBox3);
-            this.rechnungEingangTab.Controls.Add(this.textBox2);
             this.rechnungEingangTab.Controls.Add(this.dataGridView2);
             this.rechnungEingangTab.Location = new System.Drawing.Point(4, 22);
             this.rechnungEingangTab.Name = "rechnungEingangTab";
@@ -219,77 +217,88 @@
             this.rechnungEingangTab.TabIndex = 1;
             this.rechnungEingangTab.Text = "Eingangsrechnung";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(228, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "MessageLabel";
+            this.label2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(228, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Kontakt*";
+            // 
+            // existingKontakteComboBox
+            // 
+            this.existingKontakteComboBox.FormattingEnabled = true;
+            this.existingKontakteComboBox.Location = new System.Drawing.Point(22, 25);
+            this.existingKontakteComboBox.Name = "existingKontakteComboBox";
+            this.existingKontakteComboBox.Size = new System.Drawing.Size(200, 21);
+            this.existingKontakteComboBox.TabIndex = 22;
+            this.existingKontakteComboBox.DropDown += new System.EventHandler(this.BindFromExistingKontakte);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(228, 150);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.Size = new System.Drawing.Size(56, 13);
             this.label13.TabIndex = 21;
-            this.label13.Text = "Kategorie";
+            this.label13.Text = "Kategorie*";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(228, 121);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.Size = new System.Drawing.Size(42, 13);
             this.label12.TabIndex = 20;
-            this.label12.Text = "Betrag";
+            this.label12.Text = "Betrag*";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(228, 95);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.Size = new System.Drawing.Size(73, 13);
             this.label11.TabIndex = 19;
-            this.label11.Text = "bezeichnung";
+            this.label11.Text = "Bezeichnung*";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(228, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 13);
+            this.label10.Size = new System.Drawing.Size(95, 13);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Rechnungsdatum";
+            this.label10.Text = "Rechnungsdatum*";
             // 
-            // label9
+            // finishAccountButton
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(228, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Nachname / Firma*";
+            this.finishAccountButton.Location = new System.Drawing.Point(22, 203);
+            this.finishAccountButton.Name = "finishAccountButton";
+            this.finishAccountButton.Size = new System.Drawing.Size(200, 23);
+            this.finishAccountButton.TabIndex = 15;
+            this.finishAccountButton.Text = "Rechnung abschließen";
+            this.finishAccountButton.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // addBuchungszeileButton
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(228, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Vorname";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(22, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Rechnung abschließen";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(22, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Buchungszeile hinzufügen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addBuchungszeileButton.Location = new System.Drawing.Point(22, 174);
+            this.addBuchungszeileButton.Name = "addBuchungszeileButton";
+            this.addBuchungszeileButton.Size = new System.Drawing.Size(200, 23);
+            this.addBuchungszeileButton.TabIndex = 14;
+            this.addBuchungszeileButton.Text = "Buchungszeile hinzufügen";
+            this.addBuchungszeileButton.UseVisualStyleBackColor = true;
+            this.addBuchungszeileButton.Click += new System.EventHandler(this.AddBuchungszeile);
             // 
             // comboBox2
             // 
@@ -313,26 +322,12 @@
             this.textBox5.Size = new System.Drawing.Size(200, 20);
             this.textBox5.TabIndex = 11;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(22, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 10;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(22, 92);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 20);
             this.textBox3.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(22, 14);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 8;
             // 
             // dataGridView2
             // 
@@ -581,22 +576,6 @@
         private System.Windows.Forms.Button createRechnungButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage rechnungEingangTab;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage rechnungDruckenTab;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBox3;
@@ -617,5 +596,20 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.TabPage rechnungEingangTab;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox existingKontakteComboBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button finishAccountButton;
+        private System.Windows.Forms.Button addBuchungszeileButton;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
