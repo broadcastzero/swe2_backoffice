@@ -10,6 +10,7 @@ namespace EPU_Backoffice_Panels
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.Diagnostics;
     using System.Drawing;
     using System.Data;
     using System.Linq;
@@ -27,6 +28,9 @@ namespace EPU_Backoffice_Panels
         public rechnungsTab()
         {
             InitializeComponent();
+
+            // set Kategorie within "Eingangsrechnung" to first item
+            this.kategorieComboBox.SelectedItem = this.kategorieComboBox.Items[0];
         }
 
         private void ausgangsrechnungComboBox_DropDown(object sender, EventArgs e)
@@ -52,6 +56,31 @@ namespace EPU_Backoffice_Panels
                 this.BindFromExistingEingangsrechnungToComboBox(this.existingEingangsrechnungComboBox);
             }
 
+            int eingangsrechnungsID = -1;
+
+            // in case of new Eingangsrechnung
+            if (!this.addToEingangsrechnungCheckBox.Checked)
+            {
+                eingangsrechnungsID = this.SaveEingangsrechnung();
+            }
+            else
+            { 
+                // get EingangsrechnungsID out of combobox
+                eingangsrechnungsID = GlobalActions.getIdFromCombobox(this.existingEingangsrechnungComboBox.SelectedItem.ToString(), this.eingangsrechnungMsgLabel);
+                this.logger.Log(Logger.Level.Info, "Chosen EingangsrechnungsID from ComboBox: " + eingangsrechnungsID);
+            }
+
+            // in case of error, eingangrechnungsID will be -1
+            if (eingangsrechnungsID == -1)
+            { return; }
+
+            // save Buchungszeile
+            this.RequestBuchungszeileSaving(eingangsrechnungsID);
+        }
+
+        // save a new Eingangsrechnung
+        private int SaveEingangsrechnung()
+        {
             // force Kontakte-Combobox to scroll down, in case that user didn't do this
             if (this.existingKontakteComboBox.SelectedIndex < 0)
             {
@@ -66,7 +95,7 @@ namespace EPU_Backoffice_Panels
             {
                 id = GlobalActions.getIdFromCombobox(kontaktID, this.eingangsrechnungMsgLabel);
             }
-            catch(InvalidInputException)
+            catch (InvalidInputException)
             {
                 logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
             }
@@ -75,10 +104,51 @@ namespace EPU_Backoffice_Panels
             IRule posint = new PositiveIntValidator();
             DataBindingFramework.BindFromInt(id.ToString(), "KontaktID", this.eingangsrechnungMsgLabel, false, posint);
 
-            // show success message
-            if (!posint.HasErrors)
+            // check other vals
+            string date = this.eingangsrechnungDatePicker.Value.ToShortDateString();
+            string description = this.eingangsrechnungBezeichnungTextBox.Text;
+
+            // check date
+            IRule dateval = new DateValidator();
+            DataBindingFramework.BindFromString(date, "Datum", this.eingangsrechnungMsgLabel, false, dateval);
+
+            // check description
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule slv = new StringLength150Validator();
+            DataBindingFramework.BindFromString(description, "Beschreibung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
+
+            // check for errors
+            if (this.eingangsrechnungMsgLabel.Visible)
+            { return -1; }
+
+            // TODO: save new Eingangsrechnung and get ID returned
+            this.eingangsrechnungMsgLabel.Text += "Eingangsrechnung gespeichert.\n";
+
+            return -1;
+        }
+
+        // add Buchungszeile
+        private void RequestBuchungszeileSaving(int eingangsrechnungsID)
+        {   
+            string betrag = this.eingangsrechnungBetragTextBox.Text;
+            double p_betrag;
+            string kategorie = this.kategorieComboBox.SelectedItem.ToString();
+
+            IRule pdv = new PositiveDoubleValidator();
+            p_betrag = DataBindingFramework.BindFromDouble(betrag, "Betrag", this.eingangsrechnungMsgLabel, false, pdv);
+
+            IRule lnhsv1 = new LettersNumbersHyphenSpaceValidator();
+            DataBindingFramework.BindFromString(kategorie, "Kategorie", this.eingangsrechnungMsgLabel, false, lnhsv1);
+
+            // in case of errors, do not continue with saving new Eingangsrechnung
+            if (this.eingangsrechnungMsgLabel.Visible)
+            { return; }
+
+            //TODO: forward to BL
+
+            // Show success label, in case that error label is not visible
+            if (!this.eingangsrechnungMsgLabel.Visible)
             {
-                // TODO: forward to BL
                 GlobalActions.ShowSuccessLabel(this.eingangsrechnungMsgLabel);
             }
         }
@@ -104,6 +174,13 @@ namespace EPU_Backoffice_Panels
             {
                 this.eingangsrechnungErstellenSubTab.SelectedTab = this.eingangsrechnungErstellenNETab;
             }
+        }
+
+        // load data of an existing Eingangsrechnung
+        private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
+        {
+            // TODO: load data out of database
+            // TODO: show in DataGridView the results
         }
     }
 }

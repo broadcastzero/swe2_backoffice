@@ -48,7 +48,7 @@
             this.eingangsrechnungDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.eingangsrechnungBezeichnungComboBox = new System.Windows.Forms.TextBox();
+            this.eingangsrechnungBezeichnungTextBox = new System.Windows.Forms.TextBox();
             this.eingangsrechnungErstellenBETab = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.existingEingangsrechnungComboBox = new System.Windows.Forms.ComboBox();
@@ -107,6 +107,7 @@
             this.rechnungsTabControl.SelectedIndex = 0;
             this.rechnungsTabControl.Size = new System.Drawing.Size(755, 259);
             this.rechnungsTabControl.TabIndex = 2;
+            this.rechnungsTabControl.SelectedIndexChanged += new System.EventHandler(this.ExistingEingangsrechnungComboBoxLoadData);
             // 
             // rechnungAusgangTab
             // 
@@ -252,7 +253,7 @@
             this.eingangsrechnungErstellenNETab.Controls.Add(this.eingangsrechnungDatePicker);
             this.eingangsrechnungErstellenNETab.Controls.Add(this.label10);
             this.eingangsrechnungErstellenNETab.Controls.Add(this.label11);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.eingangsrechnungBezeichnungComboBox);
+            this.eingangsrechnungErstellenNETab.Controls.Add(this.eingangsrechnungBezeichnungTextBox);
             this.eingangsrechnungErstellenNETab.Location = new System.Drawing.Point(4, 22);
             this.eingangsrechnungErstellenNETab.Name = "eingangsrechnungErstellenNETab";
             this.eingangsrechnungErstellenNETab.Padding = new System.Windows.Forms.Padding(3);
@@ -304,12 +305,12 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "Bezeichnung*";
             // 
-            // eingangsrechnungBezeichnungComboBox
+            // eingangsrechnungBezeichnungTextBox
             // 
-            this.eingangsrechnungBezeichnungComboBox.Location = new System.Drawing.Point(6, 67);
-            this.eingangsrechnungBezeichnungComboBox.Name = "eingangsrechnungBezeichnungComboBox";
-            this.eingangsrechnungBezeichnungComboBox.Size = new System.Drawing.Size(200, 20);
-            this.eingangsrechnungBezeichnungComboBox.TabIndex = 9;
+            this.eingangsrechnungBezeichnungTextBox.Location = new System.Drawing.Point(6, 67);
+            this.eingangsrechnungBezeichnungTextBox.Name = "eingangsrechnungBezeichnungTextBox";
+            this.eingangsrechnungBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
+            this.eingangsrechnungBezeichnungTextBox.TabIndex = 9;
             // 
             // eingangsrechnungErstellenBETab
             // 
@@ -708,7 +709,7 @@
         private System.Windows.Forms.ComboBox kategorieComboBox;
         private System.Windows.Forms.DateTimePicker eingangsrechnungDatePicker;
         private System.Windows.Forms.TextBox eingangsrechnungBetragTextBox;
-        private System.Windows.Forms.TextBox eingangsrechnungBezeichnungComboBox;
+        private System.Windows.Forms.TextBox eingangsrechnungBezeichnungTextBox;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label druckenTabUntilLabel;
         private System.Windows.Forms.DateTimePicker druckenTabUntilDatePicker;
