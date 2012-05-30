@@ -418,5 +418,14 @@ namespace EPU_Backoffice_Panels.Dal
 
             return table.ID;
         }
+
+        /// <summary>
+        /// Loads all Eingangsrechnungen
+        /// </summary>
+        /// <returns>The saved Eingangsrechnungen</returns>
+        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        {
+            return MockDataBaseManager.SavedEingangsrechnungen;
+        }
     }
 }

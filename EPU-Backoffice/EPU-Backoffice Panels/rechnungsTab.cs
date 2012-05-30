@@ -202,8 +202,30 @@ namespace EPU_Backoffice_Panels
         // load data of an existing Eingangsrechnung
         private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
         {
-            // TODO: load data out of database
-            // TODO: show in DataGridView the results
+            List<EingangsrechnungTable> results = new List<EingangsrechnungTable>();
+            List<string> listItems = new List<string>();
+
+            RechnungsManager manager = new RechnungsManager();
+            results = manager.LoadEingangsrechnungen();
+            this.eingangsrechnungBindingSource.DataSource = results;
+
+            // if there are results, add them to string result list
+            if (results.Count != 0)
+            {
+                foreach (EingangsrechnungTable table in results)
+                {
+                    string entry = table.ID + ": " + table.Rechnungsdatum;
+                    listItems.Add(entry);
+                }
+            }
+
+            // set data source
+            (sender as ComboBox).DataSource = listItems;
+        }
+
+        private void BindToEingangsrechnungsDataGridView(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -84,5 +84,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="table">The business object</param>
         /// <returns>The id of the just inserted Eingangsrechnung</returns>
         int CreateEingangsrechnung(EingangsrechnungTable table);
+
+        /// <summary>
+        /// Loads all Eingangsrechnungen
+        /// </summary>
+        /// <returns>The saved Eingangsrechnungen</returns>
+        List<EingangsrechnungTable> LoadEingangsrechnungen();
     }
 }

@@ -558,8 +558,7 @@ namespace EPU_Backoffice_Panels.Dal
                 if (tra != null) { tra.Dispose(); }
                 if (cmd != null) { cmd.Dispose(); }
                 if (con != null) { con.Dispose(); }
-            }
-        
+            }        
         }
 
         /// <summary>
@@ -632,6 +631,60 @@ namespace EPU_Backoffice_Panels.Dal
 
             // return ID of inserted item
             return insertedID;
+        }
+
+        /// <summary>
+        /// Loads all Eingangsrechnungen
+        /// </summary>
+        /// <returns>The saved Eingangsrechnungen</returns>
+        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        {
+            string sql = "SELECT * FROM Eingangsrechnung";
+
+            List<EingangsrechnungTable> results = new List<EingangsrechnungTable>();
+
+            // open connection and get requested Projekt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // execute and get results
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    EingangsrechnungTable result = new EingangsrechnungTable();
+                    result.ID = reader.GetInt32(0);
+                    result.KontaktID = reader.GetInt32(1);
+                    result.Rechnungsdatum = reader.GetString(2);
+                    result.Archivierungspfad = reader.GetString(3);
+                    results.Add(result);
+                }
+
+                return results;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
     }
 }

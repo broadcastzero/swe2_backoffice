@@ -57,5 +57,25 @@ namespace EPU_Backoffice_Panels.BL
 
             return returnedID;
         }
+
+        /// <summary>
+        /// Load all Eingangsrechnungen
+        /// </summary>
+        /// <returns>The loaded Eingangsrechnungen</returns>
+        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        {
+            List<EingangsrechnungTable> results;
+
+            try
+            {
+                results = DALFactory.GetDAL().LoadEingangsrechnungen();
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            return results;
+        }
     }
 }
