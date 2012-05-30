@@ -569,7 +569,69 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>The id of the just inserted Eingangsrechnung</returns>
         public int CreateEingangsrechnung(EingangsrechnungTable table)
         {
-            throw new NotImplementedException();
+            string sql = "INSERT INTO Eingangsrechnung (KontaktID, Rechnungsdatum, Archivierungspfad) VALUES (?, ?, ?)";
+
+            int insertedID;
+
+            // open connection and save new Kunde/Kontakt in database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // initialise parameter
+                SQLiteParameter p_firstparam = new SQLiteParameter();
+                SQLiteParameter p_secondparam = new SQLiteParameter();
+                SQLiteParameter p_thirdparam = new SQLiteParameter();
+
+                // bind kontaktID
+                p_firstparam.Value = table.KontaktID;
+                cmd.Parameters.Add(p_firstparam);
+                
+                // bind rechnungsdatum
+                p_secondparam.Value = table.Rechnungsdatum;
+                cmd.Parameters.Add(p_secondparam);
+
+                // bind archivierungspfad
+                p_thirdparam.Value = table.Archivierungspfad;
+                cmd.Parameters.Add(p_thirdparam);
+                
+                // execute and commit
+                cmd.ExecuteNonQuery();
+                tra.Commit();
+
+                // get rowID
+                cmd.Parameters.Clear();
+                cmd.CommandText = "SELECT last_insert_rowid() AS id FROM Eingangsrechnung";
+                cmd.ExecuteNonQuery();
+                System.Object temp = cmd.ExecuteScalar();
+                insertedID = int.Parse(temp.ToString());
+            }
+            catch(SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
+
+            // success logging
+            string successmessage = "A new Eingangsrechnung has been saved to the database: " + insertedID;
+            this.logger.Log(Logger.Level.Info, successmessage);
+
+            // return ID of inserted item
+            return insertedID;
         }
     }
 }

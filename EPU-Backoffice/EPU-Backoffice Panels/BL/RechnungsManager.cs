@@ -9,7 +9,7 @@ namespace EPU_Backoffice_Panels.BL
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Data.SQLite;
     using System.Text;
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.Dal;
@@ -44,7 +44,18 @@ namespace EPU_Backoffice_Panels.BL
             }
 
             // if data is valid, pass table to DAL
-            int returnedID = DALFactory.GetDAL().CreateEingangsrechnung(table);
+            int returnedID;
+
+            try
+            {
+                returnedID = DALFactory.GetDAL().CreateEingangsrechnung(table);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            return returnedID;
         }
     }
 }

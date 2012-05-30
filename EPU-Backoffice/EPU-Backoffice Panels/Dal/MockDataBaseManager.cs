@@ -111,6 +111,7 @@ namespace EPU_Backoffice_Panels.Dal
                 MockDataBaseManager.savedKontakte = new List<KundeKontaktTable>();
                 MockDataBaseManager.savedAngebote = new List<AngebotTable>();
                 MockDataBaseManager.savedProjekte = new List<ProjektTable>();
+                MockDataBaseManager.savedEingangsrechnungen = new List<EingangsrechnungTable>();
             }
         }
 
