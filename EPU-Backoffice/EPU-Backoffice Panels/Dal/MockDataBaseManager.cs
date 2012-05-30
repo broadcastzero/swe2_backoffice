@@ -31,6 +31,9 @@ namespace EPU_Backoffice_Panels.Dal
         // Private fields for Projekt-IDs
         private static int projektID = 0;
 
+        // Private fields for Eingangsrechnungs-IDs
+        private static int eingangsrechnungID = 0;
+
         /// <summary>
         /// Gets or sets a continuing, unique ID for the table "Kunden"
         /// </summary>
@@ -51,6 +54,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         public static int ProjektID { get { return projektID++; } }
 
+        /// <summary>
+        /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
+        /// </summary>
+        public static int EingangsrechnungsID { get { return eingangsrechnungID++; } }
+
         // Gets or sets private fields for saved Kunden/Kontakte (ILists)
         private static List<KundeKontaktTable> savedKunden;
         private static List<KundeKontaktTable> savedKontakte;
@@ -60,6 +68,9 @@ namespace EPU_Backoffice_Panels.Dal
 
         // Gets or sets private fields for saved Projekte (ILists)
         private static List<ProjektTable> savedProjekte;
+
+        // Gets or sets private fields for saved Eingangsrechnungen (ILists)
+        private static List<EingangsrechnungTable> savedEingangsrechnungen;
 
         /// <summary>
         /// Gets or sets static list in which created Kunden are stored
@@ -80,6 +91,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// Gets or sets static list in which created Angebot is stored
         /// </summary>
         public static List<ProjektTable> SavedProjekte { get { return savedProjekte; } }
+
+        /// <summary>
+        /// Gets or sets static list in which created Eingangsrechnung is stored
+        /// </summary> 
+        private static List<EingangsrechnungTable> SavedEingangsrechnungen { get { return savedEingangsrechnungen; } }
 
         // A threading lock object
         private static Object lockObject = new Object();
@@ -396,7 +412,10 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>The id of the just inserted Eingangsrechnung</returns>
         public int CreateEingangsrechnung(EingangsrechnungTable table)
         {
-            throw new NotImplementedException();
+            table.ID = MockDataBaseManager.EingangsrechnungsID;
+            MockDataBaseManager.savedEingangsrechnungen.Add(table);
+
+            return table.ID;
         }
     }
 }
