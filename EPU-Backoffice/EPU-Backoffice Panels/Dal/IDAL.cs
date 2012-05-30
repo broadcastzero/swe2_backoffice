@@ -77,5 +77,12 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="kundenID">The ID of the related kundenID. -1, if any.</param>
         /// <returns>A resultlist of the found matching Projekte</returns>
         List<ProjektTable> LoadProjekte(string from, string until, int kundenID = -1);
+
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the database
+        /// </summary>
+        /// <param name="table">The business object</param>
+        /// <returns>The id of the just inserted Eingangsrechnung</returns>
+        int CreateEingangsrechnung(EingangsrechnungTable table);
     }
 }

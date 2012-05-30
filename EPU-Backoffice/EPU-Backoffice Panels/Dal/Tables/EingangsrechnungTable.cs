@@ -47,11 +47,11 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { { archivierungspfad = value; } }
         }
 
-        private DateTime rechnungsdatum;
+        private string rechnungsdatum;
         /// <summary>
         /// Gets or sets Datum of creation of an Rechnung
         /// </summary>
-        public DateTime Rechnungsdatum
+        public string Rechnungsdatum
         {
             get { return rechnungsdatum; }
             set { rechnungsdatum = value; }

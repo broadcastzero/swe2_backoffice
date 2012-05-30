@@ -17,6 +17,8 @@ namespace EPU_Backoffice_Panels
     using System.Text;
     using System.Windows.Forms;
     using DatabindingFramework;
+    using EPU_Backoffice_Panels.BL;
+    using EPU_Backoffice_Panels.Dal.Tables;
     using LoggingFramework;
     using Rules;
     using UserExceptions;
@@ -122,9 +124,30 @@ namespace EPU_Backoffice_Panels
             { return -1; }
 
             // TODO: save new Eingangsrechnung and get ID returned
+            EingangsrechnungTable table = new EingangsrechnungTable();
+            table.KontaktID = id;
+            table.Rechnungsdatum = DateTime.Now.ToShortDateString();
+            table.Archivierungspfad = "nopath";
+
+            RechnungsManager manager = new RechnungsManager();
+            int rechnungsid;
+
+            // save Eingangsrechnung in database
+            try
+            {
+                rechnungsid = manager.CreateEingangsrechnung(table);
+            }
+            catch (InvalidInputException e)
+            {
+                this.logger.Log(Logger.Level.Error, e.Message);
+                this.eingangsrechnungMsgLabel.Text = e.Message;
+                this.eingangsrechnungMsgLabel.Show();
+                return -1;
+            }
+
             this.eingangsrechnungMsgLabel.Text += "Eingangsrechnung gespeichert.\n";
 
-            return -1;
+            return rechnungsid;
         }
 
         // add Buchungszeile

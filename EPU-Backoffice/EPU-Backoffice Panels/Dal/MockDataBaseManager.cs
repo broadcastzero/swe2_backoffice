@@ -388,5 +388,15 @@ namespace EPU_Backoffice_Panels.Dal
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the mock database
+        /// </summary>
+        /// <param name="table">The business object</param>
+        /// <returns>The id of the just inserted Eingangsrechnung</returns>
+        public int CreateEingangsrechnung(EingangsrechnungTable table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

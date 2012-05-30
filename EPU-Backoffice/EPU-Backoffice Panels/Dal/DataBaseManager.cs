@@ -561,5 +561,15 @@ namespace EPU_Backoffice_Panels.Dal
             }
         
         }
+
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the sqlite database
+        /// </summary>
+        /// <param name="table">The business object</param>
+        /// <returns>The id of the just inserted Eingangsrechnung</returns>
+        public int CreateEingangsrechnung(EingangsrechnungTable table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
