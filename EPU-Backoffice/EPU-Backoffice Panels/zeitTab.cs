@@ -14,6 +14,7 @@ namespace EPU_Backoffice_Panels
     using System.Data;
     using System.Linq;
     using System.Text;
+    using System.Data.SQLite;
     using System.Windows.Forms;
     using EPU_Backoffice_Panels.BL;
     using EPU_Backoffice_Panels.Dal.Tables;
@@ -46,7 +47,6 @@ namespace EPU_Backoffice_Panels
         /// <param name="e"></param>
         private void CreateZeiterfassung(object sender, EventArgs e) 
         {
-
             string projektID = null;
 
             // hide error label
@@ -59,7 +59,6 @@ namespace EPU_Backoffice_Panels
             IRule pdv = new PositiveDoubleValidator();
             IRule piv = new PositiveIntValidator();
             IRule sl150v = new StringLength150Validator();
-
             
             projektID = this.zeiterfassungCombobox.SelectedItem.ToString();
             projektID = projektID.Substring(0, projektID.IndexOf(':'));
@@ -70,18 +69,18 @@ namespace EPU_Backoffice_Panels
             z.Bezeichnung = DataBindingFramework.BindFromString(zeiterfassungDescriptionTextBox.Text, "Bezeichnung", this.zeiterfassungMsgLabel, false, lnhsv, sl150v);
             z.Stundensatz = DataBindingFramework.BindFromInt(zeiterfassungStundensatzTextBox.Text, "Stundensatz", this.zeiterfassungMsgLabel, false, pdv);
 
-            Zeiterfassungsloader loader = new Zeiterfassungsloader();
+            ZeiterfassungsManager saver = new ZeiterfassungsManager();
             
             // only if binding had no errors
             if (!this.zeiterfassungMsgLabel.Visible)
             {
-                List<ZeitaufzeichnungTable> results;
-
-                results = loader.LoadZeiterfassung(z, this.zeiterfassungMsgLabel);
-                this.zeiterfassungBindingSource.DataSource = results;
+                try { saver.SaveZeiterfassung(z, this.zeiterfassungMsgLabel); }
+                catch (SQLiteException)
+                {
+                    this.zeiterfassungMsgLabel.Text = "Aussagekräftiger Fehler";
+                    this.zeiterfassungMsgLabel.Show();
+                }
             }
-
-
         }
 
         private void zeiterfassungCombobox_DropDown(object sender, EventArgs e)
@@ -89,9 +88,5 @@ namespace EPU_Backoffice_Panels
             GlobalActions.BindFromExistingProjekteToComboBox(sender, e);
         }
 
-        private void zeiterfassungSubmitButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

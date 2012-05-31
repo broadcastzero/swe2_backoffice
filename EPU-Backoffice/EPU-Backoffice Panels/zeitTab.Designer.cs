@@ -152,7 +152,7 @@
             this.zeiterfassungSubmitButton.TabIndex = 23;
             this.zeiterfassungSubmitButton.Text = "Hinzufügen";
             this.zeiterfassungSubmitButton.UseVisualStyleBackColor = true;
-            this.zeiterfassungSubmitButton.Click += new System.EventHandler(this.zeiterfassungSubmitButton_Click);
+            this.zeiterfassungSubmitButton.Click += new System.EventHandler(this.CreateZeiterfassung);
             // 
             // zeiterfassungHoursTextbox
             // 
