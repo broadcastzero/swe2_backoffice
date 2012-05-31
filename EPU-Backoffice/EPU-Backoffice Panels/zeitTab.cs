@@ -65,7 +65,7 @@ namespace EPU_Backoffice_Panels
 
             //Bind data
             z.ProjektID = DataBindingFramework.BindFromInt(projektID, "ProjektID", this.zeiterfassungMsgLabel, false, piv);
-            z.Stunden = DataBindingFramework.BindFromInt(zeiterfassungHoursTextbox.Text, "Stunden", this.zeiterfassungMsgLabel, false, piv);
+            z.Stunden = DataBindingFramework.BindFromInt(zeiterfassungHoursTextbox.Text, "Dauer", this.zeiterfassungMsgLabel, false, piv);
             z.Bezeichnung = DataBindingFramework.BindFromString(zeiterfassungDescriptionTextBox.Text, "Bezeichnung", this.zeiterfassungMsgLabel, false, lnhsv, sl150v);
             z.Stundensatz = DataBindingFramework.BindFromInt(zeiterfassungStundensatzTextBox.Text, "Stundensatz", this.zeiterfassungMsgLabel, false, pdv);
 

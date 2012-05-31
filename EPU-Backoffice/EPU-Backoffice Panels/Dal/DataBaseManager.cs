@@ -690,7 +690,20 @@ namespace EPU_Backoffice_Panels.Dal
 
         public void SaveNewZeiterfassung(ZeitaufzeichnungTable z)
         {
-            throw new NotImplementedException();
+            String sql = "INSERT INTO Zeitaufzeichnung (ProjektID, Stunden, Bezeichnung, Stundensatz) VALUES (?, ?, ?. ?)";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, -1, z.ProjektID, z.Stunden, z.Bezeichnung, z.Stundensatz);
+                logger.Log(Logger.Level.Info, z.ProjektID+ " " + z.Stunden + " " + z.Bezeichnung + " " + z.Stundensatz);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            // success logging
+            this.logger.Log(Logger.Level.Info, "New zeitaufzeichnung " + z.Bezeichnung + " has been stored in the SQLite database.");
         }
     }
 }
