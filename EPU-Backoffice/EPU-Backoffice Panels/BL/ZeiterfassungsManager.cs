@@ -36,18 +36,28 @@ namespace EPU_Backoffice_Panels.BL
        
         public void SaveZeiterfassung(ZeitaufzeichnungTable z, Label label)
         {
-            IRule doubv = new PositiveDoubleValidator();
-            IRule intv = new PositiveIntValidator();
-            IRule datev = new DateValidator();
-            IRule lengthv = new StringLength150Validator();
-            IRule percv = new PercentValidator();
+            IRule pdv = new PositiveDoubleValidator();
+            IRule piv = new PositiveIntValidator();
+            IRule piv2 = new PositiveIntValidator();
+            IRule sl150v = new StringLength150Validator();
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
-            IRule lhv = new LettersHyphenValidator();
+
+            
+            piv.Eval(z.ProjektID);
+            piv2.Eval(z.Stunden);
+            sl150v.Eval(z.Bezeichnung);
+            lnhsv.Eval(z.Bezeichnung);
+            pdv.Eval(z.Stundensatz);
+
+            if (piv.HasErrors || piv2.HasErrors || sl150v.HasErrors || lnhsv.HasErrors || pdv.HasErrors)
+            {
+                throw new InvalidInputException("Daten ungültig!");
+            }
 
             // load elements
             try
             {
-                //return DALFactory.GetDAL()
+                DALFactory.GetDAL();
             }
             catch (SQLiteException)
             {

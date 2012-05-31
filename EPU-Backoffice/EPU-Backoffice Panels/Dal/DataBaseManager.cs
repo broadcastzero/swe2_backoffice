@@ -686,5 +686,11 @@ namespace EPU_Backoffice_Panels.Dal
                 if (con != null) { con.Dispose(); }
             }
         }
+
+
+        public void SaveNewZeiterfassung(ZeitaufzeichnungTable z)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

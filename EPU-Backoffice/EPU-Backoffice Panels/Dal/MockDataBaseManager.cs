@@ -34,6 +34,9 @@ namespace EPU_Backoffice_Panels.Dal
         // Private fields for Eingangsrechnungs-IDs
         private static int eingangsrechnungID = 0;
 
+        // Private fields for Zeiterfassungs-IDs
+        private static int zeiterfassungID = 0;
+
         /// <summary>
         /// Gets or sets a continuing, unique ID for the table "Kunden"
         /// </summary>
@@ -59,6 +62,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         public static int EingangsrechnungsID { get { return eingangsrechnungID++; } }
 
+        /// <summary>
+        /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
+        /// </summary>
+        public static int ZeitaufzeichnungID { get { return eingangsrechnungID++; } }
+
         // Gets or sets private fields for saved Kunden/Kontakte (ILists)
         private static List<KundeKontaktTable> savedKunden;
         private static List<KundeKontaktTable> savedKontakte;
@@ -71,6 +79,9 @@ namespace EPU_Backoffice_Panels.Dal
 
         // Gets or sets private fields for saved Eingangsrechnungen (ILists)
         private static List<EingangsrechnungTable> savedEingangsrechnungen;
+
+        // Gets or sets private fields for saved Zeitaufzeichnungen (ILists)
+        private static List<ZeitaufzeichnungTable> savedZeitaufzeichnungen;
 
         /// <summary>
         /// Gets or sets static list in which created Kunden are stored
@@ -97,6 +108,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary> 
         private static List<EingangsrechnungTable> SavedEingangsrechnungen { get { return savedEingangsrechnungen; } }
 
+        /// <summary>
+        /// Gets or sets static list in which created Eingangsrechnung is stored
+        /// </summary> 
+        private static List<ZeitaufzeichnungTable> SavedZeitaufzeichnungen { get { return savedZeitaufzeichnungen; } }
+
         // A threading lock object
         private static Object lockObject = new Object();
 
@@ -112,6 +128,7 @@ namespace EPU_Backoffice_Panels.Dal
                 MockDataBaseManager.savedAngebote = new List<AngebotTable>();
                 MockDataBaseManager.savedProjekte = new List<ProjektTable>();
                 MockDataBaseManager.savedEingangsrechnungen = new List<EingangsrechnungTable>();
+                MockDataBaseManager.savedZeitaufzeichnungen = new List<ZeitaufzeichnungTable>();
             }
         }
 
@@ -426,6 +443,13 @@ namespace EPU_Backoffice_Panels.Dal
         public List<EingangsrechnungTable> LoadEingangsrechnungen()
         {
             return MockDataBaseManager.SavedEingangsrechnungen;
+        }
+
+
+        public void SaveNewZeiterfassung(ZeitaufzeichnungTable z)
+        {
+            z.ID = MockDataBaseManager.ZeitaufzeichnungID;
+            MockDataBaseManager.savedZeitaufzeichnungen.Add(z);
         }
     }
 }

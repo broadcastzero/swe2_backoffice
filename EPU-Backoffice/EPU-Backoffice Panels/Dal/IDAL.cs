@@ -90,5 +90,12 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <returns>The saved Eingangsrechnungen</returns>
         List<EingangsrechnungTable> LoadEingangsrechnungen();
+
+
+        /// <summary>
+        /// Saves all Zeiterfassungs entryx
+        /// </summary>
+        /// <param name="z">Table name</param>
+        void SaveNewZeiterfassung(ZeitaufzeichnungTable z);
     }
 }
