@@ -17,8 +17,8 @@
         <backgroundAlpha>1</backgroundAlpha>
         <borderStyle>none</borderStyle>
         <color>16777215</color>
-        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20kk%20suchen%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml%2CBackoffice%20Rechnungsverwaltung%20Ausgang%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%2C%2C%2C%2C</hrefs>
-        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C92%2C177%2C121%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C121%2C177%2C150%22%20href%3D%22Backoffice%2520kk%2520suchen.bmml%22%20alt%3D%22Backoffice%20kk%20suchen%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C150%2C177%2C179%22%20href%3D%22Backoffice%2520Rechnungsverwaltung%2520Ausgang.bmml%22%20alt%3D%22Backoffice%20Rechnungsverwaltung%20Ausgang%22%20id%3D%227_2%22/%3E%0A</map>
+        <hrefs>Backoffice%20Home%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%26bm%3BBackoffice%20Home.bmml%2CBackoffice%20kk%20suchen%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml%26bm%3BBackoffice%20kk%20suchen.bmml%2CBackoffice%20Rechnungsverwaltung%20Ausgang%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%26bm%3BBackoffice%20Rechnungsverwaltung%20Ausgang.bmml%2CBackoffice%20Angebot%20suchen%26bm%3BBackoffice%20Angebot%20suchen.bmml%26bm%3BBackoffice%20Angebot%20suchen.bmml%26bm%3BBackoffice%20Angebot%20suchen.bmml%2C%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C92%2C177%2C121%22%20href%3D%22Backoffice%2520Home.bmml%22%20alt%3D%22Backoffice%20Home%22%20id%3D%227_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C121%2C177%2C150%22%20href%3D%22Backoffice%2520kk%2520suchen.bmml%22%20alt%3D%22Backoffice%20kk%20suchen%22%20id%3D%227_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C150%2C177%2C179%22%20href%3D%22Backoffice%2520Rechnungsverwaltung%2520Ausgang.bmml%22%20alt%3D%22Backoffice%20Rechnungsverwaltung%20Ausgang%22%20id%3D%227_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2241%2C179%2C177%2C208%22%20href%3D%22Backoffice%2520Angebot%2520suchen.bmml%22%20alt%3D%22Backoffice%20Angebot%20suchen%22%20id%3D%227_3%22/%3E%0A</map>
         <selectedIndex>1</selectedIndex>
         <text>Home%0AKunden%20%26%20Kontakte%0ARechnungsverwaltung%0AAngeboten%0AProjektverwaltung%0AZeiterfassung%0AReports</text>
       </controlProperties>
@@ -58,7 +58,7 @@
         <text>Suchen</text>
       </controlProperties>
     </control>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::DataGrid" x="752" y="122" w="407" h="195" measuredW="238" measuredH="97" zOrder="9" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::DataGrid" x="752" y="122" w="407" h="195" measuredW="235" measuredH="97" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>square</borderStyle>
         <hasHeader>true</hasHeader>
