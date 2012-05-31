@@ -27,7 +27,14 @@ namespace EPU_Backoffice_Panels.BL
     {
         private Logger logger = Logger.Instance;
 
-        public List <ZeitaufzeichnungTable> LoadZeiterfassung(ZeitaufzeichnungTable z, Label label)
+      /*  
+        public List <ZeitaufzeichnungTable> LoadZeiterfassung()
+        {
+            return ;
+        }
+        */
+       
+        public void SaveZeiterfassung(ZeitaufzeichnungTable z, Label label)
         {
             IRule doubv = new PositiveDoubleValidator();
             IRule intv = new PositiveIntValidator();
@@ -46,8 +53,7 @@ namespace EPU_Backoffice_Panels.BL
             {
                 throw;
             }
-
-            return new List<ZeitaufzeichnungTable>();        
+        
         }
         
     }

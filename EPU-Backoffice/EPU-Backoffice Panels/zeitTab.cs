@@ -74,18 +74,37 @@ namespace EPU_Backoffice_Panels
             // only if binding had no errors
             if (!this.zeiterfassungMsgLabel.Visible)
             {
-                try { saver.SaveZeiterfassung(z, this.zeiterfassungMsgLabel); }
+                try 
+                { 
+                    saver.SaveZeiterfassung(z, this.zeiterfassungMsgLabel); 
+                }
                 catch (SQLiteException)
                 {
                     this.zeiterfassungMsgLabel.Text = "Aussagekräftiger Fehler";
                     this.zeiterfassungMsgLabel.Show();
+
                 }
+                catch (InvalidInputException ex)
+                {
+                    this.zeiterfassungMsgLabel.Text = ex.Message;
+                    this.zeiterfassungMsgLabel.Show();
+                }
+                GlobalActions.ShowSuccessLabel(this.zeiterfassungMsgLabel);
+                Resetzeiterfassung();
+
             }
         }
 
         private void zeiterfassungCombobox_DropDown(object sender, EventArgs e)
         {
             GlobalActions.BindFromExistingProjekteToComboBox(sender, e);
+        }
+
+        private void Resetzeiterfassung()
+        {
+            this.zeiterfassungHoursTextbox.Text = string.Empty;
+            this.zeiterfassungStundensatzTextBox.Text = string.Empty;
+            this.zeiterfassungDescriptionTextBox.Text = string.Empty;
         }
 
     }
