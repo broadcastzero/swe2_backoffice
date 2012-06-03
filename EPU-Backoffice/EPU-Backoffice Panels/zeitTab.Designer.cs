@@ -156,6 +156,7 @@
             // 
             // zeiterfassungHoursTextbox
             // 
+            this.zeiterfassungHoursTextbox.Enabled = false;
             this.zeiterfassungHoursTextbox.Location = new System.Drawing.Point(31, 63);
             this.zeiterfassungHoursTextbox.Name = "zeiterfassungHoursTextbox";
             this.zeiterfassungHoursTextbox.Size = new System.Drawing.Size(200, 20);

@@ -97,5 +97,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <param name="z">Table name</param>
         void SaveNewZeiterfassung(ZeitaufzeichnungTable z);
+
+        /// <summary>
+        /// Loads all Zeiterfassungen
+        /// </summary>
+        /// <returns>The saved Zeiterfassungen</returns>
+        List<ZeitaufzeichnungTable> LoadZeiterfassung();
     }
 }
