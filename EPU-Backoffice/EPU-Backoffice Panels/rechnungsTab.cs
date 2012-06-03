@@ -202,6 +202,15 @@ namespace EPU_Backoffice_Panels
         // Save Eingangsrechnung and Buchungszeilen
         private void FinishAccount(object sender, EventArgs e)
         {
+            // if there are no elements, return
+            if (this.buchungszeilenBindingSource.Count < 1)
+            {
+                this.eingangsrechnungMsgLabel.Text = "Keine Daten!";
+                this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                this.eingangsrechnungMsgLabel.Show();
+                return;
+            }
+
             int eingangsrechnungsID = this.SaveEingangsrechnung();
 
             // check for errors while saving Eingangsrechnung to database
@@ -223,11 +232,12 @@ namespace EPU_Backoffice_Panels
             {
                 this.logger.Log(Logger.Level.Error, e.Message);
                 this.eingangsrechnungMsgLabel.Text = e.Message;
+                this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
                 this.eingangsrechnungMsgLabel.Show();
                 return -1;
             }
 
-            this.eingangsrechnungMsgLabel.Text += "Eingangsrechnung gespeichert.\n";
+            this.eingangsrechnungMsgLabel.Text += "\nEingangsrechnung gespeichert.\n";
 
             return rechnungsid;
         }

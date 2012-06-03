@@ -28,7 +28,7 @@ namespace EPU_Backoffice_Panels.Rules
         /// <returns>True, if string is valid</returns>
         public void Eval(object input)
         {
-            if (!Regex.IsMatch(input.ToString(), @"^[a-zA-Z0-9- ]+$"))
+            if (!Regex.IsMatch(input.ToString(), @"^[a-zA-Z0-9- /.]+$"))
             {
                 this.HasErrors = true;
             }
