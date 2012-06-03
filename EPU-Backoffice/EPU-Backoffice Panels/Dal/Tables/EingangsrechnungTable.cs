@@ -27,6 +27,16 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { if (value >= 0) { id = value; } }
         }
 
+        private string bezeichnung;
+        /// <summary>
+        /// Gets or sets the Bezeichnung of the Eingangsrechnung
+        /// </summary>
+        public string Bezeichnung
+        {
+            get { return bezeichnung; }
+            set { bezeichnung = value; }
+        }
+
         private int kontaktID;
         /// <summary>
         /// Gets or sets foreign key to table Kontakte

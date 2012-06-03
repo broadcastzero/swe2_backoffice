@@ -41,7 +41,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rechnungEingangTab = new System.Windows.Forms.TabPage();
-            this.addToEingangsrechnungCheckBox = new System.Windows.Forms.CheckBox();
             this.eingangsrechnungMsgLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -72,22 +71,21 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.eingangsrechnungBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KontaktID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rechnungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Archivierungspfad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eingangsrechnungErstellenSubTab = new EPU_Backoffice_Panels.TablessControlPanels();
-            this.eingangsrechnungErstellenNETab = new System.Windows.Forms.TabPage();
             this.existingKontakteComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.eingangsrechnungDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.eingangsrechnungBezeichnungTextBox = new System.Windows.Forms.TextBox();
-            this.eingangsrechnungErstellenBETab = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
-            this.existingEingangsrechnungComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buchungszeileBezeichnungTextBox = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KategorieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragUST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buchungszeilenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -97,10 +95,7 @@
             this.rechnungDruckenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.rechnungUmsatzTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungBindingSource)).BeginInit();
-            this.eingangsrechnungErstellenSubTab.SuspendLayout();
-            this.eingangsrechnungErstellenNETab.SuspendLayout();
-            this.eingangsrechnungErstellenBETab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rechnungsTabControl
@@ -214,8 +209,14 @@
             // rechnungEingangTab
             // 
             this.rechnungEingangTab.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rechnungEingangTab.Controls.Add(this.addToEingangsrechnungCheckBox);
-            this.rechnungEingangTab.Controls.Add(this.eingangsrechnungErstellenSubTab);
+            this.rechnungEingangTab.Controls.Add(this.label2);
+            this.rechnungEingangTab.Controls.Add(this.buchungszeileBezeichnungTextBox);
+            this.rechnungEingangTab.Controls.Add(this.existingKontakteComboBox);
+            this.rechnungEingangTab.Controls.Add(this.label1);
+            this.rechnungEingangTab.Controls.Add(this.eingangsrechnungDatePicker);
+            this.rechnungEingangTab.Controls.Add(this.label10);
+            this.rechnungEingangTab.Controls.Add(this.label11);
+            this.rechnungEingangTab.Controls.Add(this.eingangsrechnungBezeichnungTextBox);
             this.rechnungEingangTab.Controls.Add(this.eingangsrechnungMsgLabel);
             this.rechnungEingangTab.Controls.Add(this.label13);
             this.rechnungEingangTab.Controls.Add(this.label12);
@@ -230,17 +231,6 @@
             this.rechnungEingangTab.Size = new System.Drawing.Size(747, 233);
             this.rechnungEingangTab.TabIndex = 1;
             this.rechnungEingangTab.Text = "Eingangsrechnung";
-            // 
-            // addToEingangsrechnungCheckBox
-            // 
-            this.addToEingangsrechnungCheckBox.AutoSize = true;
-            this.addToEingangsrechnungCheckBox.Location = new System.Drawing.Point(299, 34);
-            this.addToEingangsrechnungCheckBox.Name = "addToEingangsrechnungCheckBox";
-            this.addToEingangsrechnungCheckBox.Size = new System.Drawing.Size(78, 17);
-            this.addToEingangsrechnungCheckBox.TabIndex = 24;
-            this.addToEingangsrechnungCheckBox.Text = "hinzufügen";
-            this.addToEingangsrechnungCheckBox.UseVisualStyleBackColor = true;
-            this.addToEingangsrechnungCheckBox.CheckedChanged += new System.EventHandler(this.ChoseExistingEingangsrechnungCheckBox);
             // 
             // eingangsrechnungMsgLabel
             // 
@@ -314,10 +304,12 @@
             this.eingangsrechnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.eingangsrechnungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.KontaktID,
-            this.Rechnungsdatum,
-            this.Archivierungspfad});
-            this.eingangsrechnungDataGridView.DataSource = this.eingangsrechnungBindingSource;
+            this.Beschreibung,
+            this.KategorieID,
+            this.BetragUST,
+            this.BetragNetto,
+            this.Buchungsdatum});
+            this.eingangsrechnungDataGridView.DataSource = this.buchungszeilenBindingSource;
             this.eingangsrechnungDataGridView.Location = new System.Drawing.Point(383, 25);
             this.eingangsrechnungDataGridView.Name = "eingangsrechnungDataGridView";
             this.eingangsrechnungDataGridView.Size = new System.Drawing.Size(346, 183);
@@ -542,135 +534,109 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // KontaktID
-            // 
-            this.KontaktID.DataPropertyName = "KontaktID";
-            this.KontaktID.HeaderText = "KontaktID";
-            this.KontaktID.Name = "KontaktID";
-            // 
-            // Rechnungsdatum
-            // 
-            this.Rechnungsdatum.DataPropertyName = "Rechnungsdatum";
-            this.Rechnungsdatum.HeaderText = "Rechnungsdatum";
-            this.Rechnungsdatum.Name = "Rechnungsdatum";
-            // 
-            // Archivierungspfad
-            // 
-            this.Archivierungspfad.DataPropertyName = "Archivierungspfad";
-            this.Archivierungspfad.HeaderText = "Archivierungspfad";
-            this.Archivierungspfad.Name = "Archivierungspfad";
-            // 
-            // eingangsrechnungErstellenSubTab
-            // 
-            this.eingangsrechnungErstellenSubTab.Controls.Add(this.eingangsrechnungErstellenNETab);
-            this.eingangsrechnungErstellenSubTab.Controls.Add(this.eingangsrechnungErstellenBETab);
-            this.eingangsrechnungErstellenSubTab.Location = new System.Drawing.Point(6, 6);
-            this.eingangsrechnungErstellenSubTab.Name = "eingangsrechnungErstellenSubTab";
-            this.eingangsrechnungErstellenSubTab.SelectedIndex = 0;
-            this.eingangsrechnungErstellenSubTab.Size = new System.Drawing.Size(317, 106);
-            this.eingangsrechnungErstellenSubTab.TabIndex = 25;
-            // 
-            // eingangsrechnungErstellenNETab
-            // 
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.existingKontakteComboBox);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.label1);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.eingangsrechnungDatePicker);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.label10);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.label11);
-            this.eingangsrechnungErstellenNETab.Controls.Add(this.eingangsrechnungBezeichnungTextBox);
-            this.eingangsrechnungErstellenNETab.Location = new System.Drawing.Point(4, 22);
-            this.eingangsrechnungErstellenNETab.Name = "eingangsrechnungErstellenNETab";
-            this.eingangsrechnungErstellenNETab.Padding = new System.Windows.Forms.Padding(3);
-            this.eingangsrechnungErstellenNETab.Size = new System.Drawing.Size(309, 80);
-            this.eingangsrechnungErstellenNETab.TabIndex = 0;
-            this.eingangsrechnungErstellenNETab.Text = "NE";
-            this.eingangsrechnungErstellenNETab.UseVisualStyleBackColor = true;
-            // 
             // existingKontakteComboBox
             // 
             this.existingKontakteComboBox.FormattingEnabled = true;
-            this.existingKontakteComboBox.Location = new System.Drawing.Point(6, 6);
+            this.existingKontakteComboBox.Location = new System.Drawing.Point(22, 6);
             this.existingKontakteComboBox.Name = "existingKontakteComboBox";
             this.existingKontakteComboBox.Size = new System.Drawing.Size(200, 21);
-            this.existingKontakteComboBox.TabIndex = 22;
+            this.existingKontakteComboBox.TabIndex = 30;
             this.existingKontakteComboBox.DropDown += new System.EventHandler(this.BindFromExistingKontakte);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 9);
+            this.label1.Location = new System.Drawing.Point(227, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 23;
+            this.label1.TabIndex = 31;
             this.label1.Text = "Kontakt*";
             // 
             // eingangsrechnungDatePicker
             // 
-            this.eingangsrechnungDatePicker.Location = new System.Drawing.Point(6, 37);
+            this.eingangsrechnungDatePicker.Location = new System.Drawing.Point(22, 37);
             this.eingangsrechnungDatePicker.Name = "eingangsrechnungDatePicker";
             this.eingangsrechnungDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.eingangsrechnungDatePicker.TabIndex = 12;
+            this.eingangsrechnungDatePicker.TabIndex = 27;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(211, 43);
+            this.label10.Location = new System.Drawing.Point(227, 43);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 13);
-            this.label10.TabIndex = 18;
+            this.label10.TabIndex = 28;
             this.label10.Text = "Rechnungsdatum*";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(211, 70);
+            this.label11.Location = new System.Drawing.Point(227, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Bezeichnung*";
+            this.label11.Size = new System.Drawing.Size(124, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Bez. Eingangsrechnung*";
             // 
             // eingangsrechnungBezeichnungTextBox
             // 
-            this.eingangsrechnungBezeichnungTextBox.Location = new System.Drawing.Point(6, 67);
+            this.eingangsrechnungBezeichnungTextBox.Location = new System.Drawing.Point(22, 67);
             this.eingangsrechnungBezeichnungTextBox.Name = "eingangsrechnungBezeichnungTextBox";
             this.eingangsrechnungBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
-            this.eingangsrechnungBezeichnungTextBox.TabIndex = 9;
+            this.eingangsrechnungBezeichnungTextBox.TabIndex = 26;
             // 
-            // eingangsrechnungErstellenBETab
+            // label2
             // 
-            this.eingangsrechnungErstellenBETab.Controls.Add(this.label8);
-            this.eingangsrechnungErstellenBETab.Controls.Add(this.existingEingangsrechnungComboBox);
-            this.eingangsrechnungErstellenBETab.Location = new System.Drawing.Point(4, 22);
-            this.eingangsrechnungErstellenBETab.Name = "eingangsrechnungErstellenBETab";
-            this.eingangsrechnungErstellenBETab.Padding = new System.Windows.Forms.Padding(3);
-            this.eingangsrechnungErstellenBETab.Size = new System.Drawing.Size(309, 80);
-            this.eingangsrechnungErstellenBETab.TabIndex = 1;
-            this.eingangsrechnungErstellenBETab.Text = "BE";
-            this.eingangsrechnungErstellenBETab.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(227, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Bez. Buchungszeile*";
             // 
-            // label8
+            // buchungszeileBezeichnungTextBox
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(202, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Eingangsrechnung*";
+            this.buchungszeileBezeichnungTextBox.Location = new System.Drawing.Point(22, 92);
+            this.buchungszeileBezeichnungTextBox.Name = "buchungszeileBezeichnungTextBox";
+            this.buchungszeileBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
+            this.buchungszeileBezeichnungTextBox.TabIndex = 32;
             // 
-            // existingEingangsrechnungComboBox
+            // ID
             // 
-            this.existingEingangsrechnungComboBox.FormattingEnabled = true;
-            this.existingEingangsrechnungComboBox.Location = new System.Drawing.Point(3, 6);
-            this.existingEingangsrechnungComboBox.Name = "existingEingangsrechnungComboBox";
-            this.existingEingangsrechnungComboBox.Size = new System.Drawing.Size(197, 21);
-            this.existingEingangsrechnungComboBox.TabIndex = 0;
-            this.existingEingangsrechnungComboBox.DropDown += new System.EventHandler(this.ExistingEingangsrechnungComboBoxLoadData);
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Beschreibung
+            // 
+            this.Beschreibung.DataPropertyName = "Beschreibung";
+            this.Beschreibung.HeaderText = "Beschreibung";
+            this.Beschreibung.Name = "Beschreibung";
+            // 
+            // KategorieID
+            // 
+            this.KategorieID.DataPropertyName = "KategorieID";
+            this.KategorieID.HeaderText = "KategorieID";
+            this.KategorieID.Name = "KategorieID";
+            // 
+            // BetragUST
+            // 
+            this.BetragUST.DataPropertyName = "BetragUST";
+            this.BetragUST.HeaderText = "BetragUST";
+            this.BetragUST.Name = "BetragUST";
+            this.BetragUST.Visible = false;
+            // 
+            // BetragNetto
+            // 
+            this.BetragNetto.DataPropertyName = "BetragNetto";
+            this.BetragNetto.HeaderText = "BetragNetto";
+            this.BetragNetto.Name = "BetragNetto";
+            // 
+            // Buchungsdatum
+            // 
+            this.Buchungsdatum.DataPropertyName = "Buchungsdatum";
+            this.Buchungsdatum.HeaderText = "Buchungsdatum";
+            this.Buchungsdatum.Name = "Buchungsdatum";
             // 
             // rechnungsTab
             // 
@@ -693,12 +659,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.rechnungUmsatzTab.ResumeLayout(false);
             this.rechnungUmsatzTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungBindingSource)).EndInit();
-            this.eingangsrechnungErstellenSubTab.ResumeLayout(false);
-            this.eingangsrechnungErstellenNETab.ResumeLayout(false);
-            this.eingangsrechnungErstellenNETab.PerformLayout();
-            this.eingangsrechnungErstellenBETab.ResumeLayout(false);
-            this.eingangsrechnungErstellenBETab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -737,32 +698,30 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.TabPage rechnungEingangTab;
         private System.Windows.Forms.Label eingangsrechnungMsgLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox existingKontakteComboBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button finishAccountButton;
         private System.Windows.Forms.Button addBuchungszeileButton;
         private System.Windows.Forms.ComboBox kategorieComboBox;
-        private System.Windows.Forms.DateTimePicker eingangsrechnungDatePicker;
         private System.Windows.Forms.TextBox eingangsrechnungBetragTextBox;
-        private System.Windows.Forms.TextBox eingangsrechnungBezeichnungTextBox;
         private System.Windows.Forms.DataGridView eingangsrechnungDataGridView;
         private System.Windows.Forms.Label druckenTabUntilLabel;
         private System.Windows.Forms.DateTimePicker druckenTabUntilDatePicker;
         private System.Windows.Forms.DateTimePicker druckenTabFromDatePicker;
-        private TablessControlPanels eingangsrechnungErstellenSubTab;
-        private System.Windows.Forms.TabPage eingangsrechnungErstellenNETab;
-        private System.Windows.Forms.TabPage eingangsrechnungErstellenBETab;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox existingEingangsrechnungComboBox;
-        private System.Windows.Forms.CheckBox addToEingangsrechnungCheckBox;
-        private System.Windows.Forms.BindingSource eingangsrechnungBindingSource;
+        private System.Windows.Forms.ComboBox existingKontakteComboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker eingangsrechnungDatePicker;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox eingangsrechnungBezeichnungTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox buchungszeileBezeichnungTextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KontaktID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rechnungsdatum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Archivierungspfad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Beschreibung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KategorieID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BetragUST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BetragNetto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Buchungsdatum;
+        private System.Windows.Forms.BindingSource buchungszeilenBindingSource;
     }
 }

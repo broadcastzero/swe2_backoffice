@@ -27,6 +27,16 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { if (value >= 0) { id = value; } }
         }
 
+        private string beschreibung;
+        /// <summary>
+        /// A short description of the Buchungszeile
+        /// </summary>
+        public string Beschreibung
+        {
+            get { return beschreibung; }
+            set { beschreibung = value; }
+        }
+
         private int kategorieID;
         /// <summary>
         /// Gets or sets foreign key to table Kategorien
@@ -67,11 +77,11 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { if (value >= 0) { betragNetto = value; } }
         }
 
-        private DateTime buchungsdatum;
+        private string buchungsdatum;
         /// <summary>
         /// Gets or sets Datum of booking
         /// </summary>
-        public DateTime Buchungsdatum
+        public string Buchungsdatum
         {
             get { return buchungsdatum; }
             set { buchungsdatum = value; }

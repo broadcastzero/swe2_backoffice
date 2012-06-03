@@ -26,6 +26,8 @@ namespace EPU_Backoffice_Panels
     public partial class rechnungsTab : UserControl
     {
         private Logger logger = Logger.Instance;
+        private List<BuchungszeilenTable> collectedBuchungszeilen;
+        private EingangsrechnungTable eingangsrechnung;
 
         public rechnungsTab()
         {
@@ -52,32 +54,83 @@ namespace EPU_Backoffice_Panels
             this.eingangsrechnungMsgLabel.Text = string.Empty;
             this.eingangsrechnungMsgLabel.Hide();
 
-            // force Eingangsrechnungs-Combobox to scroll down, in case that user didn't do this
-            if (this.addToEingangsrechnungCheckBox.Checked && this.existingEingangsrechnungComboBox.SelectedIndex < 0)
+            // in case of new Eingangsrechnung, the input fields are not locked
+            if (!this.eingangsrechnungBezeichnungTextBox.ReadOnly == true)
             {
-                this.BindFromExistingEingangsrechnungToComboBox(this.existingEingangsrechnungComboBox);
-            }
+                this.logger.Log(Logger.Level.Info, "Beginning with new Eingangsrechnung");
 
-            int eingangsrechnungsID = -1;
+                // create new Eingangsrechnung
+                this.eingangsrechnung = new EingangsrechnungTable();
 
-            // in case of new Eingangsrechnung
-            if (!this.addToEingangsrechnungCheckBox.Checked)
-            {
-                eingangsrechnungsID = this.SaveEingangsrechnung();
-            }
-            else
-            { 
-                // get EingangsrechnungsID out of combobox
-                eingangsrechnungsID = GlobalActions.getIdFromCombobox(this.existingEingangsrechnungComboBox.SelectedItem.ToString(), this.eingangsrechnungMsgLabel);
-                this.logger.Log(Logger.Level.Info, "Chosen EingangsrechnungsID from ComboBox: " + eingangsrechnungsID);
-            }
+                // check Eingangsrechnungs input fields
+                if (this.existingKontakteComboBox.SelectedIndex < 1)
+                {
+                    this.eingangsrechnungMsgLabel.Text = "Keine KundenID gewählt!";
+                    this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                    this.eingangsrechnungMsgLabel.Show();
+                    return;
+                }
 
-            // in case of error, eingangrechnungsID will be -1
-            if (eingangsrechnungsID == -1)
-            { return; }
+                // get KontaktID out of Combobox
+                string kontaktID = this.existingKontakteComboBox.SelectedItem.ToString();
+                this.eingangsrechnung.KontaktID = -1;
+
+                try
+                {
+                    this.eingangsrechnung.KontaktID = GlobalActions.getIdFromCombobox(kontaktID, this.eingangsrechnungMsgLabel);
+                }
+                catch (InvalidInputException)
+                {
+                    logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
+                }
+
+                // check for valid KontaktID
+                IRule posint = new PositiveIntValidator();
+                DataBindingFramework.BindFromInt(this.eingangsrechnung.KontaktID.ToString(), "KontaktID", this.eingangsrechnungMsgLabel, false, posint);
+
+                // check other vals
+                eingangsrechnung.Rechnungsdatum = this.eingangsrechnungDatePicker.Value.ToShortDateString();
+                eingangsrechnung.Bezeichnung = this.eingangsrechnungBezeichnungTextBox.Text;
+
+                // check date
+                IRule dateval = new DateValidator();
+                DataBindingFramework.BindFromString(eingangsrechnung.Rechnungsdatum, "Datum", this.eingangsrechnungMsgLabel, false, dateval);
+
+                // check description
+                IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+                IRule slv = new StringLength150Validator();
+                DataBindingFramework.BindFromString(eingangsrechnung.Bezeichnung, "Bez. Eingangsrechnung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
+
+                // add Archivierungspfad
+                eingangsrechnung.Archivierungspfad = DateTime.Now.Year.ToString() + '/' + DateTime.Now.Month.ToString() + '/' + DateTime.Now.ToShortDateString() + '-' + this.eingangsrechnung.KontaktID + '-' + this.eingangsrechnung.Bezeichnung;
+
+                // check for errors
+                if (this.eingangsrechnungMsgLabel.Visible)
+                { return; }
+
+                // create new collection, if it does not already exist
+                if (this.collectedBuchungszeilen == null)
+                {
+                    this.collectedBuchungszeilen = new List<BuchungszeilenTable>();
+                }
+                else
+                {
+                    // if list exists, just clear elements
+                    this.collectedBuchungszeilen.Clear();
+                }
+            }            
 
             // save Buchungszeile
-            this.RequestBuchungszeileSaving(eingangsrechnungsID);
+            this.AddBuchungszeileToDataGridView();
+
+            // lock Eingangsrechnungs elements, if not already done
+            if (!this.eingangsrechnungBezeichnungTextBox.ReadOnly == true)
+            {
+                this.existingKontakteComboBox.Enabled = false;
+                this.eingangsrechnungDatePicker.Enabled = false;
+                this.eingangsrechnungBezeichnungTextBox.ReadOnly = true;
+                this.logger.Log(Logger.Level.Info, "Locked Eingangsrechnungs-elements");
+            }
         }
 
         // save a new Eingangsrechnung
@@ -89,53 +142,13 @@ namespace EPU_Backoffice_Panels
                 GlobalActions.BindFromExistingKundenToComboBox(this.existingKontakteComboBox, null, true);
             }
 
-            // get KontaktID out of Combobox
-            string kontaktID = this.existingKontakteComboBox.SelectedItem.ToString();
-            int id = -1;
-
-            try
-            {
-                id = GlobalActions.getIdFromCombobox(kontaktID, this.eingangsrechnungMsgLabel);
-            }
-            catch (InvalidInputException)
-            {
-                logger.Log(Logger.Level.Error, "Unknown Exception while getting ID from Projekte from AngeboteTab!");
-            }
-
-            // check for valid KontaktID
-            IRule posint = new PositiveIntValidator();
-            DataBindingFramework.BindFromInt(id.ToString(), "KontaktID", this.eingangsrechnungMsgLabel, false, posint);
-
-            // check other vals
-            string date = this.eingangsrechnungDatePicker.Value.ToShortDateString();
-            string description = this.eingangsrechnungBezeichnungTextBox.Text;
-
-            // check date
-            IRule dateval = new DateValidator();
-            DataBindingFramework.BindFromString(date, "Datum", this.eingangsrechnungMsgLabel, false, dateval);
-
-            // check description
-            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
-            IRule slv = new StringLength150Validator();
-            DataBindingFramework.BindFromString(description, "Beschreibung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
-
-            // check for errors
-            if (this.eingangsrechnungMsgLabel.Visible)
-            { return -1; }
-
-            // TODO: save new Eingangsrechnung and get ID returned
-            EingangsrechnungTable table = new EingangsrechnungTable();
-            table.KontaktID = id;
-            table.Rechnungsdatum = DateTime.Now.ToShortDateString();
-            table.Archivierungspfad = "nopath";
-
             RechnungsManager manager = new RechnungsManager();
             int rechnungsid;
 
             // save Eingangsrechnung in database
             try
             {
-                rechnungsid = manager.CreateEingangsrechnung(table);
+                rechnungsid = manager.CreateEingangsrechnung(this.eingangsrechnung);
             }
             catch (InvalidInputException e)
             {
@@ -151,29 +164,29 @@ namespace EPU_Backoffice_Panels
         }
 
         // add Buchungszeile
-        private void RequestBuchungszeileSaving(int eingangsrechnungsID)
+        private void AddBuchungszeileToDataGridView()
         {   
             string betrag = this.eingangsrechnungBetragTextBox.Text;
-            double p_betrag;
-            string kategorie = this.kategorieComboBox.SelectedItem.ToString();
+            string bezeichnung = this.buchungszeileBezeichnungTextBox.Text;
 
             IRule pdv = new PositiveDoubleValidator();
-            p_betrag = DataBindingFramework.BindFromDouble(betrag, "Betrag", this.eingangsrechnungMsgLabel, false, pdv);
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule slv = new StringLength150Validator();
 
-            IRule lnhsv1 = new LettersNumbersHyphenSpaceValidator();
-            DataBindingFramework.BindFromString(kategorie, "Kategorie", this.eingangsrechnungMsgLabel, false, lnhsv1);
+            // Create Buchungszeilen business object
+            BuchungszeilenTable buchungszeile = new BuchungszeilenTable();
+            buchungszeile.Beschreibung = DataBindingFramework.BindFromString(bezeichnung, "Bezeichnung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
+            buchungszeile.BetragNetto = DataBindingFramework.BindFromDouble(betrag, "Betrag", this.eingangsrechnungMsgLabel, false, pdv);
+            buchungszeile.KategorieID = this.kategorieComboBox.SelectedIndex+1;
+            buchungszeile.Buchungsdatum = DateTime.Now.ToShortDateString();
 
             // in case of errors, do not continue with saving new Eingangsrechnung
             if (this.eingangsrechnungMsgLabel.Visible)
             { return; }
 
-            //TODO: forward to BL
-
-            // Show success label, in case that error label is not visible
-            if (!this.eingangsrechnungMsgLabel.Visible)
-            {
-                GlobalActions.ShowSuccessLabel(this.eingangsrechnungMsgLabel);
-            }
+            // add to DataGridView
+            this.buchungszeilenBindingSource.Add(buchungszeile);
+            GlobalActions.ShowSuccessLabel(this.eingangsrechnungMsgLabel);
         }
 
         // get all existing Eingangsrechnungen out of Database and bind result list to given combobox
@@ -187,18 +200,6 @@ namespace EPU_Backoffice_Panels
             GlobalActions.BindFromExistingKundenToComboBox(sender, e);
         }
 
-        private void ChoseExistingEingangsrechnungCheckBox(object sender, EventArgs e)
-        {
-            if (this.addToEingangsrechnungCheckBox.Checked)
-            {
-                this.eingangsrechnungErstellenSubTab.SelectedTab = this.eingangsrechnungErstellenBETab;                
-            }
-            else
-            {
-                this.eingangsrechnungErstellenSubTab.SelectedTab = this.eingangsrechnungErstellenNETab;
-            }
-        }
-
         // load data of an existing Eingangsrechnung
         private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
         {
@@ -207,7 +208,7 @@ namespace EPU_Backoffice_Panels
 
             RechnungsManager manager = new RechnungsManager();
             results = manager.LoadEingangsrechnungen();
-            this.eingangsrechnungBindingSource.DataSource = results;
+            //this.eingangsrechnungBindingSource.DataSource = results;
 
             // if there are results, add them to string result list
             if (results.Count != 0)
