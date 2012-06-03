@@ -41,6 +41,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rechnungEingangTab = new System.Windows.Forms.TabPage();
+            this.resetEingangsrechnungButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buchungszeileBezeichnungTextBox = new System.Windows.Forms.TextBox();
+            this.existingKontakteComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.eingangsrechnungDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.eingangsrechnungBezeichnungTextBox = new System.Windows.Forms.TextBox();
             this.eingangsrechnungMsgLabel = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -49,6 +58,13 @@
             this.kategorieComboBox = new System.Windows.Forms.ComboBox();
             this.eingangsrechnungBetragTextBox = new System.Windows.Forms.TextBox();
             this.eingangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KategorieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragUST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buchungszeilenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
             this.druckenTabUntilLabel = new System.Windows.Forms.Label();
             this.druckenTabUntilDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -71,32 +87,16 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.existingKontakteComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.eingangsrechnungDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.eingangsrechnungBezeichnungTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buchungszeileBezeichnungTextBox = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KategorieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BetragUST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buchungszeilenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resetEingangsrechnungButton = new System.Windows.Forms.Button();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
             this.unpaidBalancePanel.SuspendLayout();
             this.rechnungEingangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).BeginInit();
             this.rechnungDruckenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.rechnungUmsatzTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rechnungsTabControl
@@ -234,6 +234,82 @@
             this.rechnungEingangTab.TabIndex = 1;
             this.rechnungEingangTab.Text = "Eingangsrechnung";
             // 
+            // resetEingangsrechnungButton
+            // 
+            this.resetEingangsrechnungButton.Location = new System.Drawing.Point(163, 174);
+            this.resetEingangsrechnungButton.Name = "resetEingangsrechnungButton";
+            this.resetEingangsrechnungButton.Size = new System.Drawing.Size(59, 23);
+            this.resetEingangsrechnungButton.TabIndex = 34;
+            this.resetEingangsrechnungButton.Text = "Reset";
+            this.resetEingangsrechnungButton.UseVisualStyleBackColor = true;
+            this.resetEingangsrechnungButton.Click += new System.EventHandler(this.ResetEingangsrechnung);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(227, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Bez. Buchungszeile*";
+            // 
+            // buchungszeileBezeichnungTextBox
+            // 
+            this.buchungszeileBezeichnungTextBox.Location = new System.Drawing.Point(22, 92);
+            this.buchungszeileBezeichnungTextBox.Name = "buchungszeileBezeichnungTextBox";
+            this.buchungszeileBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
+            this.buchungszeileBezeichnungTextBox.TabIndex = 32;
+            // 
+            // existingKontakteComboBox
+            // 
+            this.existingKontakteComboBox.FormattingEnabled = true;
+            this.existingKontakteComboBox.Location = new System.Drawing.Point(22, 6);
+            this.existingKontakteComboBox.Name = "existingKontakteComboBox";
+            this.existingKontakteComboBox.Size = new System.Drawing.Size(200, 21);
+            this.existingKontakteComboBox.TabIndex = 30;
+            this.existingKontakteComboBox.DropDown += new System.EventHandler(this.BindFromExistingKontakte);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(227, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Kontakt*";
+            // 
+            // eingangsrechnungDatePicker
+            // 
+            this.eingangsrechnungDatePicker.Location = new System.Drawing.Point(22, 37);
+            this.eingangsrechnungDatePicker.Name = "eingangsrechnungDatePicker";
+            this.eingangsrechnungDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.eingangsrechnungDatePicker.TabIndex = 27;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(227, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 13);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Rechnungsdatum*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(227, 70);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(124, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Bez. Eingangsrechnung*";
+            // 
+            // eingangsrechnungBezeichnungTextBox
+            // 
+            this.eingangsrechnungBezeichnungTextBox.Location = new System.Drawing.Point(22, 67);
+            this.eingangsrechnungBezeichnungTextBox.Name = "eingangsrechnungBezeichnungTextBox";
+            this.eingangsrechnungBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
+            this.eingangsrechnungBezeichnungTextBox.TabIndex = 26;
+            // 
             // eingangsrechnungMsgLabel
             // 
             this.eingangsrechnungMsgLabel.AutoSize = true;
@@ -270,6 +346,7 @@
             this.finishAccountButton.TabIndex = 15;
             this.finishAccountButton.Text = "Rechnung abschließen";
             this.finishAccountButton.UseVisualStyleBackColor = true;
+            this.finishAccountButton.Click += new System.EventHandler(this.FinishAccount);
             // 
             // addBuchungszeileButton
             // 
@@ -316,6 +393,44 @@
             this.eingangsrechnungDataGridView.Name = "eingangsrechnungDataGridView";
             this.eingangsrechnungDataGridView.Size = new System.Drawing.Size(346, 183);
             this.eingangsrechnungDataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Beschreibung
+            // 
+            this.Beschreibung.DataPropertyName = "Beschreibung";
+            this.Beschreibung.HeaderText = "Beschreibung";
+            this.Beschreibung.Name = "Beschreibung";
+            // 
+            // KategorieID
+            // 
+            this.KategorieID.DataPropertyName = "KategorieID";
+            this.KategorieID.HeaderText = "KategorieID";
+            this.KategorieID.Name = "KategorieID";
+            // 
+            // BetragUST
+            // 
+            this.BetragUST.DataPropertyName = "BetragUST";
+            this.BetragUST.HeaderText = "BetragUST";
+            this.BetragUST.Name = "BetragUST";
+            this.BetragUST.Visible = false;
+            // 
+            // BetragNetto
+            // 
+            this.BetragNetto.DataPropertyName = "BetragNetto";
+            this.BetragNetto.HeaderText = "BetragNetto";
+            this.BetragNetto.Name = "BetragNetto";
+            // 
+            // Buchungsdatum
+            // 
+            this.Buchungsdatum.DataPropertyName = "Buchungsdatum";
+            this.Buchungsdatum.HeaderText = "Buchungsdatum";
+            this.Buchungsdatum.Name = "Buchungsdatum";
             // 
             // rechnungDruckenTab
             // 
@@ -536,120 +651,6 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
-            // existingKontakteComboBox
-            // 
-            this.existingKontakteComboBox.FormattingEnabled = true;
-            this.existingKontakteComboBox.Location = new System.Drawing.Point(22, 6);
-            this.existingKontakteComboBox.Name = "existingKontakteComboBox";
-            this.existingKontakteComboBox.Size = new System.Drawing.Size(200, 21);
-            this.existingKontakteComboBox.TabIndex = 30;
-            this.existingKontakteComboBox.DropDown += new System.EventHandler(this.BindFromExistingKontakte);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(227, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Kontakt*";
-            // 
-            // eingangsrechnungDatePicker
-            // 
-            this.eingangsrechnungDatePicker.Location = new System.Drawing.Point(22, 37);
-            this.eingangsrechnungDatePicker.Name = "eingangsrechnungDatePicker";
-            this.eingangsrechnungDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.eingangsrechnungDatePicker.TabIndex = 27;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(227, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 13);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Rechnungsdatum*";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(227, 70);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 13);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Bez. Eingangsrechnung*";
-            // 
-            // eingangsrechnungBezeichnungTextBox
-            // 
-            this.eingangsrechnungBezeichnungTextBox.Location = new System.Drawing.Point(22, 67);
-            this.eingangsrechnungBezeichnungTextBox.Name = "eingangsrechnungBezeichnungTextBox";
-            this.eingangsrechnungBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
-            this.eingangsrechnungBezeichnungTextBox.TabIndex = 26;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 13);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Bez. Buchungszeile*";
-            // 
-            // buchungszeileBezeichnungTextBox
-            // 
-            this.buchungszeileBezeichnungTextBox.Location = new System.Drawing.Point(22, 92);
-            this.buchungszeileBezeichnungTextBox.Name = "buchungszeileBezeichnungTextBox";
-            this.buchungszeileBezeichnungTextBox.Size = new System.Drawing.Size(200, 20);
-            this.buchungszeileBezeichnungTextBox.TabIndex = 32;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Beschreibung
-            // 
-            this.Beschreibung.DataPropertyName = "Beschreibung";
-            this.Beschreibung.HeaderText = "Beschreibung";
-            this.Beschreibung.Name = "Beschreibung";
-            // 
-            // KategorieID
-            // 
-            this.KategorieID.DataPropertyName = "KategorieID";
-            this.KategorieID.HeaderText = "KategorieID";
-            this.KategorieID.Name = "KategorieID";
-            // 
-            // BetragUST
-            // 
-            this.BetragUST.DataPropertyName = "BetragUST";
-            this.BetragUST.HeaderText = "BetragUST";
-            this.BetragUST.Name = "BetragUST";
-            this.BetragUST.Visible = false;
-            // 
-            // BetragNetto
-            // 
-            this.BetragNetto.DataPropertyName = "BetragNetto";
-            this.BetragNetto.HeaderText = "BetragNetto";
-            this.BetragNetto.Name = "BetragNetto";
-            // 
-            // Buchungsdatum
-            // 
-            this.Buchungsdatum.DataPropertyName = "Buchungsdatum";
-            this.Buchungsdatum.HeaderText = "Buchungsdatum";
-            this.Buchungsdatum.Name = "Buchungsdatum";
-            // 
-            // resetEingangsrechnungButton
-            // 
-            this.resetEingangsrechnungButton.Location = new System.Drawing.Point(163, 174);
-            this.resetEingangsrechnungButton.Name = "resetEingangsrechnungButton";
-            this.resetEingangsrechnungButton.Size = new System.Drawing.Size(59, 23);
-            this.resetEingangsrechnungButton.TabIndex = 34;
-            this.resetEingangsrechnungButton.Text = "Reset";
-            this.resetEingangsrechnungButton.UseVisualStyleBackColor = true;
-            this.resetEingangsrechnungButton.Click += new System.EventHandler(this.ResetEingangsrechnung);
-            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,12 +667,12 @@
             this.rechnungEingangTab.ResumeLayout(false);
             this.rechnungEingangTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).EndInit();
             this.rechnungDruckenTab.ResumeLayout(false);
             this.rechnungDruckenTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.rechnungUmsatzTab.ResumeLayout(false);
             this.rechnungUmsatzTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

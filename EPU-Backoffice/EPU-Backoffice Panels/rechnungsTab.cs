@@ -121,36 +121,6 @@ namespace EPU_Backoffice_Panels
             }
         }
 
-        // save a new Eingangsrechnung
-        private int SaveEingangsrechnung()
-        {
-            // force Kontakte-Combobox to scroll down, in case that user didn't do this
-            if (this.existingKontakteComboBox.SelectedIndex < 0)
-            {
-                GlobalActions.BindFromExistingKundenToComboBox(this.existingKontakteComboBox, null, true);
-            }
-
-            RechnungsManager manager = new RechnungsManager();
-            int rechnungsid;
-
-            // save Eingangsrechnung in database
-            try
-            {
-                rechnungsid = manager.CreateEingangsrechnung(this.eingangsrechnung);
-            }
-            catch (InvalidInputException e)
-            {
-                this.logger.Log(Logger.Level.Error, e.Message);
-                this.eingangsrechnungMsgLabel.Text = e.Message;
-                this.eingangsrechnungMsgLabel.Show();
-                return -1;
-            }
-
-            this.eingangsrechnungMsgLabel.Text += "Eingangsrechnung gespeichert.\n";
-
-            return rechnungsid;
-        }
-
         // add Buchungszeile
         private void AddBuchungszeileToDataGridView()
         {   
@@ -177,19 +147,13 @@ namespace EPU_Backoffice_Panels
             GlobalActions.ShowSuccessLabel(this.eingangsrechnungMsgLabel);
         }
 
-        // get all existing Eingangsrechnungen out of Database and bind result list to given combobox
-        private void BindFromExistingEingangsrechnungToComboBox(ComboBox combobox)
-        { 
-            // TODO
-        }
-
         private void BindToExistingKundenComboBox(object sender, EventArgs e)
         {
             GlobalActions.BindFromExistingKundenToComboBox(sender, e);
         }
 
         // load data of an existing Eingangsrechnung
-        private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
+        /*private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
         {
             List<EingangsrechnungTable> results = new List<EingangsrechnungTable>();
             List<string> listItems = new List<string>();
@@ -210,7 +174,7 @@ namespace EPU_Backoffice_Panels
 
             // set data source
             (sender as ComboBox).DataSource = listItems;
-        }
+        }*/
 
         // Clear everything within Eingangsrechnungstab
         private void ResetEingangsrechnung(object sender, EventArgs e)
@@ -233,6 +197,39 @@ namespace EPU_Backoffice_Panels
             this.eingangsrechnungMsgLabel.Visible = false;
 
             this.logger.Log(Logger.Level.Info, "Unocked Eingangsrechnungs-elements. Reset all Eingangsrechnungs-Inputfields.");
+        }
+
+        // Save Eingangsrechnung and Buchungszeilen
+        private void FinishAccount(object sender, EventArgs e)
+        {
+            int eingangsrechnungsID = this.SaveEingangsrechnung();
+
+            // check for errors while saving Eingangsrechnung to database
+            if (eingangsrechnungsID == -1) { return; }
+        }
+
+        // save a new Eingangsrechnung
+        private int SaveEingangsrechnung()
+        {
+            RechnungsManager manager = new RechnungsManager();
+            int rechnungsid;
+
+            // save Eingangsrechnung in database
+            try
+            {
+                rechnungsid = manager.CreateEingangsrechnung(this.eingangsrechnung);
+            }
+            catch (InvalidInputException e)
+            {
+                this.logger.Log(Logger.Level.Error, e.Message);
+                this.eingangsrechnungMsgLabel.Text = e.Message;
+                this.eingangsrechnungMsgLabel.Show();
+                return -1;
+            }
+
+            this.eingangsrechnungMsgLabel.Text += "Eingangsrechnung gespeichert.\n";
+
+            return rechnungsid;
         }
     }
 }

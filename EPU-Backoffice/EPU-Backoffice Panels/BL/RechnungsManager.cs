@@ -29,7 +29,9 @@ namespace EPU_Backoffice_Panels.BL
         public int CreateEingangsrechnung(EingangsrechnungTable table)
         {
             LettersNumbersHyphenSpaceValidator lnhsv = new LettersNumbersHyphenSpaceValidator();
+            LettersNumbersHyphenSpaceValidator lnhsv2 = new LettersNumbersHyphenSpaceValidator();
             StringLength150Validator slv = new StringLength150Validator();
+            StringLength150Validator slv2 = new StringLength150Validator();
             PositiveIntValidator piv = new PositiveIntValidator();
             DateValidator dv = new DateValidator();
 
@@ -37,8 +39,10 @@ namespace EPU_Backoffice_Panels.BL
             slv.Eval(table.Archivierungspfad);
             piv.Eval(table.KontaktID);
             dv.Eval(table.Rechnungsdatum);
+            lnhsv2.Eval(table.Bezeichnung);
+            slv2.Eval(table.Bezeichnung);
 
-            if (lnhsv.HasErrors || slv.HasErrors || piv.HasErrors || dv.HasErrors)
+            if (lnhsv.HasErrors || slv.HasErrors || slv2.HasErrors || piv.HasErrors || dv.HasErrors)
             {
                 throw new InvalidInputException("Daten ungültig!");
             }
