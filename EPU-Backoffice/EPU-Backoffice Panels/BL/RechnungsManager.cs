@@ -81,5 +81,46 @@ namespace EPU_Backoffice_Panels.BL
 
             return results;
         }
+
+        /// <summary>
+        /// Saves a new Buchungszeile to the Database
+        /// </summary>
+        /// <param name="table">The Buchungszeilentable</param>
+        /// <param name="eingangsrechnungsID">The ID of the Eingangsrechnung</param>
+        public void SaveBuchungszeile(BuchungszeilenTable table, int eingangsrechnungsID)
+        {
+            // check EingangsrechnungsID
+            IRule piv = new PositiveIntValidator();
+            piv.Eval(eingangsrechnungsID);
+
+            // check description
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule slv = new StringLength150Validator();
+            lnhsv.Eval(table.Beschreibung);
+            slv.Eval(table.Beschreibung);
+
+            // check Betrag
+            IRule pdv = new PositiveDoubleValidator();
+            pdv.Eval(table.BetragNetto);
+
+            // check date
+            IRule dateval = new DateValidator();
+            dateval.Eval(table.Buchungsdatum);
+
+            // check KategorieID for positive int
+            IRule piv2 = new PositiveIntValidator();
+            piv2.Eval(table.KategorieID);
+
+            if (piv.HasErrors || lnhsv.HasErrors || slv.HasErrors || pdv.HasErrors || dateval.HasErrors || piv2.HasErrors)
+            {
+                throw new InvalidInputException("Daten ungültig");
+            }
+
+            // save Buchungszeile
+            //int bzID = DALFactory.GetDAL().SaveBuchungszeile(table);
+
+            // save Eingangsbuchung
+            //DALFactory.GetDAL().SaveEingangsbuchung(bzID, eingangsrechnungsID);
+        }
     }
 }

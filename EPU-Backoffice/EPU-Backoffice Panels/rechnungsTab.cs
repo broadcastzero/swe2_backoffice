@@ -212,10 +212,42 @@ namespace EPU_Backoffice_Panels
                 return;
             }
 
+            // save Eingangsrechnung
             int eingangsrechnungsID = this.SaveEingangsrechnung();
 
             // check for errors while saving Eingangsrechnung to database
             if (eingangsrechnungsID == -1) { return; }
+
+            // get all Buchungszeilen out of BindingSource
+            List<BuchungszeilenTable> list = new List<BuchungszeilenTable>();
+            for (int i = 0; i < this.buchungszeilenBindingSource.Count; i++)
+            {
+                list.Add((BuchungszeilenTable)this.buchungszeilenBindingSource.List[i]);
+            }
+
+            // save all Buchungszeilen
+            RechnungsManager manager = new RechnungsManager();
+            foreach (BuchungszeilenTable table in list)
+            {
+                try
+                {
+                    manager.SaveBuchungszeile(table, eingangsrechnungsID);
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.eingangsrechnungMsgLabel.Text = ex.Message;
+                    this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                    this.eingangsrechnungMsgLabel.Show();
+                    return;
+                }
+                catch (SQLiteException ex)
+                {
+                    this.eingangsrechnungMsgLabel.Text = ex.Message;
+                    this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                    this.eingangsrechnungMsgLabel.Show();
+                    return;
+                }
+            }
         }
 
         // save a new Eingangsrechnung
