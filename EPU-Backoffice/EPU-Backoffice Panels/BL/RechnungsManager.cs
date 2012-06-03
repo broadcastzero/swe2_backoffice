@@ -117,14 +117,29 @@ namespace EPU_Backoffice_Panels.BL
             }
 
             // save Buchungszeile
-            int bzID = DALFactory.GetDAL().SaveBuchungszeile(table);
+            int bzID = -1;
+            try
+            {
+                bzID = DALFactory.GetDAL().SaveBuchungszeile(table);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
 
             // save Eingangsbuchung
             EingangsbuchungTable eingangsbuchung = new EingangsbuchungTable();
             eingangsbuchung.BuchungszeilenID = bzID;
             eingangsbuchung.EingangsrechungsID = eingangsrechnungsID;
 
-            DALFactory.GetDAL().SaveEingangsbuchung(eingangsbuchung);
+            try
+            {
+                DALFactory.GetDAL().SaveEingangsbuchung(eingangsbuchung);
+            }
+            catch (SQLiteException)
+            { 
+                throw; 
+            }
         }
     }
 }
