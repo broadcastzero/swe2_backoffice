@@ -58,12 +58,6 @@
             this.kategorieComboBox = new System.Windows.Forms.ComboBox();
             this.eingangsrechnungBetragTextBox = new System.Windows.Forms.TextBox();
             this.eingangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KategorieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BetragUST = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buchungszeilenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rechnungDruckenTab = new System.Windows.Forms.TabPage();
             this.druckenTabUntilLabel = new System.Windows.Forms.Label();
@@ -87,6 +81,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Beschreibung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KategorieID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragUST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -394,44 +394,6 @@
             this.eingangsrechnungDataGridView.Size = new System.Drawing.Size(346, 183);
             this.eingangsrechnungDataGridView.TabIndex = 0;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Beschreibung
-            // 
-            this.Beschreibung.DataPropertyName = "Beschreibung";
-            this.Beschreibung.HeaderText = "Beschreibung";
-            this.Beschreibung.Name = "Beschreibung";
-            // 
-            // KategorieID
-            // 
-            this.KategorieID.DataPropertyName = "KategorieID";
-            this.KategorieID.HeaderText = "KategorieID";
-            this.KategorieID.Name = "KategorieID";
-            // 
-            // BetragUST
-            // 
-            this.BetragUST.DataPropertyName = "BetragUST";
-            this.BetragUST.HeaderText = "BetragUST";
-            this.BetragUST.Name = "BetragUST";
-            this.BetragUST.Visible = false;
-            // 
-            // BetragNetto
-            // 
-            this.BetragNetto.DataPropertyName = "BetragNetto";
-            this.BetragNetto.HeaderText = "BetragNetto";
-            this.BetragNetto.Name = "BetragNetto";
-            // 
-            // Buchungsdatum
-            // 
-            this.Buchungsdatum.DataPropertyName = "Buchungsdatum";
-            this.Buchungsdatum.HeaderText = "Buchungsdatum";
-            this.Buchungsdatum.Name = "Buchungsdatum";
-            // 
             // rechnungDruckenTab
             // 
             this.rechnungDruckenTab.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -651,6 +613,44 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Beschreibung
+            // 
+            this.Beschreibung.DataPropertyName = "Bezeichnung";
+            this.Beschreibung.HeaderText = "Bezeichnung";
+            this.Beschreibung.Name = "Beschreibung";
+            // 
+            // KategorieID
+            // 
+            this.KategorieID.DataPropertyName = "KategorieID";
+            this.KategorieID.HeaderText = "KategorieID";
+            this.KategorieID.Name = "KategorieID";
+            // 
+            // BetragUST
+            // 
+            this.BetragUST.DataPropertyName = "BetragUST";
+            this.BetragUST.HeaderText = "BetragUST";
+            this.BetragUST.Name = "BetragUST";
+            this.BetragUST.Visible = false;
+            // 
+            // BetragNetto
+            // 
+            this.BetragNetto.DataPropertyName = "BetragNetto";
+            this.BetragNetto.HeaderText = "BetragNetto";
+            this.BetragNetto.Name = "BetragNetto";
+            // 
+            // Buchungsdatum
+            // 
+            this.Buchungsdatum.DataPropertyName = "Buchungsdatum";
+            this.Buchungsdatum.HeaderText = "Buchungsdatum";
+            this.Buchungsdatum.Name = "Buchungsdatum";
+            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,13 +729,13 @@
         private System.Windows.Forms.TextBox eingangsrechnungBezeichnungTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox buchungszeileBezeichnungTextBox;
+        private System.Windows.Forms.BindingSource buchungszeilenBindingSource;
+        private System.Windows.Forms.Button resetEingangsrechnungButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Beschreibung;
         private System.Windows.Forms.DataGridViewTextBoxColumn KategorieID;
         private System.Windows.Forms.DataGridViewTextBoxColumn BetragUST;
         private System.Windows.Forms.DataGridViewTextBoxColumn BetragNetto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buchungsdatum;
-        private System.Windows.Forms.BindingSource buchungszeilenBindingSource;
-        private System.Windows.Forms.Button resetEingangsrechnungButton;
     }
 }

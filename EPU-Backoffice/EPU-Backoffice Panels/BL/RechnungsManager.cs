@@ -89,6 +89,8 @@ namespace EPU_Backoffice_Panels.BL
         /// <param name="eingangsrechnungsID">The ID of the Eingangsrechnung</param>
         public void SaveBuchungszeile(BuchungszeilenTable table, int eingangsrechnungsID)
         {
+            table.BetragUST = table.BetragNetto; // we don't use UST
+
             // check EingangsrechnungsID
             IRule piv = new PositiveIntValidator();
             piv.Eval(eingangsrechnungsID);
@@ -96,8 +98,8 @@ namespace EPU_Backoffice_Panels.BL
             // check description
             IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
             IRule slv = new StringLength150Validator();
-            lnhsv.Eval(table.Beschreibung);
-            slv.Eval(table.Beschreibung);
+            lnhsv.Eval(table.Bezeichnung);
+            slv.Eval(table.Bezeichnung);
 
             // check Betrag
             IRule pdv = new PositiveDoubleValidator();

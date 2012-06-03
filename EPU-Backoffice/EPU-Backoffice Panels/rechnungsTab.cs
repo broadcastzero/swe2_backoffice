@@ -134,7 +134,7 @@ namespace EPU_Backoffice_Panels
 
             // Create Buchungszeilen business object
             BuchungszeilenTable buchungszeile = new BuchungszeilenTable();
-            buchungszeile.Beschreibung = DataBindingFramework.BindFromString(bezeichnung, "Bezeichnung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
+            buchungszeile.Bezeichnung = DataBindingFramework.BindFromString(bezeichnung, "Bezeichnung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
             buchungszeile.BetragNetto = DataBindingFramework.BindFromDouble(betrag, "Betrag", this.eingangsrechnungMsgLabel, false, pdv);
             buchungszeile.KategorieID = this.kategorieComboBox.SelectedIndex+1;
             buchungszeile.Buchungsdatum = DateTime.Now.ToShortDateString();
@@ -194,9 +194,6 @@ namespace EPU_Backoffice_Panels
             this.eingangsrechnungBetragTextBox.ResetText();
             this.kategorieComboBox.ResetText();
 
-            this.eingangsrechnungMsgLabel.Text = string.Empty;
-            this.eingangsrechnungMsgLabel.Visible = false;
-
             this.logger.Log(Logger.Level.Info, "Unocked Eingangsrechnungs-elements. Reset all Eingangsrechnungs-Inputfields.");
         }
 
@@ -248,6 +245,8 @@ namespace EPU_Backoffice_Panels
                     return;
                 }
             }
+
+            this.ResetEingangsrechnung(null, null);
         }
 
         // save a new Eingangsrechnung

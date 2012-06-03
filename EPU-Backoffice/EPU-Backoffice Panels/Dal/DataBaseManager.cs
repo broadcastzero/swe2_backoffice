@@ -772,10 +772,90 @@ namespace EPU_Backoffice_Panels.Dal
             }
         }
 
-
+        /// <summary>
+        /// Save new Buchungszeile to the SQLite database
+        /// </summary>
+        /// <param name="table">The business object</param>
+        /// <returns>The ID of the just inserted Buchungszeile</returns>
         public int SaveBuchungszeile(BuchungszeilenTable table)
         {
-            throw new NotImplementedException();
+            string sql = "INSERT INTO Buchungszeilen (KategorieID, BankkontoID, BetragNetto, BetragUST, Buchungsdatum, Bezeichnung) VALUES (?, ?, ?, ?, ?, ?)";
+            int insertedID;
+
+            // open connection and save new Kunde/Kontakt in database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // initialise parameter
+                SQLiteParameter p_firstparam = new SQLiteParameter();
+                SQLiteParameter p_secondparam = new SQLiteParameter();
+                SQLiteParameter p_thirdparam = new SQLiteParameter();
+                SQLiteParameter p_forthparam = new SQLiteParameter();
+                SQLiteParameter p_fifthparam = new SQLiteParameter();
+                SQLiteParameter p_sixthparam = new SQLiteParameter();
+
+                // bind kategorieID
+                p_firstparam.Value = table.KategorieID;
+                cmd.Parameters.Add(p_firstparam);
+
+                // bind bankkontoID
+                p_secondparam.Value = table.BankkontoID;
+                cmd.Parameters.Add(p_secondparam);
+
+                // bind betragNetto
+                p_thirdparam.Value = table.BetragNetto;
+                cmd.Parameters.Add(p_thirdparam);
+
+                // bind betragUST
+                p_forthparam.Value = table.BetragUST;
+                cmd.Parameters.Add(p_forthparam);
+
+                // bind bezeichnung
+                p_fifthparam.Value = table.Buchungsdatum;
+                cmd.Parameters.Add(p_fifthparam);
+
+                // bind bezeichnung
+                p_sixthparam.Value = table.Bezeichnung;
+                cmd.Parameters.Add(p_sixthparam);
+
+                // execute and commit
+                cmd.ExecuteNonQuery();
+                tra.Commit();
+
+                // get rowID
+                cmd.Parameters.Clear();
+                cmd.CommandText = "SELECT last_insert_rowid() AS id FROM Buchungszeilen";
+                cmd.ExecuteNonQuery();
+                System.Object temp = cmd.ExecuteScalar();
+                insertedID = int.Parse(temp.ToString());
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
+
+            // success logging
+            string successmessage = "A new Eingangsrechnung has been saved to the database: " + insertedID;
+            this.logger.Log(Logger.Level.Info, successmessage);
+
+            // return ID of inserted item
+            return insertedID;
         }
 
         /// <summary>
@@ -784,7 +864,8 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="table">The Eingangsbuchungstable</param>
         public void SaveEingangsbuchung(EingangsbuchungTable table)
         { 
-            
+            string sql = "INSERT INTO Eingangsbuchung (BuchungszeilenID, EingangsrechnungsID) VALUES (?, ?)";
+            this.SendStatementToDatabase(sql, -1, table.BuchungszeilenID, table.EingangsrechungsID);
         }
     }
 }

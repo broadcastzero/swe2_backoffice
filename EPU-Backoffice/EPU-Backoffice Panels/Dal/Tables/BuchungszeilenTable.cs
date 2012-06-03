@@ -31,7 +31,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
         /// <summary>
         /// A short description of the Buchungszeile
         /// </summary>
-        public string Beschreibung
+        public string Bezeichnung
         {
             get { return beschreibung; }
             set { beschreibung = value; }
