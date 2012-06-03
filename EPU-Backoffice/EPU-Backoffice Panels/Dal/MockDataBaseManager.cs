@@ -34,6 +34,9 @@ namespace EPU_Backoffice_Panels.Dal
         // Private fields for Eingangsrechnungs-IDs
         private static int eingangsrechnungID = 0;
 
+        // Private fields for Buchungszeilen-IDs
+        private static int buchungszeilenID = 0;
+
         // Private fields for Zeiterfassungs-IDs
         private static int zeiterfassungID = 0;
 
@@ -65,6 +68,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
         /// </summary>
+        public static int BuchungszeilenID { get { return buchungszeilenID++; } }
+
+        /// <summary>
+        /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
+        /// </summary>
         public static int ZeitaufzeichnungID { get { return eingangsrechnungID++; } }
 
         // Gets or sets private fields for saved Kunden/Kontakte (ILists)
@@ -79,6 +87,12 @@ namespace EPU_Backoffice_Panels.Dal
 
         // Gets or sets private fields for saved Eingangsrechnungen (ILists)
         private static List<EingangsrechnungTable> savedEingangsrechnungen;
+
+        // Gets or sets private fields for saved Eingangsbuchungen (ILists)
+        private static List<EingangsbuchungTable> savedEingangsbuchungen;
+
+        // Gets or sets private fields for saved Buchungszeilen (ILists)
+        private static List<BuchungszeilenTable> savedBuchungszeilen;
 
         // Gets or sets private fields for saved Zeitaufzeichnungen (ILists)
         private static List<ZeitaufzeichnungTable> savedZeitaufzeichnungen;
@@ -111,6 +125,16 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Gets or sets static list in which created Eingangsrechnung is stored
         /// </summary> 
+        private static List<EingangsbuchungTable> SavedEingangsbuchungen { get { return savedEingangsbuchungen; } }
+
+        /// <summary>
+        /// Gets or sets static list in which created Buchungszeile is stored
+        /// </summary> 
+        private static List<BuchungszeilenTable> SavedBuchungszeilen { get { return savedBuchungszeilen; } }
+
+        /// <summary>
+        /// Gets or sets static list in which created Eingangsrechnung is stored
+        /// </summary> 
         private static List<ZeitaufzeichnungTable> SavedZeitaufzeichnungen { get { return savedZeitaufzeichnungen; } }
 
         // A threading lock object
@@ -129,6 +153,8 @@ namespace EPU_Backoffice_Panels.Dal
                 MockDataBaseManager.savedProjekte = new List<ProjektTable>();
                 MockDataBaseManager.savedEingangsrechnungen = new List<EingangsrechnungTable>();
                 MockDataBaseManager.savedZeitaufzeichnungen = new List<ZeitaufzeichnungTable>();
+                MockDataBaseManager.savedEingangsbuchungen = new List<EingangsbuchungTable>();
+                MockDataBaseManager.savedBuchungszeilen = new List<BuchungszeilenTable>();
             }
         }
 
@@ -457,15 +483,25 @@ namespace EPU_Backoffice_Panels.Dal
             return MockDataBaseManager.SavedZeitaufzeichnungen;
         }
 
-
+        /// <summary>
+        /// Saves a new Buchungszeile to the mock db
+        /// </summary>
+        /// <param name="table">The business object</param>
+        /// <returns>The ID of the inserted Buchungszeile</returns>
         public int SaveBuchungszeile(BuchungszeilenTable table)
         {
-            throw new NotImplementedException();
+            table.ID = MockDataBaseManager.BuchungszeilenID;
+            MockDataBaseManager.savedBuchungszeilen.Add(table);
+            return table.ID;
         }
 
-        public void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID)
+        /// <summary>
+        /// Saves a new Eingangsbuchung to the database
+        /// </summary>
+        /// <param name="table">The Eingangsbuchungstable</param>
+        public void SaveEingangsbuchung(EingangsbuchungTable table)
         {
-            throw new NotImplementedException();
+            MockDataBaseManager.savedEingangsbuchungen.Add(table);
         }
     }
 }

@@ -114,8 +114,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Saves a new Eingangsrechnung to the database
         /// </summary>
-        /// <param name="buchungszeilenID">The BuchungszeilenID</param>
-        /// <param name="eingangsrechnungsID">The EingangsrechnungsID</param>
-        void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID);
+        /// <param name="table">The Eingangsbuchungstable</param>
+        void SaveEingangsbuchung(EingangsbuchungTable table);
     }
 }

@@ -120,7 +120,11 @@ namespace EPU_Backoffice_Panels.BL
             int bzID = DALFactory.GetDAL().SaveBuchungszeile(table);
 
             // save Eingangsbuchung
-            DALFactory.GetDAL().SaveEingangsbuchung(bzID, eingangsrechnungsID);
+            EingangsbuchungTable eingangsbuchung = new EingangsbuchungTable();
+            eingangsbuchung.BuchungszeilenID = bzID;
+            eingangsbuchung.EingangsrechungsID = eingangsrechnungsID;
+
+            DALFactory.GetDAL().SaveEingangsbuchung(eingangsbuchung);
         }
     }
 }

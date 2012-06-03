@@ -778,9 +778,13 @@ namespace EPU_Backoffice_Panels.Dal
             throw new NotImplementedException();
         }
 
-        public void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID)
-        {
-            throw new NotImplementedException();
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the database
+        /// </summary>
+        /// <param name="table">The Eingangsbuchungstable</param>
+        public void SaveEingangsbuchung(EingangsbuchungTable table)
+        { 
+            
         }
     }
 }

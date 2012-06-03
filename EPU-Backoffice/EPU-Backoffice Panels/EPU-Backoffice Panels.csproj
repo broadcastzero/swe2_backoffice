@@ -68,6 +68,7 @@
     <Compile Include="Dal\Tables\AusgangsrechnungTable.cs" />
     <Compile Include="Dal\Tables\BankkontoTable.cs" />
     <Compile Include="Dal\Tables\BuchungszeilenTable.cs" />
+    <Compile Include="Dal\Tables\EingangsbuchungTable.cs" />
     <Compile Include="Dal\Tables\EingangsrechnungTable.cs" />
     <Compile Include="Dal\Tables\KategorienTable.cs" />
     <Compile Include="Dal\Tables\KundeKontaktTable.cs" />
