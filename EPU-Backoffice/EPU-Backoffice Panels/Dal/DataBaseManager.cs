@@ -710,7 +710,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// Loads all Zeitaufzeichnungen
         /// </summary>
         /// <returns>The saved Zeitaufzeichnungen</returns>
-        public List<ZeitaufzeichnungTable> LoadZeitaufzeichnung(int projektID)
+        public List<ZeitaufzeichnungTable> LoadZeiterfassung(int projektID)
         {
             string sql = "SELECT * FROM Zeitaufzeichnung WHERE";
             sql += "ProjektID = ?;";

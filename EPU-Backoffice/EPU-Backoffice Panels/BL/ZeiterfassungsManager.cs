@@ -34,7 +34,7 @@ namespace EPU_Backoffice_Panels.BL
 
             try
             {
-                results = DALFactory.GetDAL().LoadZeiterfassung();
+                results = DALFactory.GetDAL().LoadZeiterfassung(pID);
             }
             catch (SQLiteException)
             {

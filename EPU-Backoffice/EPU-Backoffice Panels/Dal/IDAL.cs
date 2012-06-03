@@ -102,6 +102,6 @@ namespace EPU_Backoffice_Panels.Dal
         /// Loads all Zeiterfassungen
         /// </summary>
         /// <returns>The saved Zeiterfassungen</returns>
-        List<ZeitaufzeichnungTable> LoadZeiterfassung();
+        List<ZeitaufzeichnungTable> LoadZeiterfassung(int projektID);
     }
 }
