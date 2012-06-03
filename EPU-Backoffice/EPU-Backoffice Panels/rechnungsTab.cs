@@ -26,7 +26,6 @@ namespace EPU_Backoffice_Panels
     public partial class rechnungsTab : UserControl
     {
         private Logger logger = Logger.Instance;
-        private List<BuchungszeilenTable> collectedBuchungszeilen;
         private EingangsrechnungTable eingangsrechnung;
 
         public rechnungsTab()
@@ -107,17 +106,6 @@ namespace EPU_Backoffice_Panels
                 // check for errors
                 if (this.eingangsrechnungMsgLabel.Visible)
                 { return; }
-
-                // create new collection, if it does not already exist
-                if (this.collectedBuchungszeilen == null)
-                {
-                    this.collectedBuchungszeilen = new List<BuchungszeilenTable>();
-                }
-                else
-                {
-                    // if list exists, just clear elements
-                    this.collectedBuchungszeilen.Clear();
-                }
             }            
 
             // save Buchungszeile
@@ -224,9 +212,27 @@ namespace EPU_Backoffice_Panels
             (sender as ComboBox).DataSource = listItems;
         }
 
-        private void BindToEingangsrechnungsDataGridView(object sender, EventArgs e)
+        // Clear everything within Eingangsrechnungstab
+        private void ResetEingangsrechnung(object sender, EventArgs e)
         {
-            
+            this.buchungszeilenBindingSource.Clear();
+            this.eingangsrechnung = null;
+
+            this.existingKontakteComboBox.Enabled = true;
+            this.eingangsrechnungDatePicker.Enabled = true;
+            this.eingangsrechnungBezeichnungTextBox.ReadOnly = false;
+
+            this.existingKontakteComboBox.ResetText();
+            this.eingangsrechnungDatePicker.ResetText();
+            this.eingangsrechnungBezeichnungTextBox.ResetText();
+            this.buchungszeileBezeichnungTextBox.ResetText();
+            this.eingangsrechnungBetragTextBox.ResetText();
+            this.kategorieComboBox.ResetText();
+
+            this.eingangsrechnungMsgLabel.Text = string.Empty;
+            this.eingangsrechnungMsgLabel.Visible = false;
+
+            this.logger.Log(Logger.Level.Info, "Unocked Eingangsrechnungs-elements. Reset all Eingangsrechnungs-Inputfields.");
         }
     }
 }

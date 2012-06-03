@@ -86,6 +86,7 @@
             this.BetragNetto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Buchungsdatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buchungszeilenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.resetEingangsrechnungButton = new System.Windows.Forms.Button();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -209,6 +210,7 @@
             // rechnungEingangTab
             // 
             this.rechnungEingangTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungEingangTab.Controls.Add(this.resetEingangsrechnungButton);
             this.rechnungEingangTab.Controls.Add(this.label2);
             this.rechnungEingangTab.Controls.Add(this.buchungszeileBezeichnungTextBox);
             this.rechnungEingangTab.Controls.Add(this.existingKontakteComboBox);
@@ -262,18 +264,18 @@
             // 
             // finishAccountButton
             // 
-            this.finishAccountButton.Location = new System.Drawing.Point(22, 203);
+            this.finishAccountButton.Location = new System.Drawing.Point(6, 204);
             this.finishAccountButton.Name = "finishAccountButton";
-            this.finishAccountButton.Size = new System.Drawing.Size(200, 23);
+            this.finishAccountButton.Size = new System.Drawing.Size(151, 23);
             this.finishAccountButton.TabIndex = 15;
             this.finishAccountButton.Text = "Rechnung abschließen";
             this.finishAccountButton.UseVisualStyleBackColor = true;
             // 
             // addBuchungszeileButton
             // 
-            this.addBuchungszeileButton.Location = new System.Drawing.Point(22, 174);
+            this.addBuchungszeileButton.Location = new System.Drawing.Point(7, 174);
             this.addBuchungszeileButton.Name = "addBuchungszeileButton";
-            this.addBuchungszeileButton.Size = new System.Drawing.Size(200, 23);
+            this.addBuchungszeileButton.Size = new System.Drawing.Size(150, 23);
             this.addBuchungszeileButton.TabIndex = 14;
             this.addBuchungszeileButton.Text = "Buchungszeile hinzufügen";
             this.addBuchungszeileButton.UseVisualStyleBackColor = true;
@@ -638,6 +640,16 @@
             this.Buchungsdatum.HeaderText = "Buchungsdatum";
             this.Buchungsdatum.Name = "Buchungsdatum";
             // 
+            // resetEingangsrechnungButton
+            // 
+            this.resetEingangsrechnungButton.Location = new System.Drawing.Point(163, 174);
+            this.resetEingangsrechnungButton.Name = "resetEingangsrechnungButton";
+            this.resetEingangsrechnungButton.Size = new System.Drawing.Size(59, 23);
+            this.resetEingangsrechnungButton.TabIndex = 34;
+            this.resetEingangsrechnungButton.Text = "Reset";
+            this.resetEingangsrechnungButton.UseVisualStyleBackColor = true;
+            this.resetEingangsrechnungButton.Click += new System.EventHandler(this.ResetEingangsrechnung);
+            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,5 +735,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BetragNetto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buchungsdatum;
         private System.Windows.Forms.BindingSource buchungszeilenBindingSource;
+        private System.Windows.Forms.Button resetEingangsrechnungButton;
     }
 }
