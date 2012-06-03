@@ -456,5 +456,16 @@ namespace EPU_Backoffice_Panels.Dal
         {
             return MockDataBaseManager.SavedZeitaufzeichnungen;
         }
+
+
+        public int SaveBuchungszeile(BuchungszeilenTable table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

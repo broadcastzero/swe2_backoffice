@@ -103,5 +103,19 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <returns>The saved Zeiterfassungen</returns>
         List<ZeitaufzeichnungTable> LoadZeiterfassung(int projektID);
+
+        /// <summary>
+        /// Saves a new Buchungszeile to the database
+        /// </summary>
+        /// <param name="table">The Buchungszeilen table</param>
+        /// <returns>The ID of the just inserted Buchungszeile</returns>
+        int SaveBuchungszeile(BuchungszeilenTable table);
+
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the database
+        /// </summary>
+        /// <param name="buchungszeilenID">The BuchungszeilenID</param>
+        /// <param name="eingangsrechnungsID">The EingangsrechnungsID</param>
+        void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID);
     }
 }

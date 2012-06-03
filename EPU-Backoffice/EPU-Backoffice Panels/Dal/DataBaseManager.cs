@@ -771,5 +771,16 @@ namespace EPU_Backoffice_Panels.Dal
                 if (con != null) { con.Dispose(); }
             }
         }
+
+
+        public int SaveBuchungszeile(BuchungszeilenTable table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveEingangsbuchung(int buchungszeilenID, int eingangsrechnungsID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
