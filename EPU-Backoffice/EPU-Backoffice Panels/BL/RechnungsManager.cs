@@ -42,7 +42,7 @@ namespace EPU_Backoffice_Panels.BL
             lnhsv2.Eval(table.Bezeichnung);
             slv2.Eval(table.Bezeichnung);
 
-            if (lnhsv.HasErrors || slv.HasErrors || slv2.HasErrors || piv.HasErrors || dv.HasErrors)
+            if (lnhsv.HasErrors || lnhsv2.HasErrors || slv.HasErrors || slv2.HasErrors || piv.HasErrors || dv.HasErrors)
             {
                 throw new InvalidInputException("Daten ungültig!");
             }

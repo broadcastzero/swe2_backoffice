@@ -568,7 +568,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>The id of the just inserted Eingangsrechnung</returns>
         public int CreateEingangsrechnung(EingangsrechnungTable table)
         {
-            string sql = "INSERT INTO Eingangsrechnung (KontaktID, Rechnungsdatum, Archivierungspfad) VALUES (?, ?, ?)";
+            string sql = "INSERT INTO Eingangsrechnung (KontaktID, Bezeichnung, Rechnungsdatum, Archivierungspfad) VALUES (?, ?, ?, ?)";
 
             int insertedID;
 
@@ -590,18 +590,23 @@ namespace EPU_Backoffice_Panels.Dal
                 SQLiteParameter p_firstparam = new SQLiteParameter();
                 SQLiteParameter p_secondparam = new SQLiteParameter();
                 SQLiteParameter p_thirdparam = new SQLiteParameter();
+                SQLiteParameter p_forthparam = new SQLiteParameter();
 
                 // bind kontaktID
                 p_firstparam.Value = table.KontaktID;
                 cmd.Parameters.Add(p_firstparam);
-                
-                // bind rechnungsdatum
-                p_secondparam.Value = table.Rechnungsdatum;
+
+                // bind bezeichnung
+                p_secondparam.Value = table.Bezeichnung;
                 cmd.Parameters.Add(p_secondparam);
 
                 // bind archivierungspfad
-                p_thirdparam.Value = table.Archivierungspfad;
+                p_thirdparam.Value = table.Rechnungsdatum;
                 cmd.Parameters.Add(p_thirdparam);
+
+                // bind rechnungsdatum
+                p_forthparam.Value = table.Archivierungspfad;
+                cmd.Parameters.Add(p_forthparam);
                 
                 // execute and commit
                 cmd.ExecuteNonQuery();

@@ -22,6 +22,7 @@ namespace EPU_Backoffice_Panels
     using LoggingFramework;
     using Rules;
     using UserExceptions;
+    using System.Data.SQLite;
 
     public partial class rechnungsTab : UserControl
     {
@@ -229,6 +230,14 @@ namespace EPU_Backoffice_Panels
                 rechnungsid = manager.CreateEingangsrechnung(this.eingangsrechnung);
             }
             catch (InvalidInputException e)
+            {
+                this.logger.Log(Logger.Level.Error, e.Message);
+                this.eingangsrechnungMsgLabel.Text = e.Message;
+                this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                this.eingangsrechnungMsgLabel.Show();
+                return -1;
+            }
+            catch (SQLiteException e)
             {
                 this.logger.Log(Logger.Level.Error, e.Message);
                 this.eingangsrechnungMsgLabel.Text = e.Message;
