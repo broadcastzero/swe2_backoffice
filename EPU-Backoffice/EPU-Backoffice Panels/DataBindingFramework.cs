@@ -160,8 +160,6 @@ namespace EPU_Backoffice_Panels.DatabindingFramework
                 return 0;
             }
 
-            //convert dots in semicolons (4,33 instead of 4.33)
-            input = input.Replace('.', ',');
             double output;
 
             bool canParse = Double.TryParse(input, out output);

@@ -27,8 +27,11 @@ namespace EPU_Backoffice_Panels.Rules
         /// <param name="input">The input object</param>
         public void Eval(object input)
         {
+            string inp = input.ToString();
+            inp = inp.Replace('.', ',');
+
             double outval;
-            this.HasErrors = !double.TryParse(input.ToString(), NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo, out outval);
+            this.HasErrors = !double.TryParse(inp, out outval);
 
             if (this.HasErrors)
             { return; }
