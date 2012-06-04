@@ -34,6 +34,15 @@ namespace EPU_Backoffice_Panels
         }
 
         /// <summary>
+        /// resets entry fields
+        /// </summary>
+        public void ResetFields() 
+        {
+            this.createKundeNachnameTextBlock.Clear();
+            this.createKundeVornameTextBlock.Clear();
+        }
+
+        /// <summary>
         /// Get values of GUI elements and send them to the business layer, they shall be stored in the database.
         /// </summary>
         /// <param name="sender">object sender</param>
@@ -62,6 +71,7 @@ namespace EPU_Backoffice_Panels
                 saver.SaveNewKundeKontakt(k, this.kundeNeuMsgLabel);
                 
                 GlobalActions.ShowSuccessLabel(this.kundeNeuMsgLabel);
+                ResetFields();
             }
         }
 
