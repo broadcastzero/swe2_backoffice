@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.zeitaufzeichnungDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label39 = new System.Windows.Forms.Label();
             this.zeiterfassungStundensatzTextBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -45,44 +41,30 @@
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.zeiterfassungMsgLabel = new System.Windows.Forms.Label();
             this.zeiterfassungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zeiterfassungBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // zeitaufzeichnungDataGridView
             // 
+            this.zeitaufzeichnungDataGridView.AutoGenerateColumns = false;
             this.zeitaufzeichnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.zeitaufzeichnungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.ProjektID,
             this.Stunden,
-            this.Bezeichnung});
+            this.Bezeichnung,
+            this.Stundensatz});
+            this.zeitaufzeichnungDataGridView.DataSource = this.zeiterfassungBindingSource;
             this.zeitaufzeichnungDataGridView.Location = new System.Drawing.Point(361, 39);
             this.zeitaufzeichnungDataGridView.Name = "zeitaufzeichnungDataGridView";
             this.zeitaufzeichnungDataGridView.Size = new System.Drawing.Size(363, 183);
             this.zeitaufzeichnungDataGridView.TabIndex = 29;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ZeitaufzeichnunsgID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // ProjektID
-            // 
-            this.ProjektID.HeaderText = "ProjektID";
-            this.ProjektID.Name = "ProjektID";
-            this.ProjektID.Visible = false;
-            // 
-            // Stunden
-            // 
-            this.Stunden.HeaderText = "Dauer";
-            this.Stunden.Name = "Stunden";
-            // 
-            // Bezeichnung
-            // 
-            this.Bezeichnung.HeaderText = "Beschreibung";
-            this.Bezeichnung.Name = "Bezeichnung";
             // 
             // label39
             // 
@@ -156,7 +138,6 @@
             // 
             // zeiterfassungHoursTextbox
             // 
-            this.zeiterfassungHoursTextbox.Enabled = false;
             this.zeiterfassungHoursTextbox.Location = new System.Drawing.Point(31, 63);
             this.zeiterfassungHoursTextbox.Name = "zeiterfassungHoursTextbox";
             this.zeiterfassungHoursTextbox.Size = new System.Drawing.Size(200, 20);
@@ -170,6 +151,38 @@
             this.zeiterfassungMsgLabel.Size = new System.Drawing.Size(55, 13);
             this.zeiterfassungMsgLabel.TabIndex = 30;
             this.zeiterfassungMsgLabel.Text = "ErrorLabel";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ZeitaufzeichnunsgID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // ProjektID
+            // 
+            this.ProjektID.DataPropertyName = "ProjektID";
+            this.ProjektID.HeaderText = "ProjektID";
+            this.ProjektID.Name = "ProjektID";
+            this.ProjektID.Visible = false;
+            // 
+            // Stunden
+            // 
+            this.Stunden.DataPropertyName = "Stunden";
+            this.Stunden.HeaderText = "Dauer";
+            this.Stunden.Name = "Stunden";
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.DataPropertyName = "Bezeichnung";
+            this.Bezeichnung.HeaderText = "Beschreibung";
+            this.Bezeichnung.Name = "Bezeichnung";
+            // 
+            // Stundensatz
+            // 
+            this.Stundensatz.DataPropertyName = "Stundensatz";
+            this.Stundensatz.HeaderText = "Strundensatz";
+            this.Stundensatz.Name = "Stundensatz";
             // 
             // zeitTab
             // 
@@ -213,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjektID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stundensatz;
     }
 }

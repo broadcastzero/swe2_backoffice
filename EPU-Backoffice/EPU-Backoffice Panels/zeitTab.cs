@@ -32,7 +32,7 @@ namespace EPU_Backoffice_Panels
             InitializeComponent();
         }
 
-        public void HideMsgLabels()
+        private void HideMsgLabels()
         {
             this.zeiterfassungMsgLabel.Hide();
 
@@ -122,11 +122,11 @@ namespace EPU_Backoffice_Panels
             }
             
             ZeiterfassungsManager manager = new ZeiterfassungsManager();
-            List<zeitTab> results = new List<zeitTab>();
+            List<ZeitaufzeichnungTable> results = new List<ZeitaufzeichnungTable>();
 
             try
             {
-                //results = manager.LoadZeiterfassung(id, this.zeiterfassungMsgLabel);
+                results = manager.LoadZeiterfassung(id, this.zeiterfassungMsgLabel);
             }
             catch (DataBaseException ex)
             {
@@ -134,7 +134,7 @@ namespace EPU_Backoffice_Panels
                 Application.Exit();
             }
 
-        
+            this.zeiterfassungBindingSource.DataSource = results;
         }
 
         /// <summary>

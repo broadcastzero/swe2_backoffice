@@ -38,8 +38,8 @@ namespace EPU_Backoffice_Panels
         /// </summary>
         public void ResetFields() 
         {
-            this.createKundeNachnameTextBlock.Clear();
-            this.createKundeVornameTextBlock.Clear();
+            this.createKundeNachnameTextBlock.Text = string.Empty;
+            this.createKundeVornameTextBlock.Text = string.Empty;
         }
 
         /// <summary>
