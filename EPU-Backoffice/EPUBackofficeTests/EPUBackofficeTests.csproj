@@ -64,6 +64,7 @@
     <Compile Include="KundenKontakteSaverTest.cs" />
     <Compile Include="MockDataBaseManagerTest.cs" />
     <Compile Include="PositiveIntOrMinusOneValidatorTest.cs" />
+    <Compile Include="RechnungsManagerTest.cs" />
     <Compile Include="RulesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
