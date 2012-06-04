@@ -8,6 +8,7 @@
 namespace EPU_Backoffice_Panels.Rules
 {
     using System;
+    using System.Globalization;
     using System.Text;
 
     /// <summary>
@@ -27,7 +28,7 @@ namespace EPU_Backoffice_Panels.Rules
         public void Eval(object input)
         {
             double outval;
-            this.HasErrors = !Double.TryParse(input.ToString(), out outval);
+            this.HasErrors = !double.TryParse(input.ToString(), NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo, out outval);
 
             if (this.HasErrors)
             { return; }

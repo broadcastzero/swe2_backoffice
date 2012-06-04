@@ -79,7 +79,7 @@ namespace BackofficeTests
         [TestMethod()]
         public void CheckDataBaseExistanceTest1()
         {
-            string path = "../../../EPU-Backoffice/bin/Debug/marvin.db"; // create this file in test folder!
+            string path = "../../../EPU-Backoffice/bin/Debug/neuedb.db"; // create this file in test folder!
             bool expected = true;
             bool actual;
             actual = target.CheckDataBaseExistance(path);
