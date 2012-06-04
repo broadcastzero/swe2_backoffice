@@ -1,6 +1,8 @@
 ﻿using EPU_Backoffice_Panels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace EPUBackofficeTests
 {    
@@ -72,6 +74,39 @@ namespace EPUBackofficeTests
             string actual;
             actual = GlobalActions.ParseToSQLiteDateString(input);
             Assert.AreEqual(expected, actual);
+        }
+
+        /// <summary>
+        ///A test for ShowSuccessLabel
+        ///</summary>
+        [TestMethod()]
+        public void ShowSuccessLabelTest1()
+        {
+            Label l = new Label();
+            GlobalActions.ShowSuccessLabel(l);
+            Assert.IsTrue(l.Visible);
+        }
+
+        /// <summary>
+        ///A test for ShowSuccessLabel
+        ///</summary>
+        [TestMethod()]
+        public void ShowSuccessLabelTest2()
+        {
+            Label l = new Label();
+            GlobalActions.ShowSuccessLabel(l);
+            Assert.IsTrue(l.Text == "Erfolgreich aktualisiert.");
+        }
+
+        /// <summary>
+        ///A test for ShowSuccessLabel
+        ///</summary>
+        [TestMethod()]
+        public void ShowSuccessLabelTest3()
+        {
+            Label l = new Label();
+            GlobalActions.ShowSuccessLabel(l);
+            Assert.IsTrue(l.ForeColor == Color.Green);
         }
     }
 }
