@@ -695,7 +695,7 @@ namespace EPU_Backoffice_Panels.Dal
 
         public void SaveNewZeiterfassung(ZeitaufzeichnungTable z)
         {
-            String sql = "INSERT INTO Zeitaufzeichnung (ProjektID, Stunden, Bezeichnung, Stundensatz) VALUES (?, ?, ?. ?)";
+            String sql = "INSERT INTO Zeitaufzeichnung (ProjektID, Stunden, Bezeichnung, Stundensatz) VALUES (?, ?, ?, ?)";
 
             try
             {
@@ -704,6 +704,7 @@ namespace EPU_Backoffice_Panels.Dal
             }
             catch (SQLiteException)
             {
+                this.logger.Log(Logger.Level.Error, "Saving Zeiterfassung failed");
                 throw;
             }
 
@@ -717,7 +718,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>The saved Zeitaufzeichnungen</returns>
         public List<ZeitaufzeichnungTable> LoadZeiterfassung(int projektID)
         {
-            string sql = "SELECT * FROM Zeitaufzeichnung WHERE";
+            string sql = "SELECT * FROM Zeitaufzeichnung WHERE ";
             sql += "ProjektID = ?;";
 
             List<ZeitaufzeichnungTable> results = new List<ZeitaufzeichnungTable>();
@@ -727,6 +728,8 @@ namespace EPU_Backoffice_Panels.Dal
             SQLiteTransaction tra = null;
             SQLiteCommand cmd = null;
             SQLiteDataReader reader = null;
+
+            this.logger.Log(Logger.Level.Info, "Try to load Zeitaufzeichnung out of database... ProjektID which shall be searched for: " + projektID);
 
             try
             {
@@ -755,8 +758,10 @@ namespace EPU_Backoffice_Panels.Dal
                     result.Bezeichnung = reader.GetString(3);
                     result.Stundensatz = reader.GetInt32(4);
                     results.Add(result);
+                    this.logger.Log(Logger.Level.Info, "Result added to list, ID: " + result.ID);
                 }
 
+                this.logger.Log(Logger.Level.Info, "Loading finished.");
                 return results;
             }
             catch (SQLiteException)

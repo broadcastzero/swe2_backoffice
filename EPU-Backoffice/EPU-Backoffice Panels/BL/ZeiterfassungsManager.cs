@@ -68,7 +68,7 @@ namespace EPU_Backoffice_Panels.BL
             // load elements
             try
             {
-                DALFactory.GetDAL();
+                DALFactory.GetDAL().SaveNewZeiterfassung(z);
             }
             catch (SQLiteException)
             {
