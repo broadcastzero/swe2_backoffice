@@ -73,7 +73,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <summary>
         /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
         /// </summary>
-        public static int ZeitaufzeichnungID { get { return eingangsrechnungID++; } }
+        public static int ZeitaufzeichnungID { get { return zeiterfassungID++; } }
 
         // Gets or sets private fields for saved Kunden/Kontakte (ILists)
         private static List<KundeKontaktTable> savedKunden;
