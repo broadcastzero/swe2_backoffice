@@ -342,7 +342,7 @@ namespace EPU_Backoffice_Panels
             XFont columHeader = new XFont("Calibri", 10, XFontStyle.Bold);
             XFont Text = new XFont("Calibri", 10);
             
-            gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormat.TopCenter);
+            gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
             
 
             string filename = "HelloWorld.pdf";
@@ -358,6 +358,9 @@ namespace EPU_Backoffice_Panels
 
         private void ShowKundenRechnung(object sender, EventArgs e) 
         {
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+
             MessageBox.Show("not yet implemented - Show");
         }
 
