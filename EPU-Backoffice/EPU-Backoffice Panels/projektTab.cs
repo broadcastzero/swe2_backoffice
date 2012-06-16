@@ -166,7 +166,7 @@ namespace EPU_Backoffice_Panels
             int id = -1;
             try
             {
-                id = GlobalActions.getIdFromCombobox(kundenID, projektSuchenMessageLabel);
+                id = GlobalActions.GetIdFromCombobox(kundenID, projektSuchenMessageLabel);
                 logger.Log(Logger.Level.Info, "kundenid in projekt search: " + id);
             }
             catch(InvalidInputException)

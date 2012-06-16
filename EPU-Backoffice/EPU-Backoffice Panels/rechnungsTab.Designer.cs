@@ -33,7 +33,7 @@
             this.rechnungAusgangTab = new System.Windows.Forms.TabPage();
             this.unpaidBalanceTextBox = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.ausgangsrechnungComboBox = new System.Windows.Forms.ComboBox();
+            this.projekteComboBox = new System.Windows.Forms.ComboBox();
             this.ausgangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
             this.ZeitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,6 +92,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.ausgangsrechnungMsgLabel = new System.Windows.Forms.Label();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -119,9 +120,10 @@
             // rechnungAusgangTab
             // 
             this.rechnungAusgangTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungMsgLabel);
             this.rechnungAusgangTab.Controls.Add(this.unpaidBalanceTextBox);
             this.rechnungAusgangTab.Controls.Add(this.label35);
-            this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungComboBox);
+            this.rechnungAusgangTab.Controls.Add(this.projekteComboBox);
             this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungDataGridView);
             this.rechnungAusgangTab.Controls.Add(this.rechnungstitelTextBox);
             this.rechnungAusgangTab.Controls.Add(this.createRechnungButton);
@@ -151,15 +153,15 @@
             this.label35.TabIndex = 8;
             this.label35.Text = "Offene Projekte";
             // 
-            // ausgangsrechnungComboBox
+            // projekteComboBox
             // 
-            this.ausgangsrechnungComboBox.FormattingEnabled = true;
-            this.ausgangsrechnungComboBox.Location = new System.Drawing.Point(20, 16);
-            this.ausgangsrechnungComboBox.Name = "ausgangsrechnungComboBox";
-            this.ausgangsrechnungComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ausgangsrechnungComboBox.TabIndex = 7;
-            this.ausgangsrechnungComboBox.DropDown += new System.EventHandler(this.ausgangsrechnungComboBox_DropDown);
-            this.ausgangsrechnungComboBox.SelectedIndexChanged += new System.EventHandler(this.BindFromExistingZeitaufzeichnungen);
+            this.projekteComboBox.FormattingEnabled = true;
+            this.projekteComboBox.Location = new System.Drawing.Point(20, 16);
+            this.projekteComboBox.Name = "projekteComboBox";
+            this.projekteComboBox.Size = new System.Drawing.Size(121, 21);
+            this.projekteComboBox.TabIndex = 7;
+            this.projekteComboBox.DropDown += new System.EventHandler(this.ausgangsrechnungComboBox_DropDown);
+            this.projekteComboBox.SelectedIndexChanged += new System.EventHandler(this.BindFromExistingZeitaufzeichnungen);
             // 
             // ausgangsrechnungDataGridView
             // 
@@ -227,6 +229,7 @@
             this.createRechnungButton.TabIndex = 3;
             this.createRechnungButton.Text = "Rechnung erstellen";
             this.createRechnungButton.UseVisualStyleBackColor = true;
+            this.createRechnungButton.Click += new System.EventHandler(this.CreateAusgangsrechnung);
             // 
             // label7
             // 
@@ -692,6 +695,16 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
+            // ausgangsrechnungMsgLabel
+            // 
+            this.ausgangsrechnungMsgLabel.AutoSize = true;
+            this.ausgangsrechnungMsgLabel.Location = new System.Drawing.Point(17, 160);
+            this.ausgangsrechnungMsgLabel.Name = "ausgangsrechnungMsgLabel";
+            this.ausgangsrechnungMsgLabel.Size = new System.Drawing.Size(76, 13);
+            this.ausgangsrechnungMsgLabel.TabIndex = 25;
+            this.ausgangsrechnungMsgLabel.Text = "MessageLabel";
+            this.ausgangsrechnungMsgLabel.Visible = false;
+            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -722,7 +735,7 @@
         private System.Windows.Forms.TabControl rechnungsTabControl;
         private System.Windows.Forms.TabPage rechnungAusgangTab;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox ausgangsrechnungComboBox;
+        private System.Windows.Forms.ComboBox projekteComboBox;
         private System.Windows.Forms.DataGridView ausgangsrechnungDataGridView;
         private System.Windows.Forms.TextBox rechnungstitelTextBox;
         private System.Windows.Forms.Button createRechnungButton;
@@ -782,5 +795,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stundensatz;
+        private System.Windows.Forms.Label ausgangsrechnungMsgLabel;
     }
 }

@@ -122,7 +122,7 @@ namespace EPU_Backoffice_Panels
         /// 
         /// </summary>
         /// <returns></returns>
-        public static int getIdFromCombobox(string data, Label messages)
+        public static int GetIdFromCombobox(string data, Label messages)
         {
             int id;   
             // if no Kunde has been chosen, set kundenID to -1, which indicates, that it shall not be searched for a certain Kunde

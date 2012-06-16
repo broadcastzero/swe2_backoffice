@@ -111,7 +111,7 @@ namespace EPU_Backoffice_Panels
 
             try
             {
-                id = GlobalActions.getIdFromCombobox(projektID, zeiterfassungMsgLabel);
+                id = GlobalActions.GetIdFromCombobox(projektID, zeiterfassungMsgLabel);
             }
             catch
             (
