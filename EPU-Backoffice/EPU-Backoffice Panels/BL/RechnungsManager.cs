@@ -143,5 +143,17 @@ namespace EPU_Backoffice_Panels.BL
                 throw; 
             }
         }
+
+        /// <summary>
+        /// Saves a new Ausgangsrechnung within the database
+        /// </summary>
+        /// <param name="projektID">The connected ProjektID</param>
+        /// <param name="unpaidBalance">The amount of money which the Ausgangsrechnung shall include</param>
+        /// <param name="rechnungstitelString">The title of the Ausgangsrechnung</param>
+        public void CreateAusgangsrechnung(int projektID, double unpaidBalance, string rechnungstitelString)
+        { 
+            // validate input
+            //IRule 
+        }
     }
 }

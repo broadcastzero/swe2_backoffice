@@ -26,14 +26,14 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { if (value >= 0) { id = value; } }
         }
 
-        private int kundenID;
+        private int projektID;
         /// <summary>
-        /// Gets or sets foreign key to table Kunde
+        /// Gets or sets unique ID of the connected project
         /// </summary>
-        public int KundenID
+        public int ProjektID
         {
-            get { return kundenID; }
-            set { if (value >= 0) { kundenID = value; } }
+            get { return projektID; }
+            set { if (value >= 0) { projektID = value; } }
         }
 
         private DateTime rechnungsdatum;
@@ -44,6 +44,16 @@ namespace EPU_Backoffice_Panels.Dal.Tables
         {
             get { return rechnungsdatum; }
             set { rechnungsdatum = value; }
+        }
+
+        private DateTime bezeichnung;
+        /// <summary>
+        /// Gets or sets the title of the Ausgangsrechnung
+        /// </summary>
+        public DateTime Bezeichnung
+        {
+            get { return bezeichnung; }
+            set { bezeichnung = value; }
         }
     }
 }

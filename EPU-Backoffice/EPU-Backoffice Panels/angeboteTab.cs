@@ -262,7 +262,7 @@ namespace EPU_Backoffice_Panels
 
             try
             {
-                id = GlobalActions.getIdFromCombobox(kundenID, angebotSuchenMsgLabel);
+                id = GlobalActions.GetIdFromCombobox(kundenID, angebotSuchenMsgLabel);
             }
             catch
             (

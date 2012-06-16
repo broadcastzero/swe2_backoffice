@@ -77,7 +77,7 @@ namespace EPU_Backoffice_Panels
 
                 try
                 {
-                    this.eingangsrechnung.KontaktID = GlobalActions.getIdFromCombobox(kontaktID, this.eingangsrechnungMsgLabel);
+                    this.eingangsrechnung.KontaktID = GlobalActions.GetIdFromCombobox(kontaktID, this.eingangsrechnungMsgLabel);
                 }
                 catch (InvalidInputException)
                 {
@@ -292,12 +292,12 @@ namespace EPU_Backoffice_Panels
         private void BindFromExistingZeitaufzeichnungen(object sender, EventArgs e)
         {
             // only if a value is selected
-            if (this.ausgangsrechnungComboBox.SelectedIndex > 0)
+            if (this.projekteComboBox.SelectedIndex > 0)
             {
                 List<ZeitaufzeichnungTable> results = new List<ZeitaufzeichnungTable>();
                 
                 // get projectID
-                int pID = GlobalActions.getIdFromCombobox(this.ausgangsrechnungComboBox.SelectedValue.ToString(), this.eingangsrechnungMsgLabel);
+                int pID = GlobalActions.GetIdFromCombobox(this.projekteComboBox.SelectedValue.ToString(), this.eingangsrechnungMsgLabel);
                 this.logger.Log(Logger.Level.Info, "Starts searching for Zeitauffassungen with project id " + pID);
 
                 ZeiterfassungsManager loader = new ZeiterfassungsManager();
@@ -331,6 +331,7 @@ namespace EPU_Backoffice_Panels
             }
         }
 
+<<<<<<< HEAD
         private void ShowUmsaetze(object sender, EventArgs e) 
         {
             PdfDocument document = new PdfDocument();
@@ -365,5 +366,78 @@ namespace EPU_Backoffice_Panels
             MessageBox.Show("not yet implemented - Print");
         }
        
+=======
+        /// <summary>
+        /// Creates a new Ausgangsrechnung with the provided parameters
+        /// </summary>
+        /// <param name="sender">The sending button</param>
+        /// <param name="e">The EventArgs</param>
+        private void CreateAusgangsrechnung(object sender, EventArgs e)
+        {
+            // reset message label
+            this.ausgangsrechnungMsgLabel.Visible = false;
+            this.ausgangsrechnungMsgLabel.Text = string.Empty;
+
+            // check if a projekt is selected
+            if (this.projekteComboBox.SelectedIndex < 1)
+            {
+                this.ausgangsrechnungMsgLabel.Visible = true;
+                this.ausgangsrechnungMsgLabel.Text = "Kein Projekt ausgewählt";
+                this.ausgangsrechnungMsgLabel.ForeColor = Color.Red;
+                return;
+            }
+            
+            AusgangsrechnungTable table = new AusgangsrechnungTable();
+
+            // Get values
+            int projektID = GlobalActions.GetIdFromCombobox(this.projekteComboBox.SelectedValue.ToString(), this.ausgangsrechnungMsgLabel);
+            string unpaidBalanceString = this.unpaidBalanceTextBox.Text;
+            string rechnungstitelString = this.rechnungstitelTextBox.Text;
+
+            double unpaidBalance;
+
+            // Validate values
+            IRule posintval = new PositiveIntValidator();
+            IRule posdoubval = new PositiveDoubleValidator();
+            IRule lnhsv = new LettersNumbersHyphenSpaceValidator();
+            IRule slv = new StringLength150Validator();
+
+            DataBindingFramework.BindFromInt(projektID.ToString(), "ProjektID", this.ausgangsrechnungMsgLabel, false, posintval);
+            unpaidBalance = DataBindingFramework.BindFromDouble(unpaidBalanceString, "Offener Betrag", this.ausgangsrechnungMsgLabel, false, posdoubval);
+            DataBindingFramework.BindFromString(rechnungstitelString, "Rechnungstitel", this.ausgangsrechnungMsgLabel, false, lnhsv, slv);
+
+            // return if errors occured
+            if (this.ausgangsrechnungMsgLabel.Visible)
+            {
+                return;
+            }
+
+            // no errors, send values to business layer
+            RechnungsManager saver = new RechnungsManager();
+
+            try
+            {
+                saver.CreateAusgangsrechnung(projektID, unpaidBalance, rechnungstitelString);
+            }
+            catch (InvalidInputException)
+            {
+                this.logger.Log(Logger.Level.Error, "The business layer returned the provided values for saving a new Ausgangsrechnung with an error.");
+            }
+            catch (SQLiteException ex)
+            {
+                this.logger.Log(Logger.Level.Error, "A serious problem with the database occured while trying to save a new Ausgangsrechnung.");
+                this.logger.Log(Logger.Level.Error, ex.Message);
+                this.ausgangsrechnungMsgLabel.Text = ex.Message;
+                this.ausgangsrechnungMsgLabel.ForeColor = Color.Red;
+                this.ausgangsrechnungMsgLabel.Show();
+            }
+
+            // show success message label (only if saving has been successful)
+            if (!this.ausgangsrechnungMsgLabel.Visible)
+            {
+                GlobalActions.ShowSuccessLabel(this.ausgangsrechnungMsgLabel);
+            }
+        }
+>>>>>>> d0ba2fa98147878c484d759aac9fb4dd93916ca7
     }
 }
