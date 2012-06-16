@@ -103,7 +103,7 @@ namespace EPU_Backoffice_Panels
         /// <summary>
         /// Loads all Zeiterfassungen into datagrid
         /// </summary>
-        private void SearchZeiterfassung()
+        private void SearchZeiterfassung(object sender, EventArgs e)
         {
             // get kundenID out of ComboBox
             string projektID = this.zeiterfassungCombobox.SelectedItem.ToString();
@@ -160,7 +160,5 @@ namespace EPU_Backoffice_Panels
             this.zeiterfassungDescriptionTextBox.ReadOnly = false;
             this.zeiterfassungHoursTextbox.ReadOnly = false;
         }
-
-
     }
 }

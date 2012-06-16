@@ -46,17 +46,17 @@
             this.searchKontaktRadioButton = new System.Windows.Forms.RadioButton();
             this.searchKundeRadioButton = new System.Windows.Forms.RadioButton();
             this.kundenSearchDataGridView = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundenSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.changeKundeButton = new System.Windows.Forms.Button();
             this.kundenSearchButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.searchKundeNachnameTextBlock = new System.Windows.Forms.TextBox();
             this.searchKundeVornameTextBlock = new System.Windows.Forms.TextBox();
-            this.kundenSuchenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kundenTabControl.SuspendLayout();
             this.kundenTabCreate.SuspendLayout();
             this.kundenTabSearchChange.SuspendLayout();
@@ -250,9 +250,8 @@
             // 
             this.kundenSearchDataGridView.AllowUserToAddRows = false;
             this.kundenSearchDataGridView.AllowUserToDeleteRows = false;
-            this.kundenSearchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.kundenSearchDataGridView.AutoGenerateColumns = false;
-            this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.kundenSearchDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kundenSearchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kundenSearchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -266,40 +265,6 @@
             this.kundenSearchDataGridView.ReadOnly = true;
             this.kundenSearchDataGridView.Size = new System.Drawing.Size(363, 183);
             this.kundenSearchDataGridView.TabIndex = 6;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 43;
-            // 
-            // Vorname
-            // 
-            this.Vorname.DataPropertyName = "Vorname";
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
-            this.Vorname.Width = 74;
-            // 
-            // Nachname
-            // 
-            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nachname.DataPropertyName = "NachnameFirmenname";
-            this.Nachname.HeaderText = "Nachname / Firmenname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
-            // 
-            // Type
-            // 
-            this.Type.DataPropertyName = "Type";
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Visible = false;
-            this.Type.Width = 56;
             // 
             // changeKundeButton
             // 
@@ -353,6 +318,36 @@
             this.searchKundeVornameTextBlock.Size = new System.Drawing.Size(214, 20);
             this.searchKundeVornameTextBlock.TabIndex = 0;
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MaxInputLength = 327;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Vorname
+            // 
+            this.Vorname.DataPropertyName = "Vorname";
+            this.Vorname.HeaderText = "Vorname";
+            this.Vorname.Name = "Vorname";
+            this.Vorname.ReadOnly = true;
+            // 
+            // Nachname
+            // 
+            this.Nachname.DataPropertyName = "NachnameFirmenname";
+            this.Nachname.HeaderText = "Nachname / Firmenname";
+            this.Nachname.Name = "Nachname";
+            this.Nachname.ReadOnly = true;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "Type";
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Visible = false;
+            // 
             // kundenKontakteTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,10 +385,6 @@
         private System.Windows.Forms.RadioButton searchKontaktRadioButton;
         private System.Windows.Forms.RadioButton searchKundeRadioButton;
         private System.Windows.Forms.DataGridView kundenSearchDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.Button changeKundeButton;
         private System.Windows.Forms.Button kundenSearchButton;
         private System.Windows.Forms.Label label4;
@@ -401,5 +392,9 @@
         private System.Windows.Forms.TextBox searchKundeNachnameTextBlock;
         private System.Windows.Forms.TextBox searchKundeVornameTextBlock;
         private System.Windows.Forms.BindingSource kundenSuchenBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.zeitaufzeichnungDataGridView = new System.Windows.Forms.DataGridView();
+            this.zeiterfassungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label39 = new System.Windows.Forms.Label();
             this.zeiterfassungStundensatzTextBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -40,11 +41,10 @@
             this.zeiterfassungSubmitButton = new System.Windows.Forms.Button();
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.zeiterfassungMsgLabel = new System.Windows.Forms.Label();
-            this.zeiterfassungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zeiterfassungBindingSource)).BeginInit();
@@ -52,13 +52,16 @@
             // 
             // zeitaufzeichnungDataGridView
             // 
+            this.zeitaufzeichnungDataGridView.AllowUserToAddRows = false;
+            this.zeitaufzeichnungDataGridView.AllowUserToDeleteRows = false;
             this.zeitaufzeichnungDataGridView.AutoGenerateColumns = false;
+            this.zeitaufzeichnungDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.zeitaufzeichnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.zeitaufzeichnungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.ProjektID,
-            this.Stunden,
             this.Bezeichnung,
+            this.Stunden,
             this.Stundensatz});
             this.zeitaufzeichnungDataGridView.DataSource = this.zeiterfassungBindingSource;
             this.zeitaufzeichnungDataGridView.Location = new System.Drawing.Point(361, 39);
@@ -125,6 +128,7 @@
             this.zeiterfassungCombobox.Size = new System.Drawing.Size(200, 21);
             this.zeiterfassungCombobox.TabIndex = 20;
             this.zeiterfassungCombobox.DropDown += new System.EventHandler(this.zeiterfassungCombobox_DropDown);
+            this.zeiterfassungCombobox.SelectedIndexChanged += new System.EventHandler(this.SearchZeiterfassung);
             // 
             // zeiterfassungSubmitButton
             // 
@@ -166,17 +170,17 @@
             this.ProjektID.Name = "ProjektID";
             this.ProjektID.Visible = false;
             // 
-            // Stunden
-            // 
-            this.Stunden.DataPropertyName = "Stunden";
-            this.Stunden.HeaderText = "Dauer";
-            this.Stunden.Name = "Stunden";
-            // 
             // Bezeichnung
             // 
             this.Bezeichnung.DataPropertyName = "Bezeichnung";
             this.Bezeichnung.HeaderText = "Beschreibung";
             this.Bezeichnung.Name = "Bezeichnung";
+            // 
+            // Stunden
+            // 
+            this.Stunden.DataPropertyName = "Stunden";
+            this.Stunden.HeaderText = "Dauer";
+            this.Stunden.Name = "Stunden";
             // 
             // Stundensatz
             // 
@@ -224,8 +228,8 @@
         private System.Windows.Forms.BindingSource zeiterfassungBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProjektID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stundensatz;
     }
 }

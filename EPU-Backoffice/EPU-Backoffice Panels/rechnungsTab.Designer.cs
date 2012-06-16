@@ -35,6 +35,11 @@
             this.label35 = new System.Windows.Forms.Label();
             this.ausgangsrechnungComboBox = new System.Windows.Forms.ComboBox();
             this.ausgangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
+            this.ZeitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ausgangsrechnungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rechnungstitelTextBox = new System.Windows.Forms.TextBox();
             this.createRechnungButton = new System.Windows.Forms.Button();
@@ -87,11 +92,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.ZeitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -166,6 +166,7 @@
             this.ausgangsrechnungDataGridView.AllowUserToAddRows = false;
             this.ausgangsrechnungDataGridView.AllowUserToDeleteRows = false;
             this.ausgangsrechnungDataGridView.AutoGenerateColumns = false;
+            this.ausgangsrechnungDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ausgangsrechnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ausgangsrechnungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ZeitID,
@@ -178,6 +179,38 @@
             this.ausgangsrechnungDataGridView.Name = "ausgangsrechnungDataGridView";
             this.ausgangsrechnungDataGridView.Size = new System.Drawing.Size(346, 183);
             this.ausgangsrechnungDataGridView.TabIndex = 6;
+            // 
+            // ZeitID
+            // 
+            this.ZeitID.DataPropertyName = "ID";
+            this.ZeitID.HeaderText = "ID";
+            this.ZeitID.Name = "ZeitID";
+            this.ZeitID.Visible = false;
+            // 
+            // ProjektID
+            // 
+            this.ProjektID.DataPropertyName = "ProjektID";
+            this.ProjektID.HeaderText = "ProjektID";
+            this.ProjektID.Name = "ProjektID";
+            this.ProjektID.Visible = false;
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.DataPropertyName = "Bezeichnung";
+            this.Bezeichnung.HeaderText = "Bezeichung";
+            this.Bezeichnung.Name = "Bezeichnung";
+            // 
+            // Stunden
+            // 
+            this.Stunden.DataPropertyName = "Stunden";
+            this.Stunden.HeaderText = "Stunden";
+            this.Stunden.Name = "Stunden";
+            // 
+            // Stundensatz
+            // 
+            this.Stundensatz.DataPropertyName = "Stundensatz";
+            this.Stundensatz.HeaderText = "Stundensatz";
+            this.Stundensatz.Name = "Stundensatz";
             // 
             // rechnungstitelTextBox
             // 
@@ -658,38 +691,6 @@
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
-            // 
-            // ZeitID
-            // 
-            this.ZeitID.DataPropertyName = "ID";
-            this.ZeitID.HeaderText = "ID";
-            this.ZeitID.Name = "ZeitID";
-            this.ZeitID.Visible = false;
-            // 
-            // ProjektID
-            // 
-            this.ProjektID.DataPropertyName = "ProjektID";
-            this.ProjektID.HeaderText = "ProjektID";
-            this.ProjektID.Name = "ProjektID";
-            this.ProjektID.Visible = false;
-            // 
-            // Bezeichnung
-            // 
-            this.Bezeichnung.DataPropertyName = "Bezeichnung";
-            this.Bezeichnung.HeaderText = "Bezeichung";
-            this.Bezeichnung.Name = "Bezeichnung";
-            // 
-            // Stunden
-            // 
-            this.Stunden.DataPropertyName = "Stunden";
-            this.Stunden.HeaderText = "Stunden";
-            this.Stunden.Name = "Stunden";
-            // 
-            // Stundensatz
-            // 
-            this.Stundensatz.DataPropertyName = "Stundensatz";
-            this.Stundensatz.HeaderText = "Stundensatz";
-            this.Stundensatz.Name = "Stundensatz";
             // 
             // rechnungsTab
             // 
