@@ -34,8 +34,6 @@
             this.label35 = new System.Windows.Forms.Label();
             this.ausgangsrechnungComboBox = new System.Windows.Forms.ComboBox();
             this.ausgangsrechnungDataGridView = new System.Windows.Forms.DataGridView();
-            this.unpaidBalancePanel = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.rechnungstitelTextBox = new System.Windows.Forms.TextBox();
             this.createRechnungButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -87,16 +85,23 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.ausgangsrechnungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ZeitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unpaidBalanceTextBox = new System.Windows.Forms.TextBox();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
-            this.unpaidBalancePanel.SuspendLayout();
             this.rechnungEingangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buchungszeilenBindingSource)).BeginInit();
             this.rechnungDruckenTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.rechnungUmsatzTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rechnungsTabControl
@@ -114,10 +119,10 @@
             // rechnungAusgangTab
             // 
             this.rechnungAusgangTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungAusgangTab.Controls.Add(this.unpaidBalanceTextBox);
             this.rechnungAusgangTab.Controls.Add(this.label35);
             this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungComboBox);
             this.rechnungAusgangTab.Controls.Add(this.ausgangsrechnungDataGridView);
-            this.rechnungAusgangTab.Controls.Add(this.unpaidBalancePanel);
             this.rechnungAusgangTab.Controls.Add(this.rechnungstitelTextBox);
             this.rechnungAusgangTab.Controls.Add(this.createRechnungButton);
             this.rechnungAusgangTab.Controls.Add(this.label7);
@@ -146,32 +151,25 @@
             this.ausgangsrechnungComboBox.Size = new System.Drawing.Size(121, 21);
             this.ausgangsrechnungComboBox.TabIndex = 7;
             this.ausgangsrechnungComboBox.DropDown += new System.EventHandler(this.ausgangsrechnungComboBox_DropDown);
+            this.ausgangsrechnungComboBox.SelectedIndexChanged += new System.EventHandler(this.BindFromExistingZeitaufzeichnungen);
             // 
             // ausgangsrechnungDataGridView
             // 
+            this.ausgangsrechnungDataGridView.AllowUserToAddRows = false;
+            this.ausgangsrechnungDataGridView.AllowUserToDeleteRows = false;
+            this.ausgangsrechnungDataGridView.AutoGenerateColumns = false;
             this.ausgangsrechnungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ausgangsrechnungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ZeitID,
+            this.ProjektID,
+            this.Stunden,
+            this.Bezeichnung,
+            this.Stundensatz});
+            this.ausgangsrechnungDataGridView.DataSource = this.ausgangsrechnungBindingSource;
             this.ausgangsrechnungDataGridView.Location = new System.Drawing.Point(383, 25);
             this.ausgangsrechnungDataGridView.Name = "ausgangsrechnungDataGridView";
             this.ausgangsrechnungDataGridView.Size = new System.Drawing.Size(346, 183);
             this.ausgangsrechnungDataGridView.TabIndex = 6;
-            // 
-            // unpaidBalancePanel
-            // 
-            this.unpaidBalancePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.unpaidBalancePanel.Controls.Add(this.label6);
-            this.unpaidBalancePanel.Location = new System.Drawing.Point(156, 43);
-            this.unpaidBalancePanel.Name = "unpaidBalancePanel";
-            this.unpaidBalancePanel.Size = new System.Drawing.Size(209, 23);
-            this.unpaidBalancePanel.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "0";
             // 
             // rechnungstitelTextBox
             // 
@@ -653,6 +651,45 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
+            // ZeitID
+            // 
+            this.ZeitID.DataPropertyName = "ID";
+            this.ZeitID.HeaderText = "ID";
+            this.ZeitID.Name = "ZeitID";
+            // 
+            // ProjektID
+            // 
+            this.ProjektID.DataPropertyName = "ProjektID";
+            this.ProjektID.HeaderText = "ProjektID";
+            this.ProjektID.Name = "ProjektID";
+            this.ProjektID.Visible = false;
+            // 
+            // Stunden
+            // 
+            this.Stunden.DataPropertyName = "Stunden";
+            this.Stunden.HeaderText = "Stunden";
+            this.Stunden.Name = "Stunden";
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.DataPropertyName = "Bezeichnung";
+            this.Bezeichnung.HeaderText = "Bezeichung";
+            this.Bezeichnung.Name = "Bezeichnung";
+            // 
+            // Stundensatz
+            // 
+            this.Stundensatz.DataPropertyName = "Stundensatz";
+            this.Stundensatz.HeaderText = "Stundensatz";
+            this.Stundensatz.Name = "Stundensatz";
+            // 
+            // unpaidBalanceTextBox
+            // 
+            this.unpaidBalanceTextBox.Enabled = false;
+            this.unpaidBalanceTextBox.Location = new System.Drawing.Point(156, 45);
+            this.unpaidBalanceTextBox.Name = "unpaidBalanceTextBox";
+            this.unpaidBalanceTextBox.Size = new System.Drawing.Size(209, 20);
+            this.unpaidBalanceTextBox.TabIndex = 9;
+            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -664,8 +701,6 @@
             this.rechnungAusgangTab.ResumeLayout(false);
             this.rechnungAusgangTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).EndInit();
-            this.unpaidBalancePanel.ResumeLayout(false);
-            this.unpaidBalancePanel.PerformLayout();
             this.rechnungEingangTab.ResumeLayout(false);
             this.rechnungEingangTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eingangsrechnungDataGridView)).EndInit();
@@ -675,6 +710,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.rechnungUmsatzTab.ResumeLayout(false);
             this.rechnungUmsatzTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -686,8 +722,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox ausgangsrechnungComboBox;
         private System.Windows.Forms.DataGridView ausgangsrechnungDataGridView;
-        private System.Windows.Forms.Panel unpaidBalancePanel;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox rechnungstitelTextBox;
         private System.Windows.Forms.Button createRechnungButton;
         private System.Windows.Forms.Label label7;
@@ -739,5 +773,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BetragUST;
         private System.Windows.Forms.DataGridViewTextBoxColumn BetragNetto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Buchungsdatum;
+        private System.Windows.Forms.BindingSource ausgangsrechnungBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZeitID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProjektID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bezeichnung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stundensatz;
+        private System.Windows.Forms.TextBox unpaidBalanceTextBox;
     }
 }

@@ -281,5 +281,52 @@ namespace EPU_Backoffice_Panels
 
             return rechnungsid;
         }
+
+        /// <summary>
+        /// Loads Zeitaufzeichnungen to Datagridview and show Sum of remaining bills
+        /// </summary>
+        /// <param name="sender">The sending ComboBox</param>
+        /// <param name="e">The EventArgs</param>
+        private void BindFromExistingZeitaufzeichnungen(object sender, EventArgs e)
+        {
+            // only if a value is selected
+            if (this.ausgangsrechnungComboBox.SelectedIndex > 0)
+            {
+                List<ZeitaufzeichnungTable> results = new List<ZeitaufzeichnungTable>();
+                
+                // get projectID
+                int pID = GlobalActions.getIdFromCombobox(this.ausgangsrechnungComboBox.SelectedValue.ToString(), this.eingangsrechnungMsgLabel);
+                this.logger.Log(Logger.Level.Info, "Starts searching for Zeitauffassungen with project id " + pID);
+
+                ZeiterfassungsManager loader = new ZeiterfassungsManager();
+
+                try
+                {
+                    results = loader.LoadZeiterfassung(pID, this.eingangsrechnungMsgLabel);
+                }
+                catch(SQLiteException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, ex.Message);
+                    this.eingangsrechnungMsgLabel.Text = ex.Message;
+                    this.eingangsrechnungMsgLabel.ForeColor = Color.Red;
+                    this.eingangsrechnungMsgLabel.Show();
+                }
+
+                if (results.Count > 0)
+                {
+                    // bind to datagridview
+                    this.ausgangsrechnungBindingSource.DataSource = results;
+
+                    // calculate sum and set result to textbox
+                    int sum = 0;
+                    foreach (ZeitaufzeichnungTable aufzeichnung in results)
+                    {
+                        sum += aufzeichnung.Stunden * aufzeichnung.Stundensatz;
+                    }
+
+                    this.unpaidBalanceTextBox.Text = sum.ToString();
+                }
+            }
+        }
     }
 }
