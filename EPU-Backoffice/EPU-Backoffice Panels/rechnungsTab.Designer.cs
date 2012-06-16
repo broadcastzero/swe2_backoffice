@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.rechnungsTabControl = new System.Windows.Forms.TabControl();
             this.rechnungAusgangTab = new System.Windows.Forms.TabPage();
+            this.ausgangsrechnungMsgLabel = new System.Windows.Forms.Label();
             this.unpaidBalanceTextBox = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.projekteComboBox = new System.Windows.Forms.ComboBox();
@@ -80,7 +81,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
             this.existingKundenComboBox = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.rechnungUmsatzTab = new System.Windows.Forms.TabPage();
@@ -92,7 +92,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.ausgangsrechnungMsgLabel = new System.Windows.Forms.Label();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -135,6 +134,16 @@
             this.rechnungAusgangTab.Size = new System.Drawing.Size(747, 233);
             this.rechnungAusgangTab.TabIndex = 0;
             this.rechnungAusgangTab.Text = "Ausgangsrechnung";
+            // 
+            // ausgangsrechnungMsgLabel
+            // 
+            this.ausgangsrechnungMsgLabel.AutoSize = true;
+            this.ausgangsrechnungMsgLabel.Location = new System.Drawing.Point(17, 160);
+            this.ausgangsrechnungMsgLabel.Name = "ausgangsrechnungMsgLabel";
+            this.ausgangsrechnungMsgLabel.Size = new System.Drawing.Size(76, 13);
+            this.ausgangsrechnungMsgLabel.TabIndex = 25;
+            this.ausgangsrechnungMsgLabel.Text = "MessageLabel";
+            this.ausgangsrechnungMsgLabel.Visible = false;
             // 
             // unpaidBalanceTextBox
             // 
@@ -488,7 +497,6 @@
             this.rechnungDruckenTab.Controls.Add(this.radioButton1);
             this.rechnungDruckenTab.Controls.Add(this.label14);
             this.rechnungDruckenTab.Controls.Add(this.existingKundenComboBox);
-            this.rechnungDruckenTab.Controls.Add(this.button5);
             this.rechnungDruckenTab.Controls.Add(this.button4);
             this.rechnungDruckenTab.Controls.Add(this.dataGridView3);
             this.rechnungDruckenTab.Location = new System.Drawing.Point(4, 22);
@@ -579,19 +587,9 @@
             this.existingKundenComboBox.TabIndex = 9;
             this.existingKundenComboBox.DropDown += new System.EventHandler(this.BindToExistingKundenComboBox);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(177, 185);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Rechnung drucken";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.PrintKundenRechnung);
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(177, 156);
+            this.button4.Location = new System.Drawing.Point(177, 166);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 23);
             this.button4.TabIndex = 7;
@@ -699,16 +697,6 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
             // 
-            // ausgangsrechnungMsgLabel
-            // 
-            this.ausgangsrechnungMsgLabel.AutoSize = true;
-            this.ausgangsrechnungMsgLabel.Location = new System.Drawing.Point(17, 160);
-            this.ausgangsrechnungMsgLabel.Name = "ausgangsrechnungMsgLabel";
-            this.ausgangsrechnungMsgLabel.Size = new System.Drawing.Size(76, 13);
-            this.ausgangsrechnungMsgLabel.TabIndex = 25;
-            this.ausgangsrechnungMsgLabel.Text = "MessageLabel";
-            this.ausgangsrechnungMsgLabel.Visible = false;
-            // 
             // rechnungsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -752,7 +740,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox existingKundenComboBox;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage rechnungUmsatzTab;

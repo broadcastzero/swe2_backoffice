@@ -153,7 +153,7 @@ namespace EPU_Backoffice_Panels.BL
         public void CreateAusgangsrechnung(int projektID, double unpaidBalance, string rechnungstitelString)
         { 
             // validate input
-            //IRule 
+            //IRule
         }
     }
 }
