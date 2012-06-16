@@ -336,6 +336,19 @@ namespace EPU_Backoffice_Panels
         /// <param name="e">The EventArgs</param>
         private void CreateAusgangsrechnung(object sender, EventArgs e)
         {
+            // reset message label
+            this.ausgangsrechnungMsgLabel.Visible = false;
+            this.ausgangsrechnungMsgLabel.Text = string.Empty;
+
+            // check if a projekt is selected
+            if (this.projekteComboBox.SelectedIndex < 1)
+            {
+                this.ausgangsrechnungMsgLabel.Visible = true;
+                this.ausgangsrechnungMsgLabel.Text = "Kein Projekt ausgewählt";
+                this.ausgangsrechnungMsgLabel.ForeColor = Color.Red;
+                return;
+            }
+            
             AusgangsrechnungTable table = new AusgangsrechnungTable();
 
             // Get values
