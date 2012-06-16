@@ -9,12 +9,7 @@ namespace EPU_Backoffice_Panels
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Diagnostics;
     using System.Drawing;
-    using System.Data;
-    using System.Linq;
-    using System.Text;
     using System.Windows.Forms;
     using DatabindingFramework;
     using EPU_Backoffice_Panels.BL;
@@ -23,6 +18,11 @@ namespace EPU_Backoffice_Panels
     using Rules;
     using UserExceptions;
     using System.Data.SQLite;
+    using PdfSharp.Pdf;
+    using PdfSharp.Drawing;
+    using System.Diagnostics;
+    
+
 
     public partial class rechnungsTab : UserControl
     {
@@ -102,6 +102,7 @@ namespace EPU_Backoffice_Panels
                 DataBindingFramework.BindFromString(eingangsrechnung.Bezeichnung, "Bez. Eingangsrechnung", this.eingangsrechnungMsgLabel, false, lnhsv, slv);
 
                 // add Archivierungspfad
+                // Year/Month/Date/KontaktID/Bezeichnung
                 eingangsrechnung.Archivierungspfad = DateTime.Now.Year.ToString() + '/' + DateTime.Now.Month.ToString() + '/' + DateTime.Now.ToShortDateString() + '-' + this.eingangsrechnung.KontaktID + '-' + this.eingangsrechnung.Bezeichnung;
 
                 // check for errors
@@ -193,6 +194,7 @@ namespace EPU_Backoffice_Panels
             this.buchungszeileBezeichnungTextBox.ResetText();
             this.eingangsrechnungBetragTextBox.ResetText();
             this.kategorieComboBox.ResetText();
+            
 
             this.logger.Log(Logger.Level.Info, "Unocked Eingangsrechnungs-elements. Reset all Eingangsrechnungs-Inputfields.");
         }
@@ -328,5 +330,40 @@ namespace EPU_Backoffice_Panels
                 }
             }
         }
+
+        private void ShowUmsaetze(object sender, EventArgs e) 
+        {
+            PdfDocument document = new PdfDocument();
+            PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            XFont header = new XFont("Calibri", 20, XFontStyle.Bold);
+            XFont columHeader = new XFont("Calibri", 10, XFontStyle.Bold);
+            XFont Text = new XFont("Calibri", 10);
+            
+            gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormat.TopCenter);
+            
+
+            string filename = "HelloWorld.pdf";
+            document.Save(filename);
+            Process.Start(filename);
+
+        }
+
+        private void PrintUmsaetze(object sender, EventArgs e)
+        {
+            MessageBox.Show("not yet implemented - Print");
+        }
+
+        private void ShowKundenRechnung(object sender, EventArgs e) 
+        {
+            MessageBox.Show("not yet implemented - Show");
+        }
+
+        private void PrintKundenRechnung(object sender, EventArgs e)
+        {
+            MessageBox.Show("not yet implemented - Print");
+        }
+       
     }
 }

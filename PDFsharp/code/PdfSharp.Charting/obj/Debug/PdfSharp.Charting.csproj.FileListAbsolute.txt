@@ -1,0 +1,15 @@
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\PdfSharp.Charting.pdb
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\PdfSharp.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\PdfSharp.pdb
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\PdfSharp.xml
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\PdfSharp.Charting.Resources.Messages.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\PdfSharp.Charting.Resources.Messages.de.resources
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\ResGen.read.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\ResGen.write.1.tlog
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\PdfSharp.Charting.dll
+C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\PDFsharp\code\PdfSharp.Charting\obj\Debug\PdfSharp.Charting.pdb

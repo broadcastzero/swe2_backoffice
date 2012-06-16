@@ -584,6 +584,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Rechnung drucken";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.PrintKundenRechnung);
             // 
             // button4
             // 
@@ -593,6 +594,7 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Als PDF anzeigen";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.ShowKundenRechnung);
             // 
             // dataGridView3
             // 
@@ -668,6 +670,7 @@
             this.button7.TabIndex = 3;
             this.button7.Text = "Bericht drucken";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.PrintUmsaetze);
             // 
             // button6
             // 
@@ -677,6 +680,7 @@
             this.button6.TabIndex = 2;
             this.button6.Text = "Als PDF anzeigen";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.ShowUmsaetze);
             // 
             // dateTimePicker5
             // 
