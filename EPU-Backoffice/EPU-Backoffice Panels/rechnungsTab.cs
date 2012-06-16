@@ -331,7 +331,7 @@ namespace EPU_Backoffice_Panels
             }
         }
 
-<<<<<<< HEAD
+
         private void ShowUmsaetze(object sender, EventArgs e) 
         {
             PdfDocument document = new PdfDocument();
@@ -366,7 +366,7 @@ namespace EPU_Backoffice_Panels
             MessageBox.Show("not yet implemented - Print");
         }
        
-=======
+
         /// <summary>
         /// Creates a new Ausgangsrechnung with the provided parameters
         /// </summary>
@@ -438,6 +438,5 @@ namespace EPU_Backoffice_Panels
                 GlobalActions.ShowSuccessLabel(this.ausgangsrechnungMsgLabel);
             }
         }
->>>>>>> d0ba2fa98147878c484d759aac9fb4dd93916ca7
     }
 }
