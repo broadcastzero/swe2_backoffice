@@ -74,19 +74,6 @@ namespace BackofficeTests
         #endregion
 
         /// <summary>
-        ///A test for checkDataBaseExistance with a string as parameter
-        ///</summary>
-        [TestMethod()]
-        public void CheckDataBaseExistanceTest1()
-        {
-            string path = "../../../EPU-Backoffice/bin/Debug/neuedb.db"; // create this file in test folder!
-            bool expected = true;
-            bool actual;
-            actual = target.CheckDataBaseExistance(path);
-            Assert.AreEqual(expected, actual);
-        }
-
-        /// <summary>
         /// A test for checkDataBaseExistance with a string as parameter - file does not end with .db
         /// Should return false, because "Logfile.txt" does exist, but does not end with ".db".
         /// </summary>
