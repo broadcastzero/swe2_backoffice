@@ -36,21 +36,21 @@ namespace EPU_Backoffice_Panels.Dal.Tables
             set { if (value >= 0) { projektID = value; } }
         }
 
-        private DateTime rechnungsdatum;
+        private string rechnungsdatum;
         /// <summary>
-        /// Gets or sets Datum of creation of an Rechnung
+        /// Gets or sets Datum of creation of an Rechnung in short date string format
         /// </summary>
-        public DateTime Rechnungsdatum
+        public string Rechnungsdatum
         {
             get { return rechnungsdatum; }
             set { rechnungsdatum = value; }
         }
 
-        private DateTime bezeichnung;
+        private string bezeichnung;
         /// <summary>
         /// Gets or sets the title of the Ausgangsrechnung
         /// </summary>
-        public DateTime Bezeichnung
+        public string Bezeichnung
         {
             get { return bezeichnung; }
             set { bezeichnung = value; }

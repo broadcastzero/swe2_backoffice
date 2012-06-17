@@ -151,9 +151,48 @@ namespace EPU_Backoffice_Panels.BL
         /// <param name="unpaidBalance">The amount of money which the Ausgangsrechnung shall include</param>
         /// <param name="rechnungstitelString">The title of the Ausgangsrechnung</param>
         public void CreateAusgangsrechnung(int projektID, double unpaidBalance, string rechnungstitelString)
-        { 
-            // validate input
-            //IRule
+        {
+            // create business objects for Ausgangsrechnung, Ausgangsbuchung & Buchungszeilen
+            AusgangsrechnungTable rechnung = new AusgangsrechnungTable();
+            Ausgangsbuchung buchung = new Ausgangsbuchung();
+            BuchungszeilenTable zeile = new BuchungszeilenTable();
+
+            // fill with values and validate
+            rechnung.ProjektID = projektID;
+            rechnung.Rechnungsdatum = DateTime.Now.ToShortDateString();
+            rechnung.Bezeichnung = rechnungstitelString;
+
+            zeile.BetragNetto = unpaidBalance;
+            zeile.Bezeichnung = rechnungstitelString;
+            zeile.Buchungsdatum = rechnung.Rechnungsdatum;
+
+            // initialise Rule objects
+            PositiveIntValidator piv = new PositiveIntValidator();
+            PositiveDoubleValidator pdv = new PositiveDoubleValidator();
+            LettersNumbersHyphenSpaceValidator lnhsv = new LettersNumbersHyphenSpaceValidator();
+            StringLength150Validator slv = new StringLength150Validator();
+            
+            // evaluate ProjektID
+            piv.Eval(rechnung.ProjektID);
+
+            if (piv.HasErrors)
+            { throw new InvalidInputException("ProjektID ungültig!"); }
+
+            // evaluate Bezeichnung
+            lnhsv.Eval(rechnung.Bezeichnung);
+            slv.Eval(rechnung.Bezeichnung);
+
+            if (lnhsv.HasErrors || slv.HasErrors)
+            { throw new InvalidInputException("Bezeichnung ungültig!"); }
+
+            // evaluate Betrag
+            pdv.Eval(zeile.BetragNetto);
+
+            if (pdv.HasErrors)
+            { throw new InvalidInputException("Betrag ungültig"); }
+
+            // create Ausgangsbuchung with ID values which just returned from database
+
         }
     }
 }
