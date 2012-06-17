@@ -503,5 +503,16 @@ namespace EPU_Backoffice_Panels.Dal
         {
             MockDataBaseManager.savedEingangsbuchungen.Add(table);
         }
+
+
+        public void SaveAusgangsbuchung(AusgangsbuchungTable table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int SaveAusgangsrechnung(AusgangsrechnungTable table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

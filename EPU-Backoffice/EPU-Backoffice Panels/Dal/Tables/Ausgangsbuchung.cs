@@ -12,7 +12,7 @@ namespace EPU_Backoffice_Panels.Dal.Tables
     /// <summary>
     /// This class connects an Ausgangsrechnung with one or more Buchungszeile(n)
     /// </summary>
-    public class Ausgangsbuchung
+    public class AusgangsbuchungTable
     {
         private int buchungszeilenID;
 

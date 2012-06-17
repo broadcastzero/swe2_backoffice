@@ -871,5 +871,16 @@ namespace EPU_Backoffice_Panels.Dal
             string sql = "INSERT INTO Eingangsbuchung (BuchungszeilenID, EingangsrechnungsID) VALUES (?, ?)";
             this.SendStatementToDatabase(sql, -1, table.BuchungszeilenID, table.EingangsrechungsID);
         }
+
+
+        public void SaveAusgangsbuchung(AusgangsbuchungTable table)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int SaveAusgangsrechnung(AusgangsrechnungTable table)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -426,7 +426,7 @@ namespace EPU_Backoffice_Panels
             {
                 this.logger.Log(Logger.Level.Error, "The business layer returned the provided values for saving a new Ausgangsrechnung with an error.");
             }
-            catch (SQLiteException ex)
+            catch (DataBaseException ex)
             {
                 this.logger.Log(Logger.Level.Error, "A serious problem with the database occured while trying to save a new Ausgangsrechnung.");
                 this.logger.Log(Logger.Level.Error, ex.Message);

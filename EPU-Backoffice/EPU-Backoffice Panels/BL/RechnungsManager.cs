@@ -154,7 +154,7 @@ namespace EPU_Backoffice_Panels.BL
         {
             // create business objects for Ausgangsrechnung, Ausgangsbuchung & Buchungszeilen
             AusgangsrechnungTable rechnung = new AusgangsrechnungTable();
-            Ausgangsbuchung buchung = new Ausgangsbuchung();
+            AusgangsbuchungTable buchung = new AusgangsbuchungTable();
             BuchungszeilenTable zeile = new BuchungszeilenTable();
 
             // fill with values and validate
@@ -191,8 +191,20 @@ namespace EPU_Backoffice_Panels.BL
             if (pdv.HasErrors)
             { throw new InvalidInputException("Betrag ungültig"); }
 
-            // create Ausgangsbuchung with ID values which just returned from database
+            // SAVE Ausgangsrechnung, Buchungszeile and Ausgangsbuchung
+            try
+            {
+                buchung.AusgangsrechnungsID = DALFactory.GetDAL().SaveAusgangsrechnung(rechnung);
+                buchung.BuchungszeilenID = DALFactory.GetDAL().SaveBuchungszeile(zeile);
 
+                // create Ausgangsbuchung with ID values which just returned from database
+                DALFactory.GetDAL().SaveAusgangsbuchung(buchung);
+            }
+            catch (SQLiteException e)
+            { 
+                this.logger.Log(Logger.Level.Info, "A database exception occured while saving a new Ausgangsrechnung, Buchungszeile or Ausgangsbuchung.");
+                throw new DataBaseException(e.Message, e);
+            }
         }
     }
 }

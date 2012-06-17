@@ -116,5 +116,18 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <param name="table">The Eingangsbuchungstable</param>
         void SaveEingangsbuchung(EingangsbuchungTable table);
+
+        /// <summary>
+        /// Saves a new connection between Ausgangsrechnung and Buchungszeile
+        /// </summary>
+        /// <param name="table">The Ausgangsbuchungs table</param>
+        void SaveAusgangsbuchung(AusgangsbuchungTable table);
+
+        /// <summary>
+        /// Saves a new Ausgangsrechnung
+        /// </summary>
+        /// <param name="table">The Ausgangsrechnung table</param>
+        /// <returns>The ID of the just inserted Ausgangsrechnung</returns>
+        int SaveAusgangsrechnung(AusgangsrechnungTable table);
     }
 }
