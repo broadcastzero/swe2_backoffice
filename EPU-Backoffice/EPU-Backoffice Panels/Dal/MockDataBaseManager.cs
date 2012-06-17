@@ -34,6 +34,9 @@ namespace EPU_Backoffice_Panels.Dal
         // Private fields for Eingangsrechnungs-IDs
         private static int eingangsrechnungID = 0;
 
+        // Private fields for Ausgangsrechnungs-IDs
+        private static int ausgangsrechnungID = 0;
+
         // Private fields for Buchungszeilen-IDs
         private static int buchungszeilenID = 0;
 
@@ -66,6 +69,11 @@ namespace EPU_Backoffice_Panels.Dal
         public static int EingangsrechnungsID { get { return eingangsrechnungID++; } }
 
         /// <summary>
+        /// Gets or sets a continuing, unique ID for the table "Ausgangsrechnung"
+        /// </summary>
+        public static int AusgangsrechnungsID { get { return ausgangsrechnungID++; } }
+
+        /// <summary>
         /// Gets or sets a continuing, unique ID for the table "Eingangsrechnung"
         /// </summary>
         public static int BuchungszeilenID { get { return buchungszeilenID++; } }
@@ -87,6 +95,12 @@ namespace EPU_Backoffice_Panels.Dal
 
         // Gets or sets private fields for saved Eingangsrechnungen (ILists)
         private static List<EingangsrechnungTable> savedEingangsrechnungen;
+
+        // Gets or sets private fields for saved Ausgangsrechnungen (ILists)
+        private static List<AusgangsrechnungTable> savedAusgangsrechnungen;
+
+        // Gets or sets private fields for saved Ausgangsbuchungen (ILists)
+        private static List<AusgangsbuchungTable> savedAusgangsbuchungen;
 
         // Gets or sets private fields for saved Eingangsbuchungen (ILists)
         private static List<EingangsbuchungTable> savedEingangsbuchungen;
@@ -123,9 +137,19 @@ namespace EPU_Backoffice_Panels.Dal
         private static List<EingangsrechnungTable> SavedEingangsrechnungen { get { return savedEingangsrechnungen; } }
 
         /// <summary>
-        /// Gets or sets static list in which created Eingangsrechnung is stored
+        /// Gets or sets static list in which created Ausgangsrechnung is stored
+        /// </summary> 
+        private static List<AusgangsrechnungTable> SavedAusgangsrechnung { get { return savedAusgangsrechnungen; } }
+
+        /// <summary>
+        /// Gets or sets static list in which created Eingangsbuchung is stored
         /// </summary> 
         private static List<EingangsbuchungTable> SavedEingangsbuchungen { get { return savedEingangsbuchungen; } }
+
+        /// <summary>
+        /// Gets or sets static list in which created Ausgangsbuchung is stored
+        /// </summary> 
+        private static List<AusgangsbuchungTable> SavedAusgangsbuchungen { get { return savedAusgangsbuchungen; } }
 
         /// <summary>
         /// Gets or sets static list in which created Buchungszeile is stored
@@ -154,6 +178,8 @@ namespace EPU_Backoffice_Panels.Dal
                 MockDataBaseManager.savedEingangsrechnungen = new List<EingangsrechnungTable>();
                 MockDataBaseManager.savedZeitaufzeichnungen = new List<ZeitaufzeichnungTable>();
                 MockDataBaseManager.savedEingangsbuchungen = new List<EingangsbuchungTable>();
+                MockDataBaseManager.savedAusgangsbuchungen = new List<AusgangsbuchungTable>();
+                MockDataBaseManager.savedAusgangsrechnungen = new List<AusgangsrechnungTable>();
                 MockDataBaseManager.savedBuchungszeilen = new List<BuchungszeilenTable>();
             }
         }
@@ -504,15 +530,26 @@ namespace EPU_Backoffice_Panels.Dal
             MockDataBaseManager.savedEingangsbuchungen.Add(table);
         }
 
-
+        /// <summary>
+        /// Saves a new connection between Ausgangsrechnung and Buchungszeile
+        /// </summary>
+        /// <param name="table">The Ausgangsbuchungs table</param>
         public void SaveAusgangsbuchung(AusgangsbuchungTable table)
         {
-            throw new NotImplementedException();
+            MockDataBaseManager.savedAusgangsbuchungen.Add(table);
         }
 
+        /// <summary>
+        /// Saves a new Ausgangsrechnung
+        /// </summary>
+        /// <param name="table">The Ausgangsrechnung table</param>
+        /// <returns>The ID of the just inserted Ausgangsrechnung</returns>
         public int SaveAusgangsrechnung(AusgangsrechnungTable table)
         {
-            throw new NotImplementedException();
+            table.ID = MockDataBaseManager.AusgangsrechnungsID;
+            MockDataBaseManager.savedAusgangsrechnungen.Add(table);
+
+            return table.ID;
         }
     }
 }
