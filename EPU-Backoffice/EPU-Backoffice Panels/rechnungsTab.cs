@@ -348,12 +348,6 @@ namespace EPU_Backoffice_Panels
             string filename = "HelloWorld.pdf";
             document.Save(filename);
             Process.Start(filename);
-
-        }
-
-        private void PrintUmsaetze(object sender, EventArgs e)
-        {
-            MessageBox.Show("not yet implemented - Print");
         }
 
         private void ShowKundenRechnung(object sender, EventArgs e) 
@@ -362,13 +356,7 @@ namespace EPU_Backoffice_Panels
             PdfPage page = document.AddPage();
 
             MessageBox.Show("not yet implemented - Show");
-        }
-
-        private void PrintKundenRechnung(object sender, EventArgs e)
-        {
-            MessageBox.Show("not yet implemented - Print");
-        }
-       
+        }       
 
         /// <summary>
         /// Creates a new Ausgangsrechnung with the provided parameters

@@ -88,7 +88,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
@@ -612,7 +611,6 @@
             this.rechnungUmsatzTab.Controls.Add(this.label18);
             this.rechnungUmsatzTab.Controls.Add(this.checkBox4);
             this.rechnungUmsatzTab.Controls.Add(this.checkBox3);
-            this.rechnungUmsatzTab.Controls.Add(this.button7);
             this.rechnungUmsatzTab.Controls.Add(this.button6);
             this.rechnungUmsatzTab.Controls.Add(this.dateTimePicker5);
             this.rechnungUmsatzTab.Controls.Add(this.dateTimePicker4);
@@ -662,16 +660,6 @@
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Eingang";
             this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(19, 142);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 23);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Bericht drucken";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.PrintUmsaetze);
             // 
             // button6
             // 
@@ -747,7 +735,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker dateTimePicker5;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
