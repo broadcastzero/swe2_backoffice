@@ -40,6 +40,7 @@ namespace EPU_Backoffice_Panels.Dal
             sb.Append("CREATE TABLE IF NOT EXISTS Angebot (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, kundenID INTEGER NOT NULL, Angebotssumme FLOAT NOT NULL, Angebotsdauer DATETIME NOT NULL, Erstellungsdatum VARCHAR(150) NOT NULL, Umsetzung INTEGER NOT NULL, Beschreibung VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Rechnungszeile (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL, Bezeichnung Varchar(150), Stunden INTEGER NOT NULL, Stundensatz FLOAT NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ProjektID INTEGER NOT NULL, Rechnungsdatum TIMESTAMP NOT NULL, Bezeichnung VARCHAR(150) NOT NULL); ");
+            sb.Append("CREATE TABLE IF NOT EXISTS Ausgangsbuchung (BuchungszeilenID INTEGER NOT NULL, AusgangsrechnungsID INTEGER NOT NULL, PRIMARY KEY (BuchungszeilenID, AusgangsrechnungsID)); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Eingangsrechnung (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KontaktID INTEGER NOT NULL, Rechnungsdatum TIMESTAMP NOT NULL, Archivierungspfad VARCHAR(150) NOT NULL, Bezeichnung VARCHAR(150) NOT NULL); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Eingangsbuchung (BuchungszeilenID INTEGER NOT NULL, EingangsrechnungsID INTEGER NOT NULL, PRIMARY KEY (BuchungszeilenID, EingangsrechnungsID)); ");
             sb.Append("CREATE TABLE IF NOT EXISTS Buchungszeilen (ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, KategorieID INTEGER NOT NULL, BankkontoID INTEGER NOT NULL, BetragUST FLOAT NOT NULL, BetragNetto FLOAT NOT NULL, Buchungsdatum TIMESTAMP NOT NULL, Bezeichnung VARCHAR(150)); ");
@@ -786,6 +787,84 @@ namespace EPU_Backoffice_Panels.Dal
             string sql = "INSERT INTO Buchungszeilen (KategorieID, BankkontoID, BetragNetto, BetragUST, Buchungsdatum, Bezeichnung) VALUES (?, ?, ?, ?, ?, ?)";
             int insertedID;
 
+            try
+            {
+                insertedID = this.InsertAndReturnID(sql, "Buchungszeilen", table.KategorieID, table.BankkontoID, table.BetragNetto, table.BetragUST, table.Buchungsdatum, table.Bezeichnung);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            // return ID of inserted item
+            return insertedID;
+        }
+
+        /// <summary>
+        /// Saves a new Eingangsrechnung to the database
+        /// </summary>
+        /// <param name="table">The Eingangsbuchungstable</param>
+        public void SaveEingangsbuchung(EingangsbuchungTable table)
+        { 
+            string sql = "INSERT INTO Eingangsbuchung (BuchungszeilenID, EingangsrechnungsID) VALUES (?, ?)";
+            this.SendStatementToDatabase(sql, -1, table.BuchungszeilenID, table.EingangsrechungsID);
+        }
+
+        /// <summary>
+        /// Saves a new Ausgangsbuchung to the SQLite database.
+        /// </summary>
+        /// <param name="table"></param>
+        public void SaveAusgangsbuchung(AusgangsbuchungTable table)
+        {
+            string sql = "INSERT INTO Ausgangsbuchung (BuchungszeilenID, AusgangsrechnungsID) VALUES (?, ?)";
+
+            try
+            {
+                this.SendStatementToDatabase(sql, -1, table.BuchungszeilenID, table.AusgangsrechnungsID);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            this.logger.Log(Logger.Level.Info, "A new Ausgangsbuchung has successfully been stored to the SQLite-DB.");
+        }
+
+        /// <summary>
+        /// Saves a new Ausgangsrechnung
+        /// </summary>
+        /// <param name="table">The Ausgangsrechnung table</param>
+        /// <returns>The ID of the just inserted Ausgangsrechnung</returns>
+        public int SaveAusgangsrechnung(AusgangsrechnungTable table)
+        {
+            string sql = "INSERT INTO Ausgangsrechnung (ProjektID, Rechnungsdatum, Bezeichnung) VALUES (?, ?, ?)";
+
+            int insertedID;
+
+            try
+            {
+                insertedID = this.InsertAndReturnID(sql, "Ausgangsrechnung", table.ProjektID, table.Rechnungsdatum, table.Bezeichnung);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+
+            return insertedID;
+        }
+
+        /// <summary>
+        /// Sends an insert-statement to the database and returns the ID of the just inserted item
+        /// </summary>
+        /// <param name="sql">The SQLite statement</param>
+        /// <param name="tablename">The name of the table (needed for getting last ID)</param>
+        /// <param name="parameter">An array of parameter</param>
+        /// <returns></returns>
+        private int InsertAndReturnID(string sql, string tablename, params object[] parameter)
+        {
+            // the ID of the just inserted object
+            int insertedID;
+
             // open connection and save new Kunde/Kontakt in database
             SQLiteConnection con = null;
             SQLiteTransaction tra = null;
@@ -800,37 +879,13 @@ namespace EPU_Backoffice_Panels.Dal
                 tra = con.BeginTransaction();
                 cmd = new SQLiteCommand(sql, con);
 
-                // initialise parameter
-                SQLiteParameter p_firstparam = new SQLiteParameter();
-                SQLiteParameter p_secondparam = new SQLiteParameter();
-                SQLiteParameter p_thirdparam = new SQLiteParameter();
-                SQLiteParameter p_forthparam = new SQLiteParameter();
-                SQLiteParameter p_fifthparam = new SQLiteParameter();
-                SQLiteParameter p_sixthparam = new SQLiteParameter();
-
-                // bind kategorieID
-                p_firstparam.Value = table.KategorieID;
-                cmd.Parameters.Add(p_firstparam);
-
-                // bind bankkontoID
-                p_secondparam.Value = table.BankkontoID;
-                cmd.Parameters.Add(p_secondparam);
-
-                // bind betragNetto
-                p_thirdparam.Value = table.BetragNetto;
-                cmd.Parameters.Add(p_thirdparam);
-
-                // bind betragUST
-                p_forthparam.Value = table.BetragUST;
-                cmd.Parameters.Add(p_forthparam);
-
-                // bind bezeichnung
-                p_fifthparam.Value = table.Buchungsdatum;
-                cmd.Parameters.Add(p_fifthparam);
-
-                // bind bezeichnung
-                p_sixthparam.Value = table.Bezeichnung;
-                cmd.Parameters.Add(p_sixthparam);
+                // initialise and bind parameter
+                foreach (object param in parameter)
+                {
+                    SQLiteParameter sqlparam = new SQLiteParameter();
+                    sqlparam.Value = param;
+                    cmd.Parameters.Add(sqlparam);
+                }
 
                 // execute and commit
                 cmd.ExecuteNonQuery();
@@ -838,7 +893,7 @@ namespace EPU_Backoffice_Panels.Dal
 
                 // get rowID
                 cmd.Parameters.Clear();
-                cmd.CommandText = "SELECT last_insert_rowid() AS id FROM Buchungszeilen";
+                cmd.CommandText = "SELECT last_insert_rowid() AS id FROM " + tablename;
                 cmd.ExecuteNonQuery();
                 System.Object temp = cmd.ExecuteScalar();
                 insertedID = int.Parse(temp.ToString());
@@ -855,32 +910,11 @@ namespace EPU_Backoffice_Panels.Dal
             }
 
             // success logging
-            string successmessage = "A new Eingangsrechnung has been saved to the database: " + insertedID;
+            string successmessage = "A new " + tablename + " has been saved to the database: " + insertedID;
             this.logger.Log(Logger.Level.Info, successmessage);
 
             // return ID of inserted item
             return insertedID;
-        }
-
-        /// <summary>
-        /// Saves a new Eingangsrechnung to the database
-        /// </summary>
-        /// <param name="table">The Eingangsbuchungstable</param>
-        public void SaveEingangsbuchung(EingangsbuchungTable table)
-        { 
-            string sql = "INSERT INTO Eingangsbuchung (BuchungszeilenID, EingangsrechnungsID) VALUES (?, ?)";
-            this.SendStatementToDatabase(sql, -1, table.BuchungszeilenID, table.EingangsrechungsID);
-        }
-
-
-        public void SaveAusgangsbuchung(AusgangsbuchungTable table)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int SaveAusgangsrechnung(AusgangsrechnungTable table)
-        {
-            throw new NotImplementedException();
         }
     }
 }
