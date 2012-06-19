@@ -91,6 +91,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.umsaetzeMsgLabel = new System.Windows.Forms.Label();
             this.rechnungsTabControl.SuspendLayout();
             this.rechnungAusgangTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ausgangsrechnungDataGridView)).BeginInit();
@@ -607,6 +608,7 @@
             // rechnungUmsatzTab
             // 
             this.rechnungUmsatzTab.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rechnungUmsatzTab.Controls.Add(this.umsaetzeMsgLabel);
             this.rechnungUmsatzTab.Controls.Add(this.label19);
             this.rechnungUmsatzTab.Controls.Add(this.label18);
             this.rechnungUmsatzTab.Controls.Add(this.checkBox4);
@@ -684,6 +686,16 @@
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker4.TabIndex = 0;
+            // 
+            // umsaetzeMsgLabel
+            // 
+            this.umsaetzeMsgLabel.AutoSize = true;
+            this.umsaetzeMsgLabel.Location = new System.Drawing.Point(16, 147);
+            this.umsaetzeMsgLabel.Name = "umsaetzeMsgLabel";
+            this.umsaetzeMsgLabel.Size = new System.Drawing.Size(76, 13);
+            this.umsaetzeMsgLabel.TabIndex = 25;
+            this.umsaetzeMsgLabel.Text = "MessageLabel";
+            this.umsaetzeMsgLabel.Visible = false;
             // 
             // rechnungsTab
             // 
@@ -774,5 +786,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Stunden;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stundensatz;
         private System.Windows.Forms.Label ausgangsrechnungMsgLabel;
+        private System.Windows.Forms.Label umsaetzeMsgLabel;
     }
 }

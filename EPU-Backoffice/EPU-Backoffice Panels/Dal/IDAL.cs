@@ -89,8 +89,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// Loads all Eingangsrechnungen
         /// </summary>
         /// <returns>The saved Eingangsrechnungen</returns>
-        List<EingangsrechnungTable> LoadEingangsrechnungen();
-
+        List<EingangsrechnungsView> LoadEingangsrechnungsView();
 
         /// <summary>
         /// Saves all Zeiterfassungs entryx

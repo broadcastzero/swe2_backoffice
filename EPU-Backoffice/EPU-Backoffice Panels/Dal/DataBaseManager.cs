@@ -642,11 +642,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// Loads all Eingangsrechnungen
         /// </summary>
         /// <returns>The saved Eingangsrechnungen</returns>
-        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        public List<EingangsrechnungsView> LoadEingangsrechnungsView()
         {
-            string sql = "SELECT * FROM Eingangsrechnung";
+            string sql = "SELECT e.ID, e.Bezeichnung, e.Rechnungsdatum, SUM(z.BetragUST) FROM Eingangsrechnung e JOIN Eingangsbuchung b ON b.EingangsrechnungsID = e.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
 
-            List<EingangsrechnungTable> results = new List<EingangsrechnungTable>();
+            List<EingangsrechnungsView> results = new List<EingangsrechnungsView>();
 
             // open connection and get requested Projekt(e) out of database
             SQLiteConnection con = null;
@@ -669,11 +669,11 @@ namespace EPU_Backoffice_Panels.Dal
 
                 while (reader.Read())
                 {
-                    EingangsrechnungTable result = new EingangsrechnungTable();
+                    EingangsrechnungsView result = new EingangsrechnungsView();
                     result.ID = reader.GetInt32(0);
-                    result.KontaktID = reader.GetInt32(1);
+                    result.Bezeichnung = reader.GetString(1);
                     result.Rechnungsdatum = reader.GetString(2);
-                    result.Archivierungspfad = reader.GetString(3);
+                    result.Betrag = reader.GetDouble(3);
                     results.Add(result);
                 }
 
@@ -691,7 +691,6 @@ namespace EPU_Backoffice_Panels.Dal
                 if (con != null) { con.Dispose(); }
             }
         }
-
 
         public void SaveNewZeiterfassung(ZeitaufzeichnungTable z)
         {

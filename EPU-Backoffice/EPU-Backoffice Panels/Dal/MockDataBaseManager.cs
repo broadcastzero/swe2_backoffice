@@ -402,10 +402,10 @@ namespace EPU_Backoffice_Panels.Dal
             try
             {
                 couldparse = DateTime.TryParse(from, out dfrom);
-                this.checkBoolInvalidInput(couldparse);
+                this.CheckBoolInvalidInput(couldparse);
 
                 couldparse = DateTime.TryParse(until, out duntil);
-                this.checkBoolInvalidInput(couldparse);
+                this.CheckBoolInvalidInput(couldparse);
             }
             catch(InvalidInputException)
             {
@@ -420,7 +420,7 @@ namespace EPU_Backoffice_Panels.Dal
 
                 try
                 {
-                    this.checkBoolInvalidInput(couldparse);
+                    this.CheckBoolInvalidInput(couldparse);
                 }
                 catch(InvalidInputException)
                 {
@@ -442,7 +442,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// </summary>
         /// <param name="input"></param>
         /// <exception cref="InvalidInputException">Throws InvalidInputException</exception>
-        private void checkBoolInvalidInput(bool couldparse)
+        private void CheckBoolInvalidInput(bool couldparse)
         {
             if (couldparse == false)
             {
@@ -489,12 +489,46 @@ namespace EPU_Backoffice_Panels.Dal
         }
 
         /// <summary>
-        /// Loads all Eingangsrechnungen
+        /// Loads all Eingangsrechnungen as Views
         /// </summary>
         /// <returns>The saved Eingangsrechnungen</returns>
-        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        public List<EingangsrechnungsView> LoadEingangsrechnungsView()
         {
-            return MockDataBaseManager.SavedEingangsrechnungen;
+            List<EingangsrechnungsView> view = new List<EingangsrechnungsView>();
+            int buchungsID = -1;
+            BuchungszeilenTable zeile = new BuchungszeilenTable();
+
+            foreach (EingangsrechnungTable table in savedEingangsrechnungen)
+            {
+                EingangsrechnungsView viewelement = new EingangsrechnungsView();
+                viewelement.ID = table.ID;
+                viewelement.Bezeichnung = table.Bezeichnung;
+                viewelement.Rechnungsdatum = table.Rechnungsdatum;
+
+                // get connected EingangsbuchungsID
+                foreach (EingangsbuchungTable b in savedEingangsbuchungen)
+                {
+                    if (b.EingangsrechungsID == viewelement.ID)
+                    {
+                        buchungsID = b.BuchungszeilenID;
+                        break;
+                    }
+                }
+
+                // get connected Buchungszeile and Betrag
+                foreach (BuchungszeilenTable b in savedBuchungszeilen)
+                {
+                    if (b.ID == buchungsID)
+                    {
+                        viewelement.Betrag = b.BetragUST;
+                        break;
+                    }
+                }
+
+                view.Add(viewelement);
+            }
+
+            return view;
         }
 
 

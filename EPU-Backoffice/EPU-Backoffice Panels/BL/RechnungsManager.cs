@@ -66,17 +66,17 @@ namespace EPU_Backoffice_Panels.BL
         /// Load all Eingangsrechnungen
         /// </summary>
         /// <returns>The loaded Eingangsrechnungen</returns>
-        public List<EingangsrechnungTable> LoadEingangsrechnungen()
+        public List<EingangsrechnungsView> LoadEingangsrechnungsView()
         {
-            List<EingangsrechnungTable> results;
+            List<EingangsrechnungsView> results;
 
             try
             {
-                results = DALFactory.GetDAL().LoadEingangsrechnungen();
+                results = DALFactory.GetDAL().LoadEingangsrechnungsView();
             }
-            catch (SQLiteException)
+            catch (SQLiteException ex)
             {
-                throw;
+                throw new DataBaseException(ex.Message + ex.StackTrace, ex);
             }
 
             return results;

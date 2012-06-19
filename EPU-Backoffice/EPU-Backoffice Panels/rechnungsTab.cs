@@ -154,30 +154,6 @@ namespace EPU_Backoffice_Panels
             GlobalActions.BindFromExistingKundenToComboBox(sender, e);
         }
 
-        // load data of an existing Eingangsrechnung
-        /*private void ExistingEingangsrechnungComboBoxLoadData(object sender, EventArgs e)
-        {
-            List<EingangsrechnungTable> results = new List<EingangsrechnungTable>();
-            List<string> listItems = new List<string>();
-
-            RechnungsManager manager = new RechnungsManager();
-            results = manager.LoadEingangsrechnungen();
-            //this.eingangsrechnungBindingSource.DataSource = results;
-
-            // if there are results, add them to string result list
-            if (results.Count != 0)
-            {
-                foreach (EingangsrechnungTable table in results)
-                {
-                    string entry = table.ID + ": " + table.Rechnungsdatum;
-                    listItems.Add(entry);
-                }
-            }
-
-            // set data source
-            (sender as ComboBox).DataSource = listItems;
-        }*/
-
         // Clear everything within Eingangsrechnungstab
         private void ResetEingangsrechnung(object sender, EventArgs e)
         {
@@ -193,8 +169,7 @@ namespace EPU_Backoffice_Panels
             this.eingangsrechnungBezeichnungTextBox.ResetText();
             this.buchungszeileBezeichnungTextBox.ResetText();
             this.eingangsrechnungBetragTextBox.ResetText();
-            this.kategorieComboBox.ResetText();
-            
+            this.kategorieComboBox.ResetText();            
 
             this.logger.Log(Logger.Level.Info, "Unocked Eingangsrechnungs-elements. Reset all Eingangsrechnungs-Inputfields.");
         }
@@ -334,6 +309,24 @@ namespace EPU_Backoffice_Panels
 
         private void ShowUmsaetze(object sender, EventArgs e) 
         {
+            this.umsaetzeMsgLabel.Visible = false;
+
+            // load all Eingangsrechnungen
+            RechnungsManager loader = new RechnungsManager();
+            List<EingangsrechnungsView> eingang = new List<EingangsrechnungsView>();
+
+            try
+            {
+                eingang = loader.LoadEingangsrechnungsView();
+            }
+            catch(DataBaseException)
+            {
+                this.umsaetzeMsgLabel.ForeColor = Color.Red;
+                this.umsaetzeMsgLabel.Text = "Ein Datenbankproblem ist aufgetreten";
+                this.umsaetzeMsgLabel.Visible = true;
+            }
+
+            // create PDF document
             PdfDocument document = new PdfDocument();
             PdfPage page = document.AddPage();
             XGraphics gfx = XGraphics.FromPdfPage(page);
@@ -342,9 +335,12 @@ namespace EPU_Backoffice_Panels
             XFont columHeader = new XFont("Calibri", 10, XFontStyle.Bold);
             XFont Text = new XFont("Calibri", 10);
             
-            gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
+            foreach(EingangsrechnungsView table in eingang)
+            {
+                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
+            }
+            //gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
             
-
             string filename = "HelloWorld.pdf";
             document.Save(filename);
             Process.Start(filename);
