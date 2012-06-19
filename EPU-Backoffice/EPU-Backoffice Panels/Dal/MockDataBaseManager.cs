@@ -585,5 +585,11 @@ namespace EPU_Backoffice_Panels.Dal
 
             return table.ID;
         }
+
+
+        public List<AusgangsrechnungsView> LoadAusgangsrechnungsView()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

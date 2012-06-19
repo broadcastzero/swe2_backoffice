@@ -128,5 +128,11 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="table">The Ausgangsrechnung table</param>
         /// <returns>The ID of the just inserted Ausgangsrechnung</returns>
         int SaveAusgangsrechnung(AusgangsrechnungTable table);
+
+        /// <summary>
+        /// Loads all Ausgangsrechnungen
+        /// </summary>
+        /// <returns>The saved Eingangsrechnungen</returns>
+        List<AusgangsrechnungsView> LoadAusgangsrechnungsView();
     }
 }

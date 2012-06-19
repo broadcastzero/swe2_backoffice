@@ -314,10 +314,12 @@ namespace EPU_Backoffice_Panels
             // load all Eingangsrechnungen
             RechnungsManager loader = new RechnungsManager();
             List<EingangsrechnungsView> eingang = new List<EingangsrechnungsView>();
+            List<AusgangsrechnungsView> ausgang = new List<AusgangsrechnungsView>();
 
             try
             {
                 eingang = loader.LoadEingangsrechnungsView();
+                ausgang = loader.LoadAusgangsrechnungsView();
             }
             catch(DataBaseException)
             {
@@ -338,6 +340,10 @@ namespace EPU_Backoffice_Panels
             foreach(EingangsrechnungsView table in eingang)
             {
                 gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
+            }
+            foreach (AusgangsrechnungsView table in ausgang)
+            {
+                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
             }
             //gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
             

@@ -83,6 +83,27 @@ namespace EPU_Backoffice_Panels.BL
         }
 
         /// <summary>
+        /// Load all Ausgangsrechnungen
+        /// </summary>
+        /// <returns>The loaded Eingangsrechnungen</returns>
+        public List<AusgangsrechnungsView> LoadAusgangsrechnungsView()
+        {
+            List<AusgangsrechnungsView> results;
+
+            try
+            {
+                results = DALFactory.GetDAL().LoadAusgangsrechnungsView();
+            }
+            catch (SQLiteException ex)
+            {
+                this.logger.Log(Logger.Level.Error, ex.Message);
+                throw new DataBaseException(ex.Message + ex.StackTrace, ex);
+            }
+
+            return results;
+        }
+
+        /// <summary>
         /// Saves a new Buchungszeile to the Database
         /// </summary>
         /// <param name="table">The Buchungszeilentable</param>

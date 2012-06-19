@@ -644,7 +644,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <returns>The saved Eingangsrechnungen</returns>
         public List<EingangsrechnungsView> LoadEingangsrechnungsView()
         {
-            string sql = "SELECT e.ID, e.Bezeichnung, e.Rechnungsdatum, SUM(z.BetragUST) FROM Eingangsrechnung e JOIN Eingangsbuchung b ON b.EingangsrechnungsID = e.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
+            string sql = "SELECT e.ID, e.Bezeichnung, e.Rechnungsdatum, z.BetragUST FROM Eingangsrechnung e JOIN Eingangsbuchung b ON b.EingangsrechnungsID = e.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
 
             List<EingangsrechnungsView> results = new List<EingangsrechnungsView>();
 
@@ -914,6 +914,63 @@ namespace EPU_Backoffice_Panels.Dal
 
             // return ID of inserted item
             return insertedID;
+        }
+
+        /// <summary>
+        /// Loads all Ausgangsrechnungen as a view
+        /// </summary>
+        /// <returns></returns>
+        public List<AusgangsrechnungsView> LoadAusgangsrechnungsView()
+        {
+            this.logger.Log(Logger.Level.Info, "Starts loading Ausgangsrechnungen...");
+
+            string sql = "SELECT a.ID, a.Bezeichnung, a.Rechnungsdatum, z.BetragUST FROM Ausgangsrechnung a JOIN Ausgangsbuchung b ON b.AusgangsrechnungsID = a.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
+
+            List<AusgangsrechnungsView> results = new List<AusgangsrechnungsView>();
+
+            // open connection and get requested Projekt(e) out of database
+            SQLiteConnection con = null;
+            SQLiteTransaction tra = null;
+            SQLiteCommand cmd = null;
+            SQLiteDataReader reader = null;
+
+            try
+            {
+                // initialise connection
+                con = new SQLiteConnection(ConfigFileManager.ConnectionString);
+                con.Open();
+
+                // initialise transaction
+                tra = con.BeginTransaction();
+                cmd = new SQLiteCommand(sql, con);
+
+                // execute and get results
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    AusgangsrechnungsView result = new AusgangsrechnungsView();
+                    result.ID = reader.GetInt32(0);
+                    result.Bezeichnung = reader.GetString(1);
+                    result.Rechnungsdatum = reader.GetString(2);
+                    result.Betrag = reader.GetDouble(3);
+                    results.Add(result);
+                }
+
+                this.logger.Log(Logger.Level.Info, "Loading Ausgangsrechnungen successfully completed.");
+                return results;
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                if (reader != null) { reader.Dispose(); }
+                if (tra != null) { tra.Dispose(); }
+                if (cmd != null) { cmd.Dispose(); }
+                if (con != null) { con.Dispose(); }
+            }
         }
     }
 }
