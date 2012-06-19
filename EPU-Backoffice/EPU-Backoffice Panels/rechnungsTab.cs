@@ -336,14 +336,18 @@ namespace EPU_Backoffice_Panels
             XFont header = new XFont("Calibri", 20, XFontStyle.Bold);
             XFont columHeader = new XFont("Calibri", 10, XFontStyle.Bold);
             XFont Text = new XFont("Calibri", 10);
-            
+
+            int i = 20;
+
             foreach(EingangsrechnungsView table in eingang)
             {
-                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
+                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black, 20, i);
+                i += 20;
             }
             foreach (AusgangsrechnungsView table in ausgang)
             {
-                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
+                gfx.DrawString(table.ID + " " + table.Bezeichnung + " " + table.Betrag + " " + table.Rechnungsdatum, header, XBrushes.Black, 20, i);
+                i += 20;
             }
             //gfx.DrawString("Umsätze", header, XBrushes.Black,new XRect(0, 0, page.Width, page.Height),XStringFormats.TopCenter);
             

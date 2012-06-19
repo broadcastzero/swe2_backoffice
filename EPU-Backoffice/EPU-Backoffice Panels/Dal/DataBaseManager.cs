@@ -924,7 +924,7 @@ namespace EPU_Backoffice_Panels.Dal
         {
             this.logger.Log(Logger.Level.Info, "Starts loading Ausgangsrechnungen...");
 
-            string sql = "SELECT a.ID, a.Bezeichnung, a.Rechnungsdatum, z.BetragUST FROM Ausgangsrechnung a JOIN Ausgangsbuchung b ON b.AusgangsrechnungsID = a.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
+            string sql = "SELECT a.ID, a.Bezeichnung, a.Rechnungsdatum, z.BetragNetto FROM Ausgangsrechnung a JOIN Ausgangsbuchung b ON b.AusgangsrechnungsID = a.ID JOIN Buchungszeilen z ON b.BuchungszeilenID = z.ID";
 
             List<AusgangsrechnungsView> results = new List<AusgangsrechnungsView>();
 
