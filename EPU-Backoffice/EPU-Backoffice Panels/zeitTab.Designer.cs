@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.zeitaufzeichnungDataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zeiterfassungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label39 = new System.Windows.Forms.Label();
             this.zeiterfassungStundensatzTextBox = new System.Windows.Forms.TextBox();
@@ -41,11 +46,6 @@
             this.zeiterfassungSubmitButton = new System.Windows.Forms.Button();
             this.zeiterfassungHoursTextbox = new System.Windows.Forms.TextBox();
             this.zeiterfassungMsgLabel = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProjektID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bezeichnung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stunden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stundensatz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zeitaufzeichnungDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zeiterfassungBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,38 @@
             this.zeitaufzeichnungDataGridView.Name = "zeitaufzeichnungDataGridView";
             this.zeitaufzeichnungDataGridView.Size = new System.Drawing.Size(363, 183);
             this.zeitaufzeichnungDataGridView.TabIndex = 29;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ZeitaufzeichnunsgID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // ProjektID
+            // 
+            this.ProjektID.DataPropertyName = "ProjektID";
+            this.ProjektID.HeaderText = "ProjektID";
+            this.ProjektID.Name = "ProjektID";
+            this.ProjektID.Visible = false;
+            // 
+            // Bezeichnung
+            // 
+            this.Bezeichnung.DataPropertyName = "Bezeichnung";
+            this.Bezeichnung.HeaderText = "Beschreibung";
+            this.Bezeichnung.Name = "Bezeichnung";
+            // 
+            // Stunden
+            // 
+            this.Stunden.DataPropertyName = "Stunden";
+            this.Stunden.HeaderText = "Dauer";
+            this.Stunden.Name = "Stunden";
+            // 
+            // Stundensatz
+            // 
+            this.Stundensatz.DataPropertyName = "Stundensatz";
+            this.Stundensatz.HeaderText = "Strundensatz";
+            this.Stundensatz.Name = "Stundensatz";
             // 
             // label39
             // 
@@ -155,38 +187,7 @@
             this.zeiterfassungMsgLabel.Size = new System.Drawing.Size(55, 13);
             this.zeiterfassungMsgLabel.TabIndex = 30;
             this.zeiterfassungMsgLabel.Text = "ErrorLabel";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ZeitaufzeichnunsgID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // ProjektID
-            // 
-            this.ProjektID.DataPropertyName = "ProjektID";
-            this.ProjektID.HeaderText = "ProjektID";
-            this.ProjektID.Name = "ProjektID";
-            this.ProjektID.Visible = false;
-            // 
-            // Bezeichnung
-            // 
-            this.Bezeichnung.DataPropertyName = "Bezeichnung";
-            this.Bezeichnung.HeaderText = "Beschreibung";
-            this.Bezeichnung.Name = "Bezeichnung";
-            // 
-            // Stunden
-            // 
-            this.Stunden.DataPropertyName = "Stunden";
-            this.Stunden.HeaderText = "Dauer";
-            this.Stunden.Name = "Stunden";
-            // 
-            // Stundensatz
-            // 
-            this.Stundensatz.DataPropertyName = "Stundensatz";
-            this.Stundensatz.HeaderText = "Strundensatz";
-            this.Stundensatz.Name = "Stundensatz";
+            this.zeiterfassungMsgLabel.Visible = false;
             // 
             // zeitTab
             // 

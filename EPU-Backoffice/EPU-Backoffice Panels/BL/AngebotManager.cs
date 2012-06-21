@@ -76,7 +76,7 @@ namespace EPU_Backoffice_Panels.BL
         /// <param name="until">Until which date shall be searched</param>
         /// <param name="msglabel">The label in which error messages can be written</param>
         /// <returns>The requested Angebote</returns>
-        public List<AngebotTable> Load(int kid, DateTime from, DateTime until, Label msglabel)
+        public List<AngebotTable> Load(int kid, DateTime from, DateTime until, Label msglabel, bool loadwithaid = false)
         {
             IRule posintormin1val = new PositiveIntOrMinusOneValidator();
             IRule date1 = new DateValidator();
@@ -100,7 +100,54 @@ namespace EPU_Backoffice_Panels.BL
             {
                 try
                 {
-                    return DALFactory.GetDAL().LoadAngebote(kid, from_sds, until_sds);
+                    return DALFactory.GetDAL().LoadAngebote(kid, from_sds, until_sds, loadwithaid);
+                }
+                catch (SQLiteException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, "Serious problem with database! " + ex.StackTrace + ex.Message);
+                    throw new DataBaseException(ex.Message);
+                }
+                catch (InvalidInputException ex)
+                {
+                    this.logger.Log(Logger.Level.Error, "Some problem with the date strings occured. Search aborted.");
+                    throw new InvalidInputException(ex.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Load an existing Angebot out of the database
+        /// </summary>
+        /// <param name="kid">The referenced kundenID</param>
+        /// <param name="from">From which date shall be searched from</param>
+        /// <param name="until">Until which date shall be searched</param>
+        /// <param name="msglabel">The label in which error messages can be written</param>
+        /// <returns>The requested Angebote</returns>
+        public List<AngebotTable> LoadWithAid(int aid, DateTime from, DateTime until, Label msglabel)
+        {
+            IRule posintormin1val = new PositiveIntOrMinusOneValidator();
+            IRule date1 = new DateValidator();
+            IRule date2 = new DateValidator();
+
+            DataBindingFramework.BindFromInt(aid.ToString(), "ProjektID", msglabel, false, posintormin1val);
+
+            string from_sds = DataBindingFramework.BindFromString(from.ToShortDateString(), "Von", msglabel, false, date1);
+            string until_sds = DataBindingFramework.BindFromString(until.ToShortDateString(), "Bis", msglabel, false, date2);
+
+            // parse to date strings
+            from_sds = GlobalActions.ParseToSQLiteDateString(from_sds);
+            until_sds = GlobalActions.ParseToSQLiteDateString(until_sds);
+
+            if (posintormin1val.HasErrors)
+            {
+                this.logger.Log(Logger.Level.Error, "User tried to search Angebot with invalid ProjektID!");
+                throw new InvalidInputException("Field 'ProjektID' is invalid!");
+            }
+            else
+            {
+                try
+                {
+                    return DALFactory.GetDAL().LoadAngebote(aid, from_sds, until_sds, true);
                 }
                 catch (SQLiteException ex)
                 {

@@ -117,7 +117,7 @@ namespace EPU_Backoffice_Panels
 
                 // get Kunde table out of Database
                 AngebotManager loader = new AngebotManager();
-                List<AngebotTable> results = loader.Load(projekt.AngebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel);
+                List<AngebotTable> results = loader.Load(projekt.AngebotID, new DateTime(1900, 1, 1), new DateTime(2100, 1, 1), this.projektNeuMsgLabel, true);
 
                 // there must be exactly one result, for ID is unique!
                 if (results.Count != 1)

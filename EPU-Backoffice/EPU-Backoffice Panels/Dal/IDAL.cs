@@ -61,7 +61,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        List<AngebotTable> LoadAngebote(int kid, string from, string until);
+        List<AngebotTable> LoadAngebote(int kid, string from, string until, bool loadwithaid);
 
         /// <summary>
         /// Creates a new Projekt with the provided parameters and stores it in the SQLite database

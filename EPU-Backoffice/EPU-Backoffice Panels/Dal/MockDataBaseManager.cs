@@ -391,7 +391,7 @@ namespace EPU_Backoffice_Panels.Dal
         /// <param name="from">A date string which indicates the search-begin date</param>
         /// <param name="until">A date string which indicates the search-end date</param>
         /// <returns>A resultlist of all fitting Angebote</returns>
-        public List<AngebotTable> LoadAngebote(int kid, string from, string until)
+        public List<AngebotTable> LoadAngebote(int kid, string from, string until, bool loadwithaid)
         {
             List<AngebotTable> results = new List<AngebotTable>();
             bool couldparse;
