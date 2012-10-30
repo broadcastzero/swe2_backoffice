@@ -138,7 +138,7 @@
             // createAngebotDescriptionLabel
             // 
             this.createAngebotDescriptionLabel.AutoSize = true;
-            this.createAngebotDescriptionLabel.Location = new System.Drawing.Point(373, 162);
+            this.createAngebotDescriptionLabel.Location = new System.Drawing.Point(376, 168);
             this.createAngebotDescriptionLabel.Name = "createAngebotDescriptionLabel";
             this.createAngebotDescriptionLabel.Size = new System.Drawing.Size(79, 13);
             this.createAngebotDescriptionLabel.TabIndex = 15;
@@ -146,7 +146,7 @@
             // 
             // createAngebotDescriptionTextBox
             // 
-            this.createAngebotDescriptionTextBox.Location = new System.Drawing.Point(164, 159);
+            this.createAngebotDescriptionTextBox.Location = new System.Drawing.Point(167, 165);
             this.createAngebotDescriptionTextBox.Name = "createAngebotDescriptionTextBox";
             this.createAngebotDescriptionTextBox.Size = new System.Drawing.Size(200, 20);
             this.createAngebotDescriptionTextBox.TabIndex = 14;
@@ -174,7 +174,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(373, 88);
+            this.label33.Location = new System.Drawing.Point(376, 95);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(92, 13);
             this.label33.TabIndex = 6;
@@ -182,14 +182,14 @@
             // 
             // createAngebotAngebotssummeTextBox
             // 
-            this.createAngebotAngebotssummeTextBox.Location = new System.Drawing.Point(166, 81);
+            this.createAngebotAngebotssummeTextBox.Location = new System.Drawing.Point(169, 88);
             this.createAngebotAngebotssummeTextBox.Name = "createAngebotAngebotssummeTextBox";
             this.createAngebotAngebotssummeTextBox.Size = new System.Drawing.Size(200, 20);
             this.createAngebotAngebotssummeTextBox.TabIndex = 3;
             // 
             // angebotValidUntilDateTimePicker
             // 
-            this.angebotValidUntilDateTimePicker.Location = new System.Drawing.Point(166, 133);
+            this.angebotValidUntilDateTimePicker.Location = new System.Drawing.Point(169, 139);
             this.angebotValidUntilDateTimePicker.Name = "angebotValidUntilDateTimePicker";
             this.angebotValidUntilDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.angebotValidUntilDateTimePicker.TabIndex = 5;
@@ -197,7 +197,7 @@
             // umsetzungswahrscheinlichkeitLabel
             // 
             this.umsetzungswahrscheinlichkeitLabel.AutoSize = true;
-            this.umsetzungswahrscheinlichkeitLabel.Location = new System.Drawing.Point(373, 114);
+            this.umsetzungswahrscheinlichkeitLabel.Location = new System.Drawing.Point(376, 120);
             this.umsetzungswahrscheinlichkeitLabel.Name = "umsetzungswahrscheinlichkeitLabel";
             this.umsetzungswahrscheinlichkeitLabel.Size = new System.Drawing.Size(176, 13);
             this.umsetzungswahrscheinlichkeitLabel.TabIndex = 8;
@@ -206,7 +206,7 @@
             // angebotValidUntilLabel
             // 
             this.angebotValidUntilLabel.AutoSize = true;
-            this.angebotValidUntilLabel.Location = new System.Drawing.Point(372, 137);
+            this.angebotValidUntilLabel.Location = new System.Drawing.Point(375, 143);
             this.angebotValidUntilLabel.Name = "angebotValidUntilLabel";
             this.angebotValidUntilLabel.Size = new System.Drawing.Size(98, 13);
             this.angebotValidUntilLabel.TabIndex = 7;
@@ -214,7 +214,7 @@
             // 
             // createAngebotUmsetzungswahrscheinlichkeitTextBox
             // 
-            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(166, 107);
+            this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Location = new System.Drawing.Point(169, 113);
             this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Name = "createAngebotUmsetzungswahrscheinlichkeitTextBox";
             this.createAngebotUmsetzungswahrscheinlichkeitTextBox.Size = new System.Drawing.Size(200, 20);
             this.createAngebotUmsetzungswahrscheinlichkeitTextBox.TabIndex = 4;
@@ -411,6 +411,7 @@
             // 
             // angebotErstellenNKTab
             // 
+            this.angebotErstellenNKTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenNKTab.Controls.Add(this.label2);
             this.angebotErstellenNKTab.Controls.Add(this.label1);
             this.angebotErstellenNKTab.Controls.Add(this.createAngebotNewKundeNnTextBox);
@@ -421,7 +422,6 @@
             this.angebotErstellenNKTab.Size = new System.Drawing.Size(309, 59);
             this.angebotErstellenNKTab.TabIndex = 0;
             this.angebotErstellenNKTab.Text = "NK";
-            this.angebotErstellenNKTab.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -457,6 +457,7 @@
             // 
             // angebotErstellenBKTab
             // 
+            this.angebotErstellenBKTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angebotErstellenBKTab.Controls.Add(this.label3);
             this.angebotErstellenBKTab.Controls.Add(this.createAngebotExistingKundeComboBox);
             this.angebotErstellenBKTab.Location = new System.Drawing.Point(4, 22);
@@ -465,7 +466,6 @@
             this.angebotErstellenBKTab.Size = new System.Drawing.Size(309, 59);
             this.angebotErstellenBKTab.TabIndex = 1;
             this.angebotErstellenBKTab.Text = "BK";
-            this.angebotErstellenBKTab.UseVisualStyleBackColor = true;
             // 
             // label3
             // 

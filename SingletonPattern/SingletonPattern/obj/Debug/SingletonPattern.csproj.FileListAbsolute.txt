@@ -1,8 +1,0 @@
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\obj\Debug\ResolveAssemblyReference.cache
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\bin\Debug\SingletonPattern.exe
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\bin\Debug\SingletonPattern.pdb
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\obj\Debug\SingletonPattern.exe
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\obj\Debug\SingletonPattern.pdb
-D:\FH\4. Semester\Softwareparadigmen\SingletonPattern\SingletonPattern\bin\Debug\System.Data.SQLite.DLL
-C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\SingletonPattern\SingletonPattern\obj\Debug\SingletonPattern.exe
-C:\Users\Mexx\Desktop\FH\4. Semester\SWE 2\Github\swe2_backoffice\SingletonPattern\SingletonPattern\obj\Debug\SingletonPattern.pdb

@@ -354,15 +354,7 @@ namespace EPU_Backoffice_Panels
             string filename = "HelloWorld.pdf";
             document.Save(filename);
             Process.Start(filename);
-        }
-
-        private void ShowKundenRechnung(object sender, EventArgs e) 
-        {
-            PdfDocument document = new PdfDocument();
-            PdfPage page = document.AddPage();
-
-            MessageBox.Show("not yet implemented - Show");
-        }       
+        }     
 
         /// <summary>
         /// Creates a new Ausgangsrechnung with the provided parameters

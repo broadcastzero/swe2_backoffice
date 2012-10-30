@@ -49,8 +49,6 @@
             this.projektTabInner = new EPU_Backoffice_Panels.projektTab();
             this.zeitTab = new System.Windows.Forms.TabPage();
             this.zeitTabInner = new EPU_Backoffice_Panels.zeitTab();
-            this.reportTab = new System.Windows.Forms.TabPage();
-            this.reportTab1 = new EPU_Backoffice_Panels.reportTab();
             this.TableControl.SuspendLayout();
             this.homeTab.SuspendLayout();
             this.kundenKontakteTab.SuspendLayout();
@@ -58,7 +56,6 @@
             this.angeboteTab.SuspendLayout();
             this.projektTab.SuspendLayout();
             this.zeitTab.SuspendLayout();
-            this.reportTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // beendenButton
@@ -152,7 +149,6 @@
             this.TableControl.Controls.Add(this.angeboteTab);
             this.TableControl.Controls.Add(this.projektTab);
             this.TableControl.Controls.Add(this.zeitTab);
-            this.TableControl.Controls.Add(this.reportTab);
             this.TableControl.Location = new System.Drawing.Point(144, -1);
             this.TableControl.Multiline = true;
             this.TableControl.Name = "TableControl";
@@ -162,6 +158,7 @@
             // 
             // homeTab
             // 
+            this.homeTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.homeTab.Controls.Add(this.homeTabInner);
             this.homeTab.Location = new System.Drawing.Point(42, 4);
             this.homeTab.Name = "homeTab";
@@ -169,10 +166,10 @@
             this.homeTab.Size = new System.Drawing.Size(748, 256);
             this.homeTab.TabIndex = 0;
             this.homeTab.Text = "Home";
-            this.homeTab.UseVisualStyleBackColor = true;
             // 
             // homeTabInner
             // 
+            this.homeTabInner.BackColor = System.Drawing.Color.WhiteSmoke;
             this.homeTabInner.Location = new System.Drawing.Point(-2, -7);
             this.homeTabInner.Name = "homeTabInner";
             this.homeTabInner.Size = new System.Drawing.Size(755, 269);
@@ -180,6 +177,7 @@
             // 
             // kundenKontakteTab
             // 
+            this.kundenKontakteTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.kundenKontakteTab.Controls.Add(this.kundenKontakteTabInner);
             this.kundenKontakteTab.Location = new System.Drawing.Point(42, 4);
             this.kundenKontakteTab.Name = "kundenKontakteTab";
@@ -187,7 +185,6 @@
             this.kundenKontakteTab.Size = new System.Drawing.Size(748, 256);
             this.kundenKontakteTab.TabIndex = 1;
             this.kundenKontakteTab.Text = "Kunden";
-            this.kundenKontakteTab.UseVisualStyleBackColor = true;
             // 
             // kundenKontakteTabInner
             // 
@@ -198,30 +195,30 @@
             // 
             // rechnungsTab
             // 
+            this.rechnungsTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rechnungsTab.Controls.Add(this.rechnungsTab1);
             this.rechnungsTab.Location = new System.Drawing.Point(42, 4);
             this.rechnungsTab.Name = "rechnungsTab";
             this.rechnungsTab.Size = new System.Drawing.Size(748, 256);
             this.rechnungsTab.TabIndex = 2;
             this.rechnungsTab.Text = "Rechnung";
-            this.rechnungsTab.UseVisualStyleBackColor = true;
             // 
             // rechnungsTab1
             // 
-            this.rechnungsTab1.Location = new System.Drawing.Point(-3, 1);
+            this.rechnungsTab1.Location = new System.Drawing.Point(-2, 1);
             this.rechnungsTab1.Name = "rechnungsTab1";
             this.rechnungsTab1.Size = new System.Drawing.Size(755, 259);
             this.rechnungsTab1.TabIndex = 0;
             // 
             // angeboteTab
             // 
+            this.angeboteTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.angeboteTab.Controls.Add(this.angeboteTab1);
             this.angeboteTab.Location = new System.Drawing.Point(42, 4);
             this.angeboteTab.Name = "angeboteTab";
             this.angeboteTab.Size = new System.Drawing.Size(748, 256);
             this.angeboteTab.TabIndex = 3;
             this.angeboteTab.Text = "Angebote";
-            this.angeboteTab.UseVisualStyleBackColor = true;
             // 
             // angeboteTab1
             // 
@@ -232,13 +229,13 @@
             // 
             // projektTab
             // 
+            this.projektTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.projektTab.Controls.Add(this.projektTabInner);
             this.projektTab.Location = new System.Drawing.Point(42, 4);
             this.projektTab.Name = "projektTab";
             this.projektTab.Size = new System.Drawing.Size(748, 256);
             this.projektTab.TabIndex = 4;
             this.projektTab.Text = "Projekt";
-            this.projektTab.UseVisualStyleBackColor = true;
             // 
             // projektTabInner
             // 
@@ -249,37 +246,20 @@
             // 
             // zeitTab
             // 
+            this.zeitTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.zeitTab.Controls.Add(this.zeitTabInner);
             this.zeitTab.Location = new System.Drawing.Point(42, 4);
             this.zeitTab.Name = "zeitTab";
             this.zeitTab.Size = new System.Drawing.Size(748, 256);
             this.zeitTab.TabIndex = 5;
             this.zeitTab.Text = "Zeit";
-            this.zeitTab.UseVisualStyleBackColor = true;
             // 
             // zeitTabInner
             // 
-            this.zeitTabInner.Location = new System.Drawing.Point(3, -3);
+            this.zeitTabInner.Location = new System.Drawing.Point(2, -3);
             this.zeitTabInner.Name = "zeitTabInner";
             this.zeitTabInner.Size = new System.Drawing.Size(755, 259);
             this.zeitTabInner.TabIndex = 0;
-            // 
-            // reportTab
-            // 
-            this.reportTab.Controls.Add(this.reportTab1);
-            this.reportTab.Location = new System.Drawing.Point(42, 4);
-            this.reportTab.Name = "reportTab";
-            this.reportTab.Size = new System.Drawing.Size(748, 256);
-            this.reportTab.TabIndex = 6;
-            this.reportTab.Text = "Report";
-            this.reportTab.UseVisualStyleBackColor = true;
-            // 
-            // reportTab1
-            // 
-            this.reportTab1.Location = new System.Drawing.Point(3, 1);
-            this.reportTab1.Name = "reportTab1";
-            this.reportTab1.Size = new System.Drawing.Size(755, 259);
-            this.reportTab1.TabIndex = 0;
             // 
             // HomeForm
             // 
@@ -297,6 +277,7 @@
             this.Controls.Add(this.homeButton);
             this.Name = "HomeForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.VisibleChanged += new System.EventHandler(this.ShowDatabaseInfo);
             this.TableControl.ResumeLayout(false);
             this.homeTab.ResumeLayout(false);
@@ -305,7 +286,6 @@
             this.angeboteTab.ResumeLayout(false);
             this.projektTab.ResumeLayout(false);
             this.zeitTab.ResumeLayout(false);
-            this.reportTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,13 +307,11 @@
         private System.Windows.Forms.TabPage angeboteTab;
         private System.Windows.Forms.TabPage projektTab;
         private System.Windows.Forms.TabPage zeitTab;
-        private System.Windows.Forms.TabPage reportTab;
         private EPU_Backoffice_Panels.homeTab homeTabInner;
         private EPU_Backoffice_Panels.kundenKontakteTab kundenKontakteTabInner;
         private EPU_Backoffice_Panels.rechnungsTab rechnungsTab1;
         private EPU_Backoffice_Panels.angeboteTab angeboteTab1;
         private EPU_Backoffice_Panels.projektTab projektTabInner;
         private EPU_Backoffice_Panels.zeitTab zeitTabInner;
-        private EPU_Backoffice_Panels.reportTab reportTab1;
     }
 }

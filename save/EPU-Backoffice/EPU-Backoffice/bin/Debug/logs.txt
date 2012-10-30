@@ -1,6 +1,0 @@
-28.04.2012 - 13:26 Info: -----------------------------------------------------------
-28.04.2012 - 13:26 Info: Program is started.
-28.04.2012 - 13:26 Info: Logging level: 0
-28.04.2012 - 13:26 Info: Using SQLite database.
-28.04.2012 - 13:26 Info: Saved path of database in config file: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db
-28.04.2012 - 13:26 Warning: Given file path is wrong. File does not exist: C:\Users\broadcastzero\0 FH\4. Semester\SWE2\0 Backoffice\EPU-Backoffice\EPU-Backoffice\bin\Debug\marvin.db

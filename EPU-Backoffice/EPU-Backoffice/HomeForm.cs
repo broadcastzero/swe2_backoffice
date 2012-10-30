@@ -119,5 +119,10 @@ namespace EPU_Backoffice
         {
             Application.Exit();
         }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,0 @@
-http://stylecop.codeplex.com/
-
-HowTo Use Stylecop:
-http://www.thereforesystems.com/stylecop-tutorial/
